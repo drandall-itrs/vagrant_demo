@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-09 16:06:37 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.0.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<types>
+        
+    </types>
+	<samplers>
+		<sampler name="Netprobe Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Netprobe 8700"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8701"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8800"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8900"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8801"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8901"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9000"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9201"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<sampler name="Gateway Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Gateway"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<samplerGroup name="gateway">
+			<sampler name="Gateway Client Connection">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-clientConnectionData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Gateway Data ">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-gatewayData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Includes">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-includesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Managed Entities">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-managedEntitiesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Probe Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-probeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Severity Count">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-severityCount/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Snooze Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-snoozeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway User Assignement">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-userAssignmentData/>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+	</samplers>
+	<commands>
+		<command name="dir">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity</target>
+			</targets>
+			<userCommand>
+				<type>script</type>
+				<runLocation>netprobe</runLocation>
+				<args>
+					<arg>
+						<static>ls -l</static>
+					</arg>
+				</args>
+				<enablePassword>true</enablePassword>
+			</userCommand>
+		</command>
+	</commands>
+	<staticVars>
+		<processDescriptors>
+			<processDescriptorGroup name="Netprobe">
+				<processDescriptor name="Netprobe 8700">
+					<alias>
+						<data>Netprobe Linux 8700</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8700</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8700</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8700</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8700-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8701">
+					<alias>
+						<data>Netprobe Linux 8701</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8701</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8701</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8701</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8701-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8800">
+					<alias>
+						<data>Netprobe Linux 8800</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8800</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8800</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8800</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8800-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="THIRD"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8801">
+					<alias>
+						<data>Netprobe Linux 8801</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8801</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8801</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8801</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8801-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FOURTH"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8900">
+					<alias>
+						<data>Netprobe Linux 8900</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8900</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8900</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8900</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8900-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8901">
+					<alias>
+						<data>Netprobe Linux 8801</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8901</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8901</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8901</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8901-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9000">
+					<alias>
+						<data>Netprobe Linux 9000</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9000</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9000</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9000</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9000-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="THIRD"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9201">
+					<alias>
+						<data>Netprobe Linux 9201</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9201</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9201</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9201</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9201-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FOURTH"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8702">
+					<alias>
+						<data>Netprobe Linux 8702</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8702</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8702</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8702</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8702-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8802">
+					<alias>
+						<data>Netprobe Linux 8802</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8802</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8802</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8802</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8802-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8902">
+					<alias>
+						<data>Netprobe Linux 8902</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8902</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8902</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8902</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8902-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9002">
+					<alias>
+						<data>Netprobe Linux 9002</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9002</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9002</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9002</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9002-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9202">
+					<alias>
+						<data>Netprobe Linux 9202</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 92022</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9202</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9202</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9202-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+			</processDescriptorGroup>
+			<processDescriptorGroup name="Gateway">
+				<processDescriptor name="Gateway">
+					<alias>
+						<data>Gateway</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/gateway/gateway/gateway2.linux*</data>
+						</searchString>
+					</ID>
+				</processDescriptor>
+			</processDescriptorGroup>
+		</processDescriptors>
+	</staticVars>
+</gateway>
