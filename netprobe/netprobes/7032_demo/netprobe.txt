@@ -1,0 +1,10 @@
+<Wed Mar 11 10:00:01> ******************************************************************************************************************************
+<Wed Mar 11 10:00:01> Geneos EMF2 Netprobe GA3.0.23-150224 (with support for CORE,ORACLE,SQL_TOOLKIT,IXWATCH_RTT,RMC,MQ,RV) (c) 1995-2015 ITRS Group
+<Wed Mar 11 10:00:01> ******************************************************************************************************************************
+<Wed Mar 11 10:00:01>  INFO: Running from: /opt/geneos/netprobe/netprobes/7032_demo
+<Wed Mar 11 10:00:01>  INFO: User/uid/gid: vagrant/500/500
+<Wed Mar 11 10:00:01>  INFO: Current path: .:/home/vagrant/bin:/usr/local/bin:.:/home/vagrant/bin:/usr/local/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/home/vagrant/workspace/geneos/Source/EMF2/utils:/home/vagrant/Utils:.:/sbin/:/usr/sbin:/home/vagrant/hadoop-2.4.1/bin:/usr/local/maven/bin:/home/vagrant/workspace/geneos/Source/EMF2/utils:/home/vagrant/Utils:.:/sbin/:/usr/sbin:/home/vagrant/hadoop-2.4.1/bin:/usr/local/maven/bin
+<Wed Mar 11 10:00:01>  INFO: Schema Publishing GA3.0.23-150126 (1)
+<Wed Mar 11 10:00:01>  INFO: SharedStream Creating the registry
+<Wed Mar 11 10:00:01>  INFO: ORB Disconnecting rejecting gateway connections every 60 seconds
+<Wed Mar 11 10:00:01>  INFO: Listening for a Gateway connection on port 7032

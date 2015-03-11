@@ -1,0 +1,15 @@
+The Market Data Monitor (MDM) plug-in and associated APIs are a part of the Geneos API.
+Use of this plug-in or its APIs is covered by the licence agreement.
+
+The agreement has been accepted for use by by:
+
+	Client : ITRS
+	Contact: Roland Young
+
+	Test    mode: Enabled
+	Gateway mode: Enabled
+
+-----BEGIN SIGNATURE-----
+eaf259fc8d0442afb020fd2561bde20bc3ae43a8b06a260f816084309ab0311d
+b8c9418e6e2ba5b7794bb49e1fbc6de097def68996a3f90268e27d1e896e9731
+-----END SIGNATURE-----
