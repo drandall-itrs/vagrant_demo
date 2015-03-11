@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-09 15:15:04 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.0.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<staticVars>
+		<fkmTables>
+			<fkmTable name="FKM FAIL Netprobe">
+				<keys>
+					<key>
+						<setKey>
+							<match>
+								<searchString>
+									<data>ExitHandler</data>
+								</searchString>
+							</match>
+						</setKey>
+						<message>
+							<data>Netrpobe Failing please investigate</data>
+						</message>
+						<severity>fail</severity>
+					</key>
+				</keys>
+			</fkmTable>
+		</fkmTables>
+	</staticVars>
+</gateway>

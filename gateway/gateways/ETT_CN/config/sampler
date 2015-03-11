@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-09 16:09:12 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.0.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<samplers>
+		<sampler name="Netprobe Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Netprobe 8700"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8701"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8800"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8900"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8801"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8901"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9000"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9201"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<sampler name="Gateway Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Gateway"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<samplerGroup name="gateway">
+			<sampler name="Gateway Client Connection">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-clientConnectionData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Gateway Data ">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-gatewayData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Includes">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-includesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Managed Entities">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-managedEntitiesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Probe Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-probeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Severity Count">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-severityCount/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Snooze Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-snoozeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway User Assignement">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-userAssignmentData/>
+				</plugin>
+			</sampler>
+			<samplerGroup name="Logs">
+				<sampler name="Logs netprobe">
+					<var-group>
+						<data>Logs</data>
+					</var-group>
+					<sampleInterval>
+						<data>2</data>
+					</sampleInterval>
+					<plugin>
+						<fkm>
+							<files>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8700"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="FIRST"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8701"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="SECOND"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8800"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="THIRD"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8801"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="FOURTH"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8900"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="FIRST"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8901"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="SECOND"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9000"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="THIRD"/>
+									</var-activeTime>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9201"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+									<var-activeTime>
+										<activeTime ref="FOURTH"/>
+									</var-activeTime>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+		<data>true</data>
+		<samplerGroup name="Hardware">
+			<sampler name="Disk">
+				<var-group>
+					<data>Hardware</data>
+				</var-group>
+				<sampleInterval>
+					<data>2</data>
+				</sampleInterval>
+				<plugin>
+					<disk>
+						<partitions>
+							<partition>
+								<path>
+									<data>/</data>
+								</path>
+								<alias>
+									<data>/</data>
+								</alias>
+							</partition>
+						</partitions>
+					</disk>
+				</plugin>
+			</sampler>
+			<sampler name="Network">
+				<var-group>
+					<data>Hardware</data>
+				</var-group>
+				<sampleInterval>
+					<data>0</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/resources/toolkit-views/generic-hardware/network.csv</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="CPU">
+				<var-group>
+					<data>Hardware</data>
+				</var-group>
+				<sampleInterval>
+					<data>0</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/resources/toolkit-views/generic-hardware/cpu.csv</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<samplerGroup name="Hardware Real">
+				<sampler name="Real CPU">
+					<var-group>
+						<data>HARDWARE</data>
+					</var-group>
+					<plugin>
+						<cpu>
+							<temperature>
+								<show>
+									<data>true</data>
+								</show>
+							</temperature>
+							<solaris>
+								<showPhysicalSummaryRows>detect</showPhysicalSummaryRows>
+							</solaris>
+						</cpu>
+					</plugin>
+				</sampler>
+				<sampler name="Real Disk">
+					<var-group>
+						<data>HARDWARE</data>
+					</var-group>
+					<plugin>
+						<disk>
+							<autoDetect>
+								<data>true</data>
+							</autoDetect>
+						</disk>
+					</plugin>
+				</sampler>
+				<sampler name="Real Network">
+					<var-group>
+						<data>HARDWARE</data>
+					</var-group>
+					<plugin>
+						<network/>
+					</plugin>
+				</sampler>
+				<sampler name="Real DEVICE IO">
+					<var-group>
+						<data>HARDWARE</data>
+					</var-group>
+					<plugin>
+						<deviceio/>
+					</plugin>
+				</sampler>
+				<sampler name="Real Hardware">
+					<var-group>
+						<data>HARDWARE</data>
+					</var-group>
+					<plugin>
+						<hardware/>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="ETT">
+			<samplerGroup name="FIDESSA">
+				<sampler name="FIDESSA USERS">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-users">
+							<displayName>users</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-USERS.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA SYSTEM">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-system">
+							<displayName>system</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-SYSTEM.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA PROCESSES">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-processes">
+							<displayName>processes</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-PROCESSES.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA INVENTORY">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-inventory">
+							<displayName>inventory</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-INVENTORY.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA INFRASTRUCTURE">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-infrastructure">
+							<displayName>infrastructure</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-INFRA.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA REJECTED TRADES">
+					<group>FIDESSA CUSTOM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-dq-reject-trades">
+							<displayName>dq-rejected-trades</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-DQ-REJECT-TRADES.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA DB CAPACITY">
+					<group>FIDESSA</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-dbcapacity">
+							<displayName>db-capacity</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-DBCAPACITY.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA  LOGS">
+					<var-group>
+						<data>FIDESSA</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<fkm>
+							<files>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/resources/toolkit-views/ett/fidessa/OMAR.log</data>
+										</filename>
+									</source>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/resources/toolkit-views/ett/fidessa/FTS.log</data>
+										</filename>
+									</source>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/resources/toolkit-views/ett/fidessa/EMMA.log</data>
+										</filename>
+									</source>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/resources/toolkit-views/ett/fidessa/CTAC.log</data>
+										</filename>
+									</source>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/resources/toolkit-views/ett/fidessa/TOP.log</data>
+										</filename>
+									</source>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA EXCHANGE CONNECTIVITY">
+					<group>FIDESSA CUSTOM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-dq-reject-trades">
+							<displayName>dq-rejected-trades</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-EXCH-CONN.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FIDESSA TURNAROUND LATENCY">
+					<group>FIDESSA CUSTOM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<dataviews>
+						<dataview name="fidessa-dq-reject-trades">
+							<displayName>dq-rejected-trades</displayName>
+						</dataview>
+					</dataviews>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/fidessa/FID-LATENCY.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="FIX">
+				<sampler name="fix">
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<fix>
+							<logFile>
+								<data>/opt/geneos/resources/toolkit-views/ett/fix/fix-test-suite.log</data>
+							</logFile>
+						</fix>
+					</plugin>
+				</sampler>
+				<sampler name="ix-ma">
+					<!--Max number of messages per message poll interval to process from a single adapter
+Max number of messages to process per message poll interval-->
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<ix-ma>
+							<adapters>
+								<fixAdapter>
+									<source>cameronsystems</source>
+									<logFile>/opt/geneos/resources/toolkit-views/ett/ix-ma/C200*.log</logFile>
+									<rewind>true</rewind>
+									<maxLinesPerSample>20000</maxLinesPerSample>
+								</fixAdapter>
+								<fixAdapter>
+									<source>CameronSystems</source>
+									<logFile>/opt/geneos/resources/toolkit-views/ett/ix-ma/C200*.rej</logFile>
+									<rewind>true</rewind>
+								</fixAdapter>
+							</adapters>
+							<table>
+								<headlines>
+									<headline>
+										<name>Total_FIX_Messages</name>
+										<value>$totals</value>
+									</headline>
+								</headlines>
+								<columnLabels>
+									<label>MsgIndicator</label>
+									<label>MsgType</label>
+									<label>Totals</label>
+									<label>Percentage</label>
+								</columnLabels>
+								<rows>
+									<row>
+										<values>A</values>
+										<values>Logon</values>
+										<values>$Logon</values>
+									</row>
+									<row>
+										<values>5</values>
+										<values>Logout</values>
+										<values>$Logout</values>
+									</row>
+									<row>
+										<values>0</values>
+										<values>Heartbeat</values>
+										<values>$Heartbeat</values>
+									</row>
+									<row>
+										<values>1</values>
+										<values>TestRequest</values>
+										<values>$TestRequest</values>
+									</row>
+									<row>
+										<values>2</values>
+										<values>ResendRequest</values>
+										<values>$ResendRequest</values>
+									</row>
+									<row>
+										<values>3</values>
+										<values>Reject</values>
+										<values>$Reject</values>
+									</row>
+									<row>
+										<values>4</values>
+										<values>SequenceReset</values>
+										<values>$SequenceReset</values>
+									</row>
+									<row>
+										<values>6</values>
+										<values>IndicationOfInterest</values>
+										<values>$IOI</values>
+									</row>
+									<row>
+										<values>7</values>
+										<values>Advertisement</values>
+										<values>$Advertisement</values>
+									</row>
+									<row>
+										<values>8</values>
+										<values>ExecutionReport</values>
+										<values>$ExecutionReport</values>
+									</row>
+									<row>
+										<values>9</values>
+										<values>OrderCancelReject</values>
+										<values>$OCRej</values>
+									</row>
+									<row>
+										<values>B</values>
+										<values>News</values>
+										<values>$News</values>
+									</row>
+									<row>
+										<values>C</values>
+										<values>Email</values>
+										<values>$Email</values>
+									</row>
+									<row>
+										<values>D</values>
+										<values>Order-Single</values>
+										<values>$Ord-Single</values>
+									</row>
+									<row>
+										<values>E</values>
+										<values>Order-List</values>
+										<values>$Ord-List</values>
+									</row>
+									<row>
+										<values>F</values>
+										<values>OrderCancelRequest</values>
+										<values>$OCReq</values>
+									</row>
+									<row>
+										<values>G</values>
+										<values>OrderCancel/ReplaceRequest</values>
+										<values>$OCRReq</values>
+									</row>
+									<row>
+										<values>H</values>
+										<values>OrderStatusRequest</values>
+										<values>$OSReq</values>
+									</row>
+									<row>
+										<values>J</values>
+										<values>Allocation</values>
+										<values>$Allocation</values>
+									</row>
+									<row>
+										<values>K</values>
+										<values>ListCancelRequest</values>
+										<values>$LCReq</values>
+									</row>
+									<row>
+										<values>L</values>
+										<values>ListExecute</values>
+										<values>$ListExec</values>
+									</row>
+									<row>
+										<values>M</values>
+										<values>ListStatusRequest</values>
+										<values>$ListStatusReq</values>
+									</row>
+									<row>
+										<values>N</values>
+										<values>ListStatus</values>
+										<values>$ListStatus</values>
+									</row>
+									<row>
+										<values>P</values>
+										<values>AllocationACK</values>
+										<values>$AA</values>
+									</row>
+									<row>
+										<values>Q</values>
+										<values>DontKnowTrade</values>
+										<values>$DK</values>
+									</row>
+									<row>
+										<values>R</values>
+										<values>QuoteRequest</values>
+										<values>$QReq</values>
+									</row>
+									<row>
+										<values>S</values>
+										<values>Quote</values>
+										<values>$Quote</values>
+									</row>
+									<row>
+										<values>T</values>
+										<values>SettlementInstructions</values>
+										<values>$SettleIns</values>
+									</row>
+									<row>
+										<values>V</values>
+										<values>MarketDataRequest</values>
+										<values>$MDR</values>
+									</row>
+									<row>
+										<values>W</values>
+										<values>MarketData-Snapshot/FullRefresh</values>
+										<values>$MDSFReq</values>
+									</row>
+									<row>
+										<values>X</values>
+										<values>MarketData-IncrementalRefresh</values>
+										<values>$MDIR</values>
+									</row>
+									<row>
+										<values>Y</values>
+										<values>MarketDataRequestReject</values>
+										<values>$MDRej</values>
+									</row>
+									<row>
+										<values>Z</values>
+										<values>QuoteCancel</values>
+										<values>$QC</values>
+									</row>
+									<row>
+										<values>a</values>
+										<values>QuoteStatusRequest</values>
+										<values>$QSReq</values>
+									</row>
+									<row>
+										<values>b</values>
+										<values>QuoteAcknowledgement</values>
+										<values>$QA</values>
+									</row>
+									<row>
+										<values>c</values>
+										<values>SecurityDefinitionRequest</values>
+										<values>$SDReq</values>
+									</row>
+									<row>
+										<values>d</values>
+										<values>SecurityDefinition</values>
+										<values>$SD</values>
+									</row>
+									<row>
+										<values>e</values>
+										<values>SecurityStatusRequest</values>
+										<values>$SSReq</values>
+									</row>
+									<row>
+										<values>f</values>
+										<values>SecurityStatus</values>
+										<values>$SS</values>
+									</row>
+									<row>
+										<values>g</values>
+										<values>TradingSessionStatusRequest</values>
+										<values>$TSSReq</values>
+									</row>
+									<row>
+										<values>h</values>
+										<values>TradingSessionStatus</values>
+										<values>$TSS</values>
+									</row>
+									<row>
+										<values>i</values>
+										<values>MassQuote</values>
+										<values>$MQ</values>
+									</row>
+									<row>
+										<values>j</values>
+										<values>BusinessMessageReject</values>
+										<values>$BMRej</values>
+									</row>
+									<row>
+										<values>k</values>
+										<values>BidRequest</values>
+										<values>$BReq</values>
+									</row>
+									<row>
+										<values>l</values>
+										<values>BidResponse</values>
+										<values>$BResp</values>
+									</row>
+									<row>
+										<values>m</values>
+										<values>ListStrikePrice</values>
+										<values>$LSP</values>
+									</row>
+								</rows>
+							</table>
+							<trackers>
+								<counterTracker>
+									<name>totals</name>
+									<filter>all</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Logon</name>
+									<filter>(fieldID_35 = &quot;A&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Logout</name>
+									<filter>(fieldID_35 = &quot;5&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Heartbeat</name>
+									<filter>(fieldID_35 = &quot;0&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>TestRequest</name>
+									<filter>(fieldID_35 = &quot;1&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>ResendRequest</name>
+									<filter>(fieldID_35 = &quot;2&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Reject</name>
+									<filter>(fieldID_35 = &quot;3&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SequenceReset</name>
+									<filter>(fieldID_35 = &quot;4&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>IOI</name>
+									<filter>(fieldID_35 = &quot;6&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Advertisement</name>
+									<filter>(fieldID_35 = &quot;7&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>ExecutionReport</name>
+									<filter>(fieldID_35 = &quot;8&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>OCRej</name>
+									<filter>(fieldID_35 = &quot;9&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>News</name>
+									<filter>(fieldID_35 = &quot;B&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Email</name>
+									<filter>(fieldID_35 = &quot;C&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Ord-Single</name>
+									<filter>(fieldID_35 = &quot;D&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Ord-List</name>
+									<filter>(fieldID_35 = &quot;E&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>OCReq</name>
+									<filter>(fieldID_35 = &quot;F&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>OCRReq</name>
+									<filter>(fieldID_35 = &quot;G&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>OSReq</name>
+									<filter>(fieldID_35 = &quot;H&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Allocation</name>
+									<filter>(fieldID_35 = &quot;J&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>LCReq</name>
+									<filter>(fieldID_35 = &quot;K&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>ListExec</name>
+									<filter>(fieldID_35 = &quot;L&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>ListStatusReq</name>
+									<filter>(fieldID_35 = &quot;M&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>ListStatus</name>
+									<filter>(fieldID_35 = &quot;N&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>AA</name>
+									<filter>(fieldID_35 = &quot;P &quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>DK</name>
+									<filter>(fieldID_35 = &quot;Q&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>QReq</name>
+									<filter>(fieldID_35 = &quot;R&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>Quote</name>
+									<filter>(fieldID_35 = &quot;S&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SettleIns</name>
+									<filter>(fieldID_35 = &quot;T&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>MDR</name>
+									<filter>(fieldID_35 = &quot;V&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>MDSFReq</name>
+									<filter>(fieldID_35 = &quot;W&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>MDIR</name>
+									<filter>(fieldID_35 = &quot;X&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>MDRej</name>
+									<filter>(fieldID_35 = &quot;Y&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>QC</name>
+									<filter>(fieldID_35 = &quot;Z&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>QSReq</name>
+									<filter>(fieldID_35 = &quot;a&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>QA</name>
+									<filter>(fieldID_35 = &quot;b&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SDReq</name>
+									<filter>(fieldID_35 = &quot;c&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SD</name>
+									<filter>(fieldID_35 = &quot;d&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SSReq</name>
+									<filter>(fieldID_35 = &quot;e&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>SS</name>
+									<filter>(fieldID_35 = &quot;f&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>TSSReq</name>
+									<filter>(fieldID_35 = &quot;g&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>TSS</name>
+									<filter>(fieldID_35 = &quot;h&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>MQ</name>
+									<filter>(fieldID_35 = &quot;i&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>BMRej</name>
+									<filter>(fieldID_35 = &quot;j&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>BReq</name>
+									<filter>(fieldID_35 = &quot;k&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>BResp</name>
+									<filter>(fieldID_35 = &quot;l&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+								<counterTracker>
+									<name>LSP</name>
+									<filter>(fieldID_35 = &quot;m&quot;)</filter>
+									<resetTime>12:00:00</resetTime>
+								</counterTracker>
+							</trackers>
+							<maxAdapterMessages>
+								<data>5000</data>
+							</maxAdapterMessages>
+							<maxMessages>
+								<data>1000000</data>
+							</maxMessages>
+							<maxTime>
+								<data>10</data>
+							</maxTime>
+						</ix-ma>
+					</plugin>
+				</sampler>
+				<sampler name="sessionrejects">
+					<group>messageanalyser</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ix-ma/sessionrejects.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="resendrequests">
+					<group>messageanalyser</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ix-ma/resendrequests.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="messageanalyser">
+					<group>messageanalyser</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ix-ma/message_analyser.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="iois">
+					<group>messageanalyser</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ix-ma/iois.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="businessmessagerejects">
+					<group>messageanalyser</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ix-ma/businessmessagerejects.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="RV">
+				<sampler name="tib-rv-top_problem_senders">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/rv/tibrvproblemsenders.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-top_problem_receivers">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/rv/tibrvproblemreceivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-publisher">
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/rv/tibrvpublisher.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-hosts">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/rv/tibrvhosts.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-fast_senders">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleTimesOverride>true</sampleTimesOverride>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/rv/tibrvfastsenders.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="EMS">
+				<sampler name="ems-users">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-users.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-topics">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-topics.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-routes">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-routes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-server">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-server.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-queues">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-queues.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-durables">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-durables.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-connections">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-connections.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-bridges">
+					<!---->
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/ems/ems-bridges.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="ALGO">
+				<samplerGroup name="HEALTHCHECK">
+					<sampler name="ALGO_CHECK_INSTRUMENTS">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/check_instruments.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_CHECK_QUOTES">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/check_quotes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_CHECK_STATS_COUNT">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/check_stats_count.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_CHECK_STATS">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/check_stat.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_COUNT_DELEGATE">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/count_delegates.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_TOTAL_ORDER">
+						<group>HEALTHCHECK</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/total_orders.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="ORDER ACTIONS">
+					<sampler name="ALGO_DAY_OPEN_HANGING_DELEGATES">
+						<group>ORDER ACTIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/day_open_hanging.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_EXOM_REJECTIONS">
+						<group>ORDER_ACTIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/exom_rejections.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_PENDING_CHILD_ORDERS">
+						<group>ORDER ACTIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/pending_child_orders.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ALGO_PENDING_DELEGATES">
+						<group>ORDER ACTIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/pending_delegates.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="RV">
+					<sampler name="tib_rv_hosts_alg">
+						<group>RV-STREAMS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/rv_stream.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="SESSIONS">
+					<sampler name="SHOW SESSIONS">
+						<group>SESSIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/show_sessions.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="SYSTEM">
+					<sampler name="FKM">
+						<group>SYSTEM</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/fkm.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="PROCESSES">
+						<group>SYSTEM</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/algo/process.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="SORT">
+				<samplerGroup name="ADMIN">
+					<sampler name="EXECUTION_DESTINATIONS_TP3">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/execution_destinations.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="PRICE_CHECK_MULTI_SOR">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/price_check.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="SORT_MD">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/sort_md.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="SORT_PENDING">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/sort_pending.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="SORT_REJECTED_CHILD">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/sort_rejected_child.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="TRADED_VENUES">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/traded_venues.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="RV">
+					<sampler name="tib_rv_hosts_sort">
+						<group>RV-STREAMS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/rv_sort.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="SESSIONS">
+					<sampler name="Show SORT Sessions">
+						<group>SESSIONS</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/sessions.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="SYSTEM">
+					<sampler name="FKM_SORT">
+						<group>ADMIN</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/fkm.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="PROCESSES_SORT">
+						<group>SYSTEM</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/sort/process.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="DARK">
+				<sampler name="SHOW_SESSIONS_DP">
+					<group>SESSIONS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/DP/SHOW_SESSIONS.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="PROCESSES_DP">
+					<group>SYSTEM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/DP/PROCESSES_DP.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FKM_DP">
+					<group>ADMIN</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/DP/FKM_DP.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="SHOW_DP_INSTRUMENTS">
+					<group>ADMIN</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/DP/SHOW_DP_INSTRUMENTS.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="RV-STREAMLINE-DP">
+					<group>RV-STREAMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/DP/RV-STREAMLINE.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="EXFM">
+				<sampler name="SHOW_SESSIONS_EXFM">
+					<group>SESSIONS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/exfm/SESSIONS.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="PROCESSES_EXFM">
+					<group>SYSTEM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/exfm/PROCESSES.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="FKM_EXFM">
+					<group>FKM</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/exfm/FKM.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="RV-STREAMLINE-EXFM">
+					<group>RV-STREAMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/exfm/RV-XFM.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="XFM-PENDINGS">
+					<group>STATIC</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/exfm/XFM_PENDINGS.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="TOOLS">
+				<samplerGroup name="CAPACITY MONITOR">
+					<sampler name="ETT Capacity Stats">
+						<var-group>
+							<data>Capacity Monitor</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat  /opt/geneos/resources/toolkit-views/ett/tools/capacity_monitor/showcapacitystatsett.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="FIDESSA Capacity Stats">
+						<var-group>
+							<data>Capacity Monitor</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat  /opt/geneos/resources/toolkit-views/ett/tools/capacity_monitor/showcapacitystatsfidessa.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="GEMS Capacity Stats">
+						<var-group>
+							<data>Capacity Monitor</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat  /opt/geneos/resources/toolkit-views/ett/tools/capacity_monitor/showcapacitystatsgems.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="TRISK Capacity Stats">
+						<var-group>
+							<data>Capacity Monitor</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat  /opt/geneos/resources/toolkit-views/ett/tools/capacity_monitor/showcapacitystatstrisk.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="ETT FLOW STATS">
+					<sampler name="ETT Flow Stats">
+						<var-group>
+							<data>STATS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_flow_stats/showstats.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="ETT LATENCY STATS">
+					<sampler name="ETT Latency Stats">
+						<var-group>
+							<data>STATS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat  /opt/geneos/resources/toolkit-views/ett/tools/ett_latency_stats/showexchangelatency.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="ETT TOOLS">
+					<sampler name="ETT Show AXP Order Status">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/shownotionalfilled.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Component Projection">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/componentprojection.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Show Environment Configuration">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/showenvconfiguration.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Show Java APP Info">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/showjavaappinf.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Show Number of Orders">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/shownorders.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Show Notional Orders Filled">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/showaxporderstatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ETT Show SORT stats">
+						<var-group>
+							<data>TOOLS</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/ett/tools/ett_tools/showsorstats.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="ETT Database">
+			<sampler name="SQL Logs">
+				<var-group>
+					<data>My SQL</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/var/log/mysql/mysqld.log</data>
+									</filename>
+								</source>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="SQL tables">
+				<var-group>
+					<data>My SQL</data>
+				</var-group>
+				<plugin>
+					<sql-toolkit>
+						<queries>
+							<query>
+								<name>
+									<data>OS Table Content</data>
+								</name>
+								<sql>
+									<data>SELECT * FROM `geneos_db`.`os_table`;</data>
+								</sql>
+							</query>
+						</queries>
+						<connection>
+							<database>
+								<mysql>
+									<var-serverName>
+										<data>localhost</data>
+									</var-serverName>
+									<var-databaseName>
+										<data>geneos_db</data>
+									</var-databaseName>
+								</mysql>
+							</database>
+							<var-userName>
+								<data>root</data>
+							</var-userName>
+						</connection>
+					</sql-toolkit>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="WEB">
+			<sampler name="Webmon">
+				<var-group>
+					<data>GENERIC</data>
+				</var-group>
+				<plugin>
+					<web-mon>
+						<host>
+							<data>192.168.0.5</data>
+						</host>
+						<scenarioList>
+							<scenario>
+								<name>Check availibility</name>
+								<stages>
+									<stage>
+										<name>Homepage</name>
+										<url>
+											<data>index.html</data>
+										</url>
+										<successCriteria>
+											<responseCodes>
+												<responseCode>200</responseCode>
+											</responseCodes>
+										</successCriteria>
+									</stage>
+								</stages>
+							</scenario>
+						</scenarioList>
+					</web-mon>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+	</samplers>
+</gateway>

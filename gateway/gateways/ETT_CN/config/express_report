@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-09 15:15:04 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.0.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<expressReports>
+		<reportRuns>
+			<reportRun name="Run Test Reports">
+				<report ref="ETT Report Faults"/>
+			</reportRun>
+		</reportRuns>
+		<reports>
+			<report name="ETT Report Faults">
+				<faultReport>
+					<datasources>
+						<database ref="ETT DB"/>
+					</datasources>
+					<viewPath>
+						<pathElement>
+							<gatewayName/>
+						</pathElement>
+					</viewPath>
+					<resultColumns>
+						<total>
+							<allEvents>false</allEvents>
+							<criticalEvents>true</criticalEvents>
+							<warningEvents>true</warningEvents>
+							<openEvents>true</openEvents>
+							<percentCritical>false</percentCritical>
+							<percentWarning>false</percentWarning>
+						</total>
+					</resultColumns>
+					<dateRange>
+						<relative>
+							<duration>1</duration>
+							<durationPeriod>Days</durationPeriod>
+						</relative>
+					</dateRange>
+				</faultReport>
+			</report>
+		</reports>
+		<datasources>
+			<database name="ETT DB">
+				<mysql>
+					<serverName>
+						<data>192.168.0.5</data>
+					</serverName>
+					<databaseName>
+						<data>geneos_db2</data>
+					</databaseName>
+				</mysql>
+				<authentication>
+					<userName>
+						<data>geneos</data>
+					</userName>
+					<password>
+						<plaintext>geneos</plaintext>
+					</password>
+				</authentication>
+			</database>
+		</datasources>
+	</expressReports>
+</gateway>
