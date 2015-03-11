@@ -1,0 +1,4 @@
+AXP [pool-2-thread-1] -- Crosser.commitSingleCrossResult(): Cross commit price for CSGN.VX [{496;500 ] unavailable price. Will retry cross commit in 30 seconds.
+AXP [pool-2-thread-1] -- Crosser.commitSingleCrossResult(): Cross commit price for IBM.L [{496;500 ] unavailable price. Will retry cross commit in 30 seconds.
+AXP [pool-2-thread-1] -- Crosser.commitSingleCrossResult(): Cross commit price for ZURN.VX [{496;500 ] unavailable price. Will retry cross commit in 30 seconds.
+

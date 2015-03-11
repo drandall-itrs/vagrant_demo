@@ -1,0 +1,9 @@
+name,status,permissions,lastModificationTime,fileSize,updateRate,triggerDetails,fileOwner,filename,/group
+event-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 07:09:10 2014,0.8 Kb,0.0000 Kb/sec,,caplin,event-rttpd.log,
+http-access-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,http-access-rttpd.log,
+http-error-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,http-error-rttpd.log,
+java.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,java.log,
+object-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,object-rttpd.log,
+request-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,request-rttpd.log,
+session-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,session-rttpd.log,
+jmx-rttpd.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,jmx-rttpd.log,

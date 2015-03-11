@@ -1,0 +1,8 @@
+Client Order ID,Value
+<!>Count Pendng New,0
+<!>Count Pending Cancel,1
+<!>Count Pending Replace,0
+Client Order ID, 67267832678
+Symbol,VOD.L
+Side,BUY
+Order Status,CANCEL

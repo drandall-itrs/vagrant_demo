@@ -1,0 +1,11 @@
+Name,Value
+serverName,DWELO/Eurex
+startButton,ok
+DBMS,busy
+DBMSactiveConnections,2
+connectedMarketWatchs,1
+stations,ok
+exchange,P1:ok  P2:[Port2]  P3:[Port3]  P4:[Port4]  P5:[Port5]
+secondsSinceLastUpdate,11
+lastUpdate,09:42:57 24Jul13
+lastSQLError,none

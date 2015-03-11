@@ -1,0 +1,31 @@
+low information 2006/10/23 18:03:37:020: FIXPump: Received data on connection {HSBCA-ATRA} [8=FIX.4.09=5035=049=ATRA56=HSBCA34=87252=20061023-18:03:3710=015]
+
+low information 2006/10/23 18:03:38:027: FIXPump: Received data on connection {HSBCIB-HSBCAM} [8=FIX.4.29=9035=149=HSBCAM56=HSBCIB34=20252=20061023-18:03:38369=206112=25 Sep 2005 23:00:00 GMT10=095]
+
+low information 2006/10/23 18:03:38:030: FIXConnectionData: Sending data on connection {HSBCIB-HSBCAM} [8=FIX.4.29=008235=034=20749=HSBCIB56=HSBCAM52=20061023-18:03:38112=25 Sep 2005 23:00:00 GMT10=076]
+
+low information 2006/10/23 18:03:38:178: FIXConnectionData: Sending data on connection {HSBCORB-FMRB} [8=FIX.4.29=005235=034=13249=HSBCORB56=FMRB52=20061023-18:03:3810=238]
+
+low information 2006/10/23 18:03:38:626: FIXPump: Received data on connection {HSBC-SCHRODER} [8=FIX.4.29=005335=034=14149=SCHRODER56=HSBC52=20061023-18:03:3810=063]
+
+low information 2006/10/23 18:03:38:763: FIXPump: Received data on connection {HSBC-INVHK} [8=FIX.4.09=6035=049=INVHK56=HSBC34=2943=N52=20061023-18:03:38112=010=203]
+
+low information 2006/10/23 18:03:39:906: FIXPump: Received data on connection {HSBD-RIOE} [8=FIX.4.09=004835=049=RIOE56=HSBD34=6752=20061023-18:03:3910=239]
+
+low information 2006/10/23 18:03:40:159: FIXConnectionData: Sending data on connection {HSBC-FMRCO} [8=FIX.4.09=005035=034=13149=HSBC56=FMRCO52=20061023-18:03:4010=088]
+
+low information 2006/10/23 18:03:40:668: FIXPump: Received data on connection {HSBC-CAXTON} [8=FIX.4.09=6135=049=CAXTON56=HSBC34=5843=N52=20061023-18:03:40112=010=029]
+
+low information 2006/10/23 18:03:42:579: FIXConnectionData: Sending data on connection {HSBC-CRMC} [8=FIX.4.09=004835=034=7049=HSBC56=CRMC52=20061023-18:03:4210=225]
+
+low information 2006/10/23 18:03:43:179: FIXConnectionData: Sending data on connection {HSBC-CAPG} [8=FIX.4.09=004835=034=7249=HSBC56=CAPG52=20061023-18:03:4310=218]
+
+low information 2006/10/23 18:03:43:387: FIXPump: Received data on connection {HSBE-BLP} [8=FIX.4.19=004735=049=BLP56=HSBE34=4352=20061023-18:03:4310=157]
+
+low information 2006/10/23 18:03:43:457: FIXPump: Received data on connection {HSBC-CAPG} [8=FIX.4.09=4835=049=CAPG56=HSBC34=7652=20061023-18:03:4310=126]
+
+low information 2006/10/23 18:03:43:741: FIXPump: Received data on connection {HSBL-BLP} [8=FIX.4.19=004735=049=BLP56=HSBL34=4352=20061023-18:03:4310=164]
+
+low information 2006/10/23 18:03:43:809: FIXPump: Received data on connection {HSBC-CRMC} [8=FIX.4.09=4835=049=CRMC56=HSBC34=7452=20061023-18:03:4310=134]
+
+low information 2006/10/23 18:03:43:819: FIXConnectionData: Sending data on connection {HSBE-BLP} [8=FIX.4.19=004735=034=4349=HSBE56=BLP52=20061023-18:03:4310=157]

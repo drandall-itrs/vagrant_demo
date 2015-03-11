@@ -1,0 +1,14 @@
+name,value,
+<!>connectionStatus,UP
+serverVersion,Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - ProductionWith the Partitioning; OLAP and Data Mining options
+serverName,ITRSSRV013
+databaseName,orcl
+startupTime,Wed Apr  4 09:21:06 2007
+instanceStatus,OPEN
+clusterMode,NO
+archiverLogStatus,STOPPED
+loginsAllowed,ALLOWED
+shutdownPending,NO
+databaseStatus,ACTIVE
+databaseRole,PRIMARY_INSTANCE
+activeState,NORMAL

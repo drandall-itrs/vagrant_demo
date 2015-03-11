@@ -1,0 +1,22 @@
+UserId,UserName,Mnemonic,Access,Selector,SupervisedUsers
+140,John Smith, ,middle, ,100-999
+141,Arthur Negus, ,middle, ,0-999
+142,Fred Brown, ,middle, ,0-999
+150,Fred Flintoff, ,root, ,150-151 156-163 165-168
+151,Raj Patel, ,root, ,0-999
+152,George Carr, ,root, ,160
+153,Louis Louca, ,root, ,100-999
+154,Arthur Rogers, ,root, ,164
+155,Edna Jones, ,root, ,150-166 165 166 168 169 252 260 264-269 360 361 461 365
+156,Rita Smith, ,root, ,150-151 156-163 165-16
+157,Ben Temple, ,root, ,150-151 156-163 165-168
+158,Kate Philips, ,root, ,150-152 156-163 165-168
+159,Bob Smith, ,root, ,150-152 156-163 165-168
+160,Tony Jameson, ,root, ,152
+161,Raj Bala, ,root, ,150-152 156-163 165-168
+162,George Staley, ,root, ,150-152 156-163 165-168
+163,Roger Black, ,root, ,150-152 156-163 165-168
+164,Caroline Brown, ,root, ,154
+165,Bill Small, ,root, ,150-152 156-163 165-168
+166,Jos Wainwright, ,root, ,150-152 156-163 165-168
+167,Dave Curnow, ,root, ,150-152 156-163 165-168

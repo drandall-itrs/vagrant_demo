@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-18 10:53:10 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<types>
+		<typeGroup name="Market Data">
+			<typeGroup name="Latency">
+				<type name="Latency">
+					<sampler ref="Feed Latency Monitoring"/>
+				</type>
+			</typeGroup>
+			<typeGroup name="Wombat">
+				<type name="wombat">
+					<sampler ref="NYXT MAMA STATS"/>
+					<sampler ref="NYXT WADMIN LOGGER"/>
+					<sampler ref="NYXT DATA LOGGER HEARTBEATS"/>
+					<sampler ref="NYXT FEED HANDLER LOGS"/>
+					<sampler ref="NYXT FEED HANDLER STATUS"/>
+					<sampler ref="NYXT LINE STATS"/>
+					<sampler ref="NYXT LATENCY"/>
+					<sampler ref="NYXT PAPA STATS"/>
+					<sampler ref="NYXT PROCESSES"/>
+					<sampler ref="NYXT WIMP STATS"/>
+				</type>
+			</typeGroup>
+			<typeGroup name="Contribution">
+				<typeGroup name="Gissing">
+					<type name="GISSING">
+						<sampler ref="gissing-api-component-status"/>
+						<sampler ref="gissing-api-system-manager-system-performance"/>
+						<sampler ref="gissing-api-system-manager-fault-tolerance"/>
+						<sampler ref="gissing-api-config-server-configuration-server-status"/>
+						<sampler ref="gissing-api-performance"/>
+						<sampler ref="gissing-api-hourly-handler-statistics"/>
+						<sampler ref="gissing-api-mklo-mklo-status"/>
+						<sampler ref="gissing-api-lighto-lighto-status"/>
+						<sampler ref="gissing-api-mklo-port-0"/>
+						<sampler ref="gissing-api-mlip2o-mlip2o-status"/>
+						<sampler ref="gissing-api-tc2i-tc2i-status"/>
+						<sampler ref="gissing-api-ctxi-ctxi-status"/>
+						<sampler ref="gissing-api-mlip2o-marketlink-ip-output-1"/>
+						<sampler ref="gissing-api-csvi-csv-file-snapshot-input-handler"/>
+						<sampler ref="gissing-api-bbgo-bloomberg-output-handler"/>
+						<sampler ref="gissing-api-rtxli-rtxli-status"/>
+						<sampler ref="gissing-api-erso-erso-status"/>
+						<sampler ref="gissing-api-tcpi-tcp-input-handler"/>
+						<sampler ref="gissing-api-tcpo-tcpo-status"/>
+						<sampler ref="gissing-api-rtxlo-rtxlo-status"/>
+					</type>
+				</typeGroup>
+			</typeGroup>
+			<typeGroup name="Bloomberg">
+				<type name="BPIPE 00">
+					<sampler ref="BPIPE Service Overview 00"/>
+					<sampler ref="BPIPE Cache 00"/>
+					<sampler ref="BPIPE Machine 00"/>
+					<sampler ref="BPIPE RMDS 00"/>
+					<sampler ref="BPIPE Destinations 00"/>
+				</type>
+				<type name="BPIPE 01">
+					<sampler ref="BPIPE Service Overview 01"/>
+					<sampler ref="BPIPE Cache 01"/>
+					<sampler ref="BPIPE Machine 01"/>
+					<sampler ref="BPIPE RMDS 01"/>
+					<sampler ref="BPIPE Destinations 01"/>
+				</type>
+				<type name="SOCKS PROXY">
+					<sampler ref="SOCKS Proxy Processes"/>
+					<sampler ref="SOCKS Proxy Network Ports"/>
+				</type>
+			</typeGroup>
+			<typeGroup name="RMDS">
+				<typeGroup name="SDIST">
+					<type name="SDIST Cascaded">
+						<sampler ref="SDIST Cascaded Services"/>
+						<sampler ref="SDIST Overview"/>
+						<sampler ref="SDIST RRCP STATS"/>
+						<sampler ref="SDIST Cascaded Routes"/>
+						<sampler ref="SDIST Logs"/>
+						<sampler ref="SDIST HS"/>
+					</type>
+					<type name="SDIST External">
+						<sampler ref="SDIST External Services"/>
+						<sampler ref="SDIST Overview"/>
+						<sampler ref="SDIST RRCP STATS"/>
+						<sampler ref="SDIST External Routes"/>
+						<sampler ref="SDIST Logs"/>
+						<sampler ref="SDIST HS"/>
+					</type>
+					<type name="SDIST Contribution">
+						<sampler ref="SDIST Contribution Services"/>
+						<sampler ref="SDIST Overview"/>
+						<sampler ref="SDIST RRCP STATS"/>
+						<sampler ref="SDIST Contribution Routes"/>
+						<sampler ref="SDIST Logs"/>
+						<sampler ref="SDIST HS"/>
+					</type>
+					<type name="SDIST Internal">
+						<sampler ref="SDIST Internal Services"/>
+						<sampler ref="SDIST Overview"/>
+						<sampler ref="SDIST RRCP STATS"/>
+						<sampler ref="SDIST Internal Routes"/>
+						<sampler ref="SDIST Logs"/>
+						<sampler ref="SDIST HS"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="P2PS">
+					<type name="Order Trading 00">
+						<sampler ref="P2PS Order Trading 000"/>
+					</type>
+					<type name="Order Trading 01">
+						<sampler ref="P2PS Order Trading 001"/>
+					</type>
+					<type name="Order Trading 02">
+						<sampler ref="P2PS Order Trading 002"/>
+					</type>
+					<type name="Order Trading 03">
+						<sampler ref="P2PS Order Trading 003"/>
+					</type>
+					<type name="Order Trading 04">
+						<sampler ref="P2PS Order Trading 004"/>
+					</type>
+					<type name="Order Trading 05">
+						<sampler ref="P2PS Order Trading 005"/>
+					</type>
+					<type name="Order Trading 06">
+						<sampler ref="P2PS Order Trading 006"/>
+					</type>
+					<type name="Order Trading 07">
+						<sampler ref="P2PS Order Trading 007"/>
+					</type>
+					<type name="Applications 000">
+						<sampler ref="P2PS Applications 000"/>
+					</type>
+					<type name="Applications 001">
+						<sampler ref="P2PS Applications 001"/>
+					</type>
+					<type name="Users 00">
+						<sampler ref="P2PS Users 000"/>
+					</type>
+					<type name="Users 01">
+						<sampler ref="P2PS Users 001"/>
+					</type>
+					<type name="Users 02">
+						<sampler ref="P2PS Users 002"/>
+					</type>
+					<type name="Users 03">
+						<sampler ref="P2PS Users 003"/>
+					</type>
+					<type name="Services 00">
+						<sampler ref="P2PS Services applications - systems 000"/>
+					</type>
+					<type name="Services 01">
+						<sampler ref="P2PS Services applications - systems 001"/>
+					</type>
+					<type name="Overview and Processes">
+						<sampler ref="P2PS Overview"/>
+						<sampler ref="Processes"/>
+						<sampler ref="P2PS Logs"/>
+						<sampler ref="P2PS RV"/>
+						<sampler ref="P2PS Info"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="DACS">
+					<type name="DACS">
+						<sampler ref="DACS Log Files"/>
+						<sampler ref="DACS Map"/>
+						<sampler disabled="false" ref="DACS Processes"/>
+						<sampler disabled="false" ref="DACS SCP"/>
+						<sampler ref="DACS Server"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="DTS">
+					<type name="DTS Server">
+						<sampler ref="DTS Logs"/>
+						<sampler ref="DTS Processes"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="DBU">
+					<type name="DBU">
+						<sampler ref="DBU Logs"/>
+						<sampler ref="DBU Processes"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="RDU">
+					<type name="RDU">
+						<sampler ref="RDU Processes"/>
+						<sampler ref="RDU Logs"/>
+					</type>
+				</typeGroup>
+			</typeGroup>
+			<typeGroup name="Exchange Connectivity">
+				<type name="Exchange Connectivity">
+					<sampler ref="Exchange Connectivity LSE"/>
+					<sampler ref="Exchange Connectivity NYSE"/>
+					<sampler ref="Exchange Connectivity SWX"/>
+				</type>
+			</typeGroup>
+		</typeGroup>
+	</types>
+</gateway>

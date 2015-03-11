@@ -1,0 +1,20 @@
+MIB NAME,VALUE
+<!>acsFeedStatus,UP
+<!>acsNetLogStatus,UP
+<!>acsOutLogStatus,UP
+acsContributionsperSec,10
+acsInstrumentsinUse,1267
+acsMaxInstruments,2000
+acsNoofTCPClients,56
+acsNoofUpstreamTCPConnections,23
+acsUpstreamTCPWriteRate,346 per sec
+acsOutstandingContributions,34
+acsOutstandingRequests,120
+acsTotalOutputQueueUsage,3
+acsUpTime,3 days
+acsPortsComPort,8090
+acsPortMaxDelayinSecs,0.03
+acsPortNoinDelayQueue,45
+acsPortQueueSize,15
+acsPortServiceUp,1
+testField,100

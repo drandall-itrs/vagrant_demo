@@ -1,0 +1,10 @@
+instanceName,DataFileSize,LogFileSize,LogfileUsedSize,PercentLogUsed,Active Transactions,TransactionRate,ReplPendingXacts,ReplTransrate,LogCacheRead/Sec,Availability
+master,4096,504,292,57,0,0.40,2213867520,0.00,0.00,present
+model,1216,504,240,47,0,0.00,2213867520,0.00,0.00,present
+tempdb,8192,504,330,65,0,0.00,0,0.00,0.00,present
+AlexDB,2048,1016,334,32,0,0.00,0,0.00,0.00,present
+TEST_PLUGIN,2240,496,422,85,0,0.00,0,0.00,0.00,present
+NETAGENT,,,,,,,,,,absent
+msdb,5568,504,344,68,0,0.00,0,0.00,0.00,present
+mssqlsystemresource,38976,504,280,55,0,0.00,0,0.00,0.00,present
+_Total,64384,5048,2621,51,0,0.40,4427735040,0.00,0.00,present

@@ -1,0 +1,7 @@
+tableName,mbUsed,percentageFull,autoExtend
+<!>connectionStatus,UP
+USERS,5 Mb,0 %,YES
+UNDOTBS1,30.01 Mb,0 %,YES
+SYSTEM,490.14 Mb,0.01 %,YES
+SYSAUX,390.11 Mb,0.01 %,YES
+EXAMPLE,100.03 Mb,0 %,YES

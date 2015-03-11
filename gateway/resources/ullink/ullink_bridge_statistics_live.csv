@@ -1,0 +1,8 @@
+Start Time, End Time, Message Type,Total Message Count,Valid Latency Message Count,Max Throughput (Msg/s), Average Latency (microseconds),Median Latency (microseconds)
+12345,2014-06-10 15:50:00.001,2014-06-10 15:55:00.000,Execution report trade,267,267,23,1065,436
+12346,2014-06-10 15:55:00.001,2014-06-10 16:00:00.000,Execution report new,4,4,2,686,681
+12347,2014-06-10 16:00:00.001,2014-06-10 16:05:00.000,New order,2,2,1,54097,54097
+12348,2014-06-10 15:55:00.001,2014-06-10 16:00:00.000,New order,5,5,2,11880,1600
+12349,2014-06-10 15:55:00.001,2014-06-10 15:55:00.000,New order,6,6,1,5386,820
+12350,2014-06-10 15:50:00.001,2014-06-10 15:55:00.000,Execution report new,6,6,1,721,789
+12351,2014-06-10 15:50:00.001,2014-06-10 16:00:00.000,Execution report trade,89,89,22,447,366

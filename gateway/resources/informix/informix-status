@@ -1,0 +1,13 @@
+Name,Value
+Status,On-Line(Primary)
+Uptime,36 days 18:06:00
+Memory,65536
+Replication Type,Primary
+Replication State,On
+Paired Server,Online3
+DRInterval,10
+DRTimeout,40
+DRAuto,0
+DRLostFound,/usr/informix/etc/dr.lostfound
+
+

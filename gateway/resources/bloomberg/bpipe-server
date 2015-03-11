@@ -1,0 +1,14 @@
+Name,Value,High,Low
+Overall CPU busy,3.3 %,18.15 %,2.81 %
+Overall user CPU,2.23 %,17.19 %,1.87 %
+Overall system CPU,0.91 %,1.22 %,0.85 %
+Free memory,83.19 %,83.19 %,82.99 %
+Free swap,98.98 %,100 %,92.39 %
+Major page faults per second,0,0.09,0
+Context switches per second,3134,3385,2895
+Interrupts per second,1353,2015,1265
+TCP retransmission rate,0.62 %,1.67 %,0.48 %
+Network bits in,0.06 Mbps,0.11 Mbps,0.04 Mbps
+Network bits out,0.06 Mbps,0.11 Mbps,0.03 Mbps
+Network packets in per second,70.49,97.72,37.32
+Network packets out per second,61.78,94.83,24.11

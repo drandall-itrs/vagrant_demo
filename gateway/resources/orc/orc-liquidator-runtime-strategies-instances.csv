@@ -1,0 +1,5 @@
+LiquidatorInstance,template,Started,originator,volume
+HeadNightly-L,LongStrategy,true,ABC,2976
+HeadNightly-S,ShortStrategy,true,DEF,2971
+HeadDaily-L,LongStrategy,false,GHI,0
+HeadDaily-S,ShortStrategy,false,JKL,0

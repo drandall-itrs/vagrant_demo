@@ -1,0 +1,10 @@
+CNE,status,time,timestamp,subscriberManagedEntity,subscriberSampler,numTraps,numTrapsFwd,numTrapsDiscarded,statusDetails
+<!>numCNEs,1
+<!>numTrapsFwd,11545
+<!>numTrapsDiscarded,0
+<!>numTraps,0
+<!>numErrors,0
+<!>numWarnings,0
+<!>time,1367312464
+<!>timestamp,Tue Apr 30 10:01:04 2013
+195.27.3.163,OK,1367312435,Tue Apr 30 10:00:35 2013,CN,CorvilNet,11545,11545,0,

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2013-07-29 15:49:26 by apage on ITRSPC107-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.6-130308/gateway.xsd">
+	<types>
+		<typeGroup name="Electronic Trading">
+			<type name="FIDESSA">
+				<sampler ref="FIDESSA USERS"/>
+				<sampler ref="FIDESSA SYSTEM"/>
+				<sampler ref="FIDESSA PROCESSES"/>
+				<sampler ref="FIDESSA INVENTORY"/>
+				<sampler ref="FIDESSA INFRASTRUCTURE"/>
+				<sampler ref="FIDESSA REJECTED TRADES"/>
+				<sampler ref="FIDESSA DB CAPACITY"/>
+				<sampler ref="FIDESSA  LOGS"/>
+				<sampler ref="FIDESSA EXCHANGE CONNECTIVITY"/>
+				<sampler ref="FIDESSA TURNAROUND LATENCY"/>
+				<sampler ref="Processes - Fidessa"/>
+			</type>
+			<type name="EMS">
+				<sampler ref="ems-users"/>
+				<sampler ref="ems-topics"/>
+				<sampler ref="ems-routes"/>
+				<sampler ref="ems-server"/>
+				<sampler ref="ems-queues"/>
+				<sampler ref="ems-durables"/>
+				<sampler ref="ems-connections"/>
+				<sampler ref="ems-bridges"/>
+				<sampler ref="Processes - EMS"/>
+			</type>
+			<type name="RV">
+				<sampler ref="tib-rv-top_problem_senders"/>
+				<sampler ref="tib-rv-top_problem_receivers"/>
+				<sampler ref="tib-rv-publisher"/>
+				<sampler ref="tib-rv-hosts"/>
+				<sampler ref="tib-rv-fast_senders"/>
+			</type>
+			<type name="FIX">
+				<sampler ref="fix"/>
+				<sampler ref="ix-ma"/>
+				<sampler ref="sessionrejects"/>
+				<sampler ref="resendrequests"/>
+				<sampler ref="messageanalyser"/>
+				<sampler ref="iois"/>
+				<sampler ref="businessmessagerejects"/>
+				<sampler ref="Processes - FIX"/>
+			</type>
+			<type name="ALGO">
+				<sampler ref="ALGO_CHECK_INSTRUMENTS"/>
+				<sampler ref="ALGO_CHECK_QUOTES"/>
+				<sampler ref="ALGO_CHECK_STATS_COUNT"/>
+				<sampler ref="ALGO_CHECK_STATS"/>
+				<sampler ref="ALGO_COUNT_DELEGATE"/>
+				<sampler ref="ALGO_TOTAL_ORDER"/>
+				<sampler ref="ALGO_DAY_OPEN_HANGING_DELEGATES"/>
+				<sampler ref="ALGO_EXOM_REJECTIONS"/>
+				<sampler ref="ALGO_PENDING_CHILD_ORDERS"/>
+				<sampler ref="ALGO_PENDING_DELEGATES"/>
+				<sampler ref="tib_rv_hosts_alg"/>
+				<sampler ref="Processes - Algo"/>
+			</type>
+			<type name="SORT">
+				<sampler ref="SORT_MD"/>
+				<sampler ref="Processes - SORT"/>
+				<sampler ref="FKM_SORT"/>
+				<sampler ref="Show SORT Sessions"/>
+				<sampler ref="tib_rv_hosts_sort"/>
+				<sampler ref="TRADED_VENUES"/>
+				<sampler ref="SORT_REJECTED_CHILD"/>
+				<sampler ref="SORT_PENDING"/>
+				<sampler ref="PRICE_CHECK_MULTI_SOR"/>
+				<sampler ref="EXECUTION_DESTINATIONS_TP3"/>
+			</type>
+			<type name="EXFM">
+				<sampler ref="XFM-PENDINGS"/>
+				<sampler ref="SHOW_SESSIONS_EXFM"/>
+				<sampler ref="FKM_EXFM"/>
+				<sampler ref="Processes - EXFM"/>
+				<sampler ref="RV-STREAMLINE-EXFM"/>
+			</type>
+			<type name="DARK">
+				<sampler ref="RV-STREAMLINE-DP"/>
+				<sampler ref="SHOW_DP_INSTRUMENTS"/>
+				<sampler ref="FKM_DP"/>
+				<sampler ref="PROCESSES_DP"/>
+				<sampler ref="SHOW_SESSIONS_DP"/>
+				<sampler ref="Processes - DP"/>
+			</type>
+			<type name="ETT CAPACITY">
+				<sampler ref="ETT Capacity Stats"/>
+				<sampler ref="FIDESSA Capacity Stats"/>
+				<sampler ref="GEMS Capacity Stats"/>
+				<sampler ref="TRISK Capacity Stats"/>
+			</type>
+			<type name="ETT STATS">
+				<sampler ref="ETT Show SORT stats"/>
+				<sampler ref="ETT Show Notional Orders Filled"/>
+				<sampler ref="ETT Show Number of Orders"/>
+				<sampler ref="ETT Show Java APP Info"/>
+				<sampler ref="ETT Show Environment Configuration"/>
+				<sampler ref="ETT Component Projection"/>
+				<sampler ref="ETT Show AXP Order Status"/>
+				<sampler ref="ETT Latency Stats"/>
+				<sampler ref="ETT Flow Stats"/>
+			</type>
+		</typeGroup>
+	</types>
+</gateway>

@@ -1,0 +1,67 @@
+/* ===  Trend Report Specific Css ==== */
+
+/* =========================*/
+/* Summary Table            */
+/* =========================*/
+
+.defTable {  }
+.defTable h2 { font-size: 13pt; margin-left: 6em;}
+.defTable {  width: 900px;; background:#ccc; border: 2px solid #000; border-collapse:collapse;}
+.defTable td { text-align: left; padding-left: 15px; }
+.defTable td.rowname { text-align: right; font-weight: bold; width: 14px; vertical-align: top; }
+.postDefTable {  margin-bottom: 1em; }
+
+
+
+#lat-summary { margin-top: 1em;  }
+#lat-summary h1 { text-align: left; margin-left: 0em; }
+
+/* Common Values/Value Sub-Table Settings */
+#lat-summary table.data
+{
+        margin: 0; 
+        padding: 0;
+        margin-top: 20px;
+        border:0px solid #000;
+        font-size: 10pt;
+        border-collapse: collapse;
+}
+
+#lat-summary table.data td,
+#lat-summary table.data th,
+#lat-summary table.data th
+{
+  border-width: 0px; 
+  height: 24px;
+  border: 0px solid #000;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#lat-summary table.data th 
+{
+  border-bottom: 1px solid #fff; 
+  background:#0033cc; 
+  color: #fff;
+  font-size: 7pt;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#lat-summary table.data th.lastAttrib, 
+#lat-summary table.data td.lastAttrib { border-right: 5px solid #fff;}
+#lat-summary table.data td.dblCell { text-align: right; }
+/* Even Odd Colouring */
+
+#lat-summary table.data tr.even td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#lat-summary table.data tr td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+
+#lat-summary table.data tr.e1.e2 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#lat-summary table.data tr.e1.o2 td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+#lat-summary table.data tr.o1.o2 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+#lat-summary table.data tr.o1.e2 td {    border-bottom: 1px solid #fff; background:#d4d4ff; }
+
+/* =========================*/
+/* Stand Alone Page         */
+/* =========================*/
+div.stand-alone { margin-left: 1.6em; }

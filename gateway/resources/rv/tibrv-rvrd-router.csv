@@ -1,0 +1,18 @@
+Port,Router,Max Backlog
+<!>networkServices,6
+<!>processID,28440
+<!>hostname,mdnysny74
+<!>version,8.2.2
+<!>managed,no
+<!>inboxPort,0
+<!>clientPort,7502
+<!>name,rvrd
+<!>controlChannel,disabled
+<!>connectionsLogged,yes
+<!>ipAddress,10.109.160.12
+9010,RMDS.NY.PROD.SUB.74,100000
+9011,RMDS.NY.PROD.PUB.74,100000
+9012,RMDS.NY.PROD.DACS.74,100000
+9013,NEWYORK.JAG.ISLAND.DACS.JAG03,100000
+9014,NEWYORK.JAG.ISLAND.PUB.JAG03,100000
+9015,NEWYORK.JAG.ISLAND.SUB.JAG03,100000

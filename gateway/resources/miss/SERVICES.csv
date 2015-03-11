@@ -1,0 +1,7 @@
+Service,Status,timeAvailable,timeUnavailable
+BASIC_ARCHITECTURE,Up,Thursday July 8 06:00:01,
+MSG_LOGGING,Up,Thursday July 8 06:00:01,
+SESSION,Up,Thursday July 8 06:00:02,
+SECURITY,Up,Thursday July 8 06:00:11,
+XETRA_FFM,Up,Thursday July 8 06:00:19,
+XETRA_RETRANSMISSION_FFM,Up,Thursday July 8 06:00:19, 

@@ -1,0 +1,13 @@
+Name,Updates In Current Hour,Peak Updates Per Hour,Peak Updates Per Hour (time),Updates In Current Day,Peak Updates Per Day,Peak Updates Per Day (time),Total Updates,Peak Updates Per Second (Last Minute),Peak Updates Per Second (Last Hour),End-To-End Latency (last) (milliseconds),Current CPU (%),Handler Time,Updates In Last Second,Updates In Last Minute,Peak Updates Per Minute,Peak Updates Per Minute (time),Latency (last) (milliseconds)
+MKLO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:03,0,0,0,-, 
+LIGHTO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:03,0,0,0,-, 
+MLIP2O,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:03,0,0,0,-, 
+CTXI,0,0,-,0,0,-,0,0,0, ,0,07/01/2009 10:56:02,0,0,0,-,0.000
+TC2I,0,0,-,0,0,-,0,0,0, ,0,07/01/2009 10:56:03,0,0,0,-,0.000
+CSVI,0,0,-,0,0,-,0,0,0, ,0,07/01/2009 10:56:02,0,0,0,-,0.000
+BBGO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:02,0,0,0,-, 
+RTXLI,0,0,-,0,0,-,0,0,0, ,0,07/01/2009 10:56:03,0,0,0,-,0.000
+ERSO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:02,0,0,0,-, 
+TCPI,0,0,-,0,0,-,0,0,0, ,0,07/01/2009 10:56:03,0,0,0,-,0.000
+RTXLO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:03,0,0,0,-, 
+TCPO,0,0,-,0,0,-,0,0,0,0.000,0,07/01/2009 10:56:03,0,0,0,-, 

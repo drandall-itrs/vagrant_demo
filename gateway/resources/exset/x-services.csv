@@ -1,0 +1,12 @@
+serviceName,servicePort,turnaroundTime,status,failurePercent
+<!>targetNode,192.168.10.8
+<!>targetAddress,192.168.10.8
+<!>localInterface,ge0
+<!>sourceNode,itrsops
+ftp,20,0.23 ms,LISTENING,0.00
+ssh,22,0.21 ms,LISTENING,0.00
+smtp,25,0.18 ms,LISTENING,0.00
+gopher,70,0.14 ms,REACHABLE,0.00
+telnet,23,0.14 ms,LISTENING,0.00
+http,23,0.14 ms,LISTENING,0.00
+webcache,8080,0.13 ms,UNREACHABLE,0.00

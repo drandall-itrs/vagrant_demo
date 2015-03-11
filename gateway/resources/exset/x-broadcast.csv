@@ -1,0 +1,4 @@
+name,port,dataRecvRate,msgRecvRate,tmSinceLastMsg,srcHost
+FX Updates,9093,25.32 kb/sec,2114.22 msg/sec,2 secs,192.168.10.4
+London Equities,9092,100.24 kb/sec,8370.04 msg/sec,5 secs,192.168.10.4
+Milan Equities,9091,45.02 kb/sec,3759.17 msg/sec,20 secs,192.168.10.4

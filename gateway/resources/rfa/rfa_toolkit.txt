@@ -1,0 +1,6 @@
+reporter,status,lastTurnAround,lastSampleTime,aveTurnAround5Min,aveTurnAround15Min,aveTurnAround60Min
+<!>numSamplingReporters,3
+<!>publishingInstrument,TEST.ANY.ABC.CC1
+ReporterUK10,OK,17.785 ms,Tue Oct 28 14:30:09 2008,17.785 ms,17.785 ms,17.785 ms
+ReporterUK2,OK,17.742 ms,Tue Oct 28 14:30:09 2008,17.742 ms,17.742 ms,17.742 ms
+ReporterUK5,OK,17.775 ms,Tue Oct 28 14:30:09 2008,17.775 ms,17.775 ms,17.775 ms

@@ -1,0 +1,13 @@
+Orders for ITRS over the last 10 minutes:
+
+
+Order-Start-Time   Order-ID   Client-ID  Checkpoints A->B   Checkpoints C->D   Checkpoints E->F   Checkpoints G->H   Total 
+
+10:32:26:111       2398       ITRS       14 ms              28 ms              9 ms               19 ms              70 ms 
+
+10:36:32:291       7627       ITRS       19 ms              32 ms              11 ms              22 ms              84 ms
+
+10:37:53:901       3690       ITRS       13 ms              29 ms              8 ms               23 ms              73 ms
+
+10:40:28:329       1195       ITRS       20 ms                                 7 ms                                  27 ms
+

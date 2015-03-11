@@ -1,0 +1,8 @@
+id,Alias,Host, IP Address, Ping,SNMP,Outstanding Errors
+1,MasterPDD1,lon-srv-01,10.138.249.219,Yes,Yes
+2,MasterPDD2,lon-srv-02,10.138.249.203,Yes,Yes
+3,BackupESA,lon-srv-09,10.138.249.210,Yes,Yes
+4,MDS01US,ny-srv-01,10.138.249.221,Yes,Yes
+5,ORE1,lon-srv-p01,10.138.249.205,Yes,Yes,2
+6,ORE2,lon-srv-p02,10.138.249.206,Yes,Yes
+

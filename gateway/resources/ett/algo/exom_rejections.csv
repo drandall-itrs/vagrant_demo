@@ -1,0 +1,14 @@
+OrderId,RIC,Reason,NumOfErrors,
+<!>Description,Displays any rejected child orders from ALGO
+<!>Sample Time, Mon May 24 16:24:23 BST 2011	
+1 14882897-1,CNPP.PA,Crossing disabled,5,
+2 14885327-1,DSV.CO,Order Type not allowed in Auction: Market,MOC,
+3 14885488-1,CARD.ST,Order Type not allowed in Auction: Market,MOC,
+4 14885638-1,CLASb.ST,Order Type not allowed in Auction: Market,MOC,
+5 14887429-1,CRLA.PA,Crossing disabled,5,
+6 14887464-1,CEPFi.PA,Crossing disabled,5,
+7 ABMLTNS-59665017-1,DRX.L,Could not get Market Data: java.lang.Exception: Null MarketData was obtained.,1,
+8 BGIUK-20090615eAA0092-1,DB1Gn.DE,Failed dynamic price validation against Last Traded price (56.86),more than 5.0% away.  Tolerance Range: 54.016999999999996 - 59.703,
+9 BGIUK-20090615eAA0133-1,DAIGn.DE,Failed dynamic price validation against Last Traded price (26.575),more than 5.0% away.  Tolerance Range: 25.24625 - 27.90375,
+10 BGIUK-20090615eAA0214-1,EONGn.DE,Failed dynamic price validation against Last Traded price (24.75),more than 5.0% away.  Tolerance Range: 23.5125 - 25.9875,
+11 HEADW-00003324242ESLO0-1,CARR.PA,Crossing disabled,2,

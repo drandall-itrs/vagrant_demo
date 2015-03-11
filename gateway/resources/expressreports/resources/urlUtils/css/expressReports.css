@@ -1,0 +1,38 @@
+/* Core Styles */
+body
+{
+  font: 10pt Arial, Verdana, Helvetica, sans-serif;
+  color: #555;
+}
+
+/* Horizontal Scrolling Div
+   Following is added for IE by JavaScript
+   overflow-y: hidden
+   padding-bottom: 20px
+*/
+div.scrollX { overflow-x: auto; border: 0px;  padding-bottom: 0px;  }
+
+/* HR Style */
+.break {  margin: 0px; }
+
+/* === Page Top ==== */
+#top { position: absolute; top: 0px; left: 0px; right: 0px; height: 100px;  }
+
+/* Page Headings */
+#top h1 { font-size: 14pt; margin-left: 160px;}
+#top h2 { font-size: 12pt;  }
+#top .when { margin-left: 160px; font-size: 12pt; margin-top: -0.2em; font-weight: bold;}
+#top .gen { margin-left: 160px; font-size: 10pt; margin-top: 0.5em;}
+
+/* Logo */
+#logo { position: absolute; top: 10px; left: 10px; z-index: 1;}
+#logo img { width: 100px;}
+#logo p { font-size: 7pt;  text-align: relative; margin-top: -7px; margin-left: 21px;}
+
+/* === Page Bottom ==== */
+#bottom { position: absolute; top: 100px; left: 0px; right: 0px; bottom: 10px;  }
+
+
+
+
+

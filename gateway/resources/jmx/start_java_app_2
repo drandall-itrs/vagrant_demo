@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /opt/local/geneos-install/resources/jmx
+
+PATH=/usr/java/jdk1.6.0_07/bin:$PATH
+
+nohup java -classpath ".:xmlrpc-1.2-b1.jar" -Xms2M -Xmx8M -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=5003 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false QueueSamplerClient2 localhost 7034 &

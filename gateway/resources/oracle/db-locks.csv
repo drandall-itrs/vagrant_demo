@@ -1,0 +1,16 @@
+ID,sessionID,username,blocked,waiting,lockID1,lockID2,lockMode,lockDuration
+<!>connectionStatus,UP
+<!>timeThreshold,10 sec
+<!>totalDatabaseLocks,12
+165:3343423C,165,sysman,NO,NO,4,0,Null,1142247 sec
+165:33434298,165,sysman,NO,NO,0,0,Row-SELECT (SS),1142233 sec
+165:33434350,165,scott,NO,NO,25,1,Row-SELECT (SS),1142227 sec
+167:334343AC,167,sysman,NO,NO,1,0,Row-X (SX),1142213 sec
+166:33434408,166,guest,NO,NO,1,0,Exclusive,1142227 sec
+167:33434578,167,guest,NO,NO,1,0,Share,1142218 sec
+167:334345D4,167,sysman,NO,NO,2,0,Share,1142218 sec
+167:33434630,167,sysdba,NO,NO,3,0,Share,1142218 sec
+167:3343468C,167,guest,NO,NO,4,0,Share,1142218 sec
+167:334346E8,167,sysman,NO,NO,5,0,Share,1142218 sec
+167:33434744,167,scott,NO,NO,201,0,Share,1142218 sec
+164:334347FC,164,guest,NO,NO,3,1,Row-X (SX),1142208 sec

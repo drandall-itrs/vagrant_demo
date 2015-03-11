@@ -1,0 +1,16 @@
+Name,Value
+cpuUtilisation,1 % (average load)
+paging,0
+swapUsed,17 %
+swapSize,3686 MB
+memoryUse,1301.0 MB
+memoryIdle,2794.5 MB
+uptime,0 days
+timeDifference,0 seconds
+timezone,CEST
+hostid,21c40024
+totalPhysicalMemory,4095.6 MB
+hostname,JILLx64
+OS,Generic_142910-17 SunOS 5.10 i86pc
+totalProcesses,80
+zombieProcesses,2

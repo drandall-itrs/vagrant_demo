@@ -1,0 +1,1063 @@
+Mar 17 23:50:06.347 gedsborc1 storage[4345:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 17 23:50:06.348 gedsborc1 storage[4345:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 17 23:50:06.350 gedsborc1 storage[4345:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 18 04:00:04.148 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 18 04:00:04.149 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 18 04:00:04.150 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 18 04:00:04.150 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 18 04:00:04.151 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 18 04:00:04.151 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 18 04:00:04.151 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 18 04:00:04.152 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 18 04:00:04.154 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 18 04:00:04.155 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 18 04:00:04.155 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 18 04:00:04.155 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 18 04:00:04.155 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 163290
+Mar 18 04:00:04.156 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 18 04:00:04.156 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 18 04:00:04.156 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 18 04:00:04.156 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 18 04:00:04.156 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 18 04:00:04.157 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 18 04:00:04.157 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 18 04:00:04.157 gedsborc1 storage[24732:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 18 04:00:04.159 gedsborc1 storage[24732:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 18 04:00:04.160 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 18 04:00:04.160 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 18 04:00:04.160 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 18 04:00:04.160 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 18 04:00:04.160 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 18 04:00:04.161 gedsborc1 storage[24732:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 18 04:00:04.161 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 18 04:00:04.161 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 18 04:00:04.161 gedsborc1 storage[24732:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 18 04:00:04.435 gedsborc1 storage[24732:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 18 04:00:04.449 gedsborc1 storage[24732:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 18 04:00:04.450 gedsborc1 storage[24732:t@1    :l@1    ]/info:  Updating statistics
+Mar 18 04:00:15.279 gedsborc1 storage[24732:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 18 04:00:15.279 gedsborc1 storage[24732:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 18 04:00:15.281 gedsborc1 storage[24732:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 18 04:00:15.308 gedsborc1 storage[24732:t@1    :l@1    ]/info:  The server is ready.
+Mar 18 04:00:36.818 gedsborc1 storage[24732:t@13   :l@13   ]/info:  [rtserver] User [em] [em-24736] logged in. (localhost)
+Mar 18 23:50:05.964 gedsborc1 storage[24732:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 18 23:50:05.967 gedsborc1 storage[24732:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 18 23:50:05.969 gedsborc1 storage[24732:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 19 04:00:04.187 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 19 04:00:04.189 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 19 04:00:04.190 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 19 04:00:04.190 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 19 04:00:04.190 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 19 04:00:04.191 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 19 04:00:04.191 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 19 04:00:04.191 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 19 04:00:04.196 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 19 04:00:04.196 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 19 04:00:04.196 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 19 04:00:04.196 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 19 04:00:04.197 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 164656
+Mar 19 04:00:04.197 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 19 04:00:04.197 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 19 04:00:04.197 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 19 04:00:04.198 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 19 04:00:04.198 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 19 04:00:04.198 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 19 04:00:04.198 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 19 04:00:04.198 gedsborc1 storage[15226:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 19 04:00:04.200 gedsborc1 storage[15226:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 19 04:00:04.201 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 19 04:00:04.201 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 19 04:00:04.201 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 19 04:00:04.201 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 19 04:00:04.202 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 19 04:00:04.202 gedsborc1 storage[15226:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 19 04:00:04.203 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 19 04:00:04.203 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 19 04:00:04.203 gedsborc1 storage[15226:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 19 04:00:04.589 gedsborc1 storage[15226:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 19 04:00:04.613 gedsborc1 storage[15226:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 19 04:00:04.613 gedsborc1 storage[15226:t@1    :l@1    ]/info:  Updating statistics
+Mar 19 04:00:15.461 gedsborc1 storage[15226:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 19 04:00:15.461 gedsborc1 storage[15226:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 19 04:00:15.464 gedsborc1 storage[15226:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 19 04:00:15.475 gedsborc1 storage[15226:t@1    :l@1    ]/info:  The server is ready.
+Mar 19 04:00:37.010 gedsborc1 storage[15226:t@13   :l@14   ]/info:  [rtserver] User [em] [em-15224] logged in. (localhost)
+Mar 19 23:50:04.685 gedsborc1 storage[15226:t@13   :l@14   ]/info:  [rtserver] User [em] [em-15224] logged out. (localhost)
+Mar 19 23:50:06.109 gedsborc1 storage[15226:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 19 23:50:06.110 gedsborc1 storage[15226:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 19 23:50:06.112 gedsborc1 storage[15226:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 20 04:00:03.951 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 20 04:00:03.952 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 20 04:00:03.953 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 20 04:00:03.954 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 20 04:00:03.954 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 20 04:00:03.954 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 20 04:00:03.955 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 20 04:00:03.955 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 20 04:00:03.958 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 20 04:00:03.958 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 170605
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 20 04:00:03.959 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.960 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 20 04:00:03.960 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 20 04:00:03.960 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 20 04:00:03.960 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.961 gedsborc1 storage[3139:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 20 04:00:03.962 gedsborc1 storage[3139:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 20 04:00:03.963 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 20 04:00:03.963 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 20 04:00:03.963 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 20 04:00:03.964 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 20 04:00:03.964 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 20 04:00:03.964 gedsborc1 storage[3139:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 20 04:00:03.964 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 20 04:00:03.964 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 20 04:00:03.965 gedsborc1 storage[3139:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 20 04:00:04.399 gedsborc1 storage[3139:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 20 04:00:04.424 gedsborc1 storage[3139:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 20 04:00:04.424 gedsborc1 storage[3139:t@1    :l@1    ]/info:  Updating statistics
+Mar 20 04:00:15.267 gedsborc1 storage[3139:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 20 04:00:15.268 gedsborc1 storage[3139:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 20 04:00:15.270 gedsborc1 storage[3139:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 20 04:00:15.275 gedsborc1 storage[3139:t@1    :l@1    ]/info:  The server is ready.
+Mar 20 04:00:36.783 gedsborc1 storage[3139:t@13   :l@13   ]/info:  [rtserver] User [em] [em-3138] logged in. (localhost)
+Mar 20 23:50:04.210 gedsborc1 storage[3139:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 20 23:50:04.212 gedsborc1 storage[3139:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 20 23:50:04.214 gedsborc1 storage[3139:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 21 04:00:03.301 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 21 04:00:03.303 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 21 04:00:03.304 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 21 04:00:03.304 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 21 04:00:03.304 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 21 04:00:03.305 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 21 04:00:03.305 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 21 04:00:03.306 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 21 04:00:03.309 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 21 04:00:03.309 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 21 04:00:03.309 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 21 04:00:03.310 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 21 04:00:03.310 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 178166
+Mar 21 04:00:03.310 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 21 04:00:03.310 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 21 04:00:03.311 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 21 04:00:03.311 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 21 04:00:03.311 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 21 04:00:03.311 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 21 04:00:03.311 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 21 04:00:03.312 gedsborc1 storage[1786:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 21 04:00:03.314 gedsborc1 storage[1786:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 21 04:00:03.314 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 21 04:00:03.315 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 21 04:00:03.315 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 21 04:00:03.315 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 21 04:00:03.315 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 21 04:00:03.315 gedsborc1 storage[1786:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 21 04:00:03.317 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 21 04:00:03.318 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 21 04:00:03.318 gedsborc1 storage[1786:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 21 04:00:03.626 gedsborc1 storage[1786:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 21 04:00:03.647 gedsborc1 storage[1786:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 21 04:00:03.648 gedsborc1 storage[1786:t@1    :l@1    ]/info:  Updating statistics
+Mar 21 04:00:16.116 gedsborc1 storage[1786:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 21 04:00:16.117 gedsborc1 storage[1786:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 21 04:00:16.119 gedsborc1 storage[1786:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 21 04:00:16.140 gedsborc1 storage[1786:t@1    :l@1    ]/info:  The server is ready.
+Mar 21 04:00:36.046 gedsborc1 storage[1786:t@13   :l@13   ]/info:  [rtserver] User [em] [em-1790] logged in. (localhost)
+Mar 21 23:50:02.507 gedsborc1 storage[1786:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 21 23:50:02.510 gedsborc1 storage[1786:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 21 23:50:02.512 gedsborc1 storage[1786:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 22 04:00:03.616 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 22 04:00:03.618 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 22 04:00:03.619 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 22 04:00:03.619 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 22 04:00:03.620 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 22 04:00:03.620 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 22 04:00:03.620 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 22 04:00:03.621 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 22 04:00:03.623 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 22 04:00:03.624 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 22 04:00:03.624 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 22 04:00:03.624 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 22 04:00:03.624 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 171194
+Mar 22 04:00:03.625 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.625 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 22 04:00:03.625 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.625 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 22 04:00:03.626 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 22 04:00:03.626 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 22 04:00:03.626 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.626 gedsborc1 storage[8039:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 22 04:00:03.628 gedsborc1 storage[8039:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 22 04:00:03.629 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 22 04:00:03.629 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 22 04:00:03.629 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 22 04:00:03.630 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 22 04:00:03.630 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 22 04:00:03.630 gedsborc1 storage[8039:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 22 04:00:03.630 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 22 04:00:03.630 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 22 04:00:03.631 gedsborc1 storage[8039:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 22 04:00:04.055 gedsborc1 storage[8039:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 22 04:00:04.066 gedsborc1 storage[8039:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 22 04:00:04.067 gedsborc1 storage[8039:t@1    :l@1    ]/info:  Updating statistics
+Mar 22 04:00:08.168 gedsborc1 storage[8039:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 22 04:00:08.169 gedsborc1 storage[8039:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 22 04:00:08.176 gedsborc1 storage[8039:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 22 04:00:08.181 gedsborc1 storage[8039:t@1    :l@1    ]/info:  The server is ready.
+Mar 22 04:00:36.388 gedsborc1 storage[8039:t@13   :l@14   ]/info:  [rtserver] User [em] [em-8046] logged in. (localhost)
+Mar 22 11:02:16.387 gedsborc1 storage[8039:t@16   :l@17   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (ELONW064196.uk.ml.com)
+Mar 22 11:02:16.907 gedsborc1 storage[8039:t@19   :l@20   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (ELONW064196.uk.ml.com)
+Mar 22 17:12:23.713 gedsborc1 storage[8039:t@16   :l@17   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (ELONW064196.uk.ml.com)
+Mar 22 17:12:24.715 gedsborc1 storage[8039:t@19   :l@20   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (ELONW064196.uk.ml.com)
+Mar 22 23:50:04.974 gedsborc1 storage[8039:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 22 23:50:04.976 gedsborc1 storage[8039:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 22 23:50:04.978 gedsborc1 storage[8039:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 23 04:00:03.833 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 23 04:00:03.835 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 23 04:00:03.836 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 23 04:00:03.836 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 23 04:00:03.837 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 23 04:00:03.837 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 23 04:00:03.837 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 23 04:00:03.838 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 23 04:00:03.840 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 23 04:00:03.841 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 23 04:00:03.841 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 23 04:00:03.841 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 23 04:00:03.841 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 163916
+Mar 23 04:00:03.842 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.842 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 23 04:00:03.842 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.842 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 23 04:00:03.842 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 23 04:00:03.843 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 23 04:00:03.843 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.843 gedsborc1 storage[13011:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 23 04:00:03.845 gedsborc1 storage[13011:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 23 04:00:03.846 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 23 04:00:03.846 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 23 04:00:03.846 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 23 04:00:03.846 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 23 04:00:03.847 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 23 04:00:03.847 gedsborc1 storage[13011:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 23 04:00:03.847 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 23 04:00:03.847 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 23 04:00:03.848 gedsborc1 storage[13011:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 23 04:00:04.127 gedsborc1 storage[13011:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 23 04:00:04.148 gedsborc1 storage[13011:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 23 04:00:04.149 gedsborc1 storage[13011:t@1    :l@1    ]/info:  Updating statistics
+Mar 23 04:00:10.627 gedsborc1 storage[13011:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 23 04:00:10.627 gedsborc1 storage[13011:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 23 04:00:10.630 gedsborc1 storage[13011:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 23 04:00:10.634 gedsborc1 storage[13011:t@1    :l@1    ]/info:  The server is ready.
+Mar 23 04:00:37.005 gedsborc1 storage[13011:t@13   :l@13   ]/info:  [rtserver] User [em] [em-13016] logged in. (localhost)
+Mar 23 10:11:22.083 gedsborc1 storage[13011:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (ELONW064196.uk.ml.com)
+Mar 23 10:11:22.773 gedsborc1 storage[13011:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (ELONW064196.uk.ml.com)
+Mar 23 14:17:37.746 gedsborc1 storage[13011:t@22   :l@22   ]/warn:  [rtserver] User with id [demo2-synch] already logged in from 169.243.222.230:1323 [ELONW064196.uk.ml.com]!
+Mar 23 14:17:37.747 gedsborc1 storage[13011:t@22   :l@22   ]/warn:  [rtserver] User with id [demo2-asynch] already logged in from 169.243.222.230:1327 [ELONW064196.uk.ml.com]!
+Mar 23 14:17:42.750 gedsborc1 storage[13011:t@22   :l@22   ]/info:  [rtserver] User [demo2] failed to log in. (LONIWGDV63178.uk.ml.com)
+Mar 23 14:17:43.492 gedsborc1 storage[13011:t@22   :l@22   ]/info:  [rtserver] demo2 login attempt failed. (demo2-synch)
+Mar 23 14:18:09.345 gedsborc1 storage[13011:t@25   :l@25   ]/info:  [rtserver] User [demo4] [demo4-synch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 23 14:18:09.886 gedsborc1 storage[13011:t@28   :l@28   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 23 17:13:18.071 gedsborc1 storage[13011:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (ELONW064196.uk.ml.com)
+Mar 23 17:13:19.072 gedsborc1 storage[13011:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (ELONW064196.uk.ml.com)
+Mar 23 21:35:00.290 gedsborc1 storage[13011:t@25   :l@25   ]/info:  [rtserver] User [demo4] [demo4-synch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 23 21:35:01.282 gedsborc1 storage[13011:t@28   :l@28   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 23 23:50:05.785 gedsborc1 storage[13011:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 23 23:50:05.787 gedsborc1 storage[13011:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 23 23:50:05.789 gedsborc1 storage[13011:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 24 04:00:04.011 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 24 04:00:04.015 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 24 04:00:04.016 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 24 04:00:04.016 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 24 04:00:04.018 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 24 04:00:04.019 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 24 04:00:04.019 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 24 04:00:04.019 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 24 04:00:04.022 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 24 04:00:04.022 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 24 04:00:04.023 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 24 04:00:04.023 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 24 04:00:04.023 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 167711
+Mar 24 04:00:04.023 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 24 04:00:04.023 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 24 04:00:04.024 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 24 04:00:04.024 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 24 04:00:04.024 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 24 04:00:04.024 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 24 04:00:04.024 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 24 04:00:04.025 gedsborc1 storage[16130:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 24 04:00:04.027 gedsborc1 storage[16130:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 24 04:00:04.032 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 24 04:00:04.033 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 24 04:00:04.033 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 24 04:00:04.033 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 24 04:00:04.033 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 24 04:00:04.038 gedsborc1 storage[16130:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 24 04:00:04.041 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 24 04:00:04.041 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 24 04:00:04.041 gedsborc1 storage[16130:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 24 04:00:04.532 gedsborc1 storage[16130:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 24 04:00:04.991 gedsborc1 storage[16130:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 24 04:00:04.992 gedsborc1 storage[16130:t@1    :l@1    ]/info:  Updating statistics
+Mar 24 04:00:16.385 gedsborc1 storage[16130:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 24 04:00:16.385 gedsborc1 storage[16130:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 24 04:00:16.388 gedsborc1 storage[16130:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 24 04:00:16.424 gedsborc1 storage[16130:t@1    :l@1    ]/info:  The server is ready.
+Mar 24 04:00:36.746 gedsborc1 storage[16130:t@13   :l@14   ]/info:  [rtserver] User [em] [em-16134] logged in. (localhost)
+Mar 24 11:12:28.849 gedsborc1 storage[16130:t@16   :l@17   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW065327.uk.ml.com)
+Mar 24 11:12:29.530 gedsborc1 storage[16130:t@19   :l@20   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW065327.uk.ml.com)
+Mar 24 23:29:33.671 gedsborc1 storage[16130:t@16   :l@17   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW065327.uk.ml.com)
+Mar 24 23:29:34.841 gedsborc1 storage[16130:t@19   :l@20   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW065327.uk.ml.com)
+Mar 24 23:50:04.225 gedsborc1 storage[16130:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 24 23:50:04.226 gedsborc1 storage[16130:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 24 23:50:04.227 gedsborc1 storage[16130:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 25 04:00:03.889 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 25 04:00:03.891 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 25 04:00:03.892 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 25 04:00:03.892 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 25 04:00:03.892 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 25 04:00:03.893 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 25 04:00:03.893 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 25 04:00:03.893 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 25 04:00:03.896 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 25 04:00:03.897 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 25 04:00:03.897 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 25 04:00:03.897 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 25 04:00:03.897 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 155393
+Mar 25 04:00:03.898 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.898 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 25 04:00:03.899 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.899 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 25 04:00:03.899 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 25 04:00:03.899 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 25 04:00:03.899 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.900 gedsborc1 storage[17804:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 25 04:00:03.905 gedsborc1 storage[17804:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 25 04:00:03.905 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 25 04:00:03.906 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 25 04:00:03.906 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 25 04:00:03.906 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 25 04:00:03.906 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 25 04:00:03.906 gedsborc1 storage[17804:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 25 04:00:03.907 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 25 04:00:03.907 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 25 04:00:03.907 gedsborc1 storage[17804:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 25 04:00:04.186 gedsborc1 storage[17804:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 25 04:00:04.204 gedsborc1 storage[17804:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 25 04:00:04.205 gedsborc1 storage[17804:t@1    :l@1    ]/info:  Updating statistics
+Mar 25 04:00:15.492 gedsborc1 storage[17804:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 25 04:00:15.493 gedsborc1 storage[17804:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 25 04:00:15.496 gedsborc1 storage[17804:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 25 04:00:15.509 gedsborc1 storage[17804:t@1    :l@1    ]/info:  The server is ready.
+Mar 25 04:00:36.701 gedsborc1 storage[17804:t@13   :l@14   ]/info:  [rtserver] User [em] [em-17808] logged in. (localhost)
+Mar 25 10:03:45.235 gedsborc1 storage[17804:t@16   :l@17   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (ELONW064196.uk.ml.com)
+Mar 25 10:03:45.772 gedsborc1 storage[17804:t@19   :l@20   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (ELONW064196.uk.ml.com)
+Mar 25 10:25:48.249 gedsborc1 storage[17804:t@16   :l@17   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (ELONW064196.uk.ml.com)
+Mar 25 10:25:49.245 gedsborc1 storage[17804:t@19   :l@20   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (ELONW064196.uk.ml.com)
+Mar 25 13:45:31.033 gedsborc1 storage[17804:t@22   :l@23   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW065327.uk.ml.com)
+Mar 25 13:45:31.523 gedsborc1 storage[17804:t@25   :l@26   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW065327.uk.ml.com)
+Mar 25 23:29:33.458 gedsborc1 storage[17804:t@22   :l@23   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW065327.uk.ml.com)
+Mar 25 23:29:34.599 gedsborc1 storage[17804:t@25   :l@26   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW065327.uk.ml.com)
+Mar 25 23:50:05.366 gedsborc1 storage[17804:t@13   :l@14   ]/info:  [rtserver] User [em] [em-17808] logged out. (localhost)
+Mar 25 23:50:05.470 gedsborc1 storage[17804:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 25 23:50:05.475 gedsborc1 storage[17804:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 25 23:50:05.476 gedsborc1 storage[17804:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 26 04:00:04.168 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 26 04:00:04.210 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 26 04:00:04.211 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 26 04:00:04.211 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 26 04:00:04.212 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 26 04:00:04.212 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 26 04:00:04.212 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 26 04:00:04.213 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 26 04:00:04.215 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 26 04:00:04.216 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 26 04:00:04.216 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 26 04:00:04.216 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 26 04:00:04.217 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 147303
+Mar 26 04:00:04.217 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.217 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 26 04:00:04.217 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.218 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 26 04:00:04.218 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 26 04:00:04.218 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 26 04:00:04.218 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.218 gedsborc1 storage[21095:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 26 04:00:04.220 gedsborc1 storage[21095:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 26 04:00:04.221 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 26 04:00:04.221 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 26 04:00:04.222 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 26 04:00:04.224 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 26 04:00:04.225 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 26 04:00:04.225 gedsborc1 storage[21095:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 26 04:00:04.225 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 26 04:00:04.225 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 26 04:00:04.225 gedsborc1 storage[21095:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 26 04:00:04.706 gedsborc1 storage[21095:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 26 04:00:04.730 gedsborc1 storage[21095:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 26 04:00:04.730 gedsborc1 storage[21095:t@1    :l@1    ]/info:  Updating statistics
+Mar 26 04:00:09.955 gedsborc1 storage[21095:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 26 04:00:09.956 gedsborc1 storage[21095:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 26 04:00:09.958 gedsborc1 storage[21095:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 26 04:00:09.964 gedsborc1 storage[21095:t@1    :l@1    ]/info:  The server is ready.
+Mar 26 04:00:37.051 gedsborc1 storage[21095:t@13   :l@13   ]/info:  [rtserver] User [em] [em-21099] logged in. (localhost)
+Mar 26 10:16:15.290 gedsborc1 storage[21095:t@16   :l@16   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW065327.uk.ml.com)
+Mar 26 10:16:16.107 gedsborc1 storage[21095:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW065327.uk.ml.com)
+Mar 26 15:03:18.412 gedsborc1 storage[21095:t@16   :l@16   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW065327.uk.ml.com)
+Mar 26 15:03:19.419 gedsborc1 storage[21095:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW065327.uk.ml.com)
+Mar 26 23:50:04.906 gedsborc1 storage[21095:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 26 23:50:04.908 gedsborc1 storage[21095:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 26 23:50:04.910 gedsborc1 storage[21095:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 27 04:00:04.111 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 27 04:00:04.113 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 27 04:00:04.114 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 27 04:00:04.114 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 27 04:00:04.114 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 27 04:00:04.115 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 27 04:00:04.115 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 27 04:00:04.115 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 27 04:00:04.118 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 27 04:00:04.118 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 27 04:00:04.119 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 27 04:00:04.119 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 27 04:00:04.119 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 153005
+Mar 27 04:00:04.119 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.119 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 27 04:00:04.120 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.120 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 27 04:00:04.120 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 27 04:00:04.120 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 27 04:00:04.120 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.121 gedsborc1 storage[23817:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 27 04:00:04.123 gedsborc1 storage[23817:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 27 04:00:04.123 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 27 04:00:04.123 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 27 04:00:04.124 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 27 04:00:04.124 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 27 04:00:04.124 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 27 04:00:04.124 gedsborc1 storage[23817:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 27 04:00:04.124 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 27 04:00:04.125 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 27 04:00:04.125 gedsborc1 storage[23817:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 27 04:00:04.946 gedsborc1 storage[23817:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 27 04:00:04.984 gedsborc1 storage[23817:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 27 04:00:04.985 gedsborc1 storage[23817:t@1    :l@1    ]/info:  Updating statistics
+Mar 27 04:00:10.274 gedsborc1 storage[23817:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 27 04:00:10.274 gedsborc1 storage[23817:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 27 04:00:10.277 gedsborc1 storage[23817:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 27 04:00:10.289 gedsborc1 storage[23817:t@1    :l@1    ]/info:  The server is ready.
+Mar 27 04:00:37.016 gedsborc1 storage[23817:t@13   :l@13   ]/info:  [rtserver] User [em] [em-23813] logged in. (localhost)
+Mar 27 23:50:03.441 gedsborc1 storage[23817:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 27 23:50:03.442 gedsborc1 storage[23817:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 27 23:50:03.444 gedsborc1 storage[23817:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 28 04:00:04.070 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 28 04:00:04.071 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 28 04:00:04.072 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 28 04:00:04.073 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 28 04:00:04.073 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 28 04:00:04.074 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 28 04:00:04.074 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 28 04:00:04.074 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 28 04:00:04.078 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 28 04:00:04.078 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 28 04:00:04.078 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 28 04:00:04.079 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 28 04:00:04.079 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 155734
+Mar 28 04:00:04.079 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 28 04:00:04.079 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 28 04:00:04.080 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 28 04:00:04.080 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 28 04:00:04.080 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 28 04:00:04.080 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 28 04:00:04.081 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 28 04:00:04.081 gedsborc1 storage[17623:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 28 04:00:04.083 gedsborc1 storage[17623:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 28 04:00:04.083 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 28 04:00:04.084 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 28 04:00:04.084 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 28 04:00:04.084 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 28 04:00:04.084 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 28 04:00:04.084 gedsborc1 storage[17623:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 28 04:00:04.086 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 28 04:00:04.086 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 28 04:00:04.087 gedsborc1 storage[17623:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 28 04:00:04.445 gedsborc1 storage[17623:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 28 04:00:04.466 gedsborc1 storage[17623:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 28 04:00:04.466 gedsborc1 storage[17623:t@1    :l@1    ]/info:  Updating statistics
+Mar 28 04:00:16.154 gedsborc1 storage[17623:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 28 04:00:16.155 gedsborc1 storage[17623:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 28 04:00:16.157 gedsborc1 storage[17623:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 28 04:00:16.166 gedsborc1 storage[17623:t@1    :l@1    ]/info:  The server is ready.
+Mar 28 04:00:37.171 gedsborc1 storage[17623:t@13   :l@13   ]/info:  [rtserver] User [em] [em-17627] logged in. (localhost)
+Mar 28 23:50:04.037 gedsborc1 storage[17623:t@13   :l@13   ]/info:  [rtserver] User [em] [em-17627] logged out. (localhost)
+Mar 28 23:50:04.262 gedsborc1 storage[17623:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 28 23:50:04.263 gedsborc1 storage[17623:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 28 23:50:04.265 gedsborc1 storage[17623:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 29 04:00:03.695 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 29 04:00:03.696 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 29 04:00:03.697 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 29 04:00:03.698 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 29 04:00:03.698 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 29 04:00:03.698 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 29 04:00:03.699 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 29 04:00:03.699 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 29 04:00:03.709 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 29 04:00:03.709 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 145402
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 29 04:00:03.710 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.712 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 29 04:00:03.715 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 29 04:00:03.715 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 29 04:00:03.715 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.716 gedsborc1 storage[12520:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 29 04:00:03.718 gedsborc1 storage[12520:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 29 04:00:03.718 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 29 04:00:03.719 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 29 04:00:03.719 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 29 04:00:03.719 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 29 04:00:03.719 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 29 04:00:03.719 gedsborc1 storage[12520:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 29 04:00:03.720 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 29 04:00:03.721 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 29 04:00:03.721 gedsborc1 storage[12520:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 29 04:00:04.089 gedsborc1 storage[12520:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 29 04:00:04.128 gedsborc1 storage[12520:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 29 04:00:04.128 gedsborc1 storage[12520:t@1    :l@1    ]/info:  Updating statistics
+Mar 29 04:00:12.534 gedsborc1 storage[12520:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 29 04:00:12.534 gedsborc1 storage[12520:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 29 04:00:12.538 gedsborc1 storage[12520:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 29 04:00:12.543 gedsborc1 storage[12520:t@1    :l@1    ]/info:  The server is ready.
+Mar 29 04:00:36.433 gedsborc1 storage[12520:t@13   :l@13   ]/info:  [rtserver] User [em] [em-12519] logged in. (localhost)
+Mar 29 23:50:05.184 gedsborc1 storage[12520:t@13   :l@13   ]/info:  [rtserver] User [em] [em-12519] logged out. (localhost)
+Mar 29 23:50:06.780 gedsborc1 storage[12520:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 29 23:50:06.782 gedsborc1 storage[12520:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 29 23:50:06.783 gedsborc1 storage[12520:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 30 04:00:04.395 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 30 04:00:04.397 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 30 04:00:04.398 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 30 04:00:04.398 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 30 04:00:04.398 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 30 04:00:04.399 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 30 04:00:04.399 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 30 04:00:04.399 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 30 04:00:04.402 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 30 04:00:04.403 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 30 04:00:04.403 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 30 04:00:04.403 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 30 04:00:04.403 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 149854
+Mar 30 04:00:04.403 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.404 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 30 04:00:04.404 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.404 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 30 04:00:04.404 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 30 04:00:04.405 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 30 04:00:04.405 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.405 gedsborc1 storage[13988:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 30 04:00:04.407 gedsborc1 storage[13988:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 30 04:00:04.408 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 30 04:00:04.408 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 30 04:00:04.408 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 30 04:00:04.408 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 30 04:00:04.408 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 30 04:00:04.409 gedsborc1 storage[13988:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 30 04:00:04.409 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 30 04:00:04.409 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 30 04:00:04.409 gedsborc1 storage[13988:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 30 04:00:04.777 gedsborc1 storage[13988:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 30 04:00:04.795 gedsborc1 storage[13988:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 30 04:00:04.796 gedsborc1 storage[13988:t@1    :l@1    ]/info:  Updating statistics
+Mar 30 04:00:13.126 gedsborc1 storage[13988:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 30 04:00:13.127 gedsborc1 storage[13988:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 30 04:00:13.129 gedsborc1 storage[13988:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 30 04:00:13.136 gedsborc1 storage[13988:t@1    :l@1    ]/info:  The server is ready.
+Mar 30 04:00:37.776 gedsborc1 storage[13988:t@13   :l@14   ]/info:  [rtserver] User [em] [em-13992] logged in. (localhost)
+Mar 30 13:45:51.692 gedsborc1 storage[13988:t@16   :l@17   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (elonw007.uk.ml.com)
+Mar 30 13:45:52.443 gedsborc1 storage[13988:t@19   :l@20   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (elonw007.uk.ml.com)
+Mar 30 14:41:13.144 gedsborc1 storage[13988:t@19   :l@20   ]/info:  [rtserver] demo3 crashed at runtime, id [demo3-asynch].
+Mar 30 14:47:21.221 gedsborc1 storage[13988:t@16   :l@17   ]/info:  [rtserver] demo3 crashed at runtime, id [demo3-synch].
+Mar 30 14:47:26.231 gedsborc1 storage[13988:t@22   :l@23   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (elonw007.uk.ml.com)
+Mar 30 14:47:26.703 gedsborc1 storage[13988:t@25   :l@26   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (elonw007.uk.ml.com)
+Mar 30 14:48:30.009 gedsborc1 storage[13988:t@22   :l@23   ]/info:  [rtserver] demo3 crashed at runtime, id [demo3-synch].
+Mar 30 14:48:30.013 gedsborc1 storage[13988:t@25   :l@26   ]/info:  [rtserver] demo3 crashed at runtime, id [demo3-asynch].
+Mar 30 15:03:09.802 gedsborc1 storage[13988:t@28   :l@29   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW067097.uk.ml.com)
+Mar 30 15:03:10.472 gedsborc1 storage[13988:t@31   :l@32   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW067097.uk.ml.com)
+Mar 30 15:03:15.904 gedsborc1 storage[13988:t@34   :l@35   ]/info:  [rtserver] User [demo4] [demo4-synch] logged in. (elonw007.uk.ml.com)
+Mar 30 15:03:16.337 gedsborc1 storage[13988:t@37   :l@38   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged in. (elonw007.uk.ml.com)
+Mar 30 15:03:24.845 gedsborc1 storage[13988:t@34   :l@35   ]/info:  [rtserver] User [demo4] [demo4-synch] logged out. (elonw007.uk.ml.com)
+Mar 30 15:03:25.851 gedsborc1 storage[13988:t@37   :l@38   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged out. (elonw007.uk.ml.com)
+Mar 30 15:03:36.605 gedsborc1 storage[13988:t@40   :l@41   ]/info:  [rtserver] User [demo4] [demo4-synch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 30 15:03:37.973 gedsborc1 storage[13988:t@43   :l@44   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 30 15:11:57.096 gedsborc1 storage[13988:t@40   :l@41   ]/info:  [rtserver] User [demo4] [demo4-synch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 30 15:11:58.107 gedsborc1 storage[13988:t@43   :l@44   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 30 15:12:58.981 gedsborc1 storage[13988:t@46   :l@47   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 30 15:12:59.502 gedsborc1 storage[13988:t@49   :l@50   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 30 16:09:42.978 gedsborc1 storage[13988:t@28   :l@29   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW067097.uk.ml.com)
+Mar 30 16:09:43.982 gedsborc1 storage[13988:t@31   :l@32   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW067097.uk.ml.com)
+Mar 30 18:14:11.689 gedsborc1 storage[13988:t@46   :l@47   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 30 18:14:12.686 gedsborc1 storage[13988:t@49   :l@50   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 30 18:17:44.599 gedsborc1 storage[13988:t@52   :l@53   ]/info:  [rtserver] User [demo4] [demo4-synch] logged in. (ELONW093669.uk.ml.com)
+Mar 30 18:17:45.331 gedsborc1 storage[13988:t@55   :l@56   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged in. (ELONW093669.uk.ml.com)
+Mar 30 18:23:33.785 gedsborc1 storage[13988:t@52   :l@53   ]/info:  [rtserver] User [demo4] [demo4-synch] logged out. (ELONW093669.uk.ml.com)
+Mar 30 18:23:34.789 gedsborc1 storage[13988:t@55   :l@56   ]/info:  [rtserver] User [demo4] [demo4-asynch] logged out. (ELONW093669.uk.ml.com)
+Mar 30 23:50:06.092 gedsborc1 storage[13988:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 30 23:50:06.093 gedsborc1 storage[13988:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 30 23:50:06.094 gedsborc1 storage[13988:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 31 04:00:04.332 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 04:00:04.333 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 04:00:04.342 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 04:00:04.361 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 04:00:04.381 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 04:00:04.401 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 04:00:04.424 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 04:00:04.425 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 04:00:04.428 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 31 04:00:04.428 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 04:00:04.428 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 04:00:04.429 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 04:00:04.429 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154798
+Mar 31 04:00:04.429 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.429 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 04:00:04.429 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.430 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 04:00:04.430 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 04:00:04.431 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 04:00:04.431 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.431 gedsborc1 storage[11326:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 04:00:04.436 gedsborc1 storage[11326:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 31 04:00:04.447 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 31 04:00:04.515 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 31 04:00:04.515 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 31 04:00:04.515 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 31 04:00:04.515 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 31 04:00:04.515 gedsborc1 storage[11326:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 31 04:00:04.516 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 31 04:00:04.516 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 31 04:00:04.516 gedsborc1 storage[11326:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 31 04:00:05.122 gedsborc1 storage[11326:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 31 04:00:05.406 gedsborc1 storage[11326:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 31 04:00:05.406 gedsborc1 storage[11326:t@1    :l@1    ]/info:  Updating statistics
+Mar 31 04:00:09.990 gedsborc1 storage[11326:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 31 04:00:09.991 gedsborc1 storage[11326:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 31 04:00:09.995 gedsborc1 storage[11326:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 31 04:00:10.051 gedsborc1 storage[11326:t@1    :l@1    ]/info:  The server is ready.
+Mar 31 04:00:37.119 gedsborc1 storage[11326:t@13   :l@13   ]/info:  [rtserver] User [em] [em-11331] logged in. (localhost)
+Mar 31 10:46:26.737 gedsborc1 storage[11326:t@16   :l@16   ]/info:  [rtserver] User [_OrcAdmin_Environment] [loniwgdv63178_554_102419143_1676925694_4] logged in. (LONIWGDV63178.uk.ml.com)
+Mar 31 10:46:56.198 gedsborc1 storage[11326:t@16   :l@16   ]/info:  [rtserver] User [_OrcAdmin_Environment] [loniwgdv63178_554_102419143_1676925694_4] logged out. (LONIWGDV63178.uk.ml.com)
+Mar 31 12:53:07.407 gedsborc1 storage[11326:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW067097.uk.ml.com)
+Mar 31 12:53:07.954 gedsborc1 storage[11326:t@22   :l@22   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW067097.uk.ml.com)
+Mar 31 13:03:23.286 gedsborc1 storage[11326:t@25   :l@25   ]/warn:  [rtserver] User with id [demo3-synch] already logged in from 169.243.93.40:2996 [ELONW067097.uk.ml.com]!
+Mar 31 13:03:23.287 gedsborc1 storage[11326:t@25   :l@25   ]/warn:  [rtserver] User with id [demo3-asynch] already logged in from 169.243.93.40:3000 [ELONW067097.uk.ml.com]!
+Mar 31 13:03:28.289 gedsborc1 storage[11326:t@25   :l@25   ]/info:  [rtserver] User [demo3] failed to log in. (ELONW065327.uk.ml.com)
+Mar 31 13:03:29.250 gedsborc1 storage[11326:t@25   :l@25   ]/info:  [rtserver] demo3 login attempt failed. (demo3-synch)
+Mar 31 13:04:21.035 gedsborc1 storage[11326:t@28   :l@28   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (ELONW065327.uk.ml.com)
+Mar 31 13:04:21.525 gedsborc1 storage[11326:t@31   :l@31   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (ELONW065327.uk.ml.com)
+Mar 31 14:21:07.377 gedsborc1 storage[11326:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW067097.uk.ml.com)
+Mar 31 14:21:08.370 gedsborc1 storage[11326:t@22   :l@22   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW067097.uk.ml.com)
+Mar 31 16:54:46.336 gedsborc1 storage[11326:t@28   :l@28   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (ELONW065327.uk.ml.com)
+Mar 31 16:54:47.338 gedsborc1 storage[11326:t@31   :l@31   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (ELONW065327.uk.ml.com)
+Mar 31 16:57:22.847 gedsborc1 storage[11326:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 31 16:57:22.850 gedsborc1 storage[11326:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 31 16:57:22.851 gedsborc1 storage[11326:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Mar 31 16:57:50.507 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 16:57:50.509 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 16:57:50.510 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 16:57:50.510 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 16:57:50.511 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 16:57:50.511 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 16:57:50.511 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 16:57:50.512 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 16:57:50.514 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 31 16:57:50.514 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 16:57:50.515 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 16:57:50.515 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 16:57:50.515 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 132636
+Mar 31 16:57:50.516 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.516 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 16:57:50.516 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.516 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 16:57:50.516 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 16:57:50.517 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 16:57:50.517 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.517 gedsborc1 storage[223:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 16:57:50.519 gedsborc1 storage[223:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Mar 31 16:57:50.520 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: version 2.4.9
+Mar 31 16:57:50.520 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Mar 31 16:57:50.520 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: protocol: 2
+Mar 31 16:57:50.520 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Mar 31 16:57:50.520 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: audit disabled.
+Mar 31 16:57:50.521 gedsborc1 storage[223:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Mar 31 16:57:50.521 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Mar 31 16:57:50.521 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Mar 31 16:57:50.521 gedsborc1 storage[223:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Mar 31 16:57:51.222 gedsborc1 storage[223:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Mar 31 16:57:51.680 gedsborc1 storage[223:t@1    :l@1    ]/info:  storage: database patch level: 4
+Mar 31 16:57:51.681 gedsborc1 storage[223:t@1    :l@1    ]/info:  Updating statistics
+Mar 31 16:57:54.730 gedsborc1 storage[223:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Mar 31 16:57:54.731 gedsborc1 storage[223:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Mar 31 16:57:54.733 gedsborc1 storage[223:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Mar 31 16:57:55.037 gedsborc1 storage[223:t@1    :l@1    ]/info:  The server is ready.
+Mar 31 16:58:28.696 gedsborc1 storage[223:t@13   :l@14   ]/info:  [rtserver] User [em] [em-221] logged in. (localhost)
+Mar 31 23:50:05.549 gedsborc1 storage[223:t@13   :l@14   ]/info:  [rtserver] User [em] [em-221] logged out. (localhost)
+Mar 31 23:50:05.870 gedsborc1 storage[223:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Mar 31 23:50:05.872 gedsborc1 storage[223:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Mar 31 23:50:05.874 gedsborc1 storage[223:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  1 04:00:03.893 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  1 04:00:03.902 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  1 04:00:03.903 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  1 04:00:03.904 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  1 04:00:03.904 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  1 04:00:03.904 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  1 04:00:03.905 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  1 04:00:03.905 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  1 04:00:03.908 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  1 04:00:03.908 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  1 04:00:03.908 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  1 04:00:03.908 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  1 04:00:03.909 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 147265
+Apr  1 04:00:03.909 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.909 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  1 04:00:03.909 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.910 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  1 04:00:03.910 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  1 04:00:03.910 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  1 04:00:03.910 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.910 gedsborc1 storage[21700:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  1 04:00:03.915 gedsborc1 storage[21700:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  1 04:00:03.920 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  1 04:00:03.924 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  1 04:00:03.924 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  1 04:00:03.924 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  1 04:00:03.924 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  1 04:00:03.924 gedsborc1 storage[21700:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  1 04:00:03.926 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  1 04:00:03.927 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  1 04:00:03.928 gedsborc1 storage[21700:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  1 04:00:04.290 gedsborc1 storage[21700:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  1 04:00:04.309 gedsborc1 storage[21700:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  1 04:00:04.309 gedsborc1 storage[21700:t@1    :l@1    ]/info:  Updating statistics
+Apr  1 04:00:09.344 gedsborc1 storage[21700:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  1 04:00:09.345 gedsborc1 storage[21700:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  1 04:00:09.347 gedsborc1 storage[21700:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  1 04:00:09.360 gedsborc1 storage[21700:t@1    :l@1    ]/info:  The server is ready.
+Apr  1 04:00:36.932 gedsborc1 storage[21700:t@13   :l@14   ]/info:  [rtserver] User [em] [em-21704] logged in. (localhost)
+Apr  1 23:50:05.069 gedsborc1 storage[21700:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  1 23:50:05.082 gedsborc1 storage[21700:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  1 23:50:05.084 gedsborc1 storage[21700:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  2 04:00:03.960 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  2 04:00:03.962 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  2 04:00:03.963 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  2 04:00:03.963 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  2 04:00:03.964 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  2 04:00:03.964 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  2 04:00:03.964 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  2 04:00:03.965 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  2 04:00:03.967 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  2 04:00:03.968 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  2 04:00:03.968 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  2 04:00:03.968 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  2 04:00:03.968 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 138318
+Apr  2 04:00:03.968 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.969 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  2 04:00:03.969 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.969 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  2 04:00:03.970 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  2 04:00:03.970 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  2 04:00:03.970 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.970 gedsborc1 storage[732:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  2 04:00:03.972 gedsborc1 storage[732:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  2 04:00:03.973 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  2 04:00:03.973 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  2 04:00:03.973 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  2 04:00:03.974 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  2 04:00:03.974 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  2 04:00:03.974 gedsborc1 storage[732:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  2 04:00:03.974 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  2 04:00:03.974 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  2 04:00:03.975 gedsborc1 storage[732:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  2 04:00:04.578 gedsborc1 storage[732:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  2 04:00:04.595 gedsborc1 storage[732:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  2 04:00:04.595 gedsborc1 storage[732:t@1    :l@1    ]/info:  Updating statistics
+Apr  2 04:00:09.628 gedsborc1 storage[732:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  2 04:00:09.629 gedsborc1 storage[732:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  2 04:00:09.632 gedsborc1 storage[732:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  2 04:00:09.641 gedsborc1 storage[732:t@1    :l@1    ]/info:  The server is ready.
+Apr  2 04:00:37.225 gedsborc1 storage[732:t@13   :l@13   ]/info:  [rtserver] User [em] [em-737] logged in. (localhost)
+Apr  2 23:50:04.820 gedsborc1 storage[732:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  2 23:50:04.832 gedsborc1 storage[732:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  2 23:50:04.834 gedsborc1 storage[732:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  3 04:00:04.008 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  3 04:00:04.010 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  3 04:00:04.010 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  3 04:00:04.011 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  3 04:00:04.011 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  3 04:00:04.012 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  3 04:00:04.012 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  3 04:00:04.012 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  3 04:00:04.015 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  3 04:00:04.015 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  3 04:00:04.015 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  3 04:00:04.016 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  3 04:00:04.016 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154034
+Apr  3 04:00:04.016 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  3 04:00:04.016 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  3 04:00:04.016 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  3 04:00:04.017 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  3 04:00:04.017 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  3 04:00:04.017 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  3 04:00:04.017 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  3 04:00:04.017 gedsborc1 storage[5896:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  3 04:00:04.019 gedsborc1 storage[5896:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  3 04:00:04.020 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  3 04:00:04.020 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  3 04:00:04.020 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  3 04:00:04.021 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  3 04:00:04.021 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  3 04:00:04.021 gedsborc1 storage[5896:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  3 04:00:04.021 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  3 04:00:04.021 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  3 04:00:04.022 gedsborc1 storage[5896:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  3 04:00:04.383 gedsborc1 storage[5896:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  3 04:00:04.399 gedsborc1 storage[5896:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  3 04:00:04.399 gedsborc1 storage[5896:t@1    :l@1    ]/info:  Updating statistics
+Apr  3 04:00:09.343 gedsborc1 storage[5896:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  3 04:00:09.344 gedsborc1 storage[5896:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  3 04:00:09.347 gedsborc1 storage[5896:t@10   :l@11   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  3 04:00:09.351 gedsborc1 storage[5896:t@1    :l@1    ]/info:  The server is ready.
+Apr  3 04:00:37.108 gedsborc1 storage[5896:t@13   :l@14   ]/info:  [rtserver] User [em] [em-5900] logged in. (localhost)
+Apr  3 23:50:02.956 gedsborc1 storage[5896:t@13   :l@14   ]/info:  [rtserver] User [em] [em-5900] logged out. (localhost)
+Apr  3 23:50:03.133 gedsborc1 storage[5896:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  3 23:50:03.134 gedsborc1 storage[5896:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  3 23:50:03.136 gedsborc1 storage[5896:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  4 04:00:04.081 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  4 04:00:04.084 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  4 04:00:04.085 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  4 04:00:04.086 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  4 04:00:04.086 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  4 04:00:04.086 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  4 04:00:04.087 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  4 04:00:04.087 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  4 04:00:04.091 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  4 04:00:04.092 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  4 04:00:04.092 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  4 04:00:04.092 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  4 04:00:04.092 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 166124
+Apr  4 04:00:04.093 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  4 04:00:04.093 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  4 04:00:04.093 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  4 04:00:04.093 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  4 04:00:04.093 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  4 04:00:04.094 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  4 04:00:04.094 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  4 04:00:04.094 gedsborc1 storage[676:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  4 04:00:04.097 gedsborc1 storage[676:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  4 04:00:04.097 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  4 04:00:04.098 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  4 04:00:04.098 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  4 04:00:04.098 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  4 04:00:04.099 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  4 04:00:04.099 gedsborc1 storage[676:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  4 04:00:04.099 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  4 04:00:04.099 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  4 04:00:04.099 gedsborc1 storage[676:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  4 04:00:04.555 gedsborc1 storage[676:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  4 04:00:04.586 gedsborc1 storage[676:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  4 04:00:04.587 gedsborc1 storage[676:t@1    :l@1    ]/info:  Updating statistics
+Apr  4 04:00:10.564 gedsborc1 storage[676:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  4 04:00:10.565 gedsborc1 storage[676:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  4 04:00:10.568 gedsborc1 storage[676:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  4 04:00:10.574 gedsborc1 storage[676:t@1    :l@1    ]/info:  The server is ready.
+Apr  4 04:00:36.824 gedsborc1 storage[676:t@13   :l@13   ]/info:  [rtserver] User [em] [em-680] logged in. (localhost)
+Apr  4 23:50:02.987 gedsborc1 storage[676:t@13   :l@13   ]/info:  [rtserver] User [em] [em-680] logged out. (localhost)
+Apr  4 23:50:04.374 gedsborc1 storage[676:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  4 23:50:04.375 gedsborc1 storage[676:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  4 23:50:04.376 gedsborc1 storage[676:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  5 04:00:04.132 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  5 04:00:04.133 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  5 04:00:04.134 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  5 04:00:04.134 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  5 04:00:04.135 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  5 04:00:04.135 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  5 04:00:04.136 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  5 04:00:04.136 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  5 04:00:04.139 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  5 04:00:04.139 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  5 04:00:04.140 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  5 04:00:04.140 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  5 04:00:04.140 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 153583
+Apr  5 04:00:04.140 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  5 04:00:04.141 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  5 04:00:04.141 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  5 04:00:04.141 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  5 04:00:04.141 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  5 04:00:04.142 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  5 04:00:04.142 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  5 04:00:04.145 gedsborc1 storage[25333:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  5 04:00:04.155 gedsborc1 storage[25333:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  5 04:00:04.156 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  5 04:00:04.156 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  5 04:00:04.156 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  5 04:00:04.156 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  5 04:00:04.159 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  5 04:00:04.159 gedsborc1 storage[25333:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  5 04:00:04.159 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  5 04:00:04.160 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  5 04:00:04.160 gedsborc1 storage[25333:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  5 04:00:04.688 gedsborc1 storage[25333:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  5 04:00:04.714 gedsborc1 storage[25333:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  5 04:00:04.714 gedsborc1 storage[25333:t@1    :l@1    ]/info:  Updating statistics
+Apr  5 04:00:16.655 gedsborc1 storage[25333:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  5 04:00:16.656 gedsborc1 storage[25333:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  5 04:00:16.658 gedsborc1 storage[25333:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  5 04:00:16.664 gedsborc1 storage[25333:t@1    :l@1    ]/info:  The server is ready.
+Apr  5 04:00:36.910 gedsborc1 storage[25333:t@13   :l@13   ]/info:  [rtserver] User [em] [em-25337] logged in. (localhost)
+Apr  5 13:58:12.719 gedsborc1 storage[25333:t@16   :l@16   ]/info:  [rtserver] User [demo3] [demo3-synch] logged in. (ELONW065327.uk.ml.com)
+Apr  5 13:58:13.212 gedsborc1 storage[25333:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged in. (ELONW065327.uk.ml.com)
+Apr  5 23:29:30.388 gedsborc1 storage[25333:t@16   :l@16   ]/info:  [rtserver] User [demo3] [demo3-synch] logged out. (ELONW065327.uk.ml.com)
+Apr  5 23:29:31.569 gedsborc1 storage[25333:t@19   :l@19   ]/info:  [rtserver] User [demo3] [demo3-asynch] logged out. (ELONW065327.uk.ml.com)
+Apr  5 23:50:05.535 gedsborc1 storage[25333:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  5 23:50:05.536 gedsborc1 storage[25333:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  5 23:50:05.538 gedsborc1 storage[25333:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  6 04:00:04.410 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  6 04:00:04.412 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  6 04:00:04.413 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  6 04:00:04.413 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  6 04:00:04.414 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  6 04:00:04.414 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  6 04:00:04.415 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  6 04:00:04.415 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  6 04:00:04.421 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  6 04:00:04.421 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  6 04:00:04.422 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  6 04:00:04.422 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  6 04:00:04.422 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154344
+Apr  6 04:00:04.422 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.422 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  6 04:00:04.423 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.527 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  6 04:00:04.527 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  6 04:00:04.528 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  6 04:00:04.528 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.529 gedsborc1 storage[26709:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  6 04:00:04.531 gedsborc1 storage[26709:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  6 04:00:04.533 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  6 04:00:04.533 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  6 04:00:04.534 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  6 04:00:04.534 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  6 04:00:04.535 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  6 04:00:04.535 gedsborc1 storage[26709:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  6 04:00:04.536 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  6 04:00:04.536 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  6 04:00:04.537 gedsborc1 storage[26709:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  6 04:00:05.024 gedsborc1 storage[26709:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  6 04:00:05.048 gedsborc1 storage[26709:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  6 04:00:05.048 gedsborc1 storage[26709:t@1    :l@1    ]/info:  Updating statistics
+Apr  6 04:00:11.335 gedsborc1 storage[26709:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  6 04:00:11.337 gedsborc1 storage[26709:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  6 04:00:11.342 gedsborc1 storage[26709:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  6 04:00:11.344 gedsborc1 storage[26709:t@1    :l@1    ]/info:  The server is ready.
+Apr  6 04:00:37.482 gedsborc1 storage[26709:t@13   :l@13   ]/info:  [rtserver] User [em] [em-26718] logged in. (localhost)
+Apr  6 11:56:02.145 gedsborc1 storage[26709:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (LONIWGDV63178.uk.ml.com)
+Apr  6 11:56:02.467 gedsborc1 storage[26709:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (LONIWGDV63178.uk.ml.com)
+Apr  6 11:57:42.410 gedsborc1 storage[26709:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (LONIWGDV63178.uk.ml.com)
+Apr  6 11:57:43.407 gedsborc1 storage[26709:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (LONIWGDV63178.uk.ml.com)
+Apr  6 15:53:50.583 gedsborc1 storage[26709:t@22   :l@22   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (LONIWGDV39568.uk.ml.com)
+Apr  6 15:53:51.113 gedsborc1 storage[26709:t@25   :l@25   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (LONIWGDV39568.uk.ml.com)
+Apr  6 15:56:07.590 gedsborc1 storage[26709:t@22   :l@22   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (LONIWGDV39568.uk.ml.com)
+Apr  6 15:56:08.583 gedsborc1 storage[26709:t@25   :l@25   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (LONIWGDV39568.uk.ml.com)
+Apr  6 23:50:05.610 gedsborc1 storage[26709:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  6 23:50:05.612 gedsborc1 storage[26709:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  6 23:50:05.614 gedsborc1 storage[26709:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  7 04:00:04.460 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  7 04:00:04.462 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  7 04:00:04.463 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  7 04:00:04.471 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  7 04:00:04.494 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  7 04:00:04.521 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  7 04:00:04.532 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  7 04:00:04.533 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  7 04:00:04.560 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  7 04:00:04.561 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  7 04:00:04.561 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  7 04:00:04.561 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  7 04:00:04.561 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 148724
+Apr  7 04:00:04.561 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  7 04:00:04.562 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  7 04:00:04.562 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  7 04:00:04.562 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  7 04:00:04.562 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  7 04:00:04.563 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  7 04:00:04.563 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  7 04:00:04.563 gedsborc1 storage[26272:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  7 04:00:04.566 gedsborc1 storage[26272:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  7 04:00:04.576 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  7 04:00:04.576 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  7 04:00:04.577 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  7 04:00:04.577 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  7 04:00:04.577 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  7 04:00:04.577 gedsborc1 storage[26272:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  7 04:00:04.577 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  7 04:00:04.578 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  7 04:00:04.578 gedsborc1 storage[26272:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  7 04:00:05.553 gedsborc1 storage[26272:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  7 04:00:05.865 gedsborc1 storage[26272:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  7 04:00:05.865 gedsborc1 storage[26272:t@1    :l@1    ]/info:  Updating statistics
+Apr  7 04:00:12.109 gedsborc1 storage[26272:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  7 04:00:12.110 gedsborc1 storage[26272:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  7 04:00:12.113 gedsborc1 storage[26272:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  7 04:00:12.171 gedsborc1 storage[26272:t@1    :l@1    ]/info:  The server is ready.
+Apr  7 04:00:37.604 gedsborc1 storage[26272:t@13   :l@13   ]/info:  [rtserver] User [em] [em-26274] logged in. (localhost)
+Apr  7 11:51:50.532 gedsborc1 storage[26272:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged in. (LONIWGDV39568.uk.ml.com)
+Apr  7 11:51:50.892 gedsborc1 storage[26272:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged in. (LONIWGDV39568.uk.ml.com)
+Apr  7 11:54:26.839 gedsborc1 storage[26272:t@16   :l@16   ]/info:  [rtserver] User [demo2] [demo2-synch] logged out. (LONIWGDV39568.uk.ml.com)
+Apr  7 11:54:27.831 gedsborc1 storage[26272:t@19   :l@19   ]/info:  [rtserver] User [demo2] [demo2-asynch] logged out. (LONIWGDV39568.uk.ml.com)
+Apr  7 23:50:04.779 gedsborc1 storage[26272:t@4    :l@4    ]/info:  [rtserver] Signal handler thread received SIGTERM, exiting cleanly.
+Apr  7 23:50:04.781 gedsborc1 storage[26272:t@4    :l@4    ]/info:  [rtserver] Shutdown initialized! (exit cleanup routine)
+Apr  7 23:50:04.783 gedsborc1 storage[26272:t@4    :l@4    ]/info:  [rtserver] All rtserver subsystems shutdown, flushing logs and terminating process execution.
+Apr  8 04:00:04.203 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  8 04:00:04.205 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  8 04:00:04.205 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  8 04:00:04.206 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  8 04:00:04.206 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  8 04:00:04.207 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  8 04:00:04.207 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  8 04:00:04.207 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  8 04:00:04.210 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  8 04:00:04.210 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  8 04:00:04.211 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  8 04:00:04.211 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  8 04:00:04.211 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 144699
+Apr  8 04:00:04.211 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.212 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  8 04:00:04.212 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.212 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  8 04:00:04.212 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  8 04:00:04.213 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  8 04:00:04.213 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.213 gedsborc1 storage[27089:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  8 04:00:04.215 gedsborc1 storage[27089:t@1    :l@1    ]/info:  [rtserver] Registering [storage] with the [@localhost] environment
+Apr  8 04:00:04.216 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: version 2.4.9
+Apr  8 04:00:04.216 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: build 'Jul  4 2003 18:15:44'
+Apr  8 04:00:04.216 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: protocol: 2
+Apr  8 04:00:04.216 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: db-protocol: 4
+Apr  8 04:00:04.216 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: audit disabled.
+Apr  8 04:00:04.217 gedsborc1 storage[27089:t@1    :l@1    ]/warn:  storage: audit cleanup period specified when audit is disabled!
+Apr  8 04:00:04.218 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: database='storage@online4'
+Apr  8 04:00:04.219 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: path='/etc/rat/storage'
+Apr  8 04:00:04.219 gedsborc1 storage[27089:t@1    :l@1    ]/info:  Opening database connection, using database [storage@online4]
+Apr  8 04:00:04.757 gedsborc1 storage[27089:t@1    :l@1    ]/info:  Database engine characteristics: [Informix Dynamic Server] 
+Apr  8 04:00:04.777 gedsborc1 storage[27089:t@1    :l@1    ]/info:  storage: database patch level: 4
+Apr  8 04:00:04.778 gedsborc1 storage[27089:t@1    :l@1    ]/info:  Updating statistics
+Apr  8 04:00:10.770 gedsborc1 storage[27089:t@1    :l@1    ]/info:  Using [/etc/rat/storage] as the root directory for file storage.
+Apr  8 04:00:10.771 gedsborc1 storage[27089:t@1    :l@1    ]/info:  Changed umask to [7], previous mask was [0].
+Apr  8 04:00:10.774 gedsborc1 storage[27089:t@10   :l@10   ]/info:  [rtserver] client handler thread started, accepting client connections
+Apr  8 04:00:10.778 gedsborc1 storage[27089:t@1    :l@1    ]/info:  The server is ready.
+Apr  8 04:00:36.949 gedsborc1 storage[27089:t@13   :l@13   ]/info:  [rtserver] User [em] [em-27098] logged in. (localhost)

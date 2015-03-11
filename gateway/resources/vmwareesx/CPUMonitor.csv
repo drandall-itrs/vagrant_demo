@@ -1,0 +1,13 @@
+name,CPU Usage,CPU Usage in MHz,Reserved capacity,CPU System,CPU Wait,CPU Ready,CPU Used,CPU Idle,Swap wait time
+git repositories (Debian 6 64-bit),29,7,,1,20270,2,53,,0
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN08),60,4,,0,20289,4,32,,0
+Windows Server 2008 R2 Standard (64bit) (ITRSTESTWIN07),1321,244,,0,18456,16,1831,,0
+Solaris 10 - X86 (64bit) (ITRSTESTX8601),85,21,,3,20110,6,161,,0
+RH Enterprise 3 (32bit) (ITRSTESTRH01),51,12,,2,20208,6,95,,0
+SUSE 10 (64bit) (ITRSTESTSUSE01),82,20,,1,20131,4,156,,0
+Red Hat Enterprise Linux 5 - Yum Repository,188,49,,2,19759,11,370,,0
+Windows Server 2003 (32bit) (ITRSTESTWIN01),228,63,,0,19825,5,475,,0
+CentOS 5.2 (64bit) (ITRSTESTRH02),145,26,,0,20022,11,197,,0
+Chef Server (Ubuntu 10.04 64-bit),268,70,,1,19678,2,531,,0
+Centos 4.8 (32bit) (ITRSTESTRH04),215,49,,2,19740,14,368,,0
+CentOS 5.2 (64bit) (ITRSTESTRH03),146,30,,0,20012,14,231,,0

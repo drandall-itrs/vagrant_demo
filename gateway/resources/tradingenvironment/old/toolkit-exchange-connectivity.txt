@@ -1,0 +1,5 @@
+System,ExchangeConnectivity,ServerAvailability,Service
+EUREX,,,,
+LIFFE,,,,
+CBOT,,,,
+Totals,,,,

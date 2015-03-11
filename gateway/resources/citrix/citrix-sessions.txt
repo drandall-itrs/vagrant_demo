@@ -1,0 +1,13 @@
+SessionID,SessionState,UserName,ClientID,ClientIP,ClientName,ClientBuild,% Processor Time,% User Time,% Privileged Time,Page Faults/sec,Working Set,Input Bytes,Output Bytes,
+<!>activeSessions,0
+<!>disconnectedSessions,0
+<!>idleSessions,5
+<!>listeningSessions,5
+0,Connected, ,Console,Local, , ,0.27,0.10,0.18,58.39,480129024,0.00,0.00
+65536,Listening, ,ICA-tcp,Local, , , , , , , , , 
+65537,Listening, ,RDP-Tcp,Local, , , , , , , , , 
+1,Waiting, , ,Local, , , , , , , , , 
+6,Waiting, , ,Local, , , , , , , , , 
+2,Waiting, , ,Local, , , , , , , , , 
+3,Waiting, , ,Local, , , , , , , , , 
+4,Waiting, , ,Local, , , , , , , , , 

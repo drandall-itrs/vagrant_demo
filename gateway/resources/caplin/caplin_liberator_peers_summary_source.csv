@@ -1,0 +1,3 @@
+Remote Name,Connection,Local Type,Remote Type,Configured Ports
+transformer1,3,0,3,
+demosrc-nysupsvr10,3,0,3,

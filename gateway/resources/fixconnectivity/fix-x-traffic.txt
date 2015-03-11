@@ -1,0 +1,23 @@
+name,state,connectionCount,pktSendRate,pktRecvRate,dataSendRate,dataRecvRate,tmSinceLastPacket,localAddress,localPort,remoteAddress,remotePort
+BGIUK, ,2,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+BGIUK#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.220,7036,192.168.10.4,42971
+BGIUK#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.220,7036,192.168.10.4,42973
+BLP, ,2,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+BLP#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.18,7036,192.168.123.4,42971
+BLP#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.18,7036,192.168.123.4,42973
+LSEHub, ,3,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+LSEHub#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.3,7036,192.168.165.4,42971
+LSEHub#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.3,7036,192.168.156.4,42973
+LSEHub#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.3,7036,192.168.156.4,42973
+MWAM, ,2,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+MWAM#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.6,7036,192.168.112.4,42971
+MWAM#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.6,7036,192.168.112.4,42973
+NYFXINTL40, ,4,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+NYFXINTL40#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.7,7036,192.168.888.45,42971
+NYFXINTL40#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.7,7036,192.168.888.45,42973
+NYFXINTL40#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.7,7036,192.168.888.45,42973
+NYFXINTL40#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.7,7036,192.168.888.45,42973
+TSXRBS, ,2,3.00 pkt/sec,6.00 pkt/sec,45.00 kb/sec,43.00 kb/sec,1 secs, , , ,
+TSXRBS#001,connected on Tue Nov  4 11:27:27 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.14,7036,192.168.101.24,42971
+TSXRBS#002,connected on Tue Nov  4 11:27:34 2008, ,3.00 pkt/sec,5.00 pkt/sec,75.00 kb/sec,86.00 kb/sec,13 secs,192.168.10.14,7036,192.168.101.24,42973
+

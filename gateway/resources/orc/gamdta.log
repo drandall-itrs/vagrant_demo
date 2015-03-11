@@ -1,0 +1,920 @@
+Jul  4 06:30:02.092 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  [version:  ]
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  [protocol: ]
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  *** Configuration ***
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul  4 06:30:02.094 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul  4 06:30:02.095 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul  4 06:30:02.095 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul  4 06:30:02.095 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul  4 06:30:02.096 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul  4 06:30:02.096 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul  4 06:30:02.097 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 89791
+Jul  4 06:30:02.098 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul  4 06:30:02.099 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- Threads concurrency level 2
+Jul  4 06:30:02.100 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul  4 06:30:02.110 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  Configured for market MTA
+Jul  4 06:30:06.252 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul  4 06:30:06.323 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul  4 06:30:06.804 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul  4 06:30:06.833 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul  4 06:30:06.850 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul  4 06:30:06.850 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@1    :l@1    ]/warn:  No trading possible
+Jul  4 06:30:08.922 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/info:  AMI [INFO]: Login OK
+Jul  4 07:45:11.507 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:24684] [fd = 11] connected
+Jul  4 07:45:11.649 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@19   :l@19   ]/info:  User [mcostan]: logged in
+Jul  4 07:45:23.843 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:41112] [fd = 25] connected
+Jul  4 07:45:24.100 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@22   :l@22   ]/info:  User [jsabran]: logged in
+Jul  4 08:33:40.487 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:53427] [fd = 28] connected
+Jul  4 08:33:40.520 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@25   :l@25   ]/info:  User [dcockerh]: logged in
+Jul  4 12:25:29.379 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:45154] [fd = 31] connected
+Jul  4 12:25:34.537 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@28   :l@28   ]/info:  User [mcostan]: logged in
+Jul  4 12:25:34.538 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@19   :l@19   ]/error: User [mcostan]: Read error
+Jul  4 12:25:34.540 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@19   :l@19   ]/info:  User [mcostan]: ibytes = 183, obytes = 71735
+Jul  4 20:01:21.379 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.399 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.399 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.399 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.399 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.400 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.400 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.400 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 20:01:21.400 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  4 23:55:04.331 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul  4 23:55:04.338 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul  4 23:55:04.338 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul  4 23:55:04.373 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@5    :l@5    ]/info:  User [dcockerh]: terminate
+Jul  4 23:55:04.376 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@22   :l@22   ]/info:  User [jsabran]: ibytes = 183, obytes = 71701
+Jul  4 23:55:04.380 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@25   :l@25   ]/info:  User [dcockerh]: ibytes = 184, obytes = 71701
+Jul  4 23:55:14.003 eqp-mcworc2.uk.jpmorgan.com gamd[15702:t@5    :l@5    ]/info:  Termination done
+Jul  5 06:30:02.126 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul  5 06:30:02.127 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  [version:  ]
+Jul  5 06:30:02.128 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  [protocol: ]
+Jul  5 06:30:02.128 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  *** Configuration ***
+Jul  5 06:30:02.128 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul  5 06:30:02.128 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul  5 06:30:02.128 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul  5 06:30:02.129 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul  5 06:30:02.129 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul  5 06:30:02.129 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul  5 06:30:02.130 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul  5 06:30:02.131 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul  5 06:30:02.132 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 119079
+Jul  5 06:30:02.133 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul  5 06:30:02.134 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul  5 06:30:02.135 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- Threads concurrency level 3
+Jul  5 06:30:02.135 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul  5 06:30:02.146 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  Configured for market MTA
+Jul  5 06:30:02.956 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul  5 06:30:03.021 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul  5 06:30:03.196 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul  5 06:30:03.231 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul  5 06:30:03.240 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul  5 06:30:03.241 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@1    :l@1    ]/warn:  No trading possible
+Jul  5 06:30:05.322 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/info:  AMI [INFO]: Login OK
+Jul  5 07:37:00.885 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@11   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:32902] [fd = 14] connected
+Jul  5 07:37:01.135 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@19   :l@20   ]/info:  User [jsabran]: logged in
+Jul  5 07:40:04.980 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@11   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:28829] [fd = 25] connected
+Jul  5 07:40:05.108 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@22   :l@23   ]/info:  User [mcostan]: logged in
+Jul  5 20:01:30.574 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.575 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.575 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.575 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.576 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.576 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.576 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.576 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 20:01:30.576 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@14   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  5 23:55:04.097 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@5    :l@6    ]/info:  shutdown [SIGTERM]
+Jul  5 23:55:04.098 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@5    :l@6    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul  5 23:55:04.104 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@5    :l@6    ]/info:  User [jsabran]: terminate
+Jul  5 23:55:04.144 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@5    :l@6    ]/info:  User [mcostan]: terminate
+Jul  5 23:55:04.148 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@19   :l@20   ]/info:  User [jsabran]: ibytes = 183, obytes = 71701
+Jul  5 23:55:04.152 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@22   :l@23   ]/info:  User [mcostan]: ibytes = 183, obytes = 71701
+Jul  5 23:55:04.152 eqp-mcworc2.uk.jpmorgan.com gamd[11422:t@5    :l@6    ]/info:  Termination done
+Jul  6 06:30:02.620 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  [version:  ]
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  [protocol: ]
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  *** Configuration ***
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul  6 06:30:02.622 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul  6 06:30:02.623 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul  6 06:30:02.624 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul  6 06:30:02.624 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul  6 06:30:02.624 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul  6 06:30:02.624 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul  6 06:30:02.626 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul  6 06:30:02.626 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul  6 06:30:02.626 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul  6 06:30:02.626 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul  6 06:30:02.626 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 118883
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul  6 06:30:02.627 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul  6 06:30:02.628 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul  6 06:30:02.628 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul  6 06:30:02.628 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul  6 06:30:02.628 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- Threads concurrency level 2
+Jul  6 06:30:02.628 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul  6 06:30:02.638 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  Configured for market MTA
+Jul  6 06:30:04.020 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul  6 06:30:04.545 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul  6 06:30:06.321 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul  6 06:30:06.343 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul  6 06:30:06.352 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul  6 06:30:06.352 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@1    :l@1    ]/warn:  No trading possible
+Jul  6 06:30:08.435 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/info:  AMI [INFO]: Login OK
+Jul  6 07:40:57.320 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:32891] [fd = 11] connected
+Jul  6 07:40:57.569 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@19   :l@19   ]/info:  User [mcostan]: logged in
+Jul  6 07:41:00.094 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:49327] [fd = 25] connected
+Jul  6 07:41:00.349 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@22   :l@22   ]/info:  User [jsabran]: logged in
+Jul  6 07:44:15.579 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:36871] [fd = 28] connected
+Jul  6 07:44:15.832 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@25   :l@25   ]/info:  User [dcockerh]: logged in
+Jul  6 07:45:45.877 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:49305] [fd = 31] connected
+Jul  6 07:45:46.114 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@28   :l@28   ]/info:  User [ctoerrin]: logged in
+Jul  6 20:01:58.461 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.462 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.463 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 20:01:58.463 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  6 23:55:05.024 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul  6 23:55:05.030 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul  6 23:55:05.030 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul  6 23:55:05.066 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  User [dcockerh]: terminate
+Jul  6 23:55:05.068 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul  6 23:55:05.069 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  User [ctoerrin]: terminate
+Jul  6 23:55:05.072 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@28   :l@28   ]/info:  User [ctoerrin]: ibytes = 184, obytes = 71884
+Jul  6 23:55:05.075 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@25   :l@25   ]/info:  User [dcockerh]: ibytes = 184, obytes = 71884
+Jul  6 23:55:05.077 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@19   :l@19   ]/info:  User [mcostan]: ibytes = 183, obytes = 71884
+Jul  6 23:55:05.081 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@22   :l@22   ]/info:  User [jsabran]: ibytes = 183, obytes = 71884
+Jul  6 23:55:05.081 eqp-mcworc2.uk.jpmorgan.com gamd[7093:t@5    :l@5    ]/info:  Termination done
+Jul  9 06:30:02.557 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  [version:  ]
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  [protocol: ]
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  *** Configuration ***
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul  9 06:30:02.559 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul  9 06:30:02.560 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul  9 06:30:02.560 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul  9 06:30:02.561 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul  9 06:30:02.561 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul  9 06:30:02.561 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul  9 06:30:02.563 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 120028
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul  9 06:30:02.564 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul  9 06:30:02.565 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul  9 06:30:02.565 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul  9 06:30:02.565 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul  9 06:30:02.565 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul  9 06:30:02.577 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  Configured for market MTA
+Jul  9 06:30:03.476 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul  9 06:30:03.551 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul  9 06:30:05.005 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul  9 06:30:05.033 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul  9 06:30:05.041 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul  9 06:30:05.041 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@1    :l@1    ]/warn:  No trading possible
+Jul  9 06:30:07.113 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul  9 07:43:13.089 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:12457] [fd = 12] connected
+Jul  9 07:43:13.232 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul  9 07:44:22.017 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:57522] [fd = 25] connected
+Jul  9 07:44:22.079 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul  9 20:01:59.739 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.746 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.746 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 20:01:59.747 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul  9 23:55:04.586 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul  9 23:55:04.628 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul  9 23:55:04.628 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul  9 23:55:04.629 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul  9 23:55:04.633 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 71900
+Jul  9 23:55:04.635 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 183, obytes = 71900
+Jul  9 23:55:04.635 eqp-mcworc2.uk.jpmorgan.com gamd[23448:t@5    :l@5    ]/info:  Termination done
+Jul 10 06:30:02.250 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  [version:  ]
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  [protocol: ]
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 10 06:30:02.252 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 10 06:30:02.253 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 10 06:30:02.253 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 10 06:30:02.254 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 10 06:30:02.254 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 10 06:30:02.254 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 10 06:30:02.256 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 10 06:30:02.256 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 10 06:30:02.256 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 130861
+Jul 10 06:30:02.257 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 10 06:30:02.258 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 10 06:30:02.259 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- Threads concurrency level 2
+Jul 10 06:30:02.259 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 10 06:30:02.270 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 10 06:30:04.725 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 10 06:30:04.851 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 10 06:30:05.348 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 10 06:30:05.371 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 10 06:30:05.375 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 10 06:30:05.375 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@1    :l@1    ]/warn:  No trading possible
+Jul 10 06:30:07.436 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/info:  AMI [INFO]: Login OK
+Jul 10 07:27:32.146 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:57388] [fd = 11] connected
+Jul 10 07:27:32.261 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@19   :l@19   ]/info:  User [mcostan]: logged in
+Jul 10 07:28:24.288 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:20489] [fd = 25] connected
+Jul 10 07:28:24.436 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@22   :l@22   ]/info:  User [jsabran]: logged in
+Jul 10 08:08:23.444 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@19   :l@19   ]/info:  User [mcostan]: logging out
+Jul 10 08:08:23.470 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@19   :l@19   ]/info:  User [mcostan]: ibytes = 207, obytes = 71912
+Jul 10 08:08:57.787 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:4251] [fd = 28] connected
+Jul 10 08:08:58.037 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@25   :l@25   ]/info:  User [mcostan]: logged in
+Jul 10 08:33:49.190 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@25   :l@25   ]/info:  User [mcostan]: logging out
+Jul 10 08:33:49.193 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@25   :l@25   ]/info:  User [mcostan]: ibytes = 207, obytes = 71912
+Jul 10 08:34:30.465 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:57477] [fd = 24] connected
+Jul 10 08:34:30.563 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@28   :l@28   ]/info:  User [mcostan]: logged in
+Jul 10 08:45:38.011 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@28   :l@28   ]/info:  User [mcostan]: logging out
+Jul 10 08:45:38.044 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@28   :l@28   ]/info:  User [mcostan]: ibytes = 207, obytes = 71912
+Jul 10 08:48:22.624 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@22   :l@22   ]/info:  User [jsabran]: logging out
+Jul 10 08:48:22.627 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@22   :l@22   ]/info:  User [jsabran]: ibytes = 207, obytes = 71912
+Jul 10 08:49:06.829 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:20494] [fd = 26] connected
+Jul 10 08:49:07.065 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@31   :l@31   ]/info:  User [jsabran]: logged in
+Jul 10 08:50:31.207 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@31   :l@31   ]/info:  User [jsabran]: logging out
+Jul 10 08:50:31.210 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@31   :l@31   ]/info:  User [jsabran]: ibytes = 207, obytes = 71900
+Jul 10 08:50:43.876 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:45115] [fd = 24] connected
+Jul 10 08:50:44.133 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@34   :l@34   ]/info:  User [mcostan]: logged in
+Jul 10 08:56:36.232 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:36928] [fd = 25] connected
+Jul 10 08:56:36.421 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@37   :l@37   ]/info:  User [jsabran]: logged in
+Jul 10 14:40:42.705 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:37020] [fd = 28] connected
+Jul 10 14:40:47.748 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@40   :l@40   ]/info:  User [mcostan]: logged in
+Jul 10 14:40:47.749 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@34   :l@34   ]/error: User [mcostan]: Read error
+Jul 10 14:40:47.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@34   :l@34   ]/info:  User [mcostan]: ibytes = 183, obytes = 71934
+Jul 10 20:01:44.749 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.750 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.750 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.750 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 20:01:44.751 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 10 23:55:04.040 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 10 23:55:04.046 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 10 23:55:04.047 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 10 23:55:04.083 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@37   :l@37   ]/info:  User [jsabran]: ibytes = 183, obytes = 71900
+Jul 10 23:55:14.019 eqp-mcworc2.uk.jpmorgan.com gamd[19245:t@5    :l@5    ]/info:  Termination done
+Jul 11 06:30:01.850 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 11 06:30:01.851 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  [version:  ]
+Jul 11 06:30:01.852 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  [protocol: ]
+Jul 11 06:30:01.852 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 11 06:30:01.852 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 11 06:30:01.852 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 11 06:30:01.852 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 11 06:30:01.853 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 11 06:30:01.853 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 11 06:30:01.853 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 11 06:30:01.853 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 11 06:30:01.854 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 11 06:30:01.855 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 11 06:30:01.855 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 151937
+Jul 11 06:30:01.856 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 11 06:30:01.857 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- Threads concurrency level 3
+Jul 11 06:30:01.858 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 11 06:30:01.869 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 11 06:30:03.401 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 11 06:30:04.776 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 11 06:30:05.010 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 11 06:30:05.047 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 11 06:30:05.054 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 11 06:30:05.054 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@1    :l@1    ]/warn:  No trading possible
+Jul 11 06:30:07.128 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 11 07:33:09.640 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:16405] [fd = 12] connected
+Jul 11 07:33:09.799 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 11 07:33:22.171 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:20581] [fd = 25] connected
+Jul 11 07:33:22.250 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 11 20:01:35.824 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.825 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.826 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 20:01:35.826 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 11 23:55:03.871 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@5    :l@6    ]/info:  shutdown [SIGTERM]
+Jul 11 23:55:03.877 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@5    :l@6    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 11 23:55:03.878 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@5    :l@6    ]/info:  User [jsabran]: terminate
+Jul 11 23:55:03.917 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@5    :l@6    ]/info:  User [mcostan]: terminate
+Jul 11 23:55:03.920 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 71900
+Jul 11 23:55:03.922 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 183, obytes = 71900
+Jul 11 23:55:03.923 eqp-mcworc2.uk.jpmorgan.com gamd[15001:t@5    :l@6    ]/info:  Termination done
+Jul 12 06:30:02.179 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  [version:  ]
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  [protocol: ]
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 12 06:30:02.181 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 12 06:30:02.182 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 12 06:30:02.182 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 12 06:30:02.182 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 12 06:30:02.183 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 12 06:30:02.183 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 12 06:30:02.184 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 12 06:30:02.184 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 146939
+Jul 12 06:30:02.185 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 12 06:30:02.186 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 12 06:30:02.187 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 12 06:30:02.195 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 12 06:30:04.372 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 12 06:30:04.599 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 12 06:30:05.278 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 12 06:30:05.300 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 12 06:30:05.307 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 12 06:30:05.308 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@1    :l@1    ]/warn:  No trading possible
+Jul 12 06:30:07.627 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 12 07:33:18.188 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:28822] [fd = 12] connected
+Jul 12 07:33:18.383 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 12 07:34:54.303 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:28716] [fd = 25] connected
+Jul 12 07:34:54.364 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 12 20:01:37.789 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.790 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.790 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.790 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.791 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.791 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.791 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.791 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 20:01:37.791 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 12 23:55:04.925 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 12 23:55:04.926 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 12 23:55:04.927 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 12 23:55:04.929 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 12 23:55:04.932 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 71900
+Jul 12 23:55:04.936 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 183, obytes = 71900
+Jul 12 23:55:04.937 eqp-mcworc2.uk.jpmorgan.com gamd[10670:t@5    :l@5    ]/info:  Termination done
+Jul 13 06:30:02.814 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 13 06:30:02.815 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  [version:  ]
+Jul 13 06:30:02.815 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  [protocol: ]
+Jul 13 06:30:02.815 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 13 06:30:02.815 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 13 06:30:02.816 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 13 06:30:02.816 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 13 06:30:02.816 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 13 06:30:02.817 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 13 06:30:02.817 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 13 06:30:02.817 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 13 06:30:02.817 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 13 06:30:02.819 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 13 06:30:02.819 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 13 06:30:02.819 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 13 06:30:02.819 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 13 06:30:02.819 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 141204
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 13 06:30:02.820 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 13 06:30:02.821 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 13 06:30:02.821 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 13 06:30:02.821 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 13 06:30:02.821 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 13 06:30:02.821 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 13 06:30:02.830 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 13 06:30:04.765 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 13 06:30:05.823 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 13 06:30:06.064 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 13 06:30:06.087 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 13 06:30:06.096 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 13 06:30:06.096 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@1    :l@1    ]/warn:  No trading possible
+Jul 13 06:30:08.157 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 13 07:39:25.906 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:28834] [fd = 12] connected
+Jul 13 07:39:26.112 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@19   :l@20   ]/info:  User [jsabran]: logged in
+Jul 13 07:39:39.673 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:49215] [fd = 25] connected
+Jul 13 07:39:39.921 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@22   :l@23   ]/info:  User [mcostan]: logged in
+Jul 13 08:05:30.667 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@19   :l@20   ]/info:  User [jsabran]: logging out
+Jul 13 08:05:30.670 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@19   :l@20   ]/info:  User [jsabran]: ibytes = 207, obytes = 71912
+Jul 13 08:06:21.493 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:36930] [fd = 28] connected
+Jul 13 08:06:21.714 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@25   :l@26   ]/info:  User [jsabran]: logged in
+Jul 13 09:54:10.957 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@22   :l@23   ]/info:  User [mcostan]: logging out
+Jul 13 09:54:10.960 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@22   :l@23   ]/info:  User [mcostan]: ibytes = 233, obytes = 570271
+Jul 13 09:56:11.507 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:57433] [fd = 24] connected
+Jul 13 09:56:11.574 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@28   :l@29   ]/info:  User [mcostan]: logged in
+Jul 13 10:05:49.183 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@25   :l@26   ]/info:  User [jsabran]: logging out
+Jul 13 10:05:49.186 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@25   :l@26   ]/info:  User [jsabran]: ibytes = 207, obytes = 71912
+Jul 13 10:06:25.972 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:24737] [fd = 27] connected
+Jul 13 10:06:26.143 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@31   :l@32   ]/info:  User [jsabran]: logged in
+Jul 13 20:01:25.563 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.564 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.564 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.564 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.565 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.566 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 20:01:25.566 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 13 23:55:04.985 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 13 23:55:04.992 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 13 23:55:04.992 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 13 23:55:05.033 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 13 23:55:05.036 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@28   :l@29   ]/info:  User [mcostan]: ibytes = 209, obytes = 1665639
+Jul 13 23:55:05.040 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@31   :l@32   ]/info:  User [jsabran]: ibytes = 183, obytes = 71900
+Jul 13 23:55:05.041 eqp-mcworc2.uk.jpmorgan.com gamd[6451:t@5    :l@5    ]/info:  Termination done
+Jul 16 06:30:01.208 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 16 06:30:01.209 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  [version:  ]
+Jul 16 06:30:01.210 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  [protocol: ]
+Jul 16 06:30:01.210 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 16 06:30:01.210 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 16 06:30:01.210 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 16 06:30:01.210 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 16 06:30:01.211 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 16 06:30:01.211 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 16 06:30:01.211 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 16 06:30:01.212 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 16 06:30:01.212 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 16 06:30:01.213 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 142359
+Jul 16 06:30:01.214 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 16 06:30:01.215 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 16 06:30:01.216 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 16 06:30:01.223 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 16 06:30:01.887 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 16 06:30:02.211 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 16 06:30:03.715 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 16 06:30:03.739 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 16 06:30:03.748 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 16 06:30:03.748 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@1    :l@1    ]/warn:  No trading possible
+Jul 16 06:30:05.846 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 16 07:36:22.627 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:57530] [fd = 12] connected
+Jul 16 07:36:22.689 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@19   :l@20   ]/info:  User [jsabran]: logged in
+Jul 16 07:37:29.154 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:41130] [fd = 25] connected
+Jul 16 07:37:29.380 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@22   :l@23   ]/info:  User [mcostan]: logged in
+Jul 16 20:01:31.932 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.933 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.933 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 20:01:31.934 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 16 23:55:04.328 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 16 23:55:04.334 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 16 23:55:04.334 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 16 23:55:04.375 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 16 23:55:04.378 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@19   :l@20   ]/info:  User [jsabran]: ibytes = 183, obytes = 72099
+Jul 16 23:55:04.380 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@22   :l@23   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 16 23:55:04.381 eqp-mcworc2.uk.jpmorgan.com gamd[22139:t@5    :l@5    ]/info:  Termination done
+Jul 17 06:30:01.877 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  [version:  ]
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  [protocol: ]
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 17 06:30:01.879 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 17 06:30:01.880 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 17 06:30:01.880 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 17 06:30:01.881 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 17 06:30:01.881 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 17 06:30:01.881 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 17 06:30:01.883 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 17 06:30:01.883 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 17 06:30:01.883 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 17 06:30:01.883 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 149766
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 17 06:30:01.884 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 17 06:30:01.885 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 17 06:30:01.894 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 17 06:30:02.247 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 17 06:30:02.286 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 17 06:30:02.413 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 17 06:30:02.432 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 17 06:30:02.434 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 17 06:30:02.435 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@1    :l@1    ]/warn:  No trading possible
+Jul 17 06:30:04.595 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/info:  AMI [INFO]: Login OK
+Jul 17 07:36:37.935 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@11   :l@11   ]/info:  [eqp-gfw4] [198.75.25.150:53376] [fd = 15] connected
+Jul 17 07:36:38.188 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@19   :l@19   ]/info:  User [jsabran]: logged in
+Jul 17 07:37:00.732 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@11   :l@11   ]/info:  [eqp-gfw4] [198.75.25.150:24610] [fd = 27] connected
+Jul 17 07:37:00.869 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@22   :l@22   ]/info:  User [mcostan]: logged in
+Jul 17 08:52:10.418 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@22   :l@22   ]/error: User [mcostan]: Read error
+Jul 17 08:52:10.426 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@22   :l@22   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 17 08:57:08.171 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@11   :l@11   ]/info:  [eqp-gfw4] [198.75.25.150:49278] [fd = 25] connected
+Jul 17 08:57:08.251 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@25   :l@25   ]/info:  User [mcostan]: logged in
+Jul 17 20:01:24.813 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.814 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.814 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.814 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.814 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.815 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.815 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.815 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 20:01:24.815 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@14   :l@14   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 17 23:55:04.445 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 17 23:55:04.446 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 17 23:55:04.446 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 17 23:55:04.484 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 17 23:55:04.554 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@19   :l@19   ]/info:  User [jsabran]: ibytes = 183, obytes = 72099
+Jul 17 23:55:04.558 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@25   :l@25   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 17 23:55:04.558 eqp-mcworc2.uk.jpmorgan.com gamd[17541:t@5    :l@5    ]/info:  Termination done
+Jul 18 06:30:02.723 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 18 06:30:02.724 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  [version:  ]
+Jul 18 06:30:02.724 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  [protocol: ]
+Jul 18 06:30:02.724 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 18 06:30:02.724 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 18 06:30:02.725 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 18 06:30:02.725 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 18 06:30:02.725 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 18 06:30:02.726 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 18 06:30:02.726 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 18 06:30:02.726 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 18 06:30:02.726 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 18 06:30:02.728 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 18 06:30:02.728 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 18 06:30:02.728 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 156146
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 18 06:30:02.729 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 18 06:30:02.730 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- Threads concurrency level 2
+Jul 18 06:30:02.731 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 18 06:30:02.742 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 18 06:30:04.915 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 18 06:30:04.987 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 18 06:30:05.251 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 18 06:30:05.271 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 18 06:30:05.279 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 18 06:30:05.279 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@1    :l@1    ]/warn:  No trading possible
+Jul 18 06:30:07.333 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/info:  AMI [INFO]: Login OK
+Jul 18 07:39:04.051 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:28853] [fd = 11] connected
+Jul 18 07:39:04.216 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@19   :l@19   ]/info:  User [mcostan]: logged in
+Jul 18 07:39:35.676 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@12   :l@12   ]/info:  [eqp-gfw4] [198.75.25.150:45209] [fd = 25] connected
+Jul 18 07:39:35.930 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@22   :l@22   ]/info:  User [jsabran]: logged in
+Jul 18 20:01:47.040 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.041 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.041 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.041 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.041 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.042 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.042 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.042 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 20:01:47.042 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@15   :l@15   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 18 23:55:04.317 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 18 23:55:04.323 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 18 23:55:04.323 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 18 23:55:04.377 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 18 23:55:04.381 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@22   :l@22   ]/info:  User [jsabran]: ibytes = 183, obytes = 72099
+Jul 18 23:55:04.385 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@19   :l@19   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 18 23:55:04.386 eqp-mcworc2.uk.jpmorgan.com gamd[13159:t@5    :l@5    ]/info:  Termination done
+Jul 19 06:30:01.917 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 19 06:30:01.918 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  [version:  ]
+Jul 19 06:30:01.918 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  [protocol: ]
+Jul 19 06:30:01.919 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 19 06:30:01.919 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 19 06:30:01.919 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 19 06:30:01.919 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 19 06:30:01.920 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 19 06:30:01.920 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 19 06:30:01.920 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 19 06:30:01.920 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 19 06:30:01.921 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 19 06:30:01.922 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 19 06:30:01.922 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 148816
+Jul 19 06:30:01.923 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 19 06:30:01.924 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 19 06:30:01.925 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 19 06:30:01.934 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 19 06:30:03.618 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 19 06:30:03.729 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 19 06:30:06.692 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 19 06:30:06.715 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 19 06:30:06.734 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 19 06:30:06.734 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@1    :l@1    ]/warn:  No trading possible
+Jul 19 06:30:08.822 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 19 07:38:53.260 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:53447] [fd = 9] connected
+Jul 19 07:38:53.417 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 19 07:39:31.647 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:12441] [fd = 25] connected
+Jul 19 07:39:31.897 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 19 08:22:51.477 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:8212] [fd = 28] connected
+Jul 19 08:22:51.726 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@25   :l@26   ]/info:  User [ctoerrin]: logged in
+Jul 19 20:01:47.498 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.499 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.499 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.499 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.499 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.499 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.500 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.500 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 20:01:47.500 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 19 23:55:03.896 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 19 23:55:03.903 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 19 23:55:03.903 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 19 23:55:03.905 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 19 23:55:03.906 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  User [ctoerrin]: terminate
+Jul 19 23:55:03.909 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 72099
+Jul 19 23:55:03.911 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 19 23:55:03.913 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@25   :l@26   ]/info:  User [ctoerrin]: ibytes = 184, obytes = 72099
+Jul 19 23:55:03.914 eqp-mcworc2.uk.jpmorgan.com gamd[8717:t@5    :l@5    ]/info:  Termination done
+Jul 20 06:30:02.326 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 20 06:30:02.327 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  [version:  ]
+Jul 20 06:30:02.327 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  [protocol: ]
+Jul 20 06:30:02.327 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 20 06:30:02.328 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 20 06:30:02.328 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 20 06:30:02.328 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 20 06:30:02.328 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 20 06:30:02.329 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 20 06:30:02.329 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 20 06:30:02.329 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 20 06:30:02.329 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 20 06:30:02.331 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 20 06:30:02.331 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 20 06:30:02.331 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 20 06:30:02.331 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 148410
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 20 06:30:02.332 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 20 06:30:02.333 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 20 06:30:02.342 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 20 06:30:05.197 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 20 06:30:05.948 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 20 06:30:06.318 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 20 06:30:06.341 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 20 06:30:06.348 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 20 06:30:06.349 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@1    :l@1    ]/warn:  No trading possible
+Jul 20 06:30:08.408 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 20 07:36:25.357 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:36902] [fd = 12] connected
+Jul 20 07:36:25.422 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 20 07:38:48.520 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:32868] [fd = 25] connected
+Jul 20 07:38:50.083 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 20 08:03:43.301 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@19   :l@20   ]/info:  User [mcostan]: logging out
+Jul 20 08:03:43.334 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 207, obytes = 72111
+Jul 20 08:04:24.677 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:24720] [fd = 28] connected
+Jul 20 08:04:24.836 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@25   :l@26   ]/info:  User [mcostan]: logged in
+Jul 20 11:07:31.818 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:16424] [fd = 24] connected
+Jul 20 11:07:32.016 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@28   :l@29   ]/info:  User [dcockerh]: logged in
+Jul 20 11:12:23.053 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@28   :l@29   ]/info:  User [dcockerh]: logging out
+Jul 20 11:12:23.057 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@28   :l@29   ]/info:  User [dcockerh]: ibytes = 196, obytes = 72111
+Jul 20 20:01:25.641 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.642 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.642 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.642 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.642 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.643 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.643 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.643 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 20:01:25.643 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 20 23:55:05.180 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 20 23:55:05.181 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 20 23:55:05.186 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@5    :l@5    ]/info:  User [jsabran]: terminate
+Jul 20 23:55:05.223 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@5    :l@5    ]/info:  User [mcostan]: terminate
+Jul 20 23:55:05.226 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 72099
+Jul 20 23:55:05.228 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@25   :l@26   ]/info:  User [mcostan]: ibytes = 183, obytes = 72099
+Jul 20 23:55:05.228 eqp-mcworc2.uk.jpmorgan.com gamd[4123:t@5    :l@5    ]/info:  Termination done
+Jul 23 06:30:02.057 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  [version:  ]
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  [protocol: ]
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 23 06:30:02.059 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 23 06:30:02.060 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 23 06:30:02.061 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 23 06:30:02.061 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 23 06:30:02.061 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 23 06:30:02.062 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 23 06:30:02.064 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 23 06:30:02.064 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 23 06:30:02.064 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 23 06:30:02.064 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 23 06:30:02.064 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 148239
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 23 06:30:02.065 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- Threads concurrency level 3
+Jul 23 06:30:02.066 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 23 06:30:02.078 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 23 06:30:02.863 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 23 06:30:02.966 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 23 06:30:05.083 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 23 06:30:05.182 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 23 06:30:05.190 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 23 06:30:05.190 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@1    :l@1    ]/warn:  No trading possible
+Jul 23 06:30:07.280 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 23 07:39:18.606 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:41118] [fd = 11] connected
+Jul 23 07:39:18.786 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 23 07:49:44.612 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:12304] [fd = 25] connected
+Jul 23 07:49:44.675 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 23 20:02:07.818 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.819 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.819 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.819 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.820 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.820 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.820 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.820 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 20:02:07.820 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 23 23:55:03.321 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@5    :l@6    ]/info:  shutdown [SIGTERM]
+Jul 23 23:55:03.323 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@5    :l@6    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+Jul 23 23:55:03.323 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@5    :l@6    ]/info:  User [jsabran]: terminate
+Jul 23 23:55:03.358 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@5    :l@6    ]/info:  User [mcostan]: terminate
+Jul 23 23:55:03.362 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@22   :l@23   ]/info:  User [jsabran]: ibytes = 183, obytes = 72510
+Jul 23 23:55:03.365 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@19   :l@20   ]/info:  User [mcostan]: ibytes = 183, obytes = 72510
+Jul 23 23:55:03.365 eqp-mcworc2.uk.jpmorgan.com gamd[20022:t@5    :l@6    ]/info:  Termination done
+Jul 24 06:30:01.670 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  [version:  ]
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  [protocol: ]
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- /usr/rat/bin/gamd -n gammta -D mta@online3 -l /usr/rat/log/gammta -N MTA GAM -p 45510 -M MTA -N MTA -n MTA -C /etc/rat/gam_mta_ami.cfg -e Prod@eqp-orc3 -e Prod@eqp-orc5
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online1
+Jul 24 06:30:01.672 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 24 06:30:01.673 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UD1
+Jul 24 06:30:01.673 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 24 06:30:01.673 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.40.UC1
+Jul 24 06:30:01.674 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 24 06:30:01.674 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- SunOS eqp-mcworc2.uk.jpmorgan.com 5.6 Generic_105181-23 sun4usparc SUNW,Ultra-250
+Jul 24 06:30:01.675 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 24 06:30:01.675 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Number of processors configured 2
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Number of processors online 2
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 148033
+Jul 24 06:30:01.676 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 24 06:30:01.677 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- Threads concurrency level 1
+Jul 24 06:30:01.678 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 24 06:30:01.691 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  Configured for market MTA
+Jul 24 06:30:04.642 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Jul 24 06:30:04.720 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  CLEAR TABLES done
+Jul 24 06:30:05.081 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  Initializing AMI library using configuration file [/etc/rat/gam_mta_ami.cfg]
+Jul 24 06:30:05.120 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/info:  Market INFO: context [INFO] username [ICSGP436] password [DS838096]
+Jul 24 06:30:05.129 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/warn:  Market AFFARI not configured in database
+Jul 24 06:30:05.130 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@1    :l@1    ]/warn:  No trading possible
+Jul 24 06:30:07.237 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/info:  AMI [INFO]: Login OK
+Jul 24 07:41:37.770 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:8259] [fd = 10] connected
+Jul 24 07:41:38.023 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@19   :l@20   ]/info:  User [mcostan]: logged in
+Jul 24 07:44:46.080 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:53342] [fd = 25] connected
+Jul 24 07:44:46.295 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@22   :l@23   ]/info:  User [jsabran]: logged in
+Jul 24 07:49:42.119 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@12   :l@13   ]/info:  [eqp-gfw4] [198.75.25.150:53269] [fd = 28] connected
+Jul 24 07:49:42.375 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@25   :l@26   ]/info:  User [ctoerrin]: logged in
+Jul 24 20:01:51.259 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.260 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.260 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.260 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.260 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.260 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.261 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.261 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 20:01:51.261 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@15   :l@16   ]/error: AMI [INFO]: Information: Error [21] [AMI_CONNECTION_BROKEN]
+Jul 24 23:55:03.941 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Jul 24 23:55:03.947 eqp-mcworc2.uk.jpmorgan.com gamd[15632:t@5    :l@5    ]/info:  Terminate all user threads (waiting max 30 seconds)...
+

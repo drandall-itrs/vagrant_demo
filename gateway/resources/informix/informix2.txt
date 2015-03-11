@@ -1,0 +1,13 @@
+Informix Dynamic Server Version 666    -- This is the status string -- Up 44 days and 44 nights-- 12345 Kbytes
+
+Data Replication: 
+  Type         State        Paired server        Last DR CKPT (id/pg)     
+  secondary    off          someotherserver             185 / 1301 
+
+  DRINTERVAL   1 
+  DRTIMEOUT    100 
+  DRAUTO       1 
+  DRLOSTFOUND  /this/is/the/lost/and/found 
+
+duff line for testing
+

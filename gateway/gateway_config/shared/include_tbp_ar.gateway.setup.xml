@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2013-07-30 12:50:39 by apage on ITRSPC107-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.6-130308/gateway.xsd">
+	<types>
+		<type name="TBP Test Source">
+			<var name="TBP_DEMO">
+				<externalConfigFile>#!/usr/bin/perl
+$settingsFile=&quot;tbp-settings.txt&quot;;
+$lastFile=&quot;tbp-last.txt&quot;;
+
+if (!-e &quot;$settingsFile&quot;) {
+  open SETTINGS, &quot;&gt;$settingsFile&quot; or die $!;
+  print SETTINGS &quot;SecsPerSample=300\nStart=28800\nFinish=64800\nMean=20\n&quot;;
+  print SETTINGS &quot;S0=40\nS1=40\nS2=0\nC0=34200\nC1=61200\nWidth=6000\n&quot;;
+  print SETTINGS &quot;OrdersPerCPU=700\nBaseCPU=18\n&quot;;
+  close (SETTINGS);
+}
+
+open SETTINGS, &quot;&lt;$settingsFile&quot; or die $!;
+my @settings = &lt;SETTINGS&gt;;
+close (SETTINGS);
+for ($i=0;$i&lt;$#settings;$i++) {
+  chomp($settings[$i]);
+  @d=split(/=/,$settings[$i]);
+  $s{$d[0]}=$d[1];
+}
+my @last;
+if (-e &quot;$lastFile&quot;) {
+   open LAST_VALUE, &quot;&lt;$lastFile&quot; or die $!;
+   @last = &lt;LAST_VALUE&gt;;
+   close (LAST_VALUE);
+   for ($i=0;$i&lt;3;$i++) { chomp($last[$i]); }
+} else {
+   @last=(0,0,0);
+}
+
+
+$sps=$s{&apos;SecsPerSample&apos;};
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
+my $tNow=int(($sec+($min+60*$hour)*60)/$sps)*$sps;
+$tLast=$last[0];
+$vLast1=$last[1];
+$vLast2=$last[2];
+
+$tStart=$s{&apos;Start&apos;};
+$tFinish=$s{&apos;Finish&apos;};
+if ($tNow&lt;$tStart || $tNow&gt;$tFinish) { print &quot;Name,Value\nCPU,\nOrders,\nTIME,$tNow\n&quot;; exit(0); }
+$t=$tLast;
+if (($tLast&gt;$tNow) || ($tLast&lt;1)) { $t=$tStart-$sps; $vLast2=0;  $vLast1=&apos;&apos;; }
+$t+=$sps;
+
+
+
+for (;$t&lt;=$tNow;$t+=$sps) {
+my $t0=$t-$s{&apos;C0&apos;}; $t0=$t0*$t0;
+my $t1=$t-$s[&apos;C1&apos;]; $t1=$t1*$t1;
+my $w=$s{&apos;Width&apos;}*$s{&apos;Width&apos;}*(-2);
+
+
+my $v=$s{&apos;Mean&apos;}+$s{&apos;S0&apos;}*exp($t0/$w) +$s{&apos;S1&apos;}*exp($t1/$w) +$s{&apos;S2&apos;}*rand() - $s{&apos;S2&apos;}/2;
+
+$vLast1=$v;
+$vLast2+=int(($v-$s{&apos;BaseCPU&apos;})*$s{&apos;OrdersPerCPU&apos;});
+
+}
+
+
+open LAST_VALUE, &quot;&gt;$lastFile&quot; or die $!;
+print LAST_VALUE &quot;$tNow\n$vLast1\n$vLast2\n&quot;;
+close(LAST_VALUE);
+
+$cpu=sprintf(&quot;%.2f&quot;,$vLast1);
+
+print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
+
+
+
+
+</externalConfigFile>
+			</var>
+			<sampler ref="Order Router"/>
+		</type>
+		<type name="TBP Gateway"/>
+	</types>
+	<samplers>
+		<sampler name="Order Router">
+			<sampleInterval>
+				<data>20</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<data>/opt/geneos/gateway/resources/tbp/tbp_demo</data>
+					</samplerScript>
+					<!--
+            <script>
+                <contents>
+                    <var ref="TBP_DEMO"></var>
+                </contents>
+                <filename>
+                    <data>tbp_demo</data>
+                </filename>
+            </script>       -->
+				</toolkit>
+			</plugin>
+			<dataviews>
+				<dataview name="Order Router">
+					<additions>
+						<headlines>
+							<headline>MAX_C</headline>
+							<headline>MAX_W</headline>
+							<headline>MIN_W</headline>
+							<headline>MIN_C</headline>
+						</headlines>
+					</additions>
+				</dataview>
+			</dataviews>
+		</sampler>
+		<sampler disabled="true" name="Breach Predictor"/>
+	</samplers>
+	<rules>
+		<rule name="Adaptive Rule">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;CPU&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<set>
+					<var ref="max_c"/>
+					<timeSeries ref="CPU_MAX_ERR"/>
+				</set>
+				<set>
+					<var ref="min_c"/>
+					<timeSeries ref="CPU_MIN_ERR"/>
+				</set>
+				<set>
+					<var ref="min_w"/>
+					<timeSeries ref="CPU_MIN_WARN"/>
+				</set>
+				<set>
+					<var ref="max_w"/>
+					<timeSeries ref="CPU_MAX_WARN"/>
+				</set>
+				<if>
+					<or>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<var ref="max_c"/>
+						</gt>
+						<lt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<var ref="min_c"/>
+						</lt>
+					</or>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>critical</severity>
+						</update>
+					</transaction>
+					<if>
+						<or>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<var ref="max_w"/>
+							</gt>
+							<lt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<var ref="min_w"/>
+							</lt>
+						</or>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</if>
+			</block>
+		</rule>
+		<rule disabled="true" name="Normal Rule">
+			<targets>
+				<target>/geneos/gateway[(@name=&quot;TBP Gateway&quot;)]/directory/probe[(@name=&quot;Data&quot;)]/managedEntity[(@name=&quot;Data&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;CPU&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<if>
+					<lt>
+						<dataItem>
+							<property>@value</property>
+						</dataItem>
+						<integer>60</integer>
+					</lt>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>ok</severity>
+						</update>
+					</transaction>
+					<if>
+						<lt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<integer>80</integer>
+						</lt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</if>
+				</if>
+			</block>
+		</rule>
+		<rule name="CPU_MAX_ERR Timeseries">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MAX_C&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<transaction>
+					<update>
+						<property>@value</property>
+						<timeSeries ref="CPU_MAX_ERR"/>
+					</update>
+				</transaction>
+			</block>
+		</rule>
+		<rule name="CPU_MAX_WARN Timeseries">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MAX_W&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<transaction>
+					<update>
+						<property>@value</property>
+						<timeSeries ref="CPU_MAX_WARN"/>
+					</update>
+				</transaction>
+			</block>
+		</rule>
+		<rule name="CPU_MIN_ERR Timeseries">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MIN_C&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<transaction>
+					<update>
+						<property>@value</property>
+						<timeSeries ref="CPU_MIN_ERR"/>
+					</update>
+				</transaction>
+			</block>
+		</rule>
+		<rule name="CPU_MIN_WARN Timeseries">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MIN_W&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<transaction>
+					<update>
+						<property>@value</property>
+						<timeSeries ref="CPU_MIN_WARN"/>
+					</update>
+				</transaction>
+			</block>
+		</rule>
+		<rule name="Will Breach">
+			<targets>
+				<target>/geneos/gateway[(@name=&quot;GATEWAY 2&quot;)]/directory/probe[(@name=&quot;192_168_31_135_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Prediction&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Prediction&quot;)]/rows/row[(@name=&quot;Orders:1295691938&quot;)]/cell[(@column=&quot;Description&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<if>
+					<unlike>
+						<dataItem>
+							<property>@value</property>
+						</dataItem>
+						<string>OK</string>
+					</unlike>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>critical</severity>
+						</update>
+					</transaction>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>ok</severity>
+						</update>
+					</transaction>
+				</if>
+			</block>
+		</rule>
+	</rules>
+	<restrictedSections>
+		<sections>
+			<section>
+				<path>samplers</path>
+			</section>
+			<section>
+				<path>types</path>
+			</section>
+			<section>
+				<path>rules</path>
+			</section>
+		</sections>
+	</restrictedSections>
+</gateway>

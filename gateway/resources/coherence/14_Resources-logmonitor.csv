@@ -1,0 +1,3 @@
+name,status,permissions,lastModificationTime,fileSize,updateRate,triggerDetails,filename,/group,
+PS-JMX-BOSS,OK,644 (-rw-r--r--),Sun May 17 16:42:50 2009,49031.8 Kb,0.0000 Kb/sec,,Daily,,
+PS-JMX-PROXY1,OK,644 (-rw-r--r--),Thu May 21 11:05:41 2009,305.5 Kb,0.0000 Kb/sec,,Daily,,

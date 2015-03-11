@@ -1,0 +1,9 @@
+rank,hostName,ipAddress,dataRate,pktRate,tmSinceLastPkt,balance
+<!>totalSenders,4
+<!>overallSendRate,12.00 kb/sec
+<!>overallPacketRate,2.00 pkt/sec
+<!>topSendersTraffic,66.67%
+0,itrsfire.ldn.itrs,192.168.10.6,8.00 kb/sec, 1.00 pkt/sec, 1 secs, 66.67
+1,itrsultra10.ldn.itrs,192.168.10.80,4.00 kb/sec, 1.00 pkt/sec, 1 secs, 66.67
+2,itrsblade5.ldn.itrs,192.168.10.85,8.00 kb/sec, 1.00 pkt/sec, 15 secs, 0.00
+3,itrspc44.ldn.itrs,192.168.10.242,8.00 kb/sec, 1.00 pkt/sec, 2492 secs, 0.00

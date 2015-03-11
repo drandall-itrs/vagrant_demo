@@ -1,0 +1,6 @@
+name,status,permissions,lastModificationTime,fileSize,updateRate,triggerDetails,fileOwner,filename,/group
+transformer.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.3 Kb,0.0000 Kb/sec,,caplin,transformer.log,
+pipeline.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,pipeline.log,
+packet-transformer.log,OK,664 (-rw-rw-r--),Mon Jun 16 07:35:47 2014,6194.5 Kb,0.4821 Kb/sec,,caplin,packet-transformer.log,
+jmx-transformer.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,jmx-transformer.log,
+java.log,OK,664 (-rw-rw-r--),Mon Jun 16 04:00:00 2014,0.0 Kb,0.0000 Kb/sec,,caplin,java.log,

@@ -1,0 +1,19 @@
+step,id,status,duration,lastDuration,responseCode,responseText,downloadSize,exTime,description,type,error,
+<!>samplingStatus,OK
+<!>baseURL,http://www.webmon-testing.itrs.co.uk/
+<!>totalSteps,7
+<!>stepsPassed,7
+<!>stepsInErr,0
+<!>duration,10.177s
+<!>startExTime,Thu Oct 18 05:46:32.352 2012
+<!>endExTime,Thu Oct 18 05:46:43.863 2012
+<!>serverType,Apache/2.2.19 (Unix) mod_ssl/2.2.19 OpenSSL/0.9.8e-fips-rhel5 mod_bwlimited/1.4
+<!>protocol,http
+<!>port,80
+step1,,OK,1.950 s,1.895 s,200,OK,534.02 kb,Thu Oct 18 05:46:45.607 2012,open,STEP,,
+step2,,OK,2.549 s,2.151 s,,,723.05 kb,Thu Oct 18 05:46:47.757 2012,clickAndWait,STEP,,
+step3,,OK,1.986 s,1.822 s,,,965.67 kb,Thu Oct 18 05:46:50.558 2012,clickAndWait,STEP,,
+step4,,OK,3.975 s,1.985 s,,,1.12 MB,Thu Oct 18 05:46:52.745 2012,clickAndWait,STEP,,
+step5,,OK,0.001 s,0.000 s,,,,Thu Oct 18 05:46:56.920 2012,verifyTextPresent,STEP,,
+step6,,OK,0.001 s,0.001 s,,,,Thu Oct 18 05:46:57.021 2012,setViewport,STEP,,
+step7,,OK,0.706 s,0.683 s,,,378.08 kb,Thu Oct 18 05:46:57.122 2012,captureEntirePageScreenshot,STEP,,

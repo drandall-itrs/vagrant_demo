@@ -1,0 +1,8 @@
+Market,Update Rate,Time Since Last Update,Last Update Time,Cumulative Data
+JGB_SFE_Prod,328.43 bytes per sec,0 minutes,14:24:32,1150 Kb
+CME,1527.77 bytes per sec,0 minutes,14:24:32,36605 Kb
+CBOT_Prod_p4,329.40 bytes per sec,0 minutes,14:24:32,9728 Kb
+Eurex_Prod,249.82 bytes per sec,0 minutes,14:00:32,154247 Kb
+Liffe_Prod_p1,104.24 bytes per sec,0 minutes,13:28:32,100937 Kb
+Paris_Prod_p1,165.92 bytes per sec,0 minutes,14:24:32,50096 Kb
+Paris_Prod_p2,251.98 bytes per sec,0 minutes,14:36:32,50096 Kb

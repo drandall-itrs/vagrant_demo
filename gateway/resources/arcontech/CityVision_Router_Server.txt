@@ -1,0 +1,14 @@
+name,value
+State,UP
+NoofUpstreamTCPConnections,4
+OutstandingContributions,0
+OutstandingRequests,0
+Partner,NONE
+PartnerName, 
+RTDSReleaseNo,17
+ServerReleaseNo,17
+UpTime,63930
+VersionNo,1.4.2.0
+NoofUnavailableInsts,437
+NoofDuplicateRoutings,0
+CurrentRole,Master

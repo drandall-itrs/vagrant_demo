@@ -1,0 +1,10 @@
+Name,Value
+MPF Channel Errors,0
+Channel #1 Config,127.0.0.1:9870
+Channel #1 Status,Down
+Channel #2 Status,Down
+Channel #2 MPF Status,Resetting
+Channel #2 Queued inserts,0
+Channel #2 Config,127.0.0.1:9871
+Channel #1 MPF Status,Resetting
+Channel #1 Queued inserts,0

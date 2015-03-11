@@ -1,0 +1,109 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>ITRS Trend Analysis Report</title>
+    <!-- Expected Java script -->
+    <script src="$UTIL_URL$/js/jquery-1.2.6.js"   type="text/javascript" ></script>
+    <script src="$UTIL_URL$/js/jquery.scrollTo.js"   type="text/javascript" ></script>
+    <script src="$UTIL_URL$/js/faultReport.js"   type="text/javascript" ></script>
+    <!-- Expected CSS script -->
+    <link href="$UTIL_URL$/css/expressReports.css" type="text/css" rel="stylesheet"></link>
+    <link href="$UTIL_URL$/css/erIndex.css"         type="text/css" rel="stylesheet"></link>
+    
+    <!-- Sub Report CSS script -->
+    <link href="$UTIL_URL$/css/faultReport.css"   type="text/css" rel="stylesheet"></link>
+    <link href="$UTIL_URL$/css/trendReport.css"   type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <script>
+      // Current Page Loaded
+      var currentPage="";
+      
+      // Moves the Report to the specified Section
+      function moveTo(urlPage,internalRef)
+      {
+        currentPage=urlPage;
+        if (internalRef=="")
+          $('#currentReport').scrollTo(0);
+        else
+          $('#currentReport').scrollTo("#"+internalRef);
+         return false;
+      }
+    
+      // Fix for IE bugs
+      function fixIE() {
+        if ($.browser.msie)
+        {
+          $("div.scrollX").css("overflow-y","hidden");
+          $("div.scrollX").css("padding-bottom","20px");
+          var h=$(window).height()-$("#top").height();
+          $("#nav0").height(h);
+          $("#nav1").height(h);
+          $("#content").height(h);
+        }
+      }
+
+      // Ajax page retrival
+      function getContentsByLink()
+      {
+        var url=$(this).attr("href");
+        getContents(url);
+        return false;
+      }
+    
+      function getContents(url)
+      {
+        var urlArr=url.split('#');
+        var urlPage=urlArr[0];
+        var urlWithLocation=urlPage+" "+"#page";
+        var internalRef="";
+        if (urlArr[1]!=undefined) internalRef=urlArr[1];
+        if (currentPage==urlPage) return moveTo(urlPage,internalRef); 
+        $("#currentReport").load(urlWithLocation,function() { fixIE(); moveTo(urlPage,internalRef); initFaultReport(); });
+      }
+	
+	// Highlight binding functions
+	$(document).ready(function(){
+        
+        getContents($("a.nav-link").eq(0).attr("href"));
+        $('#nav1 img.close').click(function() {
+            $('#nav0').show();
+            $('#nav1').hide();
+        });
+         $('#nav0 img.open').click(function() {
+            $('#nav0').hide();
+            $('#nav1').show();
+        });
+        $("a.nav-link").click(getContentsByLink);
+       });
+    </script>
+    <div id="top">
+      <div id="logo">
+        <img src="$UTIL_URL$/img/expressReportsSmall.png" alt="ITRS Group PLC">
+      </div>
+      <h1>$TITLE$</h1>
+       <div class="gen">$GEN_DATE$</div>    
+      <br class="postDefTable"><br><hr class="break">
+    </div>
+    <div id="bottom">
+    <div id="nav0">
+      <div class="open"><img src="$UTIL_URL$/img/right.png" class="open" /></div>
+    </div>
+    <div id="nav1">
+      <div class="close"><img src="$UTIL_URL$/img/left.png" class="close" /></div>
+      $REP_NAV$
+    </div>
+    
+    <div id="content">
+      <div id="currentReport">
+        Report Place Holder
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+          

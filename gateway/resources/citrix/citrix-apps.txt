@@ -1,0 +1,6 @@
+applicationName,applicationLoad
+<!>numberOfApplications,4
+IE6 Test,99999
+CMC,99999
+EMALONTER15 Desktop,99999
+Thomson One Version 4,99999

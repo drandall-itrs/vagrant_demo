@@ -1,0 +1,48 @@
+Name,Release,Description
+EMMA_MINDER, ,Fidessa Minder
+EMMA_WEBSERVER, ,Web server
+FID_LMO,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:42:59,Lock Monitor
+EMMA_AUTO_RELEASE, ,Automated Release of Held Auction Orders
+EMMA_BDASVR, ,BDA Update Server
+EMMA_CALCSVR,core.emma-v1.4.6a Build no. 37244  Nov  4 2002 12:11:12,What If/Size Depth Calculations
+EMMA_DAQFIND,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,fidessa Finder Query Server
+EMMA_DBWEBSERVER, ,Web server (database connected)
+EMMA_ELMTH,core.emma-v1.4.6 Build no. 34229  Aug  9 2002 13:52:58,List Management Transaction Handler
+EMMA_EQUITYSUITE,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,EquitySuite Query Server
+EMMA_FDEPTH_BUY,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Full Depth Buy Query Server
+EMMA_FDEPTH_SELL,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Full Depth Sell Query Server
+EMMA_FIXORDDEPTH, ,Maintains Fixed Level of Order Depth
+EMMA_FTSSVR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:57:16,EMMA to FTS Stream Server
+EMMA_HOP,core.emma-v1.4.6f Build no. 49109  Jun 19 2003 13:27:33,Hidden Order Processing
+EMMA_HOUSE2,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,House Order Query Server (SA config  port 27104)
+EMMA_HSEKPR,core.emma-v1.4.6f Build no. 49109  Jun 19 2003 13:27:54,Order Expiry Processing
+EMMA_JNBEIS,exch.lse-v1.4.6b Build no. 73632  Aug  5 2004 12:22:25 (release32),Johannesburg Exchange Interface
+EMMA_JNBPSR,exch.lse-v1.4.6 Build no. 65645  Apr  2 2004 15:53:41,Johannesburg Price Server
+EMMA_NEWS,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,News Query Server
+EMMA_OASWITCH,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:46:33,OpenAccess Switch
+EMMA_OPUB,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:48:42,Open Access Publisher (With SA fixed market depth) (port 27101)
+EMMA_ORDCON,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:23:15,House/Public Orders Consolidation
+EMMA_ORDSIM,core.emma-v1.4.6 Build no. 34229  Aug  9 2002 13:57:08,Order Simulator
+EMMA_ORDSVR,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:23:45,Order Transaction Server
+EMMA_PDEPTH_BUY,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Price Depth Buy Query Server
+EMMA_PDEPTH_SELL,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Price Depth Sell Query Server
+EMMA_PORTMGR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:51:21,Portfolio manager process
+EMMA_PORTTXN,inf-v5.1.4 Build no. 32101  Jun 20 2002 19:48:49,Portfolio transaction server
+EMMA_PUBLIC,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Public Order Query Server
+EMMA_QUOTES,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Quote Query Server
+EMMA_REF,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:23:56,Internal Query Request
+EMMA_REQQUOTES,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:24:06,Quotes Request Reply Server
+EMMA_REQSVR,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:24:06,OA Request reply server
+EMMA_RRFTR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:52:28,Failed Transactions Request Reply
+EMMA_RR_VWAP, ,VWAP Calculator
+EMMA_SDD,inf-v5.3.1 Build no. 21611  Jul 13 2001 10:50:37,Sybase download to EMMA
+EMMA_SJDI,inf-v5.1.4b Build no. 44543  Mar 27 2003 15:48:53,Super Journaler/State Controller
+EMMA_TIBETSVR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:57:16,Tibet Database Stream Server
+EMMA_TRADES,inf-v5.1.4a Build no. 40863  Jan 27 2003 16:28:00,Trade Query Server
+EMMA_TXNMON,core.emma-v1.4.6l Build no. 61254  Jan 30 2004 03:14:32,Transaction Status Monitor
+EMMA_TXNSTR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:57:16,Transaction Status Stream (Feeds OMAR & ORC)
+EMMA_UAS,inf-v5.1.4 Build no. 32101  Jun 20 2002 19:55:34,User Access Server
+EMMA_VWAP,core.emma-v1.4.6n Build no. 67228  Apr 28 2004 03:24:48,Vwap Calculator
+EMMA_XACT_EVENTSTR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:57:16,ANS Events Stream Server
+EMMA_XACT_EXESTR,inf-v5.1.4 Build no. 32101  Jun 20 2002 18:57:16,ANS Executions Stream Server
+FDA_RECONSVR, ,FDA ReconciliationServer

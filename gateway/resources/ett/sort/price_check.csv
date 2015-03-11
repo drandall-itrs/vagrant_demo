@@ -1,0 +1,5 @@
+Market,Text
+Virtx,AdminShowIQuoteEvent==execute=NoquotesavailableforsymbolCSGN.VX
+Stockholm,AdminShowIQuoteEvent==execute=NoquotesavailableforsymbolERICb.ST
+Oslo,RIC=DNBNOR.OL:Bid=50.8:Ask=50.8:BidSize=525000:AskSize=457600:BidVenue=XOSL:askVenue=XOSL
+Copenhagen,RIC=DANSKE.CO:Bid=96:Ask=96.25:BidSize=14395:AskSize=45083:BidVenue=XCSE:askVenue=XCSE

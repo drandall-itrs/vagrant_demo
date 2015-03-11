@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0119)http://cwtsapfix1.emea.bankofamerica.com:8080/admin/cmdLine/CommandLine.jsp;jsessionid=1o80vlm58fac4?command=s_stat+all -->
+<HTML lang=en-GB xml:lang="en-GB" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>CameronFIX NetAdmin - Universal Server Command Line</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="CameronFIX NetAdmin - Universal Server Command Line_files/mainLayout.css" 
+type=text/css rel=stylesheet><LINK id=thirdPartyCSS href="/layout/empty.css" 
+type=text/css rel=stylesheet><LINK href="/layout/favicon.ico" type=image/x-icon 
+rel="shortcut icon">
+<SCRIPT src="CameronFIX NetAdmin - Universal Server Command Line_files/util.htm" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="CameronFIX NetAdmin - Universal Server Command Line_files/ajaxSupport.js;jsessionid=1o80vlm58fac4" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2883" name=GENERATOR></HEAD>
+<BODY onload="">
+<SCRIPT 
+src="CameronFIX NetAdmin - Universal Server Command Line_files/wz_dragdrop.js;jsessionid=1o80vlm58fac4" 
+type=text/javascript></SCRIPT>
+
+<DIV id=colouredStripe></DIV>
+<DIV id=mainLogo></DIV>
+<DIV id=byline></DIV>
+<DIV id=login-box><SPAN>Logged in as: </SPAN>Glenn Davy [nbk5q2g] <A 
+href="http://cwtsapfix1.emea.bankofamerica.com:8080/Logout.do;jsessionid=1o80vlm58fac4">.:: 
+Logout ::.</A> </DIV>
+<DIV id=navBar>
+<DIV class=tabs>
+<UL id=navigationBarTabGroup>
+  <LI class="" id=Home><A 
+  href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/SwitchModule.do;jsessionid=1o80vlm58fac4?prefix=&amp;page=/core/home/Home.jsp">Home</A> 
+  </LI>
+  <LI class=yah id=NetAdmin><A 
+  href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/SwitchModule.do;jsessionid=1o80vlm58fac4?prefix=/admin&amp;page=/Index.jsp">NetAdmin</A> 
+  </LI></UL></DIV></DIV>
+<DIV id=sidebarControls><A 
+href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/SwitchSidebar.do;jsessionid=1o80vlm58fac4?action=hide&amp;usecase=CommandLine"><IMG 
+title="Hide Sidebar" height=16 alt="Hide Sidebar" 
+src="CameronFIX NetAdmin - Universal Server Command Line_files/min_sidebar.gif" 
+width=11 border=0></A> </DIV>
+<DIV id=page>
+<DIV id=mainwrapper><!-- include content; can be of style 'widecolumn' (no sidebar) or 'narrowcolumn' (with sidebar) --><!--
+    
+    document.commandForm.command.focus(); 
+    document.commandForm.command.select();
+-->
+<DIV class=narrowcolumn id=content>
+<H1>CameronFIX Universal Server "boa" - Command Line </H1>
+<DIV class=post>
+<FORM id=commandForm name=commandForm 
+action=/admin/cmdLine/CommandLine.jsp;jsessionid=1o80vlm58fac4 type="POST">
+<H3>Command</H3><INPUT id=command title="This is the command to send" size=80 
+value="s_stat all" name=command> </FORM></DIV>
+<P><PRE>#   TargetCompId          SenderCompId      Status Blocked InSeqNo OutSeqNo PendingIn PendingOut 
+--- --------------------- ----------------- ------ ------- ------- -------- --------- ---------- 
+234 CURRENEX-FXTRADES-FIX FX3542            UP     N       80449   53658    0         0          
+102 CURRENEX-FXTRADES-FIX FX3546            UP     N       130495  680      0         0          
+76  HSFX-FIX-BRIDGE       DATA-FIX-BOA      UP     N       263138  703      0         0          
+242 HSFX-FIX-BRIDGE       TRADE-FIX-BOA     UP     N       43134   37211    0         0          
+16  BAXTERlive            CAM-FIX-ENGINE    UP     N       2971    11410    0         0          
+26  BAXTERlive2           CAM-FIX-ENGINE    UP     N       3001    1518     0         0          
+130 CURRENEX-FXTRADES-FIX bofapropfixtrade  UP     N       743     686      0         0          
+18  CURRENEX-FXTRADES-FIX bofapropfixstream UP     N       234016  713      0         0          
+87  eSpeed                BofAprod          UP     N       67519   32658    0         0          
+89  eSpeed                BofAFeedprod      UP     N       66064   31189    0         0          
+165 CURRENEX-FXTRADES-FIX bofafixmaker      UP     N       2932    19619    0         0          
+119 LAVA-PRICES           BOA               UP     N       907     25633    0         0          
+188 LAVA-TRADES           BOA               UP     N       855     685      0         0          
+88  INTEGRAL_BOAL         BOALQUOTE_LIVE    UP     N       3829    3619     0         0          
+64  INTEGRAL_BOAL         BOALTRADE_LIVE    UP     N       0       -1       0         0          
+
+
+</PRE></DIV></DIV></DIV><!-- include sidebar (if available) -->
+<DIV id=sidebar>
+<UL>
+  <LI>
+  <H2>Manage Users</H2>
+  <UL>
+    <LI><A 
+    href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/ManageUsersEdit.do;jsessionid=1o80vlm58fac4">Add 
+    New User</A> 
+    <LI><A 
+    href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/ManageUsersEdit.do;jsessionid=1o80vlm58fac4?operation=list">Update/Delete 
+    User</A> </LI></UL>
+  <LI>
+  <H2>Manage Universal Server</H2>
+  <UL>
+    <LI><A 
+    href="http://cwtsapfix1.emea.bankofamerica.com:8080/admin/cmdLine/CommandLine.jsp;jsessionid=1o80vlm58fac4">Command 
+    Line</A> <!-- li><a href="/admin/manageSessions/SessionConfig.jsp;jsessionid=1o80vlm58fac4">New Session</a></li>
+            -->
+<DIV id=footer>
+<P>COPYRIGHT (c) 1998 - 2006 by Cameron Systems Pty ltd. All Rights 
+Reserved.</P></DIV>
+<SCRIPT type=text/javascript>
+<!--
+    SET_DHTML();
+    //SET_DHTML('sidebar');
+  
+//-->
+</SCRIPT>
+</BODY></HTML>

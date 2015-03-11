@@ -1,0 +1,7 @@
+name,status,triggerDetails,updateRate,fileSize,lastModificationTime,permissions,filename
+<!>filesMonitored,2
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+SOR_PASS_1,OK, , , , , ,SOR_PASS_1, ,
+SORT,OK, ,3.6818 Kb/sec,390625.2 Kb,Mon Jun 15 16:24:32 2009,644 (-rw-r--r--),Daily

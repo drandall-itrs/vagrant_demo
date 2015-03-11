@@ -1,0 +1,3 @@
+Connections,TotalMbytesSent,TotalMbytesReceived,MaxMbyteSendRate,AvgMbyteSendRate,MaxMbyteReceiveRate,AvgMbyteReceiveRate,TotalConnectionCount,
+LAN traffic   - TcpProxy,56575.12 Mb,2374.78 Mb,0.04150 Mb/sec,0.01245 Mb/sec,0.00000 Mb/sec,0.00000 Mb/sec,22,
+WAN traffic - TcpProxy-GZIP,3.87 Mb,904.15 Mb,0.00000 Mb/sec,0.00000 Mb/sec,0.00200 Mb/sec,0.00020 Mb/sec,7,

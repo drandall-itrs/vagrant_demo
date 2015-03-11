@@ -1,0 +1,22 @@
+Property Name, Value
+Bandwith Limit, 1783793664
+Bandwith Limit High Watermark, 1333034931
+Bandwith Limit Low Watermark, 1337598352
+Bandwith Status, Bandwith OK
+Bandwith State Since, 2011-05-17 07:54:33
+Cache Node Count,0
+Feedhandler Version,Bloomberg Feed Adapter for RMDS 1.7.1
+List Subscription Number,0
+Maximum Number of Subscriptions,2500000
+Number of Subscriptions,0
+Service State,Ready
+Service State Reason,received admin.client.sdk.state ready
+Slow Consumer State,FALSE
+Slow Consumer State Since,17/05/2011 07:54
+Ticks Per Second,0
+Ticks: Peak Number (per sec),150
+Ticks: Peak Rate Time,
+Total Rejected Subscriptions,0
+Total Subscriptions,0
+Total Ticks,0
+

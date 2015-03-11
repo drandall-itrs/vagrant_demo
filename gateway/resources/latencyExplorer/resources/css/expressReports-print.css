@@ -1,0 +1,13 @@
+/* ================================== */
+/*    Print Overides    */
+/* ================================== */
+#top { display: none; }
+#nav0 { display: none ! important; }
+#nav1 { display: none ! important; }
+#top2 { display: block! important; }
+#currentReport { overflow: visible ! important;}
+#report { margin-top: 0px ! important;}
+#page div.top-bar { position: relative ! important; display: block ! important; }
+#bottom { top: 0px ! important; }
+
+table.filters tr.sub-report { display: block; }

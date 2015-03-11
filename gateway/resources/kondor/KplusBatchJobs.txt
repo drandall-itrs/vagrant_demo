@@ -1,0 +1,23 @@
+Job Name,Job Date,Job Id,Log Suffix,Run date,Parsing date,Log file path,Nb run,Run Status,Is Parsed,Parsing Err Msg,1st Launch Status,Last Launch Status,Duration,Rows processed
+<!>Data Availability,OK
+<!>Total Nb Jobs,16
+<!>Nb Jobs Succeed,16
+<!>Nb Jobs Failed,0
+<!>Total Duration,00:00:38
+<!>Total Duration In Seconds,38
+Compound Products,08-08-2013,51,compound_products,13:04:34,08-08-2013 13:06:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.compound_products,1,TERMINATED,YES,,OK,OK,1,0
+Bond OTC Options Deals,08-08-2013,19,bond_options,12:58:31,08-08-2013 13:00:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bond_options,1,TERMINATED,YES,,OK,OK,1,33
+Cheapest to Deliver,08-08-2013,3,cheapest,12:59:43,08-08-2013 13:00:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.cheapest,1,TERMINATED,YES,,OK,OK,0,0
+Equities Correlation Matrix,08-08-2013,38,eq_correl_matrix,13:08:27,08-08-2013 13:08:37,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.eq_correl_matrix,1,TERMINATED,YES,,OK,OK,0,0
+Credit Module,08-08-2013,54,credit_module,13:06:45,08-08-2013 13:08:37,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.credit_module,1,TERMINATED,YES,,OK,OK,1,16
+Asset Curves,08-08-2013,36,asset_curves,12:37:35,08-08-2013 12:38:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.asset_curves,3,TERMINATED,YES,,OK,OK,0,4
+Compound Product Deals,08-08-2013,52,comp_product_deals,13:03:11,08-08-2013 13:04:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.comp_product_deals,1,TERMINATED,YES,,OK,OK,4,12
+Bonds in Custody,08-08-2013,7,bonds_custody,12:59:04,08-08-2013 13:00:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bonds_custody,1,TERMINATED,YES,,OK,OK,1,122
+Equities in Custody,08-08-2013,8,equities_custody,13:08:46,08-08-2013 13:10:37,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.equities_custody,1,TERMINATED,YES,,OK,OK,2,81
+Call Accounts,08-08-2013,24,call_accounts,10:01:09,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.call_accounts,1,TERMINATED,YES,,OK,OK,0,3
+Bonds,08-08-2013,9,bonds,10:00:40,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bonds,1,TERMINATED,YES,,OK,OK,18,125
+Bond Deals,08-08-2013,10,bonds_deals,10:00:59,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bonds_deals,1,TERMINATED,YES,,OK,OK,9,3163
+Cap & Floor Deals,08-08-2013,11,capfloor_deals,10:01:08,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.capfloor_deals,1,TERMINATED,YES,,OK,OK,1,38
+Crystallization,08-08-2013,46,crystallization,13:07:45,08-08-2013 13:08:37,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.crystallization,1,TERMINATED,YES,,OK,OK,0,0
+Equities,08-08-2013,44,equities,13:03:55,08-08-2013 13:04:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.equities,1,TERMINATED,YES,,OK,OK,0,4
+Cash Flow Deals,08-08-2013,30,cashflow_deals,12:59:25,08-08-2013 13:00:30,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.cashflow_deals,1,TERMINATED,YES,,OK,OK,0,24

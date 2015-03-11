@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#if [ $# -eq 0 ]
+#  then
+#    echo "Usage: input needs to be an integer or double"
+#fi
+cd /opt/geneos/gateway/resources/tbp
+sed '$d' < tbp-last.txt > tbp-last.txt.2
+mv tbp-last.txt tbp-last.txt.old
+mv tbp-last.txt.2 tbp-last.txt
+rm tbp-last.txt.old
+echo $1 >> tbp-last.txt

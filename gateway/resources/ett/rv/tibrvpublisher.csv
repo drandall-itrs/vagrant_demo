@@ -1,0 +1,7 @@
+name,subject,dataRate
+<!>heartbeatSubject,LON.BOA.FI.ECPX.REC.STATS.COMM
+<!>numHeartbeatsMissed,0
+<!>lastHeartbeatTime,Tue Sep 19 08:37:24 2006
+Tenor_Pub,LON.BOA.FI.ECPX.CTRL.tenorpublisher,0.000 kb/sec
+ECP_Server,LON.BOA.FI.ECPX.CTRL.ecpxserver,0.029 kb/sec
+FXRate_Pub,LON.BOA.FI.ECPX.CTRL.fxratepublisher1,0.000 kb/sec

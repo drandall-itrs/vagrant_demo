@@ -1,0 +1,9 @@
+Database_Name,DaysSinceLastBackup,LastBackupDate
+<!>rowCount,7
+AlexDB,1,15/09/2009 19:00
+master,1,15/09/2009 19:10
+model,1,15/09/2009 19:05
+msdb,1,15/09/2009 19:12
+NETAGENT,2,14/09/2009 19:21
+tempdb,1,15/09/2009 19:31
+TEST_PLUGIN,1,15/09/2009 19:43

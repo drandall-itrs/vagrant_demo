@@ -1,0 +1,20 @@
+name,state,connectionCount,pktSendRate,pktRecvRate,dataSendRate,dataRecvRate,tmSinceLastPacket,localAddress,localPort,remoteAddress,remotePort
+ITRS_BLADE_4, ,3,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,1 secs, , , , 
+ITRS_RH, ,6,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs, , , , 
+ITRS_FIRE, ,7,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs, , , , 
+ITRS_BLADE_4#006,connected on Tue Nov  4 11:27:27 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,13 secs,192.168.10.84,2988,192.168.10.4,42971
+ITRS_BLADE_4#018,connected on Tue Nov  4 11:27:34 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,6 secs,192.168.10.84,20600,192.168.10.4,47252
+ITRS_BLADE_4#021,connected on Tue Nov  4 11:27:35 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,1 secs,192.168.10.84,1988,192.168.10.4,59742
+ITRS_RH#001,connected on Tue Nov  4 11:27:22 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs,192.168.10.3,18603,192.168.10.4,51343
+ITRS_RH#003,connected on Tue Nov  4 11:27:21 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs,192.168.10.3,19780,192.168.10.4,42203
+ITRS_RH#005,connected on Tue Nov  4 11:27:23 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,5 secs,192.168.10.3,1988,192.168.10.4,45087
+ITRS_RH#007,connected on Tue Nov  4 11:27:22 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,1 secs,192.168.10.3,18601,192.168.10.4,51341
+ITRS_RH#008,connected on Tue Nov  4 11:27:23 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs,192.168.10.3,18602,192.168.10.4,51342
+ITRS_RH#020,connected on Tue Nov  4 11:27:35 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,5 secs,192.168.10.3,2988,192.168.10.4,43002
+ITRS_FIRE#002,connected on Tue Nov  4 11:27:20 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,1 secs,192.168.10.6,64196,192.168.10.4,9876
+ITRS_FIRE#004,connected on Tue Nov  4 11:27:26 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,0 secs,192.168.10.6,18618,192.168.10.4,43331
+ITRS_FIRE#009,connected on Tue Nov  4 11:27:21 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,5 secs,192.168.10.6,1988,192.168.10.4,45083
+ITRS_FIRE#010,connected on Tue Nov  4 11:27:29 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,1 secs,192.168.10.6,59780,192.168.10.4,20301
+ITRS_FIRE#011,connected on Tue Nov  4 11:27:29 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,4 secs,192.168.10.6,18602,192.168.10.4,52045
+ITRS_FIRE#017,connected on Tue Nov  4 11:27:32 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,8 secs,192.168.10.6,18616,192.168.10.4,52434
+ITRS_FIRE#023,connected on Tue Nov  4 11:27:36 2008, ,0.00 pkt/sec,0.00 pkt/sec,0.00 kb/sec,0.00 kb/sec,4 secs,192.168.10.6,18601,192.168.10.4,54583

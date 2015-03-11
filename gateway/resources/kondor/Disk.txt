@@ -1,0 +1,7 @@
+partitionName,freeSpace,percentageUsed,fileSystem,freeInodes,totalSpace,status
+<!>totalFreeSpace,58768 MB
+/files1,374 MB,95 %,ufs,931831,7457 MB,OK
+/files2,53784 MB,47 %,ufs,12449031,100085 MB,OK
+/,1617 MB,77 %,ufs,664646,6982 MB,OK
+/tmp,2994 MB,0 %,tmpfs,588461,2994 MB,OK
+

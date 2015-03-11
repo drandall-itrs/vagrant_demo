@@ -1,0 +1,12 @@
+Name,Value
+DELTA,
+clearinginprogress,0
+ordersCleared,16
+totalOrders,16
+ticketsCleared,37
+ticketsUnknownExtCode,0
+MatchingTicketsNotCleared,0
+exchangeTickets,16
+ordersToClear,0
+totalOrdersCleared,16
+totalTicketsCleared,56

@@ -1,0 +1,12 @@
+name,Average read requests per second,Average write requests per second,Read rate,Write rate,Read latency,Write latency,Storage I/O Control normalized latency,Storage I/O Control aggregated IOPS,Storage DRS datastore bytes read,Storage DRS datastore bytes written,Storage DRS datastore read I/O rate,Storage DRS datastore write I/O rate,Storage DRS datastore normalized read latency,Storage DRS datastore normalized write latency,Storage DRS datastore outstanding read requests,Storage DRS datastore outstanding write requests,Storage I/O Control datastore maximum queue depth,Storage DRS datastore read workload metric,Storage DRS datastore write workload metric,Highest latency,Storage I/O Control active time percentage,Datastore latency observed by VMs
+git repositories (Debian 6 64-bit),0,0,0,0,0,1,,,,,,,,,,,,,,1,
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN08),66,4,4542,29,7,44,,,,,,,,,,,,,,9,
+Windows Server 2008 R2 Standard (64bit) (ITRSTESTWIN07),16,10,401,116,30,52,,,,,,,,,,,,,,38,
+Solaris 10 - X86 (64bit) (ITRSTESTX8601),22,0,541,0,19,0,,,,,,,,,,,,,,19,
+RH Enterprise 3 (32bit) (ITRSTESTRH01),0,0,0,0,0,0,,,,,,,,,,,,,,,
+SUSE 10 (64bit) (ITRSTESTSUSE01),59,2,3853,15,5,10,,,,,,,,,,,,,,,
+Red Hat Enterprise Linux 5 - Yum Repository,11,1,44,50,17,5,,,,,,,,,,,,,,,
+Windows Server 2003 (32bit) (ITRSTESTWIN01),8,0,38,0,3,0,,,,,,,,,,,,,,,
+CentOS 5.2 (64bit) (ITRSTESTRH02),0,0,0,0,0,0,,,,,,,,,,,,,,,
+Chef Server (Ubuntu 10.04 64-bit),4,1,38,13,0,7,,,,,,,,,,,,,,,
+Centos 4.8 (32bit) (ITRSTESTRH04),3,1,33,43,8,2,,,,,,,,,,,,,,,

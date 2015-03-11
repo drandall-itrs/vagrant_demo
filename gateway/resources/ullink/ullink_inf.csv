@@ -1,0 +1,15 @@
+Name,Value
+Allocated heap mem,510066688
+Allocated non-heap mem,402653184
+Max heap mem,510066688
+Max non-heap mem,402653184
+Min heap mem,536870912
+Min non-heap mem,402653184
+Start time,2013-09-25 08@09:00.696
+Thread count,58
+Thread daemon count,10
+Thread peak count,59
+Thread total started count,67
+Uptime,8193286
+Used heap mem,211108768
+Used ono-heap mem,67943312

@@ -1,0 +1,6 @@
+exchangeSegment,percentValuesUtilisation,valuesUsed,valuesLimit,percentMemUtilisation,memUsed,memLimit
+<!>scanDate,Wed Mar 21 09:36:50 2008
+XETRA_1,42.86,70,30,49.99,20000 MB, 9998 MB
+XETRA_2,91.18,12000,10941,53.53,15000 MB, 8029 MB
+XETRA_3,65.64,2500,1641,1.20,1000 MB, 12 MB
+XETRA_4,78.67,75,59,94.75,15000 MB,1421 MB

@@ -1,0 +1,5 @@
+Name,Department,Workstation name,Workstation address,Send queue,Recv queue,Connection status
+#0,EQUITIES,lonrbdevapp1,192.168.10.21,0,100,ESTABLISHED
+#1,EQUITIES,lonrbdevapp9,192.168.10.12,20,45,ESTABLISHED
+#2,EQUITIES,lonrbdevapp7,192.168.10.42,14,9,ESTABLISHED
+#3,EQUITIES,lonrbdevapp5,192.168.10.68,6,34,ESTABLISHED

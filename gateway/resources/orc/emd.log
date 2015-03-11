@@ -1,0 +1,49 @@
+Jul 24 06:00:04.074 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  NEW LOG ---------------------------
+Jul 24 06:00:04.075 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  EM version 1.6.0 2000-09-08
+Jul 24 06:00:04.075 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  *** Configuration ***
+Jul 24 06:00:04.075 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- /usr/rat/bin/emd -n Prod -l /usr/rat/log/emd -N Warrants Production -p 45500 -n Prod
+Jul 24 06:00:04.076 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Jul 24 06:00:04.076 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Jul 24 06:00:04.076 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Jul 24 06:00:04.077 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.30.UC1
+Jul 24 06:00:04.086 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.20.UC3
+Jul 24 06:00:04.086 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.21.UC1
+Jul 24 06:00:04.086 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- SunOS eqp-orc3.itrsgroup.com 5.6 Generic_105181-19 sun4usparc SUNW,Ultra-4
+Jul 24 06:00:04.088 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Current working directory: /export/ratreleases/Orc_2v4b10/rat/etc
+Jul 24 06:00:04.088 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- uid = 7654, euid = 7654, gid = 7654, egid = 7654
+Jul 24 06:00:04.088 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Ticks per second 100
+Jul 24 06:00:04.088 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- System memory page size 8192
+Jul 24 06:00:04.088 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Number of processors configured 4
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Number of processors online 4
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Number of physical memory pages not used 59020
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Jul 24 06:00:04.089 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft = 2147479552, hard =   infinity
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard = 2147479552
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- Threads concurrency level 2
+Jul 24 06:00:04.090 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  -- librt 2.3.28 2001-02-23
+Jul 24 06:00:04.091 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  Local interfaces configured: [127.0.0.1 169.123.201.4 172.25.160.199 192.168.1.1]
+Jul 24 06:00:04.091 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  RSA init: begin
+Jul 24 06:00:04.671 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  RSA init: end
+Jul 24 06:00:04.678 eqp-orc3.itrsgroup.com emd[16217:t@1    :l@1    ]/info:  Environment [Prod] [Warrants Production] ready
+Jul 24 06:00:04.679 eqp-orc3.itrsgroup.com emd[16217:t@8    :l@8    ]/info:  Waiting for a storage server to register...
+Jul 24 06:00:36.381 eqp-orc3.itrsgroup.com emd[16217:t@10   :l@10   ]/info:  EM_REGISTER: type [3] name [storage] address [127.0.0.1 (localhost)] host [eqp-orc3.itrsgroup.com] port [45402] description [Storage Server] time [20010724060036] registered
+Jul 24 06:00:36.384 eqp-orc3.itrsgroup.com emd[16217:t@8    :l@8    ]/info:  Connected to storage server [storage] at host [localhost]
+Jul 24 06:00:36.415 eqp-orc3.itrsgroup.com emd[16217:t@12   :l@12   ]/info:  EM_REGISTER: type [4] name [cds] address [127.0.0.1 (localhost)] host [eqp-orc3.itrsgroup.com] port [45302] description [Client Data Server] time [20010724060036] registered
+Jul 24 06:00:36.421 eqp-orc3.itrsgroup.com emd[16217:t@8    :l@8    ]/info:  Logged in to storage server [version 2]
+Jul 24 06:00:57.740 eqp-orc3.itrsgroup.com emd[16217:t@16   :l@16   ]/info:  EM_REGISTER: type [15] name [rvous] address [169.123.202.19 (eqp-swxorc1.itrsgroup.com)] host [eqp-swxorc1.itrsgroup.com] port [49522] description [Rendezvous] time [20010724060057] registered
+Jul 24 06:05:10.548 eqp-orc3.itrsgroup.com emd[16217:t@66   :l@66   ]/info:  EM_REGISTER: type [27] name [swx] address [169.123.202.19 (eqp-swxorc1.itrsgroup.com)] host [eqp-swxorc1.itrsgroup.com] port [45532] description [Swiss Market] time [20010724060510] registered
+Jul 24 06:05:19.807 eqp-orc3.itrsgroup.com emd[16217:t@74   :l@74   ]/info:  EM_REGISTER: type [17] name [api] address [169.123.201.4 (eqp-orc3.itrsgroup.com)] host [eqp-orc3.itrsgroup.com] port [63777] description [DE API 2.4.7] time [20010724060519] registered
+Jul 24 06:15:03.157 eqp-orc3.itrsgroup.com emd[16217:t@260  :l@260  ]/info:  EM_REGISTER: type [6] name [ssl] address [169.123.202.19 (eqp-swxorc1.itrsgroup.com)] host [eqp-swxorc1.itrsgroup.com] port [45542] description [Reuters SSL] time [20010724061503] registered
+Jul 24 06:15:35.963 eqp-orc3.itrsgroup.com emd[16217:t@274  :l@274  ]/info:  EM_REGISTER: type [21] name [eurex] address [169.24.184.140 (eqp-orc1.itrsgroup.com)] host [eqp-orc1.itrsgroup.com] port [45552] description [EUREX Market Connection] time [20010724061535] registered
+Jul 24 06:30:04.901 eqp-orc3.itrsgroup.com emd[16217:t@660  :l@660  ]/info:  EM_REGISTER: type [46] name [MCW2] address [198.75.25.149 (eqp-mcworc2.itrsgroup.com)] host [eqp-mcworc2.itrsgroup.com] port [46712] description [MCW2] time [20010724063004] registered
+Jul 24 06:30:04.946 eqp-orc3.itrsgroup.com emd[16217:t@662  :l@662  ]/info:  EM_REGISTER: type [46] name [MCW1] address [198.75.25.149 (eqp-mcworc2.itrsgroup.com)] host [eqp-mcworc2.itrsgroup.com] port [45612] description [MCW1] time [20010724063004] registered
+Jul 24 06:30:04.977 eqp-orc3.itrsgroup.com emd[16217:t@664  :l@664  ]/info:  EM_REGISTER: type [29] name [MTA] address [198.75.25.149 (eqp-mcworc2.itrsgroup.com)] host [eqp-mcworc2.itrsgroup.com] port [45512] description [MTA] time [20010724063004] registered
+Jul 24 07:41:06.715 eqp-orc3.itrsgroup.com emd[16217:t@3406 :l@3406 ]/warn:  EM_QUERY_SERVERS: user [mcostan] validation failure
+Jul 24 07:42:51.354 eqp-orc3.itrsgroup.com emd[16217:t@3478 :l@3478 ]/warn:  EM_QUERY_SERVERS: user [jsabran] validation failure
+Jul 24 07:49:07.672 eqp-orc3.itrsgroup.com emd[16217:t@3730 :l@3730 ]/warn:  EM_QUERY_SERVERS: user [ctoerrin] validation failure
+Jul 24 07:50:56.512 eqp-orc3.itrsgroup.com emd[16217:t@3822 :l@3822 ]/warn:  EM_QUERY_SERVERS: user [dcockerh] validation failure

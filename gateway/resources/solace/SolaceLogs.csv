@@ -1,0 +1,7 @@
+filesMonitored<!>,2
+filesInError<!>,0
+filesInWarning<!>,0
+filesNotFound<!>,0
+name,status,permissions,lastModificationTime,fileSize,updateRate,triggerDetails,filename,/group
+Event Log,OK,644 (-rw-r--r--),Thu Jul 29 16:48:35 2010,4242.4 Kb,0.0000 Kb/sec,,event.log,
+Command Log,OK,644 (-rw-r--r--),Mon Aug  2 09:39:15 2010,1114.7 Kb,0.0000 Kb/sec,,command.log,

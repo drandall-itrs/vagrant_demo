@@ -1,0 +1,6 @@
+Key,User ShortName,User Name,eMail,Group ShortName,SybLogin,Kondor Process Name,Nb Syb Cnx,HostName,PID,pCpu,pMemory,Elapsed Time,Elapsed Time In Min,Cmd User,Cmd
+<!>Data Availability,OK
+<!>Nb Processes,3
+KPLUS - JILLx64 - 1058,KPLUS,KONDOR+ ADMINISTRATOR,,ADMIN,kplus,KMS,3,JILLx64,1058,0.10,1.1,03:23,203,kplus,/usr/kplushome/servers/x86sol/kms
+KPLUS - JILLx64 - 20582,KPLUS,KONDOR+ ADMINISTRATOR,,ADMIN,kplus,TradeKast,1,JILLx64,20582,0.10,1.8,00:03,3,kplus,/usr/kplushome/peripherals/x86sol/tradekast
+KPLUS - JILLx64 - 20627,KPLUS,KONDOR+ ADMINISTRATOR,,ADMIN,kplus,K+Export,2,JILLx64,20627,0.10,1.2,00:03,3,kplus,/usr/kplushome/peripherals/x86sol/kplusexport

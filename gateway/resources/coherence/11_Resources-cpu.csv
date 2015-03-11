@@ -1,0 +1,18 @@
+cpu,type,state,clockSpeed,percentUtilisation,percentUserTime,percentKernelTime,percentWaitTime,percentIdle,
+<!>numOnlineCpus,8.0
+<!>loadAverage1Min,0.62
+<!>loadAverage5Min,0.28
+<!>loadAverage15Min,0.18
+Average_cpu,,,,0.95 %,0.62 %,0.32 %,0.01 %,99.05 %,
+cpu_0_logical#0,logical,on-line,2612.21 Mhz,0.46 %,0.15 %,0.30 %,0.00 %,99.54 %,
+cpu_1_logical#1,logical,on-line,2612.21 Mhz,1.06 %,0.61 %,0.41 %,0.05 %,98.94 %,
+cpu_2_logical#2,logical,on-line,2612.21 Mhz,0.35 %,0.25 %,0.10 %,0.00 %,99.65 %,
+cpu_3_logical#3,logical,on-line,2612.21 Mhz,0.15 %,0.15 %,0.00 %,0.00 %,99.85 %,
+cpu_0_logical#4,logical,on-line,2612.21 Mhz,1.06 %,0.66 %,0.41 %,0.00 %,98.94 %,
+cpu_1_logical#5,logical,on-line,2612.21 Mhz,1.83 %,1.32 %,0.51 %,0.00 %,98.17 %,
+cpu_2_logical#6,logical,on-line,2612.21 Mhz,2.07 %,1.42 %,0.66 %,0.00 %,97.93 %,
+cpu_3_logical#7,logical,on-line,2612.21 Mhz,0.41 %,0.30 %,0.10 %,0.00 %,99.59 %,
+cpu_0,AuthenticAMD Dual-Core,on-line,2612.21 Mhz,0.76 %,0.41 %,0.35 %,0.00 %,99.24 %,
+cpu_1,AuthenticAMD Dual-Core,on-line,2612.21 Mhz,1.44 %,0.96 %,0.46 %,0.03 %,98.56 %,
+cpu_2,AuthenticAMD Dual-Core,on-line,2612.21 Mhz,1.21 %,0.84 %,0.38 %,0.00 %,98.79 %,
+cpu_3,AuthenticAMD Dual-Core,on-line,2612.21 Mhz,0.28 %,0.23 %,0.05 %,0.00 %,99.72 %,

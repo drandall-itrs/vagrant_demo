@@ -1,0 +1,357 @@
+2014-09-19 00:55:33,695 INFO  SessionManager.buy: TRADEWEBHK FILCRDHKTST - Attempting session connection for buy: TRADEWEBHK FILCRDHKTST, reason null.
+2014-09-19 00:55:33,696 INFO  DefaultClientConnectionManager.TRADEWEBHK - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,696 INFO  DefaultClientConnectionManager.TRADEWEBHK - Starting connection retries for buy: TRADEWEBHK FILCRDHKTST
+2014-09-19 00:55:33,696 INFO  DefaultClientConnectionManager.TRADEWEBHK - Number of logon attempts now made is 1 of 4 for buy: TRADEWEBHK FILCRDHKTST
+2014-09-19 00:55:33,700 INFO  SessionManager.buy: ITGEUAT1 FIDEUCRD - Attempting session connection for buy: ITGEUAT1 FIDEUCRD, reason null.
+2014-09-19 00:55:33,700 INFO  DefaultClientConnectionManager.ITGEUAT1 - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,700 INFO  DefaultClientConnectionManager.ITGEUAT1 - Starting connection retries for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:55:33,700 INFO  DefaultClientConnectionManager.ITGEUAT1 - Number of logon attempts now made is 1 of 4 for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:55:33,704 INFO  SessionManager.buy: DBUAT FILUAT - Attempting session connection for buy: DBUAT FILUAT, reason null.
+2014-09-19 00:55:33,704 INFO  DefaultClientConnectionManager.DBUAT - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,704 INFO  DefaultClientConnectionManager.DBUAT - Starting connection retries for buy: DBUAT FILUAT
+2014-09-19 00:55:33,704 INFO  DefaultClientConnectionManager.DBUAT - Number of logon attempts now made is 1 of 4 for buy: DBUAT FILUAT
+2014-09-19 00:55:33,704 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,704 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/62.189.50.234,port=17000,localport=50851]
+2014-09-19 00:55:33,706 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,708 INFO  SessionManager.buy: DBFUTUAT FILCRDUAT - Attempting session connection for buy: DBFUTUAT FILCRDUAT, reason null.
+2014-09-19 00:55:33,708 INFO  out.TRADEWEBHK_FILCRDHKTST - >1 Logon (8=FIX.4.49=7235=A49=FILCRDHKTST56=TRADEWEBHK34=152=20140919-00:55:33108=3098=010=094)
+2014-09-19 00:55:33,708 INFO  DefaultClientConnectionManager.DBFUTUAT - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,708 INFO  DefaultClientConnectionManager.DBFUTUAT - Starting connection retries for buy: DBFUTUAT FILCRDUAT
+2014-09-19 00:55:33,708 INFO  DefaultClientConnectionManager.DBFUTUAT - Number of logon attempts now made is 1 of 4 for buy: DBFUTUAT FILCRDUAT
+2014-09-19 00:55:33,717 ERROR DefaultClientConnectionManager.ITGEUAT1 - com.cameronsystems.fix.connection.ConnectionException: ConnectionFactory.getConnection(IConnectionPoint): all configured connections failed
+2014-09-19 00:55:33,718 INFO  DefaultClientConnectionManager.ITGEUAT1 - Attempting to reconnect...
+2014-09-19 00:55:33,721 INFO  SessionManager.buy: LQNTOMSI FILCRDOMSI - Attempting session connection for buy: LQNTOMSI FILCRDOMSI, reason null.
+2014-09-19 00:55:33,721 INFO  DefaultClientConnectionManager.LQNTOMSI - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,722 INFO  DefaultClientConnectionManager.LQNTOMSI - Starting connection retries for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 00:55:33,722 INFO  DefaultClientConnectionManager.LQNTOMSI - Number of logon attempts now made is 1 of 4 for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 00:55:33,725 INFO  SessionManager.buy: GSCO FILCRD - Attempting session connection for buy: GSCO FILCRD, reason null.
+2014-09-19 00:55:33,725 INFO  DefaultClientConnectionManager.GSCO - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,726 INFO  DefaultClientConnectionManager.GSCO - Starting connection retries for buy: GSCO FILCRD
+2014-09-19 00:55:33,726 INFO  DefaultClientConnectionManager.GSCO - Number of logon attempts now made is 1 of 4 for buy: GSCO FILCRD
+2014-09-19 00:55:33,727 INFO  in.TRADEWEBHK_FILCRDHKTST - <4 Logout (8=FIX.4.49=11335=534=449=TRADEWEBHK52=20140919-00:55:33.68456=FILCRDHKTST58=MsgSeqNum too low, expecting 2 but received 110=207)
+2014-09-19 00:55:33,727 INFO  in.TRADEWEBHK_FILCRDHKTST - <java.io.IOException: End of message stream
+2014-09-19 00:55:33,728 INFO  out.TRADEWEBHK_FILCRDHKTST - >2 Logout (8=FIX.4.49=17635=549=FILCRDHKTST56=TRADEWEBHK34=252=20140919-00:55:3358=Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout10=151)
+2014-09-19 00:55:33,729 INFO  SessionManager.buy: GSFUT FILCRD - Attempting session connection for buy: GSFUT FILCRD, reason null.
+2014-09-19 00:55:33,729 INFO  DefaultClientConnectionManager.GSFUT - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,729 INFO  DefaultClientConnectionManager.GSFUT - Starting connection retries for buy: GSFUT FILCRD
+2014-09-19 00:55:33,729 INFO  DefaultClientConnectionManager.GSFUT - Number of logon attempts now made is 1 of 4 for buy: GSFUT FILCRD
+2014-09-19 00:55:33,730 ERROR DefaultClientConnectionManager.TRADEWEBHK - com.cameronsystems.fix.exception.LogonException: 303 com.cameronsystems.fix.exception.FatalProtocolException: 303 Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout; nested exception is: 
+	com.cameronsystems.fix.exception.FatalProtocolException: 303 Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout
+2014-09-19 00:55:33,730 INFO  DefaultClientConnectionManager.TRADEWEBHK - Attempting to reconnect...
+2014-09-19 00:55:33,730 INFO  Session.TRADEWEBHK_FILCRDHKTST - Exitting protocol thread!
+2014-09-19 00:55:33,733 INFO  SessionManager.buy: ITGAUAT2 FIDALCRD - Attempting session connection for buy: ITGAUAT2 FIDALCRD, reason null.
+2014-09-19 00:55:33,733 INFO  DefaultClientConnectionManager.ITGAUAT2 - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,733 INFO  DefaultClientConnectionManager.ITGAUAT2 - Starting connection retries for buy: ITGAUAT2 FIDALCRD
+2014-09-19 00:55:33,734 INFO  DefaultClientConnectionManager.ITGAUAT2 - Number of logon attempts now made is 1 of 4 for buy: ITGAUAT2 FIDALCRD
+2014-09-19 00:55:33,737 INFO  SessionManager.buy: BARXFO-TEST FO-FILCRD-TEST - Attempting session connection for buy: BARXFO-TEST FO-FILCRD-TEST, reason null.
+2014-09-19 00:55:33,737 INFO  DefaultClientConnectionManager.BARXFO-TEST - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,737 INFO  DefaultClientConnectionManager.BARXFO-TEST - Starting connection retries for buy: BARXFO-TEST FO-FILCRD-TEST
+2014-09-19 00:55:33,737 INFO  DefaultClientConnectionManager.BARXFO-TEST - Number of logon attempts now made is 1 of 4 for buy: BARXFO-TEST FO-FILCRD-TEST
+2014-09-19 00:55:33,741 INFO  SessionManager.buy: ITGAUAT FIDAPCRD - Attempting session connection for buy: ITGAUAT FIDAPCRD, reason null.
+2014-09-19 00:55:33,741 INFO  DefaultClientConnectionManager.ITGAUAT - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:33,741 INFO  DefaultClientConnectionManager.ITGAUAT - Starting connection retries for buy: ITGAUAT FIDAPCRD
+2014-09-19 00:55:33,741 INFO  DefaultClientConnectionManager.ITGAUAT - Number of logon attempts now made is 1 of 4 for buy: ITGAUAT FIDAPCRD
+2014-09-19 00:55:33,779 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,779 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3522,localport=51261]
+2014-09-19 00:55:33,780 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,781 INFO  out.DBUAT_FILUAT - >1 Logon (8=FIX.4.29=6235=A49=FILUAT56=DBUAT34=152=20140919-00:55:33108=3098=010=109)
+2014-09-19 00:55:33,783 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,783 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3522,localport=57314]
+2014-09-19 00:55:33,786 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:28 GMT 2014
+2014-09-19 00:55:33,787 INFO  out.DBFUTUAT_FILCRDUAT - >1 Logon (8=FIX.4.29=6835=A49=FILCRDUAT56=DBFUTUAT34=152=20140919-00:55:33108=3098=010=059)
+2014-09-19 00:55:33,812 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,812 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3505,localport=59833]
+2014-09-19 00:55:33,813 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,815 INFO  out.BARXFO-TEST_FO-FILCRD-TEST - >1 Logon (8=FIX.4.29=7635=A49=FO-FILCRD-TEST56=BARXFO-TEST34=152=20140919-00:55:33108=3098=010=079)
+2014-09-19 00:55:33,815 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,815 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3501,localport=56676]
+2014-09-19 00:55:33,815 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,815 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3501,localport=41755]
+2014-09-19 00:55:33,816 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,816 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,818 INFO  out.GSCO_FILCRD - >1 Logon (8=FIX.4.29=6135=A49=FILCRD56=GSCO34=152=20140919-00:55:33108=3098=010=023)
+2014-09-19 00:55:33,819 INFO  out.GSFUT_FILCRD - >1 Logon (8=FIX.4.29=6235=A49=FILCRD56=GSFUT34=152=20140919-00:55:33108=3098=010=117)
+2014-09-19 00:55:33,954 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,954 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/67.56.205.25,port=41502,localport=46089]
+2014-09-19 00:55:33,955 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,957 INFO  out.ITGAUAT2_FIDALCRD - >1 Logon (8=FIX.4.29=6735=A49=FIDALCRD56=ITGAUAT234=152=20140919-00:55:33108=3098=010=183)
+2014-09-19 00:55:33,964 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:33,964 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/67.56.205.25,port=41500,localport=36185]
+2014-09-19 00:55:33,965 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:33,967 INFO  out.ITGAUAT_FIDAPCRD - >1 Logon (8=FIX.4.29=6635=A49=FIDAPCRD56=ITGAUAT34=152=20140919-00:55:33108=3098=010=136)
+2014-09-19 00:55:34,031 INFO  Session.GSCO_FILCRD - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,031 INFO  Session.ITGAUAT2_FIDALCRD - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,031 INFO  Session.BARXFO-TEST_FO-FILCRD-TEST - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,031 INFO  Session.DBUAT_FILUAT - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,032 INFO  Session.GSFUT_FILCRD - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,032 INFO  Session.DBFUTUAT_FILCRDUAT - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,032 INFO  Session.ITGAUAT_FIDAPCRD - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:34,046 INFO  SessionManager.buy: TRADEWEBLDN FILCRDUKQA - Attempting session connection for buy: TRADEWEBLDN FILCRDUKQA, reason null.
+2014-09-19 00:55:34,047 INFO  DefaultClientConnectionManager.TRADEWEBLDN - Resetting the number of logon attempts made to zero.
+2014-09-19 00:55:34,047 INFO  DefaultClientConnectionManager.TRADEWEBLDN - Starting connection retries for buy: TRADEWEBLDN FILCRDUKQA
+2014-09-19 00:55:34,047 INFO  DefaultClientConnectionManager.TRADEWEBLDN - Number of logon attempts now made is 1 of 4 for buy: TRADEWEBLDN FILCRDUKQA
+2014-09-19 00:55:34,056 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:34,056 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/62.189.50.234,port=17000,localport=57429]
+2014-09-19 00:55:34,057 INFO  fix.Session - In = 1 Out = 1 LastResetTime = Fri Sep 19 00:55:28 GMT 2014
+2014-09-19 00:55:34,060 INFO  out.TRADEWEBLDN_FILCRDUKQA - >1 Logon (8=FIX.4.49=7235=A49=FILCRDUKQA56=TRADEWEBLDN34=152=20140919-00:55:34108=3098=010=078)
+2014-09-19 00:55:34,070 INFO  in.TRADEWEBLDN_FILCRDUKQA - <4 Logout (8=FIX.4.49=11335=534=449=TRADEWEBLDN52=20140919-00:55:34.02856=FILCRDUKQA58=MsgSeqNum too low, expecting 2 but received 110=183)
+2014-09-19 00:55:34,071 INFO  in.TRADEWEBLDN_FILCRDUKQA - <java.io.IOException: End of message stream
+2014-09-19 00:55:34,072 INFO  out.TRADEWEBLDN_FILCRDUKQA - >2 Logout (8=FIX.4.49=17635=549=FILCRDUKQA56=TRADEWEBLDN34=252=20140919-00:55:3458=Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout10=135)
+2014-09-19 00:55:34,073 ERROR DefaultClientConnectionManager.TRADEWEBLDN - com.cameronsystems.fix.exception.LogonException: 303 com.cameronsystems.fix.exception.FatalProtocolException: 303 Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout; nested exception is: 
+	com.cameronsystems.fix.exception.FatalProtocolException: 303 Received message with higher MsgSeqNum than expected (1) on NOT LOGGED ON session. Message received is: 4 Logout
+2014-09-19 00:55:34,073 INFO  DefaultClientConnectionManager.TRADEWEBLDN - Attempting to reconnect...
+2014-09-19 00:55:34,074 INFO  Session.TRADEWEBLDN_FILCRDUKQA - Exitting protocol thread!
+2014-09-19 00:55:34,172 INFO  in.DBFUTUAT_FILCRDUAT - <1 Logon (8=FIX.4.29=006835=A49=DBFUTUAT56=FILCRDUAT34=152=20140919-00:55:3398=0108=3010=155)
+2014-09-19 00:55:34,176 INFO  SessionManager.buy: DBFUTUAT FILCRDUAT -  Started read thread.
+2014-09-19 00:55:34,190 INFO  in.ITGAUAT2_FIDALCRD - <1 Logon (8=FIX.4.29=6735=A34=149=ITGAUAT256=FIDALCRD52=20140919-00:55:3498=0108=3010=184)
+2014-09-19 00:55:34,192 INFO  SessionManager.buy: ITGAUAT2 FIDALCRD -  Started read thread.
+2014-09-19 00:55:34,201 INFO  in.ITGAUAT_FIDAPCRD - <1 Logon (8=FIX.4.29=6635=A34=149=ITGAUAT56=FIDAPCRD52=20140919-00:55:3498=0108=3010=137)
+2014-09-19 00:55:34,203 INFO  SessionManager.buy: ITGAUAT FIDAPCRD -  Started read thread.
+2014-09-19 00:55:34,257 INFO  in.BARXFO-TEST_FO-FILCRD-TEST - <1 Logon (8=FIX.4.29=008035=A34=152=20140919-00:55:34.12749=BARXFO-TEST56=FO-FILCRD-TEST98=0108=3010=115)
+2014-09-19 00:55:34,260 INFO  SessionManager.buy: BARXFO-TEST FO-FILCRD-TEST -  Started read thread.
+2014-09-19 00:55:34,692 INFO  in.DBUAT_FILUAT - <java.io.IOException: End of message stream
+2014-09-19 00:55:34,692 ERROR DefaultClientConnectionManager.DBUAT - java.io.IOException: End of message stream
+2014-09-19 00:55:34,692 INFO  DefaultClientConnectionManager.DBUAT - Attempting to reconnect...
+2014-09-19 00:55:34,693 INFO  Session.DBUAT_FILUAT - Exitting protocol thread!
+2014-09-19 00:55:38,624 INFO  in.GSCO_FILCRD - <1 Logon (8=FIX.4.29=6135=A49=GSCO56=FILCRD34=152=20140919-00:55:3898=0108=3010=028)
+2014-09-19 00:55:38,627 INFO  SessionManager.buy: GSCO FILCRD -  Started read thread.
+2014-09-19 00:55:38,886 INFO  in.GSFUT_FILCRD - <1 Logon (8=FIX.4.29=6235=A49=GSFUT56=FILCRD34=152=20140919-00:55:3898=0108=3010=122)
+2014-09-19 00:55:38,889 INFO  SessionManager.buy: GSFUT FILCRD -  Started read thread.
+2014-09-19 00:55:43,720 INFO  DefaultClientConnectionManager.ITGEUAT1 - Number of logon attempts now made is 2 of 4 for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:55:43,733 INFO  DefaultClientConnectionManager.TRADEWEBHK - Number of logon attempts now made is 2 of 4 for buy: TRADEWEBHK FILCRDHKTST
+2014-09-19 00:55:43,741 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:43,741 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/62.189.50.234,port=17000,localport=41461]
+2014-09-19 00:55:43,744 INFO  fix.Session - In = 1 Out = 3 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:43,746 INFO  out.TRADEWEBHK_FILCRDHKTST - >3 Logon (8=FIX.4.49=7235=A49=FILCRDHKTST56=TRADEWEBHK34=352=20140919-00:55:43108=3098=010=097)
+2014-09-19 00:55:43,962 INFO  in.TRADEWEBHK_FILCRDHKTST - <5 Logon (8=FIX.4.49=9335=A34=549=TRADEWEBHK52=20140919-00:55:43.90156=FILCRDHKTST383=262144789=298=0108=3010=085)
+2014-09-19 00:55:43,963 INFO  in.TRADEWEBHK_FILCRDHKTST - <6 ResendRequest (8=FIX.4.49=7335=234=649=TRADEWEBHK52=20140919-00:55:43.90256=FILCRDHKTST7=216=010=130)
+2014-09-19 00:55:43,963 INFO  out.TRADEWEBHK_FILCRDHKTST - >2 SequenceReset (8=FIX.4.49=7635=449=FILCRDHKTST56=TRADEWEBHK34=252=20140919-00:55:4343=Y123=Y36=410=068)
+2014-09-19 00:55:43,964 INFO  SessionManager.buy: TRADEWEBHK FILCRDHKTST -  Started read thread.
+2014-09-19 00:55:43,964 INFO  out.TRADEWEBHK_FILCRDHKTST - >4 ResendRequest (8=FIX.4.49=6935=249=FILCRDHKTST56=TRADEWEBHK34=452=20140919-00:55:437=116=410=191)
+2014-09-19 00:55:43,969 INFO  out.TRADEWEBHK_FILCRDHKTST - >2 SequenceReset (8=FIX.4.49=7635=449=FILCRDHKTST56=TRADEWEBHK34=252=20140919-00:55:4343=Y123=Y36=510=069)
+2014-09-19 00:55:43,976 INFO  SessionManager.buy: TRADEWEBHK FILCRDHKTST - Non-fatal exception reported by 'SessionManager for buy: TRADEWEBHK FILCRDHKTST' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 401 Missing messages 1-4
+	at com.cameronsystems.fix.Session.checkMessageSequencing(SourceFile:2254)
+	at com.cameronsystems.fix.Session.processMessageFromInQueue(SourceFile:4024)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3997)
+	at com.cameronsystems.fix.Session.waitResponse(SourceFile:5837)
+	at com.cameronsystems.fix.Session.waitResponse(SourceFile:5806)
+	at com.cameronsystems.fix.Session.locallyInitiatedLogonSequence(SourceFile:3321)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForNonEmptyAdminQueue(SourceFile:4334)
+	at com.cameronsystems.fix.Session.run(SourceFile:4250)
+	at java.lang.Thread.run(Thread.java:662)
+2014-09-19 00:55:44,050 INFO  Session.TRADEWEBHK_FILCRDHKTST - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:44,076 INFO  DefaultClientConnectionManager.TRADEWEBLDN - Number of logon attempts now made is 2 of 4 for buy: TRADEWEBLDN FILCRDUKQA
+2014-09-19 00:55:44,084 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:44,084 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/62.189.50.234,port=17000,localport=49322]
+2014-09-19 00:55:44,085 INFO  fix.Session - In = 1 Out = 3 LastResetTime = Fri Sep 19 00:55:28 GMT 2014
+2014-09-19 00:55:44,087 INFO  out.TRADEWEBLDN_FILCRDUKQA - >3 Logon (8=FIX.4.49=7235=A49=FILCRDUKQA56=TRADEWEBLDN34=352=20140919-00:55:44108=3098=010=081)
+2014-09-19 00:55:44,220 INFO  in.TRADEWEBLDN_FILCRDUKQA - <5 Logon (8=FIX.4.49=9335=A34=549=TRADEWEBLDN52=20140919-00:55:44.16056=FILCRDUKQA383=262144789=298=0108=3010=066)
+2014-09-19 00:55:44,221 INFO  in.TRADEWEBLDN_FILCRDUKQA - <6 ResendRequest (8=FIX.4.49=7335=234=649=TRADEWEBLDN52=20140919-00:55:44.16056=FILCRDUKQA7=216=010=110)
+2014-09-19 00:55:44,221 INFO  out.TRADEWEBLDN_FILCRDUKQA - >2 SequenceReset (8=FIX.4.49=7635=449=FILCRDUKQA56=TRADEWEBLDN34=252=20140919-00:55:4443=Y123=Y36=410=052)
+2014-09-19 00:55:44,222 INFO  SessionManager.buy: TRADEWEBLDN FILCRDUKQA -  Started read thread.
+2014-09-19 00:55:44,222 INFO  out.TRADEWEBLDN_FILCRDUKQA - >4 ResendRequest (8=FIX.4.49=6935=249=FILCRDUKQA56=TRADEWEBLDN34=452=20140919-00:55:447=116=410=175)
+2014-09-19 00:55:44,227 INFO  out.TRADEWEBLDN_FILCRDUKQA - >2 SequenceReset (8=FIX.4.49=7635=449=FILCRDUKQA56=TRADEWEBLDN34=252=20140919-00:55:4443=Y123=Y36=510=053)
+2014-09-19 00:55:44,227 INFO  in.TRADEWEBHK_FILCRDHKTST - <1 SequenceReset (8=FIX.4.49=10635=434=143=Y49=TRADEWEBHK52=20140919-00:55:44.16656=FILCRDHKTST122=20140919-00:55:44.16636=5123=Y10=069)
+2014-09-19 00:55:44,235 INFO  SessionManager.buy: TRADEWEBLDN FILCRDUKQA - Non-fatal exception reported by 'SessionManager for buy: TRADEWEBLDN FILCRDUKQA' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 401 Missing messages 1-4
+	at com.cameronsystems.fix.Session.checkMessageSequencing(SourceFile:2254)
+	at com.cameronsystems.fix.Session.processMessageFromInQueue(SourceFile:4024)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3997)
+	at com.cameronsystems.fix.Session.waitResponse(SourceFile:5837)
+	at com.cameronsystems.fix.Session.waitResponse(SourceFile:5806)
+	at com.cameronsystems.fix.Session.locallyInitiatedLogonSequence(SourceFile:3321)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForNonEmptyAdminQueue(SourceFile:4334)
+	at com.cameronsystems.fix.Session.run(SourceFile:4250)
+	at java.lang.Thread.run(Thread.java:662)
+2014-09-19 00:55:44,284 INFO  in.ITGAUAT2_FIDALCRD - <2 TestRequest (8=FIX.4.29=7435=134=249=ITGAUAT256=FIDALCRD52=20140919-00:55:44112=2014091908554410=053)
+2014-09-19 00:55:44,294 INFO  in.ITGAUAT_FIDAPCRD - <2 TestRequest (8=FIX.4.29=7335=134=249=ITGAUAT56=FIDAPCRD52=20140919-00:55:44112=2014091908554410=006)
+2014-09-19 00:55:44,457 INFO  in.TRADEWEBLDN_FILCRDUKQA - <1 SequenceReset (8=FIX.4.49=10635=434=143=Y49=TRADEWEBLDN52=20140919-00:55:44.39856=FILCRDUKQA122=20140919-00:55:44.39836=5123=Y10=066)
+2014-09-19 00:55:44,696 INFO  DefaultClientConnectionManager.DBUAT - Number of logon attempts now made is 2 of 4 for buy: DBUAT FILUAT
+2014-09-19 00:55:44,770 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:44,770 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3522,localport=42500]
+2014-09-19 00:55:44,771 INFO  fix.Session - In = 1 Out = 2 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:44,772 INFO  out.DBUAT_FILUAT - >2 Logon (8=FIX.4.29=6235=A49=FILUAT56=DBUAT34=252=20140919-00:55:44108=3098=010=112)
+2014-09-19 00:55:45,032 INFO  in.DBUAT_FILUAT - <java.io.IOException: End of message stream
+2014-09-19 00:55:45,033 INFO  Session.DBUAT_FILUAT - Exitting protocol thread!
+2014-09-19 00:55:45,052 INFO  Session.TRADEWEBLDN_FILCRDUKQA - setFlushSendBufferAfterWrite false
+2014-09-19 00:55:53,741 INFO  DefaultClientConnectionManager.ITGEUAT1 - Number of logon attempts now made is 3 of 4 for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:55:55,036 INFO  DefaultClientConnectionManager.DBUAT - Number of logon attempts now made is 3 of 4 for buy: DBUAT FILUAT
+2014-09-19 00:55:55,110 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:55:55,110 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3522,localport=53373]
+2014-09-19 00:55:55,111 INFO  fix.Session - In = 1 Out = 3 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:55:55,112 INFO  out.DBUAT_FILUAT - >3 Logon (8=FIX.4.29=6235=A49=FILUAT56=DBUAT34=352=20140919-00:55:55108=3098=010=115)
+2014-09-19 00:55:55,392 INFO  in.DBUAT_FILUAT - <java.io.IOException: End of message stream
+2014-09-19 00:55:55,393 INFO  Session.DBUAT_FILUAT - Exitting protocol thread!
+2014-09-19 00:56:03,762 INFO  DefaultClientConnectionManager.ITGEUAT1 - Number of logon attempts now made is 4 of 4 for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:56:05,396 INFO  DefaultClientConnectionManager.DBUAT - Number of logon attempts now made is 4 of 4 for buy: DBUAT FILUAT
+2014-09-19 00:56:05,471 INFO  connection.SocketConnection - setSocket: Receive buffer size 43690 Send buffer size 8192
+2014-09-19 00:56:05,471 INFO  connection.SocketConnection - SocketConnection.start: Created connection to Socket[addr=/75.124.217.1,port=3522,localport=42913]
+2014-09-19 00:56:05,472 INFO  fix.Session - In = 1 Out = 4 LastResetTime = Fri Sep 19 00:55:27 GMT 2014
+2014-09-19 00:56:05,474 INFO  out.DBUAT_FILUAT - >4 Logon (8=FIX.4.29=6235=A49=FILUAT56=DBUAT34=452=20140919-00:56:05108=3098=010=112)
+2014-09-19 00:56:05,752 INFO  in.DBUAT_FILUAT - <java.io.IOException: End of message stream
+2014-09-19 00:56:05,753 INFO  Session.DBUAT_FILUAT - Exitting protocol thread!
+2014-09-19 00:56:13,782 INFO  DefaultClientConnectionManager.ITGEUAT1 - Maximum number of logon attempts [4] reached for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:56:13,782 INFO  DefaultClientConnectionManager.ITGEUAT1 - Stopping connection retries for buy: ITGEUAT1 FIDEUCRD
+2014-09-19 00:56:15,755 INFO  DefaultClientConnectionManager.DBUAT - Maximum number of logon attempts [4] reached for buy: DBUAT FILUAT
+2014-09-19 00:56:15,755 INFO  DefaultClientConnectionManager.DBUAT - Stopping connection retries for buy: DBUAT FILUAT
+2014-09-19 00:56:18,634 INFO  SessionManager.buy: GSCO FILCRD - Non-fatal exception reported by 'SessionManager for buy: GSCO FILCRD' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 403 com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue; nested exception is: 
+	com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4411)
+	at com.cameronsystems.fix.Session.run(SourceFile:4248)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.readIn(SourceFile:3951)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3987)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4385)
+	... 2 more
+2014-09-19 00:56:18,635 INFO  Session.GSCO_FILCRD - Sending TestRequest.
+2014-09-19 00:56:18,636 INFO  out.GSCO_FILCRD - >3 TestRequest (8=FIX.4.29=7135=149=FILCRD56=GSCO34=352=20140919-00:56:18112=20140919-00:56:1810=054)
+2014-09-19 00:56:18,637 INFO  Session.GSCO_FILCRD - TestRequest sent.
+2014-09-19 00:56:18,897 INFO  SessionManager.buy: GSFUT FILCRD - Non-fatal exception reported by 'SessionManager for buy: GSFUT FILCRD' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 403 com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue; nested exception is: 
+	com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4411)
+	at com.cameronsystems.fix.Session.run(SourceFile:4248)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.readIn(SourceFile:3951)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3987)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4385)
+	... 2 more
+2014-09-19 00:56:18,898 INFO  Session.GSFUT_FILCRD - Sending TestRequest.
+2014-09-19 00:56:18,899 INFO  out.GSFUT_FILCRD - >3 TestRequest (8=FIX.4.29=7235=149=FILCRD56=GSFUT34=352=20140919-00:56:18112=20140919-00:56:1810=148)
+2014-09-19 00:56:18,900 INFO  Session.GSFUT_FILCRD - TestRequest sent.
+2014-09-19 00:58:42,723 ERROR DefaultClientConnectionManager.LQNTOMSI - com.cameronsystems.fix.connection.ConnectionException: ConnectionFactory.getConnection(IConnectionPoint): all configured connections failed
+2014-09-19 00:58:42,723 INFO  DefaultClientConnectionManager.LQNTOMSI - Attempting to reconnect...
+2014-09-19 00:58:52,727 INFO  DefaultClientConnectionManager.LQNTOMSI - Number of logon attempts now made is 2 of 4 for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 01:02:11,730 INFO  DefaultClientConnectionManager.LQNTOMSI - Number of logon attempts now made is 3 of 4 for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 01:05:30,733 INFO  DefaultClientConnectionManager.LQNTOMSI - Number of logon attempts now made is 4 of 4 for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 01:08:49,738 INFO  DefaultClientConnectionManager.LQNTOMSI - Maximum number of logon attempts [4] reached for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 01:08:49,738 INFO  DefaultClientConnectionManager.LQNTOMSI - Stopping connection retries for buy: LQNTOMSI FILCRDOMSI
+2014-09-19 04:00:27,725 INFO  in.GSFUT_FILCRD - <372 TestRequest (8=FIX.4.29=6535=149=GSFUT56=FILCRD34=37252=20140919-04:00:27112=0000000110=010)
+2014-09-19 04:00:30,304 INFO  in.GSCO_FILCRD - <372 TestRequest (8=FIX.4.29=6435=149=GSCO56=FILCRD34=37252=20140919-04:00:30112=0000000110=166)
+2014-09-19 04:01:07,734 INFO  SessionManager.buy: GSFUT FILCRD - Non-fatal exception reported by 'SessionManager for buy: GSFUT FILCRD' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 403 com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue; nested exception is: 
+	com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4411)
+	at com.cameronsystems.fix.Session.run(SourceFile:4248)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.readIn(SourceFile:3951)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3987)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4385)
+	... 2 more
+2014-09-19 04:01:07,735 INFO  Session.GSFUT_FILCRD - Sending TestRequest.
+2014-09-19 04:01:07,736 INFO  out.GSFUT_FILCRD - >374 TestRequest (8=FIX.4.29=7435=149=FILCRD56=GSFUT34=37452=20140919-04:01:07112=20140919-04:01:0710=241)
+2014-09-19 04:01:07,737 INFO  Session.GSFUT_FILCRD - TestRequest sent.
+2014-09-19 04:01:10,313 INFO  SessionManager.buy: GSCO FILCRD - Non-fatal exception reported by 'SessionManager for buy: GSCO FILCRD' 
+com.cameronsystems.fix.exception.NonFatalProtocolException: 403 com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue; nested exception is: 
+	com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4411)
+	at com.cameronsystems.fix.Session.run(SourceFile:4248)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: com.cameronsystems.fix.exception.TimedoutException: 800 Timed out waiting on input queue
+	at com.cameronsystems.fix.Session.readIn(SourceFile:3951)
+	at com.cameronsystems.fix.Session.readNextMessageOrExceptionInSequenceInQueuedMode(SourceFile:3987)
+	at com.cameronsystems.fix.Session.protocolThreadLogicForEmptyAdminQueue(SourceFile:4385)
+	... 2 more
+2014-09-19 04:01:10,314 INFO  Session.GSCO_FILCRD - Sending TestRequest.
+2014-09-19 04:01:10,315 INFO  out.GSCO_FILCRD - >374 TestRequest (8=FIX.4.29=7335=149=FILCRD56=GSCO34=37452=20140919-04:01:10112=20140919-04:01:1010=135)
+2014-09-19 04:01:10,316 INFO  Session.GSCO_FILCRD - TestRequest sent.
+2014-09-19 04:01:12,497 INFO  in.GSFUT_FILCRD - <java.net.SocketException: Connection reset
+2014-09-19 04:01:12,497 INFO  SessionManager.buy: GSFUT FILCRD -  Notify disconnection.
+2014-09-19 04:01:12,501 INFO  SessionManager.buy: GSFUT FILCRD -  Disconnection notified.
+2014-09-19 04:01:12,501 ERROR SessionManager.buy: GSFUT FILCRD - Fatal exception reported by 'SessionManager for buy: GSFUT FILCRD' and session will be disconnected 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readByteAndDetectEndOfStream(SourceFile:337)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readStartOfMessage(SourceFile:286)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readStartOfMessageAndGetRemainingLength(SourceFile:92)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readMessage(SourceFile:104)
+	at com.cameronsystems.fix.MessageAssembler.run(SourceFile:233)
+	at java.lang.Thread.run(Thread.java:662)
+2014-09-19 04:01:12,507 INFO  DefaultClientConnectionManager.GSFUT - Session terminated.
+2014-09-19 04:01:12,507 WARN  Session.GSFUT_FILCRD - Interrupted while waiting to populate an inQ
+2014-09-19 04:01:12,507 INFO  SessionManager.buy: GSFUT FILCRD - Exitting read thread.
+2014-09-19 04:01:14,467 INFO  in.GSCO_FILCRD - <java.net.SocketException: Connection reset
+2014-09-19 04:01:14,467 INFO  SessionManager.buy: GSCO FILCRD -  Notify disconnection.
+2014-09-19 04:01:14,471 INFO  SessionManager.buy: GSCO FILCRD -  Disconnection notified.
+2014-09-19 04:01:14,471 ERROR SessionManager.buy: GSCO FILCRD - Fatal exception reported by 'SessionManager for buy: GSCO FILCRD' and session will be disconnected 
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:168)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:237)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readByteAndDetectEndOfStream(SourceFile:337)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readStartOfMessage(SourceFile:286)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readStartOfMessageAndGetRemainingLength(SourceFile:92)
+	at com.cameronsystems.fix.DefaultFixMessageInputStreamReader.readMessage(SourceFile:104)
+	at com.cameronsystems.fix.MessageAssembler.run(SourceFile:233)
+	at java.lang.Thread.run(Thread.java:662)
+2014-09-19 04:01:14,474 INFO  DefaultClientConnectionManager.GSCO - Session terminated.
+2014-09-19 04:01:14,474 WARN  Session.GSCO_FILCRD - Interrupted while waiting to populate an inQ
+2014-09-19 04:01:14,474 INFO  SessionManager.buy: GSCO FILCRD - Exitting read thread.
+2014-09-19 04:01:22,067 INFO  DefaultClientConnectionManager.GSCO - Number of logon attempts now made is 2 of 4 for buy: GSCO FILCRD
+2014-09-19 04:01:22,390 INFO  DefaultClientConnectionManager.GSFUT - Number of logon attempts now made is 2 of 4 for buy: GSFUT FILCRD
+2014-09-19 04:01:52,514 INFO  Session.GSFUT_FILCRD - Exitting protocol thread!
+2014-09-19 04:01:54,476 INFO  Session.GSCO_FILCRD - Exitting protocol thread!
+2014-09-19 04:04:31,069 ERROR DefaultClientConnectionManager.GSCO - com.cameronsystems.fix.connection.ConnectionException: ConnectionFactory.getConnection(IConnectionPoint): all configured connections failed
+2014-09-19 04:04:31,069 INFO  DefaultClientConnectionManager.GSCO - Attempting to reconnect...
+2014-09-19 04:04:31,391 ERROR DefaultClientConnectionManager.GSFUT - com.cameronsystems.fix.connection.ConnectionException: ConnectionFactory.getConnection(IConnectionPoint): all configured connections failed
+2014-09-19 04:04:31,391 INFO  DefaultClientConnectionManager.GSFUT - Attempting to reconnect...
+2014-09-19 04:04:41,072 INFO  DefaultClientConnectionManager.GSCO - Number of logon attempts now made is 3 of 4 for buy: GSCO FILCRD
+2014-09-19 04:04:41,395 INFO  DefaultClientConnectionManager.GSFUT - Number of logon attempts now made is 3 of 4 for buy: GSFUT FILCRD
+2014-09-19 04:08:00,078 INFO  DefaultClientConnectionManager.GSCO - Number of logon attempts now made is 4 of 4 for buy: GSCO FILCRD
+2014-09-19 04:08:00,398 INFO  DefaultClientConnectionManager.GSFUT - Number of logon attempts now made is 4 of 4 for buy: GSFUT FILCRD
+2014-09-19 04:08:10,163 INFO  DefaultClientConnectionManager.GSCO - Maximum number of logon attempts [4] reached for buy: GSCO FILCRD
+2014-09-19 04:08:10,163 INFO  DefaultClientConnectionManager.GSCO - Stopping connection retries for buy: GSCO FILCRD
+2014-09-19 04:08:10,480 INFO  DefaultClientConnectionManager.GSFUT - Maximum number of logon attempts [4] reached for buy: GSFUT FILCRD
+2014-09-19 04:08:10,480 INFO  DefaultClientConnectionManager.GSFUT - Stopping connection retries for buy: GSFUT FILCRD
+2014-09-19 06:50:04,239 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 06:50:04,240 INFO  out.ITGAUAT_FIDAPCRD - >711 OrderSingle (8=FIX.4.29=26435=D49=FIDAPCRD56=ITGAUAT34=71152=20140919-06:50:0450=ANL11=502820971=F/CFF21=1100=SH55=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-06:50:0438=500040=115=CNY59=0526=1270729695698=210=203)
+2014-09-19 06:50:05,070 INFO  in.ITGAUAT_FIDAPCRD - <711 ExecutionReport (8=FIX.4.29=23135=834=71149=ITGAUAT56=FIDAPCRD52=20140919-06:50:0437=1676-517=60150=020=039=055=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028209765=C122=548=600008.SH60=20140919-06:50:0459=047=A1=F/CFF15=CNY10=040)
+2014-09-19 06:53:00,960 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 06:53:00,960 INFO  out.ITGAUAT_FIDAPCRD - >717 OrderCancelRequest (8=FIX.4.29=25835=F49=FIDAPCRD56=ITGAUAT34=71752=20140919-06:53:0050=ANL41=5028209737=1676-511=5028209855=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-06:53:0038=50005049=ANL526=1270729695698=110=181)
+2014-09-19 06:53:01,209 INFO  in.ITGAUAT_FIDAPCRD - <717 ExecutionReport (8=FIX.4.29=24335=834=71749=ITGAUAT56=FIDAPCRD52=20140919-06:53:0137=1676-517=70150=620=039=655=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028209865=C122=548=600008.SH60=20140919-06:53:0159=047=A1=F/CFF15=CNY41=5028209710=131)
+2014-09-19 06:53:01,316 INFO  in.ITGAUAT_FIDAPCRD - <718 ExecutionReport (8=FIX.4.29=24035=834=71849=ITGAUAT56=FIDAPCRD52=20140919-06:53:0137=1676-517=80150=420=039=455=60000854=138=500032=031=0.0000151=014=06=0.000041=5028209711=5028209865=C122=548=600008.SH60=20140919-06:53:0159=047=A1=F/CFF15=CNY10=233)
+2014-09-19 06:53:46,366 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 06:53:46,366 INFO  out.ITGAUAT_FIDAPCRD - >719 OrderSingle (8=FIX.4.29=26435=D49=FIDAPCRD56=ITGAUAT34=71952=20140919-06:53:4650=ANL11=502820991=F/CFF21=1100=SH55=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-06:53:4638=500040=115=CNY59=0526=1270729695698=110=230)
+2014-09-19 06:53:46,617 INFO  in.ITGAUAT_FIDAPCRD - <720 ExecutionReport (8=FIX.4.29=23135=834=72049=ITGAUAT56=FIDAPCRD52=20140919-06:53:4637=1676-617=90150=020=039=055=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028209965=C122=548=600008.SH60=20140919-06:53:4659=047=A1=F/CFF15=CNY10=064)
+2014-09-19 06:55:25,240 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 06:55:25,240 INFO  out.ITGAUAT_FIDAPCRD - >723 OrderCancelRequest (8=FIX.4.29=25835=F49=FIDAPCRD56=ITGAUAT34=72352=20140919-06:55:2550=ANL41=5028209937=1676-611=5028210055=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-06:55:2538=50005049=ANL526=1270729695698=110=183)
+2014-09-19 06:55:25,495 INFO  in.ITGAUAT_FIDAPCRD - <724 ExecutionReport (8=FIX.4.29=24435=834=72449=ITGAUAT56=FIDAPCRD52=20140919-06:55:2537=1676-617=100150=620=039=655=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210065=C122=548=600008.SH60=20140919-06:55:2559=047=A1=F/CFF15=CNY41=5028209910=175)
+2014-09-19 06:55:25,587 INFO  in.ITGAUAT_FIDAPCRD - <725 ExecutionReport (8=FIX.4.29=24135=834=72549=ITGAUAT56=FIDAPCRD52=20140919-06:55:2537=1676-617=110150=420=039=455=60000854=138=500032=031=0.0000151=014=06=0.000041=5028209911=5028210065=C122=548=600008.SH60=20140919-06:55:2559=047=A1=F/CFF15=CNY10=021)
+2014-09-19 06:59:41,520 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 06:59:41,521 INFO  out.ITGAUAT_FIDAPCRD - >732 OrderSingle (8=FIX.4.29=26435=D49=FIDAPCRD56=ITGAUAT34=73252=20140919-06:59:4150=ANL11=502821011=F/CFF21=1100=SH55=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-06:59:4138=500040=115=CNY59=0526=1270729695698=210=212)
+2014-09-19 06:59:41,771 INFO  in.ITGAUAT_FIDAPCRD - <734 ExecutionReport (8=FIX.4.29=23235=834=73449=ITGAUAT56=FIDAPCRD52=20140919-06:59:4137=1676-717=120150=020=039=055=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210165=C122=548=600008.SH60=20140919-06:59:4159=047=A1=F/CFF15=CNY10=099)
+2014-09-19 07:00:39,602 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 07:00:39,602 INFO  out.ITGAUAT_FIDAPCRD - >734 OrderCancelRequest (8=FIX.4.29=25835=F49=FIDAPCRD56=ITGAUAT34=73452=20140919-07:00:3950=ANL41=5028210137=1676-711=5028210255=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-07:00:3938=50005049=ANL526=1270729695698=110=164)
+2014-09-19 07:00:39,855 INFO  in.ITGAUAT_FIDAPCRD - <736 ExecutionReport (8=FIX.4.29=24435=834=73649=ITGAUAT56=FIDAPCRD52=20140919-07:00:3937=1676-717=130150=620=039=655=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210265=C122=548=600008.SH60=20140919-07:00:3959=047=A1=F/CFF15=CNY41=5028210110=160)
+2014-09-19 07:00:39,948 INFO  in.ITGAUAT_FIDAPCRD - <737 ExecutionReport (8=FIX.4.29=24135=834=73749=ITGAUAT56=FIDAPCRD52=20140919-07:00:3937=1676-717=140150=420=039=455=60000854=138=500032=031=0.0000151=014=06=0.000041=5028210111=5028210265=C122=548=600008.SH60=20140919-07:00:3959=047=A1=F/CFF15=CNY10=006)
+2014-09-19 07:03:33,595 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 07:03:33,595 INFO  out.ITGAUAT_FIDAPCRD - >740 OrderSingle (8=FIX.4.29=26435=D49=FIDAPCRD56=ITGAUAT34=74052=20140919-07:03:3350=ANL11=502821031=F/CFF21=1100=SH55=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-07:03:3338=500040=115=CNY59=0526=1270729695698=210=195)
+2014-09-19 07:03:33,845 INFO  in.ITGAUAT_FIDAPCRD - <743 ExecutionReport (8=FIX.4.29=23235=834=74349=ITGAUAT56=FIDAPCRD52=20140919-07:03:3337=1676-817=150150=020=039=055=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210365=C122=548=600008.SH60=20140919-07:03:3359=047=A1=F/CFF15=CNY10=087)
+2014-09-19 07:04:40,417 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 07:04:40,417 INFO  out.ITGAUAT_FIDAPCRD - >743 OrderCancelRequest (8=FIX.4.29=25835=F49=FIDAPCRD56=ITGAUAT34=74352=20140919-07:04:4050=ANL41=5028210337=1676-811=5028210455=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-07:04:4038=50005049=ANL526=1270729695698=110=161)
+2014-09-19 07:04:40,662 INFO  in.ITGAUAT_FIDAPCRD - <746 ExecutionReport (8=FIX.4.29=24435=834=74649=ITGAUAT56=FIDAPCRD52=20140919-07:04:4037=1676-817=160150=620=039=655=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210465=C122=548=600008.SH60=20140919-07:04:4059=047=A1=F/CFF15=CNY41=5028210310=161)
+2014-09-19 07:04:40,753 INFO  in.ITGAUAT_FIDAPCRD - <747 ExecutionReport (8=FIX.4.29=24135=834=74749=ITGAUAT56=FIDAPCRD52=20140919-07:04:4037=1676-817=170150=420=039=455=60000854=138=500032=031=0.0000151=014=06=0.000041=5028210311=5028210465=C122=548=600008.SH60=20140919-07:04:4059=047=A1=F/CFF15=CNY10=007)
+2014-09-19 07:07:21,053 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 07:07:21,054 INFO  out.ITGAUAT_FIDAPCRD - >749 OrderSingle (8=FIX.4.29=26435=D49=FIDAPCRD56=ITGAUAT34=74952=20140919-07:07:2150=ANL11=502821051=F/CFF21=1100=SH55=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-07:07:2038=500040=115=CNY59=0526=1270729695698=210=207)
+2014-09-19 07:07:21,311 INFO  in.ITGAUAT_FIDAPCRD - <753 ExecutionReport (8=FIX.4.29=23235=834=75349=ITGAUAT56=FIDAPCRD52=20140919-07:07:2137=1676-917=180150=020=039=055=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210565=C122=548=600008.SH60=20140919-07:07:2159=047=A1=F/CFF15=CNY10=096)
+2014-09-19 07:08:02,248 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 07:08:02,248 INFO  out.ITGAUAT_FIDAPCRD - >751 OrderCancelRequest (8=FIX.4.29=25835=F49=FIDAPCRD56=ITGAUAT34=75152=20140919-07:08:0250=ANL41=5028210537=1676-911=5028210655=60000865=C148=600008.SH22=5207=SH106=BEIJING CAPITAL CO LTD107=BEIJING CAPITAL CO LTD A54=160=20140919-07:08:0238=50005049=ANL526=1270729695698=110=169)
+2014-09-19 07:08:02,499 INFO  in.ITGAUAT_FIDAPCRD - <755 ExecutionReport (8=FIX.4.29=24435=834=75549=ITGAUAT56=FIDAPCRD52=20140919-07:08:0237=1676-917=190150=620=039=655=60000854=138=500032=031=0.0000151=500014=06=0.000011=5028210665=C122=548=600008.SH60=20140919-07:08:0259=047=A1=F/CFF15=CNY41=5028210510=173)
+2014-09-19 07:08:02,606 INFO  in.ITGAUAT_FIDAPCRD - <756 ExecutionReport (8=FIX.4.29=24135=834=75649=ITGAUAT56=FIDAPCRD52=20140919-07:08:0237=1676-917=200150=420=039=455=60000854=138=500032=031=0.0000151=014=06=0.000041=5028210511=5028210665=C122=548=600008.SH60=20140919-07:08:0259=047=A1=F/CFF15=CNY10=010)
+2014-09-19 08:50:15,529 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 08:50:15,529 INFO  out.ITGAUAT_FIDAPCRD - >956 OrderSingle (8=FIX.4.29=87135=D49=FIDAPCRD56=ITGAUAT34=95652=20140919-08:50:1550=KKC11=5029208921=1100=TRIT55=26765=HK48=0267.HK22=5106=UBS AG LON BRANCH107=CITIC PACIFIC LTD (UBS) (CFD)54=160=20140919-08:50:1538=100040=115=HKD59=0526=1088173355693=SBCWF|DBUK|GOLDF|JPMPLOR5695=UBAPOR|UBAPAL|GSAPOR|DBJPOR|SBHKOR|CTJPOR|CTAPAL5695=BARCUK|BNPHKOR|BNPP|CANTOR|CFTZ|CFTZOR|CRNGOR|CSEUAL|CSEUOR|CSHKOR|CSJPOR|CTJPOR|DAVY|DAVYOR|DBAPAL|DBAPOR|DBJPOR|DBKSCFD|DBPG|DBUK|DBUKOR|DDBCOR|ENSKOR|EXANOR|EXUKOR|GDBY|GDBYOR|GOLDOR|GSAPAL|GSAPOR|GSCOFWAL|GSCOFWOR|GSPG|HSBIOR|IVETOR|JEFFIOR|JPMLOR|JPPG|JPSW|KEPLOR|LIBEROR|LQNTUK|MLHKOR|MLIEOR|MLJPOR|MSDWAL|MSDWOR|MSHKOR|MSIL|MSJPOR|NATPOR|NOMUDTC|NOMUOR|NUMSOR|SBCW|SBCWF|SBCWOR|SBDRCFD|SBHKOR|SBLO|SBLOOR|SGLDOR|SVEN|SVENOR|UBAPAL|UBAPOR|UBSFWAL|UBSFWOR|WDPG775=15692=UBAPOR|UBAPAL|GSAPOR|DBJPOR|SBHKOR|CTJPOR|CTAPAL5691=2439=SBCWF10=033)
+2014-09-19 08:50:15,817 INFO  in.ITGAUAT_FIDAPCRD - <961 ExecutionReport (8=FIX.4.29=23235=834=96149=ITGAUAT56=FIDAPCRD52=20140919-08:50:1537=1676-1017=210150=020=039=055=26754=138=100032=031=0.0000151=100014=06=0.000011=5029208965=HK22=548=0267.HK60=20140919-08:50:1559=047=A1=10881733515=HKD10=049)
+2014-09-19 08:50:35,785 INFO  impl.RmiSession - RmiSession.sendMessageList: Sending list
+2014-09-19 08:50:35,785 INFO  out.ITGAUAT_FIDAPCRD - >957 OrderSingle (8=FIX.4.29=26735=D49=FIDAPCRD56=ITGAUAT34=95752=20140919-08:50:3550=KKC11=5029209021=1100=TRIT55=83665=HK48=0836.HK22=5207=HK106=CHINA RES POWER HLDGS CO LTD107=CHINA RESOURCES POWER HLDS LTD54=160=20140919-08:50:3538=239400040=115=HKD59=0526=959637855698=110=253)
+2014-09-19 08:50:36,050 INFO  in.ITGAUAT_FIDAPCRD - <962 ExecutionReport (8=FIX.4.29=23735=834=96249=ITGAUAT56=FIDAPCRD52=20140919-08:50:3537=1676-1117=220150=020=039=055=83654=138=239400032=031=0.0000151=239400014=06=0.000011=5029209065=HK22=548=0836.HK60=20140919-08:50:3559=047=A1=9596378515=HKD10=091)
+2014-09-19 08:56:03,991 INFO  in.ITGAUAT_FIDAPCRD - <973 ExecutionReport (8=FIX.4.29=25935=834=97349=ITGAUAT56=FIDAPCRD52=20140919-08:56:0337=1676-1117=230150=120=039=155=83654=138=239400032=9331=22.6500151=239390714=936=22.650011=5029209065=HK22=548=0836.HK60=20140919-08:56:0359=047=A1=9596378515=HKD76=GSAPAL30=XTKS10=185)
+2014-09-19 08:56:04,091 INFO  in.ITGAUAT_FIDAPCRD - <974 ExecutionReport (8=FIX.4.29=26135=834=97449=ITGAUAT56=FIDAPCRD52=20140919-08:56:0337=1676-1117=240150=120=039=155=83654=138=239400032=77031=22.6500151=239313714=8636=22.650011=5029209065=HK22=548=0836.HK60=20140919-08:56:0359=047=A1=9596378515=HKD76=GSAPAL30=XTKS10=022)
+2014-09-19 08:56:04,100 INFO  in.ITGAUAT_FIDAPCRD - <975 ExecutionReport (8=FIX.4.29=26035=834=97549=ITGAUAT56=FIDAPCRD52=20140919-08:56:0437=1676-1117=250150=120=039=155=83654=138=239400032=6731=22.6500151=239307014=9306=22.650011=5029209065=HK22=548=0836.HK60=20140919-08:56:0359=047=A1=9596378515=HKD76=GSAPAL30=XTKS10=222)
+2014-09-19 08:56:04,203 INFO  in.ITGAUAT_FIDAPCRD - <976 ExecutionReport (8=FIX.4.29=26135=834=97649=ITGAUAT56=FIDAPCRD52=20140919-08:56:0437=1676-1117=260150=120=039=155=83654=138=239400032=7031=22.6500151=239300014=10006=22.650011=5029209065=HK22=548=0836.HK60=20140919-08:56:0359=047=A1=9596378515=HKD76=GSAPAL30=XTKS10=249)

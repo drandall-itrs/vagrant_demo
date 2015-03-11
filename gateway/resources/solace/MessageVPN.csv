@@ -1,0 +1,8 @@
+Message VPN,Status,Number of Subscriptions,Number of Connections
+BO,Up,2,1
+CA,Up,3,1
+CCR_FUTURES,Up,3,1
+CCR_TEV,Up,3,1
+MX00,Up,4,1
+CYCLOP,Up,2,1
+default,Disabled,0,0

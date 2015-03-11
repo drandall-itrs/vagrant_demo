@@ -1,0 +1,15 @@
+parameterName,value
+Connection Memory  (KB),200
+Granted Workspace Memory (KB),0
+Lock Memory (KB),352
+Lock Blocks Allocated,2550
+Lock Owner Blocks Allocated,5050
+Lock Blocks,2
+Lock Owner Blocks,3
+Maximum Workspace Memory (KB),73720
+Memory Grants Outstanding,0
+Memory Grants Pending,0
+Optimizer Memory (KB),200
+SQL Cache Memory  (KB),208
+Target Server Memory (KB),105712
+Total Server Memory (KB),9792

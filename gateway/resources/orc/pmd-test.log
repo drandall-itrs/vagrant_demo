@@ -1,0 +1,1193 @@
+Mar 17 18:00:01.804 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [50524] cb [50524] removed
+Mar 17 19:00:37.240 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [63791] cb [63791] removed
+Mar 17 21:00:04.267 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [60672] cb [60672] removed
+Mar 17 21:00:04.489 gedsborc1 pmd[4337:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [39175] cb [39175] removed
+Mar 17 21:00:04.596 gedsborc1 pmd[4337:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [60688] cb [60688] removed
+Mar 17 21:00:13.590 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [60672] cb [60672] registered
+Mar 17 22:00:16.834 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [59562] cb [59562] removed
+Mar 17 22:00:27.803 gedsborc1 pmd[4337:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [35089] cb [35089] removed
+Mar 17 22:00:28.083 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [35089] cb [35089] registered
+Mar 17 23:00:01.933 gedsborc1 pmd[4337:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [60690] cb [60690] removed
+Mar 17 23:50:03.939 gedsborc1 pmd[4337:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [48767] cb [48767] removed
+Mar 17 23:50:04.020 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 17 23:50:04.021 gedsborc1 pmd[4337:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [49350] cb [49350] removed
+Mar 17 23:50:04.791 gedsborc1 pmd[4337:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 17 23:50:04.791 gedsborc1 pmd[4337:t@5    :l@5    ]/info:  Termination done
+Mar 18 04:00:03.834 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 18 04:00:03.835 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 18 04:00:03.836 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 18 04:00:03.836 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 18 04:00:03.836 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 18 04:00:03.837 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 18 04:00:03.837 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 18 04:00:03.838 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 18 04:00:03.846 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 18 04:00:03.847 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 18 04:00:03.847 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 18 04:00:03.849 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 18 04:00:03.849 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 18 04:00:03.850 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 18 04:00:03.850 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 18 04:00:03.850 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 163474
+Mar 18 04:00:03.850 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 18 04:00:03.851 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 18 04:00:03.851 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 18 04:00:03.851 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 18 04:00:03.851 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 18 04:00:03.851 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 18 04:00:03.852 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 18 04:00:03.852 gedsborc1 pmd[24726:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 18 04:00:03.908 gedsborc1 pmd[24726:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 18 04:00:03.909 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [35574] cb [35574] registered
+Mar 18 04:00:03.943 gedsborc1 pmd[24726:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 18 04:00:04.275 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [35577] cb [35577] registered
+Mar 18 04:00:05.049 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 18 04:10:01.515 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 18 04:10:57.408 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [35867] cb [35867] registered
+Mar 18 04:30:01.570 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [36431] cb [36431] registered
+Mar 18 04:35:01.683 gedsborc1 pmd[24726:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 18 06:45:01.773 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [42777] cb [42777] registered
+Mar 18 07:00:04.185 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [43882] cb [43882] registered
+Mar 18 07:00:04.187 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [43881] cb [43881] registered
+Mar 18 07:00:04.756 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [43891] cb [43891] registered
+Mar 18 07:15:29.974 gedsborc1 pmd[24726:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 18 07:30:02.160 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [47010] cb [47010] registered
+Mar 18 07:35:02.335 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [47584] cb [47584] registered
+Mar 18 07:50:02.616 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [eurexv] port [49551] cb [49551] registered
+Mar 18 07:55:01.548 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [50312] cb [50312] registered
+Mar 18 08:00:11.061 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [51066] cb [51066] registered
+Mar 18 08:30:01.493 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [55164] cb [55164] registered
+Mar 18 18:00:02.053 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [36431] cb [36431] removed
+Mar 18 19:00:37.131 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [47010] cb [47010] removed
+Mar 18 21:00:02.999 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [43882] cb [43882] removed
+Mar 18 21:00:03.378 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [55164] cb [55164] removed
+Mar 18 21:00:04.135 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [43881] cb [43881] removed
+Mar 18 21:00:15.885 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [43882] cb [43882] registered
+Mar 18 22:00:16.701 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [42777] cb [42777] removed
+Mar 18 22:00:28.121 gedsborc1 pmd[24726:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [51066] cb [51066] removed
+Mar 18 23:00:01.920 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [43891] cb [43891] removed
+Mar 18 23:50:03.588 gedsborc1 pmd[24726:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 18 23:50:03.588 gedsborc1 pmd[24726:t@5    :l@5    ]/info:  Termination done
+Mar 19 04:00:03.643 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 19 04:00:03.644 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 19 04:00:03.644 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 19 04:00:03.644 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 19 04:00:03.645 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 19 04:00:03.645 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 19 04:00:03.646 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 19 04:00:03.646 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 19 04:00:03.646 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 19 04:00:03.647 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 19 04:00:03.647 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 19 04:00:03.649 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 19 04:00:03.650 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 19 04:00:03.650 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 19 04:00:03.650 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 19 04:00:03.650 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 164862
+Mar 19 04:00:03.651 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 19 04:00:03.651 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 19 04:00:03.651 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 19 04:00:03.651 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 19 04:00:03.652 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 19 04:00:03.652 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 19 04:00:03.652 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 19 04:00:03.652 gedsborc1 pmd[15216:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 19 04:00:03.755 gedsborc1 pmd[15216:t@7    :l@8    ]/info:  Creating new udp_handler
+Mar 19 04:00:03.759 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [50046] cb [50046] registered
+Mar 19 04:00:03.771 gedsborc1 pmd[15216:t@6    :l@7    ]/info:  Creating new tcp_handler
+Mar 19 04:00:04.287 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [storage] port [50051] cb [50051] registered
+Mar 19 04:00:06.001 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 19 04:10:01.576 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 19 04:10:39.109 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [50648] cb [50648] registered
+Mar 19 04:30:01.594 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [51801] cb [51801] registered
+Mar 19 06:20:16.007 gedsborc1 pmd[15216:t@6    :l@7    ]/info:  Creating new tcp_handler
+Mar 19 06:45:01.818 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [60857] cb [60857] registered
+Mar 19 07:00:04.169 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [liffee] port [61969] cb [61969] registered
+Mar 19 07:00:04.186 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [liffef] port [61968] cb [61968] registered
+Mar 19 07:00:04.399 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [rmp] port [61972] cb [61972] registered
+Mar 19 07:30:02.014 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [euronext] port [65086] cb [65086] registered
+Mar 19 07:35:01.809 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [hsed] port [32896] cb [32896] registered
+Mar 19 07:50:01.861 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [eurexv] port [34867] cb [34867] registered
+Mar 19 07:55:01.907 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [xetra65] port [35593] cb [35593] registered
+Mar 19 08:00:10.992 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [sfc] port [36285] cb [36285] registered
+Mar 19 08:30:02.053 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [40375] cb [40375] registered
+Mar 19 09:49:07.463 gedsborc1 pmd[15216:t@7    :l@8    ]/info:  Creating new udp_handler
+Mar 19 18:00:01.069 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [51801] cb [51801] removed
+Mar 19 19:00:35.291 gedsborc1 pmd[15216:t@11   :l@12   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [65086] cb [65086] removed
+Mar 19 21:00:03.507 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [40375] cb [40375] removed
+Mar 19 21:00:03.611 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [61969] cb [61969] removed
+Mar 19 21:00:04.532 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [61968] cb [61968] removed
+Mar 19 21:00:13.978 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [liffee] port [61969] cb [61969] registered
+Mar 19 22:00:16.059 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [60857] cb [60857] removed
+Mar 19 22:00:26.116 gedsborc1 pmd[15216:t@11   :l@12   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [36285] cb [36285] removed
+Mar 19 22:00:26.889 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [sfc] port [36285] cb [36285] registered
+Mar 19 23:00:01.829 gedsborc1 pmd[15216:t@11   :l@12   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [61972] cb [61972] removed
+Mar 19 23:50:03.524 gedsborc1 pmd[15216:t@11   :l@12   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [50046] cb [50046] removed
+Mar 19 23:50:04.005 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 19 23:50:04.005 gedsborc1 pmd[15216:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [50648] cb [50648] removed
+Mar 19 23:50:04.327 gedsborc1 pmd[15216:t@5    :l@6    ]/info:  shutdown [SIGTERM]
+Mar 19 23:50:04.327 gedsborc1 pmd[15216:t@5    :l@6    ]/info:  Termination done
+Mar 20 04:00:03.345 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 20 04:00:03.347 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 20 04:00:03.347 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 20 04:00:03.347 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 20 04:00:03.347 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 20 04:00:03.348 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 20 04:00:03.348 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 20 04:00:03.349 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 20 04:00:03.349 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 20 04:00:03.349 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 20 04:00:03.350 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 20 04:00:03.352 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 20 04:00:03.352 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 20 04:00:03.352 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 20 04:00:03.353 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 20 04:00:03.353 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 171008
+Mar 20 04:00:03.353 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.353 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 20 04:00:03.354 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.354 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 20 04:00:03.354 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 20 04:00:03.354 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 20 04:00:03.354 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 20 04:00:03.355 gedsborc1 pmd[3127:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 20 04:00:03.699 gedsborc1 pmd[3127:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 20 04:00:03.700 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [43742] cb [43742] registered
+Mar 20 04:00:03.774 gedsborc1 pmd[3127:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 20 04:00:04.058 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [43747] cb [43747] registered
+Mar 20 04:00:04.968 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 20 04:10:01.499 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 20 04:10:02.999 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [44008] cb [44008] registered
+Mar 20 07:00:01.311 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [48996] cb [48996] registered
+Mar 20 12:56:43.400 gedsborc1 pmd[3127:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 20 23:00:01.501 gedsborc1 pmd[3127:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [48996] cb [48996] removed
+Mar 20 23:50:02.417 gedsborc1 pmd[3127:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [43742] cb [43742] removed
+Mar 20 23:50:02.725 gedsborc1 pmd[3127:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 20 23:50:02.726 gedsborc1 pmd[3127:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [44008] cb [44008] removed
+Mar 20 23:50:03.722 gedsborc1 pmd[3127:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 20 23:50:03.722 gedsborc1 pmd[3127:t@5    :l@5    ]/info:  Termination done
+Mar 21 04:00:02.966 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 21 04:00:02.967 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 21 04:00:02.967 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 21 04:00:02.967 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 21 04:00:02.968 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 21 04:00:02.968 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 21 04:00:02.969 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 21 04:00:02.969 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 21 04:00:02.969 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 21 04:00:02.970 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 21 04:00:02.970 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 21 04:00:02.972 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 21 04:00:02.972 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 21 04:00:02.973 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 21 04:00:02.973 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 21 04:00:02.973 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 177944
+Mar 21 04:00:02.973 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 21 04:00:02.973 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 21 04:00:02.974 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 21 04:00:02.974 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 21 04:00:02.974 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 21 04:00:02.974 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 21 04:00:02.974 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 21 04:00:02.975 gedsborc1 pmd[1782:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 21 04:00:03.325 gedsborc1 pmd[1782:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 21 04:00:03.326 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [41343] cb [41343] registered
+Mar 21 04:00:03.393 gedsborc1 pmd[1782:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 21 04:00:04.481 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 21 04:00:32.740 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [41338] cb [41338] registered
+Mar 21 04:10:01.691 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 21 04:10:03.157 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [41487] cb [41487] registered
+Mar 21 09:53:08.490 gedsborc1 pmd[1782:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 21 23:50:02.512 gedsborc1 pmd[1782:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [storage] port [41343] cb [41343] removed
+Mar 21 23:50:02.528 gedsborc1 pmd[1782:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 21 23:50:02.529 gedsborc1 pmd[1782:t@5    :l@5    ]/info:  Termination done
+Mar 22 04:00:03.590 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 22 04:00:03.591 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 22 04:00:03.591 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 22 04:00:03.591 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 22 04:00:03.592 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 22 04:00:03.593 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 22 04:00:03.593 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 22 04:00:03.593 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 22 04:00:03.594 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 22 04:00:03.594 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 22 04:00:03.594 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 22 04:00:03.597 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 22 04:00:03.597 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 22 04:00:03.597 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 22 04:00:03.597 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 22 04:00:03.597 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 171290
+Mar 22 04:00:03.598 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.598 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 22 04:00:03.598 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.599 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 22 04:00:03.599 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 22 04:00:03.599 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 22 04:00:03.599 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 22 04:00:03.599 gedsborc1 pmd[8036:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 22 04:00:03.705 gedsborc1 pmd[8036:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 22 04:00:03.804 gedsborc1 pmd[8036:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 22 04:00:03.805 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [41086] cb [41086] registered
+Mar 22 04:00:05.376 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 22 04:00:33.666 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [storage] port [41082] cb [41082] registered
+Mar 22 04:10:01.475 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 22 04:10:02.942 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [41350] cb [41350] registered
+Mar 22 04:30:01.371 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [41936] cb [41936] registered
+Mar 22 06:30:13.416 gedsborc1 pmd[8036:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 22 06:37:36.506 gedsborc1 pmd[8036:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 22 06:45:01.845 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [46953] cb [46953] registered
+Mar 22 07:00:03.896 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [rmp] port [47606] cb [47606] registered
+Mar 22 07:00:04.173 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [liffef] port [47609] cb [47609] registered
+Mar 22 07:00:05.914 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [liffee] port [47618] cb [47618] registered
+Mar 22 07:30:01.926 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [euronext] port [49830] cb [49830] registered
+Mar 22 07:35:01.239 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [hsed] port [50265] cb [50265] registered
+Mar 22 07:50:02.746 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [eurexv] port [51778] cb [51778] registered
+Mar 22 07:55:01.665 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [xetra65] port [52364] cb [52364] registered
+Mar 22 08:00:08.489 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [52894] cb [52894] registered
+Mar 22 08:30:02.073 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [56104] cb [56104] registered
+Mar 22 18:00:01.200 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [41936] cb [41936] removed
+Mar 22 19:00:36.574 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [euronext] port [49830] cb [49830] removed
+Mar 22 21:00:03.555 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [56104] cb [56104] removed
+Mar 22 21:00:04.087 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [47618] cb [47618] removed
+Mar 22 21:00:04.693 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [47609] cb [47609] removed
+Mar 22 21:00:15.694 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [liffee] port [47618] cb [47618] registered
+Mar 22 22:00:15.442 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [46953] cb [46953] removed
+Mar 22 22:00:21.192 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [52894] cb [52894] removed
+Mar 22 22:00:24.132 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [52894] cb [52894] registered
+Mar 22 23:00:02.648 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [47606] cb [47606] removed
+Mar 22 23:50:04.164 gedsborc1 pmd[8036:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [41086] cb [41086] removed
+Mar 22 23:50:04.709 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 22 23:50:04.710 gedsborc1 pmd[8036:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [41350] cb [41350] removed
+Mar 22 23:50:04.846 gedsborc1 pmd[8036:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 22 23:50:04.846 gedsborc1 pmd[8036:t@5    :l@5    ]/info:  Termination done
+Mar 23 04:00:03.634 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 23 04:00:03.635 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 23 04:00:03.636 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 23 04:00:03.636 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 23 04:00:03.636 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 23 04:00:03.637 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 23 04:00:03.637 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 23 04:00:03.638 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 23 04:00:03.638 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 23 04:00:03.639 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 23 04:00:03.639 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 23 04:00:03.641 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 23 04:00:03.642 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 23 04:00:03.642 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 23 04:00:03.642 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 23 04:00:03.642 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 164192
+Mar 23 04:00:03.643 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.643 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 23 04:00:03.643 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.644 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 23 04:00:03.644 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 23 04:00:03.644 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 23 04:00:03.644 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 23 04:00:03.644 gedsborc1 pmd[13004:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 23 04:00:03.989 gedsborc1 pmd[13004:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 23 04:00:03.990 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [32771] cb [32771] registered
+Mar 23 04:00:04.028 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [32770] cb [32770] registered
+Mar 23 04:00:04.040 gedsborc1 pmd[13004:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 23 04:00:05.277 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 23 04:10:01.696 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 23 04:10:03.310 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [32930] cb [32930] registered
+Mar 23 04:30:01.593 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [33281] cb [33281] registered
+Mar 23 04:47:04.897 gedsborc1 pmd[13004:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 23 06:24:25.806 gedsborc1 pmd[13004:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 23 06:45:01.399 gedsborc1 pmd[13004:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [36713] cb [36713] registered
+Mar 23 07:00:03.529 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [37185] cb [37185] registered
+Mar 23 07:00:03.562 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [37186] cb [37186] registered
+Mar 23 07:00:03.973 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [37191] cb [37191] registered
+Mar 23 07:30:02.223 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [39058] cb [39058] registered
+Mar 23 07:35:01.183 gedsborc1 pmd[13004:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [hsed] port [39432] cb [39432] registered
+Mar 23 07:50:02.616 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [40768] cb [40768] registered
+Mar 23 07:55:01.860 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [41284] cb [41284] registered
+Mar 23 08:00:10.167 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [41767] cb [41767] registered
+Mar 23 08:30:01.100 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [44613] cb [44613] registered
+Mar 23 18:00:02.223 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [33281] cb [33281] removed
+Mar 23 19:00:36.920 gedsborc1 pmd[13004:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [39058] cb [39058] removed
+Mar 23 21:00:02.911 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [37185] cb [37185] removed
+Mar 23 21:00:03.657 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [44613] cb [44613] removed
+Mar 23 21:00:03.795 gedsborc1 pmd[13004:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [37186] cb [37186] removed
+Mar 23 21:00:13.991 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [37185] cb [37185] registered
+Mar 23 22:00:16.348 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [36713] cb [36713] removed
+Mar 23 22:00:30.140 gedsborc1 pmd[13004:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [41767] cb [41767] removed
+Mar 23 23:00:01.122 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [37191] cb [37191] removed
+Mar 23 23:50:03.871 gedsborc1 pmd[13004:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [32771] cb [32771] removed
+Mar 23 23:50:04.175 gedsborc1 pmd[13004:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 23 23:50:04.175 gedsborc1 pmd[13004:t@5    :l@5    ]/info:  Termination done
+Mar 24 04:00:03.903 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 24 04:00:03.904 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 24 04:00:03.904 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 24 04:00:03.904 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 24 04:00:03.905 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 24 04:00:03.906 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 24 04:00:03.906 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 24 04:00:03.906 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 24 04:00:03.907 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 24 04:00:03.907 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 24 04:00:03.908 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 24 04:00:03.910 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 24 04:00:03.910 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 24 04:00:03.910 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 24 04:00:03.911 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 24 04:00:03.911 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 167741
+Mar 24 04:00:03.911 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 24 04:00:03.911 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 24 04:00:03.912 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 24 04:00:03.912 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 24 04:00:03.912 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 24 04:00:03.912 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 24 04:00:03.912 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 24 04:00:03.913 gedsborc1 pmd[16128:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 24 04:00:04.044 gedsborc1 pmd[16128:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 24 04:00:04.045 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [55185] cb [55185] registered
+Mar 24 04:00:04.089 gedsborc1 pmd[16128:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 24 04:00:05.066 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 24 04:00:33.712 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [55182] cb [55182] registered
+Mar 24 04:10:01.698 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 24 04:11:15.531 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [55355] cb [55355] registered
+Mar 24 04:30:01.663 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [55691] cb [55691] registered
+Mar 24 06:20:01.790 gedsborc1 pmd[16128:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 24 06:45:02.501 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [59116] cb [59116] registered
+Mar 24 07:00:04.328 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [59598] cb [59598] registered
+Mar 24 07:00:04.747 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [59601] cb [59601] registered
+Mar 24 07:00:05.162 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [59604] cb [59604] registered
+Mar 24 07:28:35.321 gedsborc1 pmd[16128:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 24 07:30:02.239 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [61466] cb [61466] registered
+Mar 24 07:35:03.402 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [61837] cb [61837] registered
+Mar 24 07:50:02.713 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [63179] cb [63179] registered
+Mar 24 07:55:01.953 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [63746] cb [63746] registered
+Mar 24 08:00:12.139 gedsborc1 pmd[16128:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [64292] cb [64292] registered
+Mar 24 08:30:02.084 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [34392] cb [34392] registered
+Mar 24 18:00:01.381 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [55691] cb [55691] removed
+Mar 24 19:00:36.989 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [euronext] port [61466] cb [61466] removed
+Mar 24 21:00:03.131 gedsborc1 pmd[16128:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [34392] cb [34392] removed
+Mar 24 21:00:03.339 gedsborc1 pmd[16128:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [59598] cb [59598] removed
+Mar 24 21:00:03.939 gedsborc1 pmd[16128:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [59601] cb [59601] removed
+Mar 24 21:00:14.699 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [59598] cb [59598] registered
+Mar 24 22:00:17.262 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [59116] cb [59116] removed
+Mar 24 22:00:26.197 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [64292] cb [64292] removed
+Mar 24 22:00:28.354 gedsborc1 pmd[16128:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [64292] cb [64292] registered
+Mar 24 23:00:01.900 gedsborc1 pmd[16128:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [59604] cb [59604] removed
+Mar 24 23:50:04.012 gedsborc1 pmd[16128:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 24 23:50:04.013 gedsborc1 pmd[16128:t@5    :l@5    ]/info:  Termination done
+Mar 25 04:00:03.743 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 25 04:00:03.744 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 25 04:00:03.750 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 25 04:00:03.750 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 25 04:00:03.751 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 25 04:00:03.761 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 25 04:00:03.762 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 25 04:00:03.762 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 25 04:00:03.762 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 25 04:00:03.763 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 25 04:00:03.763 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 25 04:00:03.765 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 25 04:00:03.765 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 25 04:00:03.766 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 25 04:00:03.766 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 25 04:00:03.766 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 155555
+Mar 25 04:00:03.767 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.767 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 25 04:00:03.768 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.768 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 25 04:00:03.768 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 25 04:00:03.768 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 25 04:00:03.768 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 25 04:00:03.769 gedsborc1 pmd[17801:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 25 04:00:03.946 gedsborc1 pmd[17801:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 25 04:00:03.951 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [42707] cb [42707] registered
+Mar 25 04:00:03.965 gedsborc1 pmd[17801:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 25 04:00:05.973 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 25 04:00:33.540 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [42702] cb [42702] registered
+Mar 25 04:10:01.303 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 25 04:10:02.992 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [42851] cb [42851] registered
+Mar 25 04:30:01.227 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [43208] cb [43208] registered
+Mar 25 06:45:01.758 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [46637] cb [46637] registered
+Mar 25 06:45:39.518 gedsborc1 pmd[17801:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 25 07:00:03.685 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [47122] cb [47122] registered
+Mar 25 07:00:04.731 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [47127] cb [47127] registered
+Mar 25 07:00:04.897 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [47130] cb [47130] registered
+Mar 25 07:21:34.006 gedsborc1 pmd[17801:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 25 07:30:02.236 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [48992] cb [48992] registered
+Mar 25 07:35:02.165 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [hsed] port [49360] cb [49360] registered
+Mar 25 07:50:02.048 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [50703] cb [50703] registered
+Mar 25 07:55:01.767 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [xetra65] port [51275] cb [51275] registered
+Mar 25 08:00:09.386 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [51805] cb [51805] registered
+Mar 25 08:30:01.762 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [54667] cb [54667] registered
+Mar 25 18:00:02.043 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [43208] cb [43208] removed
+Mar 25 19:00:35.879 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [euronext] port [48992] cb [48992] removed
+Mar 25 21:00:03.288 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [54667] cb [54667] removed
+Mar 25 21:00:03.458 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [47130] cb [47130] removed
+Mar 25 21:00:04.090 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [47122] cb [47122] removed
+Mar 25 21:00:13.908 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [47122] cb [47122] registered
+Mar 25 22:00:15.635 gedsborc1 pmd[17801:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [46637] cb [46637] removed
+Mar 25 22:00:26.108 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [51805] cb [51805] removed
+Mar 25 23:00:01.952 gedsborc1 pmd[17801:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [47127] cb [47127] removed
+Mar 25 23:50:04.354 gedsborc1 pmd[17801:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 25 23:50:04.354 gedsborc1 pmd[17801:t@5    :l@5    ]/info:  Termination done
+Mar 26 04:00:04.104 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 26 04:00:04.106 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 26 04:00:04.106 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 26 04:00:04.106 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 26 04:00:04.107 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 26 04:00:04.107 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 26 04:00:04.108 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 26 04:00:04.108 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 26 04:00:04.109 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 26 04:00:04.109 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 26 04:00:04.110 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 26 04:00:04.112 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 26 04:00:04.112 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 26 04:00:04.113 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 26 04:00:04.113 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 26 04:00:04.113 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 147184
+Mar 26 04:00:04.113 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.114 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 26 04:00:04.114 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.114 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 26 04:00:04.114 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 26 04:00:04.114 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 26 04:00:04.115 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 26 04:00:04.115 gedsborc1 pmd[21091:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 26 04:00:04.252 gedsborc1 pmd[21091:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 26 04:00:04.257 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [63591] cb [63591] registered
+Mar 26 04:00:04.398 gedsborc1 pmd[21091:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 26 04:00:05.346 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 26 04:00:33.644 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [63586] cb [63586] registered
+Mar 26 04:10:01.874 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 26 04:10:03.370 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [63736] cb [63736] registered
+Mar 26 04:30:01.818 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [64095] cb [64095] registered
+Mar 26 06:15:48.864 gedsborc1 pmd[21091:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 26 06:45:01.590 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [34757] cb [34757] registered
+Mar 26 06:53:34.822 gedsborc1 pmd[21091:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 26 07:00:03.276 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [35236] cb [35236] registered
+Mar 26 07:00:04.274 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [35241] cb [35241] registered
+Mar 26 07:00:04.545 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [35248] cb [35248] registered
+Mar 26 07:30:02.487 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [euronext] port [37108] cb [37108] registered
+Mar 26 07:35:02.060 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [37477] cb [37477] registered
+Mar 26 07:50:02.702 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [eurexv] port [38821] cb [38821] registered
+Mar 26 07:55:01.819 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [xetra65] port [39338] cb [39338] registered
+Mar 26 08:00:09.732 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [39814] cb [39814] registered
+Mar 26 08:30:01.890 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [42668] cb [42668] registered
+Mar 26 18:00:02.117 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [64095] cb [64095] removed
+Mar 26 19:00:37.498 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [euronext] port [37108] cb [37108] removed
+Mar 26 21:00:04.133 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [35236] cb [35236] removed
+Mar 26 21:00:04.214 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [42668] cb [42668] removed
+Mar 26 21:00:05.076 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [35248] cb [35248] removed
+Mar 26 21:00:13.562 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [35236] cb [35236] registered
+Mar 26 22:00:17.688 gedsborc1 pmd[21091:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [34757] cb [34757] removed
+Mar 26 22:00:28.173 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [39814] cb [39814] removed
+Mar 26 23:00:01.719 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [35241] cb [35241] removed
+Mar 26 23:50:03.029 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [63586] cb [63586] removed
+Mar 26 23:50:03.259 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 26 23:50:03.259 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [63736] cb [63736] removed
+Mar 26 23:50:04.910 gedsborc1 pmd[21091:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [storage] port [63591] cb [63591] removed
+Mar 26 23:50:04.977 gedsborc1 pmd[21091:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 26 23:50:04.977 gedsborc1 pmd[21091:t@5    :l@5    ]/info:  Termination done
+Mar 27 04:00:04.402 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 27 04:00:04.403 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 27 04:00:04.404 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 27 04:00:04.404 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 27 04:00:04.404 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 27 04:00:04.405 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 27 04:00:04.405 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 27 04:00:04.406 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 27 04:00:04.406 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 27 04:00:04.406 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 27 04:00:04.407 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 27 04:00:04.409 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 27 04:00:04.409 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 27 04:00:04.410 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 27 04:00:04.410 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 27 04:00:04.410 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 153205
+Mar 27 04:00:04.410 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.411 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 27 04:00:04.411 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.411 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 27 04:00:04.411 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 27 04:00:04.412 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 27 04:00:04.412 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 27 04:00:04.412 gedsborc1 pmd[23822:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 27 04:00:07.678 gedsborc1 pmd[23822:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 27 04:00:07.679 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 27 04:00:34.138 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [51237] cb [51237] registered
+Mar 27 04:00:34.157 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [51238] cb [51238] registered
+Mar 27 04:00:35.191 gedsborc1 pmd[23822:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 27 04:10:01.787 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 27 04:10:03.256 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [51383] cb [51383] registered
+Mar 27 04:16:34.486 gedsborc1 pmd[23822:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 27 07:00:01.675 gedsborc1 pmd[23822:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [54370] cb [54370] registered
+Mar 27 23:00:01.256 gedsborc1 pmd[23822:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [54370] cb [54370] removed
+Mar 27 23:50:03.067 gedsborc1 pmd[23822:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [51237] cb [51237] removed
+Mar 27 23:50:03.251 gedsborc1 pmd[23822:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 27 23:50:03.252 gedsborc1 pmd[23822:t@5    :l@5    ]/info:  Termination done
+Mar 28 04:00:03.942 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 28 04:00:03.943 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 28 04:00:03.943 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 28 04:00:03.944 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 28 04:00:03.944 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 28 04:00:03.944 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 28 04:00:03.945 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 28 04:00:03.945 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 28 04:00:03.946 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 28 04:00:03.946 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 28 04:00:03.947 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 28 04:00:03.949 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 28 04:00:03.949 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 28 04:00:03.950 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 28 04:00:03.950 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 28 04:00:03.950 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 155465
+Mar 28 04:00:03.950 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 28 04:00:03.951 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 28 04:00:03.951 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 28 04:00:03.951 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 28 04:00:03.951 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 28 04:00:03.952 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 28 04:00:03.952 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 28 04:00:03.952 gedsborc1 pmd[17621:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 28 04:00:04.031 gedsborc1 pmd[17621:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 28 04:00:04.039 gedsborc1 pmd[17621:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 28 04:00:04.042 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [44828] cb [44828] registered
+Mar 28 04:00:04.093 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [storage] port [44832] cb [44832] registered
+Mar 28 04:00:05.753 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 28 04:10:01.573 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 28 04:13:03.318 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [45039] cb [45039] registered
+Mar 28 04:48:04.994 gedsborc1 pmd[17621:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 28 23:50:02.950 gedsborc1 pmd[17621:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [44828] cb [44828] removed
+Mar 28 23:50:02.962 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 28 23:50:02.963 gedsborc1 pmd[17621:t@9    :l@9    ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [45039] cb [45039] removed
+Mar 28 23:50:03.514 gedsborc1 pmd[17621:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 28 23:50:03.514 gedsborc1 pmd[17621:t@5    :l@5    ]/info:  Termination done
+Mar 29 04:00:03.544 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 29 04:00:03.546 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 29 04:00:03.546 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 29 04:00:03.546 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 29 04:00:03.546 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 29 04:00:03.547 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 29 04:00:03.547 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 29 04:00:03.548 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 29 04:00:03.548 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 29 04:00:03.548 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 29 04:00:03.550 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 29 04:00:03.552 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 29 04:00:03.553 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 29 04:00:03.554 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 29 04:00:03.554 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 29 04:00:03.554 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 145616
+Mar 29 04:00:03.554 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.555 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 29 04:00:03.555 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.555 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 29 04:00:03.555 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 29 04:00:03.556 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 29 04:00:03.556 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 29 04:00:03.556 gedsborc1 pmd[12513:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 29 04:00:03.793 gedsborc1 pmd[12513:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 29 04:00:03.794 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [32964] cb [32964] registered
+Mar 29 04:00:03.856 gedsborc1 pmd[12513:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 29 04:00:06.737 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 29 04:00:33.183 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [32959] cb [32959] registered
+Mar 29 04:10:01.244 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 29 04:10:02.756 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [33110] cb [33110] registered
+Mar 29 04:30:01.187 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [33466] cb [33466] registered
+Mar 29 04:50:00.816 gedsborc1 pmd[12513:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 29 06:28:33.771 gedsborc1 pmd[12513:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 29 06:45:01.464 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [36871] cb [36871] registered
+Mar 29 07:00:02.904 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [37348] cb [37348] registered
+Mar 29 07:00:03.934 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [liffef] port [37355] cb [37355] registered
+Mar 29 07:00:04.229 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [rmp] port [37359] cb [37359] registered
+Mar 29 07:30:01.485 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [39218] cb [39218] registered
+Mar 29 07:35:01.478 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [39578] cb [39578] registered
+Mar 29 07:50:02.532 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [40912] cb [40912] registered
+Mar 29 07:55:01.102 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [41491] cb [41491] registered
+Mar 29 08:00:10.097 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [42028] cb [42028] registered
+Mar 29 08:30:01.748 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [44886] cb [44886] registered
+Mar 29 12:14:08.388 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [44886] cb [44886] removed
+Mar 29 18:00:01.424 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [33466] cb [33466] removed
+Mar 29 21:00:04.254 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [37348] cb [37348] removed
+Mar 29 21:00:04.377 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [37355] cb [37355] removed
+Mar 29 21:00:13.636 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [37348] cb [37348] registered
+Mar 29 22:00:15.963 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [36871] cb [36871] removed
+Mar 29 22:00:25.153 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [42028] cb [42028] removed
+Mar 29 22:00:26.453 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [42028] cb [42028] registered
+Mar 29 23:00:01.759 gedsborc1 pmd[12513:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [37359] cb [37359] removed
+Mar 29 23:50:03.724 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [32959] cb [32959] removed
+Mar 29 23:50:03.849 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 29 23:50:03.849 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [33110] cb [33110] removed
+Mar 29 23:50:05.182 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] removed
+Mar 29 23:50:06.784 gedsborc1 pmd[12513:t@11   :l@11   ]/info:  PM_UNREGISTER/UDP: server [storage] port [32964] cb [32964] removed
+Mar 29 23:50:06.898 gedsborc1 pmd[12513:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 29 23:50:06.899 gedsborc1 pmd[12513:t@5    :l@5    ]/info:  Termination done
+Mar 30 04:00:04.205 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 30 04:00:04.207 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 30 04:00:04.207 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 30 04:00:04.207 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 30 04:00:04.207 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 30 04:00:04.208 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 30 04:00:04.209 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 30 04:00:04.209 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 30 04:00:04.209 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 30 04:00:04.210 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 30 04:00:04.210 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 30 04:00:04.212 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 30 04:00:04.213 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 30 04:00:04.213 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 30 04:00:04.213 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 30 04:00:04.213 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 150106
+Mar 30 04:00:04.214 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.214 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 30 04:00:04.214 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.215 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 30 04:00:04.215 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 30 04:00:04.215 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 30 04:00:04.215 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 30 04:00:04.215 gedsborc1 pmd[13982:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 30 04:00:04.545 gedsborc1 pmd[13982:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 30 04:00:04.546 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [49450] cb [49450] registered
+Mar 30 04:00:04.574 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [49451] cb [49451] registered
+Mar 30 04:00:04.603 gedsborc1 pmd[13982:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 30 04:00:05.979 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 30 04:10:01.984 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 30 04:11:33.631 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [49628] cb [49628] registered
+Mar 30 04:30:01.922 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [49959] cb [49959] registered
+Mar 30 05:46:06.494 gedsborc1 pmd[13982:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 30 06:09:47.407 gedsborc1 pmd[13982:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 30 06:45:01.344 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [53380] cb [53380] registered
+Mar 30 07:00:02.548 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [53858] cb [53858] registered
+Mar 30 07:00:02.943 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [53863] cb [53863] registered
+Mar 30 07:00:05.858 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [53872] cb [53872] registered
+Mar 30 07:30:01.898 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [55727] cb [55727] registered
+Mar 30 07:35:02.134 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [56086] cb [56086] registered
+Mar 30 07:50:02.815 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [eurexv] port [57418] cb [57418] registered
+Mar 30 07:55:01.963 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [57949] cb [57949] registered
+Mar 30 08:00:11.361 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [58428] cb [58428] registered
+Mar 30 08:30:02.008 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [61272] cb [61272] registered
+Mar 30 15:08:05.460 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [34908] cb [34908] registered
+Mar 30 18:00:02.060 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [49959] cb [49959] removed
+Mar 30 19:00:04.336 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [eurexv] port [34908] cb [34908] removed
+Mar 30 19:00:37.016 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [euronext] port [55727] cb [55727] removed
+Mar 30 21:00:03.570 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [61272] cb [61272] removed
+Mar 30 21:00:04.425 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [53863] cb [53863] removed
+Mar 30 21:00:04.633 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [53858] cb [53858] removed
+Mar 30 21:00:13.418 gedsborc1 pmd[13982:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [53863] cb [53863] registered
+Mar 30 22:00:19.606 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [53380] cb [53380] removed
+Mar 30 22:00:30.150 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [58428] cb [58428] removed
+Mar 30 23:00:01.250 gedsborc1 pmd[13982:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [53872] cb [53872] removed
+Mar 30 23:50:04.437 gedsborc1 pmd[13982:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 30 23:50:04.437 gedsborc1 pmd[13982:t@5    :l@5    ]/info:  Termination done
+Mar 31 04:00:04.322 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 31 04:00:04.323 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 31 04:00:04.326 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 31 04:00:04.326 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 04:00:04.326 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 04:00:04.343 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 04:00:04.360 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 04:00:04.382 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 04:00:04.403 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 04:00:04.435 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 04:00:04.435 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 04:00:04.440 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 31 04:00:04.440 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 04:00:04.440 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 04:00:04.441 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 04:00:04.441 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154773
+Mar 31 04:00:04.441 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.441 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 04:00:04.442 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.442 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 04:00:04.442 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 04:00:04.442 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 04:00:04.443 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 04:00:04.443 gedsborc1 pmd[11323:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 04:00:04.510 gedsborc1 pmd[11323:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 31 04:00:04.512 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [39601] cb [39601] registered
+Mar 31 04:00:04.512 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [39600] cb [39600] registered
+Mar 31 04:00:04.588 gedsborc1 pmd[11323:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 31 04:00:07.157 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 31 04:07:34.669 gedsborc1 pmd[11323:t@7    :l@7    ]/info:  Creating new udp_handler
+Mar 31 04:10:01.804 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 31 04:10:57.885 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [lomm_api] port [39765] cb [39765] registered
+Mar 31 04:30:01.860 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [40105] cb [40105] registered
+Mar 31 04:45:46.836 gedsborc1 pmd[11323:t@6    :l@6    ]/info:  Creating new tcp_handler
+Mar 31 06:45:01.816 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [43514] cb [43514] registered
+Mar 31 07:00:03.690 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [43998] cb [43998] registered
+Mar 31 07:00:04.601 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [44003] cb [44003] registered
+Mar 31 07:00:04.767 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [44006] cb [44006] registered
+Mar 31 07:30:02.673 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [45869] cb [45869] registered
+Mar 31 07:35:02.967 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [46226] cb [46226] registered
+Mar 31 07:50:03.014 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [47565] cb [47565] registered
+Mar 31 07:55:01.790 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [48138] cb [48138] registered
+Mar 31 08:00:15.350 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [48686] cb [48686] registered
+Mar 31 08:30:01.544 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [51534] cb [51534] registered
+Mar 31 10:34:48.590 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [51534] cb [51534] removed
+Mar 31 13:23:19.569 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [46567] cb [46567] registered
+Mar 31 16:57:09.331 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [43998] cb [43998] removed
+Mar 31 16:57:09.522 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [44006] cb [44006] removed
+Mar 31 16:57:10.055 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [eurexv] port [46567] cb [46567] removed
+Mar 31 16:57:10.611 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [44003] cb [44003] removed
+Mar 31 16:57:10.797 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Mar 31 16:57:10.965 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [40105] cb [40105] removed
+Mar 31 16:57:11.704 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [43998] cb [43998] registered
+Mar 31 16:57:11.745 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [39765] cb [39765] removed
+Mar 31 16:57:14.565 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [43514] cb [43514] removed
+Mar 31 16:57:22.852 gedsborc1 pmd[11323:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [storage] port [39600] cb [39600] removed
+Mar 31 16:57:28.131 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] removed
+Mar 31 16:57:33.381 gedsborc1 pmd[11323:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [39601] cb [39601] removed
+Mar 31 16:57:38.709 gedsborc1 pmd[11323:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 31 16:57:38.709 gedsborc1 pmd[11323:t@5    :l@5    ]/info:  Termination done
+Mar 31 16:57:50.130 gedsborc1 pmd[218:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Mar 31 16:57:50.131 gedsborc1 pmd[218:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 31 16:57:50.131 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Mar 31 16:57:50.132 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 16:57:50.132 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 16:57:50.132 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 16:57:50.134 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 16:57:50.134 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 16:57:50.135 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 16:57:50.135 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 16:57:50.136 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 16:57:50.138 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Mar 31 16:57:50.139 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 16:57:50.140 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 16:57:50.140 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 16:57:50.140 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 132917
+Mar 31 16:57:50.140 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.141 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 16:57:50.141 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.141 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 16:57:50.141 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 16:57:50.142 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 16:57:50.142 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 16:57:50.142 gedsborc1 pmd[218:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 16:57:50.658 gedsborc1 pmd[218:t@7    :l@8    ]/info:  Creating new udp_handler
+Mar 31 16:57:50.659 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [storage] port [34782] cb [34782] registered
+Mar 31 16:57:50.840 gedsborc1 pmd[218:t@6    :l@7    ]/info:  Creating new tcp_handler
+Mar 31 16:57:51.236 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [liffee] port [34787] cb [34787] registered
+Mar 31 16:57:51.357 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [34790] cb [34790] registered
+Mar 31 16:57:51.577 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [sfc] port [34793] cb [34793] registered
+Mar 31 16:57:52.406 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [34799] cb [34799] registered
+Mar 31 16:57:53.403 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [liffef] port [34803] cb [34803] registered
+Mar 31 16:57:54.104 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [34807] cb [34807] registered
+Mar 31 16:57:54.539 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [hsed] port [34816] cb [34816] registered
+Mar 31 16:57:55.197 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [eurexv] port [34822] cb [34822] registered
+Mar 31 16:57:56.343 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [euronext] port [34842] cb [34842] registered
+Mar 31 16:57:56.878 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [xetra65] port [34846] cb [34846] registered
+Mar 31 16:57:57.577 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [rmp] port [34852] cb [34852] registered
+Mar 31 16:57:57.653 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Mar 31 16:57:57.946 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [34858] cb [34858] registered
+Mar 31 16:58:03.197 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Mar 31 17:04:27.760 gedsborc1 pmd[218:t@7    :l@8    ]/info:  Creating new udp_handler
+Mar 31 17:06:39.466 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [35967] cb [35967] registered
+Mar 31 17:31:20.355 gedsborc1 pmd[218:t@6    :l@7    ]/info:  Creating new tcp_handler
+Mar 31 18:00:01.731 gedsborc1 pmd[218:t@10   :l@11   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [34858] cb [34858] removed
+Mar 31 19:00:04.059 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [eurexv] port [34822] cb [34822] removed
+Mar 31 19:00:37.359 gedsborc1 pmd[218:t@10   :l@11   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [34842] cb [34842] removed
+Mar 31 21:00:03.826 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [34790] cb [34790] removed
+Mar 31 21:00:04.011 gedsborc1 pmd[218:t@10   :l@11   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [34787] cb [34787] removed
+Mar 31 21:00:04.252 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [34803] cb [34803] removed
+Mar 31 22:00:14.330 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [34807] cb [34807] removed
+Mar 31 22:00:27.138 gedsborc1 pmd[218:t@8    :l@9    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [34793] cb [34793] removed
+Mar 31 22:00:27.280 gedsborc1 pmd[218:t@10   :l@11   ]/info:  PM_REGISTER/UDP: server [sfc] port [34793] cb [34793] registered
+Mar 31 23:00:02.045 gedsborc1 pmd[218:t@10   :l@11   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [34852] cb [34852] removed
+Mar 31 23:50:03.946 gedsborc1 pmd[218:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 31 23:50:03.946 gedsborc1 pmd[218:t@5    :l@5    ]/info:  Termination done
+Apr  1 04:00:03.871 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  1 04:00:03.872 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  1 04:00:03.872 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  1 04:00:03.873 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  1 04:00:03.873 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  1 04:00:03.874 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  1 04:00:03.874 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  1 04:00:03.874 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  1 04:00:03.875 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  1 04:00:03.875 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  1 04:00:03.875 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  1 04:00:03.878 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  1 04:00:03.878 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  1 04:00:03.879 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  1 04:00:03.879 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  1 04:00:03.879 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 147362
+Apr  1 04:00:03.879 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.880 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  1 04:00:03.880 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.880 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  1 04:00:03.880 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  1 04:00:03.881 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  1 04:00:03.881 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  1 04:00:03.881 gedsborc1 pmd[21698:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  1 04:00:03.931 gedsborc1 pmd[21698:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  1 04:00:03.933 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [34967] cb [34967] registered
+Apr  1 04:00:03.977 gedsborc1 pmd[21698:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  1 04:00:05.599 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  1 04:00:33.662 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [34965] cb [34965] registered
+Apr  1 04:10:01.259 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  1 04:10:02.820 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [35231] cb [35231] registered
+Apr  1 04:30:01.558 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [35826] cb [35826] registered
+Apr  1 06:45:01.880 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [40846] cb [40846] registered
+Apr  1 07:00:03.998 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [41498] cb [41498] registered
+Apr  1 07:00:05.120 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [41508] cb [41508] registered
+Apr  1 07:00:05.231 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [41507] cb [41507] registered
+Apr  1 07:30:01.929 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [43721] cb [43721] registered
+Apr  1 07:32:04.566 gedsborc1 pmd[21698:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  1 07:35:02.250 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [44142] cb [44142] registered
+Apr  1 07:50:03.734 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [45613] cb [45613] registered
+Apr  1 07:55:01.813 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [46214] cb [46214] registered
+Apr  1 08:00:11.928 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [46768] cb [46768] registered
+Apr  1 08:30:01.750 gedsborc1 pmd[21698:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [49856] cb [49856] registered
+Apr  1 18:00:02.723 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [35826] cb [35826] removed
+Apr  1 21:00:03.105 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [49856] cb [49856] removed
+Apr  1 21:00:03.737 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [41498] cb [41498] removed
+Apr  1 21:00:03.970 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [41507] cb [41507] removed
+Apr  1 21:00:14.260 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [41498] cb [41498] registered
+Apr  1 21:00:17.920 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [41507] cb [41507] registered
+Apr  1 22:00:12.484 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [40846] cb [40846] removed
+Apr  1 22:00:23.177 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [46768] cb [46768] removed
+Apr  1 22:00:28.623 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [46768] cb [46768] registered
+Apr  1 23:00:01.925 gedsborc1 pmd[21698:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [rmp] port [41508] cb [41508] removed
+Apr  1 23:50:04.000 gedsborc1 pmd[21698:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  1 23:50:04.000 gedsborc1 pmd[21698:t@5    :l@5    ]/info:  Termination done
+Apr  2 04:00:03.959 gedsborc1 pmd[731:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  2 04:00:03.960 gedsborc1 pmd[731:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  2 04:00:03.960 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  2 04:00:03.960 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  2 04:00:03.961 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  2 04:00:03.962 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  2 04:00:03.962 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  2 04:00:03.963 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  2 04:00:03.963 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  2 04:00:03.963 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  2 04:00:03.964 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  2 04:00:03.966 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  2 04:00:03.966 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  2 04:00:03.967 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  2 04:00:03.967 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  2 04:00:03.967 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 138319
+Apr  2 04:00:03.967 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.967 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  2 04:00:03.968 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.968 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  2 04:00:03.968 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  2 04:00:03.968 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  2 04:00:03.969 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  2 04:00:03.969 gedsborc1 pmd[731:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  2 04:00:03.995 gedsborc1 pmd[731:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  2 04:00:03.996 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [62279] cb [62279] registered
+Apr  2 04:00:04.059 gedsborc1 pmd[731:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  2 04:00:04.081 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [62282] cb [62282] registered
+Apr  2 04:00:04.723 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  2 04:10:01.411 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  2 04:10:02.912 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [62427] cb [62427] registered
+Apr  2 04:30:01.423 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [62782] cb [62782] registered
+Apr  2 06:45:07.003 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [mlxnet] port [33462] cb [33462] registered
+Apr  2 06:59:37.294 gedsborc1 pmd[731:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  2 07:00:03.808 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [33939] cb [33939] registered
+Apr  2 07:00:03.828 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [33940] cb [33940] registered
+Apr  2 07:00:03.900 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [33941] cb [33941] registered
+Apr  2 07:30:02.484 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [35815] cb [35815] registered
+Apr  2 07:35:03.264 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [36174] cb [36174] registered
+Apr  2 07:50:02.973 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [37505] cb [37505] registered
+Apr  2 07:55:01.094 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [38028] cb [38028] registered
+Apr  2 08:00:07.863 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [38488] cb [38488] registered
+Apr  2 08:30:01.711 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [41302] cb [41302] registered
+Apr  2 18:00:01.448 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [62782] cb [62782] removed
+Apr  2 19:00:35.341 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [35815] cb [35815] removed
+Apr  2 21:00:03.820 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [41302] cb [41302] removed
+Apr  2 21:00:03.944 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [33941] cb [33941] removed
+Apr  2 21:00:04.724 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [33940] cb [33940] removed
+Apr  2 21:00:13.324 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [33940] cb [33940] registered
+Apr  2 21:00:16.334 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffef] port [33941] cb [33941] registered
+Apr  2 22:00:13.022 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [33462] cb [33462] removed
+Apr  2 22:00:27.161 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [38488] cb [38488] removed
+Apr  2 23:00:01.473 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [33939] cb [33939] removed
+Apr  2 23:50:03.964 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [62282] cb [62282] removed
+Apr  2 23:50:04.115 gedsborc1 pmd[731:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Apr  2 23:50:04.117 gedsborc1 pmd[731:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [62427] cb [62427] removed
+Apr  2 23:50:04.520 gedsborc1 pmd[731:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  2 23:50:04.520 gedsborc1 pmd[731:t@5    :l@5    ]/info:  Termination done
+Apr  3 04:00:03.817 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  3 04:00:03.818 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  3 04:00:03.818 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  3 04:00:03.818 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  3 04:00:03.819 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  3 04:00:03.819 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  3 04:00:03.820 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  3 04:00:03.820 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  3 04:00:03.820 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  3 04:00:03.821 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  3 04:00:03.821 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  3 04:00:03.823 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  3 04:00:03.824 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  3 04:00:03.824 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  3 04:00:03.824 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  3 04:00:03.824 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154240
+Apr  3 04:00:03.824 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  3 04:00:03.825 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  3 04:00:03.825 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  3 04:00:03.825 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  3 04:00:03.825 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  3 04:00:03.826 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  3 04:00:03.826 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  3 04:00:03.826 gedsborc1 pmd[5890:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  3 04:00:03.942 gedsborc1 pmd[5890:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  3 04:00:03.943 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [57793] cb [57793] registered
+Apr  3 04:00:03.977 gedsborc1 pmd[5890:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  3 04:00:04.053 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [57796] cb [57796] registered
+Apr  3 04:00:05.979 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  3 04:10:01.322 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  3 04:10:02.820 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [57936] cb [57936] registered
+Apr  3 04:36:34.715 gedsborc1 pmd[5890:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  3 07:00:02.023 gedsborc1 pmd[5890:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [60931] cb [60931] registered
+Apr  3 23:00:01.785 gedsborc1 pmd[5890:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [60931] cb [60931] removed
+Apr  3 23:50:02.230 gedsborc1 pmd[5890:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [57793] cb [57793] removed
+Apr  3 23:50:02.476 gedsborc1 pmd[5890:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] removed
+Apr  3 23:50:02.476 gedsborc1 pmd[5890:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [lomm_api] port [57936] cb [57936] removed
+Apr  3 23:50:02.627 gedsborc1 pmd[5890:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  3 23:50:02.627 gedsborc1 pmd[5890:t@5    :l@5    ]/info:  Termination done
+Apr  4 04:00:03.415 gedsborc1 pmd[668:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  4 04:00:03.416 gedsborc1 pmd[668:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  4 04:00:03.416 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  4 04:00:03.417 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  4 04:00:03.417 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  4 04:00:03.418 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  4 04:00:03.418 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  4 04:00:03.419 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  4 04:00:03.419 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  4 04:00:03.419 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  4 04:00:03.419 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  4 04:00:03.422 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  4 04:00:03.422 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  4 04:00:03.422 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  4 04:00:03.422 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  4 04:00:03.423 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 166165
+Apr  4 04:00:03.423 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  4 04:00:03.423 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  4 04:00:03.423 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  4 04:00:03.424 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  4 04:00:03.424 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  4 04:00:03.424 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  4 04:00:03.424 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  4 04:00:03.424 gedsborc1 pmd[668:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  4 04:00:03.835 gedsborc1 pmd[668:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  4 04:00:03.836 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [51393] cb [51393] registered
+Apr  4 04:00:03.932 gedsborc1 pmd[668:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  4 04:00:04.109 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [51398] cb [51398] registered
+Apr  4 04:00:05.655 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  4 04:10:01.379 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  4 04:10:02.979 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [51536] cb [51536] registered
+Apr  4 08:25:38.468 gedsborc1 pmd[668:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  4 23:50:02.985 gedsborc1 pmd[668:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] removed
+Apr  4 23:50:03.467 gedsborc1 pmd[668:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [51393] cb [51393] removed
+Apr  4 23:50:03.678 gedsborc1 pmd[668:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  4 23:50:03.678 gedsborc1 pmd[668:t@5    :l@5    ]/info:  Termination done
+Apr  5 04:00:03.916 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  5 04:00:03.917 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  5 04:00:03.918 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  5 04:00:03.918 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  5 04:00:03.918 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  5 04:00:03.919 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  5 04:00:03.920 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  5 04:00:03.921 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  5 04:00:03.921 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  5 04:00:03.921 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  5 04:00:03.922 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  5 04:00:03.924 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  5 04:00:03.925 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  5 04:00:03.925 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  5 04:00:03.925 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  5 04:00:03.925 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 153726
+Apr  5 04:00:03.926 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  5 04:00:03.926 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  5 04:00:03.926 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  5 04:00:03.926 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  5 04:00:03.927 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  5 04:00:03.927 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  5 04:00:03.927 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  5 04:00:03.927 gedsborc1 pmd[25329:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  5 04:00:04.171 gedsborc1 pmd[25329:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  5 04:00:04.175 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [39478] cb [39478] registered
+Apr  5 04:00:04.287 gedsborc1 pmd[25329:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  5 04:00:04.916 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  5 04:00:33.477 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [39473] cb [39473] registered
+Apr  5 04:10:01.686 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  5 04:10:03.199 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [39624] cb [39624] registered
+Apr  5 04:30:01.692 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [39980] cb [39980] registered
+Apr  5 06:18:34.039 gedsborc1 pmd[25329:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  5 06:45:01.571 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [43390] cb [43390] registered
+Apr  5 06:45:48.598 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [43390] cb [43390] removed
+Apr  5 07:00:03.358 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [43784] cb [43784] registered
+Apr  5 07:00:03.759 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [43787] cb [43787] registered
+Apr  5 07:00:04.209 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [43794] cb [43794] registered
+Apr  5 07:30:01.773 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [45491] cb [45491] registered
+Apr  5 07:35:02.224 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [45823] cb [45823] registered
+Apr  5 07:50:02.236 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [47068] cb [47068] registered
+Apr  5 07:55:01.537 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [47560] cb [47560] registered
+Apr  5 08:00:06.992 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [47993] cb [47993] registered
+Apr  5 08:30:01.955 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [50645] cb [50645] registered
+Apr  5 18:00:01.614 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [39980] cb [39980] removed
+Apr  5 19:00:35.817 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [45491] cb [45491] removed
+Apr  5 21:00:03.163 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffee] port [43784] cb [43784] removed
+Apr  5 21:00:03.893 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [50645] cb [50645] removed
+Apr  5 21:00:04.746 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [43794] cb [43794] removed
+Apr  5 21:00:11.851 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [43784] cb [43784] registered
+Apr  5 22:00:23.268 gedsborc1 pmd[25329:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [47993] cb [47993] removed
+Apr  5 23:00:02.025 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [43787] cb [43787] removed
+Apr  5 23:50:04.559 gedsborc1 pmd[25329:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [lomm_cds] port [39473] cb [39473] removed
+Apr  5 23:50:04.564 gedsborc1 pmd[25329:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  5 23:50:04.564 gedsborc1 pmd[25329:t@5    :l@5    ]/info:  Termination done
+Apr  6 04:00:04.375 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  6 04:00:04.376 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  6 04:00:04.376 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  6 04:00:04.376 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  6 04:00:04.377 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  6 04:00:04.377 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  6 04:00:04.378 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  6 04:00:04.378 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  6 04:00:04.378 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  6 04:00:04.379 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  6 04:00:04.379 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  6 04:00:04.381 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  6 04:00:04.382 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  6 04:00:04.382 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  6 04:00:04.382 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  6 04:00:04.382 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 154420
+Apr  6 04:00:04.383 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.383 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  6 04:00:04.383 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.384 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  6 04:00:04.384 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  6 04:00:04.384 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  6 04:00:04.384 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  6 04:00:04.384 gedsborc1 pmd[26714:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  6 04:00:04.541 gedsborc1 pmd[26714:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  6 04:00:04.542 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [54355] cb [54355] registered
+Apr  6 04:00:04.642 gedsborc1 pmd[26714:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  6 04:00:06.788 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  6 04:00:34.398 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [54351] cb [54351] registered
+Apr  6 04:10:01.454 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  6 04:10:02.982 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [54495] cb [54495] registered
+Apr  6 04:30:01.580 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [54852] cb [54852] registered
+Apr  6 04:59:05.555 gedsborc1 pmd[26714:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  6 05:43:59.340 gedsborc1 pmd[26714:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  6 06:45:01.827 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [58274] cb [58274] registered
+Apr  6 07:00:04.248 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [58756] cb [58756] registered
+Apr  6 07:00:05.790 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [58767] cb [58767] registered
+Apr  6 07:00:06.165 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [58774] cb [58774] registered
+Apr  6 07:30:01.788 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [euronext] port [60637] cb [60637] registered
+Apr  6 07:35:02.174 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [61000] cb [61000] registered
+Apr  6 07:50:03.356 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [62332] cb [62332] registered
+Apr  6 07:55:01.856 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [62844] cb [62844] registered
+Apr  6 08:00:07.202 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [63307] cb [63307] registered
+Apr  6 08:30:01.900 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [33368] cb [33368] registered
+Apr  6 18:00:02.135 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [54852] cb [54852] removed
+Apr  6 19:00:36.422 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [euronext] port [60637] cb [60637] removed
+Apr  6 21:00:02.843 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [33368] cb [33368] removed
+Apr  6 21:00:03.387 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [58756] cb [58756] removed
+Apr  6 21:00:03.970 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffef] port [58774] cb [58774] removed
+Apr  6 21:00:13.380 gedsborc1 pmd[26714:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffee] port [58756] cb [58756] registered
+Apr  6 22:00:15.145 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [58274] cb [58274] removed
+Apr  6 22:00:19.468 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [sfc] port [63307] cb [63307] removed
+Apr  6 22:00:22.175 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [63307] cb [63307] registered
+Apr  6 23:00:01.883 gedsborc1 pmd[26714:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [58767] cb [58767] removed
+Apr  6 23:50:04.179 gedsborc1 pmd[26714:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  6 23:50:04.180 gedsborc1 pmd[26714:t@5    :l@5    ]/info:  Termination done
+Apr  7 04:00:05.175 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  7 04:00:05.176 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  7 04:00:05.176 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  7 04:00:05.176 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  7 04:00:05.177 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  7 04:00:05.177 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  7 04:00:05.178 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  7 04:00:05.178 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  7 04:00:05.179 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  7 04:00:05.179 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  7 04:00:05.180 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  7 04:00:05.182 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  7 04:00:05.182 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  7 04:00:05.183 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  7 04:00:05.183 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  7 04:00:05.183 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 148674
+Apr  7 04:00:05.184 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  7 04:00:05.184 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  7 04:00:05.184 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  7 04:00:05.184 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  7 04:00:05.185 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  7 04:00:05.185 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  7 04:00:05.185 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  7 04:00:05.185 gedsborc1 pmd[26278:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  7 04:00:09.047 gedsborc1 pmd[26278:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  7 04:00:09.049 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  7 04:00:34.563 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [42952] cb [42952] registered
+Apr  7 04:00:34.632 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [42953] cb [42953] registered
+Apr  7 04:00:35.636 gedsborc1 pmd[26278:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  7 04:10:02.002 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  7 04:11:52.079 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [43136] cb [43136] registered
+Apr  7 04:30:02.131 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [43462] cb [43462] registered
+Apr  7 04:32:02.177 gedsborc1 pmd[26278:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  7 05:06:19.111 gedsborc1 pmd[26278:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  7 06:45:01.978 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [46901] cb [46901] registered
+Apr  7 07:00:04.483 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [rmp] port [47373] cb [47373] registered
+Apr  7 07:00:04.495 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [47374] cb [47374] registered
+Apr  7 07:00:05.046 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [47384] cb [47384] registered
+Apr  7 07:30:02.118 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [49261] cb [49261] registered
+Apr  7 07:35:02.584 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [49623] cb [49623] registered
+Apr  7 07:50:03.769 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [eurexv] port [50967] cb [50967] registered
+Apr  7 07:55:01.488 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [xetra65] port [51478] cb [51478] registered
+Apr  7 08:00:08.193 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sfc] port [51948] cb [51948] registered
+Apr  7 08:30:01.955 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [54767] cb [54767] registered
+Apr  7 18:00:01.677 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sets_cds] port [43462] cb [43462] removed
+Apr  7 18:52:13.728 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [orc2gedsorc9] port [54767] cb [54767] removed
+Apr  7 21:00:04.317 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [liffee] port [47374] cb [47374] removed
+Apr  7 21:00:04.700 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [liffef] port [47384] cb [47384] removed
+Apr  7 21:00:13.539 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [47374] cb [47374] registered
+Apr  7 22:00:15.142 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [mlxnet] port [46901] cb [46901] removed
+Apr  7 22:00:24.254 gedsborc1 pmd[26278:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [sfc] port [51948] cb [51948] removed
+Apr  7 23:00:02.314 gedsborc1 pmd[26278:t@8    :l@8    ]/info:  PM_UNREGISTER/UDP: server [rmp] port [47373] cb [47373] removed
+Apr  7 23:50:03.779 gedsborc1 pmd[26278:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Apr  7 23:50:03.779 gedsborc1 pmd[26278:t@5    :l@5    ]/info:  Termination done
+Apr  8 04:00:04.438 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  PM version 2.6.0 2002-08-17
+Apr  8 04:00:04.439 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  8 04:00:04.439 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- /usr/rat/bin/pmd -l /usr/rat/log/pmd
+Apr  8 04:00:04.439 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  8 04:00:04.440 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  8 04:00:04.440 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  8 04:00:04.441 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  8 04:00:04.441 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  8 04:00:04.442 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  8 04:00:04.442 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  8 04:00:04.443 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  8 04:00:04.445 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcserver/rat3.2.9/etc
+Apr  8 04:00:04.445 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  8 04:00:04.446 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  8 04:00:04.446 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  8 04:00:04.446 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 144608
+Apr  8 04:00:04.446 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.447 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  8 04:00:04.447 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.447 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  8 04:00:04.447 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  8 04:00:04.448 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  8 04:00:04.448 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  8 04:00:04.448 gedsborc1 pmd[27094:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  8 04:00:07.518 gedsborc1 pmd[27094:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  8 04:00:07.519 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [em_lomm_em] port [10001] cb [10001] registered
+Apr  8 04:00:33.949 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_cds] port [62140] cb [62140] registered
+Apr  8 04:00:34.238 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [storage] port [62142] cb [62142] registered
+Apr  8 04:00:35.030 gedsborc1 pmd[27094:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  8 04:10:01.100 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api_public] port [8980] cb [8980] registered
+Apr  8 04:10:02.617 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [lomm_api] port [62282] cb [62282] registered
+Apr  8 04:30:01.945 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [sets_cds] port [62640] cb [62640] registered
+Apr  8 05:58:03.244 gedsborc1 pmd[27094:t@7    :l@7    ]/info:  Creating new udp_handler
+Apr  8 06:45:01.187 gedsborc1 pmd[27094:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [mlxnet] port [33321] cb [33321] registered
+Apr  8 07:00:03.668 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [liffee] port [33801] cb [33801] registered
+Apr  8 07:00:03.750 gedsborc1 pmd[27094:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [liffef] port [33804] cb [33804] registered
+Apr  8 07:00:04.170 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [rmp] port [33807] cb [33807] registered
+Apr  8 07:30:01.894 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [euronext] port [35670] cb [35670] registered
+Apr  8 07:35:02.001 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [hsed] port [36030] cb [36030] registered
+Apr  8 07:48:13.121 gedsborc1 pmd[27094:t@6    :l@6    ]/info:  Creating new tcp_handler
+Apr  8 07:50:02.971 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [eurexv] port [37368] cb [37368] registered
+Apr  8 07:55:01.681 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [xetra65] port [37903] cb [37903] registered
+Apr  8 08:00:07.476 gedsborc1 pmd[27094:t@10   :l@10   ]/info:  PM_REGISTER/UDP: server [sfc] port [38406] cb [38406] registered
+Apr  8 08:30:01.043 gedsborc1 pmd[27094:t@8    :l@8    ]/info:  PM_REGISTER/UDP: server [orc2gedsorc9] port [41218] cb [41218] registered
+Apr  8 08:40:02.053 gedsborc1 pmd[24726:t@10   :l@10   ]/info:  PM_UNREGISTER/UDP: server [em_lomm_em] port [36431] cb [36431] removed

@@ -1,0 +1,14 @@
+Node,Name,StorageEnabled,PartitionsUnbalanced,PartitionsVulnerable,ThreadAbandonedCount,TaskBacklog,Role,MemberName,Host,
+<!>StautsHA,NODE-SAFE
+<!>Cluster,ITRS:Project Management
+<!>Connection,192.168.10.20:5003
+1,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+5,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+2,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+4,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+7,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+8,DistributedCache,true,0,257,0,0,CacheServer,n/a,/192.168.10.20,
+3,DistributedCache,false,0,257,0,0,ProxyServer,n/a,/192.168.10.20,
+6,DistributedCache,false,0,257,0,0,JMXNode,n/a,/192.168.10.20,
+9,DistributedCache,false,0,257,0,0,CmdLine,n/a,/192.168.10.20,
+10,DistributedCache,false,0,257,0,0,CmdLine,n/a,/192.168.10.73,

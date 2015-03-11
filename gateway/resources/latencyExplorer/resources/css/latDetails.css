@@ -1,0 +1,66 @@
+/* ===  Trend Report Specific Css ==== */
+
+/* =========================*/
+/* Graph Visualiser         */
+/* =========================*/
+#lat-scatter { margin-top: 1em; }
+#lat-scatter img { text-align: left; /* width: 900px; height: 770px; */ }
+#lat-scatter div.legend { float: left; border: solid black 1px; margin-left: 40px;  }
+#lat-scatter div.legend div.entry { float: left; border: solid white 3px;}
+#lat-scatter div.legend div.entry div.col { width: 14px; height: 14px; float: left; margin-right: 4px;}
+#lat-scatter div.legend div.entry div.label { float: left; margin-right: 14px; }
+#lat-scatter div.legend-end { clear:both; width: 90px; height: 1px; border-width: 0; margin: 0; padding: 0; font-size: 1px;}
+
+/* =========================*/
+/* Summary Table            */
+/* =========================*/
+#lat-details {  }
+#lat-details h1 { text-align: left; margin-left: 0em; margin-top: 6em;}
+
+/* Common Values/Value Sub-Table Settings */
+#lat-details table.data
+{
+        margin: 0; 
+        padding: 0;
+        margin-top: 20px;
+        border:0px solid #000;
+        font-size: 10pt;
+        border-collapse: collapse;
+}
+
+#lat-details table.data td,
+#lat-details table.data th,
+#lat-details table.data th
+{
+  border-width: 0px; 
+  height: 24px;
+  border: 0px solid #000;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#lat-details table.data th
+{
+  border-bottom: 1px solid #fff; 
+  background:#0033cc; 
+  color: #fff;
+  font-size: 7pt;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#lat-details table.data td.dblCell { text-align: right; }
+/* Even Odd Colouring */
+
+#lat-details table.data tr.even td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#lat-details table.data tr td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+
+#lat-details table.data tr.e1.e2 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#lat-details table.data tr.e1.o2 td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+#lat-details table.data tr.o1.o2 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+#lat-details table.data tr.o1.e2 td {    border-bottom: 1px solid #fff; background:#d4d4ff; }
+
+/* =========================*/
+/* Stand Alone Page         */
+/* =========================*/
+div.stand-alone { margin-left: 1.6em; }

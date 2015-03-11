@@ -1,0 +1,13 @@
+viewName,timeSinceAnyCommand,durationSinceAnyCommand
+<!>totalViews,9
+<!>heartbeatRate,5
+<!>durationSinceAnyCommand,24189
+CorvilNet-cnpiConfig,Tue Apr 30 03:19:41 2013,24189
+CorvilNet-cneSystemAlerts,Mon Apr 29 15:07:22 2013,68128
+CorvilNet-cneQOSAlerts,Mon Apr 29 15:07:22 2013,68128
+CorvilNet-GatewayLive,Tue Apr 30 03:19:33 2013,24197
+CorvilNet-Venues1Hour,Tue Apr 30 03:18:36 2013,24254
+CorvilNet-VenuesLive,Tue Apr 30 03:19:18 2013,24212
+CorvilNet-ClientsLive,Tue Apr 30 03:19:18 2013,24212
+CorvilNet-getSummaryDefaults,Tue Apr 30 03:19:22 2013,24208
+CorvilNet-Clients1Hour,Tue Apr 30 03:18:52 2013,24238

@@ -1,0 +1,7 @@
+GENEOS Status Report,
+Tuesday 24 May 2011 14:59:06,
+samplingStatus,
+OK,
+processName,/group,instanceCount,args,percentCPU,processId,parentProcessId,percentMemory,user,startTime,ageDays,ageHours,fileDescriptors,state,cpuTime,cpuSeconds,
+AXP13_APPLICATION, ,1,/tools/jav ... -XX:+PrintGCApplicationStoppedTime com.ml.ets.apptk.APPTKMain,3.38 %,26611,26487,13.71 %,ettprod,Mon Jun 15 05:30:25 2009,0 Days,10 Hours,171,Sleeping, , ,
+AXP13_CONTROLLER, ,1,/opt/TPper ... l -w /gbwaapettp13/apps/ettprod/AXP13/scripts/tprun -app AX13,0.00 %,26487,1,0.04 %,ettprod,Mon Jun 15 05:30:13 2009,0 Days,10 Hours,5,Sleeping, , ,

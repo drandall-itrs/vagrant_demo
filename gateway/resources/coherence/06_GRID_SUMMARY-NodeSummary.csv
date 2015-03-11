@@ -1,0 +1,4 @@
+Role,NumberOfNodes,MeanMaxMemory,MeanAvailableMemory,MeanMemoryUsage,AvgPublisherSuccessRate,
+CacheServer,40,1012.00 Mb,885.88 Mb,12.46 %,99.98 %,
+Proxy,5,1021.20 Mb,662.20 Mb,35.15 %,100.00 %,
+WANProxy,5,1010.40 Mb,917.80 Mb,9.14 %,100.00 %,

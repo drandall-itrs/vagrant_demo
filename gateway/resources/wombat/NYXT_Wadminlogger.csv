@@ -1,0 +1,4 @@
+ID,FeedName,HostName,FtStatus(FtWeight),Mode,LineStatus,SequenceNumber,CacheSize,Version
+1,arcabook,ubuntu,primary(60),Normal,up,39042,13715,2.16.46f
+2,arcabook,ubuntu,secondary(40),Normal,up,37971,13694,2.16.46f
+3,mamadict,ubuntu,primary(20),N/A,unknown,0,0,2.16.46f

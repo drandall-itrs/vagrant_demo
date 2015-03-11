@@ -1,0 +1,32 @@
+Item,Value
+<!>Clients Connected - Non-compressed,6
+<!>Clients Connected - Compressed,0
+Rx Client Messages Total,43301
+Rx Client Messages - Control,42730
+Rx Client Messages - Persistent,310
+Rx Client Messages - Non-persistent,1
+Rx Client Messages - Direct,260
+Rx Client Message Rate - Non-compressed,0
+Rx Client Message Rate - Compressed,0
+Rx Client Byte Rate,0
+Ingress Discards,190
+Ingress Discards - No Subscription Match,189
+Ingress Discards - Topic Parse Error,0
+Ingress Discards - Parse Error,1
+Ingress Discards - Message Too Big,0
+Ingress Discards - TTL Exceeded,
+Ingress Discards - Publish Topic ACL,0
+Ingress Discards - Message Spool Ingress Discard,0
+Tx Client Messages Total,46469
+Tx Client Messages - Control,42354
+Tx Client Messages - Persistent,4052
+Tx Client Messages - Non-persistent,59
+Tx Client Messages - Direct,4
+Tx Client Message Rate - Non-compressed,0
+Tx Client Message Rate - Compressed,0
+Tx Client Byte Rate,0
+Egress Discards,356
+Egress Discards - Transmit Congestion,314
+Egress Discards - Compression Congestion,0
+Egress Discards - Message Promotion Congestion,0
+Egress Discards - Message Spool Egress Discards,42

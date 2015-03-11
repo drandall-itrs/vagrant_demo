@@ -1,0 +1,4 @@
+Key,Start Time, End Time, Message Type,Total Message Count,Valid Latency Message Count,Max Throughput (Msg/s), Average Latency (microseconds)
+31371142919277365,2014-06-10 00:00:00.001,2014-06-10 00:00:00.000,Execution report new,10,10,2,707
+2132763930865808302,2014-06-10 00:00:00.001,2014-06-10 00:00:00.000,New order,13,13,2,15378
+8527408868441758233,2014-06-10 00:00:00.001,2014-06-10 00:00:00.000,Execution report trade,356,356,23,911

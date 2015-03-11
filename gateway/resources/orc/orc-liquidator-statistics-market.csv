@@ -1,0 +1,4 @@
+LiquidatorInstance,Market,OrderInsertCount,OrderInsertMinTime,OrderInsertMaxTime,OrderInsertAverageTime,OrderDeleteCount,OrderDeleteMinTime,OrderDeleteMaxTime,OrderDeleteAverageTime,OrderAmendCount,OrderAmendMinTime,OrderAmendMaxTime,OrderAmendAverageTime,QuoteUpdateCount,QuoteUpdateMinTime,QuoteUpdateMaxTime,QuoteUpdateAverageTime,QuoteDeleteCount,QuoteDeleteMinTime,QuoteDeleteMaxTime,QuoteDeleteAverageTime
+HeadNightly-1,Liffe,10,392,437,401,2,450,620,548,3,450,620,548,24,450,620,548,3,450,620,548,
+HeadNightly-2,Eurex,280,292,532,381,10,280,292,532,18,280,292,532,17,519,716,582,3,280,292,532,
+HeadNightly-3,SWX,450,620,548,401,2,392,437,401,3,728,971,618,24,450,620,548,98,450,620,548,

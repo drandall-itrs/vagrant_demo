@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-110804 at 2011-08-18 10:48:41 by lperego on ITRSLP009-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-110715/gateway.xsd">
+	<samplers>
+		<samplerGroup name="MDT Database">
+			<sampler name="SQL Logs">
+				<var-group>
+					<data>My SQL</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/var/log/mysql/mysqld.log</data>
+									</filename>
+								</source>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="SQL tables">
+				<var-group>
+					<data>My SQL</data>
+				</var-group>
+				<plugin>
+					<sql-toolkit>
+						<queries>
+							<query>
+								<name>
+									<data>OS Table Content</data>
+								</name>
+								<sql>
+									<data>SELECT * FROM `geneos_db`.`os_table`;</data>
+								</sql>
+							</query>
+						</queries>
+						<connection>
+							<database>
+								<mysql>
+									<var-serverName>
+										<data>localhost</data>
+									</var-serverName>
+									<var-databaseName>
+										<data>geneos_db</data>
+									</var-databaseName>
+								</mysql>
+							</database>
+							<var-userName>
+								<data>root</data>
+							</var-userName>
+						</connection>
+					</sql-toolkit>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="Market Data">
+			<samplerGroup name="RMDS">
+				<samplerGroup name="P2PS">
+					<samplerGroup name="Mounts Order Trading">
+						<sampler name="P2PS Order Trading 000">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order00.csv </data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 000">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 001">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order01.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 001">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 002">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order02.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 002">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 003">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order03.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 003">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 004">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order04.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 004">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 005">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order05.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 005">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 006">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order06.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 006">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Order Trading 007">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/ordertrading/order07.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Order Trading 007">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Mounts Applications">
+						<sampler name="P2PS Applications 000">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/applications/applications00.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Applications 000">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Applications 001">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/applications/applications01.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Applications 001">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Mounts Users">
+						<sampler name="P2PS Users 000">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/users/users00.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Users 000">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Users 001">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/users/users01.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Users 001">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Users 002">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/users/users02.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Users 002">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Users 003">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS MOUNTS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/users/users03.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Users 003">
+									<displayName>P2PS MOUNTS</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Services">
+						<sampler name="P2PS Services applications - systems 001">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS SERVICES</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/services/services01.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Services applications - systems 001">
+									<displayName>P2PS SERVICES</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+						<sampler name="P2PS Services applications - systems 000">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS SERVICES</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/services/services01.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+							<dataviews>
+								<dataview name="P2PS Services applications - systems 000">
+									<displayName>P2PS SERVICES</displayName>
+								</dataview>
+							</dataviews>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Overview">
+						<sampler name="P2PS Overview">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/overview/overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="P2PS Info">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/p2ps/p2ps_info.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="P2PS RV">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/p2ps/p2ps_rv.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Processes">
+						<sampler name="Processes">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<displayName>P2PS PROCESSES</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/processes/processes.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Logs">
+						<sampler name="P2PS Logs">
+							<var-group>
+								<data>P2PS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<fkm>
+									<files>
+										<file>
+											<source>
+												<filename>
+													<data>/opt/geneos/resources/toolkit-views/market_data/p2ps/p2ps.log</data>
+												</filename>
+											</source>
+											<alias>
+												<data>P2PS Logs</data>
+											</alias>
+										</file>
+									</files>
+								</fkm>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+				</samplerGroup>
+				<samplerGroup name="SDIST">
+					<samplerGroup name="Overview">
+						<sampler name="SDIST Overview">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Overview</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Services">
+						<sampler name="SDIST Internal Services">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Internal Services</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/route_internal.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST External Services">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST External Services</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/route_external.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST Contribution Services">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Contribution Services</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/route_contribution.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST Cascaded Services">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Cascaded Services</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/route_cascaded.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="RRCP">
+						<sampler name="SDIST RRCP STATS">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST RRCP STATS</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/rrcp.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Routes">
+						<sampler name="SDIST Internal Routes">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Internal Routes</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/internal.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST External Routes">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST External Routes</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/external.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST Contribution Routes">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Contribution Routes</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/contribution.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="SDIST Cascaded Routes">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<displayName>SDIST Cascaded Routes</displayName>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/cascaded.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Logs">
+						<sampler name="SDIST Logs">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<sampleOnStartup>true</sampleOnStartup>
+							<plugin>
+								<fkm>
+									<files>
+										<file>
+											<source>
+												<filename>
+													<data>/opt/geneos/resources/toolkit-views/market_data/sdist/sdist.log</data>
+												</filename>
+											</source>
+											<alias>
+												<data>SDIST Logs</data>
+											</alias>
+										</file>
+									</files>
+								</fkm>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="HS">
+						<sampler name="SDIST HS">
+							<var-group>
+								<data>SDIST</data>
+							</var-group>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/sdist/sdist_hs.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+				</samplerGroup>
+				<samplerGroup name="DACS">
+					<sampler name="DACS Log Files">
+						<var-group>
+							<data>Logs</data>
+						</var-group>
+						<sampleInterval>
+							<data>60</data>
+						</sampleInterval>
+						<sampleOnStartup>true</sampleOnStartup>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dacs/dacs_logs.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DACS Map">
+						<var-group>
+							<data>DACS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>//bin/cat /opt/geneos/resources/toolkit-views/market_data/dacs/DACS_Map.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DACS Processes">
+						<var-group>
+							<data>DACS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dacs/DACS_Processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DACS SCP">
+						<var-group>
+							<data>DACS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dacs/DACS_SCP.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DACS Server">
+						<var-group>
+							<data>DACS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dacs/DACS_Server.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="DBU">
+					<sampler name="DBU Logs">
+						<var-group>
+							<data>DBU</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dbu/dbu_logs.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DBU Processes">
+						<var-group>
+							<data>DBU</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dbu/dbu_processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="RDU">
+					<sampler name="RDU Processes">
+						<var-group>
+							<data>RDU</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dbu/rdu_processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="RDU Logs">
+						<var-group>
+							<data>RDU</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dbu/rdu_logs.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="Bloomberg">
+				<sampler name="BPIPE Service Overview 00">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>Service Overview</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/overview00.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Service Overview 00">
+							<displayName>Service Overview</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Service Overview 01">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>Service Overview</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/overview01.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Service Overview 00">
+							<displayName>Service Overview</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Cache 00">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Cache 00</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/cache00.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Cache 00">
+							<displayName>BPIPE Cache</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Cache 01">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Cache 01</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/cache01.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Cache 01">
+							<displayName>BPIPE Cache</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Machine 00">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Machine 00</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/machine00.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Machine 00">
+							<displayName>BPIPE Machine</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Machine 01">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Machine 01</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/machine01.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Machine 01">
+							<displayName>BPIPE Machine</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE RMDS 00">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE RMDS 00</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/rmds00.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE RMDS 00">
+							<displayName>BPIPE RMDS</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE RMDS 01">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE RMDS 01</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/rmds01.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE RMDS 01">
+							<displayName>BPIPE RMDS</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Destinations 00">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Destinations 00</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/destinations00.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Destinations 00">
+							<displayName>BPIPE Destinations IDs</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="BPIPE Destinations 01">
+					<var-group>
+						<data>BPIPE</data>
+					</var-group>
+					<displayName>BPIPE Destinations 01</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/destinations01.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Destinations 01">
+							<displayName>BPIPE Destinations IDs</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="SOCKS Proxy Processes">
+					<var-group>
+						<data>PROXY</data>
+					</var-group>
+					<displayName>Service Overview</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/bproxy_processes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Service Overview 00">
+							<displayName>Service Overview</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="SOCKS Proxy Network Ports">
+					<var-group>
+						<data>PROXY</data>
+					</var-group>
+					<displayName>Service Overview</displayName>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/bloomberg/bproxy_network_ports.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="BPIPE Service Overview 00">
+							<displayName>Service Overview</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Contribution">
+				<samplerGroup name="Gissing">
+					<sampler name="gissing-api-rtxlo-rtxlo-status">
+						<!---->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-rtxlo-rtxlo-status">
+								<displayName>RTXLO Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-RTXLO\ RTXLO\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-tcpo-tcpo-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-tcpo-tcpo-status">
+								<displayName>TCPO Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-TCPO\ TCPO\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-tcpi-tcp-input-handler">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-tcpi-tcp-input-handler">
+								<displayName>TCP Iinput Handler</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-TCPI\ TCP\ Input\ Handler.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-erso-erso-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-erso-erso-status">
+								<displayName>ERSO Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-ERSO\ ERSO\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-rtxli-rtxli-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-rtxli-rtxli-status">
+								<displayName>RTXLI status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-RTXLI\ RTXLI\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-bbgo-bloomberg-output-handler">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-bbgo-bloomberg-output-handler">
+								<displayName>BBGO Bloomberg Output Handler</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-BBGO\ Bloomberg\ Output\ Handler.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-csvi-csv-file-snapshot-input-handler">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-csvi-csv-file-snapshot-input-handler">
+								<displayName>CSVI CSV File Snapshot Input Handler</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-CSVI\ CSV\ File\ Snapshot\ Input\ Handler.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-mlip2o-marketlink-ip-output-1">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-mlip2o-marketlink-ip-output-1">
+								<displayName>MLIP2O Marketlink IP Output 1</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-MLIP2O\ Marketlink\ IP\ Output\ 1.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-ctxi-ctxi-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-ctxi-ctxi-status">
+								<displayName>CTXI Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-CTXI\ CTXI\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-tc2i-tc2i-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-tc2i-tc2i-status">
+								<displayName>TC2I Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-TC2I\ TC2I\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-mlip2o-mlip2o-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-mlip2o-mlip2o-status">
+								<displayName>MLIP2O Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-MLIP2O\ MLIP2O\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-mklo-port-0">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-mklo-port-0">
+								<displayName>MKLO Port 0</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-MKLO\ Port\ 0.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-lighto-lighto-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-lighto-lighto-status">
+								<displayName>LIGHTO Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-LIGHTO\ LIGHTO\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-mklo-mklo-status">
+						<!--Plugin=API-->
+						<group>Handler Statistics</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-mklo-mklo-status">
+								<displayName>MKLO Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-MKLO\ MKLO\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-hourly-handler-statistics">
+						<!--Plugin=API-->
+						<group>Performance</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-hourly-handler-statistics">
+								<displayName>Hourly Handler Statistics</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-Hourly\ Handler\ Statistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-performance">
+						<!--Plugin=API-->
+						<group>Performance</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-performance">
+								<displayName>Handler Performance</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-Performance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-config-server-configuration-server-status">
+						<!--Plugin=API-->
+						<group>Configuration</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-config-server-configuration-server-status">
+								<displayName>Server Configuration</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-Config\ Server\ Configuration\ server\ status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-system-manager-fault-tolerance">
+						<!--Plugin=API-->
+						<group>Fault Tolerance</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-system-manager-fault-tolerance">
+								<displayName>Fault Tolerance</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-System\ Manager\ Fault\ Tolerance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-system-manager-system-performance">
+						<!--Plugin=API-->
+						<group>Performance</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-system-manager-system-performance">
+								<displayName>System Performance</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-System\ Manager\ System\ Performance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="gissing-api-component-status">
+						<!--Plugin=API-->
+						<group>Overview</group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<dataviews>
+							<dataview name="gissing-api-component-status">
+								<displayName>Component Status</displayName>
+							</dataview>
+						</dataviews>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/gissing/ConteX-Component\ Status.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="DTS">
+					<sampler name="DTS Logs">
+						<var-group>
+							<data>DTS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dts/dts_processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="DTS Processes">
+						<var-group>
+							<data>DTS</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/dts/dts_logs.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="Latency">
+				<sampler name="Feed Latency Monitoring">
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/flm/flm.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Exchange Connectivity">
+				<sampler name="Exchange Connectivity LSE">
+					<var-group>
+						<data>EXCHANGE CONNECTIVITY</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/exchanges/lse.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="Exchange Connectivity LSE">
+							<displayName>LSE</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="Exchange Connectivity NYSE">
+					<var-group>
+						<data>EXCHANGE CONNECTIVITY</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/exchanges/nyse.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="Exchange Connectivity NYSE">
+							<displayName>NYSE</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="Exchange Connectivity SWX">
+					<var-group>
+						<data>EXCHANGE CONNECTIVITY</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/exchanges/swx.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="Exchange Connectivity SWX">
+							<displayName>SWX</displayName>
+						</dataview>
+					</dataviews>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Wombat">
+				<sampler name="NYXT MAMA STATS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Mamastats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT WADMIN LOGGER">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Wadminlogger.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT DATA LOGGER HEARTBEATS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_DataLogger_Hearbeats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT FEED HANDLER LOGS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Feed_Handler_Logs.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT FEED HANDLER STATUS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Feed_Handler_Status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT LINE STATS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Line_Stats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT LATENCY">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Latency.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT PAPA STATS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_PapaStats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT PROCESSES">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_Processes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="NYXT WIMP STATS">
+					<!---->
+					<group>WOMBAT</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/resources/toolkit-views/market_data/wombat/NYXT_WIMP_Stats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+	</samplers>
+</gateway>

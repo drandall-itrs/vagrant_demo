@@ -1,0 +1,7 @@
+ID,sessionID,username,processID,machineName,elapsedTime,timeRemaining,percentageComplete,message
+<!>connectionStatus,UP
+<!>timeThreshold,60 sec
+<!>totalLongRunningQueries,0
+165:3343423C,165,sysman,532,ITRSSRV013,67 sec,120 sec,35%,Table MON_MODS$: 1 out of 1 indexes done
+165:3343423D,165,guest,353,ITRSSRV013,400 sec,120 sec,77%,Table SCHEDULER$_JOB$: 5 out of 5 indexes done
+165:3343423A,165,sysman,193,ITRSSRV013,239 sec,204 sec,54%,Table MGMT_JOB_HISTORY: 3 out of 3 indexes done

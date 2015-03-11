@@ -1,0 +1,13 @@
+name,Memory Usage,Memory Granted,Memory Active,Memory Shared,Memory Zero,Memory Unreserved,Memory Swap Used,Memory Shared Common,Memory Heap,Memory Heap Free,Memory State,Memory Balloon,Memory Overhead,Memory Reserved Capacity,Memory Swapped,Memory Swap Target,Memory Swap In,Memory Swap Out,Memory Balloon Target,Memory Consumed,Memory Used by VMkernel,Memory Swap In Rate,Memory Swap Out Rate
+git repositories (Debian 6 64-bit),699,2097152,146800,0,0,,,,,,,0,51568,,0,0,0,0,0,2097152,,0,0
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN08),299,4139008,125828,0,0,,,,,,,0,234748,,0,0,0,0,0,4139008,,0,0
+Windows Server 2008 R2 Standard (64bit) (ITRSTESTWIN07),399,4194304,167772,0,0,,,,,,,0,232852,,0,0,0,0,0,4194304,,0,0
+Solaris 10 - X86 (64bit) (ITRSTESTX8601),599,2097152,125828,0,0,,,,,,,0,40140,,0,0,0,0,0,2097152,,0,0
+RH Enterprise 3 (32bit) (ITRSTESTRH01),0,2088960,0,8,8,,,,,,,0,39672,,0,0,0,0,0,2088952,,0,0
+SUSE 10 (64bit) (ITRSTESTSUSE01),299,1046528,31456,0,0,,,,,,,0,34248,,0,0,0,0,0,1046528,,0,0
+Red Hat Enterprise Linux 5 - Yum Repository,199,3141632,83884,0,0,,,,,,,0,50040,,0,0,0,0,0,3141632,,0,0
+Windows Server 2003 (32bit) (ITRSTESTWIN01),399,4194304,167772,0,0,,,,,,,0,114300,,0,0,0,0,0,4194304,,0,0
+CentOS 5.2 (64bit) (ITRSTESTRH02),1899,3143680,597688,0,0,,,,,,,0,59148,,0,0,0,0,0,3143680,,0,0
+Chef Server (Ubuntu 10.04 64-bit),399,2096384,83884,0,0,,,,,,,0,54896,,0,0,0,0,0,2096384,,0,0
+Centos 4.8 (32bit) (ITRSTESTRH04),99,1044480,10484,0,0,,,,,,,0,191688,,0,0,0,0,0,1044480,,0,0
+CentOS 5.2 (64bit) (ITRSTESTRH03),699,1048576,73400,0,0,,,,,,,0,42208,,0,0,0,0,0,1048576,,0,0

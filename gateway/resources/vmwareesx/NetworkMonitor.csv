@@ -1,0 +1,13 @@
+name,Network Usage,Network Packets Received,Network Packets Transmitted,Network Data Receive Rate,Network Data Transmit Rate,droppedRx,droppedTx
+git repositories (Debian 6 64-bit),1,331,0,0,1,,
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN08),3,440,59,0,2,,
+Windows Server 2008 R2 Standard (64bit) (ITRSTESTWIN07),2,407,29,0,1,,
+Solaris 10 - X86 (64bit) (ITRSTESTX8601),1,369,20,0,1,,
+RH Enterprise 3 (32bit) (ITRSTESTRH01),1,330,1,0,1,,
+SUSE 10 (64bit) (ITRSTESTSUSE01),1,340,2,0,1,,
+Red Hat Enterprise Linux 5 - Yum Repository,1,337,9,0,1,,
+Windows Server 2003 (32bit) (ITRSTESTWIN01),1,330,0,0,1,,
+CentOS 5.2 (64bit) (ITRSTESTRH02),4,450,119,0,3,,
+Chef Server (Ubuntu 10.04 64-bit),1,332,0,0,1,,
+Centos 4.8 (32bit) (ITRSTESTRH04),1,332,1,0,1,,
+CentOS 5.2 (64bit) (ITRSTESTRH03),4,333,4,0,3,,

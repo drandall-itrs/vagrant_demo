@@ -1,0 +1,154 @@
+/* ===  Trend Report Specific Css ==== */
+
+/* =========================*/
+/* Graph Visualiser         */
+/* =========================*/
+#graph { margin-top: 6em; }
+#graph img { text-align: left; /* width: 900px; height: 770px; */ }
+#graph div.legend { float: left; border: solid black 1px; margin-left: 40px;  }
+#graph div.legend div.entry { float: left; border: solid white 3px;}
+#graph div.legend div.entry div.col { width: 14px; height: 14px; float: left; margin-right: 4px;}
+#graph div.legend div.entry div.label { float: left; margin-right: 14px; }
+#graph div.legend-end { clear:both; width: 90px; height: 1px; border-width: 0; margin: 0; padding: 0; font-size: 1px;}
+
+/* =========================*/
+/* Summary Table            */
+/* =========================*/
+#summary {  }
+#summary h1 { text-align: left; margin-left: 0em; margin-top: 6em;}
+
+#summary div.print { display: none; }
+#summary div.web { display: block; }
+
+/* Holder table to allow for scrolling data section */
+#summary table.statsHolderTable
+{
+  margin: 0; padding: 0;
+  min-width:  900px;
+  width:  900px;
+}
+
+#summary table.statsHolderTable td { margin: 0; padding: 0; vertical-align: top; }
+
+/* Names Sub Table */
+#summary table.statsHolderTable td.names div.scrollX { width: 260px; }
+#summary table.statsHolderTable td.names table { width: 260px; }
+#summary table.statsHolderTable td.names { vertical-align: top; }
+#summary table.statsHolderTable td.names td,
+#summary table.data-print td.rl
+{  
+  font-weight: bold; text-align: left; 
+  margin-left: 10px; vertical-align: middle;
+}
+
+/* Values Sub Table */
+#summary table.statsHolderTable td.values div.scrollX { width: 660px; }
+#summary table.statsHolderTable td.values table { width: 660px; }
+#summary table.statsHolderTable td.values th { text-align: right; white-space: nowrap;}
+#summary table.statsHolderTable td.values td { text-align: right; }
+
+#summary table.data-print { width: 920px; }
+#summary table.data-print th { text-align: right; white-space: nowrap;}
+#summary table.data-print td { text-align: right; }
+
+/* Common Values/Value Sub-Table Settings */
+#summary table.data,
+#summary table.data-print
+{
+        margin: 0; 
+        padding: 0;
+        margin-top: 20px;
+        border:0px solid #000;
+        font-size: 10pt;
+        border-collapse: collapse;
+}
+
+#summary table.data td,
+#summary table.data th,
+#summary table.data-print td,
+#summary table.data th
+{
+  border-width: 0px; 
+  height: 24px;
+  border: 0px solid #000;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#summary table.data th,
+#summary table.data-print th 
+{
+  border-bottom: 1px solid #fff; 
+  background:#0033cc; 
+  color: #fff;
+  font-size: 7pt;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#summary table.data td.dblCell { text-align: right; }
+/* Even Odd Colouring */
+
+#summary table.data tr.even td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#summary table.data tr td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+
+#summary table.data tr.e1.e2 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#summary table.data tr.e1.o2 td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+#summary table.data tr.o1.o2 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+#summary table.data tr.o1.e2 td {    border-bottom: 1px solid #fff; background:#d4d4ff; }
+
+#summary table.data-print tr.e1.e2 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#summary table.data-print tr.e1.o2 td {    border-bottom: 1px solid #fff; background:#e3e3e3; }
+#summary table.data-print tr.o1.o2 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+#summary table.data-print tr.o1.e2 td {    border-bottom: 1px solid #fff; background:#d4d4ff; }
+
+
+/* =========================*/
+/* Event Table              */
+/* =========================*/
+#events {  }
+#events h1 { text-align: left; margin-left: 0em; margin-top: 6em; }
+#events table
+{
+  margin-top: 20px;
+  border: 0px solid #000;
+  font-size: 10pt;
+  border-collapse: collapse;
+  min-width:  900px;
+  width:  900px;
+}
+
+#events table td {
+  border-width: 0px;
+  height: 24px;
+  border: 0px solid #000;
+  border-collapse:collapse;
+  text-align: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#events table th { 
+  border-bottom: 1px solid #fff; 
+  background:#0033cc; 
+  color: #fff;
+  font-size: 10pt;
+  font-weight: bold;
+  padding: 8px;
+}
+
+
+/* Even Odd Colouring */
+#events table tr.even td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#events table tr td      {    border-bottom: 1px solid #fff; background:#f3f3f3; }
+
+/* Severity Colouring */
+#events table td.sevOK       { color: green; }
+#events table td.sevCRITICAL { color: #C00; }
+#events table td.sevWARN     { color: #AA0; }
+
+
+/* =========================*/
+/* Stand Alone Page         */
+/* =========================*/
+div.stand-alone { margin-left: 1.6em; }

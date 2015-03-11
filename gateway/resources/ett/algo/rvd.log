@@ -1,0 +1,2 @@
+real_rvd: TIB/Rendezvous Error: {ADV_CLASS="ERROR" ADV_SOURCE="SYSTEM" ADV_NAME="DATALOSS.INBOUND.BCAST" ADV_DESC="dataloss: remote daemon already timed out the data" host="127.5.69.4" lost=16}
+real_rvd: TIB/Rendezvous Error: {ADV_CLASS="ERROR" ADV_SOURCE="SYSTEM" ADV_NAME="DATALOSS.OUTBOUND.BCAST" ADV_DESC="dataloss: remote daemon asking for retransmission after we timed out the data" host="127.5.69.4" lost=16

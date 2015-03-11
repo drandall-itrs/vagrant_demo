@@ -1,0 +1,5 @@
+Interface Name,Server Name,Status,Nb Waiting Mvts,Nb TradeKast Processed Mvts 1hour,Nb TradeKast Processed Mvts Today,Nb Adapter Processed Mvts 1hour,Nb Adapter Processed Mvts Today,Nb Destination Processed Mvts 1hour,Nb Destination Processed Mvts Today
+<!>Data Availability,OK
+<!>Nb Interfaces Up,1
+<!>Nb Interfaces Down,0
+EXPORT,tradekast,OK,0,47,180,0,0,0,0

@@ -1,0 +1,7 @@
+/* ================================== */
+/*    Print Overides    */
+/* ================================== */
+#summary div.print { display: block; }
+#summary div.web { display: none; }
+#page { overflow: visible; width: 1000px;}
+

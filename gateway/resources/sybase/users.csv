@@ -1,0 +1,55 @@
+serverProcessID,status,priority,loginName,clientHostName,clientApplication,command
+<!>databaseName,geneos
+<!>status,up
+<!>totalUsers,51
+14,recv sleep,MEDIUM,geneos_dbo,dbgrchkws4,Geneos AC,AWAITING COMMAND
+34,recv sleep,MEDIUM,geneos_dbo,dbmosws218,Geneos AC,AWAITING COMMAND
+36,recv sleep,MEDIUM,geneos_dbo,dbnycws212,Geneos AC,AWAITING COMMAND
+37,recv sleep,MEDIUM,geneos_dbo,dbgnyc1083,Geneos AC,AWAITING COMMAND
+91,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+114,recv sleep,MEDIUM,geneos_dbo,dbgnyc1006,Geneos AC,AWAITING COMMAND
+165,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+181,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+217,recv sleep,MEDIUM,geneos_dbo,loninpwts0,Geneos AC,AWAITING COMMAND
+218,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+230,recv sleep,MEDIUM,geneos_dbo,dbgrchkws4,Geneos AC,AWAITING COMMAND
+241,recv sleep,MEDIUM,geneos_dbo,dblonws188,Geneos AC,AWAITING COMMAND
+257,recv sleep,MEDIUM,geneos_dbo,DBNYCWS5V8,Geneos AC,AWAITING COMMAND
+281,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+299,recv sleep,MEDIUM,geneos_dbo,loninpwts5,Geneos AC,AWAITING COMMAND
+303,recv sleep,MEDIUM,geneos_dbo,dblonws104,Geneos AC,AWAITING COMMAND
+328,recv sleep,MEDIUM,geneos_dbo,dbtyows921,Geneos AC,AWAITING COMMAND
+332,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+341,recv sleep,MEDIUM,geneos_dbo,DBTYOWS919,Geneos AC,AWAITING COMMAND
+356,recv sleep,MEDIUM,geneos_dbo,dbnycws612,Geneos AC,AWAITING COMMAND
+369,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+387,recv sleep,MEDIUM,geneos_dbo,dbgnycws80,Geneos AC,AWAITING COMMAND
+391,recv sleep,MEDIUM,geneos_dbo,dblonws167,Geneos AC,AWAITING COMMAND
+401,recv sleep,MEDIUM,geneos_dbo,dbgrchkws6,Geneos AC,AWAITING COMMAND
+411,recv sleep,MEDIUM,geneos_dbo,loninpwts0,Geneos AC,AWAITING COMMAND
+435,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+459,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+472,recv sleep,MEDIUM,geneos_dbo,dblonws213,Geneos AC,AWAITING COMMAND
+479,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+532,recv sleep,MEDIUM,geneos_dbo,dbfraws603,Geneos AC,AWAITING COMMAND
+539,recv sleep,MEDIUM,geneos_dbo,DBFRAWS602,Geneos AC,AWAITING COMMAND
+558,recv sleep,MEDIUM,geneos_dbo,DBLONWS999,Geneos AC,AWAITING COMMAND
+574,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+581,recv sleep,MEDIUM,geneos_dbo,DBFRAWS604,Geneos AC,AWAITING COMMAND
+586,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+596,recv sleep,MEDIUM,geneos_dbo,dblonws206,Geneos AC,AWAITING COMMAND
+651,recv sleep,MEDIUM,geneos_dbo,loneqgedap,Geneos GW,AWAITING COMMAND
+745,recv sleep,MEDIUM,geneos_dbo,DBFRAWS604,Geneos AC,AWAITING COMMAND
+761,recv sleep,MEDIUM,geneos_dbo,loninpwts5,Geneos AC,AWAITING COMMAND
+821,running,MEDIUM,geneos_dbo,loneqgedap,NetProbe,SELECT
+887,recv sleep,MEDIUM,geneos_dbo,dblonws144,Geneos AC,AWAITING COMMAND
+899,recv sleep,MEDIUM,geneos_dbo,DBLONWS292,Geneos AC,AWAITING COMMAND
+907,recv sleep,MEDIUM,geneos_dbo,loneqgenap,Geneos GW,AWAITING COMMAND
+908,recv sleep,MEDIUM,geneos_dbo,DBFRAWS604,Geneos AC,AWAITING COMMAND
+917,recv sleep,MEDIUM,geneos_dbo,dbfraws603,Geneos AC,AWAITING COMMAND
+1000,recv sleep,MEDIUM,geneos_dbo,dblonws886,Geneos AC,AWAITING COMMAND
+1001,recv sleep,MEDIUM,geneos_dbo,DBGRCHKWS6,Geneos AC,AWAITING COMMAND
+1073,recv sleep,MEDIUM,geneos_dbo,DBFRAWS604,Geneos AC,AWAITING COMMAND
+127,recv sleep,MEDIUM,geneos_dbo,loneqgedap,NetProbe,AWAITING COMMAND
+1021,recv sleep,MEDIUM,geneos_dbo,zrheqmonp1,Geneos GW,AWAITING COMMAND
+436,recv sleep,MEDIUM,geneos_dbo,dblonws208,Geneos AC,AWAITING COMMAND

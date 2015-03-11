@@ -1,0 +1,8 @@
+source,name,queueTargets,topicTargets,
+<!>totalBridges,6
+queue,FIXROUTER1.TO.XFM_EMEA1,1,0,
+queue,XFM_EMEA1.TO.FIXROUTER1,1,0,
+queue,XFM_EMEA1.TO.ORDER_ROUTER,1,0,
+queue,XFM_EMEA1.TO.CC1,1,0,
+queue,ORDER_ROUTER.TO.XFM_EMEA1,1,0,
+queue,CC1.TO.XFM_EMEA1,1,0,

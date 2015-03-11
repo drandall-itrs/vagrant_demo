@@ -1,0 +1,13 @@
+SecsPerSample=5
+Start=28800
+Finish=64800
+Mean=5.2
+S0=60
+S1=70
+S2=2
+C0=34200
+C1=61200
+Width=1200
+OrdersPerCPU=1.5
+BaseCPU=5
+SQLRate=12

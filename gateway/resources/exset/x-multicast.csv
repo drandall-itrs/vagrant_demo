@@ -1,0 +1,4 @@
+name,port,dataRecvRate,msgRecvRate,tmSinceLastMsg,status
+224.0.1.1,1500,25.32 kb/sec,2114.22 msg/sec,2 secs,listening
+Sydeny F&O,1501,100.24 kb/sec,8370.04 msg/sec,5 secs,listening
+Honk Kong Swaps,1502,45.02 kb/sec,3759.17 msg/sec,20 secs,listening

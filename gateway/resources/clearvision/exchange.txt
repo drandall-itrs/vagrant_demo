@@ -1,0 +1,14 @@
+Name,Value
+averageReadingTime,00:00:00
+lastReadingTime,09:42:31
+nextReadingTime,09:43:00
+averageClearingTime,00:00:00
+lastClearingTime,09:13:33
+lastUnclearingTime,
+totalCleared,190
+ticketsRead,16
+totalUncleared,0
+durationSinceLastClearingTime,1755
+durationSinceLastReadingTime,17
+totalClearedSinceLastSample,1694
+

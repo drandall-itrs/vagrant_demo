@@ -1,0 +1,2 @@
+echo "12:34:11.313203808       XAMS       UP          1775" >> exchangeconnection.log
+echo "12:34:11.313203808       XAMS       DOWN          1775" >> exchangeconnection.log

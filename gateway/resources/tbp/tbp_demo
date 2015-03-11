@@ -1,0 +1,157 @@
+#!/usr/bin/perl
+
+########################################
+# Files
+$settingsFile="/opt/geneos/gateway/resources/tbp/tbp-settings.txt";
+$lastFile="/opt/geneos/gateway/resources/tbp/tbp-last.txt";
+#
+########################################
+
+sub band {
+    my $v=$_[0];
+    if ($v<0) { return 0.0; }
+    if ($v>100) { return 100.0; }
+    return $v;
+}
+sub max ($a,$b) { if ($a>$b) { return $a;} else { return $b; } }
+sub max ($a,$b) { if ($a<$b) { return $a;} else { return $b; } }
+
+
+########################################
+# Read Settings
+open SETTINGS, "<$settingsFile" or die $!;
+my @settings = <SETTINGS>;
+close (SETTINGS);
+for ($i=0;$i<=$#settings;$i++) {
+  chomp($settings[$i]);
+  @d=split(/=/,$settings[$i]);
+  $s{$d[0]}=$d[1];
+  #print $d[0]; print "=|";print $d[1]; print "|\n" ;
+}
+#
+########################################
+
+########################################
+# Set Mode (LIVE|SQL|CSV)
+my $csv=0;
+my $sql=0;
+my $live=1;
+if (($#ARGV+1)>0) {
+  if ($ARGV[0] eq 'SQL') { $live=0; $csv=0; $sql=1; }
+  if ($ARGV[0] eq 'CSV') { $live=0; $csv=1; $sql=0; }
+}
+#
+########################################
+
+#########################################
+# Read values from last run
+# (Ignore if CSV or SQL)
+my @last=(0,0,0,0);
+if ($live) {
+  if (-e "$lastFile") {
+     open LAST_VALUE, "<$lastFile" or die $!;
+     @last = <LAST_VALUE>;
+     close (LAST_VALUE);
+     for ($i=0;$i<4;$i++) { chomp($last[$i]); }
+  }
+}
+$tLast=$last[0];
+$vLastCPU=$last[1];
+$vLastRate=$last[2];
+$vLastTotal=$last[3];
+#
+########################################
+
+
+$sps=$s{'SecsPerSample'};
+
+#########################################
+# Set Calculation Range
+if ($live) {
+  ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
+  my $tNow=int(($sec+($min+60*$hour)*60)/$sps)*$sps;
+  $tStart=$s{'Start'};
+  $tFinish=$s{'Finish'};
+  if ($tNow<$tStart || $tNow>$tFinish) { print "Name,Value\nCPU,\nRate,\nOrders,\nTIME,$tNow\n"; exit(0); }
+  $tFinish=$tNow;
+  $t=$tLast;
+  if (($tLast>$tNow) || ($tLast<1)) { $t=$tStart-$sps; $vLastTotal=0;  $vLastCPU=''; $vLastRate=''; }
+  $tStart=$t+$sps;
+} else {
+  my $tNow=$s{'Finish'};
+  $tStart=$s{'Start'};
+  $tFinish=$s{'Finish'};
+}
+#
+#########################################
+
+if ($sql) {
+  print "TRUNCATE TABLE time_series_data_user_table;\n";
+  print "TRUNCATE TABLE time_series_user_table;\n";
+
+  print "INSERT into time_series_user_table VALUES (1, 'CPU_MAX_ERR');  \n";    
+  print "INSERT into time_series_user_table VALUES (2, 'CPU_MAX_WARN');  \n";
+  print "INSERT into time_series_user_table VALUES (3, 'CPU_MIN_WARN'); \n";
+  print "INSERT into time_series_user_table VALUES (4, 'CPU_MIN_ERR'); \n";
+
+  print "INSERT into time_series_user_table VALUES (5, 'ORDERS'); \n";
+  print "INSERT into time_series_user_table VALUES (6, 'RATES'); \n";
+}
+
+$cBand=6;
+$wBand=1.5;
+$skip=$s{'SQLRate'};
+
+#print "From: $tStart, To: $tFinish";
+for ($t=$tStart;$t<=$tFinish;$t+=$sps) {
+  my $t0=$t-$s{'C0'}; $t0=$t0*$t0;
+  my $t1=$t-$s{'C1'}; $t1=$t1*$t1;
+  my $w=$s{'Width'}*$s{'Width'}*(-2);
+
+  my $currentCPU=$s{'Mean'}+$s{'S0'}*exp($t0/$w) +$s{'S1'}*exp($t1/$w);
+  
+  if ($live) { $rand = $s{'S2'}*(rand()-0.5); $currentCPU+=$rand; }
+  
+  my $currentRate= int(1000*($currentCPU-$s{'BaseCPU'})*$s{'OrdersPerCPU'})/1000.0;
+  
+  $vLastCPU=$currentCPU;
+  $vLastRate=$currentRate;
+  $vLastTotal+=$currentRate;
+  if ($skip==1 || $cpu<$currentCPU) { $cpu=$currentCPU }
+  if ($skip==1 || $rate<$currentRate) { $rate=$currentRate }
+
+  if ($live) { next; }
+  
+  if ($skip!=$s{'SQLRate'}) {
+    $skip++;
+  } else {
+    $skip=1;
+    if ($sql) {
+      print "INSERT into time_series_data_user_table VALUES (1, $t, ".band($cpu+$cBand)."); \n";
+      print "INSERT into time_series_data_user_table VALUES (2, $t, ".band($cpu+$wBand)."); \n";
+      print "INSERT into time_series_data_user_table VALUES (3, $t, ".band($cpu-$wBand)."); \n";
+      print "INSERT into time_series_data_user_table VALUES (4, $t, ".band($cpu-$cBand)."); \n";
+      print "INSERT into time_series_data_user_table VALUES (5, $t, $vLastTotal); \n";
+      print "INSERT into time_series_data_user_table VALUES (6, $t, $rate); \n";
+    } 
+    if ($csv) {
+      print "$t, ".band($cpu+$cBand).",".band($cpu+$wBand).",".band($cpu-$wBand).",".band($cpu-$cBand).",".$rate.",".$vLastTotal."\n";
+    }
+    $cpu=0;
+    $rate=0;
+  }
+}
+
+if ($live)
+{
+  open LAST_VALUE, ">$lastFile" or die $!;
+  print LAST_VALUE "$tFinish\n$vLastCPU\n$vLastRate\n$vLastTotal\n";
+  close(LAST_VALUE);
+
+  $rate=sprintf("%.2f",$vLastRate);
+  $cpu=sprintf("%.2f",$vLastCPU);
+  $total=sprintf("%.3f",$vLastTotal);
+  print "Name,Value\nCPU,$cpu\nRate,$rate\nOrders,$total\nTIME,$tFinish\n";
+}
+
+

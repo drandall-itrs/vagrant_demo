@@ -1,0 +1,7 @@
+job,status,rundate,runtime,daysSinceLastRun,hoursSinceLastRun,msg
+<!>PluginVersion,1.1
+FeedDump,SUCCEEDED,2008-09-28,00:00:02,1,37,The job succeeded.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).
+TickerPlantTrim,SUCCEEDED,2008-09-28,00:00:02,1,37,The job succeeded.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).
+TransformPriceData,SUCCEEDED,2008-09-28,00:00:02,1,37,The job succeeded.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).
+AggregateFIX,SUCCEEDED,2008-09-28,00:00:02,1,37,The job succeeded.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).
+TradeConsolidation,SUCCEEDED,2008-09-28,00:00:02,1,37,The job succeeded.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).

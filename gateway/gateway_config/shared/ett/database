@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2013-07-29 15:49:26 by apage on ITRSPC107-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.6-130308/gateway.xsd">
+	<databaseLogging>
+		<enabled>false</enabled>
+		<connection>
+			<database>
+				<mysql>
+					<serverName>localhost</serverName>
+					<databaseName>geneos_db</databaseName>
+				</mysql>
+			</database>
+			<gatewayAuthentication>
+				<userName>geneos</userName>
+				<password>
+					<plaintext>geneos</plaintext>
+				</password>
+			</gatewayAuthentication>
+			<clientAuthentication>
+				<userName>geneos</userName>
+				<password>
+					<plaintext>geneos</plaintext>
+				</password>
+			</clientAuthentication>
+		</connection>
+		<tables>
+			<table name="event_table">
+				<type>double</type>
+			</table>
+			<table name="net_table">
+				<type>double</type>
+			</table>
+			<table name="audit_table">
+				<type>double</type>
+			</table>
+			<table name="os_table">
+				<type>double</type>
+			</table>
+			<table name="processes_table">
+				<type>double</type>
+			</table>
+		</tables>
+		<items>
+			<item name="CPU">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Real CPU&quot;)][(@type=&quot;Live Hardware&quot;)]/dataview[(@name=&quot;Real CPU&quot;)]/rows/row[(@name=&quot;cpu_0&quot;)]/cell[(@column=&quot;clockSpeed&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Real CPU&quot;)][(@type=&quot;Live Hardware&quot;)]/dataview[(@name=&quot;Real CPU&quot;)]/rows/row[(@name=&quot;cpu_0&quot;)]/cell[(@column=&quot;percentIdle&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Real CPU&quot;)][(@type=&quot;Live Hardware&quot;)]/dataview[(@name=&quot;Real CPU&quot;)]/rows/row[(@name=&quot;cpu_0&quot;)]/cell[(@column=&quot;percentKernelTime&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Real CPU&quot;)][(@type=&quot;Live Hardware&quot;)]/dataview[(@name=&quot;Real CPU&quot;)]/rows/row[(@name=&quot;cpu_0&quot;)]/cell[(@column=&quot;percentUserTime&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Real CPU&quot;)][(@type=&quot;Live Hardware&quot;)]/dataview[(@name=&quot;Real CPU&quot;)]/rows/row[(@name=&quot;cpu_0&quot;)]/cell[(@column=&quot;percentWaitTime&quot;)]</target>
+				</targets>
+				<table ref="os_table"/>
+			</item>
+		</items>
+	</databaseLogging>
+</gateway>

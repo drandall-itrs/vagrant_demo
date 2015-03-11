@@ -1,0 +1,22 @@
+Parameter,Value
+System name,EMMA1_JSE_PRODUCTION
+User alert level,OK
+Operator alert level,OK
+Role,PRIMARY
+Default role,PRIMARY
+Role status,DEFAULT
+Start role,PRIMARY_WARM
+Start time,19-Apr-2006 05:30:07
+Start mode,
+Transaction state,
+Database state,DATABASE_AVAILABLE
+Diag 1,
+Diag 2,
+Diag 3,
+Diag 4,
+Diag 5,
+Diag 6,
+Diag 7,
+Diag 8,
+Diag 9,
+Diag 10,

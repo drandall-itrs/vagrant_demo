@@ -1,0 +1,3 @@
+LiquidatorInstance,AveargeExecutionTime,AverageQueueSize,AverageWaitTime,ExecutionTimeStandardDeviation,MaxExecutionTime,MaxHistorySeconds,MaxQueueSize,MaxWaitTime,MinExecutionTime,MinQueueSize,MinWaitTime
+HeadNightly,572,29,32,35,629,60,65,78,329,15,102
+HeadDaily,746,51,23,18,922,97,81,92,412,23,195

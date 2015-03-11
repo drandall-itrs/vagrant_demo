@@ -1,0 +1,4954 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: CameronFIX Status
+Date: Mon, 3 Nov 2008 13:35:11 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01C93DB8.FECCC800"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3350
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C93DB8.FECCC800
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://viphost30:10088/web/SessionSummary.jsp
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>CameronFIX Status</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"><!-- This refreshes the page every 30 seconds-->
+<META http-equiv=3DREFRESH content=3D30;SessionSummary.jsp><LINK =
+media=3Dall=20
+href=3D"http://viphost30:10088/web/cameron.css" rel=3Dstylesheet><!--=0A=
+  The SessionSummary object is the only input to this form.=0A=
+-->
+<META content=3D"MSHTML 6.00.6000.16735" name=3DGENERATOR></HEAD>
+<BODY><!--NAVIGATION-->
+<DIV id=3Dnavwrapper>
+<UL id=3Dnav><!--do not add white space-->
+  <LI><A href=3D"http://viphost30:10088/web/index.jsp">Home</A>=20
+  <LI><A href=3D"http://viphost30:10088/web/CommandLine.jsp">Command =
+Line</A>=20
+  <LI class=3Dlastli><A class=3Dcurrent>Session Summary</A> =
+</LI></UL></DIV><!--END NAVIGATION-->
+<H1>Hub: "APPLONHUBP1" Session Summary </H1><!--=0A=
+  Menu - could have multiple entries.=0A=
+--><!-- removed support for adding sessions=0A=
+<table>=0A=
+  <tr>=0A=
+    <td> <a href=3D"SessionConfig.jsp"> New Session </a> </td>=0A=
+  </tr>=0A=
+  =0A=
+</table>=0A=
+-->
+<FIELDSET><LEGEND>FIX Sessions </LEGEND><!--=0A=
+    This is the table of session summaries.=0A=
+  -->
+<TABLE>
+  <TBODY>
+  <TR><!--  <th> Action </th> -->
+    <TH><A =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D1">Session=20
+      </A></TH>
+    <TH><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D3">Connection =
+
+    </A></TH>
+    <TH>In </TH>
+    <TH>Out </TH>
+    <TH><A =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D4">Blocked=20
+      </A></TH>
+    <TH><A =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D5">Logged On=20
+      </A></TH>
+    <TH><A =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D6">Scheduled=20
+      </A></TH>
+    <TH>Status </TH>
+    <TH><A =
+href=3D"http://viphost30:10088/web/SessionSummary.jsp?si=3D2">FIX=20
+      Version </A></TH>
+    <TH>Msgs </TH></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AAM=
+~NIP42">AAM=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36330 </TD>
+    <TD>1870 </TD>
+    <TD>1869 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DAAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ABB=
+UYPW~NIP42">ABBUYPW=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41311 </TD>
+    <TD>1751 </TD>
+    <TD>1642 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DABBUYPW">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ACQ=
+~NIP40">ACQ=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36662 </TD>
+    <TD>846 </TD>
+    <TD>907 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DACQ">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AIG=
+CRD~NIP42">AIGCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36898 </TD>
+    <TD>1771 </TD>
+    <TD>1771 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DAIGCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AIM=
+~NIP40">AIM=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DAIM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AKA=
+NA~NIP40">AKANA=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37452 </TD>
+    <TD>808 </TD>
+    <TD>851 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DAKANA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AMC=
+EN~NIP41">AMCEN=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>1925 </TD>
+    <TD>1925 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: NORMAL LOGOUT. Time to disconnect has been reached. </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DAMCEN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ANA=
+LYTICRD~NIP42">ANALYTICRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DANALYTICRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ARR=
+OWCRD~NIP42">ARROWCRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DARROWCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ART=
+IO~NIP42">ARTIO=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37000 </TD>
+    <TD>1752 </TD>
+    <TD>1752 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DARTIO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ASB=
+ACRD~NIP42">ASBACRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45700 </TD>
+    <TD>72 </TD>
+    <TD>72 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DASBACRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ASI=
+AN~NIP40">ASIAN=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37012 </TD>
+    <TD>817 </TD>
+    <TD>877 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DASIAN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX1~NIP40ATX1">AUTEX1=20
+      : NIP40ATX1</A> </TD>
+    <TD>/169.141.8.96:8895 </TD>
+    <TD>1242 </TD>
+    <TD>1242 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40AT=
+X1&amp;target=3DAUTEX1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX1~NIP42ATX1">AUTEX1=20
+      : NIP42ATX1</A> </TD>
+    <TD>/169.141.8.96:8895 </TD>
+    <TD>1251 </TD>
+    <TD>1271 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42AT=
+X1&amp;target=3DAUTEX1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX2~NIP40ATX2">AUTEX2=20
+      : NIP40ATX2</A> </TD>
+    <TD>/169.141.8.49:8893 </TD>
+    <TD>2681 </TD>
+    <TD>2682 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40AT=
+X2&amp;target=3DAUTEX2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX2~NIP42ATX2">AUTEX2=20
+      : NIP42ATX2</A> </TD>
+    <TD>/169.141.8.49:8895 </TD>
+    <TD>2685 </TD>
+    <TD>2811 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42AT=
+X2&amp;target=3DAUTEX2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX3~NIP40ATX3">AUTEX3=20
+      : NIP40ATX3</A> </TD>
+    <TD>/169.141.8.60:8894 </TD>
+    <TD>1813 </TD>
+    <TD>1812 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40AT=
+X3&amp;target=3DAUTEX3">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX3~NIP42ATX3">AUTEX3=20
+      : NIP42ATX3</A> </TD>
+    <TD>/169.141.8.60:8894 </TD>
+    <TD>1813 </TD>
+    <TD>1812 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42AT=
+X3&amp;target=3DAUTEX3">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AUT=
+EX4~NIP42ATX4">AUTEX4=20
+      : NIP42ATX4</A> </TD>
+    <TD>/169.141.8.49:8894 </TD>
+    <TD>2683 </TD>
+    <TD>2682 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42AT=
+X4&amp;target=3DAUTEX4">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AXA=
+RIOI~NIP41">AXARIOI=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: 00100000001o8Yc_7749- Automatic End Of Session </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DAXARIOI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AXA=
+RTK~NIP41">AXARTK=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>616 </TD>
+    <TD>616 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: 00100000001o8Yc_7749- Automatic End Of Session </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DAXARTK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AXA=
+RUS~NIP41">AXARUS=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>616 </TD>
+    <TD>616 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: 00100000001o8Yc_7749- Automatic End Of Session </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DAXARUS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~AXA=
+R~NIP41">AXAR=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>793 </TD>
+    <TD>1631 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: 00100000001o8Yc_7749- Automatic End Of Session </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DAXAR">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BEN=
+~NIP41">BEN=20
+      : NIP41</A> </TD>
+    <TD>/147.201.64.230:36422 </TD>
+    <TD>1857 </TD>
+    <TD>1920 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DBEN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BGI=
+TA~NMRA_IOI">BGITA=20
+      : NMRA_IOI</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNMRA_IO=
+I&amp;target=3DBGITA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BGI=
+TD~NMRA_DMA">BGITD=20
+      : NMRA_DMA</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNMRA_DM=
+A&amp;target=3DBGITD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BLP=
+MURA~IOIMURA">BLPMURA=20
+      : IOIMURA</A> </TD>
+    <TD>/160.43.94.158:24135 </TD>
+    <TD>1983 </TD>
+    <TD>1983 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DIOIMURA=
+&amp;target=3DBLPMURA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BLP=
+P~NIP41">BLPP=20
+      : NIP41</A> </TD>
+    <TD>/160.43.94.158:23432 </TD>
+    <TD>1853 </TD>
+    <TD>1853 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DBLPP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BLP=
+~NIPIOI">BLP=20
+      : NIPIOI</A> </TD>
+    <TD>/160.43.94.158:23633 </TD>
+    <TD>1983 </TD>
+    <TD>1983 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIPIOI&=
+amp;target=3DBLP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~BRA=
+NDES~NIP42">BRANDES=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37493 </TD>
+    <TD>1691 </TD>
+    <TD>1691 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DBRANDES">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CAA=
+M~NIP42">CAAM=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37384 </TD>
+    <TD>1708 </TD>
+    <TD>1780 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCAAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CAM=
+CRD~NIP42">CAMCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42164 </TD>
+    <TD>1542 </TD>
+    <TD>1542 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCAMCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CAP=
+GPROG~NIP42">CAPGPROG=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36766 </TD>
+    <TD>895 </TD>
+    <TD>896 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCAPGPROG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CAP=
+G~NIP40">CAPG=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36658 </TD>
+    <TD>906 </TD>
+    <TD>914 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCAPG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CAX=
+TON~NIP40">CAXTON=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>739 </TD>
+    <TD>782 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCAXTON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CCM=
+CRD~NIP42">CCMCRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCCMCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CFA=
+MAP~NIP42">CFAMAP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:35548 </TD>
+    <TD>1997 </TD>
+    <TD>2412 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCFAMAP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CFG=
+~NIP40">CFG=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36668 </TD>
+    <TD>1209 </TD>
+    <TD>1292 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCFG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CLA=
+M~NIP40">CLAM=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCLAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CMG=
+_AS~NIP42">CMG_AS=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37455 </TD>
+    <TD>850 </TD>
+    <TD>849 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCMG_AS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~COG=
+HILL~NIP40">COGHILL=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>460 </TD>
+    <TD>483 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCOGHILL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CON=
+N_TEST41~NIP41">CONN_TEST41=20
+      : NIP41</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DCONN_TEST41">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CON=
+N_TEST42~NIP42">CONN_TEST42=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DCONN_TEST42">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CRM=
+CG~NIP40">CRMCG=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36661 </TD>
+    <TD>906 </TD>
+    <TD>916 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCRMCG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CRM=
+CW~NIP40">CRMCW=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36659 </TD>
+    <TD>905 </TD>
+    <TD>914 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCRMCW">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CRM=
+C~NIP40">CRMC=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCRMC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~CSA=
+M~NIP40">CSAM=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:43381 </TD>
+    <TD>1689 </TD>
+    <TD>1745 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DCSAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~DBA=
+MPG~NIP40">DBAMPG=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36936 </TD>
+    <TD>829 </TD>
+    <TD>884 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DDBAMPG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~DBA=
+M~NIP40">DBAM=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36931 </TD>
+    <TD>830 </TD>
+    <TD>884 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DDBAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~DBZ=
+WRN~NIP40">DBZWRN=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DDBZWRN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~DRE=
+YFUS~NIP42">DREYFUS=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45672 </TD>
+    <TD>78 </TD>
+    <TD>78 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DDREYFUS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~DUQ=
+~NIP40">DUQ=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36823 </TD>
+    <TD>1188 </TD>
+    <TD>1187 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DDUQ">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ENS=
+O~NIP42">ENSO=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36826 </TD>
+    <TD>1188 </TD>
+    <TD>1187 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DENSO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~EPO=
+CHIP~NIP42">EPOCHIP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42126 </TD>
+    <TD>1555 </TD>
+    <TD>1554 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DEPOCHIP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~EVE=
+REST~NIP40">EVEREST=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36832 </TD>
+    <TD>1187 </TD>
+    <TD>1187 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DEVEREST">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~EVE=
+RGREEN~NIP42">EVERGREEN=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42368 </TD>
+    <TD>1451 </TD>
+    <TD>1450 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DEVERGREEN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+CLT1P1~NIP42">F2SCLT1P1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36424 </TD>
+    <TD>2545 </TD>
+    <TD>1876 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SCLT1P1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+CLTINCAP~NIP42">F2SCLTINCAP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41301 </TD>
+    <TD>1640 </TD>
+    <TD>1641 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SCLTINCAP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+CLTINCA~NIP42">F2SCLTINCA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41300 </TD>
+    <TD>1640 </TD>
+    <TD>1641 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SCLTINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+MKT1P1~NIP42">F2SMKT1P1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36421 </TD>
+    <TD>2022 </TD>
+    <TD>2024 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SMKT1P1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+MKT2P1~NIP42">F2SMKT2P1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36060 </TD>
+    <TD>1910 </TD>
+    <TD>1911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SMKT2P1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+MKTHKP1~NIP42">F2SMKTHKP1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36058 </TD>
+    <TD>1910 </TD>
+    <TD>1911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SMKTHKP1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~F2S=
+MKTINCAJP~NIP42">F2SMKTINCAJP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45561 </TD>
+    <TD>132 </TD>
+    <TD>132 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DF2SMKTINCAJP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FAN=
+DCASIA~NIP40">FANDCASIA=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DFANDCASIA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FAN=
+DCCRD~NIP42">FANDCCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38893 </TD>
+    <TD>1661 </TD>
+    <TD>1661 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DFANDCCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FCP=
+T~NIP40">FCPT=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DFCPT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FID=
+ESSA~NIP42">FIDESSA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36655 </TD>
+    <TD>1813 </TD>
+    <TD>2461 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DFIDESSA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FMR=
+B~NIP42">FMRB=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>723 </TD>
+    <TD>723 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DFMRB">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FMR=
+CO~NMRA">FMRCO=20
+      : NMRA</A> </TD>
+    <TD>No </TD>
+    <TD>812 </TD>
+    <TD>812 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: Scheduled logout </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNMRA&am=
+p;target=3DFMRCO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~FRO=
+NTP~NIP40">FRONTP=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36820 </TD>
+    <TD>1188 </TD>
+    <TD>1187 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DFRONTP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GAN=
+DHARA~NIP42">GANDHARA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36813 </TD>
+    <TD>1782 </TD>
+    <TD>1781 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DGANDHARA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GEA=
+M~NIP40">GEAM=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:42746 </TD>
+    <TD>599 </TD>
+    <TD>642 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DGEAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GLF=
+IX~NIP42">GLFIX=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36310 </TD>
+    <TD>1865 </TD>
+    <TD>1872 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DGLFIX">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GLO=
+BE~NIP40">GLOBE=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:41888 </TD>
+    <TD>768 </TD>
+    <TD>833 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DGLOBE">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GLT=
+ASIA~NIP42">GLTASIA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36552 </TD>
+    <TD>917 </TD>
+    <TD>919 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DGLTASIA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GLT=
+~NIP42">GLT=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36546 </TD>
+    <TD>916 </TD>
+    <TD>916 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DGLT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~GMO=
+~NIP40">GMO=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37070 </TD>
+    <TD>817 </TD>
+    <TD>876 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DGMO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HER=
+MES~NIP40">HERMES=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:44113 </TD>
+    <TD>335 </TD>
+    <TD>357 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DHERMES">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HIG=
+HHK~NIP40">HIGHHK=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37022 </TD>
+    <TD>817 </TD>
+    <TD>877 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DHIGHHK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HIG=
+HLSINTL~NIP40">HIGHLSINTL=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37021 </TD>
+    <TD>825 </TD>
+    <TD>877 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DHIGHLSINTL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HKC=
+ORE_GPS~NIP42">HKCORE_GPS=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>1860 </TD>
+    <TD>1860 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DHKCORE_GPS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HSB=
+CAM~NIP42">HSBCAM=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38852 </TD>
+    <TD>819 </TD>
+    <TD>832 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DHSBCAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~HVB=
+LDN~NIP42">HVBLDN=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43807 </TD>
+    <TD>857 </TD>
+    <TD>860 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DHVBLDN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~IED=
+SOPHIS~NIP42">IEDSOPHIS=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:34286 </TD>
+    <TD>2227 </TD>
+    <TD>2231 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DIEDSOPHIS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~IMP=
+AL~NIP42">IMPAL=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42132 </TD>
+    <TD>1691 </TD>
+    <TD>1691 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DIMPAL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+ABN1~NIP42">INCABN1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41923 </TD>
+    <TD>2459 </TD>
+    <TD>1639 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINCABN1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+AJP~NIP42">INCAJP=20
+      : NIP42</A> </TD>
+    <TD>/198.178.37.117:5201 </TD>
+    <TD>111 </TD>
+    <TD>136 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINCAJP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+AP~NIP42">INCAP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41807 </TD>
+    <TD>2268 </TD>
+    <TD>1649 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINCAP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+AUK~NIP42_EUR">INCAUK=20
+      : NIP42_EUR</A> </TD>
+    <TD>/198.178.35.24:29515 </TD>
+    <TD>1422 </TD>
+    <TD>1856 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_E=
+UR&amp;target=3DINCAUK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+A~NIP42">INCA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41806 </TD>
+    <TD>2267 </TD>
+    <TD>1649 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+A~NIP42_DMA">INCA=20
+      : NIP42_DMA</A> </TD>
+    <TD>/198.178.33.155:30755 </TD>
+    <TD>1631 </TD>
+    <TD>1631 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_D=
+MA&amp;target=3DINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+A~NIP42_OBO_NIP">INCA=20
+      : NIP42_OBO_NIP</A> </TD>
+    <TD>/198.178.33.155:30752 </TD>
+    <TD>1972 </TD>
+    <TD>1974 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_O=
+BO_NIP&amp;target=3DINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+A~NIP42_OBO_NSC">INCA=20
+      : NIP42_OBO_NSC</A> </TD>
+    <TD>/198.178.33.155:30754 </TD>
+    <TD>1511 </TD>
+    <TD>1511 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_O=
+BO_NSC&amp;target=3DINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INC=
+A~NIP42_OBO_NSI">INCA=20
+      : NIP42_OBO_NSI</A> </TD>
+    <TD>/198.178.33.155:30753 </TD>
+    <TD>1511 </TD>
+    <TD>1511 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_O=
+BO_NSI&amp;target=3DINCA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~IND=
+US~NIP40">INDUS=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DINDUS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ING=
+ECRD~NIP42">INGECRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41978 </TD>
+    <TD>1607 </TD>
+    <TD>1607 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINGECRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INT=
+VA~NIP40">INTVA=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37024 </TD>
+    <TD>826 </TD>
+    <TD>877 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DINTVA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INV=
+ATL~NIP40">INVATL=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DINVATL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INV=
+CCRD~NIP42">INVCCRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINVCCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INV=
+ESCO~NIP42">INVESCO=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41889 </TD>
+    <TD>1630 </TD>
+    <TD>1876 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DINVESCO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INV=
+HK~NIP40">INVHK=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DINVHK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~INV=
+JP~NIP40">INVJP=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DINVJP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~IRE=
+ACH~NIP42">IREACH=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38892 </TD>
+    <TD>888 </TD>
+    <TD>832 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DIREACH">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ITG=
+A~NIP42">ITGA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:34823 </TD>
+    <TD>1058 </TD>
+    <TD>1057 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DITGA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~JAN=
+USCRD~NIP42">JANUSCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37264 </TD>
+    <TD>1721 </TD>
+    <TD>1721 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DJANUSCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~JAN=
+US~NIP40">JANUS=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DJANUS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~JPM=
+F~NIP42">JPMF=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43824 </TD>
+    <TD>852 </TD>
+    <TD>851 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DJPMF">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~KBC=
+DUB~NIP42">KBCDUB=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43689 </TD>
+    <TD>906 </TD>
+    <TD>907 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DKBCDUB">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LFA=
+M~NIP40">LFAM=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>535 </TD>
+    <TD>570 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DLFAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LGI=
+M~NIP42">LGIM=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43682 </TD>
+    <TD>912 </TD>
+    <TD>911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DLGIM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LMI=
+ECRD~NIP42">LMIECRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36690 </TD>
+    <TD>1802 </TD>
+    <TD>1813 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DLMIECRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LON=
+GV~NIP42">LONGV=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36831 </TD>
+    <TD>892 </TD>
+    <TD>892 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DLONGV">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LOR=
+D~NIP40">LORD=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37527 </TD>
+    <TD>785 </TD>
+    <TD>843 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DLORD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~LSV=
+CRD~NIP42">LSVCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36008 </TD>
+    <TD>1921 </TD>
+    <TD>1921 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DLSVCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MAR=
+SICO~NIP40">MARSICO=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:41940 </TD>
+    <TD>758 </TD>
+    <TD>810 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMARSICO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MCS=
+PCRDC~NIP42">MCSPCRDC=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMCSPCRDC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MET=
+ABIT~NIP42">METABIT=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMETABIT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MFS=
+~NIP40">MFS=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>41 </TD>
+    <TD>43 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMFS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MGS=
+ACRD~NIP42">MGSACRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMGSACRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MIR=
+CRD~NIP42">MIRCRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMIRCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MJW=
+HIT~NIP40">MJWHIT=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>596 </TD>
+    <TD>645 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMJWHIT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MLI=
+M~NIP40">MLIM=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:43370 </TD>
+    <TD>788 </TD>
+    <TD>830 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMLIM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MOO=
+NCAP~NIP42">MOONCAP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37053 </TD>
+    <TD>1750 </TD>
+    <TD>1750 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMOONCAP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MOO=
+N~NIP40">MOON=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMOON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MSA=
+MABO~NIP40">MSAMABO=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMSAMABO">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MSH=
+EDGE~NIP40">MSHEDGE=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DMSHEDGE">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MTB=
+J~NOMU">MTBJ=20
+      : NOMU</A> </TD>
+    <TD>/147.201.64.230:35552 </TD>
+    <TD>996 </TD>
+    <TD>996 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNOMU&am=
+p;target=3DMTBJ">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MWA=
+LIOI~NIP42IOI">MWALIOI=20
+      : NIP42IOI</A> </TD>
+    <TD>No </TD>
+    <TD>889 </TD>
+    <TD>889 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42IO=
+I&amp;target=3DMWALIOI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MWA=
+L~NIP42">MWAL=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>891 </TD>
+    <TD>1010 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMWAL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MWA=
+MASIAIOI~NIP42">MWAMASIAIOI=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36918 </TD>
+    <TD>885 </TD>
+    <TD>885 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMWAMASIAIOI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MWA=
+MASIA~NIP42">MWAMASIA=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD>1: MsgSeqNum too low, expecting 866 but received 6 Logon </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMWAMASIA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~MWA=
+M~NIP42">MWAM=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43957 </TD>
+    <TD>391 </TD>
+    <TD>391 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DMWAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NBI=
+MPACPT~NIP42">NBIMPACPT=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45566 </TD>
+    <TD>68 </TD>
+    <TD>67 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNBIMPACPT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NEO=
+V1~NIP42_1">NEOV1=20
+      : NIP42_1</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: 00100000001o8Xs_4571- Automatic End Of Session </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_1=
+&amp;target=3DNEOV1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NEO=
+V2~NIP42_2">NEOV2=20
+      : NIP42_2</A> </TD>
+    <TD>/147.201.64.230:43940 </TD>
+    <TD>397 </TD>
+    <TD>396 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_2=
+&amp;target=3DNEOV2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NEU=
+BINTL~NIP40">NEUBINTL=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:45200 </TD>
+    <TD>441 </TD>
+    <TD>465 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DNEUBINTL">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NEW=
+TON~NIP42">NEWTON=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37128 </TD>
+    <TD>1739 </TD>
+    <TD>1743 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNEWTON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIH=
+K42P1_1_DMA~NIP42P1_1_DMA">NIHK42P1_1_DMA=20
+      : NIP42P1_1_DMA</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: Manual disconnection from command line </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42P1=
+_1_DMA&amp;target=3DNIHK42P1_1_DMA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIH=
+K42P1_1~NIP42P1_1">NIHK42P1_1=20
+      : NIP42P1_1</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: Manual disconnection from command line </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42P1=
+_1&amp;target=3DNIHK42P1_1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIM=
+CRD~NIP42">NIMCRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNIMCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIP=
+42P2~NIP42P1">NIP42P2=20
+      : NIP42P1</A> </TD>
+    <TD>/147.201.64.230:43531 </TD>
+    <TD>971 </TD>
+    <TD>971 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42P1=
+&amp;target=3DNIP42P2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIP=
+ADVP~LONHUBADVP">NIPADVP=20
+      : LONHUBADVP</A> </TD>
+    <TD>/147.201.64.230:32806 </TD>
+    <TD>2563 </TD>
+    <TD>2571 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DLONHUBA=
+DVP&amp;target=3DNIPADVP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIP=
+IOIP~NIP42">NIPIOIP=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:32807 </TD>
+    <TD>2671 </TD>
+    <TD>2571 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNIPIOIP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIP=
+_ALLOC42P1~NIP42">NIP_ALLOC42P1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36419 </TD>
+    <TD>1851 </TD>
+    <TD>1851 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNIP_ALLOC42P1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NIP=
+_ALLOC44P1~NIP44">NIP_ALLOC44P1=20
+      : NIP44</A> </TD>
+    <TD>/147.201.64.230:36420 </TD>
+    <TD>1851 </TD>
+    <TD>1851 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.4 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP44&a=
+mp;target=3DNIP_ALLOC44P1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NOR=
+THASA~NIP42">NORTHASA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45712 </TD>
+    <TD>69 </TD>
+    <TD>69 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNORTHASA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NOR=
+THLDN~NIP42LDN">NORTHLDN=20
+      : NIP42LDN</A> </TD>
+    <TD>/147.201.64.230:39496 </TD>
+    <TD>1655 </TD>
+    <TD>1655 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42LD=
+N&amp;target=3DNORTHLDN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42C1_1~NIP42">NSC42C1_1=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36433 </TD>
+    <TD>927 </TD>
+    <TD>927 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSC42C1_1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_1~NIP42_1">NSC42_1=20
+      : NIP42_1</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_1=
+&amp;target=3DNSC42_1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_2~NIP42_2">NSC42_2=20
+      : NIP42_2</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_2=
+&amp;target=3DNSC42_2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_3~NIP42_3">NSC42_3=20
+      : NIP42_3</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_3=
+&amp;target=3DNSC42_3">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_CND1~NIP42_CND1">NSC42_CND1=20
+      : NIP42_CND1</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_C=
+ND1&amp;target=3DNSC42_CND1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_DMA~NIP42_DMA">NSC42_DMA=20
+      : NIP42_DMA</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_D=
+MA&amp;target=3DNSC42_DMA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+42_EXP~NIP42_EXP">NSC42_EXP=20
+      : NIP42_EXP</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_E=
+XP&amp;target=3DNSC42_EXP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSC=
+GAEA42~NIP42">NSCGAEA42=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42779 </TD>
+    <TD>636 </TD>
+    <TD>636 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSCGAEA42">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+42~NIP42">NSI42=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSI42">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+A~NIP42">NSIA=20
+      : NIP42</A> </TD>
+    <TD>/147.85.101.42:6800 </TD>
+    <TD>1135 </TD>
+    <TD>1260 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSIA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+C~NIP42">NSIC=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43532 </TD>
+    <TD>971 </TD>
+    <TD>971 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSIC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+D~NIP42">NSID=20
+      : NIP42</A> </TD>
+    <TD>/147.85.101.42:6802 </TD>
+    <TD>977 </TD>
+    <TD>977 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSID">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+P~NIP42">NSIP=20
+      : NIP42</A> </TD>
+    <TD>/147.85.101.42:6801 </TD>
+    <TD>1135 </TD>
+    <TD>1291 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSIP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+_SOPHIS~NIP42">NSI_SOPHIS=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:45397 </TD>
+    <TD>91 </TD>
+    <TD>91 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSI_SOPHIS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NSI=
+~NIP42">NSI=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNSI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NUV=
+EENCRD~NIP42">NUVEENCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37149 </TD>
+    <TD>1740 </TD>
+    <TD>1739 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNUVEENCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~NYF=
+IXEU~NIP42">NYFIXEU=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:34817 </TD>
+    <TD>2113 </TD>
+    <TD>2144 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DNYFIXEU">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~OAK=
+TREE~NIP40">OAKTREE=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36290 </TD>
+    <TD>1253 </TD>
+    <TD>1250 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DOAKTREE">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~OHI=
+OSTRS~NIP40">OHIOSTRS=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36488 </TD>
+    <TD>869 </TD>
+    <TD>922 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DOHIOSTRS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~OPP=
+EN~NIP40">OPPEN=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:45137 </TD>
+    <TD>147 </TD>
+    <TD>159 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DOPPEN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORB=
+ISFUT~NIP42">ORBISFUT=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORBISFUT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORB=
+IS~NIP42">ORBIS=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORBIS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORC=
+MAN_HK~NIP42">ORCMAN_HK=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37141 </TD>
+    <TD>2101 </TD>
+    <TD>2511 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORCMAN_HK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORC=
+MAN~NIP42">ORCMAN=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37065 </TD>
+    <TD>1750 </TD>
+    <TD>1749 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORCMAN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORC=
+_HK~NIP42">ORC_HK=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:34971 </TD>
+    <TD>2081 </TD>
+    <TD>2082 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORC_HK">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ORC=
+~NIP42">ORC=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37066 </TD>
+    <TD>1750 </TD>
+    <TD>1749 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DORC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~PAC=
+42P_1~NIP42P1_1">PAC42P_1=20
+      : NIP42P1_1</A> </TD>
+    <TD>/147.201.64.230:30782 </TD>
+    <TD>2812 </TD>
+    <TD>2811 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42P1=
+_1&amp;target=3DPAC42P_1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~PAN=
+ACRD~NIP42">PANACRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38146 </TD>
+    <TD>1667 </TD>
+    <TD>1667 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DPANACRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~PIC=
+TET~NIP42">PICTET=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38875 </TD>
+    <TD>1661 </TD>
+    <TD>1661 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DPICTET">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~PPA=
+CRD~NIP42">PPACRD=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DPPACRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~PRO=
+SPECT~NIP40">PROSPECT=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DPROSPECT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RCG=
+LLC~NIP42">RCGLLC=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DRCGLLC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RIO=
+E40~NIP40">RIOE40=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36720 </TD>
+    <TD>2001 </TD>
+    <TD>2160 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DRIOE40">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ROR=
+42~NIP42P">ROR42=20
+      : NIP42P</A> </TD>
+    <TD>/147.201.64.230:37471 </TD>
+    <TD>1812 </TD>
+    <TD>1696 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42P&=
+amp;target=3DROR42">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RPC=
+AP~NIP40">RPCAP=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DRPCAP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RPL=
+ON~NIP40">RPLON=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DRPLON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RYL=
+ONDONPT~NIP40">RYLONDONPT=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DRYLONDONPT">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~RYL=
+ONDON~NIP40">RYLONDON=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DRYLONDON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SAN=
+SARDMA~NIP40">SANSARDMA=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37104 </TD>
+    <TD>815 </TD>
+    <TD>874 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DSANSARDMA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SAN=
+SAR~NIP40">SANSAR=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37040 </TD>
+    <TD>821 </TD>
+    <TD>877 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DSANSAR">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SEB=
+AM~NIP40">SEBAM=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DSEBAM">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SPA=
+RX~NIP42">SPARX=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSPARX">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SPB=
+TKY1_NIP_1~NIP42_SPB_1">SPBTKY1_NIP_1=20
+      : NIP42_SPB_1</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42_S=
+PB_1&amp;target=3DSPBTKY1_NIP_1">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STN=
+~NIP40">STN=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36967 </TD>
+    <TD>879 </TD>
+    <TD>884 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DSTN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STO=
+RMCLTH1P~NIP42">STORMCLTH1P=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36061 </TD>
+    <TD>1910 </TD>
+    <TD>1911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSTORMCLTH1P">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STO=
+RMCLTH2P~NIP42">STORMCLTH2P=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:42837 </TD>
+    <TD>1251 </TD>
+    <TD>1251 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSTORMCLTH2P">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STO=
+RMCLTH3P~NIP42">STORMCLTH3P=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36059 </TD>
+    <TD>1909 </TD>
+    <TD>1911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSTORMCLTH3P">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STO=
+RMMKTH1P~NIP42">STORMMKTH1P=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36425 </TD>
+    <TD>1850 </TD>
+    <TD>1851 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSTORMMKTH1P">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~STO=
+RMMKTH2P~NIP42">STORMMKTH2P=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36057 </TD>
+    <TD>1909 </TD>
+    <TD>1911 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSTORMMKTH2P">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SUS=
+QUEHANNA~NIP42">SUSQUEHANNA=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>696 </TD>
+    <TD>696 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DSUSQUEHANNA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~SWI=
+P~NIP40">SWIP=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:43939 </TD>
+    <TD>375 </TD>
+    <TD>397 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DSWIP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TAC=
+CRD~NIP42">TACCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37484 </TD>
+    <TD>1692 </TD>
+    <TD>1691 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTACCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TAN=
+TALLON~NIP42">TANTALLON=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTANTALLON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TAS=
+B~NIP42">TASB=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36660 </TD>
+    <TD>1812 </TD>
+    <TD>1811 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTASB">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TES=
+TADV~TESTADV">TESTADV=20
+      : TESTADV</A> </TD>
+    <TD>/147.201.64.230:32804 </TD>
+    <TD>2563 </TD>
+    <TD>2571 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DTESTADV=
+&amp;target=3DTESTADV">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TES=
+TIOI~TESTIOI">TESTIOI=20
+      : TESTIOI</A> </TD>
+    <TD>/147.201.64.230:32808 </TD>
+    <TD>2563 </TD>
+    <TD>2588 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DTESTIOI=
+&amp;target=3DTESTIOI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~THL=
+S~NIP40">THLS=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>555 </TD>
+    <TD>372 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DTHLS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~THO=
+RNBURG~NIP42">THORNBURG=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37041 </TD>
+    <TD>1751 </TD>
+    <TD>1751 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTHORNBURG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TIE=
+DCRD~NIP42">TIEDCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37100 </TD>
+    <TD>1746 </TD>
+    <TD>1745 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTIEDCRD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TOR=
+A_ASIA2~NIP42">TORA_ASIA2=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTORA_ASIA2">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TOR=
+A_ASIA~NIP42">TORA_ASIA=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>11: java.io.IOException: End of message stream </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTORA_ASIA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TOR=
+A~NIP42">TORA=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:37068 </TD>
+    <TD>875 </TD>
+    <TD>875 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTORA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TRA=
+XIS~NIP40">TRAXIS=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:45832 </TD>
+    <TD>7 </TD>
+    <TD>7 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DTRAXIS">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TRO=
+WE~NIP40">TROWE=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37208 </TD>
+    <TD>816 </TD>
+    <TD>867 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DTROWE">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TTI=
+N~NIP42">TTIN=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>714 </TD>
+    <TD>713 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>1: Scheduled logout </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTTIN">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TUD=
+OR~NIP42">TUDOR=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:38115 </TD>
+    <TD>1826 </TD>
+    <TD>1722 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTUDOR">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TUF=
+TON~NIP42">TUFTON=20
+      : NIP42</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>y </TD>
+    <TD></TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTUFTON">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TWA=
+RE~NIP42">TWARE=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36250 </TD>
+    <TD>945 </TD>
+    <TD>942 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTWARE">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TWG=
+FNMIOI~NIP42">TWGFNMIOI=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:31935 </TD>
+    <TD>1323 </TD>
+    <TD>1344 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DTWGFNMIOI">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~TWG=
+FNMJP~NIP41">TWGFNMJP=20
+      : NIP41</A> </TD>
+    <TD>/147.201.64.230:31934 </TD>
+    <TD>1323 </TD>
+    <TD>1343 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.1 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP41&a=
+mp;target=3DTWGFNMJP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ULL=
+INKNET_PROD~NIP42">ULLINKNET_PROD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:36319 </TD>
+    <TD>1872 </TD>
+    <TD>1948 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DULLINKNET_PROD">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~UMJ=
+~NIP40">UMJ=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>0 </TD>
+    <TD>0 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD></TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DUMJ">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~UNI=
+G~NIP42">UNIG=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:43826 </TD>
+    <TD>850 </TD>
+    <TD>850 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DUNIG">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~VIK=
+ING~NIP40">VIKING=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:36785 </TD>
+    <TD>1192 </TD>
+    <TD>1191 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DVIKING">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~WAN=
+GERJP~NIP40">WANGERJP=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>679 </TD>
+    <TD>722 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DWANGERJP">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~WAN=
+GERSA~NIP40">WANGERSA=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>680 </TD>
+    <TD>743 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DWANGERSA">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~WAN=
+GERTW~NIP40">WANGERTW=20
+      : NIP40</A> </TD>
+    <TD>No </TD>
+    <TD>680 </TD>
+    <TD>722 </TD>
+    <TD>n </TD>
+    <TD>No </TD>
+    <TD>n </TD>
+    <TD>2: told to stop </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DWANGERTW">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~WMC=
+~NIP40">WMC=20
+      : NIP40</A> </TD>
+    <TD>/147.201.64.230:37025 </TD>
+    <TD>1746 </TD>
+    <TD>1754 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.0 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP40&a=
+mp;target=3DWMC">logs</A>=20
+    </TD></TR>
+  <TR><!--=0A=
+http://localhost:8080/web/play/form2/form2.jsp?name=3Ddfdf&email=3Ddfdf=0A=
+-->
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SessionStatus.jsp?cp=3DAPPLONHUBP1~ZIF=
+FCRD~NIP42">ZIFFCRD=20
+      : NIP42</A> </TD>
+    <TD>/147.201.64.230:41508 </TD>
+    <TD>1637 </TD>
+    <TD>1636 </TD>
+    <TD>n </TD>
+    <TD>on </TD>
+    <TD>y </TD>
+    <TD>0 </TD>
+    <TD>4.2 </TD>
+    <TD><A=20
+      =
+href=3D"http://viphost30:10088/web/SelectSessionLogs.jsp?sender=3DNIP42&a=
+mp;target=3DZIFFCRD">logs</A>=20
+    </TD></TR></TBODY></TABLE></FIELDSET> </BODY></HTML>
+
+------=_NextPart_000_0000_01C93DB8.FECCC800
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://viphost30:10088/web/cameron.css
+
+BODY {
+	BACKGROUND-POSITION: 97% 10px; FONT-SIZE: 11px; BACKGROUND-IMAGE: =
+url(camsyslogo.gif); MARGIN: 10px 15px 15px; LINE-HEIGHT: 15px; =
+BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: verdana, arial, helvetica, =
+sans-serif; BACKGROUND-COLOR: #fff
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: =
+0px
+}
+A:link {
+	COLOR: blue
+}
+A:visited {
+	COLOR: blue
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: =
+15px; PADDING-BOTTOM: 10px; MARGIN: 0px 0px 25px; COLOR: #676055; =
+PADDING-TOP: 35px; BORDER-BOTTOM: #cd1d19 2px solid
+}
+TABLE {
+	BORDER-RIGHT: #999 1px; BORDER-TOP: #999 1px; MARGIN: 5px 0px 10px; =
+BORDER-LEFT: #999 1px; BORDER-BOTTOM: #999 1px
+}
+TH {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #999 1px =
+solid; PADDING-LEFT: 10px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; =
+VERTICAL-ALIGN: top; BORDER-LEFT: #999 1px solid; COLOR: #666; =
+LINE-HEIGHT: 15px; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid; =
+BACKGROUND-COLOR: #eee; TEXT-ALIGN: left
+}
+TD {
+	BORDER-RIGHT: #999 1px; PADDING-RIGHT: 10px; BORDER-TOP: #999 1px; =
+PADDING-LEFT: 10px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; =
+VERTICAL-ALIGN: top; BORDER-LEFT: #999 1px; LINE-HEIGHT: 15px; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px
+}
+TD.logs {
+	BORDER-RIGHT: #999 1px; PADDING-RIGHT: 0px; BORDER-TOP: #999 1px; =
+PADDING-LEFT: 0px; FONT-SIZE: 10px; PADDING-BOTTOM: 3px; VERTICAL-ALIGN: =
+top; BORDER-LEFT: #999 1px; LINE-HEIGHT: 15px; PADDING-TOP: 3px; =
+BORDER-BOTTOM: #999 1px
+}
+TD.label {
+	BORDER-RIGHT: #999 1px; PADDING-RIGHT: 10px; BORDER-TOP: #999 1px; =
+PADDING-LEFT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 11px; PADDING-BOTTOM: =
+5px; VERTICAL-ALIGN: top; BORDER-LEFT: #999 1px; LINE-HEIGHT: 15px; =
+PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px; TEXT-ALIGN: right
+}
+FIELDSET {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: =
+0px 0px 10px; PADDING-TOP: 10px
+}
+LEGEND {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; MARGIN: 0px; COLOR: #676055
+}
+FORM {
+	MARGIN: 0px
+}
+DIV.errorMessage {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: red
+}
+DIV.errorDump {
+	BORDER-RIGHT: #999 1px; BORDER-TOP: #999 1px; BORDER-LEFT: #999 1px; =
+BORDER-BOTTOM: #999 1px; BACKGROUND-COLOR: #eee
+}
+#navwrapper {
+	CLEAR: both; Z-INDEX: 5; FLOAT: right; POSITION: relative; TOP: 65px; =
+BACKGROUND-COLOR: transparent
+}
+#nav {
+	FONT-SIZE: 11px; COLOR: #000; LINE-HEIGHT: 15px; FONT-FAMILY: verdana, =
+arial, helvetica, sans-serif
+}
+#nav LI {
+	BORDER-RIGHT: #c30 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #c30 0px; =
+DISPLAY: inline; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; MARGIN: 0px; =
+BORDER-LEFT: #c30 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #c30 0px; =
+LIST-STYLE-TYPE: none
+}
+#nav LI.lastli {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+#nav LI A {
+	FONT-WEIGHT: normal; MARGIN: 0px; TEXT-DECORATION: none
+}
+#nav LI A:hover {
+	COLOR: #726359
+}
+#nav LI A.current {
+	FONT-WEIGHT: normal; COLOR: #c30
+}
+TR.new {
+	BACKGROUND-COLOR: #ddeeff
+}
+TR.done {
+	BACKGROUND-COLOR: #ffffaa
+}
+TR.filled {
+	BACKGROUND-COLOR: #aaffaa
+}
+TR.partfilled {
+	BACKGROUND-COLOR: #aaaaff
+}
+TR.rejected {
+	BACKGROUND-COLOR: #ffaaff
+}
+TR.cancelled {
+	BACKGROUND-COLOR: #ffaaaa
+}
+TR.replaced {
+	BACKGROUND-COLOR: #aaffff
+}
+TR.plain0 {
+	BACKGROUND-COLOR: #dddddd
+}
+TR.plain1 {
+	BACKGROUND-COLOR: #eeeeee
+}
+TR.pending {
+	BACKGROUND-COLOR: #ffaaaa
+}
+
+------=_NextPart_000_0000_01C93DB8.FECCC800--

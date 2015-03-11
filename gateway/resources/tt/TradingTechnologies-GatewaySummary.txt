@@ -1,0 +1,8 @@
+Service Area,Status,IPAddress
+<!>multicastGroup,239.98.98.10
+<!>router,TTM
+<!>routerVersion,1.1.16.123
+<!>apiConnectionsPort,10200
+<!>lofFileDate,22/07/2005
+LANPRUCORE_8900,Primary,48.140.44.124
+LANPRUCORE_8901,Primary,48.140.44.124

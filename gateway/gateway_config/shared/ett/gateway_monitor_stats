@@ -1,0 +1,1079 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2013-07-29 15:49:26 by apage on ITRSPC107-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.31.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.6-130308/gateway.xsd">
+	<types>
+		<type name="Gateway">
+			<sampler ref="Gateway Client Connection"/>
+			<sampler ref="Gateway Gateway Data "/>
+			<sampler ref="Gateway Includes"/>
+			<sampler ref="Gateway Managed Entities"/>
+			<sampler ref="Gateway Probe Data"/>
+			<sampler ref="Gateway Severity Count"/>
+			<sampler ref="Gateway Snooze Data"/>
+			<sampler ref="Gateway User Assignement"/>
+			<sampler ref="Netprobe Processes"/>
+			<sampler ref="Gateway Processes"/>
+			<sampler ref="Logs Netprobe"/>
+			<sampler ref="Logs Gateway"/>
+		</type>
+	</types>
+	<samplers>
+		<sampler name="Netprobe Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<sampleInterval>
+				<data>60</data>
+			</sampleInterval>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Netprobe 8700"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8701"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8702"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8703"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8800"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8801"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8802"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8803"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8900"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8901"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8902"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 8903"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9000"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9001"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9002"/>
+						</process>
+						<process>
+							<processDescriptor ref="Netprobe 9003"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<sampler name="Gateway Processes">
+			<var-group>
+				<data>Processes</data>
+			</var-group>
+			<sampleInterval>
+				<data>60</data>
+			</sampleInterval>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<processDescriptor ref="Gateway"/>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<samplerGroup name="gateway">
+			<sampler name="Gateway Client Connection">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-clientConnectionData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Gateway Data ">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-gatewayData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Includes">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-includesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Managed Entities">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-managedEntitiesData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Probe Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-probeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Severity Count">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-severityCount/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway Snooze Data">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-snoozeData/>
+				</plugin>
+			</sampler>
+			<sampler name="Gateway User Assignement">
+				<var-group>
+					<data>Gateway</data>
+				</var-group>
+				<plugin>
+					<Gateway-userAssignmentData/>
+				</plugin>
+			</sampler>
+			<samplerGroup name="Logs">
+				<sampler name="Logs Netprobe">
+					<var-group>
+						<data>Logs</data>
+					</var-group>
+					<sampleInterval>
+						<data>2</data>
+					</sampleInterval>
+					<plugin>
+						<fkm>
+							<files>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8700"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8701"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8702"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8703"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8800"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8801"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8802"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8803"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8900"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8901"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8902"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 8903"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9000"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9001"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9002"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<processDescriptor ref="Netprobe 9003"/>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+				<sampler name="Logs Gateway">
+					<var-group>
+						<data>Logs</data>
+					</var-group>
+					<plugin>
+						<fkm>
+							<files>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/ett_CN.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/ett_UK.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/ett_US.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/market_data_CN.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/market_data_US.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/logs/market_data_UK.log</data>
+										</filename>
+									</source>
+									<tables>
+										<table>
+											<severity>fail</severity>
+											<keyTable>
+												<fkmTable ref="FKM FAIL Netprobe"/>
+											</keyTable>
+										</table>
+									</tables>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+	</samplers>
+	<commands>
+		<command name="dir">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity</target>
+			</targets>
+			<userCommand>
+				<type>script</type>
+				<runLocation>netprobe</runLocation>
+				<args>
+					<arg>
+						<static>ls -l</static>
+					</arg>
+				</args>
+				<enablePassword>true</enablePassword>
+			</userCommand>
+		</command>
+	</commands>
+	<rules>
+		<ruleGroup name="Gateway">
+			<rule name="Process Count">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Netprobe Processes&quot;)][(@type=&quot;Gateway&quot;)]/dataview[(@name=&quot;Netprobe Processes&quot;)]/rows/row/cell[(@column=&quot;instanceCount&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<equal>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>1</string>
+						</equal>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+			<rule name="fkm probes">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Logs netprobe&quot;)][(@type=&quot;Gateway&quot;)]/dataview[(@name=&quot;Logs netprobe&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<equal>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>INACTIVE</string>
+						</equal>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>undefined</severity>
+							</update>
+						</transaction>
+						<if>
+							<equal>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<string>OK</string>
+							</equal>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+		</ruleGroup>
+	</rules>
+	<staticVars>
+		<processDescriptors>
+			<processDescriptor name="Webserver">
+				<alias>
+					<data>Webserver Argon</data>
+				</alias>
+				<ID>
+					<searchString>
+						<data>/opt/geneos/binaries/webserver/webserver/JRE/bin/java</data>
+					</searchString>
+				</ID>
+				<logFile>
+					<data>/opt/geneos/logs/WebDashboard.log</data>
+				</logFile>
+			</processDescriptor>
+			<processDescriptorGroup name="Netprobe">
+				<processDescriptor name="Netprobe 8700">
+					<alias>
+						<data>Netprobe Linux 8700 MDT UK 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8700</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8700</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8700</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8700-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8701">
+					<alias>
+						<data>Netprobe Linux 8701 ETT UK 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8701</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8701</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8701</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8701-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8702">
+					<alias>
+						<data>Netprobe Linux 8702 ETT UK 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8702</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8702</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8702</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8702-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8703">
+					<alias>
+						<data>Netprobe Linux 8703 MDT UK 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8703</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8703</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8703</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8703-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8800">
+					<alias>
+						<data>Netprobe Linux 8800 MDT NOLAND 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8800</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8800</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8800</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8800-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="THIRD"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8801">
+					<alias>
+						<data>Netprobe Linux 8801 ETT NOLAND 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8801</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8801</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8801</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8801-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FOURTH"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8802">
+					<alias>
+						<data>Netprobe Linux 8802 ETT NOLAND 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8802</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8802</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8802</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8802-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8803">
+					<alias>
+						<data>Netprobe Linux 8803 MDT NOLAND 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8803</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8803</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8803</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8803-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8900">
+					<alias>
+						<data>Netprobe Linux 8900 MDT US 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8900</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8900</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8900</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8900-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8902">
+					<alias>
+						<data>Netprobe Linux 8902 ETT US 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8902</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8902</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8902</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8902-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8901">
+					<alias>
+						<data>Netprobe Linux 8801 MDT US 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8901</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8901</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8901</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8901-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="SECOND"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 8903">
+					<alias>
+						<data>Netprobe Linux 8903 MDT US 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 8903</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 8903</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 8903</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-8903-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9000">
+					<alias>
+						<data>Netprobe Linux 9000 MDT CN 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9000</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9000</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9000</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9000-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="THIRD"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9001">
+					<alias>
+						<data>Netprobe Linux 9001 ETT CN 1</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9001</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9001</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9001</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9001-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>1</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>1</data>
+						</setBackTime>
+						<activeTime ref="FOURTH"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9002">
+					<alias>
+						<data>Netprobe Linux 9002 ETT CN 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9002</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9002</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9002</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9002-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+				<processDescriptor name="Netprobe 9003">
+					<alias>
+						<data>Netprobe Linux 9003 MDT CN 2</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/netprobe/netprobe/netprobe.linux standard 9003</data>
+						</searchString>
+						<rules>exact</rules>
+					</ID>
+					<start>
+						<data>/opt/geneos/scripts/netprobe start -port 9003</data>
+					</start>
+					<stop>
+						<data>/opt/geneos/scripts/netprobe stop -port 9003</data>
+					</stop>
+					<logFile>
+						<data>/opt/geneos/logs/netprobe-9003-log</data>
+					</logFile>
+					<restart>
+						<numberOfTries>
+							<data>3</data>
+						</numberOfTries>
+						<setBackTime>
+							<data>4</data>
+						</setBackTime>
+						<activeTime ref="FIRST"/>
+					</restart>
+				</processDescriptor>
+			</processDescriptorGroup>
+			<processDescriptorGroup name="Gateway">
+				<processDescriptor name="Gateway">
+					<alias>
+						<data>Gateway</data>
+					</alias>
+					<ID>
+						<searchString>
+							<data>/opt/geneos/binaries/gateway/gateway/gateway2.linux*</data>
+						</searchString>
+					</ID>
+				</processDescriptor>
+			</processDescriptorGroup>
+		</processDescriptors>
+	</staticVars>
+</gateway>

@@ -1,0 +1,5 @@
+interfaceName,ipAddress,ipv6Address,status,percentCollisions,percentSendErrors,percentRecvErrors,packetSendRate,packetRecvRate,cardSpeed,duplex,kbyteSendRate,kbyteReceiveRate,packetSendDrop,packetReceiveDrop
+eth0,192.168.202.128,fe80::20c:29ff:fefe:2143/64,OK,0,0,0,0.9,3.9,1000 mbits/sec,Full,0.90 kbytes/sec,0.03 kbytes/sec,0,0,
+eth1,10.1.1.42,fe80::20c:29ff:fefe:2143/64,OK,0,0,0,0.3,0.4,1000 mbits/sec,Full,0.30 kbytes/sec,0.03 kbytes/sec,0,0,
+eth2,224.32.21.97,fe80::20c:29ff:fefe:2143/64,OK,0,0,0,0.6,2.5,1000 mbits/sec,Full,0.60 kbytes/sec,0.03 kbytes/sec,0,0,
+

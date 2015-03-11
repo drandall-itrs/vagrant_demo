@@ -1,0 +1,13 @@
+Item,Value
+Config Status,Enabled (Primary)
+Maximum Disk Usage,150000
+Operational Status,AD-Active
+Datapath Status,Up
+Synchronization Status,Synced
+Spool Utilization (%) - Messages,0.00
+Spool Utilization - ADB,14.7093
+Spool Utilization - Disk,0.00983429
+Spool Utilization - Total,14.7191
+Messages Spooled - ADB,10538
+Messages Spooled - Disk,2
+Messages Spooled - Total,10540

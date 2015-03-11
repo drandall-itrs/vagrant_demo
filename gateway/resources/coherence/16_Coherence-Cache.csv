@@ -1,0 +1,15 @@
+ID,Node,Units,Size,PersistenceType,Service,Role,MemberName,Host,
+<!>Cluster,ITRS:Project Management
+<!>Connection,192.168.10.20:5003
+itrs-small#4,4,1722,1722,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-small#8,8,1698,1698,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-small#7,7,1738,1738,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-small#5,5,1653,1653,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-small#2,2,1716,1716,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-small#1,1,1713,1713,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#2,2,2,2,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#7,7,4,4,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#4,4,5,5,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#1,1,2,2,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#8,8,0,0,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,
+itrs-large#5,5,3,3,NONE,DistributedCache,CacheServer,n/a,/192.168.10.20,

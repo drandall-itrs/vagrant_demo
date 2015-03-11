@@ -1,0 +1,2 @@
+group:Host,address,rerequestRate,averageRerequestRate,totalRerequestRate,kbitReceiveRate,byteReceiveRate,balance
+RMDS:lon503,10.1.21.198,5.09 %,6.40 %,4.85 %,37.58,4810.72,100.0 %

@@ -1,0 +1,8 @@
+CNPI,status,time,timestamp,partnerCNE,trapSocket,numTrapsFwd,statusDetails
+<!>numCNPIs,1
+<!>numTrapsFwd,11551
+<!>numErrors,0
+<!>numWarnings,0
+<!>time,1367312503
+<!>timestamp,Tue Apr 30 10:01:43 2013
+CN:CorvilNet,OK,1367288366,Tue Apr 30 03:19:26 2013,195.27.3.163,192.168.50.206:5556,11551,

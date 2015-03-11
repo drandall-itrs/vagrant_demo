@@ -1,0 +1,5 @@
+connectionID,hostname,username,startTime,upTime,type,isAdmin,clientID,sessionCount,consumerCount,producerCount,clientVersion,isXA,isFT,isStarted,
+<!>totalConnections,3
+2,vmfedora.LDN,admin,Sun May 17 21:55:50,11:27:54,QUEUE,yes,,1,1,1,4.4.16.0,no,no,yes,
+3,vmfedora.LDN,admin,Sun May 17 21:55:50,11:27:54,QUEUE,no,,1,0,0,4.4.16.0,no,no,no,
+4,vmfedora.LDN,admin,Sun May 17 21:55:51,11:27:53,TOPIC,no,,1,0,0,4.4.16.0,no,no,no,

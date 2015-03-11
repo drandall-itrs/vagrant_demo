@@ -1,0 +1,3 @@
+name,type,uncommitted,url,accessible,capacity,Free Space
+ITRSNAS02-CWDEVCOPIES,NFS,102412046336,/vmfs/volumes/fd833b2d-34d756b0,true,1932226863104,199856627712
+datastore1,VMFS,382836699136,/vmfs/volumes/4d359156-4306ba26-36e6-001517fda6cd,true,993479622656,4032823296

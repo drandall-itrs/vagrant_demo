@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance">
+
+  <Comment>Make sure shared object is defined in the SharedObjects tag</Comment>
+  <Comment>Make sure shared object is part of the LD_LIBRARY_PATH</Comment>
+  <Comment>Use the IncludeFile to add this config file to the app in which it is used</Comment>
+
+  <Parameter>
+     <Name>SharedObjects</Name>
+     <Value>papastats.so</Value>
+  </Parameter>
+
+  <!-- Overall configuration parameters -->
+    <Parameter>
+        <Name>PapaStatsPublish</Name>
+        <Value>true</Value>
+        <Comment>Enables publishing stats as admin message</Comment>
+    </Parameter>
+    <Parameter>
+        <Name>PapaStatsPublishTopic</Name>
+        <Value>ADMIN.$c.$f.$h.$t</Value>
+        <Comment>Symbol under which to publish messages</Comment>
+    </Parameter>
+
+  <Parameter>
+    <Name>PapaStats</Name>
+    <Value>true</Value>
+    <Comment>Required to enable papastats</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsInterval</Name>
+    <Value>10</Value>
+    <Comment>How often to log stats</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsPublishInterval</Name>
+    <Value>1</Value>
+    <Comment>How often to publish stats</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMilliTimeStamps</Name>
+    <Value>false</Value>
+    <Comment>Use milli- and microsecond time stamps if available</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsIncomingTimeField</Name>
+    <Value>wSrcTime</Value>
+    <Comment>Field containing "from" time for latency calculations</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsOutgoingTimeField</Name>
+    <Value>wPubTime</Value>
+    <Comment>Field containing "to" time for latency calculations</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsUseLwp</Name>
+    <Value>true</Value>
+    <Comment>
+      Total all lwp used by process. If CPU calcuations seem to be wrong (more
+      than 100% or don't add up with idle time), try setting this to false.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsLatencyFrequency</Name>
+    <Value>100</Value>
+    <Comment>How often to check messages for latency</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsUseFilteredLineData</Name>
+    <Value>false</Value>
+    <Comment>Count only those messages which are actually processed by a message handler.</Comment>
+  </Parameter>
+
+  <!-- Output controls -->
+
+  <Parameter>
+    <Name>PapaStatsMessagesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of messages received per interval</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMaxMessagesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display max number of messages received during any interval.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsTotalMessagesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display total number of messages received since starting.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMessagesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of messages sent per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMaxMessagesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display max number of messages sent during any interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsTotalMessagesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display total number of messages sent since starting.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsBytesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of bytes received per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMaxBytesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display max number of bytes received during any interval.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsTotalBytesReceivedDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display total number of bytes received since starting.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsBytesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of bytes sent per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMaxBytesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display max number of byte sent during any interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsTotalBytesSentDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display total number of bytes sent since starting.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsRecordUpdatesDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of record updates per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsOrderBookUpdatesDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of order book updates per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsCpuTimeDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display CPU usage (in CPU seconds) per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsPercentageCpuDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display percentage of total available CPU consumed by feed handler.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsPercentagePerCpuDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display (log only) percentage of each CPU being used by all processes in
+      the system.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsSystemIdleDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display CPU idle percentage per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMemoryDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display resident memory size at the end of every interval.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsVsizeDisplay</Name>
+    <Value>true</Value>
+    <Comment>
+      Display total process vsize at the end of every interval.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsSystemMemoryDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display percentage of total system memory in use.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsSystemSwapDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display percentage of total system swap in use.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsAverageLatencyDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display average message latency.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsMaxLatencyDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display maximum message latency per interval.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsDroppedMessagesDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of dropped messages detected.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsSubscriptionRequestsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of subscription requests received.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsGroupRequestsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Report on group subscription requests.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsBookRequestsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Report on orderbook subscription requests.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsRecapsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of recaps sent.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsInitialsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display number of initial images sent.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsTimeZone</Name>
+    <Value></Value>
+    <Comment>Use this timezone for timestamps in log file.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsDisplayInterval</Name>
+    <Value>false</Value>
+    <Comment>Display the interval being used.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsActiveSymbolsDisplay</Name>
+    <Value>true</Value>
+    <Comment>Display the number of symbols currently subscribed.</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsPeakInterval</Name>
+    <Value>0</Value>
+    <Comment>Display the peak messages and CPU usage for every PapaStatsPeakInterval interval during each reporting interval. Value is in seconds.</Comment>
+  </Parameter>
+
+  <!-- Logging-specific parameters -->
+
+  <Parameter>
+    <Name>PapaStatsFile</Name>
+    <Value>papastats.csv</Value>
+    <Comment>If set, use this file for papastats metrics logging</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsFileRollRows</Name>
+    <Value>10000</Value>
+    <Comment>
+      Roll metrics log file after this many rows have been written.
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsColumnSeparator</Name>
+    <Value></Value>
+    <Comment>
+      Use this as the column separator. If unset, default is tab
+    </Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsLogTimeInMilliseconds</Name>
+    <Value>false</Value>
+    <Comment>Display timestamps in papastats log file with milliseconds.</Comment>
+  </Parameter>
+
+  <!-- Publishing-specific parameters -->
+
+  <Parameter>
+    <Name>PapaStatsPublish</Name>
+    <Value>false</Value>
+    <Comment>Whether to publish papastats</Comment>
+  </Parameter>
+
+  <Parameter>
+    <Name>PapaStatsPublishTopic</Name>
+    <Value>ADMIN.$c.$f.$h.$t</Value>
+    <Comment>The symbol used to publish papastats information</Comment>
+  </Parameter>
+
+</config>

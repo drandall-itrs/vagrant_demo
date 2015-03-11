@@ -1,0 +1,15 @@
+Name,Value,Delta
+Current TCP connections,5,0
+Requests in current interval,1,0
+Current requests in the queue,2,0
+Requests timed out for the day,0,0
+Average response time for a request,198 ms,0 ms
+Unique securities currently subscribed,31,0
+Total subscriptions,139,0
+Tick messages received,1536,0
+Tick messages sent,1637,0
+Tick received,5116,0
+Tick sent,5191,0
+Tick bytes sent,197732,0
+Slow readers,0,0
+Ticks lost by slow readers,0,0

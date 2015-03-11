@@ -1,0 +1,3 @@
+Remote Name,Connection,Local Type,Remote Type,State,Label,Address,Port,Local ID,Remote ID
+transformer1,Incoming,Broadcast,Active,UP,transformer1,127.0.0.1,47466,101,102
+demosrc-nysupsvr10,Incoming,Broadcast,Active,UP,DemoDataSource1,127.0.0.1,47484,101,103

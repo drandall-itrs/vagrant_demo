@@ -1,0 +1,6 @@
+serviceName,servicePort,turnaroundTime,status,failurePercent
+<!>targetNode,itrspc107
+<!>targetAddress,192.168.10.216
+<!>localInterface,ge0
+<!>sourceNode,itrsops
+ICMP_ECHO,0,0.91 ms,REACHABLE,0.00

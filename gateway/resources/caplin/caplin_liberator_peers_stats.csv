@@ -1,0 +1,23 @@
+stat,count-read,rate-read,count-read (since reset),count-written,rate-written,count-written (since reset)
+<!>Identifier,global
+<!>Monitoring Interval,0
+<!>active-subscriptions-count,0
+<!>active-subscriptions-count-since-reset,0
+<!>active-subscriptions-rate,0
+<!>rogue-update-count,0
+<!>rogue-update-count-since-reset,0
+<!>rogue-update-rate,0
+messages,1013620,4,1013620,33792,0.13333334,33792
+deleteobject,0,0,0,0,0,0
+unavailable,0,0,0,0,0,0
+info,0,0,0,3,0,3
+status,0,0,0,0,0,0
+heartbeats,16896,0.06666667,16896,33789,0.13333334,33789
+bytes,94211596,370.86667,94211596,135222,0.53333336,135222
+updates,1013620,4,1013620,0,0,0
+requests,0,0,0,0,0,0
+discards,0,0,0,0,0,0
+nodatas,0,0,0,0,0,0
+notfound,0,0,0,0,0,0
+readdeny,0,0,0,0,0,0
+writedeny,0,0,0,0,0,0

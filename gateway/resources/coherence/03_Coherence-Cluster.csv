@@ -1,0 +1,2 @@
+ClusterName,ClusterSize,Running,OldestMemberId,LiceseMode,RefreshPolicy
+PS-EMEA-PROD,53,true,1,Development,refresh-ahead

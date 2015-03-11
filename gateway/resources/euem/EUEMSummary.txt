@@ -1,0 +1,7 @@
+scenario,samplingStatus,duration,numSteps,stepsInErr,active,lastExecTime,lastSucExTime,
+<!>samplingStatus,OK
+<!>totalScenarios,2
+<!>scenariosPassed,2
+<!>scenariosInError,0
+ITRSGroupSite,OK,10.117 s,7,0,ACTIVE,Thu Oct 18 05:46:32.352 2012,Thu Oct 18 05:46:32.352 2012,
+ITRSGroupSiteNODetail,OK,11.168 s,7,0,ACTIVE,Thu Oct 18 05:46:45.460 2012,Thu Oct 18 05:46:45.460 2012,

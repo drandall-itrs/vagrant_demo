@@ -1,0 +1,5 @@
+dbSpace,totalPages,pagesUsed,pagesFree,percentFreeSpace,percentUtilisation
+cdsdbs,1000000,88336,911664,91.17%,8.83%
+logsdbs,2000000,990056,1009944,50.50%,49.50%
+rootdbs,1000000,12777,987223,98.72%,1.28%
+

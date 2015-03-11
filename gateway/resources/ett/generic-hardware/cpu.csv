@@ -1,0 +1,11 @@
+cpu,type,state,clockSpeed,percentUtilisation,percentUserTime,percentKernelTime,percentWaitTime,percentIdle
+<!>numOnlineCpus,4
+<!>loadAverage1Min,0.00
+<!>loadAverage5Min,0.00
+<!>loadAverage15Min,0.00
+<!>numPhysicalCpus,2
+average_cpu, , , ,0.16 %,0.00 %,0.16 %,0.00 %,99.84 %,
+cpu_0,GenuineIntel Intel(R),on-line,2533.38 Mhz,0.16 %,0.00 %,0.16 %,0.00 %,99.84 %,
+cpu_1,GenuineIntel Intel(R),on-line,2533.38 Mhz,0.16 %,0.00 %,0.16 %,0.00 %,99.84 %,
+cpu_2,GenuineIntel Intel(R),on-line,2533.38 Mhz,0.16 %,0.00 %,0.16 %,0.00 %,99.84 %,
+cpu_3,GenuineIntel Intel(R),on-line,2533.38 Mhz,0.16 %,0.00 %,0.16 %,0.00 %,99.84 %,

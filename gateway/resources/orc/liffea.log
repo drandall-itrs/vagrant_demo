@@ -1,0 +1,715 @@
+Nov  7 07:00:02.202 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985
+Nov  7 07:00:02.202 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov  7 07:00:02.202 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov  7 07:00:02.203 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov  7 07:00:02.203 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov  7 07:00:02.203 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 198259
+Nov  7 07:00:02.204 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [version:       3.8]
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [protocol:      45]
+Nov  7 07:00:02.205 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov  7 07:00:59.750 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov  7 07:00:59.895 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov  7 07:00:59.896 ocapln20 liffea[14533:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov  7 07:00:59.898 ocapln20 liffea[14533:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov  7 07:01:01.862 ocapln20 liffea[14533:t@5    :l@5    ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:01:31.870 ocapln20 liffea[14533:t@5    :l@5    ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:01:33.931 ocapln20 liffea[14533:t@16   :l@16   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:02:03.940 ocapln20 liffea[14533:t@16   :l@16   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:02:06.001 ocapln20 liffea[14533:t@21   :l@21   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:02:36.010 ocapln20 liffea[14533:t@21   :l@21   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:02:38.071 ocapln20 liffea[14533:t@24   :l@24   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:03:08.080 ocapln20 liffea[14533:t@24   :l@24   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:03:10.141 ocapln20 liffea[14533:t@27   :l@27   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:03:40.150 ocapln20 liffea[14533:t@27   :l@27   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:03:42.211 ocapln20 liffea[14533:t@30   :l@30   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:04:12.220 ocapln20 liffea[14533:t@30   :l@30   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:04:14.291 ocapln20 liffea[14533:t@33   :l@33   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:04:44.310 ocapln20 liffea[14533:t@33   :l@33   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:04:46.371 ocapln20 liffea[14533:t@36   :l@36   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:05:16.380 ocapln20 liffea[14533:t@36   :l@36   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:05:18.441 ocapln20 liffea[14533:t@39   :l@39   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:05:48.460 ocapln20 liffea[14533:t@39   :l@39   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:05:50.521 ocapln20 liffea[14533:t@42   :l@42   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:06:20.530 ocapln20 liffea[14533:t@42   :l@42   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:06:22.611 ocapln20 liffea[14533:t@45   :l@45   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:06:52.640 ocapln20 liffea[14533:t@45   :l@45   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:06:54.701 ocapln20 liffea[14533:t@48   :l@48   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:07:24.710 ocapln20 liffea[14533:t@48   :l@48   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:07:26.771 ocapln20 liffea[14533:t@51   :l@51   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:07:56.800 ocapln20 liffea[14533:t@51   :l@51   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:07:58.861 ocapln20 liffea[14533:t@54   :l@54   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:08:28.870 ocapln20 liffea[14533:t@54   :l@54   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:08:30.941 ocapln20 liffea[14533:t@57   :l@57   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:09:00.950 ocapln20 liffea[14533:t@57   :l@57   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:09:03.012 ocapln20 liffea[14533:t@60   :l@60   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:09:33.020 ocapln20 liffea[14533:t@60   :l@60   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:09:35.081 ocapln20 liffea[14533:t@63   :l@63   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:10:05.140 ocapln20 liffea[14533:t@63   :l@63   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:10:07.252 ocapln20 liffea[14533:t@66   :l@66   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:10:37.270 ocapln20 liffea[14533:t@66   :l@66   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:10:39.331 ocapln20 liffea[14533:t@69   :l@69   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:11:09.340 ocapln20 liffea[14533:t@69   :l@69   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:11:11.401 ocapln20 liffea[14533:t@72   :l@72   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:11:41.410 ocapln20 liffea[14533:t@72   :l@72   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:11:43.471 ocapln20 liffea[14533:t@75   :l@75   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:12:13.490 ocapln20 liffea[14533:t@75   :l@75   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:12:15.551 ocapln20 liffea[14533:t@78   :l@78   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:12:45.570 ocapln20 liffea[14533:t@78   :l@78   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:12:47.631 ocapln20 liffea[14533:t@81   :l@81   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:13:17.640 ocapln20 liffea[14533:t@81   :l@81   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:13:19.701 ocapln20 liffea[14533:t@84   :l@84   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:13:49.710 ocapln20 liffea[14533:t@84   :l@84   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:13:51.771 ocapln20 liffea[14533:t@87   :l@87   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:14:21.800 ocapln20 liffea[14533:t@87   :l@87   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:14:23.861 ocapln20 liffea[14533:t@90   :l@90   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:14:53.880 ocapln20 liffea[14533:t@90   :l@90   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:14:55.941 ocapln20 liffea[14533:t@93   :l@93   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:15:25.950 ocapln20 liffea[14533:t@93   :l@93   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:15:28.021 ocapln20 liffea[14533:t@96   :l@96   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:15:58.040 ocapln20 liffea[14533:t@96   :l@96   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:16:00.101 ocapln20 liffea[14533:t@99   :l@99   ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:16:30.110 ocapln20 liffea[14533:t@99   :l@99   ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:16:32.171 ocapln20 liffea[14533:t@102  :l@102  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:17:02.180 ocapln20 liffea[14533:t@102  :l@102  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:17:04.241 ocapln20 liffea[14533:t@105  :l@105  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:17:34.250 ocapln20 liffea[14533:t@105  :l@105  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:17:36.311 ocapln20 liffea[14533:t@108  :l@108  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:18:06.320 ocapln20 liffea[14533:t@108  :l@108  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:18:08.381 ocapln20 liffea[14533:t@111  :l@111  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:18:38.390 ocapln20 liffea[14533:t@111  :l@111  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:18:40.451 ocapln20 liffea[14533:t@114  :l@114  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:19:10.460 ocapln20 liffea[14533:t@114  :l@114  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:19:12.521 ocapln20 liffea[14533:t@117  :l@117  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:19:42.530 ocapln20 liffea[14533:t@117  :l@117  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:19:44.591 ocapln20 liffea[14533:t@120  :l@120  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:20:14.620 ocapln20 liffea[14533:t@120  :l@120  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:20:16.702 ocapln20 liffea[14533:t@123  :l@123  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:20:46.720 ocapln20 liffea[14533:t@123  :l@123  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:20:48.781 ocapln20 liffea[14533:t@126  :l@126  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:21:18.790 ocapln20 liffea[14533:t@126  :l@126  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:21:20.851 ocapln20 liffea[14533:t@129  :l@129  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:21:50.860 ocapln20 liffea[14533:t@129  :l@129  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:21:52.921 ocapln20 liffea[14533:t@134  :l@134  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:22:22.930 ocapln20 liffea[14533:t@134  :l@134  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:22:25.001 ocapln20 liffea[14533:t@137  :l@137  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:22:55.020 ocapln20 liffea[14533:t@137  :l@137  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:22:57.081 ocapln20 liffea[14533:t@140  :l@140  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:23:27.090 ocapln20 liffea[14533:t@140  :l@140  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:23:29.151 ocapln20 liffea[14533:t@143  :l@143  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:23:59.160 ocapln20 liffea[14533:t@143  :l@143  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:24:01.221 ocapln20 liffea[14533:t@146  :l@146  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:24:31.230 ocapln20 liffea[14533:t@146  :l@146  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:24:33.291 ocapln20 liffea[14533:t@149  :l@149  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:25:03.310 ocapln20 liffea[14533:t@149  :l@149  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:25:05.371 ocapln20 liffea[14533:t@152  :l@152  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:25:35.380 ocapln20 liffea[14533:t@152  :l@152  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:25:37.441 ocapln20 liffea[14533:t@155  :l@155  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:26:07.450 ocapln20 liffea[14533:t@155  :l@155  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:26:09.511 ocapln20 liffea[14533:t@158  :l@158  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:26:39.520 ocapln20 liffea[14533:t@158  :l@158  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:26:41.581 ocapln20 liffea[14533:t@161  :l@161  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:27:11.600 ocapln20 liffea[14533:t@161  :l@161  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:27:13.661 ocapln20 liffea[14533:t@164  :l@164  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:27:43.670 ocapln20 liffea[14533:t@164  :l@164  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:27:45.731 ocapln20 liffea[14533:t@167  :l@167  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:28:15.750 ocapln20 liffea[14533:t@167  :l@167  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:28:17.821 ocapln20 liffea[14533:t@170  :l@170  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:28:47.830 ocapln20 liffea[14533:t@170  :l@170  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:28:49.892 ocapln20 liffea[14533:t@173  :l@173  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:29:19.900 ocapln20 liffea[14533:t@173  :l@173  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:29:21.961 ocapln20 liffea[14533:t@176  :l@176  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:29:51.980 ocapln20 liffea[14533:t@176  :l@176  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:29:54.041 ocapln20 liffea[14533:t@179  :l@179  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:30:24.060 ocapln20 liffea[14533:t@179  :l@179  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:30:26.131 ocapln20 liffea[14533:t@182  :l@182  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:30:56.140 ocapln20 liffea[14533:t@182  :l@182  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:30:58.201 ocapln20 liffea[14533:t@185  :l@185  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:31:28.230 ocapln20 liffea[14533:t@185  :l@185  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:31:30.291 ocapln20 liffea[14533:t@188  :l@188  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:32:00.300 ocapln20 liffea[14533:t@188  :l@188  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:32:02.361 ocapln20 liffea[14533:t@191  :l@191  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:32:32.370 ocapln20 liffea[14533:t@191  :l@191  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:32:34.441 ocapln20 liffea[14533:t@194  :l@194  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:33:04.450 ocapln20 liffea[14533:t@194  :l@194  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:33:06.511 ocapln20 liffea[14533:t@197  :l@197  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:33:36.520 ocapln20 liffea[14533:t@197  :l@197  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:33:38.581 ocapln20 liffea[14533:t@200  :l@200  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:34:08.590 ocapln20 liffea[14533:t@200  :l@200  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:34:10.651 ocapln20 liffea[14533:t@203  :l@203  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:34:40.660 ocapln20 liffea[14533:t@203  :l@203  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:34:42.721 ocapln20 liffea[14533:t@206  :l@206  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:35:12.730 ocapln20 liffea[14533:t@206  :l@206  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:35:14.792 ocapln20 liffea[14533:t@209  :l@209  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:35:44.810 ocapln20 liffea[14533:t@209  :l@209  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:35:46.871 ocapln20 liffea[14533:t@212  :l@212  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:36:16.880 ocapln20 liffea[14533:t@212  :l@212  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:36:18.952 ocapln20 liffea[14533:t@215  :l@215  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:36:48.960 ocapln20 liffea[14533:t@215  :l@215  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:36:51.032 ocapln20 liffea[14533:t@218  :l@218  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:37:21.040 ocapln20 liffea[14533:t@218  :l@218  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:37:23.102 ocapln20 liffea[14533:t@221  :l@221  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:37:53.120 ocapln20 liffea[14533:t@221  :l@221  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:37:55.181 ocapln20 liffea[14533:t@224  :l@224  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:38:25.190 ocapln20 liffea[14533:t@224  :l@224  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:38:27.262 ocapln20 liffea[14533:t@227  :l@227  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:38:57.270 ocapln20 liffea[14533:t@227  :l@227  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:38:59.342 ocapln20 liffea[14533:t@230  :l@230  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:39:29.360 ocapln20 liffea[14533:t@230  :l@230  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:39:31.432 ocapln20 liffea[14533:t@233  :l@233  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:40:01.440 ocapln20 liffea[14533:t@233  :l@233  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:40:03.512 ocapln20 liffea[14533:t@236  :l@236  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:40:33.520 ocapln20 liffea[14533:t@236  :l@236  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:40:35.591 ocapln20 liffea[14533:t@239  :l@239  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:41:05.600 ocapln20 liffea[14533:t@239  :l@239  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:41:07.661 ocapln20 liffea[14533:t@242  :l@242  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:41:37.670 ocapln20 liffea[14533:t@242  :l@242  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:41:39.731 ocapln20 liffea[14533:t@245  :l@245  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:42:09.740 ocapln20 liffea[14533:t@245  :l@245  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:42:11.801 ocapln20 liffea[14533:t@250  :l@250  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:42:41.810 ocapln20 liffea[14533:t@250  :l@250  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:42:43.871 ocapln20 liffea[14533:t@253  :l@253  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:43:13.890 ocapln20 liffea[14533:t@253  :l@253  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:43:15.951 ocapln20 liffea[14533:t@256  :l@256  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:43:45.960 ocapln20 liffea[14533:t@256  :l@256  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:43:48.021 ocapln20 liffea[14533:t@259  :l@259  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:44:18.050 ocapln20 liffea[14533:t@259  :l@259  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:44:20.111 ocapln20 liffea[14533:t@262  :l@262  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:44:50.120 ocapln20 liffea[14533:t@262  :l@262  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:44:52.181 ocapln20 liffea[14533:t@265  :l@265  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:45:22.200 ocapln20 liffea[14533:t@265  :l@265  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:45:24.261 ocapln20 liffea[14533:t@268  :l@268  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:45:54.270 ocapln20 liffea[14533:t@268  :l@268  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:45:56.331 ocapln20 liffea[14533:t@271  :l@271  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:46:26.350 ocapln20 liffea[14533:t@271  :l@271  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:46:28.421 ocapln20 liffea[14533:t@274  :l@274  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:46:58.440 ocapln20 liffea[14533:t@274  :l@274  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:47:00.501 ocapln20 liffea[14533:t@277  :l@277  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:47:30.510 ocapln20 liffea[14533:t@277  :l@277  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:47:32.571 ocapln20 liffea[14533:t@280  :l@280  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:48:02.580 ocapln20 liffea[14533:t@280  :l@280  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:48:04.641 ocapln20 liffea[14533:t@283  :l@283  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:48:34.650 ocapln20 liffea[14533:t@283  :l@283  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:48:36.711 ocapln20 liffea[14533:t@286  :l@286  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:49:06.720 ocapln20 liffea[14533:t@286  :l@286  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:49:08.781 ocapln20 liffea[14533:t@289  :l@289  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:49:38.790 ocapln20 liffea[14533:t@289  :l@289  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:49:40.851 ocapln20 liffea[14533:t@292  :l@292  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:50:10.860 ocapln20 liffea[14533:t@292  :l@292  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:50:12.921 ocapln20 liffea[14533:t@295  :l@295  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:50:42.930 ocapln20 liffea[14533:t@295  :l@295  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:50:44.991 ocapln20 liffea[14533:t@298  :l@298  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:51:15.003 ocapln20 liffea[14533:t@298  :l@298  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:51:17.061 ocapln20 liffea[14533:t@301  :l@301  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:51:47.090 ocapln20 liffea[14533:t@301  :l@301  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:51:49.151 ocapln20 liffea[14533:t@304  :l@304  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:52:19.170 ocapln20 liffea[14533:t@304  :l@304  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:52:21.241 ocapln20 liffea[14533:t@307  :l@307  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:52:51.250 ocapln20 liffea[14533:t@307  :l@307  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:52:53.311 ocapln20 liffea[14533:t@310  :l@310  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:53:23.330 ocapln20 liffea[14533:t@310  :l@310  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:53:25.391 ocapln20 liffea[14533:t@313  :l@313  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:53:55.400 ocapln20 liffea[14533:t@313  :l@313  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:53:57.461 ocapln20 liffea[14533:t@316  :l@316  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:54:27.490 ocapln20 liffea[14533:t@316  :l@316  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:54:29.561 ocapln20 liffea[14533:t@319  :l@319  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:54:59.570 ocapln20 liffea[14533:t@319  :l@319  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:55:01.631 ocapln20 liffea[14533:t@322  :l@322  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:55:31.650 ocapln20 liffea[14533:t@322  :l@322  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:55:33.711 ocapln20 liffea[14533:t@325  :l@325  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:56:03.720 ocapln20 liffea[14533:t@325  :l@325  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:56:05.781 ocapln20 liffea[14533:t@328  :l@328  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:56:35.790 ocapln20 liffea[14533:t@328  :l@328  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:56:37.851 ocapln20 liffea[14533:t@331  :l@331  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:57:07.860 ocapln20 liffea[14533:t@331  :l@331  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:57:09.921 ocapln20 liffea[14533:t@334  :l@334  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:57:39.930 ocapln20 liffea[14533:t@334  :l@334  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:57:41.991 ocapln20 liffea[14533:t@337  :l@337  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:58:12.000 ocapln20 liffea[14533:t@337  :l@337  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:58:14.071 ocapln20 liffea[14533:t@340  :l@340  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:58:44.080 ocapln20 liffea[14533:t@340  :l@340  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:58:46.141 ocapln20 liffea[14533:t@343  :l@343  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:59:16.150 ocapln20 liffea[14533:t@343  :l@343  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:59:18.211 ocapln20 liffea[14533:t@346  :l@346  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 07:59:48.220 ocapln20 liffea[14533:t@346  :l@346  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 07:59:50.291 ocapln20 liffea[14533:t@349  :l@349  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:00:20.300 ocapln20 liffea[14533:t@349  :l@349  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:00:22.371 ocapln20 liffea[14533:t@352  :l@352  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:00:52.380 ocapln20 liffea[14533:t@352  :l@352  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:00:54.441 ocapln20 liffea[14533:t@355  :l@355  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:01:24.460 ocapln20 liffea[14533:t@355  :l@355  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:01:26.521 ocapln20 liffea[14533:t@358  :l@358  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:01:56.530 ocapln20 liffea[14533:t@358  :l@358  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:01:58.591 ocapln20 liffea[14533:t@365  :l@365  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:02:28.600 ocapln20 liffea[14533:t@365  :l@365  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:02:30.672 ocapln20 liffea[14533:t@368  :l@368  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:02:46.570 ocapln20 liffea[14533:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.68.247] [10.1.68.247:4707]
+Nov  7 08:02:46.571 ocapln20 liffea[14533:t@369  :l@369  ]/info:  [orcserver:GBFULN] - Connect done OK [GBFULN].
+Nov  7 08:02:46.672 ocapln20 liffea[14533:t@369  :l@369  ]/info:  [orcserver:GBFULN] - Logout requested.
+Nov  7 08:02:46.672 ocapln20 liffea[14533:t@369  :l@369  ]/info:  [orcserver:GBFULN] - Removed user.
+Nov  7 08:03:00.680 ocapln20 liffea[14533:t@368  :l@368  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:03:02.751 ocapln20 liffea[14533:t@372  :l@372  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:03:32.760 ocapln20 liffea[14533:t@372  :l@372  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:03:34.821 ocapln20 liffea[14533:t@375  :l@375  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:04:04.830 ocapln20 liffea[14533:t@375  :l@375  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:04:06.891 ocapln20 liffea[14533:t@378  :l@378  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:04:36.900 ocapln20 liffea[14533:t@378  :l@378  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:04:38.971 ocapln20 liffea[14533:t@381  :l@381  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:05:08.980 ocapln20 liffea[14533:t@381  :l@381  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:05:11.091 ocapln20 liffea[14533:t@384  :l@384  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:05:41.100 ocapln20 liffea[14533:t@384  :l@384  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:05:43.161 ocapln20 liffea[14533:t@387  :l@387  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:06:13.180 ocapln20 liffea[14533:t@387  :l@387  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:06:15.241 ocapln20 liffea[14533:t@390  :l@390  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:06:45.250 ocapln20 liffea[14533:t@390  :l@390  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:06:47.311 ocapln20 liffea[14533:t@393  :l@393  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:07:17.320 ocapln20 liffea[14533:t@393  :l@393  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:07:19.381 ocapln20 liffea[14533:t@398  :l@398  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:07:20.730 ocapln20 liffea[14533:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2585]
+Nov  7 08:07:20.731 ocapln20 liffea[14533:t@399  :l@399  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 08:07:20.942 ocapln20 liffea[14533:t@399  :l@399  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 08:07:20.942 ocapln20 liffea[14533:t@399  :l@399  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 08:07:49.390 ocapln20 liffea[14533:t@398  :l@398  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:07:51.451 ocapln20 liffea[14533:t@402  :l@402  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:08:21.460 ocapln20 liffea[14533:t@402  :l@402  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:08:23.561 ocapln20 liffea[14533:t@405  :l@405  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:08:53.570 ocapln20 liffea[14533:t@405  :l@405  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:08:55.631 ocapln20 liffea[14533:t@408  :l@408  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:09:25.660 ocapln20 liffea[14533:t@408  :l@408  ]/error: [sessions] - Session for [ERV] already allocated, trying to reinit.
+Nov  7 08:09:27.721 ocapln20 liffea[14533:t@411  :l@411  ]/info:  [sessions] - Login [Invalid API version] on [ERV].
+Nov  7 08:09:32.000 ocapln20 liffea[14533:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov  7 08:09:47.106 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov  7 08:09:47.107 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov  7 08:09:47.107 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov  7 08:09:47.107 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov  7 08:09:47.107 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov  7 08:09:47.107 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 135876
+Nov  7 08:09:47.108 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [version:       3.8]
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [protocol:      45]
+Nov  7 08:09:47.109 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov  7 08:09:47.537 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov  7 08:09:47.559 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov  7 08:09:47.560 ocapln20 liffea[15566:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov  7 08:09:47.561 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov  7 08:09:47.964 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov  7 08:09:58.733 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov  7 08:09:58.735 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov  7 08:15:25.987 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov  7 08:15:25.987 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov  7 08:15:28.167 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov  7 08:22:20.530 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2680]
+Nov  7 08:22:20.531 ocapln20 liffea[15566:t@66   :l@66   ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 14:32:06.222 ocapln20 liffea[15566:t@66   :l@66   ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 14:32:06.222 ocapln20 liffea[15566:t@66   :l@66   ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 14:35:25.240 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:4621]
+Nov  7 14:35:25.241 ocapln20 liffea[15566:t@1501 :l@1501 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 16:00:34.941 ocapln20 liffea[15566:t@1501 :l@1501 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 16:00:34.941 ocapln20 liffea[15566:t@1501 :l@1501 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 16:02:50.670 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:4832]
+Nov  7 16:02:50.671 ocapln20 liffea[15566:t@1840 :l@1840 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 16:15:16.222 ocapln20 liffea[15566:t@1840 :l@1840 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 16:15:16.222 ocapln20 liffea[15566:t@1840 :l@1840 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 16:17:32.010 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:4904]
+Nov  7 16:17:32.011 ocapln20 liffea[15566:t@1899 :l@1899 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 18:07:42.994 ocapln20 liffea[15566:t@1899 :l@1899 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 18:07:42.994 ocapln20 liffea[15566:t@1899 :l@1899 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 18:10:08.270 ocapln20 liffea[15566:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1208]
+Nov  7 18:10:08.271 ocapln20 liffea[15566:t@2334 :l@2334 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  7 18:16:55.788 ocapln20 liffea[15566:t@2334 :l@2334 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  7 18:16:55.789 ocapln20 liffea[15566:t@2334 :l@2334 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  7 19:00:04.601 ocapln20 liffea[15566:t@5    :l@5    ]/info:  [sessions] - Logout [Status success] on [ERV], PRIMARY channel.
+Nov  7 19:00:04.629 ocapln20 liffea[15566:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov  8 07:00:02.471 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov  8 07:00:02.472 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov  8 07:00:02.472 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov  8 07:00:02.472 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov  8 07:00:02.472 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov  8 07:00:02.472 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 193371
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov  8 07:00:02.473 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [version:       3.8]
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [protocol:      45]
+Nov  8 07:00:02.474 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov  8 07:00:37.414 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov  8 07:00:37.521 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov  8 07:00:37.522 ocapln20 liffea[26149:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov  8 07:00:37.528 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov  8 07:00:37.657 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov  8 07:00:54.982 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov  8 07:00:54.983 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov  8 07:06:00.778 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov  8 07:06:00.778 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov  8 07:06:02.538 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov  8 07:21:32.190 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:4808]
+Nov  8 07:21:32.191 ocapln20 liffea[26149:t@98   :l@98   ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov  8 07:21:32.522 ocapln20 liffea[26149:t@98   :l@98   ]/info:  [orcserver:GBMAKH] - Logout requested.
+Nov  8 07:21:32.522 ocapln20 liffea[26149:t@98   :l@98   ]/info:  [orcserver:GBMAKH] - Removed user.
+Nov  8 07:37:04.300 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.68.247] [10.1.68.247:2144]
+Nov  8 07:37:04.301 ocapln20 liffea[26149:t@159  :l@159  ]/info:  [orcserver:GBFULN] - Connect done OK [GBFULN].
+Nov  8 07:37:04.718 ocapln20 liffea[26149:t@159  :l@159  ]/info:  [orcserver:GBFULN] - Logout requested.
+Nov  8 07:37:04.719 ocapln20 liffea[26149:t@159  :l@159  ]/info:  [orcserver:GBFULN] - Removed user.
+Nov  8 09:13:06.850 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2157]
+Nov  8 09:13:06.851 ocapln20 liffea[26149:t@532  :l@532  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  8 11:07:42.734 ocapln20 liffea[26149:t@532  :l@532  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  8 11:07:42.734 ocapln20 liffea[26149:t@532  :l@532  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  8 11:09:39.390 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2483]
+Nov  8 11:09:39.390 ocapln20 liffea[26149:t@983  :l@983  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  8 15:18:25.461 ocapln20 liffea[26149:t@983  :l@983  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  8 15:18:25.461 ocapln20 liffea[26149:t@983  :l@983  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  8 15:23:26.001 ocapln20 liffea[26149:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:3556]
+Nov  8 15:23:26.001 ocapln20 liffea[26149:t@1960 :l@1960 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  8 17:13:10.972 ocapln20 liffea[26149:t@1960 :l@1960 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  8 17:13:10.972 ocapln20 liffea[26149:t@1960 :l@1960 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  8 19:00:05.311 ocapln20 liffea[26149:t@5    :l@5    ]/info:  [sessions] - Logout [Status success] on [ERV], PRIMARY channel.
+Nov  8 19:00:05.328 ocapln20 liffea[26149:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov  9 07:00:01.732 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov  9 07:00:01.733 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov  9 07:00:01.733 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov  9 07:00:01.733 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov  9 07:00:01.733 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov  9 07:00:01.734 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov  9 07:00:01.734 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov  9 07:00:01.734 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov  9 07:00:01.734 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov  9 07:00:01.734 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 192396
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [version:       3.8]
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [protocol:      45]
+Nov  9 07:00:01.735 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov  9 07:00:51.845 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov  9 07:00:51.921 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov  9 07:00:51.922 ocapln20 liffea[7275:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov  9 07:00:51.929 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov  9 07:00:52.065 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov  9 07:01:06.722 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov  9 07:01:06.726 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov  9 07:07:28.981 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov  9 07:07:28.981 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov  9 07:07:30.834 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov  9 07:53:45.780 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4303]
+Nov  9 07:53:45.781 ocapln20 liffea[7275:t@220  :l@220  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 07:53:45.947 ocapln20 liffea[7275:t@220  :l@220  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 07:53:45.947 ocapln20 liffea[7275:t@220  :l@220  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 10:04:57.440 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1341]
+Nov  9 10:04:57.441 ocapln20 liffea[7275:t@727  :l@727  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 10:14:00.600 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4461]
+Nov  9 10:14:00.601 ocapln20 liffea[7275:t@764  :l@764  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 10:14:00.771 ocapln20 liffea[7275:t@764  :l@764  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 10:14:00.772 ocapln20 liffea[7275:t@764  :l@764  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 10:37:04.420 ocapln20 liffea[7275:t@727  :l@727  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 10:37:04.421 ocapln20 liffea[7275:t@727  :l@727  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 10:39:51.110 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1508]
+Nov  9 10:39:51.111 ocapln20 liffea[7275:t@867  :l@867  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 10:45:30.330 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4526]
+Nov  9 10:45:30.331 ocapln20 liffea[7275:t@892  :l@892  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 10:45:30.544 ocapln20 liffea[7275:t@892  :l@892  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 10:45:30.544 ocapln20 liffea[7275:t@892  :l@892  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 11:19:48.130 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4606]
+Nov  9 11:19:48.131 ocapln20 liffea[7275:t@1027 :l@1027 ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 11:19:48.443 ocapln20 liffea[7275:t@1027 :l@1027 ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 11:19:48.443 ocapln20 liffea[7275:t@1027 :l@1027 ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 11:22:56.780 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4636]
+Nov  9 11:22:56.781 ocapln20 liffea[7275:t@1042 :l@1042 ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 11:22:57.029 ocapln20 liffea[7275:t@1042 :l@1042 ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 11:22:57.030 ocapln20 liffea[7275:t@1042 :l@1042 ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 11:33:16.970 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.68.247] [10.1.68.247:3418]
+Nov  9 11:33:16.971 ocapln20 liffea[7275:t@1085 :l@1085 ]/info:  [orcserver:GBFULN] - Connect done OK [GBFULN].
+Nov  9 11:33:17.301 ocapln20 liffea[7275:t@1085 :l@1085 ]/info:  [orcserver:GBFULN] - Logout requested.
+Nov  9 11:33:17.301 ocapln20 liffea[7275:t@1085 :l@1085 ]/info:  [orcserver:GBFULN] - Removed user.
+Nov  9 11:58:44.590 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4736]
+Nov  9 11:58:44.591 ocapln20 liffea[7275:t@1186 :l@1186 ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 12:01:06.238 ocapln20 liffea[7275:t@1186 :l@1186 ]/error: [orcserver:GBMAIZ] - Read failed [-1][Read error].
+Nov  9 12:01:06.324 ocapln20 liffea[7275:t@1186 :l@1186 ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 12:05:53.340 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4774]
+Nov  9 12:05:53.341 ocapln20 liffea[7275:t@1215 :l@1215 ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 12:05:53.512 ocapln20 liffea[7275:t@1215 :l@1215 ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov  9 12:05:53.512 ocapln20 liffea[7275:t@1215 :l@1215 ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 12:07:35.626 ocapln20 liffea[7275:t@867  :l@867  ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 12:07:35.695 ocapln20 liffea[7275:t@867  :l@867  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:15:31.120 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1799]
+Nov  9 12:15:31.121 ocapln20 liffea[7275:t@1256 :l@1256 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:16:17.372 ocapln20 liffea[7275:t@1256 :l@1256 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 12:16:17.477 ocapln20 liffea[7275:t@1256 :l@1256 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:26:51.930 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1851]
+Nov  9 12:26:51.930 ocapln20 liffea[7275:t@1303 :l@1303 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:27:22.116 ocapln20 liffea[7275:t@1303 :l@1303 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 12:27:22.323 ocapln20 liffea[7275:t@1303 :l@1303 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:33:17.900 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1908]
+Nov  9 12:33:17.901 ocapln20 liffea[7275:t@1330 :l@1330 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:34:34.242 ocapln20 liffea[7275:t@1330 :l@1330 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 12:34:34.330 ocapln20 liffea[7275:t@1330 :l@1330 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:38:14.450 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1953]
+Nov  9 12:38:14.451 ocapln20 liffea[7275:t@1351 :l@1351 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:38:14.842 ocapln20 liffea[7275:t@1351 :l@1351 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 12:38:14.842 ocapln20 liffea[7275:t@1351 :l@1351 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:43:01.330 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1991]
+Nov  9 12:43:01.331 ocapln20 liffea[7275:t@1374 :l@1374 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:46:22.312 ocapln20 liffea[7275:t@1374 :l@1374 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 12:46:22.378 ocapln20 liffea[7275:t@1374 :l@1374 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:49:16.140 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2037]
+Nov  9 12:49:16.141 ocapln20 liffea[7275:t@1401 :l@1401 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:50:46.662 ocapln20 liffea[7275:t@1401 :l@1401 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 12:50:46.662 ocapln20 liffea[7275:t@1401 :l@1401 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:54:42.700 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2073]
+Nov  9 12:54:42.701 ocapln20 liffea[7275:t@1424 :l@1424 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:54:42.903 ocapln20 liffea[7275:t@1424 :l@1424 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 12:54:42.903 ocapln20 liffea[7275:t@1424 :l@1424 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 12:59:12.800 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2113]
+Nov  9 12:59:12.801 ocapln20 liffea[7275:t@1445 :l@1445 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 12:59:12.929 ocapln20 liffea[7275:t@1445 :l@1445 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 12:59:12.929 ocapln20 liffea[7275:t@1445 :l@1445 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:03:24.510 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2173]
+Nov  9 13:03:24.511 ocapln20 liffea[7275:t@1464 :l@1464 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 13:03:24.927 ocapln20 liffea[7275:t@1464 :l@1464 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 13:03:24.927 ocapln20 liffea[7275:t@1464 :l@1464 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:15:28.300 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2241]
+Nov  9 13:15:28.300 ocapln20 liffea[7275:t@1513 :l@1513 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 13:22:34.572 ocapln20 liffea[7275:t@1513 :l@1513 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov  9 13:22:34.639 ocapln20 liffea[7275:t@1513 :l@1513 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:37:55.240 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2398]
+Nov  9 13:37:55.240 ocapln20 liffea[7275:t@1602 :l@1602 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 13:40:51.065 ocapln20 liffea[7275:t@1602 :l@1602 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 13:40:51.065 ocapln20 liffea[7275:t@1602 :l@1602 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:42:49.070 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2556]
+Nov  9 13:42:49.071 ocapln20 liffea[7275:t@1625 :l@1625 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 13:43:58.599 ocapln20 liffea[7275:t@1625 :l@1625 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 13:43:58.599 ocapln20 liffea[7275:t@1625 :l@1625 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:47:17.640 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2595]
+Nov  9 13:47:17.641 ocapln20 liffea[7275:t@1644 :l@1644 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 13:51:34.131 ocapln20 liffea[7275:t@1644 :l@1644 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 13:51:34.131 ocapln20 liffea[7275:t@1644 :l@1644 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 13:53:43.480 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2656]
+Nov  9 13:53:43.481 ocapln20 liffea[7275:t@1671 :l@1671 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 14:12:46.228 ocapln20 liffea[7275:t@1671 :l@1671 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 14:12:46.229 ocapln20 liffea[7275:t@1671 :l@1671 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 14:15:01.260 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2999]
+Nov  9 14:15:01.261 ocapln20 liffea[7275:t@1756 :l@1756 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 14:43:46.620 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:4953]
+Nov  9 14:43:46.620 ocapln20 liffea[7275:t@1871 :l@1871 ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov  9 16:08:51.895 ocapln20 liffea[7275:t@1756 :l@1756 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 16:08:51.895 ocapln20 liffea[7275:t@1756 :l@1756 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 16:12:24.300 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:3464]
+Nov  9 16:12:24.301 ocapln20 liffea[7275:t@2214 :l@2214 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 16:28:00.229 ocapln20 liffea[7275:t@2214 :l@2214 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 16:28:00.229 ocapln20 liffea[7275:t@2214 :l@2214 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 16:30:16.510 ocapln20 liffea[7275:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:3508]
+Nov  9 16:30:16.511 ocapln20 liffea[7275:t@2285 :l@2285 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov  9 17:47:52.761 ocapln20 liffea[7275:t@2285 :l@2285 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov  9 17:47:52.761 ocapln20 liffea[7275:t@2285 :l@2285 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov  9 19:00:02.310 ocapln20 liffea[7275:t@1871 :l@1871 ]/warn:  [orcserver:GBMAIZ] - Read terminated by close/EOF.
+Nov  9 19:00:02.374 ocapln20 liffea[7275:t@1871 :l@1871 ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov  9 19:00:06.461 ocapln20 liffea[7275:t@5    :l@5    ]/info:  [sessions] - Logout [Status success] on [ERV], PRIMARY channel.
+Nov  9 19:00:06.480 ocapln20 liffea[7275:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov 10 07:00:02.227 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov 10 07:00:02.228 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov 10 07:00:02.228 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov 10 07:00:02.231 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov 10 07:00:02.232 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov 10 07:00:02.232 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 191136
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov 10 07:00:02.233 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [version:       3.8]
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [protocol:      45]
+Nov 10 07:00:02.234 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov 10 07:00:39.474 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov 10 07:00:39.573 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov 10 07:00:39.575 ocapln20 liffea[18088:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov 10 07:00:39.576 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov 10 07:00:39.731 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov 10 07:00:56.542 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov 10 07:00:56.545 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov 10 07:06:12.594 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov 10 07:06:12.595 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov 10 07:06:14.492 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov 10 07:28:05.670 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:1761]
+Nov 10 07:28:05.671 ocapln20 liffea[18088:t@122  :l@122  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov 10 08:36:02.280 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1474]
+Nov 10 08:36:02.281 ocapln20 liffea[18088:t@387  :l@387  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 10 11:03:15.193 ocapln20 liffea[18088:t@387  :l@387  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov 10 11:03:15.193 ocapln20 liffea[18088:t@387  :l@387  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 10 11:05:50.660 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2078]
+Nov 10 11:05:50.661 ocapln20 liffea[18088:t@964  :l@964  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 10 11:14:43.725 ocapln20 liffea[18088:t@964  :l@964  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov 10 11:14:43.725 ocapln20 liffea[18088:t@964  :l@964  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 10 11:18:08.740 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2161]
+Nov 10 11:18:08.741 ocapln20 liffea[18088:t@1015 :l@1015 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 10 11:21:09.438 ocapln20 liffea[18088:t@1015 :l@1015 ]/error: [orcserver:ABNAMRO1] - Read failed [-1][Read error].
+Nov 10 11:21:09.529 ocapln20 liffea[18088:t@1015 :l@1015 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 10 11:23:44.170 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2196]
+Nov 10 11:23:44.170 ocapln20 liffea[18088:t@1040 :l@1040 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 10 17:34:58.870 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:3452]
+Nov 10 17:34:58.871 ocapln20 liffea[18088:t@2469 :l@2469 ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov 10 17:35:02.169 ocapln20 liffea[18088:t@2469 :l@2469 ]/error: [orcserver:GBMAKH] - Read failed [-1][Read error].
+Nov 10 17:35:02.238 ocapln20 liffea[18088:t@2469 :l@2469 ]/info:  [orcserver:GBMAKH] - Removed user.
+Nov 10 17:37:29.120 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:3473]
+Nov 10 17:37:29.121 ocapln20 liffea[18088:t@2482 :l@2482 ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov 10 17:37:47.575 ocapln20 liffea[18088:t@2482 :l@2482 ]/info:  [orcserver:GBMAKH] - Logout requested.
+Nov 10 17:37:47.575 ocapln20 liffea[18088:t@2482 :l@2482 ]/info:  [orcserver:GBMAKH] - Removed user.
+Nov 10 17:40:03.520 ocapln20 liffea[18088:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:3502]
+Nov 10 17:40:03.521 ocapln20 liffea[18088:t@2493 :l@2493 ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov 10 17:56:18.825 ocapln20 liffea[18088:t@1040 :l@1040 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov 10 17:56:18.825 ocapln20 liffea[18088:t@1040 :l@1040 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 10 18:07:10.776 ocapln20 liffea[18088:t@2493 :l@2493 ]/info:  [orcserver:GBMAKH] - Logout requested.
+Nov 10 18:07:10.776 ocapln20 liffea[18088:t@2493 :l@2493 ]/info:  [orcserver:GBMAKH] - Removed user.
+Nov 10 19:00:00.990 ocapln20 liffea[18088:t@122  :l@122  ]/warn:  [orcserver:GBMAIZ] - Read terminated by close/EOF.
+Nov 10 19:00:01.054 ocapln20 liffea[18088:t@122  :l@122  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov 10 19:00:05.151 ocapln20 liffea[18088:t@5    :l@5    ]/info:  [sessions] - Logout [Status success] on [ERV], PRIMARY channel.
+Nov 10 19:00:05.171 ocapln20 liffea[18088:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov 11 07:00:02.422 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov 11 07:00:02.422 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov 11 07:00:02.422 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov 11 07:00:02.423 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov 11 07:00:02.423 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov 11 07:00:02.423 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 191329
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov 11 07:00:02.424 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [version:       3.8]
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [protocol:      45]
+Nov 11 07:00:02.425 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov 11 07:00:41.176 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov 11 07:00:41.292 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov 11 07:00:41.293 ocapln20 liffea[28511:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov 11 07:00:41.294 ocapln20 liffea[28511:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov 11 07:00:41.453 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov 11 07:01:02.243 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov 11 07:01:02.246 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov 11 07:06:12.924 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov 11 07:06:12.924 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov 11 07:06:14.785 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov 11 07:33:24.260 ocapln20 liffea[28511:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:2921]
+Nov 11 07:33:24.261 ocapln20 liffea[28511:t@142  :l@142  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov 11 08:50:03.740 ocapln20 liffea[28511:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:4137]
+Nov 11 08:50:03.741 ocapln20 liffea[28511:t@441  :l@441  ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov 11 09:19:32.690 ocapln20 liffea[28511:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:4640]
+Nov 11 09:19:32.691 ocapln20 liffea[28511:t@556  :l@556  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 11 15:36:01.840 ocapln20 liffea[28511:t@556  :l@556  ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov 11 15:36:01.840 ocapln20 liffea[28511:t@556  :l@556  ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 11 16:13:29.591 ocapln20 liffea[28511:t@441  :l@441  ]/info:  [orcserver:GBMAKH] - Logout requested.
+Nov 11 16:13:29.591 ocapln20 liffea[28511:t@441  :l@441  ]/info:  [orcserver:GBMAKH] - Removed user.
+Nov 11 17:17:30.610 ocapln20 liffea[28511:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:1417]
+Nov 11 17:17:30.611 ocapln20 liffea[28511:t@2395 :l@2395 ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 11 17:18:51.468 ocapln20 liffea[28511:t@2395 :l@2395 ]/info:  [orcserver:ABNAMRO1] - Logout requested.
+Nov 11 17:18:51.468 ocapln20 liffea[28511:t@2395 :l@2395 ]/info:  [orcserver:ABNAMRO1] - Removed user.
+Nov 11 17:33:38.016 ocapln20 liffea[28511:t@142  :l@142  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov 11 17:33:38.016 ocapln20 liffea[28511:t@142  :l@142  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov 11 19:00:05.091 ocapln20 liffea[28511:t@5    :l@5    ]/info:  [sessions] - Logout [Status success] on [ERV], PRIMARY channel.
+Nov 11 19:00:05.109 ocapln20 liffea[28511:t@2    :l@2    ]/info:  [orcserver] - Exiting [SIGINT/SIGTERM]...
+Nov 14 07:00:02.142 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- /opt/orcreleases/Orc-5-1-7/arch/sparc-sun-solaris/bin/32/liffeamsterdamd -n liffea -D liffea -l /opt/orcreleases/Orc-5-1-7/log/liffea -N Euronext.liffe Amsterdam -p 6985 -L lild_804
+Nov 14 07:00:02.143 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Nov 14 07:00:02.143 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Nov 14 07:00:02.143 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- IBM Informix Dynamic Server Version 9.40.UC3
+Nov 14 07:00:02.143 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- IBM/Informix-Connect Version 2.81.UC2R2
+Nov 14 07:00:02.143 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- SunOS ocapln20 5.8 Generic_117350-25 sun4u sparc SUNW,Sun-Fire-V210
+Nov 14 07:00:02.144 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- Current working directory: /opt/orcreleases/Orc-5-1-7/etc
+Nov 14 07:00:02.144 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- uid = 1196, euid = 1196, gid = 1026, egid = 1026
+Nov 14 07:00:02.144 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2 [1002 Mhz]
+Nov 14 07:00:02.144 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- System memory page size 8192
+Nov 14 07:00:02.144 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 168562
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  -- Orc System Version 5.1 (build: 9b, Nov  3 2005)
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [orcserver:     0.7]
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [version:       3.8]
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [protocol:      45]
+Nov 14 07:00:02.145 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [api:           9.0.4]
+Nov 14 07:00:40.052 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [orcserver:liffeamsterdamd] - Service not ready, rejecting client connections.
+Nov 14 07:00:40.113 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [orcserver] - Server created.
+Nov 14 07:00:40.115 ocapln20 liffea[6669:t@1    :l@1    ]/info:  [orcserver] - Registering to em:[@localhost].
+Nov 14 07:00:40.116 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - Waiting for users to connect.
+Nov 14 07:00:40.981 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [sessions] - Login [Success][Replacement trader not registered] on [ERV].
+Nov 14 07:00:52.271 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [sessions] - All session's orders downloaded.
+Nov 14 07:00:52.282 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [sessions] - All session's orders cleaned up [ERV].
+Nov 14 07:06:28.617 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [sessions] - Standing data downloaded.
+Nov 14 07:06:28.617 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [orcserver:liffeamsterdamd] - Service ready, accepting client connections.
+Nov 14 07:06:30.727 ocapln20 liffea[6669:t@5    :l@5    ]/info:  [sessions] - All session's trades retrieved [ERV].
+Nov 14 07:26:45.420 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.65.117] [10.1.65.117:2449]
+Nov 14 07:26:45.421 ocapln20 liffea[6669:t@118  :l@118  ]/info:  [orcserver:GBMAKH] - Connect done OK [GBMAKH].
+Nov 14 08:24:56.370 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.36.67] [10.1.36.67:2753]
+Nov 14 08:24:56.371 ocapln20 liffea[6669:t@343  :l@343  ]/info:  [orcserver:ABNAMRO1] - Connect done OK [ABNAMRO1].
+Nov 14 08:45:52.760 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:2915]
+Nov 14 08:45:52.761 ocapln20 liffea[6669:t@428  :l@428  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov 14 08:53:58.167 ocapln20 liffea[6669:t@428  :l@428  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov 14 08:53:58.167 ocapln20 liffea[6669:t@428  :l@428  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov 14 08:56:09.380 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:2952]
+Nov 14 08:56:09.381 ocapln20 liffea[6669:t@469  :l@469  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].
+Nov 14 08:56:40.036 ocapln20 liffea[6669:t@469  :l@469  ]/info:  [orcserver:GBMAIZ] - Logout requested.
+Nov 14 08:56:40.037 ocapln20 liffea[6669:t@469  :l@469  ]/info:  [orcserver:GBMAIZ] - Removed user.
+Nov 14 08:59:13.451 ocapln20 liffea[6669:t@12   :l@12   ]/info:  [orcserver] - User connected from [10.1.53.120] [10.1.53.120:2975]
+Nov 14 08:59:13.451 ocapln20 liffea[6669:t@484  :l@484  ]/info:  [orcserver:GBMAIZ] - Connect done OK [GBMAIZ].

@@ -1,0 +1,19 @@
+Command: Breach details for Breach Id: 348780
+
+
+TRADER_ACCOUNT                                                  OS_LONG  OS_SHORT  FILL_LONG  FILL_SHORT  SOD_LONG  SOD_SHORT
+A0816R                                                          3        0         0          0           0         0
+
+
+TRADER_ACCOUNT  CONTRACT_TYPE  COMMODITY_IND                    OS_LONG  OS_SHORT  FILL_LONG  FILL_SHORT  SOD_LONG  SOD_SHORT
+A0816R          GpCRUDE                                         1        0         0          0           0         0
+A0816R          IBREANT                                         2        0         0          0           0         0
+
+
+TRADER_ACCOUNT  EXCHANGE       CONTRACT       CONTRACT_DATE     OS_LONG  OS_SHORT  FILL_LONG  FILL_SHORT  SOD_LONG  SOD_SHORT
+A0816R          CME            GpCRUDE        FEB07             0        0         0          0           0         0
+A0816R          CME            GpCRUDE        MAR07             0        0         0          0           0         0
+A0816R          CME            GpCRUDE        MAY07             1        0         0          0           0         0
+A0816R          IPE            IBRENT         FEB07             0        0         0          0           0         0
+A0816R          IPE            IBRENT         MAR07             2        0         0          0           0         0
+

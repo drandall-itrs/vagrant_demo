@@ -1,0 +1,128 @@
+
+#fault {
+        border:0px solid #000;
+        font-size: 10pt;
+        border-collapse: collapse;
+        margin-left: 40px; margin-right: 40px;
+        margin-left:auto; margin-right:auto;
+}
+
+/* Holder table to allow for scrolling data section */
+#fault table.statsHolderTable
+{
+  margin: 0; padding: 0;
+  min-width:  900px;
+  width:  900px;
+}
+#fault table.statsHolderTable td { margin: 0; padding: 0; vertical-align: top;}
+
+#fault img.icn { 
+  border-width:0;
+  margin-bottom:-3px;
+  margin-left:3px;
+  margin-right:3px;
+}
+
+#fault table.statsHolderTable table tr th { border-bottom: 1px solid #fff; background:#0033cc; color: #fff;}
+#fault table.statsHolderTable table th
+{
+  white-space: nowrap;
+  height: 40px;
+}
+
+/* Names Sub Table */
+#fault table.statsHolderTable td.names th { text-align: center; }
+#fault table.statsHolderTable td.names div.scrollX { width: 660px; }
+
+
+#fault table.statsHolderTable td.names td {  
+  font-weight: bold; text-align: left; 
+  margin-left: 10px; vertical-align: middle;
+  white-space: nowrap;
+}
+
+#fault table.statsHolderTable td.names th {  cursor: pointer; }
+#fault table.statsHolderTable .active {  cursor: pointer; }
+
+
+/* Values Sub Table */
+#fault table.statsHolderTable td.values div.scrollX { width: 260px; }
+#fault table.statsHolderTable td.values tableS { width: 260px; }
+#fault table.statsHolderTable td.values th { text-align: center; white-space: nowrap;}
+#fault table.statsHolderTable td.values td { text-align: right; white-space: nowrap; }
+
+
+#fault td.rowname {  font-weight: bold; text-align: left; margin-left: 10px;}
+
+#fault tr.o0 td {    border-bottom: 1px solid #fff; background:#f3f3f3; }
+#fault tr.e0 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#fault tr.o1 td {    border-bottom: 1px solid #fff; background:#ffe8e8; }
+#fault tr.e1 td {    border-bottom: 1px solid #fff; background:#ffdddd; }
+#fault tr.o2 td {    border-bottom: 1px solid #fff; background:#e4e4ff; }
+#fault tr.e2 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+
+/* Need Better colours Eventually */
+#fault tr.o3 td {    border-bottom: 1px solid #fff; background:#f3f3f3; }
+#fault tr.e3 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#fault tr.o4 td {    border-bottom: 1px solid #fff; background:#ffe8e8; }
+#fault tr.e4 td {    border-bottom: 1px solid #fff; background:#ffdddd; }
+#fault tr.o5 td {    border-bottom: 1px solid #fff; background:#e4e4ff; }
+#fault tr.e5 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+#fault tr.o6 td {    border-bottom: 1px solid #fff; background:#f3f3f3; }
+#fault tr.e6 td {    border-bottom: 1px solid #fff; background:#f7f7f7; }
+#fault tr.o7 td {    border-bottom: 1px solid #fff; background:#ffe8e8; }
+#fault tr.e7 td {    border-bottom: 1px solid #fff; background:#ffdddd; }
+#fault tr.o8 td {    border-bottom: 1px solid #fff; background:#e4e4ff; }
+#fault tr.e8 td {    border-bottom: 1px solid #fff; background:#eeeeff; }
+
+
+#fault  tr img.cl        { display: none; }
+#fault  tr.closed img.cl { display: inline; }
+#fault  tr img.op        { display: inline; }
+#fault  tr.closed img.op { display: none; }
+
+
+/* Common Values/Value Sub-Table Settings */
+#fault table.data
+{
+  margin: 0; 
+  padding: 0;
+  margin-top: 20px;
+  border:0px solid #000;
+  font-size: 10pt;
+  border-collapse: collapse;
+}
+
+#fault table.data td,th {
+  border-width: 0px; 
+  height: 24px;
+  border: 0px solid #000;
+  padding-left: 8px;
+  padding-right: 8px;
+  vertical-align: middle;
+}
+
+#fault table.data th {
+  border-bottom: 1px solid #fff; 
+  background:#0033cc; 
+  color: #fff;
+  font-size: 7pt;
+  font-weight: bold;
+  padding: 8px;
+}
+
+#ttip {
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+        z-index: 100;
+	}
+
+
+/* =========================*/
+/* Stand Alone Page         */
+/* =========================*/
+div.stand-alone { margin-left: 1.6em; }

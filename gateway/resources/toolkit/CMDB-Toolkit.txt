@@ -1,0 +1,10 @@
+data,value
+Server ID,HP-26548-73937
+Manufacturer,Hewlett Packard
+Server Room,12A
+Rack Number,41
+Engineer Name,Fred Fixer
+Helpdesk Number,0207 123456
+Date Of Purchase, 01/01/2009
+Last Update Date,12/04/2009
+Notes,Wiki Link

@@ -1,0 +1,4 @@
+adpater,file,state,msgLastMin,msgToday
+<!>currentOperation, RUNNING
+<!>nextScheduleTime,CONTINUOUS
+FIX-File-Adapter,FIX_Data.log,FILE OPEN, msgLastMin, 77168

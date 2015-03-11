@@ -1,0 +1,10 @@
+product,Version,InfrastructureVersion,BuildDate
+EMMA,core.emma.v1.4.6n,inf.v5.1.4,20040428
+EXCH.EURONEXT,exch.euronext.v1.4.6,inf.v5.1.4,20040114
+EXCH.HEX,exch.hex.v1.4.3,inf.v5.1.4,20030813
+EXCH.LSE,exch.lse.v1.4.6b,inf.v5.1.4,20040805
+EXCH.MILAN,exch.milan.v1.4.4b,inf.v5.1.4,20031212
+EXCH.SAX,exch.sax.v1.4.3c,inf.v5.1.4,20031222
+EXCH.SWX,exch.swx.v1.4.5,inf.v5.1.4,20040213
+EXCH.VIRTX,exch.swx.v1.4.5,inf.v5.1.4,20040213
+EXCH.XETRA,exch.xetra.v1.4.3d,inf.v5.1.3a,20030717

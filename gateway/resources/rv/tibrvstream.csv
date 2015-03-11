@@ -1,0 +1,8 @@
+name,listenSubject,status
+<!>rvTransportState,Initialised
+<!>rvService,7475
+<!>rvNetwork,;239.193.8.141
+<!>rvDaemon,tcp:7500
+RV_ORDER_STREAM,_Order_ERROR.>,OK
+RV_PRICE_STREAM,_Price_ERROR.>,OK
+RV_QUOTE_STREAM,_Quote_ERROR.>,OK

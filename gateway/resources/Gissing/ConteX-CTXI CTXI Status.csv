@@ -1,0 +1,4 @@
+Name,Value
+Secondary Connection,Not Configured. Non Fault Tolerant Connection.
+Connection Status,Connected to Primary
+Primary Connection,localhost:8500

@@ -1,0 +1,12 @@
+measurementPoint,informationalAlerts,warningAlerts,minorAlerts,majorAlerts,severeAlerts,e2eLatencyError,e2eLatencyFactor,e2eLatencyUnit,e2eLatencyMin,e2eLatencyMean,e2eLatencyMax,e2eLatencyCount,e2eLatencyPercentile,e2eDelayTargetError,e2eDelayTargetFactor,e2eDelayTargetUnit,e2eDelayTargetValue,remoteRoundtripTimeFactor,remoteRoundtripTimeUnit,remoteRoundtripTimeMin,remoteRoundtripTimeMean,remoteRoundtripTimeMax,remoteRoundtripTimeCount,localRoundtripTimeFactor,localRoundtripTimeUnit,localRoundtripTimeMin,localRoundtripTimeMean,localRoundtripTimeMax,localRoundtripTimeCount,roundtripTimeEventThresholdFactor,roundtripTimeEventThresholdUnit,roundtripTimeEventThresholdValue,e2eLatency95.0%
+<!>cfgFile,/home/jpc/rnd/corvil/trunk/test/demo_get_live_stats_gateway.cfg
+<!>updateIntervalSeconds,15
+<!>updateInterval,15 seconds
+<!>timestamp,1367288325
+<!>time,Tue Apr 30 03:18:45 2013
+<!>lagOffsetMs,49585
+<!>noDataValues,previous
+rt-class/CUSTOMERS//London_CNE/CustomerGateway/OrderLatency/class-default,,,,,,,1000000,ms,6068000,142545242,513424000,145,393021575,,1000000,ms,1000000000,1000,ms,2750,6868,55345,40,1000,ms,15777,31742,43943,24,1000,ms,200000,393021575
+rt-class/CUSTOMERS/London_CNE//CustomerGateway/PlantLatency/class-default,,,,,,,1000000,ms,130000,139525,168000,145,144186,,1000000,ms,500000,1000,ms,2750,6868,55345,40,1000,ms,15777,31742,43943,24,1000,ms,200000,144186
+rt-class/CustomerGateway//London_CNE/CUSTOMERS/PlantLatency/class-default,,,,,,,1000000,ms,136000,185187,282000,134,282000,,1000000,ms,500000,1000,ms,2750,6868,55345,40,1000,ms,15777,31741,43943,24,1000,ms,200000,282000
+rt-class/CustomerGateway/London_CNE//CUSTOMERS/OrderLatency/class-default,,,,,,Statistic turned off for that measurement point,1000000,ms,,,,,,Statistic turned off for that measurement point,1000000,ms,,1000,ms,2750,6868,55345,40,1000,ms,15777,31741,43943,24,1000,ms,200000,

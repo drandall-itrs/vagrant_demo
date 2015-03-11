@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2011.2.1-111005 at 2012-08-20 15:39:02 by instructor on INSTRUCTOR-LAP1-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2.1-120613/gateway.xsd">
+    <includes>
+        <priority>1</priority>
+        <reloading></reloading>
+        <includeGroup name="Infrastructure">
+            <include>
+                <priority>100</priority>
+                <required>true</required>
+                <location>GATEWAY_INCLUDES/GLOBAL_Infrastructure.xml</location>
+            </include>
+        </includeGroup>
+        <includeGroup name="Admin">
+            <include>
+                <priority>400</priority>
+                <required>true</required>
+                <location>GATEWAY_INCLUDES/GLOBAL_Administration.xml</location>
+            </include>
+            <include>
+                <priority>2</priority>
+                <required>true</required>
+                <location>GATEWAY_INCLUDES/GLOBAL_Authentication.xml</location>
+            </include>
+        </includeGroup>
+    </includes>
+    <probes></probes>
+    <managedEntities>
+        <managedEntity name="GATEWAY_NAME Gateway">
+        <!--Move this Managed Entity into the relevant Managed
+        Entity Group structure once it has been created-->
+            <virtualProbe ref="Virtual Probe"></virtualProbe>
+            <addTypes>
+                <type ref="Gateway Info"></type>
+                <type ref="Gateway Load"></type>
+            </addTypes>
+        </managedEntity>
+    </managedEntities>
+    <alerting>
+        <hierarchy disabled="true" name="Infrastructure Support Group">
+            <priority>1</priority>
+            <levels>
+                <level>
+                    <match>
+                        <samplerGroup></samplerGroup>
+                    </match>
+                </level>
+                <level>
+                    <match>
+                        <samplerName></samplerName>
+                    </match>
+                </level>
+            </levels>
+            <alert name="Hardware">
+                <warning>
+                    <level>
+                        <notification>
+                            <effect ref="Default Email"></effect>
+                            <role>
+                                <role ref="Administrators"></role>
+                                <infoType>Email</infoType>
+                                <list>To</list>
+                                <include>ROLE</include>
+                            </role>
+                        </notification>
+                    </level>
+                </warning>
+                <critical>
+                    <level>
+                        <notification>
+                            <effect ref="Default Email"></effect>
+                            <role>
+                                <role ref="Administrators"></role>
+                                <infoType>Email</infoType>
+                                <list>To</list>
+                                <include>ROLE</include>
+                            </role>
+                        </notification>
+                    </level>
+                </critical>
+            </alert>
+            <alert name="System">
+                <warning>
+                    <level>
+                        <notification>
+                            <effect ref="Default Email"></effect>
+                            <role>
+                                <role ref="Administrators"></role>
+                                <infoType>Email</infoType>
+                                <list>To</list>
+                                <include>ROLE</include>
+                            </role>
+                        </notification>
+                    </level>
+                </warning>
+                <critical>
+                    <level>
+                        <notification>
+                            <effect ref="Default Email"></effect>
+                            <role>
+                                <role ref="Administrators"></role>
+                                <infoType>Email</infoType>
+                                <list>To</list>
+                                <include>ROLE</include>
+                            </role>
+                        </notification>
+                    </level>
+                </critical>
+                <alert name="Windows Services">
+                    <warning>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </warning>
+                    <critical>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </critical>
+                </alert>
+                <alert name="TOP Mem">
+                    <warning>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </warning>
+                    <critical>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </critical>
+                </alert>
+                <alert name="TOP CPU">
+                    <warning>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </warning>
+                    <critical>
+                        <level>
+                            <notification>
+                                <effect ref="Default Email"></effect>
+                                <role>
+                                    <role ref="Administrators"></role>
+                                    <infoType>Email</infoType>
+                                    <list>To</list>
+                                    <include>ROLE</include>
+                                </role>
+                            </notification>
+                        </level>
+                    </critical>
+                </alert>
+            </alert>
+        </hierarchy>
+    </alerting>
+    <operatingEnvironment>
+        <gatewayName>GATEWAY_NAME</gatewayName>
+        <listenPort>GATEWAY_PORT</listenPort>
+    </operatingEnvironment>
+</gateway>

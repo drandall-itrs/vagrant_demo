@@ -1,0 +1,872 @@
+Mar 18 07:50:02.581 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 18 07:50:02.583 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 18 07:50:02.584 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 18 07:50:02.584 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 18 07:50:02.584 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 18 07:50:02.585 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 18 07:50:02.585 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 18 07:50:02.586 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 18 07:50:02.586 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 18 07:50:02.587 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 18 07:50:02.588 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 18 07:50:02.588 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 18 07:50:02.591 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 18 07:50:02.592 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 18 07:50:02.592 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 18 07:50:02.592 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 18 07:50:02.593 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 78670
+Mar 18 07:50:02.593 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 18 07:50:02.593 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 18 07:50:02.593 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 18 07:50:02.593 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 18 07:50:02.594 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 18 07:50:02.594 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 18 07:50:02.594 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 18 07:50:02.594 gedsborc1 eurexvd[2515:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 18 07:50:02.904 gedsborc1 eurexvd[2515:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 18 07:50:03.311 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 18 07:50:03.348 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 18 07:50:08.053 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 18 07:50:08.061 gedsborc1 eurexvd[2515:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 18 07:50:08.061 gedsborc1 eurexvd[2515:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 18 07:50:08.124 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 18 07:50:08.345 gedsborc1 eurexvd[2515:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 18 07:50:08.355 gedsborc1 eurexvd[2515:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 18 07:50:08.367 gedsborc1 eurexvd[2515:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 18 07:50:08.896 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750080] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 18 07:50:08.924 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 18 07:50:08.924 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 18 07:50:08.940 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 18 07:50:09.040 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 18 07:50:09.089 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  Business Date [20040318]
+Mar 18 07:51:49.215 gedsborc1 eurexvd[2515:t@13   :l@12   ]/info:  Contract download done [11956 contracts]
+Mar 18 08:00:14.124 gedsborc1 eurexvd[2515:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 18 08:00:14.124 gedsborc1 eurexvd[2515:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Mar 18 08:00:14.125 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 18 08:00:14.133 gedsborc1 eurexvd[2515:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Mar 18 08:00:14.134 gedsborc1 eurexvd[2515:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 19 07:50:01.470 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 19 07:50:01.472 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 19 07:50:01.472 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 19 07:50:01.472 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 19 07:50:01.472 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 19 07:50:01.473 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 19 07:50:01.473 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 19 07:50:01.474 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 19 07:50:01.474 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 19 07:50:01.475 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 19 07:50:01.475 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 19 07:50:01.475 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 19 07:50:01.479 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 19 07:50:01.479 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 19 07:50:01.479 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 19 07:50:01.480 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 19 07:50:01.480 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 78769
+Mar 19 07:50:01.480 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 19 07:50:01.480 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 19 07:50:01.481 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 19 07:50:01.481 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 19 07:50:01.481 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 19 07:50:01.481 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 19 07:50:01.481 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 19 07:50:01.482 gedsborc1 eurexvd[22889:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 19 07:50:02.167 gedsborc1 eurexvd[22889:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 19 07:50:02.382 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 19 07:50:02.386 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 19 07:50:04.444 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 19 07:50:04.445 gedsborc1 eurexvd[22889:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 19 07:50:04.446 gedsborc1 eurexvd[22889:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 19 07:50:04.463 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 19 07:50:04.505 gedsborc1 eurexvd[22889:t@13   :l@13   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 19 07:50:04.524 gedsborc1 eurexvd[22889:t@13   :l@13   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 19 07:50:04.528 gedsborc1 eurexvd[22889:t@13   :l@13   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 19 07:50:04.701 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750040] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 19 07:50:04.703 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 19 07:50:04.703 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 19 07:50:04.706 gedsborc1 eurexvd[22889:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 19 07:50:04.706 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 19 07:50:04.707 gedsborc1 eurexvd[22889:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Mar 19 07:50:04.708 gedsborc1 eurexvd[22889:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 22 07:50:02.707 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 22 07:50:02.709 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 22 07:50:02.709 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 22 07:50:02.709 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 22 07:50:02.710 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 22 07:50:02.710 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 22 07:50:02.711 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 22 07:50:02.711 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 22 07:50:02.712 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 22 07:50:02.712 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 22 07:50:02.713 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 22 07:50:02.713 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 22 07:50:02.716 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 22 07:50:02.717 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 22 07:50:02.717 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 22 07:50:02.717 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 22 07:50:02.717 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 76541
+Mar 22 07:50:02.718 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 22 07:50:02.718 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 22 07:50:02.719 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 22 07:50:02.719 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 22 07:50:02.719 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 22 07:50:02.719 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 22 07:50:02.719 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 22 07:50:02.720 gedsborc1 eurexvd[15727:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 22 07:50:03.136 gedsborc1 eurexvd[15727:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 22 07:50:03.397 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 22 07:50:03.402 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 22 07:50:05.522 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 22 07:50:05.524 gedsborc1 eurexvd[15727:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 22 07:50:05.525 gedsborc1 eurexvd[15727:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 22 07:50:05.542 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 22 07:50:05.687 gedsborc1 eurexvd[15727:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 22 07:50:05.706 gedsborc1 eurexvd[15727:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 22 07:50:05.717 gedsborc1 eurexvd[15727:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 22 07:50:05.919 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 22 07:50:05.920 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 22 07:50:05.921 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 22 07:50:05.925 gedsborc1 eurexvd[15727:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 22 07:50:05.926 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 22 07:50:05.927 gedsborc1 eurexvd[15727:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Mar 22 07:50:05.931 gedsborc1 eurexvd[15727:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 23 07:50:02.496 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 23 07:50:02.498 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 23 07:50:02.498 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 23 07:50:02.498 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 23 07:50:02.498 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 23 07:50:02.499 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 23 07:50:02.499 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 23 07:50:02.500 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 23 07:50:02.500 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 23 07:50:02.501 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 23 07:50:02.501 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 23 07:50:02.501 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 23 07:50:02.505 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 23 07:50:02.505 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 23 07:50:02.506 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 23 07:50:02.506 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 23 07:50:02.506 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 78478
+Mar 23 07:50:02.507 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 23 07:50:02.507 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 23 07:50:02.507 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 23 07:50:02.507 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 23 07:50:02.507 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 23 07:50:02.508 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 23 07:50:02.508 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 23 07:50:02.508 gedsborc1 eurexvd[17951:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 23 07:50:02.960 gedsborc1 eurexvd[17951:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 23 07:50:03.395 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 23 07:50:03.401 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 23 07:50:05.353 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 23 07:50:05.355 gedsborc1 eurexvd[17951:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 23 07:50:05.355 gedsborc1 eurexvd[17951:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 23 07:50:05.374 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 23 07:50:05.581 gedsborc1 eurexvd[17951:t@13   :l@13   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 23 07:50:05.590 gedsborc1 eurexvd[17951:t@13   :l@13   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 23 07:50:05.605 gedsborc1 eurexvd[17951:t@13   :l@13   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 23 07:50:06.287 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 23 07:50:06.289 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 23 07:50:06.289 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 23 07:50:06.294 gedsborc1 eurexvd[17951:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 23 07:50:06.294 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 23 07:50:06.295 gedsborc1 eurexvd[17951:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Mar 23 07:50:06.297 gedsborc1 eurexvd[17951:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 24 07:50:02.676 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 24 07:50:02.677 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 24 07:50:02.678 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 24 07:50:02.679 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 24 07:50:02.679 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 24 07:50:02.680 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 24 07:50:02.680 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 24 07:50:02.681 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 24 07:50:02.681 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 24 07:50:02.682 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 24 07:50:02.682 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 24 07:50:02.682 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 24 07:50:02.686 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 24 07:50:02.686 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 24 07:50:02.687 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 24 07:50:02.687 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 24 07:50:02.687 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 76651
+Mar 24 07:50:02.687 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 24 07:50:02.688 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 24 07:50:02.688 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 24 07:50:02.688 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 24 07:50:02.689 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 24 07:50:02.689 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 24 07:50:02.689 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 24 07:50:02.689 gedsborc1 eurexvd[21086:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 24 07:50:02.996 gedsborc1 eurexvd[21086:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 24 07:50:03.259 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 24 07:50:03.322 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 24 07:50:05.253 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 24 07:50:05.263 gedsborc1 eurexvd[21086:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 24 07:50:05.263 gedsborc1 eurexvd[21086:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 24 07:50:05.287 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 24 07:50:05.376 gedsborc1 eurexvd[21086:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 24 07:50:05.396 gedsborc1 eurexvd[21086:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 24 07:50:05.400 gedsborc1 eurexvd[21086:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 24 07:50:05.714 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 24 07:50:05.787 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 24 07:50:05.788 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 24 07:50:05.812 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 24 07:50:06.107 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 24 07:50:06.141 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  Business Date [20040325]
+Mar 24 07:51:37.082 gedsborc1 eurexvd[21086:t@13   :l@12   ]/info:  Contract download done [11396 contracts]
+Mar 24 08:00:14.399 gedsborc1 eurexvd[21086:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 24 08:00:14.400 gedsborc1 eurexvd[21086:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Mar 24 08:00:14.400 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 24 08:00:14.418 gedsborc1 eurexvd[21086:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Mar 24 08:00:14.419 gedsborc1 eurexvd[21086:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 25 07:50:02.014 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 25 07:50:02.016 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 25 07:50:02.016 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 25 07:50:02.016 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 25 07:50:02.017 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 25 07:50:02.017 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 25 07:50:02.018 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 25 07:50:02.018 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 25 07:50:02.019 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 25 07:50:02.019 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 25 07:50:02.020 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 25 07:50:02.020 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 25 07:50:02.023 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 25 07:50:02.024 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 25 07:50:02.024 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 25 07:50:02.024 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 25 07:50:02.024 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 74860
+Mar 25 07:50:02.025 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 25 07:50:02.025 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 25 07:50:02.025 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 25 07:50:02.026 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 25 07:50:02.026 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 25 07:50:02.026 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 25 07:50:02.026 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 25 07:50:02.027 gedsborc1 eurexvd[22772:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 25 07:50:02.347 gedsborc1 eurexvd[22772:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 25 07:50:02.636 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 25 07:50:02.640 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 25 07:50:04.862 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 25 07:50:04.864 gedsborc1 eurexvd[22772:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 25 07:50:04.864 gedsborc1 eurexvd[22772:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 25 07:50:04.881 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 25 07:50:05.016 gedsborc1 eurexvd[22772:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 25 07:50:05.026 gedsborc1 eurexvd[22772:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 25 07:50:05.035 gedsborc1 eurexvd[22772:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 25 07:50:05.191 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 25 07:50:05.193 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 25 07:50:05.193 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 25 07:50:05.247 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 25 07:50:05.368 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 25 07:50:05.377 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  Business Date [20040325]
+Mar 25 07:51:34.825 gedsborc1 eurexvd[22772:t@13   :l@12   ]/info:  Contract download done [11396 contracts]
+Mar 25 08:00:14.023 gedsborc1 eurexvd[22772:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 25 08:00:14.024 gedsborc1 eurexvd[22772:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Mar 25 08:00:14.024 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 25 08:00:14.025 gedsborc1 eurexvd[22772:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Mar 25 08:00:14.025 gedsborc1 eurexvd[22772:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 26 07:50:02.655 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 26 07:50:02.656 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 26 07:50:02.657 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 26 07:50:02.657 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 26 07:50:02.658 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 26 07:50:02.658 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 26 07:50:02.659 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 26 07:50:02.660 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 26 07:50:02.661 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 26 07:50:02.661 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 26 07:50:02.661 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 26 07:50:02.662 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 26 07:50:02.665 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 26 07:50:02.665 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 26 07:50:02.665 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 26 07:50:02.666 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 26 07:50:02.666 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 62385
+Mar 26 07:50:02.666 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 26 07:50:02.667 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 26 07:50:02.667 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 26 07:50:02.667 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 26 07:50:02.667 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 26 07:50:02.668 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 26 07:50:02.668 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 26 07:50:02.668 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 26 07:50:03.043 gedsborc1 eurexvd[26044:t@10   :l@3    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 26 07:50:03.497 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  Member Id: [MLILO]
+Mar 26 07:50:03.502 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Mar 26 07:50:05.852 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  CLEAR TABLES done
+Mar 26 07:50:05.854 gedsborc1 eurexvd[26044:t@1    :l@1    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 26 07:50:05.854 gedsborc1 eurexvd[26044:t@1    :l@1    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 26 07:50:05.873 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  Starting contract download from exchange
+Mar 26 07:50:05.997 gedsborc1 eurexvd[26044:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 26 07:50:06.007 gedsborc1 eurexvd[26044:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 26 07:50:06.023 gedsborc1 eurexvd[26044:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 26 07:50:06.205 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 26 07:50:06.211 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 26 07:50:06.211 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 26 07:50:06.217 gedsborc1 eurexvd[26044:t@1    :l@1    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 26 07:50:06.217 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 26 07:50:06.218 gedsborc1 eurexvd[26044:t@1    :l@1    ]/fatal: VALUES: primary/retransmission user login failure
+Mar 26 07:50:06.221 gedsborc1 eurexvd[26044:t@1    :l@1    ]/info:  Fatal error, shutdown ...
+Mar 29 07:50:02.497 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 29 07:50:02.499 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 29 07:50:02.499 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 29 07:50:02.499 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 29 07:50:02.499 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 29 07:50:02.500 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 29 07:50:02.501 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 29 07:50:02.507 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 29 07:50:02.507 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 29 07:50:02.508 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 29 07:50:02.508 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 29 07:50:02.509 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 29 07:50:02.513 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 29 07:50:02.514 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 29 07:50:02.514 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 29 07:50:02.514 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 29 07:50:02.514 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 49157
+Mar 29 07:50:02.515 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 29 07:50:02.515 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 29 07:50:02.515 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 29 07:50:02.515 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 29 07:50:02.516 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 29 07:50:02.516 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 29 07:50:02.516 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 29 07:50:02.516 gedsborc1 eurexvd[17467:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 29 07:50:02.994 gedsborc1 eurexvd[17467:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 29 07:50:03.398 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 29 07:50:03.403 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 29 07:50:05.492 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 29 07:50:05.494 gedsborc1 eurexvd[17467:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 29 07:50:05.494 gedsborc1 eurexvd[17467:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 29 07:50:05.513 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 29 07:50:05.592 gedsborc1 eurexvd[17467:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 29 07:50:05.601 gedsborc1 eurexvd[17467:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 29 07:50:05.610 gedsborc1 eurexvd[17467:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 29 07:50:05.843 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 29 07:50:05.845 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 29 07:50:05.846 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 29 07:50:05.858 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 29 07:50:06.189 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 29 07:50:06.232 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  Business Date [20040329]
+Mar 29 07:51:38.699 gedsborc1 eurexvd[17467:t@13   :l@12   ]/info:  Contract download done [11570 contracts]
+Mar 29 08:00:13.855 gedsborc1 eurexvd[17467:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 29 08:00:13.856 gedsborc1 eurexvd[17467:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Mar 29 08:00:13.856 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 29 08:00:13.856 gedsborc1 eurexvd[17467:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Mar 29 08:00:13.857 gedsborc1 eurexvd[17467:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 30 07:50:02.785 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 30 07:50:02.787 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 30 07:50:02.787 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 30 07:50:02.788 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 30 07:50:02.788 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 30 07:50:02.788 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 30 07:50:02.789 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 30 07:50:02.790 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 30 07:50:02.791 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 30 07:50:02.791 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 30 07:50:02.792 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 30 07:50:02.792 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 30 07:50:02.797 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 30 07:50:02.798 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 30 07:50:02.798 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 30 07:50:02.798 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 30 07:50:02.799 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 61290
+Mar 30 07:50:02.799 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 30 07:50:02.799 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 30 07:50:02.799 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 30 07:50:02.800 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 30 07:50:02.800 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 30 07:50:02.800 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 30 07:50:02.801 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 30 07:50:02.801 gedsborc1 eurexvd[18919:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 30 07:50:03.667 gedsborc1 eurexvd[18919:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 30 07:50:04.058 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 30 07:50:04.062 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 30 07:50:06.490 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 30 07:50:06.493 gedsborc1 eurexvd[18919:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 30 07:50:06.493 gedsborc1 eurexvd[18919:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 30 07:50:06.514 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 30 07:50:06.788 gedsborc1 eurexvd[18919:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 30 07:50:06.798 gedsborc1 eurexvd[18919:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 30 07:50:06.809 gedsborc1 eurexvd[18919:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 30 07:50:06.960 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 30 07:50:06.962 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 07:50:06.962 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 07:50:06.966 gedsborc1 eurexvd[18919:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 30 07:50:06.966 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Mar 30 07:50:06.967 gedsborc1 eurexvd[18919:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Mar 30 07:50:06.969 gedsborc1 eurexvd[18919:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 30 15:08:05.411 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 30 15:08:05.415 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 30 15:08:05.415 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 30 15:08:05.415 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 30 15:08:05.416 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 30 15:08:05.416 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 30 15:08:05.417 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 30 15:08:05.417 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 30 15:08:05.418 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 30 15:08:05.418 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 30 15:08:05.419 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 30 15:08:05.419 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 30 15:08:05.422 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 30 15:08:05.423 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 30 15:08:05.423 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 30 15:08:05.424 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 30 15:08:05.424 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 38834
+Mar 30 15:08:05.424 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 30 15:08:05.424 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 30 15:08:05.425 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 30 15:08:05.425 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 30 15:08:05.425 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 30 15:08:05.425 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 30 15:08:05.426 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 30 15:08:05.426 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 30 15:08:05.853 gedsborc1 eurexvd[29029:t@10   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 30 15:08:05.934 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  Member Id: [MLILO]
+Mar 30 15:08:05.938 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Mar 30 15:08:07.869 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  CLEAR TABLES done
+Mar 30 15:08:07.871 gedsborc1 eurexvd[29029:t@1    :l@1    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 30 15:08:07.871 gedsborc1 eurexvd[29029:t@1    :l@1    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 30 15:08:07.891 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  Starting contract download from exchange
+Mar 30 15:08:07.939 gedsborc1 eurexvd[29029:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 30 15:08:07.959 gedsborc1 eurexvd[29029:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 30 15:08:07.967 gedsborc1 eurexvd[29029:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 30 15:08:08.301 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: VCI_Connect respons [750062] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 30 15:08:08.303 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 15:08:08.304 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 15:08:08.319 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 30 15:08:08.442 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 30 15:08:08.499 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  Business Date [20040401]
+Mar 30 15:09:54.581 gedsborc1 eurexvd[29029:t@13   :l@12   ]/info:  Contract download done [11556 contracts]
+Mar 30 15:11:28.854 gedsborc1 eurexvd[29029:t@12   :l@11   ]/info:  [LONIWGDV63178.uk.ml.com] [169.243.231.225:4212] [fd = 7] connected
+Mar 30 15:11:29.055 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [demo4] [MLILOSIM001] [1] logged in 
+Mar 30 15:11:29.056 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  User [demo4]: logged in
+Mar 30 15:11:58.106 gedsborc1 eurexvd[29029:t@20   :l@19   ]/info:  User [demo4]: logging out
+Mar 30 15:11:59.208 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1] [MLILOSIM001 is logged out of EUREX]
+Mar 30 15:11:59.208 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 15:14:43.345 gedsborc1 eurexvd[29029:t@12   :l@11   ]/info:  [LONIWGDV63178.uk.ml.com] [169.243.231.225:4475] [fd = 20] connected
+Mar 30 15:14:43.624 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [demo2] [MLILOSIM001] [99] logged in 
+Mar 30 15:14:43.627 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  User [demo2]: logged in
+Mar 30 15:59:49.208 gedsborc1 eurexvd[29029:t@12   :l@11   ]/info:  [ELONW067097.uk.ml.com] [169.243.93.40:1170] [fd = 12] connected
+Mar 30 15:59:49.512 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [demo3] [MLILOSIM001] [2] logged in 
+Mar 30 15:59:49.512 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  User [demo3]: logged in
+Mar 30 16:09:44.015 gedsborc1 eurexvd[29029:t@26   :l@25   ]/info:  User [demo3]: logging out
+Mar 30 16:09:45.121 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [2] [MLILOSIM001 is logged out of EUREX]
+Mar 30 16:09:45.121 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 18:14:12.731 gedsborc1 eurexvd[29029:t@23   :l@22   ]/info:  User [demo2]: logging out
+Mar 30 18:14:13.811 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [99] [MLILOSIM001 is logged out of EUREX]
+Mar 30 18:14:13.812 gedsborc1 eurexvd[29029:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 30 19:00:04.332 gedsborc1 eurexvd[29029:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 30 19:00:04.333 gedsborc1 eurexvd[29029:t@5    :l@5    ]/info:  Disconnect all user threads (waiting max 10 seconds)...
+Mar 30 19:00:04.334 gedsborc1 eurexvd[29029:t@5    :l@5    ]/info:  Termination done
+Mar 31 07:50:02.987 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 31 07:50:02.990 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 31 07:50:02.990 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 31 07:50:02.991 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com -e @gedsorc9
+Mar 31 07:50:02.991 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 07:50:02.991 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 07:50:02.992 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 07:50:02.993 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 07:50:02.993 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 07:50:02.993 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 07:50:02.994 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 07:50:02.994 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 07:50:02.997 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 31 07:50:02.998 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 07:50:02.998 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 07:50:02.998 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 07:50:02.998 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 55756
+Mar 31 07:50:02.999 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 07:50:02.999 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 07:50:02.999 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 07:50:02.999 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 07:50:03.000 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 07:50:03.000 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 07:50:03.000 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 07:50:03.000 gedsborc1 eurexvd[16246:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 07:50:03.476 gedsborc1 eurexvd[16246:t@11   :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 31 07:50:03.809 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 31 07:50:03.864 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 31 07:50:05.813 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 31 07:50:05.840 gedsborc1 eurexvd[16246:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 31 07:50:05.840 gedsborc1 eurexvd[16246:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 31 07:50:05.905 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  Starting contract download from exchange
+Mar 31 07:50:06.231 gedsborc1 eurexvd[16246:t@13   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 31 07:50:06.240 gedsborc1 eurexvd[16246:t@13   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 31 07:50:06.280 gedsborc1 eurexvd[16246:t@13   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 31 07:50:06.450 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Mar 31 07:50:06.506 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 07:50:06.507 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 07:50:06.530 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 31 07:50:06.621 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 31 07:50:06.743 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  Business Date [20040401]
+Mar 31 07:51:44.149 gedsborc1 eurexvd[16246:t@13   :l@12   ]/info:  Contract download done [11556 contracts]
+Mar 31 08:00:13.833 gedsborc1 eurexvd[16246:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 31 08:00:13.833 gedsborc1 eurexvd[16246:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Mar 31 08:00:13.833 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Mar 31 08:00:13.872 gedsborc1 eurexvd[16246:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Mar 31 08:00:13.873 gedsborc1 eurexvd[16246:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Mar 31 13:23:19.363 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 31 13:23:19.364 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 31 13:23:19.364 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 31 13:23:19.365 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Mar 31 13:23:19.365 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 13:23:19.365 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 13:23:19.366 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 13:23:19.367 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 13:23:19.367 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 13:23:19.368 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 13:23:19.368 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 13:23:19.368 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 13:23:19.372 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 31 13:23:19.372 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 13:23:19.372 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 13:23:19.372 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 13:23:19.373 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 35338
+Mar 31 13:23:19.373 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 13:23:19.373 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 13:23:19.373 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 13:23:19.374 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 13:23:19.374 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 13:23:19.374 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 13:23:19.374 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 13:23:19.374 gedsborc1 eurexvd[24254:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 13:23:19.748 gedsborc1 eurexvd[24254:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 31 13:23:19.904 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 31 13:23:19.911 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 31 13:23:23.466 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 31 13:23:23.469 gedsborc1 eurexvd[24254:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 31 13:23:23.469 gedsborc1 eurexvd[24254:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 31 13:23:23.499 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  Starting contract download from database
+Mar 31 13:23:31.078 gedsborc1 eurexvd[24254:t@12   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 31 13:23:31.241 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750062] [17                                     ] [S (VCI_AREA_SIM)]
+Mar 31 13:23:31.243 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 13:23:31.243 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 13:23:31.255 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 31 13:23:31.481 gedsborc1 eurexvd[24254:t@12   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 31 13:23:31.493 gedsborc1 eurexvd[24254:t@12   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 31 13:23:31.494 gedsborc1 eurexvd[24254:t@12   :l@12   ]/info:  Contract download done [11556 contracts]
+Mar 31 13:23:31.588 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 31 13:23:31.898 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  Business Date [20040401]
+Mar 31 13:24:10.596 gedsborc1 eurexvd[24254:t@11   :l@11   ]/info:  [ELONW065327.uk.ml.com] [169.243.223.215:1197] [fd = 11] connected
+Mar 31 13:24:10.743 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [demo2] [MLILOSIM001] [1] logged in 
+Mar 31 13:24:10.744 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  User [demo2]: logged in
+Mar 31 13:34:20.322 gedsborc1 eurexvd[24254:t@11   :l@11   ]/info:  [ELONW067097.uk.ml.com] [169.243.93.40:3255] [fd = 21] connected
+Mar 31 13:34:20.571 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [demo3] [MLILOSIM001] [2] logged in 
+Mar 31 13:34:20.572 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  User [demo3]: logged in
+Mar 31 14:21:08.420 gedsborc1 eurexvd[24254:t@22   :l@22   ]/info:  User [demo3]: logging out
+Mar 31 14:21:09.500 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [2] [MLILOSIM001 is logged out of EUREX]
+Mar 31 14:21:09.500 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 16:54:47.782 gedsborc1 eurexvd[24254:t@19   :l@19   ]/info:  User [demo2]: logging out
+Mar 31 16:54:48.873 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [1] [MLILOSIM001 is logged out of EUREX]
+Mar 31 16:54:48.874 gedsborc1 eurexvd[24254:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 16:57:10.053 gedsborc1 eurexvd[24254:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 31 16:57:10.055 gedsborc1 eurexvd[24254:t@5    :l@5    ]/info:  Disconnect all user threads (waiting max 10 seconds)...
+Mar 31 16:57:10.055 gedsborc1 eurexvd[24254:t@5    :l@5    ]/info:  Termination done
+Mar 31 16:57:54.638 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Mar 31 16:57:54.640 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Mar 31 16:57:54.640 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  *** Configuration ***
+Mar 31 16:57:54.640 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Mar 31 16:57:54.641 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Mar 31 16:57:54.641 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Mar 31 16:57:54.642 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Mar 31 16:57:54.642 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Mar 31 16:57:54.642 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Mar 31 16:57:54.643 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Mar 31 16:57:54.643 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Mar 31 16:57:54.643 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Mar 31 16:57:54.647 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Mar 31 16:57:54.647 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Mar 31 16:57:54.647 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Mar 31 16:57:54.647 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- System memory page size 8192
+Mar 31 16:57:54.648 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 130537
+Mar 31 16:57:54.648 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Mar 31 16:57:54.648 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Mar 31 16:57:54.648 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Mar 31 16:57:54.649 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Mar 31 16:57:54.649 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Mar 31 16:57:54.650 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Mar 31 16:57:54.650 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Mar 31 16:57:54.650 gedsborc1 eurexvd[268:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Mar 31 16:57:56.097 gedsborc1 eurexvd[268:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Mar 31 16:57:56.739 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Mar 31 16:57:56.763 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Mar 31 16:58:02.412 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  CLEAR TABLES done
+Mar 31 16:58:02.414 gedsborc1 eurexvd[268:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Mar 31 16:58:02.414 gedsborc1 eurexvd[268:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Mar 31 16:58:02.442 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  Starting contract download from database
+Mar 31 16:58:23.590 gedsborc1 eurexvd[268:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Mar 31 16:58:23.607 gedsborc1 eurexvd[268:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Mar 31 16:58:23.660 gedsborc1 eurexvd[268:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Mar 31 16:58:23.661 gedsborc1 eurexvd[268:t@12   :l@11   ]/info:  Contract download done [11556 contracts]
+Mar 31 16:58:25.607 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750064] [20                                     ] [S (VCI_AREA_SIM)]
+Mar 31 16:58:25.613 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 16:58:25.614 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Mar 31 16:58:25.631 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Mar 31 16:58:26.399 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Mar 31 16:58:26.486 gedsborc1 eurexvd[268:t@1    :l@3    ]/info:  Business Date [20040401]
+Mar 31 19:00:04.056 gedsborc1 eurexvd[268:t@5    :l@5    ]/info:  shutdown [SIGTERM]
+Mar 31 19:00:04.059 gedsborc1 eurexvd[268:t@5    :l@5    ]/info:  Disconnect all user threads (waiting max 10 seconds)...
+Mar 31 19:00:04.060 gedsborc1 eurexvd[268:t@5    :l@5    ]/info:  Termination done
+Apr  1 07:50:03.338 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  1 07:50:03.340 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  1 07:50:03.340 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  1 07:50:03.341 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  1 07:50:03.342 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  1 07:50:03.342 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  1 07:50:03.343 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  1 07:50:03.344 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  1 07:50:03.345 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  1 07:50:03.345 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  1 07:50:03.346 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  1 07:50:03.346 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  1 07:50:03.350 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  1 07:50:03.350 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  1 07:50:03.351 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  1 07:50:03.351 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  1 07:50:03.352 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 51581
+Apr  1 07:50:03.352 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  1 07:50:03.353 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  1 07:50:03.353 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  1 07:50:03.353 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  1 07:50:03.353 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  1 07:50:03.354 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  1 07:50:03.354 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  1 07:50:03.354 gedsborc1 eurexvd[28911:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  1 07:50:05.445 gedsborc1 eurexvd[28911:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  1 07:50:05.712 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Apr  1 07:50:05.716 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Apr  1 07:50:08.987 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  CLEAR TABLES done
+Apr  1 07:50:08.989 gedsborc1 eurexvd[28911:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  1 07:50:08.990 gedsborc1 eurexvd[28911:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  1 07:50:09.010 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  Starting contract download from exchange
+Apr  1 07:50:09.167 gedsborc1 eurexvd[28911:t@12   :l@12   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  1 07:50:09.179 gedsborc1 eurexvd[28911:t@12   :l@12   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  1 07:50:09.188 gedsborc1 eurexvd[28911:t@12   :l@12   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  1 07:50:09.403 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750090] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  1 07:50:09.453 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  1 07:50:09.453 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  1 07:50:09.464 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Apr  1 07:50:09.554 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Apr  1 07:50:10.016 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  Business Date [20040401]
+Apr  1 07:52:00.273 gedsborc1 eurexvd[28911:t@12   :l@12   ]/info:  Contract download done [11556 contracts]
+Apr  1 08:00:13.792 gedsborc1 eurexvd[28911:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Apr  1 08:00:13.793 gedsborc1 eurexvd[28911:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Apr  1 08:00:13.793 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Apr  1 08:00:13.794 gedsborc1 eurexvd[28911:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Apr  1 08:00:13.795 gedsborc1 eurexvd[28911:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Apr  2 07:50:02.935 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  2 07:50:02.937 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  2 07:50:02.937 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  2 07:50:02.937 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  2 07:50:02.937 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  2 07:50:02.938 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  2 07:50:02.939 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  2 07:50:02.939 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  2 07:50:02.939 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  2 07:50:02.940 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  2 07:50:02.940 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  2 07:50:02.940 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  2 07:50:02.944 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  2 07:50:02.944 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  2 07:50:02.944 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  2 07:50:02.944 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  2 07:50:02.945 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 46203
+Apr  2 07:50:02.947 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  2 07:50:02.948 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  2 07:50:02.948 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  2 07:50:02.949 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  2 07:50:02.949 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  2 07:50:02.949 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  2 07:50:02.949 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  2 07:50:02.949 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  2 07:50:03.268 gedsborc1 eurexvd[5742:t@9    :l@3    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  2 07:50:03.830 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  Member Id: [MLILO]
+Apr  2 07:50:03.868 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Apr  2 07:50:08.800 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  CLEAR TABLES done
+Apr  2 07:50:08.846 gedsborc1 eurexvd[5742:t@1    :l@1    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  2 07:50:08.846 gedsborc1 eurexvd[5742:t@1    :l@1    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  2 07:50:08.918 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  Starting contract download from exchange
+Apr  2 07:50:09.158 gedsborc1 eurexvd[5742:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  2 07:50:09.170 gedsborc1 eurexvd[5742:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  2 07:50:09.179 gedsborc1 eurexvd[5742:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  2 07:50:09.420 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  VALUES: VCI_Connect respons [750090] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  2 07:50:09.449 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  2 07:50:09.450 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  2 07:50:09.471 gedsborc1 eurexvd[5742:t@1    :l@1    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  2 07:50:09.471 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  2 07:50:09.480 gedsborc1 eurexvd[5742:t@1    :l@1    ]/fatal: VALUES: primary/retransmission user login failure
+Apr  2 07:50:09.481 gedsborc1 eurexvd[5742:t@1    :l@1    ]/info:  Fatal error, shutdown ...
+Apr  5 07:50:02.198 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  5 07:50:02.200 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  5 07:50:02.200 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  5 07:50:02.201 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  5 07:50:02.201 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  5 07:50:02.201 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  5 07:50:02.202 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  5 07:50:02.202 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  5 07:50:02.203 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  5 07:50:02.203 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  5 07:50:02.204 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  5 07:50:02.204 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  5 07:50:02.207 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  5 07:50:02.208 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  5 07:50:02.208 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  5 07:50:02.208 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  5 07:50:02.209 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 56754
+Apr  5 07:50:02.209 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  5 07:50:02.209 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  5 07:50:02.210 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  5 07:50:02.714 gedsborc1 eurexvd[322:t@9    :l@3    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  5 07:50:02.777 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  Member Id: [MLILO]
+Apr  5 07:50:02.795 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  CLEAR TABLES begin
+Apr  5 07:50:04.837 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  CLEAR TABLES done
+Apr  5 07:50:04.839 gedsborc1 eurexvd[322:t@1    :l@1    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  5 07:50:04.839 gedsborc1 eurexvd[322:t@1    :l@1    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  5 07:50:04.860 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  Starting contract download from exchange
+Apr  5 07:50:04.960 gedsborc1 eurexvd[322:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  5 07:50:04.972 gedsborc1 eurexvd[322:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  5 07:50:04.983 gedsborc1 eurexvd[322:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  5 07:50:05.315 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  5 07:50:05.338 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  5 07:50:05.338 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  5 07:50:05.363 gedsborc1 eurexvd[322:t@1    :l@1    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  5 07:50:05.364 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  5 07:50:05.376 gedsborc1 eurexvd[322:t@1    :l@1    ]/fatal: VALUES: primary/retransmission user login failure
+Apr  5 07:50:05.377 gedsborc1 eurexvd[322:t@1    :l@1    ]/info:  Fatal error, shutdown ...
+Apr  6 07:50:03.322 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  6 07:50:03.325 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  6 07:50:03.325 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  6 07:50:03.326 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  6 07:50:03.326 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  6 07:50:03.326 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  6 07:50:03.327 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  6 07:50:03.329 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  6 07:50:03.329 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  6 07:50:03.330 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  6 07:50:03.330 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  6 07:50:03.330 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  6 07:50:03.335 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  6 07:50:03.335 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  6 07:50:03.335 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  6 07:50:03.336 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  6 07:50:03.336 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 58217
+Apr  6 07:50:03.336 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  6 07:50:03.336 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  6 07:50:03.337 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  6 07:50:03.337 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  6 07:50:03.337 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  6 07:50:03.337 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  6 07:50:03.338 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  6 07:50:03.338 gedsborc1 eurexvd[1741:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  6 07:50:03.602 gedsborc1 eurexvd[1741:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  6 07:50:03.875 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Apr  6 07:50:03.880 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Apr  6 07:50:06.144 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  CLEAR TABLES done
+Apr  6 07:50:06.146 gedsborc1 eurexvd[1741:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  6 07:50:06.146 gedsborc1 eurexvd[1741:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  6 07:50:06.163 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  Starting contract download from exchange
+Apr  6 07:50:06.289 gedsborc1 eurexvd[1741:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  6 07:50:06.305 gedsborc1 eurexvd[1741:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  6 07:50:06.324 gedsborc1 eurexvd[1741:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  6 07:50:06.596 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  6 07:50:06.598 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  6 07:50:06.598 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  6 07:50:06.605 gedsborc1 eurexvd[1741:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  6 07:50:06.605 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  6 07:50:06.632 gedsborc1 eurexvd[1741:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Apr  6 07:50:06.633 gedsborc1 eurexvd[1741:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Apr  7 07:50:03.740 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  7 07:50:03.742 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  7 07:50:03.742 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  7 07:50:03.742 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  7 07:50:03.743 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  7 07:50:03.743 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  7 07:50:03.744 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  7 07:50:03.744 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  7 07:50:03.745 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  7 07:50:03.745 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  7 07:50:03.745 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  7 07:50:03.746 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  7 07:50:03.749 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  7 07:50:03.749 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  7 07:50:03.749 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  7 07:50:03.750 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  7 07:50:03.750 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 51582
+Apr  7 07:50:03.750 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  7 07:50:03.750 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  7 07:50:03.751 gedsborc1 eurexvd[1338:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  7 07:50:04.112 gedsborc1 eurexvd[1338:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  7 07:50:04.222 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Apr  7 07:50:04.254 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Apr  7 07:50:06.307 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  CLEAR TABLES done
+Apr  7 07:50:06.322 gedsborc1 eurexvd[1338:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  7 07:50:06.322 gedsborc1 eurexvd[1338:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  7 07:50:06.359 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  Starting contract download from exchange
+Apr  7 07:50:06.649 gedsborc1 eurexvd[1338:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  7 07:50:06.660 gedsborc1 eurexvd[1338:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  7 07:50:06.689 gedsborc1 eurexvd[1338:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  7 07:50:06.816 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750060] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  7 07:50:06.838 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  7 07:50:06.838 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  7 07:50:06.886 gedsborc1 eurexvd[1338:t@1    :l@3    ]/error: VALUES: VCI_Login: techCompl [VCI_ERROR] [120] [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  7 07:50:06.898 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [-1] login failed with [00120 - EXCHANGE SERVICE NOT AVAILABLE]
+Apr  7 07:50:06.923 gedsborc1 eurexvd[1338:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user login failure
+Apr  7 07:50:06.924 gedsborc1 eurexvd[1338:t@1    :l@3    ]/info:  Fatal error, shutdown ...
+Apr  8 07:50:02.941 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  [version:  6.0.14 2003-11-04]
+Apr  8 07:50:02.943 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  [protocol: 3   2002-09-09]
+Apr  8 07:50:02.943 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  *** Configuration ***
+Apr  8 07:50:02.943 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- /usr/rat/bin/eurexvd -n eurexv -D eurexv@online2 -l /usr/rat/log/eurexvd -N EUREXv MISS -g /opt/gate/base91/bin/ -P -e @gedsborc1.uk.ml.com
+Apr  8 07:50:02.944 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- INFORMIXSERVER=online2
+Apr  8 07:50:02.944 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- INFORMIXDIR=/usr/informix
+Apr  8 07:50:02.945 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 7.31.UC6
+Apr  8 07:50:02.945 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- Informix Dynamic Server Version 9.30.FC2
+Apr  8 07:50:02.946 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- INFORMIX-Client SDK Version 2.60.UC1
+Apr  8 07:50:02.946 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- INFORMIX-Connect Version 2.70.FC1
+Apr  8 07:50:02.946 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- INFORMIX EMBEDDED SQL for C Version 9.50.UC1
+Apr  8 07:50:02.947 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- SunOS gedsborc1 5.8 Generic_108528-12 sun4usparc SUNW,Ultra-2
+Apr  8 07:50:02.951 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- Current working directory: /opt/gate/base91/bin
+Apr  8 07:50:02.951 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- uid = 17349, euid = 17349, gid = 17349, egid = 17349
+Apr  8 07:50:02.951 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- Number of processors configured 2 online 2
+Apr  8 07:50:02.952 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- System memory page size 8192
+Apr  8 07:50:02.952 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- Total numbers of pages of physical memory 262144 not used 54120
+Apr  8 07:50:02.952 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_CORE:   soft =   infinity, hard =   infinity
+Apr  8 07:50:02.952 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_CPU:    soft =   infinity, hard =   infinity
+Apr  8 07:50:02.953 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_DATA:   soft =   infinity, hard =   infinity
+Apr  8 07:50:02.953 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_FSIZE:  soft =   infinity, hard =   infinity
+Apr  8 07:50:02.953 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_NOFILE: soft =       1024, hard =       1024
+Apr  8 07:50:02.953 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_STACK:  soft =    8388608, hard =   infinity
+Apr  8 07:50:02.954 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- RLIMIT_VMEM:   soft =   infinity, hard =   infinity
+Apr  8 07:50:02.954 gedsborc1 eurexvd[2156:t@1    :l@1    ]/info:  -- librt 3.2.9 2003-11-22
+Apr  8 07:50:03.491 gedsborc1 eurexvd[2156:t@9    :l@1    ]/info:  Connected to eurexv@online2 [Informix Dynamic Server]
+Apr  8 07:50:03.699 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  Member Id: [MLILO]
+Apr  8 07:50:03.704 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  CLEAR TABLES begin
+Apr  8 07:50:05.619 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  CLEAR TABLES done
+Apr  8 07:50:05.621 gedsborc1 eurexvd[2156:t@1    :l@3    ]/warn:  Couldn't open [/opt/gate/base91/EUREX/data/XEUR_msg.dat]: No such file or directory
+Apr  8 07:50:05.621 gedsborc1 eurexvd[2156:t@1    :l@3    ]/warn:  Couldn't find XEUR_msg.dat file
+Apr  8 07:50:05.639 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  Starting contract download from exchange
+Apr  8 07:50:05.685 gedsborc1 eurexvd[2156:t@12   :l@11   ]/info:  Trade Confirmation: starting with sequence number [1]
+Apr  8 07:50:05.705 gedsborc1 eurexvd[2156:t@12   :l@11   ]/info:  Single Leg Order Confirmation: starting with sequence number [1]
+Apr  8 07:50:05.710 gedsborc1 eurexvd[2156:t@12   :l@11   ]/info:  Double Leg Order Confirmation: starting with sequence number [1]
+Apr  8 07:50:06.004 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: VCI_Connect respons [750050] [19                                     ] [S (VCI_AREA_SIM)]
+Apr  8 07:50:06.005 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: [1200] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  8 07:50:06.005 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: [1201] [61] [60] [XEUR] [EUREX FRANKFURT]
+Apr  8 07:50:06.018 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: [retransmission] [MLILOSIM001] [0] logged in 
+Apr  8 07:50:06.127 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: [primary] [MLILOSIM001] [0] logged in 
+Apr  8 07:50:06.162 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  Business Date [20040407]
+Apr  8 07:51:42.803 gedsborc1 eurexvd[2156:t@12   :l@11   ]/info:  Contract download done [12091 contracts]
+Apr  8 08:00:13.634 gedsborc1 eurexvd[2156:t@1    :l@3    ]/error: VALUES: login/logout callback: techCompl [VCI_WARNING] [120] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Apr  8 08:00:13.634 gedsborc1 eurexvd[2156:t@1    :l@3    ]/error: VALUES: login/logout callback: compl [VCI_SUCCESS] [0] [SUCCESSFUL COMPLETION]
+Apr  8 08:00:13.634 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  VALUES: [0] [EXCHANGE SERVICE (EUREX_RETRANSMISSION) NOT AVAILABLE]
+Apr  8 08:00:13.635 gedsborc1 eurexvd[2156:t@1    :l@3    ]/fatal: VALUES: primary/retransmission user disconnect
+Apr  8 08:00:13.635 gedsborc1 eurexvd[2156:t@1    :l@3    ]/info:  Fatal error, shutdown ...

@@ -1,0 +1,11 @@
+Informix Dynamic Server Version 7.31.UC6    -- On-Line (Prim) -- Up 36 days 18:06:00 -- 65536 Kbytes
+
+Data Replication: 
+  Type         State        Paired server        Last DR CKPT (id/pg)     
+  primary      on           online3                     185 / 1301 
+
+  DRINTERVAL   -1 
+  DRTIMEOUT    40 
+  DRAUTO       0 
+  DRLOSTFOUND  /usr/informix/etc/dr.lostfound 
+

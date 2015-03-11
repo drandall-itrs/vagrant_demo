@@ -1,0 +1,132 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>ITRS Trend Analysis Report</title>
+    <!-- Expected Java script -->
+    <script src="../resources/urlUtils/js/jquery-1.2.6.js"   type="text/javascript" ></script>
+    <script src="../resources/urlUtils/js/jquery.scrollTo.js"   type="text/javascript" ></script>
+    <script src="../resources/urlUtils/js/faultReport.js"   type="text/javascript" ></script>
+    <!-- Expected CSS script -->
+    <link href="../resources/urlUtils/css/expressReports.css" type="text/css" rel="stylesheet"></link>
+    <link href="../resources/urlUtils/css/erIndex.css"         type="text/css" rel="stylesheet"></link>
+    
+    <!-- Sub Report CSS script -->
+    <link href="../resources/urlUtils/css/faultReport.css"   type="text/css" rel="stylesheet"></link>
+    <link href="../resources/urlUtils/css/trendReport.css"   type="text/css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <script>
+      // Current Page Loaded
+      var currentPage="";
+      
+      // Moves the Report to the specified Section
+      function moveTo(urlPage,internalRef)
+      {
+        currentPage=urlPage;
+        if (internalRef=="")
+          $('#currentReport').scrollTo(0);
+        else
+          $('#currentReport').scrollTo("#"+internalRef);
+         return false;
+      }
+    
+      // Fix for IE bugs
+      function fixIE() {
+        if ($.browser.msie)
+        {
+          $("div.scrollX").css("overflow-y","hidden");
+          $("div.scrollX").css("padding-bottom","20px");
+          var h=$(window).height()-$("#top").height();
+          $("#nav0").height(h);
+          $("#nav1").height(h);
+          $("#content").height(h);
+        }
+      }
+
+      // Ajax page retrival
+       // Ajax page retrival
+      function getTextContentsByLink()
+      {
+        var url=$(this).attr("href");
+        if (currentPage==url) return; 
+        $("#currentReport").load(url,function() { });
+        $.ajax({
+          url: url,
+          cache: false,
+          success: function(html) {
+            $("#currentReport").html("<h1>Express Reports Error Log</h1>");
+            var lines=html.split("\n");
+            for ( var i in lines )
+            {
+              $("#currentReport").append($('<div/>').text(lines[i]).html());
+              $("#currentReport").append("<br />");
+            } 
+          }
+        });
+        return false;
+      }
+      
+      function getContentsByLink()
+      {
+        var url=$(this).attr("href");
+        getContents(url);
+        return false;
+      }
+    
+      function getContents(url)
+      {
+        var urlArr=url.split('#');
+        var urlPage=urlArr[0];
+        var urlWithLocation=urlPage+" "+"#page";
+        var internalRef="";
+        if (urlArr[1]!=undefined) internalRef=urlArr[1];
+        if (currentPage==urlPage) return moveTo(urlPage,internalRef); 
+        $("#currentReport").load(urlWithLocation,function() { fixIE(); moveTo(urlPage,internalRef); initFaultReport(); });
+      }
+	
+	// Highlight binding functions
+	$(document).ready(function(){
+        
+        getContents($("a.nav-link").eq(0).attr("href"));
+        $('#nav1 img.close').click(function() {
+            $('#nav0').show();
+            $('#nav1').hide();
+        });
+         $('#nav0 img.open').click(function() {
+            $('#nav0').hide();
+            $('#nav1').show();
+        });
+        $("a.nav-link").click(getContentsByLink);
+        $("a.err-link").click(getTextContentsByLink);
+       });
+    </script>
+    <div id="top">
+      <div id="logo">
+        <img src="../resources/urlUtils/img/expressReportsSmall.png" alt="ITRS Group PLC">
+      </div>
+      <h1>ITRS Test Run</h1>
+       <div class="gen">Generated on 25 November 2008 at 11:37</div>    
+      <br class="postDefTable"><br><hr class="break">
+    </div>
+    <div id="bottom">
+    <div id="nav0">
+      <div class="open"><img src="../resources/urlUtils/img/right.png" class="open" /></div>
+    </div>
+    <div id="nav1">
+      <div class="close"><img src="../resources/urlUtils/img/left.png" class="close" /></div>
+      <ul class='reportList' ><li>Report - Hardware<ul class='subReports' ><li><a class='nav-link' href='Report%20-%20Hardware-CPU%20Utilisation.html' >CPU Utilisation</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Hardware-CPU%20Utilisation.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Hardware-CPU%20Utilisation.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Hardware-CPU%20Utilisation.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Hardware-Swap%20usage.html' >Swap usage</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Hardware-Swap%20usage.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Hardware-Swap%20usage.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Hardware-Swap%20usage.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Hardware-Memory%20Usage.html' >Memory Usage</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Hardware-Memory%20Usage.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Hardware-Memory%20Usage.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Hardware-Memory%20Usage.html#events' >Events</a></div></li></ul></li><li>Report - Disk Usage<ul class='subReports' ><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_.html' >/</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_usr.html' >/usr</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_usr.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_usr.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_usr.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_var.html' >/var</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_var.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_var.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_var.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_opt.html' >/opt</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_opt.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_opt.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_opt.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_tmp.html' >/tmp</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_tmp.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_tmp.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_tmp.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa.html' >/fidessa</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_dbdumps.html' >/dbdumps</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_dbdumps.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_dbdumps.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_dbdumps.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_opt_sybase.html' >/opt/sybase</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_opt_sybase.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_opt_sybase.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_opt_sybase.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa_ramdisk_casecr.html' >/fidessa/ramdisk/casecr</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa_ramdisk_casecr.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa_ramdisk_casecr.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_fidessa_ramdisk_casecr.html#events' >Events</a></div></li><li><a class='nav-link' href='Report%20-%20Disk%20Usage-_mqmsw.html' >/mqmsw</a><div class='sub-links' ><a class='nav-link' href='Report%20-%20Disk%20Usage-_mqmsw.html#graph' >Trend</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_mqmsw.html#summary' >Summary</a> <a class='nav-link' href='Report%20-%20Disk%20Usage-_mqmsw.html#events' >Events</a></div></li></ul></li><li>Report - Fault <ul class='subReports' ><li><a class='nav-link' href='Report%20-%20Fault%20-Fault.html' >Fault</a></li></ul></li></ul>
+    </div>
+    
+    <div id="content">
+      <div id="currentReport">
+        Report Place Holder
+      </div>
+    </div>
+    
+  </body>
+</html>
+
+          

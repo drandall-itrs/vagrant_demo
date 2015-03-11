@@ -1,0 +1,25 @@
+name,Boot Time,Power State,toolsInstallerMounted,Clean Power Off,Connection State,Consolidation Needed,dasVmProtection,faultToleranceState,numMksConnections,offlineFeatureRequirement,onlineStandby,question,recordReplayState,suspendInterval,suspendTime,Guest Heartbeat Status,Host,Guest Memory Usage,Host Memory Usage,Overall Cpu Demand,Overall Cpu Usage,Memory Overhead
+CWbuild-centos5-64,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+git repositories (Debian 6 64-bit),Tue Feb 19 16:41:46 GMT 2013,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Windows Vista (64bit) (ITRSTESTWIN02),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+CWBuild-services,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Windows Server 2008 (64bit)  (ITRSTESTWIN04),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN09),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+Windows Server 2008 R2 Enterprise (64bit) (ITRSTESTWIN08),Wed Jul 25 13:47:35 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Windows Server 2008 R2 Standard (64bit) (ITRSTESTWIN07),Wed Jul 25 16:34:27 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+Solaris 10 - X86 (64bit) (ITRSTESTX8601),Thu Mar 14 13:12:22 GMT 2013,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+SUSE 10 (64bit) (ITRSTESTSUSE02),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+RH Enterprise 3 (32bit) (ITRSTESTRH01),Tue Mar 12 10:47:29 GMT 2013,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+SUSE 10 (64bit) (ITRSTESTSUSE01),Tue Oct 02 17:35:40 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+CWbuild-es3-32,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Windows XP (32bit) (ITRSTESTWIN03),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+lnsol05-01,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+Windows 7 (32bit) (ITRSTESTWIN05),,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Red Hat Enterprise Linux 5 - Yum Repository,Thu Oct 04 05:55:40 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+Windows Server 2003 (32bit) (ITRSTESTWIN01),Fri Feb 15 14:51:33 GMT 2013,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+CentOS 5.2 (64bit) (ITRSTESTRH02),Tue Jan 29 12:18:10 GMT 2013,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+Chef Server (Ubuntu 10.04 64-bit),Wed Jul 25 13:48:48 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+Centos 4.8 (32bit) (ITRSTESTRH04),Wed Jul 25 13:48:18 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000
+CentOS 5.2 (64bit) (ITRSTESTRH03),Wed Jul 25 13:54:53 BST 2012,POWERED_ON,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,61,570,,21,42369024
+CWbuild-xp-32,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,1,,false,,INACTIVE,0,,GREEN,localhost.localdomain,552,1959,,357,42369024
+CWbuild-sol10-64,,POWERED_OFF,false,,CONNECTED,,,NOT_CONFIGURED,0,,false,,INACTIVE,0,,GRAY,localhost.localdomain,0,414,,6,31232000

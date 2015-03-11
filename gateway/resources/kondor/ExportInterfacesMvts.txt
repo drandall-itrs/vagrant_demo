@@ -1,0 +1,5 @@
+Key,Interface Name,DealType,lastTxId,MintxId,MaxTxId,nbWaitingMvts,tktPMvts1h,tktMvtsToday,adpMvts1h,adpMvtsToday,destMvts1h,destMvtsToday
+<!>Data Availability,OK
+EXPORT - SpotDeals,EXPORT,SpotDeals,3549,3549,3549,0,23,90,0,0,0,0
+EXPORT - ForwardDeals,EXPORT,ForwardDeals,806,806,806,0,12,45,0,0,0,0
+EXPORT - FxSwapDeals,EXPORT,FxSwapDeals,1785,1785,1785,0,12,45,0,0,0,0

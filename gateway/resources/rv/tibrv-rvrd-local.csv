@@ -1,0 +1,18 @@
+Interface,Export Subject
+<!>networkServices,6
+<!>processID,28440
+<!>hostname,mdnysny74
+<!>version,8.2.2
+<!>managed,no
+<!>inboxPort,0
+<!>clientPort,7502
+<!>name,rvrd
+<!>controlChannel,disabled
+<!>connectionsLogged,yes
+<!>ipAddress,10.109.160.12
+9010.dist.newyork,_SASS.SERVICES.LIST/10;_TIC.REPLY.SASS.DATA.DICTIONARYA
+9010.sub.NEWYORK.island.jag,CREDIT.>/10;_SASS.SERVICES.UPDATE/10;_SASS.GROUP.IDN_SELECTFEED
+9011.pub.newyork,_SASS.CREDIT.PUB/10
+9011.pub.NEWYORK.island.jag,_SASS.CREDIT.PUB
+9012.dacs.NEWYORK.island.jag,_DACS.DICTIONARY.*/10
+mdata.rvrd.to.local.islands.dacs,_DACS.USAGE.SITE_01/10

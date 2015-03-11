@@ -1,0 +1,8 @@
+name,status,triggerDetails,updateRate,fileSize,lastModificationTime,permissions,filename,/group
+<!>filesMonitored,3
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+XFM2,OK, , , , , ,XFM2, 
+TODOLLAR.DR,OK, ,0.0000 Kb/sec,0.2 Kb,Mon Jun 15 05:46:28 2009,644 (-rw-r--r--),TODOLLAR.DR, 
+MARKET_ID.DR,OK, ,0.0000 Kb/sec,141.3 Kb,Mon Jun 15 05:46:26 2009,644 (-rw-r--r--),MARKET_ID.DR, 

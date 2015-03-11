@@ -1,0 +1,1 @@
+echo "<Thu May  2 12:43:41> ERROR: NETOBJECTS ORB: Failed to service HTML Request, FixAnalyser/182830556/FixAnalyser2" >> /opt/geneos/netprobe/logs/netprobe.7031.log

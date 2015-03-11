@@ -1,0 +1,14 @@
+Start Time = 10:32:26:111
+End Time = 10:32:26:189
+
+ Client ID = ITRS
+ Order ID = 1234 
+
+Checkpoints A -> B = 15 ms
+
+Checkpoints C -> D = 23 ms
+
+Checkpoints E -> F = 9 ms
+
+Checkpoints G -> H = 31 ms
+

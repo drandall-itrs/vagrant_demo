@@ -1,0 +1,9 @@
+Name,Value
+serverLoad,99999
+serverName,DemoCitrix2000
+sessionsConnecting,0
+sessionsDisconnected,0
+sessionsInError,0
+sessionsInOtherState,2
+sessionsLoggedOn,2
+sessionsShadowing,0

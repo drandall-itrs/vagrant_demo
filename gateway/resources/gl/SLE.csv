@@ -1,0 +1,11 @@
+id,instruction,turnaroundTime
+<!>SLE Mode,MASTER
+<!>Sent to SLEv5 today,151
+<!>Unacknowledged,1
+<!>receivedMessages,304
+<!>totalMessages,455
+<!>Current turnaround sec,0.000
+<!>averageTurnaround,3.158 secs
+<!>averageTurnaroundToday, 3.158 secs
+Slowest ACKED ID:2446080128,Ref=000129200306171000012000  Side=2  Quantity=10.000000  Price=146.500000 [1],11.954 secs
+UNACKED ID:4876,Ref=000229200307399000012286  Side=2  Quantity=250.000000  Price=92.600000 [1], unacknowledged

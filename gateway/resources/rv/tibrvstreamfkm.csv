@@ -1,0 +1,9 @@
+name,status,triggerDetails,updateRate,lastModificationTime,filename
+<!>samplingStatus,OK
+<!>filesMonitored,3
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+RV_ORDER_STREAM,OK,,0.0000 Kb/sec,Mon Jun 15 05:46:28 2009,RV_ORDER_STREAM
+RV_PRICE_STREAM,OK,,0.0000 Kb/sec,Mon Jun 15 05:46:28 2009,RV_PRICE_STREAM
+RV_QUOTE_STREAM,OK,,0.0000 Kb/sec,Mon Jun 15 05:46:26 2009,RV_QUOTE_STREAM

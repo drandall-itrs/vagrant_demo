@@ -1,0 +1,10 @@
+Name,Group,Status,Version,In,Out
+ULEDMA,Enhanced DMA,started,Revision: 1.9.1_04,0,0
+ULMonitoring,Monitoring,started,Revision: 1.9.1_29,1,1
+ULMove,Excepional Management,started,Revision: 1.3.9_01,0,0
+ULBuySide,Buy Side,started,Revision: 1.138,25,25
+ULBuySide2,Buy Side,started,Revision: 1.138,15,15
+ULSellSide,Sell Side,started,Revision: 1.138,101,101
+ULSellSide2,Sell Side,started,Revision: 1.138,31,31
+ULTrader,Excepional Management,started,Revision: 1.1.7_01,0,0
+ULXman,Excepional Management,started,Revision: 1.1.7_01,0,0

@@ -1,0 +1,2 @@
+name,API Type,API Version,Build,Full Name,Instance Uuid,License Product Name,License Product Version,Locale Build,Locale Version,OS Type,Product Line Id,Vendor,Version
+itrstestbasesvr01.ldn.itrs,HostAgent,4.0,208167,VMware ESXi 4.0.0 build-208167,,VMware ESX Server,4.0,000,INTL,vmnix-x86,embeddedEsx,VMware; Inc.,4.0.0

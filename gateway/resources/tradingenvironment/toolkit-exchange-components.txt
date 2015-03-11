@@ -1,0 +1,4 @@
+System,Line1,Line2,PrimaryServer,SecondaryServer
+EUREX,up,up,up,up
+LIFFE,up,up,up,up
+CBOT,up,up,up,up

@@ -1,0 +1,14 @@
+Handler Name,Description,Product Name,Product Version,Status,Start Date,Nb StartUp 1h,NbStartUp 15min,HostName,PID,pCpu,pMemory,Elapsed Time,Elapsed Time In Minuts,Cmd
+<!>Data Availability,OK
+<!>Nb Handlers Up,0
+<!>Nb Handlers Down,10
+kdeposithdl,Kondor+ Deposit Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kspothdl,Spot position keeping Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kbondhdl,Kondor+ Bonds Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kbondcf_slave_hdl,Kondor+ Bonds Cash Flow Slave Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kcustodyhdl,Kondor+ Custody Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kbondsdepohdl,Kondor+ Bonds Deposit Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kfxmmcarrycfhdl,Kondor+ FX MM Carry Cash Flow Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kfuturehdl,Kondor+ Future Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kequityhdl,Kondor+ Equity Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
+kbondcf_master_hdl,Kondor+ Bonds Cash Flow Master Handler,-,-,NOK,-,0,0,-,-,-,-,-,-,-
