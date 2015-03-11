@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.6-130321 at 2015-03-10 16:04:16 by owatson on ITRSPC152-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
+	<probes>
+		<probe name="P">
+			<hostname>localhost</hostname>
+			<port>7020</port>
+		</probe>
+	</probes>
+	<managedEntities>
+		<managedEntityGroup name="EMEA">
+			<attribute name="PRODUCT">GENEOS</attribute>
+			<attribute name="REGION">EMEA</attribute>
+			<managedEntityGroup name="London">
+				<attribute name="CITY">LONDON</attribute>
+				<managedEntityGroup name="MDM">
+					<attribute name="APP">MDM</attribute>
+					<managedEntity name="MDM_Load">
+						<probe ref="P"/>
+						<addTypes>
+							<type ref="Basic monitoring"/>
+						</addTypes>
+					</managedEntity>
+					<managedEntity name="MDM">
+						<probe ref="P"/>
+						<var name="SimulationParams">
+							<nameValueList>
+								<item>
+									<name>lua.seed</name>
+									<value>42</value>
+								</item>
+								<item>
+									<!-- 0.015 - fast; 0.005 - insanely fast -->
+									<name>lua.profile.fast.pause</name>
+									<value>0.015</value>
+								</item>
+								<item>
+									<!-- 0.125 - fast; 0.025 - insanely fast -->
+									<name>lua.profile.lumpy.pause</name>
+									<value>0.125</value>
+								</item>
+								<item>
+									<name>noiseLevel</name>
+									<value>5</value>
+								</item>
+								<item>
+									<name>inst.ABF</name>
+									<value>fast</value>
+								</item>
+								<item>
+									<name>inst.ADM</name>
+									<value>fast</value>
+								</item>
+								<item>
+									<name>inst.AAL</name>
+									<value>fast</value>
+								</item>
+								<item>
+									<name>inst.AZN</name>
+									<value>fast</value>
+								</item>
+								<item>
+									<name>inst.AV.</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BAB</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BA</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BARC</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BP</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BT.A</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.BRBY</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.CPI</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.DGE</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.DLG</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.EZJ</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.GSK</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.GLEN</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.KGF</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.LAND</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.LSE</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.MKS</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.MRW</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.NXT</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.OML</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.PRU</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.RIO</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SAB</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SGE</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SBRY</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SKY</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SN</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SSE</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.STAN</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SL</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TW</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SPD</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TW</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TSCO</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TPK</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TUI</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.TLW</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.ULVR</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.SMIN</name>
+									<value>lumpy</value>
+								</item>
+								<item>
+									<name>inst.VOD</name>
+									<value>suspect</value>
+								</item>
+								<item>
+									<name>inst.SHP</name>
+									<value>slow </value>
+								</item>
+							</nameValueList>
+						</var>
+						<var name="simFLM">
+							<stringList>
+								<string>lua.script=simulation/luaFeed_Sim.lua</string>
+								<string>lua.seed=42</string>
+								<string>lua.profile.fast.pause=0.015</string>
+								<string>lua.profile.lumpy.pause=0.125</string>
+							</stringList>
+						</var>
+						<sampler disabled="false" ref="MDM-marketdata"/>
+						<sampler disabled="false" ref="MDM-spreads"/>
+						<sampler disabled="false" ref="MDM-spread-compare"/>
+						<sampler ref="MDM-raw-latency"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
+	</managedEntities>
+	<types>
+		<type name="Basic monitoring">
+			<sampler ref="CPU"/>
+			<sampler ref="hardware"/>
+			<sampler ref="Processes - NP"/>
+		</type>
+	</types>
+	<samplers>
+		<sampler name="CPU">
+			<plugin>
+				<cpu/>
+			</plugin>
+		</sampler>
+		<sampler name="hardware">
+			<plugin>
+				<hardware/>
+			</plugin>
+		</sampler>
+		<sampler name="MDM Tutorial">
+			<sampleInterval>
+				<data>5</data>
+			</sampleInterval>
+			<plugin>
+				<market-data-monitor>
+					<script>
+						<data>doc/tutorial.lua</data>
+					</script>
+					<parameters>
+						<data>instruments=AAPL,GOOG,ORCL</data>
+					</parameters>
+				</market-data-monitor>
+			</plugin>
+		</sampler>
+		<sampler name="Processes - NP">
+			<sampleInterval>
+				<data>10</data>
+			</sampleInterval>
+			<plugin>
+				<processes>
+					<processes>
+						<process>
+							<data>
+								<alias>
+									<data>NP</data>
+								</alias>
+								<ID>
+									<searchString>
+										<data>netprobe.linux</data>
+									</searchString>
+								</ID>
+							</data>
+						</process>
+					</processes>
+				</processes>
+			</plugin>
+		</sampler>
+		<sampler name="MDM Commands">
+			<sampleInterval>
+				<data>15</data>
+			</sampleInterval>
+			<plugin>
+				<market-data-monitor>
+					<script>
+						<data>doc/commands.lua</data>
+					</script>
+				</market-data-monitor>
+			</plugin>
+		</sampler>
+		<samplerGroup name="MDM Simulation">
+			<sampler name="MDM-latency">
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<market-data-monitor>
+						<script>
+							<data>simulation/latency_simulation.lua</data>
+						</script>
+						<parameters>
+							<var ref="SimulationParams"/>
+						</parameters>
+					</market-data-monitor>
+				</plugin>
+			</sampler>
+			<sampler name="FLM-legacy">
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<flm>
+						<feeds>
+							<feed name="Base-Sim">
+								<custom>
+									<library>
+										<data>flm/geneos-feed-lua.so</data>
+									</library>
+									<fieldNameList>custom1</fieldNameList>
+									<parameters>
+										<var ref="simFLM"/>
+									</parameters>
+								</custom>
+								<algorithm>
+									<timeThresholdHigh>
+										<data>800.0</data>
+									</timeThresholdHigh>
+									<timeThresholdLow>
+										<data>-200.0</data>
+									</timeThresholdLow>
+								</algorithm>
+							</feed>
+							<feed name="Other-Sim">
+								<custom>
+									<library>
+										<data>flm/geneos-feed-lua.so</data>
+									</library>
+									<fieldNameList>custom1</fieldNameList>
+									<parameters>
+										<var ref="simFLM"/>
+									</parameters>
+								</custom>
+								<algorithm>
+									<timeThresholdHigh>
+										<data>800.0</data>
+									</timeThresholdHigh>
+									<timeThresholdLow>
+										<data>-200.0</data>
+									</timeThresholdLow>
+								</algorithm>
+							</feed>
+						</feeds>
+						<feed ref="Base-Sim"/>
+						<instruments>
+							<instrumentGroup name="Fast">
+								<patterns>
+									<pattern>
+										<feed ref="Base-Sim"/>
+										<value>
+											<data>b.%i.fast</data>
+										</value>
+									</pattern>
+									<pattern>
+										<feed ref="Other-Sim"/>
+										<value>
+											<data>f.%i.fast</data>
+										</value>
+									</pattern>
+								</patterns>
+								<instruments>
+									<instrument name="ABC"/>
+									<instrument name="A20"/>
+									<instrument name="A30"/>
+									<instrument name="A40"/>
+								</instruments>
+							</instrumentGroup>
+							<instrumentGroup name="Lumpy">
+								<patterns>
+									<pattern>
+										<feed ref="Base-Sim"/>
+										<value>
+											<data>b.%i.lumpy</data>
+										</value>
+									</pattern>
+									<pattern>
+										<feed ref="Other-Sim"/>
+										<value>
+											<data>f.%i.lumpy</data>
+										</value>
+									</pattern>
+								</patterns>
+								<instruments>
+									<instrument name="B01"/>
+									<instrument name="B02"/>
+									<instrument name="B03"/>
+									<instrument name="B04"/>
+									<instrument name="B05"/>
+									<instrument name="B06"/>
+									<instrument name="B07"/>
+									<instrument name="B08"/>
+									<instrument name="B09"/>
+									<instrument name="B10"/>
+									<instrument name="B11"/>
+									<instrument name="B12"/>
+									<instrument name="B13"/>
+									<instrument name="B14"/>
+									<instrument name="B15"/>
+									<instrument name="B16"/>
+									<instrument name="B17"/>
+									<instrument name="B18"/>
+									<instrument name="B19"/>
+									<instrument name="B20"/>
+									<instrument name="B21"/>
+									<instrument name="B22"/>
+									<instrument name="B23"/>
+									<instrument name="B24"/>
+									<instrument name="B25"/>
+									<instrument name="B26"/>
+									<instrument name="B27"/>
+									<instrument name="B28"/>
+									<instrument name="B29"/>
+									<instrument name="B30"/>
+									<instrument name="B31"/>
+									<instrument name="B32"/>
+									<instrument name="B33"/>
+									<instrument name="B34"/>
+									<instrument name="B35"/>
+									<instrument name="B36"/>
+									<instrument name="B37"/>
+									<instrument name="B38"/>
+									<instrument name="B39"/>
+								</instruments>
+							</instrumentGroup>
+							<instrumentGroup name="Slow">
+								<patterns>
+									<pattern>
+										<feed ref="Base-Sim"/>
+										<value>
+											<data>b.%i.slow</data>
+										</value>
+									</pattern>
+									<pattern>
+										<feed ref="Other-Sim"/>
+										<value>
+											<data>f.%i.slow</data>
+										</value>
+									</pattern>
+								</patterns>
+								<instruments>
+									<instrument name="PQR"/>
+								</instruments>
+							</instrumentGroup>
+							<instrumentGroup name="Suspect">
+								<patterns>
+									<pattern>
+										<feed ref="Base-Sim"/>
+										<value>
+											<data>b.%i.suspect</data>
+										</value>
+									</pattern>
+									<pattern>
+										<feed ref="Other-Sim"/>
+										<value>
+											<data>f.%i.suspect</data>
+										</value>
+									</pattern>
+								</patterns>
+								<instruments>
+									<instrument name="XYZ"/>
+								</instruments>
+							</instrumentGroup>
+						</instruments>
+						<fields>
+							<field name="Trade">
+								<custom1>
+									<data>trade</data>
+								</custom1>
+							</field>
+							<field name="Bid">
+								<custom1>
+									<data>bid</data>
+								</custom1>
+							</field>
+							<field name="Ask">
+								<custom1>
+									<data>ask</data>
+								</custom1>
+							</field>
+							<field name="Noise1">
+								<custom1>
+									<data>noise1</data>
+								</custom1>
+							</field>
+							<field name="Noise2">
+								<custom1>
+									<data>noise2</data>
+								</custom1>
+							</field>
+							<field name="Noise3">
+								<custom1>
+									<data>noise3</data>
+								</custom1>
+							</field>
+							<field name="Noise4">
+								<custom1>
+									<data>noise4</data>
+								</custom1>
+							</field>
+							<field name="Noise5">
+								<custom1>
+									<data>noise5</data>
+								</custom1>
+							</field>
+						</fields>
+						<tickHistoryFile>
+							<maxFiles>
+								<data>1</data>
+							</maxFiles>
+						</tickHistoryFile>
+					</flm>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="MDMDemo">
+			<sampler name="MDM-spreads">
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<market-data-monitor>
+						<script>
+							<data>scripts/spreads.lua</data>
+						</script>
+						<parameters>
+							<var ref="SimulationParams"/>
+						</parameters>
+					</market-data-monitor>
+				</plugin>
+			</sampler>
+			<sampler name="MDM-marketdata">
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<market-data-monitor>
+						<script>
+							<data>simulation/feed_simulation.lua</data>
+						</script>
+						<parameters>
+							<var ref="SimulationParams"/>
+						</parameters>
+					</market-data-monitor>
+				</plugin>
+			</sampler>
+			<sampler name="MDM-spread-compare">
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<market-data-monitor>
+						<script>
+							<data>scripts/spread_compare.lua</data>
+						</script>
+						<parameters>
+							<var ref="SimulationParams"/>
+						</parameters>
+					</market-data-monitor>
+				</plugin>
+			</sampler>
+			<sampler name="MDM-raw-latency">
+				<sampleInterval>
+					<data>2</data>
+				</sampleInterval>
+				<plugin>
+					<market-data-monitor>
+						<script>
+							<data>scripts/raw_latency.lua</data>
+						</script>
+						<parameters>
+							<var ref="SimulationParams"/>
+						</parameters>
+					</market-data-monitor>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+	</samplers>
+	<rules>
+		<rule name="Negative latency">
+			<targets>
+				<target>/geneos/gateway/directory/probe[(@name=&quot;P&quot;)]/managedEntity[(@name=&quot;MDM&quot;)]/sampler/dataview[(@name=&quot;Spreads&quot;)]/rows/row/cell[(@column=&quot;minSpread&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<if>
+					<lt>
+						<dataItem>
+							<property>@value</property>
+						</dataItem>
+						<integer>0</integer>
+					</lt>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>warning</severity>
+						</update>
+					</transaction>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>ok</severity>
+						</update>
+					</transaction>
+				</if>
+			</block>
+		</rule>
+		<rule name="SamplingStatus">
+			<targets>
+				<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/headlines/cell[(@name=&quot;samplingStatus&quot;)]</target>
+			</targets>
+			<priority>1</priority>
+			<block>
+				<if>
+					<equal>
+						<dataItem>
+							<property>@value</property>
+						</dataItem>
+						<string>OK</string>
+					</equal>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>ok</severity>
+						</update>
+					</transaction>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>warning</severity>
+						</update>
+					</transaction>
+				</if>
+			</block>
+		</rule>
+	</rules>
+	<authentication>
+		<authenticateUsers>false</authenticateUsers>
+		<combineMode>highest</combineMode>
+		<roles>
+			<role name="Administrators">
+				<description>Super User Role (Full Permissions)</description>
+			</role>
+		</roles>
+	</authentication>
+	<operatingEnvironment>
+		<!--The gateway name must be set, the listen port should be set-->
+		<gatewayName>MDM</gatewayName>
+		<listenPort>7055</listenPort>
+	</operatingEnvironment>
+</gateway>
