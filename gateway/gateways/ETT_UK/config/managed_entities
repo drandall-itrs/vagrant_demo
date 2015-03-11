@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2013-08-22 14:25:26 by apage on ITRSPC107-->
+<!-- Gateway-created setup include file for user ActiveConsole1 at 192.168.0.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.6-130308/gateway.xsd">
+	<managedEntities>
+		<managedEntityGroup name="Electronic Trading">
+			<attribute name="OPERATION">Electronic Trading</attribute>
+			<managedEntityGroup name="UNITED KINGDOM">
+				<attribute name="COUNTRY">UNITED KINGDOM</attribute>
+				<managedEntityGroup name="LONDON">
+					<attribute name="CITY">LONDON</attribute>
+					<addTypes>
+						<type ref="Hardware"/>
+					</addTypes>
+					<managedEntityGroup name="EXFM">
+						<attribute name="MDT TYPE">EXFM</attribute>
+						<addTypes>
+							<type ref="EXFM"/>
+						</addTypes>
+						<managedEntity name="LON027EXFM">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="DARK">
+						<attribute name="MDT TYPE">DARK</attribute>
+						<addTypes>
+							<type ref="DARK"/>
+						</addTypes>
+						<managedEntity name="LON025DARK">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON026DARK">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="FIDESSA">
+						<attribute name="MDT TYPE">FIDESSA</attribute>
+						<addTypes>
+							<type ref="FIDESSA"/>
+						</addTypes>
+						<managedEntity name="LON006FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON007FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON008FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON009FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="EMS-RV">
+						<attribute name="MDT TYPE">EMS / RV</attribute>
+						<addTypes>
+							<type ref="RV"/>
+							<type ref="EMS"/>
+						</addTypes>
+						<managedEntity name="LON000EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON001EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON002EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON003EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON004EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON005EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="FIX">
+						<attribute name="MDT TYPE">FIX</attribute>
+						<addTypes>
+							<type ref="FIX"/>
+						</addTypes>
+						<managedEntity name="LON010FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON012FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON011FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="LON013FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="ALGO DB">
+						<attribute name="MDT TYPE">ALGO DB</attribute>
+						<addTypes>
+							<type ref="ALGO"/>
+						</addTypes>
+						<managedEntity name="LON015ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON016ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON017ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON018ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON019ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON020ALGO">
+							<probe ref="GenericProbe2"/>
+							<removeTypes>
+								<type ref="ALGO"/>
+								<type ref="Hardware"/>
+							</removeTypes>
+							<removeSamplers>
+								<sampler ref="Linux Standard">
+									<type ref="unix"/>
+								</sampler>
+								<sampler ref="ipc">
+									<type ref="unix"/>
+								</sampler>
+								<sampler ref="NetProbe Log">
+									<type ref="baseline"/>
+								</sampler>
+							</removeSamplers>
+							<addTypes>
+								<type ref="unix"/>
+								<type ref="baseline"/>
+							</addTypes>
+							<sampler ref="Algo Processes"/>
+							<sampler ref="Algo Logs"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="SORT">
+						<attribute name="MDT TYPE">SORT</attribute>
+						<addTypes>
+							<type ref="SORT"/>
+						</addTypes>
+						<managedEntity name="LON020SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON021SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON022SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON023SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="LON024SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="MONITORING">
+						<attribute name="MDT TYPE">MONITORING</attribute>
+						<managedEntityGroup name="CAPACITY">
+							<attribute name="TYPE">CAPACITY</attribute>
+							<managedEntity name="LON028MON">
+								<probe ref="GenericProbe2"/>
+								<addTypes>
+									<type ref="ETT CAPACITY"/>
+								</addTypes>
+							</managedEntity>
+						</managedEntityGroup>
+						<managedEntityGroup name="STATS">
+							<attribute name="TYPE">STATS</attribute>
+							<managedEntity name="LON029MON">
+								<probe ref="GenericProbe2"/>
+								<addTypes>
+									<type ref="ETT STATS"/>
+								</addTypes>
+							</managedEntity>
+						</managedEntityGroup>
+					</managedEntityGroup>
+				</managedEntityGroup>
+				<managedEntityGroup name="DOCKLANDS">
+					<attribute name="CITY">DOCKLANDS</attribute>
+					<addTypes>
+						<type ref="Hardware"/>
+					</addTypes>
+					<managedEntityGroup name="FIDESSA">
+						<attribute name="MDT TYPE">FIDESSA</attribute>
+						<addTypes>
+							<type ref="FIDESSA"/>
+						</addTypes>
+						<managedEntity name="DOCK006FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK007FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK008FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK009FIDESSA">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="EMS-RV">
+						<attribute name="MDT TYPE">EMS / RV</attribute>
+						<addTypes>
+							<type ref="RV"/>
+							<type ref="EMS"/>
+						</addTypes>
+						<managedEntity name="DOCK000EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK001EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK002EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK003EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK004EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK005EMSRV">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="FIX">
+						<attribute name="MDT TYPE">FIX</attribute>
+						<addTypes>
+							<type ref="FIX"/>
+						</addTypes>
+						<managedEntity name="DOCK010FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK013FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK014FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+						<managedEntity name="DOCK015FIX">
+							<probe ref="GenericProbe1"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="ALGO">
+						<attribute name="MDT TYPE">ALGO</attribute>
+						<addTypes>
+							<type ref="ALGO"/>
+						</addTypes>
+						<managedEntity name="DOCK016ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK017ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK018ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK019ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK020ALGO">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="SORT">
+						<attribute name="MDT TYPE">SORT</attribute>
+						<addTypes>
+							<type ref="SORT"/>
+						</addTypes>
+						<managedEntity name="DOCK021SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK022SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK023SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK024SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK025SORT">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="EXFM">
+						<attribute name="MDT TYPE">EXFM</attribute>
+						<addTypes>
+							<type ref="EXFM"/>
+						</addTypes>
+						<managedEntity name="DOCK026DARK">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+						<managedEntity name="DOCK027DARK">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="DARK">
+						<attribute name="MDT TYPE">DARK</attribute>
+						<addTypes>
+							<type ref="DARK"/>
+						</addTypes>
+						<managedEntity name="DOCK028EXFM">
+							<probe ref="GenericProbe2"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="MONITORING">
+						<attribute name="MDT TYPE">MONITORING</attribute>
+						<managedEntityGroup name="CAPACITY">
+							<attribute name="TYPE">CAPACITY</attribute>
+							<addTypes>
+								<type ref="ETT CAPACITY"/>
+							</addTypes>
+							<managedEntity name="DOCK030MON">
+								<probe ref="GenericProbe2"/>
+							</managedEntity>
+						</managedEntityGroup>
+						<managedEntityGroup name="STATS">
+							<attribute name="TYPE">STATS</attribute>
+							<addTypes>
+								<type ref="ETT STATS"/>
+							</addTypes>
+							<managedEntity name="DOCK031MON">
+								<probe ref="GenericProbe2"/>
+							</managedEntity>
+						</managedEntityGroup>
+					</managedEntityGroup>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
+	</managedEntities>
+</gateway>
