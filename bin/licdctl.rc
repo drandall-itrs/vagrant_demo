@@ -1,0 +1,51 @@
+#! /bin/bash
+##
+##      ITRS Licd Configuration
+##
+##      Created : 01/04/2011
+##
+##      Change History
+##
+##      01/04/2011      RG      Creation
+##      30/01/2013	JH	Re-write for version 4 of licdctl
+##
+#################################################################################
+# Defaults for all Licds
+#
+# STANDARD VARIABLES
+# ------------------
+# The following variables can be set as defaults and also over-written within each licd section
+#
+#      ITRS_HOME:   the install directory for ITRS products
+#      LicdRoot:    the licd root directory
+#      LicdBins:    the licd binary directory
+#      LicdBase:    the specific licd binary 		# N.B. This will be a directory name, i.e. 3.0.0-120101 or more normally a link to this, i.e. active_prod
+#      LicdLogD:    the path to licd log directory 		# N.B. This path will have the name of the licd appended to it
+#                                                               # e.g. ${LicdRoot}/logs/LicdName
+#      LicdLogF:    the log file for the licd		
+#      LicdMode:    foreground or background               
+#      LicdLicP:    port for licence daemon                     # N.B. Default 7041
+#      LicdLicH:    host for licence daemon                     # N.B. Default localhost
+#      LicdOpts:    additional licd options                  # N.B. Use this variable to add licence options for older licds 
+#								# e.g. LicdOpts="-licence /opt/itrs/packages/licd/GA2011.2.1-110923/licensing" NOTE ENCLOSING DOUBLE QUOTES! 
+#
+#      LicdLibs:    LD_LIBRARY_PATH setting                     # N.B. This is prepended to LD_LIBRARY_PATH and should contain at least the path to the licd lib directory
+#
+#      Additional Variables:                                    # It is possible to add further environment variables as default settings. These should be added WITHOUT any 'export'
+#                                                               # e.g. JRE_HOME=/opt/jre/home
+#
+#################################################################################
+
+ITRS_HOME=/opt/geneos
+LicdRoot=${ITRS_HOME}/licd
+LicdBins=${ITRS_HOME}/packages/licd
+LicdBase=active_prod
+LicdLogD=${LicdRoot}/licds
+LicdLogF=licd.log
+LicdMode=background
+LicdOpts=
+LicdLibs=${LicdBins}/${LicdBase}/lib:${LicdBins}/${LicdBase}/compat
+
+#########################################################
+# end
+#########################################################

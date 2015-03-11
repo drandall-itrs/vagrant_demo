@@ -1,0 +1,53 @@
+#! /bin/bash
+##
+##      ITRS Gateway Configuration
+##
+##      Created : 01/04/2011
+##
+##      Change History
+##
+##      01/04/2011      RG      Creation
+##      30/01/2013	JH	Re-write for version 4 of gatewayctl
+##
+#################################################################################
+# Defaults for all Gateways
+#
+# STANDARD VARIABLES
+# ------------------
+# The following variables can be set as defaults and also over-written within each gateway section
+#
+#      ITRS_HOME:   the install directory for ITRS products
+#      GateRoot:    the gateway root directory
+#      GateBins:    the gateway binary directory
+#      GateBase:    the specific gateway binary 		# N.B. This will be a directory name, i.e. 3.0.0-120101 or more normally a link to this, i.e. active_prod
+#      GateLogD:    the path to gateway log directory 		# N.B. This path will have the name of the gateway appended to it
+#                                                               # e.g. ${GateRoot}/logs/GatewayName
+#      GateLogF:    the log file for the gateway		
+#      GateMode:    foreground or background               
+#      GateLicP:    port for licence daemon                     # N.B. Default 7041
+#      GateLicH:    host for licence daemon                     # N.B. Default localhost
+#      GateOpts:    additional gateway options                  # N.B. Use this variable to add licence options for older gateways 
+#								# e.g. GateOpts="-licence /opt/itrs/packages/gateway/GA2011.2.1-110923/licensing" NOTE ENCLOSING DOUBLE QUOTES! 
+#
+#      GateLibs:    LD_LIBRARY_PATH setting                     # N.B. This is prepended to LD_LIBRARY_PATH and should contain at least the path to the gateway lib directory
+#
+#      Additional Variables:                                    # It is possible to add further environment variables as default settings. These should be added WITHOUT any 'export'
+#                                                               # e.g. JRE_HOME=/opt/jre/home
+#
+#################################################################################
+
+ITRS_HOME=/opt/geneos
+GateRoot=${ITRS_HOME}/gateway
+GateBins=${ITRS_HOME}/packages/gateway
+GateBase=active_prod
+GateLogD=${GateRoot}/gateways
+GateLogF=gateway.log
+GateMode=background
+GateLicP=
+GateLicH=
+GateOpts=
+GateLibs=${GateBins}/${GateBase}/lib
+
+#########################################################
+# end
+#########################################################

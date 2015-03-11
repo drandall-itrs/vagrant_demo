@@ -1,0 +1,898 @@
+#! /bin/bash
+#
+#set -x
+#
+#       $Header:
+#####################################################################
+#
+#       Program Name    :       licdctl
+#       Function        :       Execute ITRS Licd
+#       Author          :       Jeremy Hullah 
+#       Creation        :       16/10/2012
+#       History :
+#
+#       01/04/2011      0.00 -> 1.00    RG      Creation
+#       13/05/2011      1.00 -> 1.01    RG      Adapted ITRS Architecture
+#       16/05/2011      1.01 -> 1.02    RG      Solaris differences
+#       20/06/2011      1.02 -> 2.00    RG      Publication
+#       21/06/2011      2.00 -> 2.01    RG      Added LD_LIBRARY_PATH
+#       24/06/2011      2.01 -> 2.02    RG      Fixed recursive cd bug (myPWD)
+#       24/06/2011      2.02 -> 2.03    OE      Added LicdName for more visibility
+#       25/07/2011      2.03 -> 2.04    RG      Config file redesign
+#       26/07/2011      2.04 -> 2.05    RG      Added functionality
+#       20/09/2011      2.05 -> 2.06    RG      Added Support for up to 99 licds
+#       14/12/2011      2.06 -> 2.07    RG      Fixed Alpha Licd Name
+#       27/02/2012      2.07 -> 2.08    TV      Added defaults for licds and -help support
+#       29/02/2012      2.08 -> 2.09    TV      Added create licd function
+#       09/05/2012      2.09 -> 2.10    DR      Changed ${LicdBase[${Index}]} formatting
+#       14/08/2012      2.10 -> 3.00    JH      Fixed a few bugs and do a complete re-write to cope with new config file format
+#	16/10/2012	3.00 -> 4.00	JH	Complete re-write for global deployment
+#
+#####################################################################
+#       Start of Local Tokens
+#####################################################################
+
+Program=$(basename $0)
+ProgramPath=$(dirname $0)
+ConfigFile=licdctl.rc
+CommandUser=$(id | cut -d"(" -f2 | cut -d ")" -f1)
+SuCommand=""
+SuQuote=""
+SuExport=""
+LicdPort=7041
+LicdExports=/tmp/LicdExports
+
+Firstchar=`echo $ProgramPath | cut -c1`
+if [ ! "$Firstchar" = "/" ]
+then
+        if [ "$Firstchar" = "." ]
+        then
+                ProgramPath=`echo $ProgramPath | cut -c3-`
+        fi
+	if [ "$ProgramPath" = "" ]
+	then
+        	ProgramPath=${PWD}
+	else
+        	ProgramPath=${PWD}/${ProgramPath}
+	fi
+fi
+Version=4
+Revision=00
+Process="${Program} v${Version}.${Revision}"
+
+#####################################################################
+#       Start of Functions
+#####################################################################
+
+# -----------------------------------------------------------------------
+# Function fn_Usage: Print usage details
+# -----------------------------------------------------------------------
+
+fn_Usage()
+{
+	echo
+	echo "	Usage: ${Program} list | create | <licdname> <function>"
+	echo
+	echo "	Where 'list' shows the available licds"
+	echo "	Where 'create' creates a new licd environment"
+	echo
+	echo "	Where <licdname> may be the licd name or 'all'"
+	echo "	Where <function> may be, start, stop, restart, refresh, details, command, status, delete, usage"
+	echo
+	echo "	start           -       starts the licd or licds"
+	echo "	stop            -       stops the licd or licds (additionally add signal number, e.g. -9)"
+	echo "	restart         -       restarts the licd or licds"
+	echo "	refresh         -       refresh the licd or licds to re-read the configuration files(s)"
+	echo "	details         -       list the parameters of the licd or licds"
+	echo "	command         -       displays the command line for starting the licd"
+	echo "	status          -       displays the process stack for the licd"
+	echo "	delete          -       deletes the licd environment"
+	echo "	usage|-h|-help  -       outputs this usage message"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Message: Print message. Exit if message code = 1
+# -----------------------------------------------------------------------
+
+fn_Message()
+{
+        Now=$(date +"%Y-%m-%d %H.%M.%S")
+        case $1 in
+                1)      echo -e ${Now} : ${Process} : Error : $2
+                        fn_Exit $1
+			;;
+                2)      echo -e ${Now} : ${Process} : Warn : $2
+			;;
+                3)      echo -e ${Now} : ${Process} : Info : $2
+			;;
+                *)      ;;
+        esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Start: Start the licd in either foreground or backgroud
+#                    depending on the LicdMode setting for the licd
+# -----------------------------------------------------------------------
+
+fn_Start()
+{
+
+	# ---
+	# Check if licd is already running and licd environemnt has been created
+	# ---
+
+	fn_GetLicdProcess
+	if [ ${process} ]
+	then
+		fn_Message 2 "Licd ${LicdName} ${LicdPort} already running"	
+		return
+	fi
+	if [ ! -d  ${LicdBins}/${LicdBase} ]
+	then
+		fn_Message 2 "No Licd base for ${LicdBase} in the Licd binary directory ${LicdBins}. \nCan't start licd ${LicdName}. Please create link for this to the relevant binary package"
+		return
+	fi
+
+	# ---
+	# start the Licd either in the background or the foreground. First create the command
+	# ---
+
+	fn_CreateCommand
+	Command="${Command} > ${LicdLogD}/licd.txt 2>&1 & ${SuQuote}"
+	cd "${LicdRoot}/licds/${LicdName}"
+	case "${LicdMode}" in
+		background)	fn_Message 3 "Starting Licd ${LicdName} on port ${LicdPort}"
+				fn_RunCommand
+				sleep 5
+				fn_GetLicdProcess
+       				if [ ${process} ]
+				then
+					fn_Message 3 "Licd ${LicdName} has started with PID : ${process}"
+					fn_Message 3 "Licd ${LicdName} logging to ${LicdLogD}/${LicdLogF}"
+				else
+					if [  ! -e "${LicdLogD}/${LicdLogF}" ]
+					then
+						fn_Message 1 "Licd ${LicdName} failed to start. Logfile for licd could not be created."
+					fi
+					fn_Message 3 "Licd ${LicdName} has not started"
+					fn_Message 3 "see - ${LicdLogD}/${LicdLogF}"
+					fn_Message 3 "see - ${LicdLogD}/licd.txt"
+					fn_Message 3 "Last 20 lines of licd log file: "
+					echo;tail -20 "${LicdLogD}/${LicdLogF}";echo
+				fi
+				;;
+		foreground)     fn_Message 3 "Starting Licd ${LicdName} on port ${LicdPort}"
+				fn_RunCommand
+				;;
+		*)		fn_Message 1 "No operating mode set. Should be either backgroud or foreground"
+				;;
+	esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GetLicdProcess: get the PID for the Licd
+# -----------------------------------------------------------------------
+
+fn_GetLicdProcess()
+{
+	process=$(pgrep -d " " -f "${LicdExec} ${LicdName} ")
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Refresh: Refresh the selected Licd to re-read the configuration files
+# -----------------------------------------------------------------------
+
+fn_Refresh()
+{
+	fn_GetLicdProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Refreshing Licd ${LicdName}"	
+		kill -USR1 ${process}
+	else
+		fn_Message 2 "Licd ${LicdName} is not running"
+	fi	
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Stop: Stop the selected Licd
+# -----------------------------------------------------------------------
+
+fn_Stop()
+{
+	fn_GetLicdProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Stopping Licd ${LicdName} - ${process}"
+		Command="${SuCommand}${SuQuote}kill ${FunctionOpts} ${process}${SuQuote}"
+		fn_RunCommand
+		sleep 3
+		fn_GetLicdProcess
+		if [ ${process} ]
+		then
+			fn_Message 2 "Licd ${LicdName}, process ${process} failed to be stopped"
+		else
+			fn_Message 3 "Licd ${LicdName} stopped"
+		fi
+	else
+		fn_Message 2 "Licd ${LicdName} is not started"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Status: Show the ps details for the select Licd
+# -----------------------------------------------------------------------
+
+fn_Status()
+{
+	fn_GetLicdProcess
+	if [ ${process} ]
+	then
+		ps -lfp ${process}
+	else
+		fn_Message 3 "Licd ${LicdName} is not running"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Log: Show the logfile for the select Licd
+# -----------------------------------------------------------------------
+
+fn_Log()
+{
+	fn_Message 3 "Showing log file details for ${LicdName}\n"
+	tail ${FunctionOpts} ${LicdLogD}/licd.log
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Create: Create a licd and allow user to change any of 
+# the default values, which are then written to a licd.rc file in the 
+# licd home directory
+# -----------------------------------------------------------------------
+
+fn_Create()
+{
+	# ---
+	# Ask for Licd name and check validty of entry
+	# ---
+
+	#completed=no
+	#while [ "${completed}" = "no" ]
+	#do
+	        #echo; echo -e "Please enter a name for the new Licd: \c"
+	        #hardocde the name as there is only one licd per host
+	#	LicdName=permanent
+		
+	#done
+
+	LicdName=permanent
+	fn_CheckLicdName
+
+	# ---
+	# Ask for port number and check validity of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the port number for the Licd [default 7041]: \c"
+                read LicdPortResponse
+                [[ "${LicdPortResponse}" = "" ]] || LicdPort=${LicdPortResponse}
+		fn_CheckLicdPort
+	done
+
+	# ---
+	# Allow user to change any of the default Licd parameters
+	# ---
+
+	echo; echo "Please review the following list of default Licd parameters"
+	changeVar=no
+	addedVars=()
+	addVar=1
+	while [ "${changeVar}" != "ok" -a  "${changeVar}" != "q" ]
+	do
+		fn_SetLicdParams
+	done
+	[ "${changeVar}" = "q" ] && return
+	for x in "${LicdVal[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	fn_CreateLicd
+	echo ; echo -e "Would you like to start licd ${LicdName}? [y/n]: \c"
+	read startLicd
+	[ "$startLicd" = "y" ] && fn_Start
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_SetLicdParamrs: Set the Licd parameters for the Licd
+# ---------------------------------------------------------------------------
+fn_SetLicdParams()
+{
+	fn_ListLicdParams
+	echo "[${nextVar}] Add a new parameter: "
+	echo ; echo -e "Please select any parameters that you would like to change or 'ok' to proceed ['q' to quit]: \c"
+	read changeVar
+	[ "${changeVar}" = "ok" -o "${changeVar}" = "q" ] && return
+	if [ ${changeVar} -gt 0 -a ${changeVar} -le ${nextVar} ]
+	then
+                if [ "${licdVar[${changeVar}]}" = "LicdRoot" -o "${licdVar[${changeVar}]}" = "ITRS_HOME" ]
+                then
+                        echo -e "The LicdRoot and ITRS_HOME parameters cannot be changed once they have been set in the configuration file. Press return to continue: \c"
+                        read dummy
+                        return
+                fi
+
+		# ---
+		# if they have selected to add a new parameter then ask for parameter name and add 1 to nextVar
+		# ---
+
+		if [ ${changeVar} = ${nextVar} ]
+		then
+			echo -e "Enter the new parameter name: \c"
+			read newParamName
+			licdVar[${changeVar}]=${newParamName}
+			nextVar=$(( ${nextVar} + 1 ))
+		fi
+
+		# ---
+		# ask for new parameter value
+		# ---
+
+		echo -e "Enter new value for parameter ${licdVar[${changeVar}]}: \c"
+		read newParamVal
+
+		# ---
+		# The follow awk statement will add double quote marks to any text that
+		# contains spaces and which doesn't already contain double quote marks
+		# ---
+
+		newParamVal=$(echo ${newParamVal} | awk '{if ( index( $0," ") > 0 ){if ( index( $0, "\"") > 0 ){print $0} else {print "\""$0"\""} } else {print $0} } ' )
+
+		# ---
+		# make sure to change the actual variable value as well as the stored variable that is used for listing
+		# ---
+
+		licdVal[${changeVar}]=${newParamVal}
+		eval ${licdVar[${changeVar}]}=${newParamVal}
+
+		# ---
+		# Check if the parameter has already been changed/added to create list of changed parameters
+		# ---
+
+		fn_CheckElement "${changeVar}"
+		if [ $? = 0 ]
+		then
+			addedVars[${addVar}]=${changeVar}
+			addVar=$(( ${addVar} + 1 ))
+		fi
+		return
+	fi
+	echo "Invalid option entered"
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckElement: Check if a value exists in an array
+# ---------------------------------------------------------------------------
+
+fn_CheckElement()
+{
+	local x 
+	for x in "${addedVars[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	return 0 
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckLicdName: Check the Licd name is valid
+# N.B. couldn't get [[:alnum:]_] or [:word:] to work with awk so had to use
+# clumsy character selection - please change if possible
+# ---------------------------------------------------------------------------
+
+fn_CheckLicdName()
+{
+	if [ -d "${LicdRoot}/licds/${LicdName}" ]
+	then
+		fn_Message 1 "Licd ${LicdName} already exists"
+	else
+		if [[ $(echo "${LicdName}" | awk '/[ .,-#~<>!£%(){}\[\]\&\$\*\^\"\\\/]/ { print }') ]]
+		then
+			fn_Message 2 "The Licd name, ${LicdName} can only contain alpha-numeric characters or an underscore"
+		else
+			completed=yes
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckLicdPort: Check that the chosen port for a Licd is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckLicdPort()
+{
+        if ! [[ ${LicdPort} -gt 1024 && ${LicdPort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${LicdPort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${LicdPort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+		        #if grep -i "listenPort>${LicdPort}" ${LicdRoot}/licds/*/licd.setup.xml >/dev/null
+			if grep -i "LicdPort=${LicdPort}" ${LicdRoot}/licds/*/licd.rc >/dev/null
+			then
+				echo "Port ${LicdPort} is already in use and only one Licd allowed per server"
+			else
+				completed=yes
+			fi
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_RunCommand: Check to see if the 'su' element of the command
+# has been set and if so then print a message before the 'password' prompt
+# is written and also check exit code afterwards and exit if not zero
+# ---------------------------------------------------------------------------
+
+fn_RunCommand()
+{
+        [[ "${SuCommand}" != "" && "${CommandUser}" != "root" ]] && fn_Message 3 "The licd user (${LicdUser}) is different, so you will need to provide a password for the account"
+	( eval ${Command} )
+	[[ "${SuCommand}" != "" && "$?" != "0" ]] && fn_Message 1 "The command failed: Exiting..."
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_Details: Detail the current settings for the selected Licd
+# ---------------------------------------------------------------------------
+
+fn_Details()
+{
+	LicdPort=$(grep "LicdPort=" "${LicdHome}/licd.rc" | cut -d "=" -f 2)
+	fn_Message 3 "Details for licd ${LicdName} running on port ${LicdPort} owned by user ${LicdUser} are:"
+	fn_StoreParams
+	fn_ListLicdParams
+}
+
+# -----------------------------------------------------------------------
+# Function fn_LicdList: Display the list of active licds
+# -----------------------------------------------------------------------
+
+fn_LicdList()
+{
+	if [ ! -d ${LicdRoot}/licds ]
+	then
+		fn_Message 3 "There are currently no Licds configured"
+		exit
+	fi
+	echo -e "\nThe list of currently active Licds are:\n"
+	IFS=$'\n'
+        for x in $(ls ${LicdRoot}/licds | grep -v "\.")
+        do
+                echo "Licd ${x}"
+        done
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateCommand: Create the command string
+#                            If the user running the command is different
+#                            from the user that is set for the licd, the
+#                            $SuCommand variable will contain the relevant
+#                            su details
+# -----------------------------------------------------------------------
+
+fn_CreateCommand()
+{
+        Command="${SuCommand}${SuQuote}${SuExport}${LicdExec} ${LicdName} -port ${LicdPort}"
+        Command="${Command} -log ${LicdLogD}/${LicdLogF}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PrintCommand: Print 'command' line for Licd
+# -----------------------------------------------------------------------
+
+fn_PrintCommand()
+{
+	fn_CreateCommand
+	echo
+	echo "COMMAND for ${LicdName}: ${Command}${SuQuote}"
+	echo "LD_LIBRARY_PATH for ${LicdName}: ${LD_LIBRARY_PATH}"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_StoreDefaultParams: Store the default parameters. These are
+# used either in the create function to print the list and accept changes
+# to the list, or to list the parameters for a licd (after any user
+# parameters have been changed or added
+# -----------------------------------------------------------------------
+
+fn_StoreDefaultParams()
+{
+	licdVar=()
+	licdVal=()
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		nextVar=1
+		IFS=$'\n'
+		for gVar in $(grep "^[^#]" ${ProgramPath}/${ConfigFile})
+		do
+			licdVar[${nextVar}]=$(echo $gVar | cut -d"=" -f1)
+			licdVal[${nextVar}]=$(echo $gVar | cut -d"=" -f2)
+			# ---
+			# add the Licd name to the LicdLogD variable value
+			# ---
+			if [ "${licdVar[${nextVar}]}" = "LicdLogD" ]
+			then
+				licdVal[${nextVar}]="${licdVal[${nextVar}]}/${LicdName}"
+			fi
+			nextVar=$(( $nextVar + 1 ))
+		done
+	else
+		fn_Message 1 "Can't find the licd configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_StoreParams: Add any user parameters to the stored licd 
+# parameters. once these have been extracted, each default setting needs to be
+# checked. If the variable exists in the default list it will overwrite the
+# variables, if it doesn't exist in the default list it will append it to the 
+# array list 
+# ---------------------------------------------------------------------------
+
+fn_StoreParams()
+{
+	fn_StoreDefaultParams
+        [[ -e "${LicdRoot}/licds/${LicdName}/licd.rc" ]] || fn_Message 1 "No licd.rc file for Licd ${LicdName}. Exiting..."
+	IFS=$'\n'
+	for uVar in $(grep "^[^#]" "${LicdRoot}/licds/${LicdName}/licd.rc")
+	do
+		userVar=$(echo $uVar | cut -d"=" -f1)
+		userVal=$(echo $uVar | cut -d"=" -f2)
+		if [ "${userVar}" != "LicdUser" ]
+		then
+			x=1
+			changed=no
+			while [ $x -lt $nextVar ]
+			do
+				if [ ${userVar} = ${licdVar[${x}]} ]
+				then
+					changed=yes
+					licdVar[${x}]=${userVar}
+					licdVal[${x}]=${userVal}
+					[[ "${licdVar[${x}]}" = "LicdLogD" ]] && licdVal[${x}]="${licdVal[${x}]}/${LicdName}"
+					x=${nextVar}
+				fi
+				x=$(( ${x} + 1 ))
+			done
+			if [ "${changed}" = "no" ]
+			then
+				licdVar[$nextVar]=${userVar}
+				licdVal[$nextVar]=${userVal}
+				nextVar=$(( $nextVar + 1 ))
+			fi
+		fi
+	done
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_ListLicdParams: Print out the contents of the stored parameters
+# ---------------------------------------------------------------------------
+
+fn_ListLicdParams()
+{
+	echo
+	x=1
+	extraText="\t\t[This parameter cannot be changed once set in the licdctl.rc file]" 
+	while [ $x -lt $nextVar ]
+	do
+		printText=""
+		if [ "${Instance}" = "create" ]
+		then
+			[ "${licdVar[${x}]}" = "LicdRoot" -o "${licdVar[${x}]}" = "ITRS_HOME" ] && printText=${extraText}
+		fi
+		echo -e "[${x}] ${licdVar[${x}]} : ${licdVal[${x}]} ${printText}"
+		x=$(( $x + 1 ))
+	done
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetDefaultParams: check for existence of config file and run it
+# to set the default variables.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Licd' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetDefaultParams()
+{
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		. ${ProgramPath}/${ConfigFile}
+		IFS=$'\n'
+		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Licd" | grep "=")
+		do
+			export ${xVar}
+		done
+	else
+		fn_Message 1 "Can't find the licd configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetParams: Set the parameters for the licd. The default
+# parameters will be set by fn_SetDefaultParams, so only overwrite any if
+# there is a licd.rc file in the licd directory.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Licd' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetParams()
+{
+	SuCommand=""
+	SuQuote=""
+	SuExport=""
+	fn_SetOS
+	LicdExec=${LicdBins}/${LicdBase}/licd.${OS}
+	LicdHome="${LicdRoot}/licds/${LicdName}"
+	LicdIncl="${LicdRoot}/licd_config/shared"
+
+	if [ "${Instance}" != "create" ]
+	then
+	        [[ -e "${LicdHome}/licd.rc" ]] || fn_Message 1 "No licd.rc file for Licd ${LicdName}. Exiting..."
+
+		# ---
+		# source the licd.rc file and export any additional variables that have 
+		# have been set other than the standard LicdXxxx ones
+		# ---
+
+		. ${LicdHome}/licd.rc
+
+		[[ "${LicdUser}" = "" ]] && fn_Message 1 "The Licd User must contain a value"
+		IFS=$'\n'
+		for xVar in $(cat "${LicdHome}/licd.rc" | grep -v "^#" | grep -v "Licd" | grep "=")
+		do
+			export ${xVar}
+		done
+
+		if [ "${LicdUser}" != "${CommandUser}" ]
+		then
+			fn_WriteLicdExports
+			SuCommand="su ${LicdUser} -c "
+			SuQuote='"'
+			SuExport=". ${LicdExports} ; "
+		fi
+		#LicdPort=$(grep "<listenPort>" ${LicdHome}/licd.setup.xml | cut -d">" -f2 | cut -d"<" -f1)
+	fi
+
+	LicdLogD=${LicdLogD}/${LicdName}
+	export LD_LIBRARY_PATH=${LicdLibs}:${env_LD_LIBRARY_PATH}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WriteLicdExports: Create a file that holds all of the 
+# relevant EXPORT commands to start the licd. This is only done where 
+# an 'su' command is going to be used due to the Licd User being different
+# from the Command User as the script environment is not passed to the su
+# shell
+# -----------------------------------------------------------------------
+
+fn_WriteLicdExports()
+{
+	echo > ${LicdExports}
+	[[ "$?" != 0 ]] && fnMessage 1 "Failed to write Licd Exports file. Exiting..."
+	IFS=$'\n'
+	for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Licd" | grep "=")
+	do
+		echo "export ${xVar}" >> ${LicdExports}
+	done
+	IFS=$'\n'
+	for xVar in $(cat "${LicdHome}/licd.rc" | grep -v "^#" | grep -v "Licd" | grep "=")
+	do
+		echo "export ${xVar}" >> ${LicdExports}
+	done
+	echo "export LD_LIBRARY_PATH=${LicdLibs}:${env_LD_LIBRARY_PATH}" >> ${LicdExports}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateLicd: Create the relevant environment for the licd
+# -----------------------------------------------------------------------
+
+fn_CreateLicd()
+{
+	fn_SetParams
+        if [ ! -d ${LicdRoot}/licds ]
+        then
+                [[ ! -w ${LicdRoot} ]] && fn_Message 1 "User ${CommandUser} cannot write to the ${LicdRoot} directory. Exiting..."
+                mkdir ${LicdRoot}/licds
+        fi
+	[[ ! -w ${LicdRoot}/licds ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${LicdRoot}/licds directory. Exiting..."
+	#[[ ! -r ${LicdRoot}/licd_config/templates/licd.setup.xml ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the licd template file. Exiting..."
+	fn_Message 3 "Creating directories for ${LicdName}"
+	mkdir -p ${LicdHome}
+	[[ "$?" != "0" ]] && fn_Message 1 "Failed to create Licd directory structure ${LicdHome}. Exiting..."
+
+	# ---
+	# LicdLogD defaults to LicdHome, but can be set differently if required
+	# ---
+
+	if [ ! -d "${LicdLogD}" ]
+	then
+		mkdir -p "${LicdLogD}"
+		[[ "$?" != "0" ]] && fn_Message 1 "Failed to create logfile directory ${LicdLogD}. Exiting..."
+	fi
+	fn_Message 3 "Copying licd.setup.xml"
+	
+	#cat ${LicdRoot}/licd_config/templates/licd.setup.xml | sed -e "s/LICD_PORT/${LicdPort}/g" -e "s/LICD_NAME/${LicdName}/g" -e "s~LICD_INCLUDES~${LicdIncl}~g" > "${LicdHome}"/licd.setup.xml
+
+	# ---
+	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
+	# ---
+
+	rcfile=${LicdHome}/licd.rc
+	echo -e "#! /bin/bash\n#\n# licd.rc file for licd ${LicdName}\n# Auto generated by licdctl: $(date)" > "${rcfile}"
+	echo -e "# All entries in this file are either overrides of default values or additional parameters" >> "${rcfile}"
+	echo -e "\nLicdUser=${CommandUser}" >> "${rcfile}"
+	echo -e "\nLicdPort=${LicdPort}" >> "${rcfile}"
+	if [ "${addedVars[1]}" != "" ]
+	then
+		for x in "${addedVars[@]}"
+		do
+			echo "${licdVar[${x}]}=${licdVal[${x}]}" >> "${rcfile}"
+		done 
+	fi
+	fn_Message 3 "Environment created for ${LicdName}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_RemoveDirs: Remove the relevant directories for the licd
+# -----------------------------------------------------------------------
+
+fn_RemoveDirs()
+{
+	echo; fn_Message 3 "Are you sure you want to remove all directories and contents for ${LicdName}? [Y/N]: \\c"
+	read input
+	if [ "${input}" = "y" -o "${input}" = "Y" ]
+	then
+		fn_GetLicdProcess
+		if [ ${process} ]
+		then
+			fn_Message 3 "Licd ${LicdName} is currently running. Shutting down..."
+			fn_Stop
+		fi
+		fn_Message 3 "Deleting directories for ${LicdName}"
+		Command="${SuCommand}${SuQuote}rm -rf ${LicdHome}${SuQuote}"
+		fn_RunCommand
+		if [ -d "${LicdLogD}" ]
+		then
+			fn_Message 3 "Deleting separate log directory for ${LicdName}"
+			Command="${SuCommand}${SuQuote}rm -rf ${LicdLogD}${SuQuote}"
+			fn_RunCommand
+		fi
+		fn_Message 3 "Licd ${LicdName} removed"
+	else
+		fn_Message 3 "Operation cancelled"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PerformFunction: run the relevant function (arg 2)
+# -----------------------------------------------------------------------
+
+fn_PerformFunction()
+{
+	if [ "$Function" = "" ]
+	then
+		fn_Usage
+		fn_Message 1 "Please include a relevant function"
+	fi
+
+        case ${Function} in
+                start|Start|START)		fn_Start	    	                  ;;
+                stop|Stop|STOP)			fn_Stop                		          ;;
+                restart|Restart|RESTART)	fn_Stop && sleep 10 && fn_Start           ;;
+                refresh|Refresh|REFRESH)	fn_Refresh                                ;;
+                status|Status|STATUS)		fn_Status                                 ;;
+                log|Log|LOG)			fn_Log                                 ;;
+                details|Details|DETAILS)	fn_Details                                ;;
+		delete|Delete|DELETE)		fn_RemoveDirs				  ;;
+		command|Command|COMMAND)	fn_PrintCommand                           ;;
+                *)				fn_Usage ; fn_Exit 0                      ;;
+        esac
+}
+
+# -------------------------------------------------------------------------
+# Function fn_SetOS: Set the OS for use in executable
+# -------------------------------------------------------------------------
+
+fn_SetOS()
+{
+	OS=$(uname -s | tr "[A-Z]" "[a-z]" | sed s/sunos/sun/)
+	i386=$(uname -a | grep i386)
+	if [[ ${OS} = "sun" && ${i386} != "" ]]
+	then
+		OS=${OS}"x86"
+	fi
+}
+
+# -------------------------------------------------------------------------
+# Function fn_Exit: exit script and do any clearup
+# -------------------------------------------------------------------------
+
+fn_Exit()
+{
+	[[ -e "${LicdExports}" ]] && rm -f "${LicdExports}"
+	exit $1
+}
+
+#######################################################################################
+#       End of Functions
+#######################################################################################
+#
+#       Start of Main Script
+#
+#######################################################################################
+
+# ----------
+# Set local variables
+#
+# LD_LIBRARY_PATH is read in and set here once so that it does not get added multiple
+# times when running against more than one Licd
+# ----------
+
+env_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+HostName=$(hostname)
+UserName=${LOGNAME}
+OS=$(uname -s)
+Instance=$1
+Function=$2
+FunctionOpts=$3
+
+# ---------
+# Check the config file exists and populate the default variables to set $LicdRoot
+# ---------
+
+fn_SetDefaultParams
+
+# --------
+# Check Instance. If 'All', then perfrom set function against all Licds
+# else check for 'Create', 'List' etc. If single Instance entered then check
+# that the Licd exists, if o.k. then perform set function against Licd
+# --------
+
+case "${Instance}" in
+        all|All|ALL)		IFS=$'\n'
+				for LicdName in $(ls ${LicdRoot}/licds | grep -v "\.")
+				do
+					fn_SetParams
+					fn_PerformFunction
+					fn_SetDefaultParams
+				done
+				;;
+	list|List|LIST)		fn_LicdList ; fn_Exit 0 ;;
+	create|Create|CREATE)	Instance=create ; fn_SetDefaultParams ; fn_StoreDefaultParams ; fn_Create ; fn_Exit 0 ;;
+	usage|Usage|USAGE)	fn_Usage ; fn_Exit 0 ;;
+	help|Help|HELP|-h|-H)	fn_Usage ; fn_Exit 0 ;;
+	[a-z]*|[A-Z]*)		if [ -d "${LicdRoot}/licds/${Instance}" ]
+				then
+					LicdName="${Instance}"
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				else
+					fn_Message 2 "Licd ${Instance} not found" 
+					fn_LicdList
+					fn_Exit 2
+				fi
+				;;
+	*)			fn_Usage ; fn_Exit 0 ;;
+esac
+
+fn_Exit 0
+
+###########################################################
+#
+#       EOS End of Script
+#
+###########################################################

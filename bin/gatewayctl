@@ -1,0 +1,983 @@
+#! /bin/bash
+#
+#set -x
+#
+#       $Header:
+#####################################################################
+#
+#       Program Name    :       gatewayctl
+#       Function        :       Execute ITRS Gateway
+#       Author          :       Jeremy Hullah 
+#       Creation        :       16/10/2012
+#       History :
+#
+#       01/04/2011      0.00 -> 1.00    RG      Creation
+#       13/05/2011      1.00 -> 1.01    RG      Adapted ITRS Architecture
+#       16/05/2011      1.01 -> 1.02    RG      Solaris differences
+#       20/06/2011      1.02 -> 2.00    RG      Publication
+#       21/06/2011      2.00 -> 2.01    RG      Added LD_LIBRARY_PATH
+#       24/06/2011      2.01 -> 2.02    RG      Fixed recursive cd bug (myPWD)
+#       24/06/2011      2.02 -> 2.03    OE      Added GateName for more visibility
+#       25/07/2011      2.03 -> 2.04    RG      Config file redesign
+#       26/07/2011      2.04 -> 2.05    RG      Added functionality
+#       20/09/2011      2.05 -> 2.06    RG      Added Support for up to 99 gateways
+#       14/12/2011      2.06 -> 2.07    RG      Fixed Alpha Gateway Name
+#       27/02/2012      2.07 -> 2.08    TV      Added defaults for gateways and -help support
+#       29/02/2012      2.08 -> 2.09    TV      Added create gateway function
+#       09/05/2012      2.09 -> 2.10    DR      Changed ${GateBase[${Index}]} formatting
+#       14/08/2012      2.10 -> 3.00    JH      Fixed a few bugs and do a complete re-write to cope with new config file format
+#	16/10/2012	3.00 -> 4.00	JH	Complete re-write for global deployment
+#	29/07/2013	4.00 -> 4.01	TV	Added support for multiple gateway templates, and created a load_monitoring template
+#	26/03/2014	4.01 -> 4.02	RG	Amended parameter setting grep statement
+#	16/05/2014	4.02 -> 4.03	TH	Undocumented
+#	20/08/2014	4.03 -> 4.04    RG	Added if statement for confusing message when gateway will not start
+#	20/08/2014	4.04 -> 4.05    RG	Corrected error in selecting correct GateBase from individual gateway.rc
+#
+#####################################################################
+#       Start of Local Tokens
+#####################################################################
+
+Program=$(basename $0)
+ProgramPath=$(dirname $0)
+ConfigFile=gatewayctl.rc
+CommandUser=$(id | cut -d"(" -f2 | cut -d ")" -f1)
+SuCommand=""
+SuQuote=""
+SuExport=""
+GatePort=7039
+GatewayExports=/tmp/GatewayExports
+
+Firstchar=`echo $ProgramPath | cut -c1`
+if [ ! "$Firstchar" = "/" ]
+then
+        if [ "$Firstchar" = "." ]
+        then
+                ProgramPath=`echo $ProgramPath | cut -c3-`
+        fi
+	if [ "$ProgramPath" = "" ]
+	then
+        	ProgramPath=${PWD}
+	else
+        	ProgramPath=${PWD}/${ProgramPath}
+	fi
+fi
+Version=4
+Revision=05
+Process="${Program} v${Version}.${Revision}"
+
+#####################################################################
+#       Start of Functions
+#####################################################################
+
+# -----------------------------------------------------------------------
+# Function fn_Usage: Print usage details
+# -----------------------------------------------------------------------
+
+fn_Usage()
+{
+	echo
+	echo "	Usage: ${Program} list | create | <gatename> <function>"
+	echo
+	echo "	Where 'list' shows the available gateways"
+	echo "	Where 'create' creates a new gateway environment"
+	echo
+	echo "	Where <gatename> may be the gateway name or 'all'"
+	echo "	Where <function> may be, start, stop, restart, refresh, details, command, status, delete, usage"
+	echo
+	echo "	start           -       starts the gateway or gateways"
+	echo "	stop            -       stops the gateway or gateways (additionally add signal number, e.g. -9)"
+	echo "	restart         -       restarts the gateway or gateways"
+	echo "	refresh         -       refresh the gateway or gateways to re-read the configuration files(s)"
+	echo "	details         -       list the parameters of the gateway or gateways"
+	echo "	command         -       displays the command line for starting the gateway"
+	echo "	log             -       displays the log file for the gateway (additionally add 'tail' options)"
+	echo "	status          -       displays the process stack for the gateway"
+	echo "	delete          -       deletes the gateway environment"
+	echo "	usage|-h|-help  -       outputs this usage message"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Message: Print message. Exit if message code = 1
+# -----------------------------------------------------------------------
+
+fn_Message()
+{
+        Now=$(date +"%Y-%m-%d %H.%M.%S")
+        case $1 in
+                1)      echo -e ${Now} : ${Process} : Error : $2
+                        fn_Exit $1
+			;;
+                2)      echo -e ${Now} : ${Process} : Warn : $2
+			;;
+                3)      echo -e ${Now} : ${Process} : Info : $2
+			;;
+                *)      ;;
+        esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Start: Start the gateway in either foreground or backgroud
+#                    depending on the GateMode setting for the gateway
+# -----------------------------------------------------------------------
+
+fn_Start()
+{
+
+	# ---
+	# Check if gateway is already running and gateway environemnt has been created
+	# ---
+
+	fn_GetGatewayProcess
+	if [ ${process} ]
+	then
+		fn_Message 2 "Gateway ${GateName} ${GatePort} already running"	
+		return
+	fi
+	if [ ! -d  ${GateBins}/${GateBase} ]
+	then
+		fn_Message 2 "No Gateway base for ${GateBase} in the Gateway binary directory ${GateBins}. \nCan't start gateway ${GateName}. Please create link for this to the relevant binary package"
+		return
+	fi
+
+	# ---
+	# start the Gateway either in the background or the foreground. First create the command
+	# ---
+
+	fn_CreateCommand
+	Command="${Command} > ${GateLogD}/gateway.txt 2>&1 & ${SuQuote}"
+	cd "${GateRoot}/gateways/${GateName}"
+	case "${GateMode}" in
+		background)	fn_Message 3 "Starting Gateway ${GateName} on port ${GatePort}"
+				fn_RunCommand
+				sleep 5
+				fn_GetGatewayProcess
+       				if [ ${process} ]
+				then
+					fn_Message 3 "Gateway ${GateName} has started with PID : ${process}"
+					fn_Message 3 "Gateway ${GateName} logging to ${GateLogD}/${GateLogF}"
+				else
+# RG 4.04
+					if [ !${process} ]
+					then
+						fn_Message 1 "Gateway ${GateName} failed to start - no process"
+					fi
+					if [  ! -e "${GateLogD}/${GateLogF}" ]
+					then
+						fn_Message 1 "Gateway ${GateName} failed to start. Logfile for gateway could not be created."
+					fi
+					fn_Message 3 "Gateway ${GateName} has not started"
+					fn_Message 3 "see - ${GateLogD}/${GateLogF}"
+					fn_Message 3 "see - ${GateLogD}/gateway.txt"
+					fn_Message 3 "Last 20 lines of gateway log file: "
+					echo;tail -20 "${GateLogD}/${GateLogF}";echo
+				fi
+				;;
+		foreground)     fn_Message 3 "Starting Gateway ${GateName} on port ${GatePort}"
+				fn_RunCommand
+				;;
+		*)		fn_Message 1 "No operating mode set. Should be either backgroud or foreground"
+				;;
+	esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GetGatewayProcess: get the PID for the Gateway
+# -----------------------------------------------------------------------
+
+fn_GetGatewayProcess()
+{
+	process=$(pgrep -d " " -f "${GateExec} ${GateName} ")
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Refresh: Refresh the selected Gateway to re-read the configuration files
+# -----------------------------------------------------------------------
+
+fn_Refresh()
+{
+	fn_GetGatewayProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Refreshing Gateway ${GateName}"	
+		kill -USR1 ${process}
+	else
+		fn_Message 2 "Gateway ${GateName} is not running"
+	fi	
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Stop: Stop the selected Gateway
+# -----------------------------------------------------------------------
+
+fn_Stop()
+{
+	fn_GetGatewayProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Stopping Gateway ${GateName} - ${process}"
+		Command="${SuCommand}${SuQuote}kill ${FunctionOpts} ${process}${SuQuote}"
+		fn_RunCommand
+		sleep 5
+		fn_GetGatewayProcess
+		if [ ${process} ]
+		then
+			fn_Message 2 "Gateway ${GateName}, process ${process} failed to be stopped"
+		else
+			fn_Message 3 "Gateway ${GateName} stopped"
+		fi
+	else
+		fn_Message 2 "Gateway ${GateName} is not started"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Status: Show the ps details for the select Gateway
+# -----------------------------------------------------------------------
+
+fn_Status()
+{
+	fn_GetGatewayProcess
+	if [ ${process} ]
+	then
+		ps -lfp ${process}
+	else
+		fn_Message 3 "Gateway ${GateName} is not running"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Log: Show the logfile for the select Gateway
+# -----------------------------------------------------------------------
+
+fn_Log()
+{
+	fn_Message 3 "Showing log file details for ${GateName}\n"
+	tail ${FunctionOpts} ${GateLogD}/gateway.log
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Create: Create a gateway and allow user to change any of 
+# the default values, which are then written to a gateway.rc file in the 
+# gateway home directory
+# -----------------------------------------------------------------------
+
+fn_Create()
+{
+	# ---
+	# Ask for Gateway name and check validty of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+		echo; echo -e "Please enter a name for the new Gateway: \c"
+		read GateName
+		fn_CheckGateName
+	done
+
+	# ---
+	# Ask for port number and check validity of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the port number for the Gateway [default ${GatePort}]: \c"
+                read GatePortResponse
+                [[ "${GatePortResponse}" = "" ]] || GatePort=${GatePortResponse}
+		fn_CheckGatePort
+	done
+
+	# ---
+	# Prompt user to choose template
+	# ---
+
+	completed=no
+        while [ "${completed}" = "no" ]
+        do
+		fn_ListTemplates
+                echo -e "Please choose the template for the Gateway [default 1]: \c"
+                read TemplateResponse
+                [[ "${TemplateResponse}" = "" ]] || TemplateNum=${TemplateResponse}
+                fn_CheckTemplate
+        done
+
+	# ---
+	# Allow user to change any of the default Gateway parameters
+	# ---
+
+	echo; echo "Please review the following list of default Gateway parameters"
+	changeVar=no
+	addedVars=()
+	if [[ ${Template} == "gateway.setup.loadmon.xml" ]]
+	then
+		#echo ${gateVal[10]}
+		# if default opts exist in gatewayctl.rc then copy them over and add in -stats option
+		string=`echo ${gateVal[10]} | sed -e 's/"$/ -stats"/'`
+		# if no gate opts then create -stats option
+		if [[ $string == "" ]]
+		then
+			string="\" -stats \""
+		fi
+		
+		gateVal[10]=$string
+		eval ${gateVar[10]}=$string 
+		addedVars[1]=10
+		addVar=2
+	else
+		addVar=1
+	fi
+	while [ "${changeVar}" != "ok" -a  "${changeVar}" != "q" ]
+	do
+		fn_SetGatewayParams
+	done
+	[ "${changeVar}" = "q" ] && return
+	for x in "${GateVal[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	fn_CreateGateway
+	echo ; echo -e "Would you like to start gateway ${GateName}? [y/n]: \c"
+	read startGateway
+	[ "$startGateway" = "y" ] && fn_Start
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_SetGatewayParamrs: Set the Gateway parameters for the Gateway
+# ---------------------------------------------------------------------------
+fn_SetGatewayParams()
+{
+	fn_ListGatewayParams
+	echo "[${nextVar}] Add a new parameter: "
+	echo ; echo -e "Please select any parameters that you would like to change or 'ok' to proceed ['q' to quit]: \c"
+	read changeVar
+	[ "${changeVar}" = "ok" -o "${changeVar}" = "q" ] && return
+	if [ ${changeVar} -gt 0 -a ${changeVar} -le ${nextVar} ]
+	then
+                if [ "${gateVar[${changeVar}]}" = "GateRoot" -o "${gateVar[${changeVar}]}" = "ITRS_HOME" ]
+                then
+                        echo -e "The GateRoot and ITRS_HOME parameters cannot be changed once they have been set in the configuration file. Press return to continue: \c"
+                        read dummy
+                        return
+                fi
+
+		# ---
+		# if they have selected to add a new parameter then ask for parameter name and add 1 to nextVar
+		# ---
+
+		if [ ${changeVar} = ${nextVar} ]
+		then
+			echo -e "Enter the new parameter name: \c"
+			read newParamName
+			gateVar[${changeVar}]=${newParamName}
+			nextVar=$(( ${nextVar} + 1 ))
+		fi
+
+		# ---
+		# ask for new parameter value
+		# ---
+
+		echo -e "Enter new value for parameter ${gateVar[${changeVar}]}: \c"
+		read newParamVal
+
+		# ---
+		# The follow awk statement will add double quote marks to any text that
+		# contains spaces and which doesn't already contain double quote marks
+		# ---
+
+		newParamVal=$(echo ${newParamVal} | awk '{if ( index( $0," ") > 0 ){if ( index( $0, "\"") > 0 ){print $0} else {print "\""$0"\""} } else {print $0} } ' )
+
+		# ---
+		# make sure to change the actual variable value as well as the stored variable that is used for listing
+		# ---
+
+		gateVal[${changeVar}]=${newParamVal}
+		eval ${gateVar[${changeVar}]}=${newParamVal}
+
+		# ---
+		# Check if the parameter has already been changed/added to create list of changed parameters
+		# ---
+
+		fn_CheckElement "${changeVar}"
+		if [ $? = 0 ]
+		then
+			addedVars[${addVar}]=${changeVar}
+			addVar=$(( ${addVar} + 1 ))
+		fi
+		return
+	fi
+	echo "Invalid option entered"
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckElement: Check if a value exists in an array
+# ---------------------------------------------------------------------------
+
+fn_CheckElement()
+{
+	local x 
+	for x in "${addedVars[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	return 0 
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckGateName: Check the Gateway name is valid
+# N.B. couldn't get [[:alnum:]_] or [:word:] to work with awk so had to use
+# clumsy character selection - please change if possible
+# ---------------------------------------------------------------------------
+
+fn_CheckGateName()
+{
+	if [ -d "${GateRoot}/gateways/${GateName}" ]
+	then
+		fn_Message 2 "Gateway ${GateName} already exists"
+	else
+		if [[ $(echo "${GateName}" | awk '/[ .,-#~<>!£%(){}\[\]\&\$\*\^\"\\\/]/ { print }') ]]
+		then
+			fn_Message 2 "The Gateway name, ${GateName} can only contain alpha-numeric characters or an underscore"
+		else
+			completed=yes
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckGatePort: Check that the chosen port for a Gateway is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckGatePort()
+{
+        if ! [[ ${GatePort} -gt 1024 && ${GatePort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${GatePort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${GatePort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+			if grep -i "listenPort>${GatePort}" ${GateRoot}/gateways/*/gateway.setup.xml >/dev/null
+			then
+				echo "Port ${GatePort} is already used by an existing gateway"
+			else
+				completed=yes
+			fi
+		fi
+	fi
+}
+
+#------------------------------------------------------------------------------
+# fn_ListTemplates  List templates from the template directory
+#-----------------------------------------------------------------------------
+fn_ListTemplates()
+{
+	ls ${GateRoot}/gateway_config/templates	 | awk '{print " " NR " " $0}'
+}
+#------------------------------------------------------------------------------
+# fn_CheckTemplate
+#-----------------------------------------------------------------------------
+fn_CheckTemplate()
+{
+	if [[ $TemplateResponse = "" ]] 
+	then
+		TemplateNum=1
+	fi
+
+	Template=`ls ${GateRoot}/gateway_config/templates | awk -v TemplateNum=${TemplateNum} '{ if (NR == TemplateNum){print $0}}'`
+	echo Template is ${Template} 
+	if [[ $Template = "" ]]
+	then
+		fn_Message 2 "Please chose a number from the list provided"
+	else
+
+		if ! [[ -r ${GateRoot}/gateway_config/templates/${Template} ]]
+		then
+			fn_Message 2 "Gateway template cannot be read by the current user or does not exist"
+		else
+			completed=yes
+		fi
+	fi	
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_RunCommand: Check to see if the 'su' element of the command
+# has been set and if so then print a message before the 'password' prompt
+# is written and also check exit code afterwards and exit if not zero
+# ---------------------------------------------------------------------------
+
+fn_RunCommand()
+{
+        [[ "${SuCommand}" != "" && "${CommandUser}" != "root" ]] && fn_Message 3 "The gateway user (${GateUser}) is different, so you will need to provide a password for the account"
+	( eval ${Command} )
+	[[ "${SuCommand}" != "" && "$?" != "0" ]] && fn_Message 1 "The command failed: Exiting..."
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_Details: Detail the current settings for the selected Gateway
+# ---------------------------------------------------------------------------
+
+fn_Details()
+{
+	GatePort=$(grep "<listenPort>" "${GateHome}/gateway.setup.xml" | cut -d">" -f2 | cut -d"<" -f1)
+	fn_Message 3 "Details for gateway ${GateName} running on port ${GatePort} owned by user ${GateUser} are:"
+	fn_StoreParams
+	fn_ListGatewayParams
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GateList: Display the list of active gateways
+# -----------------------------------------------------------------------
+
+fn_GateList()
+{
+	if [ ! -d ${GateRoot}/gateways ]
+	then
+		fn_Message 3 "There are currently no Gateways configured"
+		exit
+	fi
+	echo -e "\nThe list of currently active Gateways are:\n"
+	IFS=$'\n'
+        for x in $(ls ${GateRoot}/gateways | grep -v "\.")
+        do
+                echo "Gateway ${x}"
+        done
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateCommand: Create the command string
+#                            If the user running the command is different
+#                            from the user that is set for the gateway, the
+#                            $SuCommand variable will contain the relevant
+#                            su details
+# -----------------------------------------------------------------------
+
+fn_CreateCommand()
+{
+        Command="${SuCommand}${SuQuote}${SuExport}${GateExec} ${GateName} ${GatePort}"
+        Command="${Command} -setup ${GateHome}/gateway.setup.xml"
+        Command="${Command} -log ${GateLogD}/${GateLogF}"
+        Command="${Command} -resources-dir ${GateBins}/${GateBase}/resources"
+	Command="${Command} ${GateLicP}"
+	Command="${Command} ${GateLicH}"
+        Command="${Command} ${GateOpts}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PrintCommand: Print 'command' line for Gateway
+# -----------------------------------------------------------------------
+
+fn_PrintCommand()
+{
+	fn_CreateCommand
+	echo
+	echo "COMMAND for ${GateName}: ${Command}${SuQuote}"
+	echo "LD_LIBRARY_PATH for ${GateName}: ${LD_LIBRARY_PATH}"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_StoreDefaultParams: Store the default parameters. These are
+# used either in the create function to print the list and accept changes
+# to the list, or to list the parameters for a gateway (after any user
+# parameters have been changed or added
+# -----------------------------------------------------------------------
+
+fn_StoreDefaultParams()
+{
+	gateVar=()
+	gateVal=()
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		nextVar=1
+		IFS=$'\n'
+		for gVar in $(grep "^[^#]" ${ProgramPath}/${ConfigFile})
+		do
+			gateVar[${nextVar}]=$(echo $gVar | cut -d"=" -f1)
+			gateVal[${nextVar}]=$(echo $gVar | cut -d"=" -f2)
+			# ---
+			# add the Gateway name to the GateLogD variable value
+			# ---
+			if [ "${gateVar[${nextVar}]}" = "GateLogD" ]
+			then
+				gateVal[${nextVar}]="${gateVal[${nextVar}]}/${GateName}"
+			fi
+			nextVar=$(( $nextVar + 1 ))
+		done
+	else
+		fn_Message 1 "Can't find the gateway configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_StoreParams: Add any user parameters to the stored gateway 
+# parameters. once these have been extracted, each default setting needs to be
+# checked. If the variable exists in the default list it will overwrite the
+# variables, if it doesn't exist in the default list it will append it to the 
+# array list 
+# ---------------------------------------------------------------------------
+
+fn_StoreParams()
+{
+	fn_StoreDefaultParams
+        [[ -e "${GateRoot}/gateways/${GateName}/gateway.rc" ]] || fn_Message 1 "No gateway.rc file for Gateway ${GateName}. Exiting..."
+	IFS=$'\n'
+	for uVar in $(grep "^[^#]" "${GateRoot}/gateways/${GateName}/gateway.rc")
+	do
+		userVar=$(echo $uVar | cut -d"=" -f1)
+		userVal=$(echo $uVar | cut -d"=" -f2)
+		if [ "${userVar}" != "GateUser" ]
+		then
+			x=1
+			changed=no
+			while [ $x -lt $nextVar ]
+			do
+				if [ ${userVar} = ${gateVar[${x}]} ]
+				then
+					changed=yes
+					gateVar[${x}]=${userVar}
+					gateVal[${x}]=${userVal}
+					[[ "${gateVar[${x}]}" = "GateLogD" ]] && gateVal[${x}]="${gateVal[${x}]}/${GateName}"
+					x=${nextVar}
+				fi
+				x=$(( ${x} + 1 ))
+			done
+			if [ "${changed}" = "no" ]
+			then
+				gateVar[$nextVar]=${userVar}
+				gateVal[$nextVar]=${userVal}
+				nextVar=$(( $nextVar + 1 ))
+			fi
+		fi
+	done
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_ListGatewayParams: Print out the contents of the stored parameters
+# ---------------------------------------------------------------------------
+
+fn_ListGatewayParams()
+{
+	echo
+	x=1
+	extraText="\t\t[This parameter cannot be changed once set in the gatewayctl.rc file]" 
+	while [ $x -lt $nextVar ]
+	do
+		printText=""
+		if [ "${Instance}" = "create" ]
+		then
+			[ "${gateVar[${x}]}" = "GateRoot" -o "${gateVar[${x}]}" = "ITRS_HOME" ] && printText=${extraText}
+		fi
+		[ "${gateVar[${x}]}" = "GateBase" ] && printText="(version$(ls -ld ${GateBins}/${GateBase} | cut -d'>' -f2))"
+		echo -e "[${x}] ${gateVar[${x}]} : ${gateVal[${x}]} ${printText}"
+		x=$(( $x + 1 ))
+	done
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetDefaultParams: check for existence of config file and run it
+# to set the default variables.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Gate' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetDefaultParams()
+{
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		. ${ProgramPath}/${ConfigFile}
+		IFS=$'\n'
+		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Gate" | grep "=")
+		do
+			export ${xVar}
+		done
+	else
+		fn_Message 1 "Can't find the gateway configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetParams: Set the parameters for the gateway. The default
+# parameters will be set by fn_SetDefaultParams, so only overwrite any if
+# there is a gateway.rc file in the gateway directory.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Gate' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetParams()
+{
+	SuCommand=""
+	SuQuote=""
+	SuExport=""
+	fn_SetOS
+	GateExec=${GateBins}/${GateBase}/gateway2.${OS}
+	GateHome="${GateRoot}/gateways/${GateName}"
+	GateIncl="${GateRoot}/gateway_config/shared"
+
+	if [ "${Instance}" != "create" ]
+	then
+		[[ -e "${GateHome}/gateway.rc" ]] || fn_Message 1 "No gateway.rc file for Gateway ${GateName}. Exiting..."
+
+		# ---
+		# source the gateway.rc file and export any additional variables that have 
+		# have been set other than the standard GateXxxx ones
+		# ---
+
+		. ${GateHome}/gateway.rc
+
+# RG 4.05
+		GateExec=${GateBins}/${GateBase}/gateway2.${OS}
+		GateHome="${GateRoot}/gateways/${GateName}"
+		GateIncl="${GateRoot}/gateway_config/shared"
+
+		[[ "${GateUser}" = "" ]] && fn_Message 1 "The Gateway User must contain a value"
+		IFS=$'\n'
+# 4.01 -> 4.02
+#		for xVar in $(cat "${GateHome}/gateway.rc" | grep -v "^#" | grep -v "Gate" | grep "=")
+#
+		for xVar in $(cat "${GateHome}/gateway.rc" | grep -v "^#" | grep "^Gate" | grep "=")
+		do
+			export ${xVar}
+		done
+
+		if [ "${GateUser}" != "${CommandUser}" ]
+		then
+			fn_WriteGatewayExports
+			SuCommand="su ${GateUser} -c "
+			SuQuote='"'
+			SuExport=". ${GatewayExports} ; "
+		fi
+		GatePort=$(grep "<listenPort>" ${GateHome}/gateway.setup.xml | cut -d">" -f2 | cut -d"<" -f1)
+	fi
+
+	GateLogD=${GateLogD}/${GateName}
+	[[ "${GateLicP}" != "" ]] && GateLicP="-licd-port ${GateLicP}"
+	[[ "${GateLicH}" != "" ]] && GateLicH="-licd-host ${GateLicH}"
+	export LD_LIBRARY_PATH=${GateLibs}:${env_LD_LIBRARY_PATH}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WriteGatewayExports: Create a file that holds all of the 
+# relevant EXPORT commands to start the gateway. This is only done where 
+# an 'su' command is going to be used due to the Gateway User being different
+# from the Command User as the script environment is not passed to the su
+# shell
+# -----------------------------------------------------------------------
+
+fn_WriteGatewayExports()
+{
+	echo > ${GatewayExports}
+	[[ "$?" != 0 ]] && fnMessage 1 "Failed to write Gateway Exports file. Exiting..."
+	IFS=$'\n'
+	for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Gate" | grep "=")
+	do
+		echo "export ${xVar}" >> ${GatewayExports}
+	done
+	IFS=$'\n'
+	for xVar in $(cat "${GateHome}/gateway.rc" | grep -v "^#" | grep -v "Gate" | grep "=")
+	do
+		echo "export ${xVar}" >> ${GatewayExports}
+	done
+	echo "export LD_LIBRARY_PATH=${GateLibs}:${env_LD_LIBRARY_PATH}" >> ${GatewayExports}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateGateway: Create the relevant environment for the gateway
+# -----------------------------------------------------------------------
+
+fn_CreateGateway()
+{
+	fn_SetParams
+        if [ ! -d ${GateRoot}/gateways ]
+        then
+                [[ ! -w ${GateRoot} ]] && fn_Message 1 "User ${CommandUser} cannot write to the ${GateRoot} directory. Exiting..."
+                mkdir ${GateRoot}/gateways
+        fi
+	[[ ! -w ${GateRoot}/gateways ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${GateRoot}/gateways directory. Exiting..."
+	[[ ! -r ${GateRoot}/gateway_config/templates/${Template} ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the gateway template file. Exiting..."
+	fn_Message 3 "Creating directories for ${GateName}"
+	mkdir -p ${GateHome}
+	[[ "$?" != "0" ]] && fn_Message 1 "Failed to create Gateway directory structure ${GateHome}. Exiting..."
+
+	# ---
+	# GateLogD defaults to GateHome, but can be set differently if required
+	# ---
+
+	if [ ! -d "${GateLogD}" ]
+	then
+		mkdir -p "${GateLogD}"
+		[[ "$?" != "0" ]] && fn_Message 1 "Failed to create logfile directory ${GateLogD}. Exiting..."
+	fi
+	fn_Message 3 "Copying gateway.setup.xml"
+	
+	cat ${GateRoot}/gateway_config/templates/${Template} | sed -e "s/GATEWAY_PORT/${GatePort}/g" -e "s/GATEWAY_NAME/${GateName}/g" -e "s~GATEWAY_INCLUDES~${GateIncl}~g" > "${GateHome}"/gateway.setup.xml
+
+	# ---
+	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
+	# ---
+
+	rcfile=${GateHome}/gateway.rc
+	echo -e "#! /bin/bash\n#\n# gateway.rc file for gateway ${GateName}\n# Auto generated by gatewayctl: $(date)" > "${rcfile}"
+	echo -e "# All entries in this file are either overrides of default values or additional parameters" >> "${rcfile}"
+	echo -e "\nGateUser=${CommandUser}" >> "${rcfile}"
+	if [ "${addedVars[1]}" != "" ]
+	then
+		for x in "${addedVars[@]}"
+		do
+			echo "${gateVar[${x}]}=${gateVal[${x}]}" >> "${rcfile}"
+		done 
+	fi
+	fn_Message 3 "Environment created for ${GateName}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_RemoveDirs: Remove the relevant directories for the gateway
+# -----------------------------------------------------------------------
+
+fn_RemoveDirs()
+{
+	echo; fn_Message 3 "Are you sure you want to remove all directories and contents for ${GateName}? [Y/N]: \\c"
+	read input
+	if [ "${input}" = "y" -o "${input}" = "Y" ]
+	then
+		fn_GetGatewayProcess
+		if [ ${process} ]
+		then
+			fn_Message 3 "Gateway ${GateName} is currently running. Shutting down..."
+			fn_Stop
+		fi
+		fn_Message 3 "Deleting directories for ${GateName}"
+		Command="${SuCommand}${SuQuote}rm -rf ${GateHome}${SuQuote}"
+		fn_RunCommand
+		if [ -d "${GateLogD}" ]
+		then
+			fn_Message 3 "Deleting separate log directory for ${GateName}"
+			Command="${SuCommand}${SuQuote}rm -rf ${GateLogD}${SuQuote}"
+			fn_RunCommand
+		fi
+		fn_Message 3 "Gateway ${GateName} removed"
+	else
+		fn_Message 3 "Operation cancelled"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PerformFunction: run the relevant function (arg 2)
+# -----------------------------------------------------------------------
+
+fn_PerformFunction()
+{
+	if [ "$Function" = "" ]
+	then
+		fn_Usage
+		fn_Message 1 "Please include a relevant function"
+	fi
+
+        case ${Function} in
+                start|Start|START)		fn_Start	    	                  ;;
+                stop|Stop|STOP)			fn_Stop                		          ;;
+                restart|Restart|RESTART)	fn_Stop && sleep 10 && fn_Start           ;;
+                refresh|Refresh|REFRESH)	fn_Refresh                                ;;
+                status|Status|STATUS)		fn_Status                                 ;;
+                log|Log|LOG)			fn_Log                                 ;;
+                details|Details|DETAILS)	fn_Details                                ;;
+		delete|Delete|DELETE)		fn_RemoveDirs				  ;;
+		command|Command|COMMAND)	fn_PrintCommand                           ;;
+                *)				fn_Usage ; fn_Exit 0                      ;;
+        esac
+}
+
+# -------------------------------------------------------------------------
+# Function fn_SetOS: Set the OS for use in executable
+# -------------------------------------------------------------------------
+
+fn_SetOS()
+{
+	OS=$(uname -s | tr "[A-Z]" "[a-z]" | sed s/sunos/sun/)
+	i386=$(uname -a | grep i386)
+	if [[ ${OS} = "sun" && ${i386} != "" ]]
+	then
+		OS=${OS}"x86"
+	fi
+}
+
+# -------------------------------------------------------------------------
+# Function fn_Exit: exit script and do any clearup
+# -------------------------------------------------------------------------
+
+fn_Exit()
+{
+	[[ -e "${GatewayExports}" ]] && rm -f "${GatewayExports}"
+	exit $1
+}
+
+#######################################################################################
+#       End of Functions
+#######################################################################################
+#
+#       Start of Main Script
+#
+#######################################################################################
+
+# ----------
+# Set local variables
+#
+# LD_LIBRARY_PATH is read in and set here once so that it does not get added multiple
+# times when running against more than one Gateway
+# ----------
+
+env_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+HostName=$(hostname)
+UserName=${LOGNAME}
+OS=$(uname -s)
+Instance=$1
+Function=$2
+FunctionOpts=$3
+
+# ---------
+# Check the config file exists and populate the default variables to set $GateRoot
+# ---------
+
+fn_SetDefaultParams
+
+# --------
+# Check Instance. If 'All', then perfrom set function against all Gateways
+# else check for 'Create', 'List' etc. If single Instance entered then check
+# that the Gateway exists, if o.k. then perform set function against Gateway
+# --------
+
+case "${Instance}" in
+        all|All|ALL)		IFS=$'\n'
+				for GateName in $(ls ${GateRoot}/gateways | grep -v "\.")
+				do
+					fn_SetParams
+					fn_PerformFunction
+					fn_SetDefaultParams
+				done
+				;;
+	list|List|LIST)		fn_GateList ; fn_Exit 0 ;;
+	create|Create|CREATE)	Instance=create ; fn_SetDefaultParams ; fn_StoreDefaultParams ; fn_Create ; fn_Exit 0 ;;
+	usage|Usage|USAGE)	fn_Usage ; fn_Exit 0 ;;
+	help|Help|HELP|-h|-H)	fn_Usage ; fn_Exit 0 ;;
+	[a-z]*|[A-Z]*)		if [ -d "${GateRoot}/gateways/${Instance}" ]
+				then
+					GateName="${Instance}"
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				else
+					fn_Message 2 "Gateway ${Instance} not found" 
+					fn_GateList
+					fn_Exit 2
+				fi
+				;;
+	*)			fn_Usage ; fn_Exit 0 ;;
+esac
+
+fn_Exit 0
+
+###########################################################
+#
+#       EOS End of Script
+#
+###########################################################

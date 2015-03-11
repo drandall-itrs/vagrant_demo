@@ -1,0 +1,909 @@
+#! /bin/bash
+#
+#set -x
+#
+#       $Header:
+#####################################################################
+#
+#       Program Name    :       netprobectl
+#       Function        :       Execute ITRS Netprobe
+#       Author          :       Jeremy Hullah 
+#       Creation        :       16/10/2012
+#       History :
+#
+#       01/04/2011      0.00 -> 1.00    RG      Creation
+#       13/05/2011      1.00 -> 1.01    RG      Adapted ITRS Architecture
+#       16/05/2011      1.01 -> 1.02    RG      Solaris differences
+#       20/06/2011      1.02 -> 2.00    RG      Publication
+#       21/06/2011      2.00 -> 2.01    RG      Added LD_LIBRARY_PATH
+#       24/06/2011      2.01 -> 2.02    RG      Fixed recursive cd bug (myPWD)
+#       24/06/2011      2.02 -> 2.03    OE      Added NetpName for more visibility
+#       25/07/2011      2.03 -> 2.04    RG      Config file redesign
+#       26/07/2011      2.04 -> 2.05    RG      Added functionality
+#       20/09/2011      2.05 -> 2.06    RG      Added Support for up to 99 netprobes
+#       14/12/2011      2.06 -> 2.07    RG      Fixed Alpha Netprobe Name
+#       27/02/2012      2.07 -> 2.08    TV      Added defaults for netprobes and -help support
+#       29/02/2012      2.08 -> 2.09    TV      Added create netprobe function
+#       09/05/2012      2.09 -> 2.10    DR      Changed ${NetpBase[${Index}]} formatting
+#       14/08/2012      2.10 -> 3.00    JH      Fixed a few bugs and do a complete re-write to cope with new config file format
+#	16/10/2012	3.00 -> 4.00	JH	Complete re-write for global deployment
+#	17/06/2013	4.00 -> 4.01	LK	Added NetpOpts to fn_CreateCommand
+#	18/06/2013	4.01 -> 4.02	LK	Added BinSuffix from rc file to fn_SetParams
+#
+#####################################################################
+#       Start of Local Tokens
+#####################################################################
+
+Program=$(basename $0)
+ProgramPath=$(dirname $0)
+ConfigFile=netprobectl.rc
+CommandUser=$(id | cut -d"(" -f2 | cut -d ")" -f1)
+SuCommand=""
+SuQuote=""
+SuExport=""
+NetpPort=7036
+NetprobeExports=/tmp/NetprobeExports
+
+Firstchar=`echo $ProgramPath | cut -c1`
+if [ ! "$Firstchar" = "/" ]
+then
+        if [ "$Firstchar" = "." ]
+        then
+                ProgramPath=`echo $ProgramPath | cut -c3-`
+        fi
+	if [ "$ProgramPath" = "" ]
+	then
+        	ProgramPath=${PWD}
+	else
+        	ProgramPath=${PWD}/${ProgramPath}
+	fi
+fi
+Version=4
+Revision=02
+Process="${Program} v${Version}.${Revision}"
+
+#####################################################################
+#       Start of Functions
+#####################################################################
+
+# -----------------------------------------------------------------------
+# Function fn_Usage: Print usage details
+# -----------------------------------------------------------------------
+
+fn_Usage()
+{
+	echo
+	echo "	Usage: ${Program} list | create | <netpname> <function>"
+	echo
+	echo "	Where 'list' shows the available netprobes"
+	echo "	Where 'create' creates a new netprobe environment"
+	echo
+	echo "	Where <netpname> may be the netprobe name or 'all'"
+	echo "	Where <function> may be, start, stop, restart, refresh, details, command, status, delete, usage"
+	echo
+	echo "	start           -       starts the netprobe or netprobes"
+	echo "	stop            -       stops the netprobe or netprobes (additionally add signal number, e.g. -9)"
+	echo "	restart         -       restarts the netprobe or netprobes"
+	echo "	refresh         -       refresh the netprobe or netprobes to re-read the configuration files(s)"
+	echo "	details         -       list the parameters of the netprobe or netprobes"
+	echo "	command         -       displays the command line for starting the netprobe"
+	echo "	status          -       displays the process stack for the netprobe"
+	echo "	delete          -       deletes the netprobe environment"
+	echo "	usage|-h|-help  -       outputs this usage message"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Message: Print message. Exit if message code = 1
+# -----------------------------------------------------------------------
+
+fn_Message()
+{
+        Now=$(date +"%Y-%m-%d %H.%M.%S")
+        case $1 in
+                1)      echo -e ${Now} : ${Process} : Error : $2
+                        fn_Exit $1
+			;;
+                2)      echo -e ${Now} : ${Process} : Warn : $2
+			;;
+                3)      echo -e ${Now} : ${Process} : Info : $2
+			;;
+                *)      ;;
+        esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Start: Start the netprobe in either foreground or backgroud
+#                    depending on the NetpMode setting for the netprobe
+# -----------------------------------------------------------------------
+
+fn_Start()
+{
+
+	# ---
+	# Check if netprobe is already running and netprobe environemnt has been created
+	# ---
+
+	fn_GetNetprobeProcess
+	if [ ${process} ]
+	then
+		fn_Message 2 "Netprobe ${NetpName} ${NetpPort} already running"	
+		return
+	fi
+	if [ ! -d  ${NetpBins}/${NetpBase} ]
+	then
+		fn_Message 2 "No Netprobe base for ${NetpBase} in the Netprobe binary directory ${NetpBins}. \nCan't start netprobe ${NetpName}. Please create link for this to the relevant binary package"
+		return
+	fi
+
+	# ---
+	# start the Netprobe either in the background or the foreground. First create the command
+	# ---
+
+	fn_CreateCommand
+	Command="${Command} > ${NetpLogD}/netprobe.txt 2>&1 & ${SuQuote}"
+	cd "${NetpRoot}/netprobes/${NetpName}"
+	case "${NetpMode}" in
+		background)	fn_Message 3 "Starting Netprobe ${NetpName} on port ${NetpPort}"
+				fn_RunCommand
+				sleep 5
+				fn_GetNetprobeProcess
+       				if [ ${process} ]
+				then
+					fn_Message 3 "Netprobe ${NetpName} has started with PID : ${process}"
+					fn_Message 3 "Netprobe ${NetpName} logging to ${NetpLogD}/${NetpLogF}"
+				else
+					if [  ! -e "${NetpLogD}/${NetpLogF}" ]
+					then
+						fn_Message 1 "Netprobe ${NetpName} failed to start. Logfile for netprobe could not be created."
+					fi
+					fn_Message 3 "Netprobe ${NetpName} has not started"
+					fn_Message 3 "see - ${NetpLogD}/${NetpLogF}"
+					fn_Message 3 "see - ${NetpLogD}/netprobe.txt"
+					fn_Message 3 "Last 20 lines of netprobe log file: "
+					echo;tail -20 "${NetpLogD}/${NetpLogF}";echo
+				fi
+				;;
+		foreground)     fn_Message 3 "Starting Netprobe ${NetpName} on port ${NetpPort}"
+				fn_RunCommand
+				;;
+		*)		fn_Message 1 "No operating mode set. Should be either backgroud or foreground"
+				;;
+	esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GetNetprobeProcess: get the PID for the Netprobe
+# -----------------------------------------------------------------------
+
+fn_GetNetprobeProcess()
+{
+	echo "${NetpExec} ${NetpName} "
+	process=$(pgrep -d " " -f "${NetpExec} ${NetpName} ")
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Refresh: Refresh the selected Netprobe to re-read the configuration files
+# -----------------------------------------------------------------------
+
+fn_Refresh()
+{
+	fn_GetNetprobeProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Refreshing Netprobe ${NetpName}"	
+		kill -USR1 ${process}
+	else
+		fn_Message 2 "Netprobe ${NetpName} is not running"
+	fi	
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Stop: Stop the selected Netprobe
+# -----------------------------------------------------------------------
+
+fn_Stop()
+{
+	fn_GetNetprobeProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Stopping Netprobe ${NetpName} - ${process}"
+		Command="${SuCommand}${SuQuote}kill ${FunctionOpts} ${process}${SuQuote}"
+		fn_RunCommand
+		sleep 3
+		fn_GetNetprobeProcess
+		if [ ${process} ]
+		then
+			fn_Message 2 "Netprobe ${NetpName}, process ${process} failed to be stopped"
+		else
+			fn_Message 3 "Netprobe ${NetpName} stopped"
+		fi
+	else
+		fn_Message 2 "Netprobe ${NetpName} is not started"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Status: Show the ps details for the select Netprobe
+# -----------------------------------------------------------------------
+
+fn_Status()
+{
+	fn_GetNetprobeProcess
+	if [ ${process} ]
+	then
+		ps -lfp ${process}
+	else
+		fn_Message 3 "Netprobe ${NetpName} is not running"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Log: Show the logfile for the select Netprobe
+# -----------------------------------------------------------------------
+
+fn_Log()
+{
+	fn_Message 3 "Showing log file details for ${NetpName}\n"
+	tail ${FunctionOpts} ${NetpLogD}/netprobe.log
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Create: Create a netprobe and allow user to change any of 
+# the default values, which are then written to a netprobe.rc file in the 
+# netprobe home directory
+# -----------------------------------------------------------------------
+
+fn_Create()
+{
+	# ---
+	# Ask for Netprobe name and check validty of entry
+	# ---
+
+        completed=no
+        while [ "${completed}" = "no" ]
+        do
+                echo; echo -e "Please enter a name for the new Netprobe: \c"
+                read NetpName
+                fn_CheckNetpName
+        done
+
+	# ---
+	# Ask for port number and check validity of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the port number for the Netprobe [default 7036]: \c"
+                read NetpPortResponse
+                [[ "${NetpPortResponse}" = "" ]] || NetpPort=${NetpPortResponse}
+		fn_CheckNetpPort
+	done
+
+	# ---
+	# Allow user to change any of the default Netprobe parameters
+	# ---
+
+	echo; echo "Please review the following list of default Netprobe parameters"
+	changeVar=no
+	addedVars=()
+	addVar=1
+	while [ "${changeVar}" != "ok" -a  "${changeVar}" != "q" ]
+	do
+		fn_SetNetprobeParams
+	done
+	[ "${changeVar}" = "q" ] && return
+	for x in "${NetpVal[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	fn_CreateNetprobe
+	echo ; echo -e "Would you like to start netprobe ${NetpName}? [y/n]: \c"
+	read startNetprobe
+	[ "$startNetprobe" = "y" ] && fn_Start
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_SetNetprobeParamrs: Set the Netprobe parameters for the Netprobe
+# ---------------------------------------------------------------------------
+fn_SetNetprobeParams()
+{
+	fn_ListNetprobeParams
+	echo "[${nextVar}] Add a new parameter: "
+	echo ; echo -e "Please select any parameters that you would like to change or 'ok' to proceed ['q' to quit]: \c"
+	read changeVar
+	[ "${changeVar}" = "ok" -o "${changeVar}" = "q" ] && return
+	if [ ${changeVar} -gt 0 -a ${changeVar} -le ${nextVar} ]
+	then
+                if [ "${netpVar[${changeVar}]}" = "NetpRoot" -o "${netpVar[${changeVar}]}" = "ITRS_HOME" ]
+                then
+                        echo -e "The NetpRoot and ITRS_HOME parameters cannot be changed once they have been set in the configuration file. Press return to continue: \c"
+                        read dummy
+                        return
+                fi
+
+		# ---
+		# if they have selected to add a new parameter then ask for parameter name and add 1 to nextVar
+		# ---
+
+		if [ ${changeVar} = ${nextVar} ]
+		then
+			echo -e "Enter the new parameter name: \c"
+			read newParamName
+			netpVar[${changeVar}]=${newParamName}
+			nextVar=$(( ${nextVar} + 1 ))
+		fi
+
+		# ---
+		# ask for new parameter value
+		# ---
+
+		echo -e "Enter new value for parameter ${netpVar[${changeVar}]}: \c"
+		read newParamVal
+
+		# ---
+		# The follow awk statement will add double quote marks to any text that
+		# contains spaces and which doesn't already contain double quote marks
+		# ---
+
+		newParamVal=$(echo ${newParamVal} | awk '{if ( index( $0," ") > 0 ){if ( index( $0, "\"") > 0 ){print $0} else {print "\""$0"\""} } else {print $0} } ' )
+
+		# ---
+		# make sure to change the actual variable value as well as the stored variable that is used for listing
+		# ---
+
+		netpVal[${changeVar}]=${newParamVal}
+		eval ${netpVar[${changeVar}]}=${newParamVal}
+
+		# ---
+		# Check if the parameter has already been changed/added to create list of changed parameters
+		# ---
+
+		fn_CheckElement "${changeVar}"
+		if [ $? = 0 ]
+		then
+			addedVars[${addVar}]=${changeVar}
+			addVar=$(( ${addVar} + 1 ))
+		fi
+		return
+	fi
+	echo "Invalid option entered"
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckElement: Check if a value exists in an array
+# ---------------------------------------------------------------------------
+
+fn_CheckElement()
+{
+	local x 
+	for x in "${addedVars[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	return 0 
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckNetpName: Check the Netprobe name is valid
+# N.B. couldn't get [[:alnum:]_] or [:word:] to work with awk so had to use
+# clumsy character selection - please change if possible
+# ---------------------------------------------------------------------------
+
+fn_CheckNetpName()
+{
+	if [ -d "${NetpRoot}/netprobes/${NetpName}" ]
+	then
+		fn_Message 2 "Netprobe ${NetpName} already exists"
+	else
+		if [[ $(echo "${NetpName}" | awk '/[ .,-#~<>!£%(){}\[\]\&\$\*\^\"\\\/]/ { print }') ]]
+		then
+			fn_Message 2 "The Netprobe name, ${NetpName} can only contain alpha-numeric characters or an underscore"
+		else
+			completed=yes
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckNetpPort: Check that the chosen port for a Netprobe is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckNetpPort()
+{
+        if ! [[ ${NetpPort} -gt 1024 && ${NetpPort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${NetpPort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${NetpPort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+		        #if grep -i "listenPort>${NetpPort}" ${NetpRoot}/netprobes/*/netprobe.setup.xml >/dev/null
+			if grep -i "NetpPort=${NetpPort}" ${NetpRoot}/netprobes/*/netprobe.rc >/dev/null
+			then
+                                echo "Port ${NetpPort} is already used by an existing netprobe"
+                        else
+                                completed=yes
+			fi
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_RunCommand: Check to see if the 'su' element of the command
+# has been set and if so then print a message before the 'password' prompt
+# is written and also check exit code afterwards and exit if not zero
+# ---------------------------------------------------------------------------
+
+fn_RunCommand()
+{
+        [[ "${SuCommand}" != "" && "${CommandUser}" != "root" ]] && fn_Message 3 "The netprobe user (${NetpUser}) is different, so you will need to provide a password for the account"
+	( eval ${Command} )
+	[[ "${SuCommand}" != "" && "$?" != "0" ]] && fn_Message 1 "The command failed: Exiting..."
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_Details: Detail the current settings for the selected Netprobe
+# ---------------------------------------------------------------------------
+
+fn_Details()
+{
+	NetpPort=$(grep "NetpPort=" "${NetpHome}/netprobe.rc" | cut -d "=" -f 2)
+	fn_Message 3 "Details for netprobe ${NetpName} running on port ${NetpPort} owned by user ${NetpUser} are:"
+	fn_StoreParams
+	fn_ListNetprobeParams
+}
+
+# -----------------------------------------------------------------------
+# Function fn_NetpList: Display the list of active netprobes
+# -----------------------------------------------------------------------
+
+fn_NetpList()
+{
+	if [ ! -d ${NetpRoot}/netprobes ]
+	then
+		fn_Message 3 "There are currently no Netprobes configured"
+		exit
+	fi
+	echo -e "\nThe list of currently active Netprobes are:\n"
+	IFS=$'\n'
+        for x in $(ls ${NetpRoot}/netprobes | grep -v "\.")
+        do
+                echo "Netprobe ${x}"
+        done
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateCommand: Create the command string
+#                            If the user running the command is different
+#                            from the user that is set for the netprobe, the
+#                            $SuCommand variable will contain the relevant
+#                            su details
+# -----------------------------------------------------------------------
+
+fn_CreateCommand()
+{
+        Command="${SuCommand}${SuQuote}${SuExport}${NetpExec} ${NetpName} -port ${NetpPort} ${NetpOpts}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PrintCommand: Print 'command' line for Netprobe
+# -----------------------------------------------------------------------
+
+fn_PrintCommand()
+{
+	fn_CreateCommand
+	echo
+	echo "COMMAND for ${NetpName}: ${Command}${SuQuote}"
+	echo "LD_LIBRARY_PATH for ${NetpName}: ${LD_LIBRARY_PATH}"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_StoreDefaultParams: Store the default parameters. These are
+# used either in the create function to print the list and accept changes
+# to the list, or to list the parameters for a netprobe (after any user
+# parameters have been changed or added
+# -----------------------------------------------------------------------
+
+fn_StoreDefaultParams()
+{
+	netpVar=()
+	netpVal=()
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		nextVar=1
+		IFS=$'\n'
+		for gVar in $(grep "^[^#]" ${ProgramPath}/${ConfigFile})
+		do
+			netpVar[${nextVar}]=$(echo $gVar | cut -d"=" -f1)
+			netpVal[${nextVar}]=$(echo $gVar | cut -d"=" -f2)
+			# ---
+			# add the Netprobe name to the NetpLogD variable value
+			# ---
+			if [ "${netpVar[${nextVar}]}" = "NetpLogD" ]
+			then
+				netpVal[${nextVar}]="${netpVal[${nextVar}]}/${NetpName}"
+			fi
+			nextVar=$(( $nextVar + 1 ))
+		done
+	else
+		fn_Message 1 "Can't find the netprobe configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_StoreParams: Add any user parameters to the stored netprobe 
+# parameters. once these have been extracted, each default setting needs to be
+# checked. If the variable exists in the default list it will overwrite the
+# variables, if it doesn't exist in the default list it will append it to the 
+# array list 
+# ---------------------------------------------------------------------------
+
+fn_StoreParams()
+{
+	fn_StoreDefaultParams
+        [[ -e "${NetpRoot}/netprobes/${NetpName}/netprobe.rc" ]] || fn_Message 1 "No netprobe.rc file for Netprobe ${NetpName}. Exiting..."
+	IFS=$'\n'
+	for uVar in $(grep "^[^#]" "${NetpRoot}/netprobes/${NetpName}/netprobe.rc")
+	do
+		userVar=$(echo $uVar | cut -d"=" -f1)
+		userVal=$(echo $uVar | cut -d"=" -f2)
+		if [ "${userVar}" != "NetpUser" ]
+		then
+			x=1
+			changed=no
+			while [ $x -lt $nextVar ]
+			do
+				if [ ${userVar} = ${netpVar[${x}]} ]
+				then
+					changed=yes
+					netpVar[${x}]=${userVar}
+					netpVal[${x}]=${userVal}
+					[[ "${netpVar[${x}]}" = "NetpLogD" ]] && netpVal[${x}]="${netpVal[${x}]}/${NetpName}"
+					x=${nextVar}
+				fi
+				x=$(( ${x} + 1 ))
+			done
+			if [ "${changed}" = "no" ]
+			then
+				netpVar[$nextVar]=${userVar}
+				netpVal[$nextVar]=${userVal}
+				nextVar=$(( $nextVar + 1 ))
+			fi
+		fi
+	done
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_ListNetprobeParams: Print out the contents of the stored parameters
+# ---------------------------------------------------------------------------
+
+fn_ListNetprobeParams()
+{
+	echo
+	x=1
+	extraText="\t\t[This parameter cannot be changed once set in the netprobectl.rc file]" 
+	while [ $x -lt $nextVar ]
+	do
+		printText=""
+		if [ "${Instance}" = "create" ]
+		then
+			[ "${netpVar[${x}]}" = "NetpRoot" -o "${netpVar[${x}]}" = "ITRS_HOME" ] && printText=${extraText}
+		fi
+		echo -e "[${x}] ${netpVar[${x}]} : ${netpVal[${x}]} ${printText}"
+		x=$(( $x + 1 ))
+	done
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetDefaultParams: check for existence of config file and run it
+# to set the default variables.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Netp' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetDefaultParams()
+{
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		. ${ProgramPath}/${ConfigFile}
+		IFS=$'\n'
+		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Netp" | grep "=")
+		do
+			export ${xVar}
+		done
+	else
+		fn_Message 1 "Can't find the netprobe configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetParams: Set the parameters for the netprobe. The default
+# parameters will be set by fn_SetDefaultParams, so only overwrite any if
+# there is a netprobe.rc file in the netprobe directory.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Netp' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetParams()
+{
+	SuCommand=""
+	SuQuote=""
+	SuExport=""
+	NetpHome="${NetpRoot}/netprobes/${NetpName}"
+	#NetpIncl="${NetpRoot}/netprobe_config/shared"
+	
+	if [ "${Instance}" != "create" ]
+	then
+	        [[ -e "${NetpHome}/netprobe.rc" ]] || fn_Message 1 "No netprobe.rc file for Netprobe ${NetpName}. Exiting..."
+
+		# ---
+		# source the netprobe.rc file and export any additional variables that have 
+		# have been set other than the standard NetpXxxx ones
+		# ---
+
+		. ${NetpHome}/netprobe.rc
+
+		[[ "${NetpUser}" = "" ]] && fn_Message 1 "The Netprobe User must contain a value"
+		IFS=$'\n'
+		for xVar in $(cat "${NetpHome}/netprobe.rc" | grep -v "^#" | grep -v "Netp" | grep "=")
+		do
+			export ${xVar}
+		done
+
+		if [ "${NetpUser}" != "${CommandUser}" ]
+		then
+			fn_WriteNetprobeExports
+			SuCommand="su ${NetpUser} -c "
+			SuQuote='"'
+			SuExport=". ${NetprobeExports} ; "
+		fi
+		#NetpPort=$(grep "<listenPort>" ${NetpHome}/netprobe.setup.xml | cut -d">" -f2 | cut -d"<" -f1)
+		NetpPort=$(grep "NetpPort=" "${NetpHome}/netprobe.rc" | cut -d "=" -f 2)
+	fi
+
+	# ---
+	# if netprobe.rc file has the BinSuffix variable set, then use this in the NetpExec,
+	# otherwise use OS
+	# ---
+
+	if [ -z ${BinSuffix} ]
+	then
+		fn_SetOS
+		NetpExec=${NetpBins}/${NetpBase}/netprobe.${OS}
+	fi
+	NetpExec=${NetpBins}/${NetpBase}/${BinSuffix}
+
+
+	NetpLogD=${NetpLogD}/${NetpName}
+	export LD_LIBRARY_PATH=${NetpLibs}:${env_LD_LIBRARY_PATH}
+	export LOG_FILENAME=${NetpLogD}/netprobe.log
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WriteNetprobeExports: Create a file that holds all of the 
+# relevant EXPORT commands to start the netprobe. This is only done where 
+# an 'su' command is going to be used due to the Netprobe User being different
+# from the Command User as the script environment is not passed to the su
+# shell
+# -----------------------------------------------------------------------
+
+fn_WriteNetprobeExports()
+{
+	echo > ${NetprobeExports}
+	[[ "$?" != 0 ]] && fnMessage 1 "Failed to write Netprobe Exports file. Exiting..."
+	IFS=$'\n'
+	for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Netp" | grep "=")
+	do
+		echo "export ${xVar}" >> ${NetprobeExports}
+	done
+	IFS=$'\n'
+	for xVar in $(cat "${NetpHome}/netprobe.rc" | grep -v "^#" | grep -v "Netp" | grep "=")
+	do
+		echo "export ${xVar}" >> ${NetprobeExports}
+	done
+	echo "export LD_LIBRARY_PATH=${NetpLibs}:${env_LD_LIBRARY_PATH}" >> ${NetprobeExports}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateNetprobe: Create the relevant environment for the netprobe
+# -----------------------------------------------------------------------
+
+fn_CreateNetprobe()
+{
+	fn_SetParams
+        if [ ! -d ${NetpRoot}/netprobes ]
+        then
+                [[ ! -w ${NetpRoot} ]] && fn_Message 1 "User ${CommandUser} cannot write to the ${NetpRoot} directory. Exiting..."
+                mkdir ${NetpRoot}/netprobes
+        fi
+	[[ ! -w ${NetpRoot}/netprobes ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${NetpRoot}/netprobes directory. Exiting..."
+	#[[ ! -r ${NetpRoot}/netp_config/templates/netprobe.setup.xml ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the netprobe template file. Exiting..."
+	fn_Message 3 "Creating directories for ${NetpName}"
+	mkdir -p ${NetpHome}
+	[[ "$?" != "0" ]] && fn_Message 1 "Failed to create Netprobe directory structure ${NetpHome}. Exiting..."
+
+	# ---
+	# NetpLogD defaults to NetpHome, but can be set differently if required
+	# ---
+
+	if [ ! -d "${NetpLogD}" ]
+	then
+		mkdir -p "${NetpLogD}"
+		[[ "$?" != "0" ]] && fn_Message 1 "Failed to create logfile directory ${NetpLogD}. Exiting..."
+	fi
+	#fn_Message 3 "Copying netprobe.setup.xml"
+	
+	#cat ${NetpRoot}/netp_config/templates/netprobe.setup.xml | sed -e "s/NETP_PORT/${NetpPort}/g" -e "s/NETP_NAME/${NetpName}/g" -e "s~NETP_INCLUDES~${NetpIncl}~g" > "${NetpHome}"/netprobe.setup.xml
+
+	# ---
+	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
+	# ---
+
+	rcfile=${NetpHome}/netprobe.rc
+	echo -e "#! /bin/bash\n#\n# netprobe.rc file for netprobe ${NetpName}\n# Auto generated by netprobectl: $(date)" > "${rcfile}"
+	echo -e "# All entries in this file are either overrides of default values or additional parameters" >> "${rcfile}"
+	echo -e "\nNetpUser=${CommandUser}" >> "${rcfile}"
+	echo -e "\nNetpPort=${NetpPort}" >> "${rcfile}"
+	if [ "${addedVars[1]}" != "" ]
+	then
+		for x in "${addedVars[@]}"
+		do
+			echo "${netpVar[${x}]}=${netpVal[${x}]}" >> "${rcfile}"
+		done 
+	fi
+	fn_Message 3 "Environment created for ${NetpName}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_RemoveDirs: Remove the relevant directories for the netprobe
+# -----------------------------------------------------------------------
+
+fn_RemoveDirs()
+{
+	echo; fn_Message 3 "Are you sure you want to remove all directories and contents for ${NetpName}? [Y/N]: \\c"
+	read input
+	if [ "${input}" = "y" -o "${input}" = "Y" ]
+	then
+		fn_GetNetprobeProcess
+		if [ ${process} ]
+		then
+			fn_Message 3 "Netprobe ${NetpName} is currently running. Shutting down..."
+			fn_Stop
+		fi
+		fn_Message 3 "Deleting directories for ${NetpName}"
+		Command="${SuCommand}${SuQuote}rm -rf ${NetpHome}${SuQuote}"
+		fn_RunCommand
+		if [ -d "${NetpLogD}" ]
+		then
+			fn_Message 3 "Deleting separate log directory for ${NetpName}"
+			Command="${SuCommand}${SuQuote}rm -rf ${NetpLogD}${SuQuote}"
+			fn_RunCommand
+		fi
+		fn_Message 3 "Netprobe ${NetpName} removed"
+	else
+		fn_Message 3 "Operation cancelled"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PerformFunction: run the relevant function (arg 2)
+# -----------------------------------------------------------------------
+
+fn_PerformFunction()
+{
+	if [ "$Function" = "" ]
+	then
+		fn_Usage
+		fn_Message 1 "Please include a relevant function"
+	fi
+
+        case ${Function} in
+                start|Start|START)		fn_Start	    	                  ;;
+                stop|Stop|STOP)			fn_Stop                		          ;;
+                restart|Restart|RESTART)	fn_Stop && sleep 10 && fn_Start           ;;
+                refresh|Refresh|REFRESH)	fn_Refresh                                ;;
+                status|Status|STATUS)		fn_Status                                 ;;
+                log|Log|LOG)			fn_Log                                 ;;
+                details|Details|DETAILS)	fn_Details                                ;;
+		delete|Delete|DELETE)		fn_RemoveDirs				  ;;
+		command|Command|COMMAND)	fn_PrintCommand                           ;;
+                *)				fn_Usage ; fn_Exit 0                      ;;
+        esac
+}
+
+# -------------------------------------------------------------------------
+# Function fn_SetOS: Set the OS for use in executable
+# -------------------------------------------------------------------------
+
+fn_SetOS()
+{
+	OS=$(uname -s | tr "[A-Z]" "[a-z]" | sed s/sunos/sun/)
+	i386=$(uname -a | grep i386)
+	if [[ ${OS} = "sun" && ${i386} != "" ]]
+	then
+		OS=${OS}"x86"
+	fi
+}
+
+# -------------------------------------------------------------------------
+# Function fn_Exit: exit script and do any clearup
+# -------------------------------------------------------------------------
+
+fn_Exit()
+{
+	[[ -e "${NetprobeExports}" ]] && rm -f "${NetprobeExports}"
+	exit $1
+}
+
+#######################################################################################
+#       End of Functions
+#######################################################################################
+#
+#       Start of Main Script
+#
+#######################################################################################
+
+# ----------
+# Set local variables
+#
+# LD_LIBRARY_PATH is read in and set here once so that it does not get added multiple
+# times when running against more than one Netprobe
+# ----------
+
+env_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+HostName=$(hostname)
+UserName=${LOGNAME}
+OS=$(uname -s)
+Instance=$1
+Function=$2
+FunctionOpts=$3
+
+# ---------
+# Check the config file exists and populate the default variables to set $NetpRoot
+# ---------
+
+fn_SetDefaultParams
+
+# --------
+# Check Instance. If 'All', then perfrom set function against all Netprobes
+# else check for 'Create', 'List' etc. If single Instance entered then check
+# that the Netprobe exists, if o.k. then perform set function against Netprobe
+# --------
+
+case "${Instance}" in
+        all|All|ALL)		IFS=$'\n'
+				for NetpName in $(ls ${NetpRoot}/netprobes | grep -v "\.")
+				do
+					fn_SetParams
+					fn_PerformFunction
+					fn_SetDefaultParams
+				done
+				;;
+	list|List|LIST)		fn_NetpList ; fn_Exit 0 ;;
+	create|Create|CREATE)	Instance=create ; fn_SetDefaultParams ; fn_StoreDefaultParams ; fn_Create ; fn_Exit 0 ;;
+	usage|Usage|USAGE)	fn_Usage ; fn_Exit 0 ;;
+	help|Help|HELP|-h|-H)	fn_Usage ; fn_Exit 0 ;;
+	[a-zA-Z_0-9]*)		if [ -d "${NetpRoot}/netprobes/${Instance}" ]
+				then
+					NetpName="${Instance}"
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				else
+					fn_Message 2 "Netprobe ${Instance} not found" 
+					fn_NetpList
+					fn_Exit 2
+				fi
+				;;
+	*)			fn_Usage ; fn_Exit 0 ;;
+esac
+
+fn_Exit 0
+
+###########################################################
+#
+#       EOS End of Script
+#
+###########################################################

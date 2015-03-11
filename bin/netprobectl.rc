@@ -1,0 +1,54 @@
+#! /bin/bash
+##
+##      ITRS Netp Configuration
+##
+##      Created : 01/04/2011
+##
+##      Change History
+##
+##      01/04/2011      RG      Creation
+##      30/01/2013	JH	Re-write for version 4 of netpctl
+##	18/06/2013	LK	Adding variable suffix (to differentiate 32 or 64 bit)
+##
+#################################################################################
+# Defaults for all Netps
+#
+# STANDARD VARIABLES
+# ------------------
+# The following variables can be set as defaults and also over-written within each netp section
+#
+#      ITRS_HOME:   the install directory for ITRS products
+#      NetpRoot:    the netp root directory
+#      NetpBins:    the netp binary directory
+#      NetpBase:    the specific netp binary 		# N.B. This will be a directory name, i.e. 3.0.0-120101 or more normally a link to this, i.e. active_prod
+#      NetpLogD:    the path to netp log directory 		# N.B. This path will have the name of the netp appended to it
+#                                                               # e.g. ${NetpRoot}/logs/NetpName
+#      NetpLogF:    the log file for the netp		
+#      NetpMode:    foreground or background               
+#      NetpLicP:    port for licence daemon                     # N.B. Default 7041
+#      NetpLicH:    host for licence daemon                     # N.B. Default localhost
+#      NetpOpts:    additional netp options                  # N.B. Use this variable to add licence options for older netps 
+#								# e.g. NetpOpts="-licence /opt/itrs/packages/netp/GA2011.2.1-110923/licensing" NOTE ENCLOSING DOUBLE QUOTES! 
+#
+#      NetpLibs:    LD_LIBRARY_PATH setting                     # N.B. This is prepended to LD_LIBRARY_PATH and should contain at least the path to the netp lib directory
+#      BinSuffix:   netprobe binary suffix			# N.B. Binary of the netprobe, e.g netprobe.linux or netprobe.linux_64		
+#	
+#      Additional Variables:                                    # It is possible to add further environment variables as default settings. These should be added WITHOUT any 'export'
+#                                                               # e.g. JRE_HOME=/opt/jre/home
+#
+#################################################################################
+
+ITRS_HOME=/opt/geneos
+NetpRoot=${ITRS_HOME}/netprobe
+NetpBins=${ITRS_HOME}/packages/netprobe
+NetpBase=active_prod
+NetpLogD=${NetpRoot}/netprobes
+NetpLogF=netprobe.log
+NetpMode=background
+NetpOpts=
+NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat
+BinSuffix=netprobe.linux_64
+
+#########################################################
+# end
+#########################################################
