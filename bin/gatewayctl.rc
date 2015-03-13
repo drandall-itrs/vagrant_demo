@@ -45,7 +45,7 @@ GateLogF=gateway.log
 GateMode=background
 GateLicP=
 GateLicH=
-GateOpts=
+GateOpts="-hooks-dir ${ITRS_HOME}/gateway/hooks"
 GateLibs=${GateBins}/${GateBase}/lib
 
 #########################################################

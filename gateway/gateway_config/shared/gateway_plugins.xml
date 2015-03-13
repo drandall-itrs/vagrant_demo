@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.11-130719 at 2014-04-28 21:57:26 by apage on ITRSPC107-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-13 12:03:38 by owatson on ITRSLP072-->
 <!-- Gateway-created setup include file for user ActiveConsole5 at 192.168.10.144 -->
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.17-140102/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<probes>
 		<probeGroup name="GATEWAY INFO">
 			<virtualProbe name="Gateway Info"/>
