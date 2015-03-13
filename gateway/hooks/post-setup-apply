@@ -1,0 +1,43 @@
+#!/bin/bash 
+
+if [[ "$_COMMENT"  == "" ]];    then _COMMENT="Comment missing" ; fi
+if [[ "$_USER" == "" ]];        then _USER="unknown"            ; fi
+if [[ "$_WORKSTATION" == "" ]]; then _WORKSTATION="unknown"     ; fi
+
+w=$_WORKSTATION
+fu=$_USER
+su=${fu#*\\}
+
+echo "$_COMMENT" > commit_comment.txt
+echo "" >> commit_comment.txt
+echo "--------------------------" >> commit_comment.txt
+echo "Gateway :: " `pwd` >> commit_comment.txt
+echo "--------------------------" >> commit_comment.txt
+echo "$_FILES" >> commit_comment.txt
+
+#git add *.xml > /dev/null
+#git add hooks > /dev/null
+
+git commit -a --file=commit_comment.txt --author="$fu <$su@$w>" > /dev/null
+
+echo "$_FILES" > commit_files.txt
+
+read_dom() {
+    local IFS=\>
+    read -d \< ENTITY CONTENT
+}
+
+
+# Send back version number to Gateway
+ver=`git log --format="%h" -n 1`
+#ver="MyVersionNo"
+echo "<setup><files>" > commit_return.txt
+while read_dom; do
+    if [[ $ENTITY = "path" ]] ; then
+	echo "<file><path>$CONTENT</path><version>$ver</version></file>" >> commit_return.txt
+    fi
+done < commit_files.txt
+echo "</files></setup>" >> commit_return.txt
+
+cat commit_return.txt
+
