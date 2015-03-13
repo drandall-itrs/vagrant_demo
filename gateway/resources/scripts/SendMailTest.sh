@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EMAIL=mtailor@itrsgroup.com
+EMAIL=owatson@itrsgroup.com
 
 
 case $_SEVERITY in

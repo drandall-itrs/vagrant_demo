@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.6-130321 at 2015-03-10 15:20:10 by owatson on ITRSPC152-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-12 17:23:46 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -97,7 +97,7 @@
 		</probeGroup>
 		<probeGroup name="Windows">
 			<probe name="192_168_31_1">
-				<hostname><!--192.168.31.2-->192.168.10.205</hostname>
+				<hostname><!--192.168.31.2-->WIN-HOST</hostname>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
 		</probeGroup>
@@ -11692,7 +11692,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	<actions>
 		<action name="testemail">
 			<script>
-				<exeFile>../resources/scripts/SendMailTest.sh</exeFile>
+				<exeFile>../../resources/scripts/SendMailTest.sh</exeFile>
 				<commandLine/>
 				<runLocation>gateway</runLocation>
 			</script>
@@ -11708,7 +11708,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</action>
 		<action name="email">
 			<script>
-				<exeFile>/opt/geneos/gateway/scripts/email.sh</exeFile>
+				<exeFile>/opt/geneos/gateway/resources/scripts/email.sh</exeFile>
 				<arguments>
 					<data/>
 				</arguments>
@@ -11717,7 +11717,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</action>
 		<action name="email_html">
 			<script>
-				<exeFile>/opt/geneos/gateway/scripts/email_html.sh</exeFile>
+				<exeFile>/opt/geneos/gateway/resources/scripts/email_html.sh</exeFile>
 				<arguments>
 					<data>apage@itrsgroup.com</data>
 				</arguments>
@@ -13137,7 +13137,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</commandGroup>
 	</commands>
 	<scheduledCommands>
-		<logDirectory>../logs</logDirectory>
+		<logDirectory>./logs</logDirectory>
 		<scheduledCommand name="MySQL Data Prune">
 			<command>
 				<command ref="Data Prune MySQL"/>
@@ -24014,6 +24014,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24051,6 +24052,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
 						
 						
 						
@@ -24103,6 +24105,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24140,6 +24143,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
 							
 							
 							
