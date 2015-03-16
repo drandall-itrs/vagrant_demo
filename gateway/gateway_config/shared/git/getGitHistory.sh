@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "TS,Hash,Date,Committer,Location,Subject"
-git log -n 50 --format=%at,%H,%ad,%an,%aE,%s
+echo "TS,DateTime,Hash,Date,Committer,Location,Subject"
+git log -n 50 --format=%at,%ai,%H,%ad,%an,%aE,%s
