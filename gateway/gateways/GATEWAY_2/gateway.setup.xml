@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-16 14:57:09 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-16 16:33:17 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -24022,6 +24022,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24059,6 +24060,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
 						
 						
 						
@@ -24117,6 +24119,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24154,6 +24157,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
 							
 							
 							
@@ -25131,6 +25135,316 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</key>
 				</keys>
 			</fkmTable>
+			<fkmTableGroup name="Windows">
+				<fkmTable name="win_warnings">
+					<keys>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>INFO</data>
+									</searchString>
+								</match>
+							</setKey>
+							<extractors>
+								<extractor>
+									<name>
+										<data>Date</data>
+									</name>
+									<regex>
+										<data>Date:(.*)Type:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Type</data>
+									</name>
+									<regex>
+										<data>Type:(.*)Source:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Source</data>
+									</name>
+									<regex>
+										<data>Source:(.*)EventID:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>EventID</data>
+									</name>
+									<regex>
+										<data>EventID:(.*)User:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>User</data>
+									</name>
+									<regex>
+										<data>User:(.*)Category:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Category</data>
+									</name>
+									<regex>
+										<data>Category:(.*)Computer:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Computer</data>
+									</name>
+									<regex>
+										<data>Computer:(.*)Description:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Description</data>
+									</name>
+									<regex>
+										<data>Description:(.*)</data>
+									</regex>
+								</extractor>
+							</extractors>
+						</key>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>WARNING</data>
+									</searchString>
+								</match>
+							</setKey>
+							<extractors>
+								<extractor>
+									<name>
+										<data>Date</data>
+									</name>
+									<regex>
+										<data>Date:(.*)Type:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Type</data>
+									</name>
+									<regex>
+										<data>Type:(.*)Source:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Source</data>
+									</name>
+									<regex>
+										<data>Source:(.*)EventID:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>EventID</data>
+									</name>
+									<regex>
+										<data>EventID:(.*)User:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>User</data>
+									</name>
+									<regex>
+										<data>User:(.*)Category:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Category</data>
+									</name>
+									<regex>
+										<data>Category:(.*)Computer:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Computer</data>
+									</name>
+									<regex>
+										<data>Computer:(.*)Description:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Description</data>
+									</name>
+									<regex>
+										<data>Description:(.*)</data>
+									</regex>
+								</extractor>
+							</extractors>
+						</key>
+					</keys>
+				</fkmTable>
+				<fkmTable name="win_fails">
+					<keys>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>ERROR</data>
+									</searchString>
+								</match>
+							</setKey>
+							<extractors>
+								<extractor>
+									<name>
+										<data>Date</data>
+									</name>
+									<regex>
+										<data>Date:(.*)Type:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Type</data>
+									</name>
+									<regex>
+										<data>Type:(.*)Source:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Source</data>
+									</name>
+									<regex>
+										<data>Source:(.*)EventID:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>EventID</data>
+									</name>
+									<regex>
+										<data>EventID:(.*)User:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>User</data>
+									</name>
+									<regex>
+										<data>User:(.*)Category:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Category</data>
+									</name>
+									<regex>
+										<data>Category:(.*)Computer:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Computer</data>
+									</name>
+									<regex>
+										<data>Computer:(.*)Description:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Description</data>
+									</name>
+									<regex>
+										<data>Description:(.*)</data>
+									</regex>
+								</extractor>
+							</extractors>
+						</key>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>EXCEPTION</data>
+									</searchString>
+								</match>
+							</setKey>
+							<extractors>
+								<extractor>
+									<name>
+										<data>Date</data>
+									</name>
+									<regex>
+										<data>Date:(.*)Type:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Type</data>
+									</name>
+									<regex>
+										<data>Type:(.*)Source:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Source</data>
+									</name>
+									<regex>
+										<data>Source:(.*)EventID:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>EventID</data>
+									</name>
+									<regex>
+										<data>EventID:(.*)User:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>User</data>
+									</name>
+									<regex>
+										<data>User:(.*)Category:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Category</data>
+									</name>
+									<regex>
+										<data>Category:(.*)Computer:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Computer</data>
+									</name>
+									<regex>
+										<data>Computer:(.*)Description:</data>
+									</regex>
+								</extractor>
+								<extractor>
+									<name>
+										<data>Description</data>
+									</name>
+									<regex>
+										<data>Description:(.*)</data>
+									</regex>
+								</extractor>
+							</extractors>
+						</key>
+					</keys>
+				</fkmTable>
+			</fkmTableGroup>
 		</fkmTables>
 		<processDescriptors>
 			<processDescriptor name="netprobe7031">
