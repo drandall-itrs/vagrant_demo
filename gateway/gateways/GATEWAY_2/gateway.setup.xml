@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-17 11:56:29 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-17 12:44:32 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -9547,10 +9547,10 @@ description from event_table where unix_timestamp(now()) - timestamp
 							</rows>
 							<jproperties>
 								<jproperty>
-									<data>-Xms4g</data>
+									<data>-Xms256m</data>
 								</jproperty>
 								<jproperty>
-									<data>-Xmx6g</data>
+									<data>-Xmx300m</data>
 								</jproperty>
 							</jproperties>
 							<idAttributes/>

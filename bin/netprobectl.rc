@@ -50,7 +50,7 @@ NetpLogD=${NetpRoot}/netprobes
 NetpLogF=netprobe.log
 NetpMode=background
 NetpOpts=
-NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat:${JRE_HOME}/lib/amd64:${JRE_HOME}/lib/amd64/server:$GENEOS_LIBS
+NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat:${JRE_HOME}/lib/amd64:${JRE_HOME}/lib/amd64/server
 BinSuffix=netprobe.linux_64
 
 #########################################################
