@@ -1,0 +1,4 @@
+line_1,1
+line_2,1
+line_3,1
+line_4,0

@@ -7,6 +7,11 @@ gateway_dir=/opt/geneos/gateway/
 
 echo Line,line_number,date,text,eta,status
 
+for i in $( seq 1 10 )
+do
+	touch $gateway_dir$main_dir/line$i
+done
+
 #for i in 1 2 3 4 5
 END=`ls -l $gateway_dir/$main_dir/ | grep -v total | wc -l`
 
