@@ -38,6 +38,10 @@
 #
 #################################################################################
 
+JRE_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+GENEOS_LIBS=/opt/geneos/packages/netprobe/active_prod
+
 ITRS_HOME=/opt/geneos
 NetpRoot=${ITRS_HOME}/netprobe
 NetpBins=${ITRS_HOME}/packages/netprobe
@@ -46,7 +50,7 @@ NetpLogD=${NetpRoot}/netprobes
 NetpLogF=netprobe.log
 NetpMode=background
 NetpOpts=
-NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat
+NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat:${JRE_HOME}/lib/amd64:${JRE_HOME}/lib/amd64/server:$GENEOS_LIBS
 BinSuffix=netprobe.linux_64
 
 #########################################################

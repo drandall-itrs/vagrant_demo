@@ -1,6 +1,6 @@
 #!/bin/sh
 
-EMAIL=apage@itrsgroup.com
+EMAIL=owatson@itrsgroup.com
 
 case $_SEVERITY in
         CRITICAL)
