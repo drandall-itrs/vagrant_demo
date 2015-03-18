@@ -3,4 +3,5 @@
 /opt/geneos/bin/licdctl     all start
 /opt/geneos/bin/gatewayctl  all start
 /opt/geneos/bin/netprobectl all start
+/opt/geneos/bin/webserverctl all start
 
