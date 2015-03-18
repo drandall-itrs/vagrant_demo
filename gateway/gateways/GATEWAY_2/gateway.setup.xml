@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:25:07 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:39:24 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -28483,6 +28483,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	</expressReports>
 	<selfAnnouncingProbes>
 		<enabled>true</enabled>
+		<enableReverseConnections>true</enableReverseConnections>
 		<catch-allFilter>ALLOW</catch-allFilter>
 	</selfAnnouncingProbes>
 	<operatingEnvironment>
