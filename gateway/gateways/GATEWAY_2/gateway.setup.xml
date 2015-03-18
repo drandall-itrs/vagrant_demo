@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:39:24 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:45:49 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -326,7 +326,7 @@
 					<managedEntity name="floating_linux_netprobe">
 						<floatingProbe ref="localhost_7052"/>
 						<addTypes>
-							<type ref="baseline_san"/>
+							<type ref="baseline_float"/>
 						</addTypes>
 					</managedEntity>
 				</managedEntityGroup>
@@ -642,7 +642,18 @@
 				<sampler ref="ftm"/>
 				<sampler ref="deviceio"/>
 				<sampler ref="top_cpu"/>
-				<sampler ref="NetProbe Log"/>
+				<sampler ref="Self Announced NetProbe Log"/>
+				<sampler ref="top_mem"/>
+			</type>
+			<type name="baseline_float">
+				<sampler ref="hardware"/>
+				<sampler ref="network"/>
+				<sampler ref="disk"/>
+				<sampler ref="tcp_links"/>
+				<sampler ref="ftm"/>
+				<sampler ref="deviceio"/>
+				<sampler ref="top_cpu"/>
+				<sampler ref="Floating NetProbe Log"/>
 				<sampler ref="top_mem"/>
 			</type>
 		</typeGroup>
@@ -2011,6 +2022,64 @@
 							</table>
 						</template>
 					</perfmon>
+				</plugin>
+			</sampler>
+			<sampler name="Floating NetProbe Log">
+				<group>FKM</group>
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<fkm>
+						<!--Settings to go with these files have been copied from fkm.-->
+						<display>
+							<triggerMode>MULTIPLE</triggerMode>
+						</display>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/opt/geneos/netprobe/netprobes/floating_linux_netprobe/netprobe.log</data>
+									</filename>
+								</source>
+								<failTable>
+									<fkmTable ref="fails"/>
+								</failTable>
+								<warningTable>
+									<fkmTable ref="warnings"/>
+								</warningTable>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="Self Announced NetProbe Log">
+				<group>FKM</group>
+				<sampleInterval>
+					<data>5</data>
+				</sampleInterval>
+				<plugin>
+					<fkm>
+						<!--Settings to go with these files have been copied from fkm.-->
+						<display>
+							<triggerMode>MULTIPLE</triggerMode>
+						</display>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/opt/geneos/netprobe/netprobes/self_announcing_netprobe/netprobe.log</data>
+									</filename>
+								</source>
+								<failTable>
+									<fkmTable ref="fails"/>
+								</failTable>
+								<warningTable>
+									<fkmTable ref="warnings"/>
+								</warningTable>
+							</file>
+						</files>
+					</fkm>
 				</plugin>
 			</sampler>
 		</samplerGroup>
@@ -24201,6 +24270,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24238,6 +24308,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
 						
 						
 						
@@ -24310,6 +24381,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24347,6 +24419,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
 							
 							
 							
