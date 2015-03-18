@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-17 12:52:23 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:25:07 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -98,7 +98,7 @@
 				<hostname>localhost</hostname>
 				<port>7051</port>
 			</probe>
-			<floatingProbe name="localhost_7048"/>
+			<floatingProbe name="localhost_7052"/>
 		</probeGroup>
 		<probeGroup name="Windows">
 			<probe name="192_168_31_1">
@@ -324,7 +324,7 @@
 				<managedEntityGroup name="Floating Probe">
 					<attribute name="APP">FLOATING PROBE</attribute>
 					<managedEntity name="floating_linux_netprobe">
-						<floatingProbe ref="localhost_7048"/>
+						<floatingProbe ref="localhost_7052"/>
 						<addTypes>
 							<type ref="baseline_san"/>
 						</addTypes>
@@ -24200,6 +24200,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24237,6 +24238,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
 						
 						
 						
@@ -24307,6 +24309,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24344,6 +24347,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
 							
 							
 							
