@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<netprobe
+compatibility="1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA2011.2-110303/netprobe.xsd"
+>
+<floatingProbe>
+<enabled>true</enabled>
+<probeName>localhost_7052</probeName>
+<gateways>
+<gateway>
+<hostname>localhost</hostname>
+<port>7050</port>
+</gateway>
+</gateways>
+</floatingProbe>
+</netprobe>
+
