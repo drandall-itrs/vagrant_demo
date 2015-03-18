@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-03-17 12:52:23 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:51:43 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -98,7 +98,7 @@
 				<hostname>localhost</hostname>
 				<port>7051</port>
 			</probe>
-			<floatingProbe name="localhost_7048"/>
+			<floatingProbe name="localhost_7052"/>
 		</probeGroup>
 		<probeGroup name="Windows">
 			<probe name="192_168_31_1">
@@ -324,9 +324,9 @@
 				<managedEntityGroup name="Floating Probe">
 					<attribute name="APP">FLOATING PROBE</attribute>
 					<managedEntity name="floating_linux_netprobe">
-						<floatingProbe ref="localhost_7048"/>
+						<floatingProbe ref="localhost_7052"/>
 						<addTypes>
-							<type ref="baseline_san"/>
+							<type ref="baseline_float"/>
 						</addTypes>
 					</managedEntity>
 				</managedEntityGroup>
@@ -639,10 +639,21 @@
 				<sampler disabled="true" ref="network"/>
 				<sampler ref="disk"/>
 				<sampler disabled="true" ref="tcp_links"/>
-				<sampler ref="ftm"/>
+				<sampler ref="ftm_self_announcing_netprobe"/>
 				<sampler ref="deviceio"/>
 				<sampler ref="top_cpu"/>
-				<sampler ref="NetProbe Log"/>
+				<sampler ref="Self Announced NetProbe Log"/>
+				<sampler ref="top_mem"/>
+			</type>
+			<type name="baseline_float">
+				<sampler ref="hardware"/>
+				<sampler ref="network"/>
+				<sampler ref="disk"/>
+				<sampler ref="tcp_links"/>
+				<sampler ref="ftm_floating_netprobe"/>
+				<sampler ref="deviceio"/>
+				<sampler ref="top_cpu"/>
+				<sampler ref="Floating NetProbe Log"/>
 				<sampler ref="top_mem"/>
 			</type>
 		</typeGroup>
@@ -1361,9 +1372,6 @@
 				</plugin>
 			</sampler>
 			<sampler name="tcp_links">
-				<expectRows>
-					<var ref="remote_addresses_expect"/>
-				</expectRows>
 				<plugin>
 					<tcp-links>
 						<command>
@@ -2013,6 +2021,114 @@
 					</perfmon>
 				</plugin>
 			</sampler>
+			<samplerGroup name="Floating netprobe">
+				<sampler name="Floating NetProbe Log">
+					<group>FKM</group>
+					<sampleInterval>
+						<data>5</data>
+					</sampleInterval>
+					<plugin>
+						<fkm>
+							<!--Settings to go with these files have been copied from fkm.-->
+							<display>
+								<triggerMode>MULTIPLE</triggerMode>
+							</display>
+							<files>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/netprobe/netprobes/floating_linux_netprobe/netprobe.log</data>
+										</filename>
+									</source>
+									<failTable>
+										<fkmTable ref="fails"/>
+									</failTable>
+									<warningTable>
+										<fkmTable ref="warnings"/>
+									</warningTable>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+				<sampler name="ftm_floating_netprobe">
+					<!---->
+					<group>FTM</group>
+					<plugin>
+						<ftm>
+							<files>
+								<file>
+									<path>
+										<data>/opt/geneos/netprobe/netprobes/floating_linux_netprobe/netprobe.log</data>
+									</path>
+									<expectedArrival>
+										<data>05:35</data>
+									</expectedArrival>
+								</file>
+							</files>
+							<monitoringPeriod>
+								<periodAlias>NOON_TO_NOON</periodAlias>
+							</monitoringPeriod>
+							<delayUnit>SECONDS</delayUnit>
+							<sizeUnit>KILOBYTES</sizeUnit>
+						</ftm>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Self Announcing netprobe">
+				<sampler name="ftm_self_announcing_netprobe">
+					<!---->
+					<group>FTM</group>
+					<plugin>
+						<ftm>
+							<files>
+								<file>
+									<path>
+										<data>/opt/geneos/netprobe/netprobes/self_announcing_netprobe/netprobe.log</data>
+									</path>
+									<expectedArrival>
+										<data>05:35</data>
+									</expectedArrival>
+								</file>
+							</files>
+							<monitoringPeriod>
+								<periodAlias>NOON_TO_NOON</periodAlias>
+							</monitoringPeriod>
+							<delayUnit>SECONDS</delayUnit>
+							<sizeUnit>KILOBYTES</sizeUnit>
+						</ftm>
+					</plugin>
+				</sampler>
+				<sampler name="Self Announced NetProbe Log">
+					<group>FKM</group>
+					<sampleInterval>
+						<data>5</data>
+					</sampleInterval>
+					<plugin>
+						<fkm>
+							<!--Settings to go with these files have been copied from fkm.-->
+							<display>
+								<triggerMode>MULTIPLE</triggerMode>
+							</display>
+							<files>
+								<file>
+									<source>
+										<filename>
+											<data>/opt/geneos/netprobe/netprobes/self_announcing_netprobe/netprobe.log</data>
+										</filename>
+									</source>
+									<failTable>
+										<fkmTable ref="fails"/>
+									</failTable>
+									<warningTable>
+										<fkmTable ref="warnings"/>
+									</warningTable>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="Market Data">
 			<samplerGroup name="Wombat">
@@ -24200,6 +24316,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
+						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24237,6 +24356,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
+						
+						
 						
 						
 						
@@ -24307,6 +24429,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
+							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24344,6 +24469,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
+							
+							
 							
 							
 							
@@ -28479,6 +28607,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	</expressReports>
 	<selfAnnouncingProbes>
 		<enabled>true</enabled>
+		<enableReverseConnections>true</enableReverseConnections>
 		<catch-allFilter>ALLOW</catch-allFilter>
 	</selfAnnouncingProbes>
 	<operatingEnvironment>
