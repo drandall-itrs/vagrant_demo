@@ -1,0 +1,50 @@
+#! /bin/bash
+##
+##      ITRS WebServer Configuration
+##
+##      Created : 01/04/2011
+##
+##      Change History
+##
+##      01/04/2011      RG      Creation
+##      30/01/2013	JH	Re-write for version 4 of gatewayctl
+##      10/05/2013      OE      Re-write for version 1 of webserverctl
+##
+#################################################################################
+# Defaults for all Websways
+#
+# STANDARD VARIABLES
+# ------------------
+# The following variables can be set as defaults and also over-written within each webserver section
+#
+#      ITRS_HOME:   the install directory for ITRS products
+#      WebsRoot:    the webserver root directory
+#      WebsBins:    the webserver binary directory
+#      WebsBase:    the specific webserver binary 		# N.B. This will be a directory name, i.e. 3.0.0-120101 or more normally a link to this, i.e. active_prod
+#      WebsLogD:    the path to webserver log directory 		# N.B. This path will have the name of the webserver appended to it
+#                                                               # e.g. ${WebsRoot}/logs/WebserverName
+#      WebsLogF:    the log file for the webserver		
+#      WebsMode:    foreground or background               
+#								# e.g. WebsOpts="-licence /opt/itrs/packages/webserver/GA2011.2.1-110923/licensing" NOTE ENCLOSING DOUBLE QUOTES! 
+#
+#      WebsLibs:    LD_LIBRARY_PATH setting                     # N.B. This is prepended to LD_LIBRARY_PATH and should contain at least the path to the webserver lib directory
+#
+#      Additional Variables:                                    # It is possible to add further environment variables as default settings. These should be added WITHOUT any 'export'
+#                                                               # e.g. JRE_HOME=/opt/jre/home
+#
+#################################################################################
+
+#ITRS_HOME=/export/home/itrs
+ITRS_HOME=/opt/geneos
+WebsRoot=${ITRS_HOME}/webserver
+WebsBins=${ITRS_HOME}/packages/webserver
+WebsBase=active_prod
+WebsLogD=${WebsRoot}/webservers
+WebsLogF=webserver.log
+WebsMode=background
+WebsXmx=1024M
+WebsLibs=${WebsBins}/${WebsBase}/JRE/lib:${WebsBins}/${WebsBase}/lib
+
+#########################################################
+# end
+#########################################################

@@ -1,0 +1,10 @@
+<geneosWebServer>
+	<dashboardDefaults>
+		<updateRate>5</updateRate>
+		<dashboardRefreshRate>3</dashboardRefreshRate>
+		<tileSize>
+			<width>200</width>
+			<height>200</height>
+		</tileSize>
+	</dashboardDefaults>
+</geneosWebServer>
