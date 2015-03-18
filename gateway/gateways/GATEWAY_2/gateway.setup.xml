@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--Autosaved from gateway 192.168.31.135:7042-->
-<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 10:51:43 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.0.21-140805 at 2015-03-18 13:00:33 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -24319,6 +24319,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
@@ -24356,6 +24357,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                         
                         
                 
+						
 						
 						
 						
@@ -24432,6 +24434,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
@@ -24469,6 +24472,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             
                             
                     
+							
 							
 							
 							
@@ -25402,6 +25406,19 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</urlElements>
 				<targets>
 					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7033&quot;)]/managedEntity[(@name=&quot;Coherence&quot;)]/sampler[(@name=&quot;Coherence-Service&quot;)][(@type=&quot;Coherence&quot;)]/dataview[(@name=&quot;Coherence-Service&quot;)]/headlines/cell[(@name=&quot;StautsHA&quot;)]</target>
+				</targets>
+			</kba>
+		</kbaSet>
+		<kbaSet name="Article link for news readers">
+			<kba>
+				<label>Article</label>
+				<urlElements>
+					<urlElement>
+						<xpath>../cell[(@column=&quot;link&quot;)]/@value</xpath>
+					</urlElement>
+				</urlElements>
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;News&quot;)][(param(&quot;PluginName&quot;)=&quot;EXTRACTOR&quot;)]/dataview/rows/row/cell[(@column=&quot;description&quot;)]</target>
 				</targets>
 			</kba>
 		</kbaSet>
