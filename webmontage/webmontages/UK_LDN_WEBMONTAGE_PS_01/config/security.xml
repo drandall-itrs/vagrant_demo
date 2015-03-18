@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<!-- 
+		To enable Windows single sign on, add entry point ref inside <http> tag.
+
+		Example: 
+		<http use-expressions="true" create-session="always" entry-point-ref="negotiateSecurityFilterEntryPoint">
+	-->
+	<http use-expressions="true" create-session="always" >
+		<!-- To enable security uncomment the following lines and comment the 'permitAll' line -->
+		<intercept-url pattern="/admin/**" access="hasPermission(request, admin) or hasRole('ROLE_CONFIG')" />
+		<intercept-url pattern="/favicon.ico" access="permitAll" />
+		<intercept-url pattern="/geneos-web-logon" access="permitAll" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
+
+		<!-- <intercept-url pattern="/**" access="permitAll" /> -->
+		<custom-filter ref="waffleNegotiateSecurityFilter" position="BASIC_AUTH_FILTER"/>
+		<expression-handler ref="expressionHandler"/>
+
+		<form-login login-page="/geneos-web-logon" authentication-failure-url="/geneos-web-logon?login_error" />
+		<logout invalidate-session="true" logout-success-url="/geneos-web-logon?logout" />
+		<access-denied-handler error-page="/unauth" />
+	</http>
+
+	<authentication-manager alias="geneosAuthManager">
+        <authentication-provider ref="clusterAuthenticationProvider" />
+	</authentication-manager>
+
+    <beans:bean id="clusterAuthenticationProvider"
+                class="com.itrsgroup.spring.auth.OpenAccessAuthProvider">
+    </beans:bean>
+
+	<!-- Kaazing Gateway Login Module - Needs to track active http sessions -->
+	<beans:bean class="com.itrsgroup.websocket.KaazingLoginModule">
+		<beans:property name="authManager" ref="geneosAuthManager" />
+	</beans:bean>
+
+    <beans:bean id="expressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler">
+        <beans:property name="permissionEvaluator">
+            <beans:bean id="permissionEvaluator" class="com.itrsgroup.spring.auth.ClusterPermissionEvaluator"/>
+        </beans:property>
+    </beans:bean>
+
+	<beans:bean id="waffleWindowsAuthProvider" class="waffle.windows.auth.impl.WindowsAuthProviderImpl" />
+	<beans:bean id="negotiateSecurityFilterProvider" class="waffle.servlet.spi.NegotiateSecurityFilterProvider">
+		<beans:constructor-arg ref="waffleWindowsAuthProvider" />
+	</beans:bean>
+	<beans:bean id="waffleSecurityFilterProviderCollection" class="waffle.servlet.spi.SecurityFilterProviderCollection">
+		<beans:constructor-arg>
+			<beans:list>
+				<beans:ref bean="negotiateSecurityFilterProvider" />
+			</beans:list>
+		</beans:constructor-arg>
+	</beans:bean>
+	<beans:bean id="negotiateSecurityFilterEntryPoint" class="waffle.spring.NegotiateSecurityFilterEntryPoint">
+		<beans:property name="Provider" ref="waffleSecurityFilterProviderCollection" />
+	</beans:bean>
+	<beans:bean id="waffleNegotiateSecurityFilter" class="waffle.spring.NegotiateSecurityFilter">
+		<beans:property name="Provider" ref="waffleSecurityFilterProviderCollection" />
+	</beans:bean>
+</beans:beans>

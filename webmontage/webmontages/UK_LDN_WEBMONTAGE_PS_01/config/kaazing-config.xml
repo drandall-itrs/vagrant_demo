@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (c) 2007-2011, Kaazing Corporation. All rights reserved.
+-->
+<gateway-config xmlns="http://xmlns.kaazing.com/2012/03/gateway">
+
+
+
+
+<!--
+  #############################################################################
+  #############################################################################
+                       Security configuration
+  #############################################################################
+  #############################################################################
+  -->
+  <security>
+    <keystore>
+      <type>JCEKS</type>
+      <file>keystore.db</file>
+      <password-file>keystore.pw</password-file>
+    </keystore>
+<!-- 
+    <truststore>
+      <file>truststore.db</file>
+    </truststore>
+ -->
+    <realm>
+      <name>jms</name>
+      <description>Jms Security Realm</description>
+
+		<authentication>
+
+			<http-challenge-scheme>Application Basic</http-challenge-scheme>
+			<authorization-timeout>1800</authorization-timeout>
+		
+			<login-modules>
+	
+		      <login-module>
+		        <type>class:com.itrsgroup.websocket.KaazingLoginModule</type>
+		        <success>required</success> <!-- optional|required -->
+		      </login-module>
+		
+			</login-modules>
+		</authentication>
+
+    </realm>
+	 
+  </security>
+
+	<!-- JMX -->
+	<!-- 
+	<management>
+    	<accept>jmx://localhost:2020/</accept>
+    	<realm-name>jms</realm-name>
+	</management> 
+	 -->
+
+  <!--
+  #############################################################################
+  #############################################################################
+                       Additional service configuration
+
+  Note: Proxy services are designed to proxy connections to back-end service.
+  #############################################################################
+  #############################################################################
+  -->
+  <service>
+	<accept>${gateway.protocol}://${gateway.hostname}:${gateway.websocket.port}/jms</accept>
+    <type>stomp.jms</type>
+
+    <properties>
+      	<connection.factory.name>ConnectionFactory</connection.factory.name>
+      	<context.lookup.topic.format>dynamicTopics/%s</context.lookup.topic.format>
+      	<context.lookup.queue.format>dynamicQueues/%s</context.lookup.queue.format>
+
+	    <env.java.naming.factory.initial>org.apache.activemq.jndi.ActiveMQInitialContextFactory</env.java.naming.factory.initial>
+	    <env.java.naming.provider.url>vm://localhost</env.java.naming.provider.url>
+      
+		<authentication.realm>jms</authentication.realm>
+		<authorization.factory>com.itrsgroup.websocket.KaazingJmsAuthorizationFactory</authorization.factory>
+    </properties>
+	
+	<accept-options>    
+      <ws.bind>${gateway.websocket.port}</ws.bind>
+      <wss.bind>${gateway.websocket.port}</wss.bind>        
+    </accept-options>
+
+	<!-- Allow websocket connection from any host -->
+	<cross-site-constraint>
+      <allow-origin>*</allow-origin> 
+    </cross-site-constraint>
+
+	<!-- Restrict websocket connection from only our web app -->
+	<!--
+	<cross-site-constraint>
+      <allow-origin>${webapp.protocol}://${gateway.hostname}:${webapp.port}</allow-origin>
+    </cross-site-constraint>
+     -->
+
+  </service>
+
+  <service>
+    <accept>${gateway.httpprotocol}://${gateway.hostname}:${gateway.websocket.port}/session</accept>
+    <type>session</type>
+    
+    <accept-options>    
+      <http.bind>${gateway.websocket.port}</http.bind>
+      <https.bind>${gateway.websocket.port}</https.bind> 
+    </accept-options>
+  </service>
+
+<!--
+  #############################################################################
+  #############################################################################
+                             Service Defaults
+  #############################################################################
+  #############################################################################
+  -->
+
+  <service-defaults>
+	<accept-options>
+          <ws.bind>${gateway.websocket.port}</ws.bind>
+    </accept-options>
+
+    <mime-mapping>
+      <extension>html</extension>
+      <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>htm</extension>
+      <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>js</extension>
+      <mime-type>text/javascript</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>png</extension>
+      <mime-type>image/png</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>gif</extension>
+      <mime-type>image/gif</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>jpg</extension>
+      <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>jpeg</extension>
+      <mime-type>image/jpeg</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>css</extension>
+      <mime-type>text/css</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>swf</extension>
+      <mime-type>application/x-shockwave-flash</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>xap</extension>
+      <mime-type>application/x-silverlight-app</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>htc</extension>
+      <mime-type>text/x-component</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>jnlp</extension>
+      <mime-type>application/x-java-jnlp-file</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>manifest</extension>
+      <mime-type>text/cache-manifest</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+      <extension>appcache</extension>
+      <mime-type>text/cache-manifest</mime-type>
+    </mime-mapping>
+  </service-defaults>
+
+</gateway-config>

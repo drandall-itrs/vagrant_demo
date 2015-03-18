@@ -1,0 +1,973 @@
+#! /bin/bash
+#
+#set -x
+#
+#       $Header:
+#####################################################################
+#
+#       Program Name    :       webmontagectl
+#       Function        :       Execute ITRS Webmontage
+#       Author          :       Onur Erol/Jeremy Hullah 
+#       Creation        :       09/05/2013
+#       History :
+#
+#       09/05/2013      0.00 -> 1.00    OE      Adapted from WebMontagectl version v4.00 by Jeremy Hullah
+#
+#####################################################################
+#       Start of Local Tokens
+#####################################################################
+
+Program=$(basename $0)
+ProgramPath=$(dirname $0)
+ConfigFile=webmontagectl.rc
+CommandUser=$(id | cut -d"(" -f2 | cut -d ")" -f1)
+SuCommand=""
+SuQuote=""
+SuExport=""
+
+WebmPortDefault=8181
+WebmSockPortDefault=8001
+WebmHostDefault=`hostname`
+#WebmPort=${WebmPortDefault}
+#WebmSockPort=${WebmSockPortDefault}
+#WebmHost=${WebmHostDefault}
+WebMontageExports=/tmp/WebMontageExports
+
+Firstchar=`echo $ProgramPath | cut -c1`
+if [ ! "$Firstchar" = "/" ]
+then
+        if [ "$Firstchar" = "." ]
+        then
+                ProgramPath=`echo $ProgramPath | cut -c3-`
+        fi
+	if [ "$ProgramPath" = "" ]
+	then
+        	ProgramPath=${PWD}
+	else
+        	ProgramPath=${PWD}/${ProgramPath}
+	fi
+fi
+Version=1
+Revision=00
+Process="${Program} v${Version}.${Revision}"
+
+#####################################################################
+#       Start of Functions
+#####################################################################
+
+# -----------------------------------------------------------------------
+# Function fn_Usage: Print usage details
+# -----------------------------------------------------------------------
+
+fn_Usage()
+{
+	echo
+	echo "	Usage: ${Program} list | create | <webmontagename> <function>"
+	echo
+	echo "	Where 'list' shows the available webmontages"
+	echo "	Where 'create' creates a new webmontage environment"
+	echo
+	echo "	Where <webmontagename> may be the webmontage name or 'all'"
+	echo "	Where <function> may be, start, stop, restart, refresh, details, command, status, delete, usage"
+	echo
+	echo "	start           -       starts the webmontage or webmontages"
+	echo "	stop            -       stops the webmontage or webmontages (additionally add signal number, e.g. -9)"
+	echo "	restart         -       restarts the webmontage or webmontages"
+	echo "	refresh         -       refresh the webmontage or webmontages to re-read the configuration files(s)"
+	echo "	details         -       list the parameters of the webmontage or webmontages"
+	echo "	command         -       displays the command line for starting the webmontage"
+	echo "	status          -       displays the process stack for the webmontage"
+	echo "	delete          -       deletes the webmontage environment"
+	echo "	usage|-h|-help  -       outputs this usage message"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Message: Print message. Exit if message code = 1
+# -----------------------------------------------------------------------
+
+fn_Message()
+{
+        Now=$(date +"%Y-%m-%d %H.%M.%S")
+        case $1 in
+                1)      echo -e ${Now} : ${Process} : Error : $2
+                        fn_Exit $1
+			;;
+                2)      echo -e ${Now} : ${Process} : Warn : $2
+			;;
+                3)      echo -e ${Now} : ${Process} : Info : $2
+			;;
+                *)      ;;
+        esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Start: Start the webmontage in either foreground or backgroud
+#                    depending on the WebmMode setting for the webmontage
+# -----------------------------------------------------------------------
+
+fn_Start()
+{
+
+	# ---
+	# Check if webmontage is already running and webmontage environemnt has been created
+	# ---
+
+	fn_GetWebMontageProcess
+	if [ ${process} ]
+	then
+		fn_Message 2 "WebMontage ${WebmName} ${WebmPort} already running"	
+		return
+	fi
+	if [ ! -d  ${WebmBins}/${WebmBase} ]
+	then
+		fn_Message 2 "No WebMontage base for ${WebmBase} in the WebMontage binary directory ${WebmBins}. \nCan't start webmontage ${WebmName}. Please create link for this to the relevant binary package"
+		return
+	fi
+
+	# ---
+	# start the WebMontage either in the background or the foreground. First create the command
+	# ---
+
+	fn_CreateCommand
+	Command="${Command} > ${WebmLogD}/log/${WebmLogF} 2>&1 & ${SuQuote}"
+	export GENEOSWS_BIN_HOME=${WebmBins}/${WebmBase}
+	export GENEOSWS_HOME=${WebmRoot}/webmontages/${WebmName}
+	export GENEOSWS_CONFIG_HOME=${GENEOSWS_HOME}/config
+	cd ${GENEOSWS_HOME}
+	case "${WebmMode}" in
+		background)	fn_Message 3 "Starting WebMontage ${WebmName} on port ${WebmPort}"
+				fn_RunCommand
+				sleep 5
+				fn_GetWebMontageProcess
+       				if [ ${process} ]
+				then
+					fn_Message 3 "WebMontage ${WebmName} has started with PID : ${process}"
+					fn_Message 3 "WebMontage ${WebmName} logging to ${WebmLogD}/log/${WebmLogF}"
+				else
+					if [  ! -e "${WebmLogD}/log/${WebmLogF}" ]
+					then
+						fn_Message 1 "WebMontage ${WebmName} failed to start. Logfile for webmontage could not be created."
+					fi
+					fn_Message 3 "WebMontage ${WebmName} has not started"
+					fn_Message 3 "see - ${WebmLogD}/log/${WebmLogF}"
+#					fn_Message 3 "see - ${WebmLogD}/webmontage.txt"
+					fn_Message 3 "Last 20 lines of webmontage log file: "
+					echo;tail -20 "${WebmLogD}/log/${WebmLogF}";echo
+				fi
+				;;
+		foreground)     fn_Message 3 "Starting WebMontage ${WebmName} on port ${WebmPort}"
+				fn_RunCommand
+				;;
+		*)		fn_Message 1 "No operating mode set. Should be either backgroud or foreground"
+				;;
+	esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GetWebMontageProcess: get the PID for the WebMontage
+# -----------------------------------------------------------------------
+
+fn_GetWebMontageProcess()
+{
+	process=$(pgrep -d " " -f "${WebmExec}.*-port ${WebmPort}")
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Refresh: Refresh the selected WebMontage to re-read the configuration files
+# -----------------------------------------------------------------------
+
+fn_Refresh()
+{
+	fn_GetWebMontageProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Refreshing WebMontage ${WebmName}"	
+		kill -USR1 ${process}
+	else
+		fn_Message 2 "WebMontage ${WebmName} is not running"
+	fi	
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Stop: Stop the selected WebMontage
+# -----------------------------------------------------------------------
+
+fn_Stop()
+{
+	fn_GetWebMontageProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Stopping WebMontage ${WebmName} - ${process}"
+		Command="${SuCommand}${SuQuote}kill ${FunctionOpts} ${process}${SuQuote}"
+		fn_RunCommand
+		sleep 3
+		fn_GetWebMontageProcess
+		if [ ${process} ]
+		then
+			fn_Message 2 "WebMontage ${WebmName}, process ${process} failed to be stopped"
+		else
+			fn_Message 3 "WebMontage ${WebmName} stopped"
+		fi
+	else
+		fn_Message 2 "WebMontage ${WebmName} is not started"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Status: Show the ps details for the select WebMontage
+# -----------------------------------------------------------------------
+
+fn_Status()
+{
+	fn_GetWebMontageProcess
+	if [ ${process} ]
+	then
+		ps -lfp ${process}
+	else
+		fn_Message 3 "WebMontage ${WebmName} is not running"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Log: Show the logfile for the select WebMontage
+# -----------------------------------------------------------------------
+
+fn_Log()
+{
+	fn_Message 3 "Showing log file details for ${WebmName}\n"
+	tail ${FunctionOpts} ${WebmLogD}/log/${WebmLogF}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Create: Create a webmontage and allow user to change any of 
+# the default values, which are then written to a webmontage.rc file in the 
+# webmontage home directory
+# -----------------------------------------------------------------------
+
+fn_Create()
+{
+	# ---
+	# Ask for WebMontage name and check validty of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+		echo; echo -e "Please enter a name for the new WebMontage: \c"
+		read WebmName
+		fn_CheckWebmName
+	done
+
+	# ---
+	# Ask for port number and check validity of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the port number for the WebMontage [default ${WebmPortDefault}]: \c"
+		WebmPort=${WebmPortDefault}
+                read WebmPortResponse
+                [[ "${WebmPortResponse}" = "" ]] || WebmPort=${WebmPortResponse}
+		fn_CheckWebmPort
+	done
+	completed="no"
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the port number for the WebMontage Socket [default ${WebmSockPortDefault}]: \c"
+		WebmSockPort=${WebmSockPortDefault}
+                read WebmSockPortResponse
+                [[ "${WebmSockPortResponse}" = "" ]] || WebmSockPort=${WebmSockPortResponse}
+		fn_CheckWebmSockPort
+	done
+	completed="no"
+	while [ "${completed}" = "no" ]
+	do
+                echo -e "Please enter the Hostname for the WebMontage [default ${WebmHostDefault}]: \c"
+		WebmHost=${WebmHostDefault}
+                read WebmHostResponse
+                [[ "${WebmHostResponse}" = "" ]] || WebmHost=${WebmHostResponse}
+		fn_CheckWebmHost
+	done
+
+	# ---
+	# Allow user to change any of the default WebMontage parameters
+	# ---
+
+	echo; echo "Please review the following list of default WebMontage parameters"
+	changeVar=no
+	addedVars=()
+	addVar=1
+	while [ "${changeVar}" != "ok" -a  "${changeVar}" != "q" ]
+	do
+		fn_SetWebMontageParams
+	done
+	[ "${changeVar}" = "q" ] && return
+	for x in "${WebmVal[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	fn_CreateWebMontage
+	echo ; echo -e "Would you like to start webmontage ${WebmName}? [y/n]: \c"
+	read startWebMontage
+	[ "$startWebMontage" = "y" ] && fn_Start
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_SetWebMontageParamrs: Set the WebMontage parameters for the WebMontage
+# ---------------------------------------------------------------------------
+fn_SetWebMontageParams()
+{
+	fn_ListWebMontageParams
+	echo "[${nextVar}] Add a new parameter: "
+	echo ; echo -e "Please select any parameters that you would like to change or 'ok' to proceed ['q' to quit]: \c"
+	read changeVar
+	[ "${changeVar}" = "ok" -o "${changeVar}" = "q" ] && return
+	if [ ${changeVar} -gt 0 -a ${changeVar} -le ${nextVar} ]
+	then
+                if [ "${webmVar[${changeVar}]}" = "WebmRoot" -o "${webmVar[${changeVar}]}" = "ITRS_HOME" ]
+                then
+                        echo -e "The WebmRoot and ITRS_HOME parameters cannot be changed once they have been set in the configuration file. Press return to continue: \c"
+                        read dummy
+                        return
+                fi
+
+		# ---
+		# if they have selected to add a new parameter then ask for parameter name and add 1 to nextVar
+		# ---
+
+		if [ ${changeVar} = ${nextVar} ]
+		then
+			echo -e "Enter the new parameter name: \c"
+			read newParamName
+			webmVar[${changeVar}]=${newParamName}
+			nextVar=$(( ${nextVar} + 1 ))
+		fi
+
+		# ---
+		# ask for new parameter value
+		# ---
+
+		echo -e "Enter new value for parameter ${webmVar[${changeVar}]}: \c"
+		read newParamVal
+
+		# ---
+		# The follow awk statement will add double quote marks to any text that
+		# contains spaces and which doesn't already contain double quote marks
+		# ---
+
+		newParamVal=$(echo ${newParamVal} | awk '{if ( index( $0," ") > 0 ){if ( index( $0, "\"") > 0 ){print $0} else {print "\""$0"\""} } else {print $0} } ' )
+
+		# ---
+		# make sure to change the actual variable value as well as the stored variable that is used for listing
+		# ---
+
+		webmVal[${changeVar}]=${newParamVal}
+		eval ${webmVar[${changeVar}]}=${newParamVal}
+
+		# ---
+		# Check if the parameter has already been changed/added to create list of changed parameters
+		# ---
+
+		fn_CheckElement "${changeVar}"
+		if [ $? = 0 ]
+		then
+			addedVars[${addVar}]=${changeVar}
+			addVar=$(( ${addVar} + 1 ))
+		fi
+		return
+	fi
+	echo "Invalid option entered"
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckElement: Check if a value exists in an array
+# ---------------------------------------------------------------------------
+
+fn_CheckElement()
+{
+	local x 
+	for x in "${addedVars[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	return 0 
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebmName: Check the WebMontage name is valid
+# N.B. couldn't get [[:alnum:]_] or [:word:] to work with awk so had to use
+# clumsy character selection - please change if possible
+# ---------------------------------------------------------------------------
+
+fn_CheckWebmName()
+{
+	if [ -d "${WebmRoot}/webmontages/${WebmName}" ]
+	then
+		fn_Message 2 "WebMontage ${WebmName} already exists"
+	else
+		if [[ $(echo "${WebmName}" | awk '/[ .,-#~<>!£%(){}\[\]\&\$\*\^\"\\\/]/ { print }') ]]
+		then
+			fn_Message 2 "The WebMontage name, ${WebmName} can only contain alpha-numeric characters or an underscore"
+		else
+			completed=yes
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebmPort: Check that the chosen port for a WebMontage is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckWebmPort()
+{
+        if ! [[ ${WebmPort} -gt 1024 && ${WebmPort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${WebmPort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${WebmPort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+			if grep -i "webapp.port=${WebmPort}" ${WebmRoot}/webmontages/*/config/system.properties >/dev/null 2>&1
+			then
+				echo "Port ${WebmPort} is already used by an existing webmontage"
+			else
+				completed=yes
+			fi
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebmSockPort: Check that the chosen port for a WebMontage Sockets is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckWebmSockPort()
+{
+        if ! [[ ${WebmSockPort} -gt 1024 && ${WebmSockPort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${WebmSockPort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${WebmSockPort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The socket port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+			if grep -i "gateway.websocket.port=${WebmSockPort}" ${WebmRoot}/webmontages/*/config/system.properties >/dev/null 2>&1
+			then
+				echo "SocketPort ${WebmSockPort} is already used by an existing webmontage"
+			else
+				completed=yes
+			fi
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebmHost: Check that the chosen hostname for a WebMontage is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckWebmHost()
+{
+	completed=yes
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_RunCommand: Check to see if the 'su' element of the command
+# has been set and if so then print a message before the 'password' prompt
+# is written and also check exit code afterwards and exit if not zero
+# ---------------------------------------------------------------------------
+
+fn_RunCommand()
+{
+        [[ "${SuCommand}" != "" && "${CommandUser}" != "root" ]] && fn_Message 3 "The webmontage user (${WebmUser}) is different, so you will need to provide a password for the account"
+	( eval ${Command} )
+	[[ "${SuCommand}" != "" && "$?" != "0" ]] && fn_Message 1 "The command failed: Exiting..."
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_Details: Detail the current settings for the selected WebMontage
+# ---------------------------------------------------------------------------
+
+fn_Details()
+{
+	WebmPort=$(grep "webapp.port" "${WebmHome}/config/system.properties" | cut -d"=" -f2 )
+	fn_Message 3 "Details for webmontage ${WebmName} running on port ${WebmPort} owned by user ${WebmUser} are:"
+	fn_StoreParams
+	fn_ListWebMontageParams
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WebmList: Display the list of active webmontages
+# -----------------------------------------------------------------------
+
+fn_WebmList()
+{
+	if [ ! -d ${WebmRoot}/webmontages ]
+	then
+		fn_Message 3 "There are currently no WebMontages configured"
+		exit
+	fi
+	echo -e "\nThe list of currently active WebMontages are:\n"
+	IFS=$'\n'
+        for x in $(ls ${WebmRoot}/webmontages | grep -v "\.")
+        do
+                echo "WebMontage ${x}"
+        done
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateCommand: Create the command string
+#                            If the user running the command is different
+#                            from the user that is set for the webmontage, the
+#                            $SuCommand variable will contain the relevant
+#                            su details
+# -----------------------------------------------------------------------
+fn_CreateCommand()
+{
+        Command="${SuCommand}${SuQuote}${SuExport}${WebmExec} "
+        Command="${Command} -Duser.home=${WebmHome}"
+        Command="${Command} -Xmx${WebmXmx}"
+        Command="${Command} -Djava.awt.headless=true"
+        Command="${Command} -Djava.library.path=${WebmLibs}"
+        Command="${Command} -Dlog4j.configuration=file:${WebmHome}/config/logging.properties"
+        Command="${Command} -Dworking.directory=${WebmHome}"
+        Command="${Command} -Dcom.itrsgroup.legacy.database.maxconnections=100"
+        Command="${Command} -Dcom.itrsgroup.bdosync=DataView,BDOSyncType_Level,DV1_SyncLevel_RedAmberCells"
+#JMX_FLAGS
+#       Command="${Command} -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+        Command="${Command} -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp"
+	if [ -r ${WebmBins}/${WebmBase}/lib/geneos-web-services-*.jar ] 
+	then
+		Command="${Command} -jar ${WebmBins}/${WebmBase}/lib/geneos-web-services-*.jar"
+	fi
+ 	if [ -r ${WebmBins}/${WebmBase}/lib/geneos-services-*.jar ] 
+	then
+		Command="${Command} -jar ${WebmBins}/${WebmBase}/lib/geneos-services-*.jar"
+	fi
+
+	Command="${Command} -dir ${WebmBins}/${WebmBase}/webapps"
+        Command="${Command} -port ${WebmPort}"
+
+}
+
+
+# -----------------------------------------------------------------------
+# Function fn_PrintCommand: Print 'command' line for WebMontage
+# -----------------------------------------------------------------------
+
+fn_PrintCommand()
+{
+	fn_CreateCommand
+	echo
+	echo "COMMAND for ${WebmName}: ${Command}${SuQuote}"
+	echo "LD_LIBRARY_PATH for ${WebmName}: ${LD_LIBRARY_PATH}"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_StoreDefaultParams: Store the default parameters. These are
+# used either in the create function to print the list and accept changes
+# to the list, or to list the parameters for a webmontage (after any user
+# parameters have been changed or added
+# -----------------------------------------------------------------------
+
+fn_StoreDefaultParams()
+{
+	webmVar=()
+	webmVal=()
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		nextVar=1
+		IFS=$'\n'
+		for gVar in $(grep "^[^#]" ${ProgramPath}/${ConfigFile})
+		do
+			webmVar[${nextVar}]=$(echo $gVar | cut -d"=" -f1)
+			webmVal[${nextVar}]=$(echo $gVar | cut -d"=" -f2)
+			# ---
+			# add the WebMontage name to the WebmLogD variable value
+			# ---
+			if [ "${webmVar[${nextVar}]}" = "WebmLogD" ]
+			then
+				webmVal[${nextVar}]="${webmVal[${nextVar}]}/${WebmName}"
+			fi
+			nextVar=$(( $nextVar + 1 ))
+		done
+	else
+		fn_Message 1 "Can't find the webmontage configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_StoreParams: Add any user parameters to the stored webmontage 
+# parameters. once these have been extracted, each default setting needs to be
+# checked. If the variable exists in the default list it will overwrite the
+# variables, if it doesn't exist in the default list it will append it to the 
+# array list 
+# ---------------------------------------------------------------------------
+
+fn_StoreParams()
+{
+
+	fn_StoreDefaultParams
+        [[ -e "${WebmRoot}/webmontages/${WebmName}/webmontage.rc" ]] || fn_Message 1 "No webmontage.rc file for WebMontage ${WebmName}. Exiting..."
+	IFS=$'\n'
+	for uVar in $(grep "^[^#]" "${WebmRoot}/webmontages/${WebmName}/webmontage.rc")
+	do
+		userVar=$(echo $uVar | cut -d"=" -f1)
+		userVal=$(echo $uVar | cut -d"=" -f2)
+		if [ "${userVar}" != "WebmUser" ]
+		then
+			x=1
+			changed=no
+			while [ $x -lt $nextVar ]
+			do
+				if [ ${userVar} = ${webmVar[${x}]} ]
+				then
+					changed=yes
+					webmVar[${x}]=${userVar}
+					webmVal[${x}]=${userVal}
+					[[ "${webmVar[${x}]}" = "WebmLogD" ]] && webmVal[${x}]="${webmVal[${x}]}/${WebmName}"
+					x=${nextVar}
+				fi
+				x=$(( ${x} + 1 ))
+			done
+			if [ "${changed}" = "no" ]
+			then
+				webmVar[$nextVar]=${userVar}
+				webmVal[$nextVar]=${userVal}
+				nextVar=$(( $nextVar + 1 ))
+			fi
+		fi
+	done
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_ListWebMontageParams: Print out the contents of the stored parameters
+# ---------------------------------------------------------------------------
+
+fn_ListWebMontageParams()
+{
+	echo
+	x=1
+	extraText="\t\t[This parameter cannot be changed once set in the webmontagectl.rc file]" 
+	while [ $x -lt $nextVar ]
+	do
+		printText=""
+		if [ "${Instance}" = "create" ]
+		then
+			[ "${webmVar[${x}]}" = "WebmRoot" -o "${webmVar[${x}]}" = "ITRS_HOME" ] && printText=${extraText}
+		fi
+		[ "${webmVar[${x}]}" = "WebmBase" ] && printText="(version$(ls -ld ${WebmBins}/${WebmBase} | cut -d'>' -f2))"
+		echo -e "[${x}] ${webmVar[${x}]} : ${webmVal[${x}]} ${printText}"
+		x=$(( $x + 1 ))
+	done
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetDefaultParams: check for existence of config file and run it
+# to set the default variables.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Webm' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetDefaultParams()
+{
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		. ${ProgramPath}/${ConfigFile}
+		IFS=$'\n'
+		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Webm" | grep "=")
+		do
+			export ${xVar}
+		done
+	else
+		fn_Message 1 "Can't find the webmontage configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetParams: Set the parameters for the webmontage. The default
+# parameters will be set by fn_SetDefaultParams, so only overwrite any if
+# there is a webmontage.rc file in the webmontage directory.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Webm' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetParams()
+{
+	SuCommand=""
+	SuQuote=""
+	SuExport=""
+	fn_SetOS
+	WebmExec=${WebmBins}/${WebmBase}/JRE/bin/java
+	WebmHome="${WebmRoot}/webmontages/${WebmName}"
+
+	if [ "${Instance}" != "create" ]
+	then
+	        [[ -e "${WebmHome}/webmontage.rc" ]] || fn_Message 1 "No webmontage.rc file for WebMontage ${WebmName}. Exiting..."
+
+		# ---
+		# source the webmontage.rc file and export any additional variables that have 
+		# have been set other than the standard WebmXxxx ones
+		# ---
+
+		. ${WebmHome}/webmontage.rc
+
+		[[ "${WebmUser}" = "" ]] && fn_Message 1 "The WebMontage User must contain a value"
+		IFS=$'\n'
+		for xVar in $(cat "${WebmHome}/webmontage.rc" | grep -v "^#" | grep -v "Webm" | grep "=")
+		do
+			export ${xVar}
+		done
+
+		if [ "${WebmUser}" != "${CommandUser}" ]
+		then
+			fn_WriteWebMontageExports
+			SuCommand="su ${WebmUser} -c "
+			SuQuote='"'
+			SuExport=". ${WebMontageExports} ; "
+		fi
+		WebmPort=$(grep "webapp.port=" ${WebmHome}/config/system.properties | cut -d"=" -f2 )
+		WebmSockPort=$(grep "gateway.websocket.port=" "${WebmHome}/config/system.properties" | cut -d"=" -f2 )
+		WebmHost=$(grep "gateway.hostname=" "${WebmHome}/config/system.properties" | cut -d"=" -f2 )
+		WebmBase=$(grep "WebmBase=" "${WebmHome}/webmontage.rc" | cut -d"=" -f2 )
+		#WebmLibs=$(grep "WebmLibs=" "${WebmHome}/webmontage.rc" | cut -d"=" -f2 )
+		WebmExec=${WebmBins}/${WebmBase}/JRE/bin/java
+	fi
+
+	WebmLogD=${WebmLogD}/${WebmName}
+	[[ "${WebmLicP}" != "" ]] && WebmLicP="-licd-port ${WebmLicP}"
+	[[ "${WebmLicH}" != "" ]] && WebmLicH="-licd-host ${WebmLicH}"
+	export LD_LIBRARY_PATH=${WebmLibs}:${env_LD_LIBRARY_PATH}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WriteWebMontageExports: Create a file that holds all of the 
+# relevant EXPORT commands to start the webmontage. This is only done where 
+# an 'su' command is going to be used due to the WebMontage User being different
+# from the Command User as the script environment is not passed to the su
+# shell
+# -----------------------------------------------------------------------
+
+fn_WriteWebMontageExports()
+{
+	echo > ${WebMontageExports}
+	[[ "$?" != 0 ]] && fnMessage 1 "Failed to write WebMontage Exports file. Exiting..."
+	IFS=$'\n'
+	for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Webm" | grep "=")
+	do
+		echo "export ${xVar}" >> ${WebMontageExports}
+	done
+	IFS=$'\n'
+	for xVar in $(cat "${WebmHome}/webmontage.rc" | grep -v "^#" | grep -v "Webm" | grep "=")
+	do
+		echo "export ${xVar}" >> ${WebMontageExports}
+	done
+	echo "export LD_LIBRARY_PATH=${WebmLibs}:${env_LD_LIBRARY_PATH}" >> ${WebMontageExports}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateWebMontage: Create the relevant environment for the webmontage
+# -----------------------------------------------------------------------
+
+fn_CreateWebMontage()
+{
+	fn_SetParams
+        if [ ! -d ${WebmRoot}/webmontages ]
+        then
+                [[ ! -w ${WebmRoot} ]] && fn_Message 1 "User ${CommandUser} cannot write to the ${WebmRoot} directory. Exiting..."
+                mkdir ${WebmRoot}/webmontages
+        fi
+	[[ ! -w ${WebmRoot}/webmontages ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${WebmRoot}/webmontages directory. Exiting..."
+	[[ ! -r ${WebmBins}/${WebmBase}/config-templates/system.properties ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the webmontage template file. Exiting..."
+	fn_Message 3 "Creating directories for ${WebmName}"
+	mkdir -p ${WebmHome}
+	mkdir -p ${WebmHome}/config
+	mkdir -p ${WebmHome}/log
+	[[ "$?" != "0" ]] && fn_Message 1 "Failed to create WebMontage directory structure ${WebmHome}. Exiting..."
+
+	# ---
+	# WebmLogD defaults to WebmHome, but can be set differently if required
+	# ---
+
+	if [ ! -d "${WebmLogD}" ]
+	then
+		mkdir -p "${WebmLogD}"
+		[[ "$?" != "0" ]] && fn_Message 1 "Failed to create logfile directory ${WebmLogD}. Exiting..."
+	fi
+	fn_Message 3 "Copying config.xml.min.tmpl"
+	
+	cp  ${WebmBins}/${WebmBase}/config-templates/* "${WebmHome}"/config/
+	cat  ${WebmBins}/${WebmBase}/config-templates/system.properties | sed -e "s/webapp.port=8181/webapp.port=${WebmPort}/g" -e "s/gateway.websocket.port=8001/gateway.websocket.port=${WebmSockPort}/g" -e "s/gateway.hostname=localhost/gateway.hostname=${WebmHost}/g" > "${WebmHome}"/config/system.properties
+
+	# ---
+	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
+	# ---
+
+	rcfile=${WebmHome}/webmontage.rc
+	echo -e "#! /bin/bash\n#\n# webmontage.rc file for webmontage ${WebmName}\n# Auto generated by webmontagectl: $(date)" > "${rcfile}"
+	echo -e "# All entries in this file are either overrides of default values or additional parameters" >> "${rcfile}"
+	echo -e "\nWebmUser=${CommandUser}" >> "${rcfile}"
+	if [ "${addedVars[1]}" != "" ]
+	then
+		for x in "${addedVars[@]}"
+		do
+			echo "${webmVar[${x}]}=${webmVal[${x}]}" >> "${rcfile}"
+		done 
+	fi
+	echo -e 'WebmLibs=${WebmBins}/${WebmBase}/JRE/lib:${WebmBins}/${WebmBase}/lib' >> "${rcfile}"
+	fn_Message 3 "Environment created for ${WebmName}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_RemoveDirs: Remove the relevant directories for the webmontage
+# -----------------------------------------------------------------------
+
+fn_RemoveDirs()
+{
+	echo; fn_Message 3 "Are you sure you want to remove all directories and contents for ${WebmName}? [Y/N]: \\c"
+	read input
+	if [ "${input}" = "y" -o "${input}" = "Y" ]
+	then
+		fn_GetWebMontageProcess
+		if [ ${process} ]
+		then
+			fn_Message 3 "WebMontage ${WebmName} is currently running. Shutting down..."
+			fn_Stop
+		fi
+		fn_Message 3 "Deleting directories for ${WebmName}"
+		Command="${SuCommand}${SuQuote}rm -rf ${WebmHome}${SuQuote}"
+		fn_RunCommand
+		if [ -d "${WebmLogD}" ]
+		then
+			fn_Message 3 "Deleting separate log directory for ${WebmName}"
+			Command="${SuCommand}${SuQuote}rm -rf ${WebmLogD}${SuQuote}"
+			fn_RunCommand
+		fi
+		fn_Message 3 "WebMontage ${WebmName} removed"
+	else
+		fn_Message 3 "Operation cancelled"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PerformFunction: run the relevant function (arg 2)
+# -----------------------------------------------------------------------
+
+fn_PerformFunction()
+{
+	if [ "$Function" = "" ]
+	then
+		fn_Usage
+		fn_Message 1 "Please include a relevant function"
+	fi
+
+        case ${Function} in
+                start|Start|START)		fn_Start	    	                  ;;
+                stop|Stop|STOP)			fn_Stop                		          ;;
+                restart|Restart|RESTART)	fn_Stop && sleep 10 && fn_Start           ;;
+                refresh|Refresh|REFRESH)	fn_Refresh                                ;;
+                status|Status|STATUS)		fn_Status                                 ;;
+                log|Log|LOG)			fn_Log                                 ;;
+                details|Details|DETAILS)	fn_Details                                ;;
+		delete|Delete|DELETE)		fn_RemoveDirs				  ;;
+		command|Command|COMMAND)	fn_PrintCommand                           ;;
+                *)				fn_Usage ; fn_Exit 0                      ;;
+        esac
+}
+
+# -------------------------------------------------------------------------
+# Function fn_SetOS: Set the OS for use in executable
+# -------------------------------------------------------------------------
+
+fn_SetOS()
+{
+	OS=$(uname -s | tr "[A-Z]" "[a-z]" | sed s/sunos/sun/)
+	i386=$(uname -a | grep i386)
+	if [[ ${OS} = "sun" && ${i386} != "" ]]
+	then
+		OS=${OS}"x86"
+	fi
+}
+
+# -------------------------------------------------------------------------
+# Function fn_Exit: exit script and do any clearup
+# -------------------------------------------------------------------------
+
+fn_Exit()
+{
+	[[ -e "${WebMontageExports}" ]] && rm -f "${WebMontageExports}"
+	exit $1
+}
+
+#######################################################################################
+#       End of Functions
+#######################################################################################
+#
+#       Start of Main Script
+#
+#######################################################################################
+
+# ----------
+# Set local variables
+#
+# LD_LIBRARY_PATH is read in and set here once so that it does not get added multiple
+# times when running against more than one WebMontage
+# ----------
+
+env_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+HostName=$(hostname)
+UserName=${LOGNAME}
+OS=$(uname -s)
+Instance=$1
+Function=$2
+FunctionOpts=$3
+
+# ---------
+# Check the config file exists and populate the default variables to set $WebmRoot
+# ---------
+
+fn_SetDefaultParams
+
+# --------
+# Check Instance. If 'All', then perfrom set function against all WebMontages
+# else check for 'Create', 'List' etc. If single Instance entered then check
+# that the WebMontage exists, if o.k. then perform set function against WebMontage
+# --------
+
+case "${Instance}" in
+        all|All|ALL)		IFS=$'\n'
+				for WebmName in $(ls ${WebmRoot}/webmontages | grep -v "\.")
+				do
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				done
+				;;
+	list|List|LIST)		fn_WebmList ; fn_Exit 0 ;;
+	create|Create|CREATE)	Instance=create ; fn_SetDefaultParams ; fn_StoreDefaultParams ; fn_Create ; fn_Exit 0 ;;
+	usage|Usage|USAGE)	fn_Usage ; fn_Exit 0 ;;
+	help|Help|HELP|-h|-H)	fn_Usage ; fn_Exit 0 ;;
+	[a-z]*|[A-Z]*)		if [ -d "${WebmRoot}/webmontages/${Instance}" ]
+				then
+					WebmName="${Instance}"
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				else
+					fn_Message 2 "WebMontage ${Instance} not found" 
+					fn_WebmList
+					fn_Exit 2
+				fi
+				;;
+	*)			fn_Usage ; fn_Exit 0 ;;
+esac
+
+fn_Exit 0
+
+###########################################################
+#
+#       EOS End of Script
+#
+###########################################################

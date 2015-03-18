@@ -1,0 +1,914 @@
+#! /bin/bash
+#
+#set -x
+#
+#       $Header:
+#####################################################################
+#
+#       Program Name    :       webserverctl
+#       Function        :       Execute ITRS Webserver
+#       Author          :       Onur Eroll/Jeremy Hullah
+#       Creation        :       09/05/2013
+#       History :
+#
+#       09/05/2013      0.00 -> 1.00    OE      Adapted from WebServerctl version v4.00 by Jeremy Hullah
+#
+#####################################################################
+#       Start of Local Tokens
+#####################################################################
+
+Program=$(basename $0)
+ProgramPath=$(dirname $0)
+ConfigFile=webserverctl.rc
+CommandUser=$(id | cut -d"(" -f2 | cut -d ")" -f1)
+SuCommand=""
+SuQuote=""
+SuExport=""
+WebsPortDefault=8080
+WebServerExports=/tmp/WebServerExports
+
+Firstchar=`echo $ProgramPath | cut -c1`
+if [ ! "$Firstchar" = "/" ]
+then
+        if [ "$Firstchar" = "." ]
+        then
+                ProgramPath=`echo $ProgramPath | cut -c3-`
+        fi
+	if [ "$ProgramPath" = "" ]
+	then
+        	ProgramPath=${PWD}
+	else
+        	ProgramPath=${PWD}/${ProgramPath}
+	fi
+fi
+Version=1
+Revision=00
+Process="${Program} v${Version}.${Revision}"
+
+#####################################################################
+#       Start of Functions
+#####################################################################
+
+# -----------------------------------------------------------------------
+# Function fn_Usage: Print usage details
+# -----------------------------------------------------------------------
+
+fn_Usage()
+{
+	echo
+	echo "	Usage: ${Program} list | create | <webservername> <function>"
+	echo
+	echo "	Where 'list' shows the available webservers"
+	echo "	Where 'create' creates a new webserver environment"
+	echo
+	echo "	Where <webservername> may be the webserver name or 'all'"
+	echo "	Where <function> may be, start, stop, restart, refresh, details, command, status, delete, usage"
+	echo
+	echo "	start           -       starts the webserver or webservers"
+	echo "	stop            -       stops the webserver or webservers (additionally add signal number, e.g. -9)"
+	echo "	restart         -       restarts the webserver or webservers"
+	echo "	refresh         -       refresh the webserver or webservers to re-read the configuration files(s)"
+	echo "	details         -       list the parameters of the webserver or webservers"
+	echo "	command         -       displays the command line for starting the webserver"
+	echo "	status          -       displays the process stack for the webserver"
+	echo "	delete          -       deletes the webserver environment"
+	echo "	usage|-h|-help  -       outputs this usage message"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Message: Print message. Exit if message code = 1
+# -----------------------------------------------------------------------
+
+fn_Message()
+{
+        Now=$(date +"%Y-%m-%d %H.%M.%S")
+        case $1 in
+                1)      echo -e ${Now} : ${Process} : Error : $2
+                        fn_Exit $1
+			;;
+                2)      echo -e ${Now} : ${Process} : Warn : $2
+			;;
+                3)      echo -e ${Now} : ${Process} : Info : $2
+			;;
+                *)      ;;
+        esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Start: Start the webserver in either foreground or backgroud
+#                    depending on the WebsMode setting for the webserver
+# -----------------------------------------------------------------------
+
+fn_Start()
+{
+
+	# ---
+	# Check if webserver is already running and webserver environemnt has been created
+	# ---
+
+	fn_GetWebServerProcess
+	if [ ${process} ]
+	then
+		fn_Message 2 "WebServer ${WebsName} ${WebsPort} already running"	
+		return
+	fi
+	if [ ! -d  ${WebsBins}/${WebsBase} ]
+	then
+		fn_Message 2 "No WebServer base for ${WebsBase} in the WebServer binary directory ${WebsBins}. \nCan't start webserver ${WebsName}. Please create link for this to the relevant binary package"
+		return
+	fi
+
+	# ---
+	# start the WebServer either in the background or the foreground. First create the command
+	# ---
+
+	fn_CreateCommand
+	Command="${Command} > ${WebsLogD}/logs/${WebsLogF} 2>&1 & ${SuQuote}"
+	cd "${WebsRoot}/webservers/${WebsName}"
+	case "${WebsMode}" in
+		background)	fn_Message 3 "Starting WebServer ${WebsName} on port ${WebsPort}"
+				fn_RunCommand
+				sleep 5
+				fn_GetWebServerProcess
+       				if [ ${process} ]
+				then
+					fn_Message 3 "WebServer ${WebsName} has started with PID : ${process}"
+					fn_Message 3 "WebServer ${WebsName} logging to ${WebsLogD}/logs/${WebsLogF}"
+				else
+					if [  ! -e "${WebsLogD}/logs/${WebsLogF}" ]
+					then
+						fn_Message 1 "WebServer ${WebsName} failed to start. Logfile for webserver could not be created."
+					fi
+					fn_Message 3 "WebServer ${WebsName} has not started"
+					fn_Message 3 "see - ${WebsLogD}/logs/${WebsLogF}"
+#					fn_Message 3 "see - ${WebsLogD}/webserver.txt"
+					fn_Message 3 "Last 20 lines of webserver log file: "
+					echo;tail -20 "${WebsLogD}/logs/${WebsLogF}";echo
+				fi
+				;;
+		foreground)     fn_Message 3 "Starting WebServer ${WebsName} on port ${WebsPort}"
+				fn_RunCommand
+				;;
+		*)		fn_Message 1 "No operating mode set. Should be either backgroud or foreground"
+				;;
+	esac
+}
+
+# -----------------------------------------------------------------------
+# Function fn_GetWebServerProcess: get the PID for the WebServer
+# -----------------------------------------------------------------------
+
+fn_GetWebServerProcess()
+{
+	process=$(pgrep -d " " -f "${WebsExec}.*-port ${WebsPort}")
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Refresh: Refresh the selected WebServer to re-read the configuration files
+# -----------------------------------------------------------------------
+
+fn_Refresh()
+{
+	fn_GetWebServerProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Refreshing WebServer ${WebsName}"	
+		kill -USR1 ${process}
+	else
+		fn_Message 2 "WebServer ${WebsName} is not running"
+	fi	
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Stop: Stop the selected WebServer
+# -----------------------------------------------------------------------
+
+fn_Stop()
+{
+	fn_GetWebServerProcess
+	if [ ${process} ]
+	then
+		fn_Message 3 "Stopping WebServer ${WebsName} - ${process}"
+		Command="${SuCommand}${SuQuote}kill ${FunctionOpts} ${process}${SuQuote}"
+		fn_RunCommand
+		sleep 3
+		fn_GetWebServerProcess
+		if [ ${process} ]
+		then
+			fn_Message 2 "WebServer ${WebsName}, process ${process} failed to be stopped"
+		else
+			fn_Message 3 "WebServer ${WebsName} stopped"
+		fi
+	else
+		fn_Message 2 "WebServer ${WebsName} is not started"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Status: Show the ps details for the select WebServer
+# -----------------------------------------------------------------------
+
+fn_Status()
+{
+	fn_GetWebServerProcess
+	if [ ${process} ]
+	then
+		ps -lfp ${process}
+	else
+		fn_Message 3 "WebServer ${WebsName} is not running"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Log: Show the logfile for the select WebServer
+# -----------------------------------------------------------------------
+
+fn_Log()
+{
+	fn_Message 3 "Showing log file details for ${WebsName}\n"
+	tail ${FunctionOpts} ${WebsLogD}/logs/${WebsLogF}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_Create: Create a webserver and allow user to change any of 
+# the default values, which are then written to a webserver.rc file in the 
+# webserver home directory
+# -----------------------------------------------------------------------
+
+fn_Create()
+{
+	# ---
+	# Ask for WebServer name and check validty of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+		echo; echo -e "Please enter a name for the new WebServer: \c"
+		read WebsName
+		fn_CheckWebsName
+	done
+
+	# ---
+	# Ask for port number and check validity of entry
+	# ---
+
+	completed=no
+	while [ "${completed}" = "no" ]
+	do
+		WebsPort=${WebsPortDefault}
+                echo -e "Please enter the port number for the WebServer [default ${WebsPortDefault}]: \c"
+                read WebsPortResponse
+                [[ "${WebsPortResponse}" = "" ]] || WebsPort=${WebsPortResponse}
+		fn_CheckWebsPort
+	done
+
+	# ---
+	# Allow user to change any of the default WebServer parameters
+	# ---
+
+	echo; echo "Please review the following list of default WebServer parameters"
+	changeVar=no
+	addedVars=()
+	addVar=1
+	while [ "${changeVar}" != "ok" -a  "${changeVar}" != "q" ]
+	do
+		fn_SetWebServerParams
+	done
+	[ "${changeVar}" = "q" ] && return
+	for x in "${WebsVal[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	fn_CreateWebServer
+	echo ; echo -e "Would you like to start webserver ${WebsName}? [y/n]: \c"
+	read startWebServer
+	[ "$startWebServer" = "y" ] && fn_Start
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_SetWebServerParamrs: Set the WebServer parameters for the WebServer
+# ---------------------------------------------------------------------------
+fn_SetWebServerParams()
+{
+	fn_ListWebServerParams
+	echo "[${nextVar}] Add a new parameter: "
+	echo ; echo -e "Please select any parameters that you would like to change or 'ok' to proceed ['q' to quit]: \c"
+	read changeVar
+	[ "${changeVar}" = "ok" -o "${changeVar}" = "q" ] && return
+	if [ ${changeVar} -gt 0 -a ${changeVar} -le ${nextVar} ]
+	then
+                if [ "${websVar[${changeVar}]}" = "WebsRoot" -o "${websVar[${changeVar}]}" = "ITRS_HOME" ]
+                then
+                        echo -e "The WebsRoot and ITRS_HOME parameters cannot be changed once they have been set in the configuration file. Press return to continue: \c"
+                        read dummy
+                        return
+                fi
+
+		# ---
+		# if they have selected to add a new parameter then ask for parameter name and add 1 to nextVar
+		# ---
+
+		if [ ${changeVar} = ${nextVar} ]
+		then
+			echo -e "Enter the new parameter name: \c"
+			read newParamName
+			websVar[${changeVar}]=${newParamName}
+			nextVar=$(( ${nextVar} + 1 ))
+		fi
+
+		# ---
+		# ask for new parameter value
+		# ---
+
+		echo -e "Enter new value for parameter ${websVar[${changeVar}]}: \c"
+		read newParamVal
+
+		# ---
+		# The follow awk statement will add double quote marks to any text that
+		# contains spaces and which doesn't already contain double quote marks
+		# ---
+
+		newParamVal=$(echo ${newParamVal} | awk '{if ( index( $0," ") > 0 ){if ( index( $0, "\"") > 0 ){print $0} else {print "\""$0"\""} } else {print $0} } ' )
+
+		# ---
+		# make sure to change the actual variable value as well as the stored variable that is used for listing
+		# ---
+
+		websVal[${changeVar}]=${newParamVal}
+		eval ${websVar[${changeVar}]}=${newParamVal}
+
+		# ---
+		# Check if the parameter has already been changed/added to create list of changed parameters
+		# ---
+
+		fn_CheckElement "${changeVar}"
+		if [ $? = 0 ]
+		then
+			addedVars[${addVar}]=${changeVar}
+			addVar=$(( ${addVar} + 1 ))
+		fi
+		return
+	fi
+	echo "Invalid option entered"
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckElement: Check if a value exists in an array
+# ---------------------------------------------------------------------------
+
+fn_CheckElement()
+{
+	local x 
+	for x in "${addedVars[@]}"; do [[ "$x" == "$1" ]] && return 1; done 
+	return 0 
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebsName: Check the WebServer name is valid
+# N.B. couldn't get [[:alnum:]_] or [:word:] to work with awk so had to use
+# clumsy character selection - please change if possible
+# ---------------------------------------------------------------------------
+
+fn_CheckWebsName()
+{
+	if [ -d "${WebsRoot}/webservers/${WebsName}" ]
+	then
+		fn_Message 2 "WebServer ${WebsName} already exists"
+	else
+		if [[ $(echo "${WebsName}" | awk '/[ .,-#~<>!£%(){}\[\]\&\$\*\^\"\\\/]/ { print }') ]]
+		then
+			fn_Message 2 "The WebServer name, ${WebsName} can only contain alpha-numeric characters or an underscore"
+		else
+			completed=yes
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_CheckWebsPort: Check that the chosen port for a WebServer is valid
+# ---------------------------------------------------------------------------
+
+fn_CheckWebsPort()
+{
+        if ! [[ ${WebsPort} -gt 1024 && ${WebsPort} -lt 65535 ]]
+	then
+                fn_Message 2 "Port ${WebsPort} is not in the correct range 1025 <-> 65535"
+        else
+        	nstat=$(netstat -na | grep "\.${WebsPort}")
+        	if [[ ${nstat} != "" ]]
+		then
+			fn_Message 2 "The port is in use. Netstat details: ${nstat}. Please use another port"
+        	else
+			if grep -i "WebsPort=${WebsPort}" ${WebsRoot}/webservers/*/webserver.rc >/dev/null 2>&1
+			then
+				echo "Port ${WebsPort} is already used by an existing webserver"
+			else
+				completed=yes
+			fi
+		fi
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_RunCommand: Check to see if the 'su' element of the command
+# has been set and if so then print a message before the 'password' prompt
+# is written and also check exit code afterwards and exit if not zero
+# ---------------------------------------------------------------------------
+
+fn_RunCommand()
+{
+        [[ "${SuCommand}" != "" && "${CommandUser}" != "root" ]] && fn_Message 3 "The webserver user (${WebsUser}) is different, so you will need to provide a password for the account"
+	( eval ${Command} )
+	[[ "${SuCommand}" != "" && "$?" != "0" ]] && fn_Message 1 "The command failed: Exiting..."
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_Details: Detail the current settings for the selected WebServer
+# ---------------------------------------------------------------------------
+
+fn_Details()
+{
+	WebsPort=$(grep "WebsPort" "${WebsHome}/webserver.rc" | cut -d"=" -f2 )
+echo ${WebsPort}
+	fn_Message 3 "Details for webserver ${WebsName} running on port ${WebsPort} owned by user ${WebsUser} are:"
+	fn_StoreParams
+	fn_ListWebServerParams
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WebsList: Display the list of active webservers
+# -----------------------------------------------------------------------
+
+fn_WebsList()
+{
+	if [ ! -d ${WebsRoot}/webservers ]
+	then
+		fn_Message 3 "There are currently no WebServers configured"
+		exit
+	fi
+	echo -e "\nThe list of currently active WebServers are:\n"
+	IFS=$'\n'
+        for x in $(ls ${WebsRoot}/webservers | grep -v "\.")
+        do
+                echo "WebServer ${x}"
+        done
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateCommand: Create the command string
+#                            If the user running the command is different
+#                            from the user that is set for the webserver, the
+#                            $SuCommand variable will contain the relevant
+#                            su details
+# -----------------------------------------------------------------------
+fn_CreateCommand()
+{
+        Command="${SuCommand}${SuQuote}${SuExport}${WebsExec} "
+        Command="${Command} -Duser.home=${WebsHome}"
+        Command="${Command} -Xmx${WebsXmx}"
+        Command="${Command} -Djava.awt.headless=true"
+        Command="${Command} -Dcom.itrsgroup.configuration.file=${WebsHome}/config/config.xml"
+        Command="${Command} -Dcom.itrsgroup.dashboard.resources.dir=${WebsBins}/${WebsBase}/resources"
+#JAVA_LIBRARY_PATH
+        Command="${Command} -Djava.library.path=${WebsLibs}"
+#LOG_PROPERTIES
+        Command="${Command} -Dlog4j.configuration=file:${WebsHome}/config/log4j.properties"
+#PATH_FOR_LOG4J
+        Command="${Command} -Dworking.directory=${WebsHome}"
+#JAVA_PROPS
+        Command="${Command} -Dcom.itrsgroup.legacy.database.maxconnections=100"
+#BDO_FLAGS
+        Command="${Command} -Dcom.itrsgroup.bdosync=DataView,BDOSyncType_Level,DV1_SyncLevel_RedAmberCells"
+#JMX_FLAGS
+#       Command="${Command} -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+#DUMP_HEAP_ARGS
+        Command="${Command} -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp"
+#JAR_PATH
+        Command="${Command} -jar ${WebsBins}/${WebsBase}/geneos-web-server.jar"
+#WEBAPPS
+        Command="${Command} -dir ${WebsBins}/${WebsBase}/webapps"
+        Command="${Command} -port ${WebsPort}"
+        Command="${Command} ${WebsLicP}"
+        Command="${Command} ${WebsLicH}"
+        Command="${Command} ${WebsOpts}"
+
+}
+
+
+# -----------------------------------------------------------------------
+# Function fn_PrintCommand: Print 'command' line for WebServer
+# -----------------------------------------------------------------------
+
+fn_PrintCommand()
+{
+	fn_CreateCommand
+	echo
+	echo "COMMAND for ${WebsName}: ${Command}${SuQuote}"
+	echo "LD_LIBRARY_PATH for ${WebsName}: ${LD_LIBRARY_PATH}"
+	echo
+}
+
+# -----------------------------------------------------------------------
+# Function fn_StoreDefaultParams: Store the default parameters. These are
+# used either in the create function to print the list and accept changes
+# to the list, or to list the parameters for a webserver (after any user
+# parameters have been changed or added
+# -----------------------------------------------------------------------
+
+fn_StoreDefaultParams()
+{
+	websVar=()
+	websVal=()
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		nextVar=1
+		IFS=$'\n'
+		for gVar in $(grep "^[^#]" ${ProgramPath}/${ConfigFile})
+		do
+			websVar[${nextVar}]=$(echo $gVar | cut -d"=" -f1)
+			websVal[${nextVar}]=$(echo $gVar | cut -d"=" -f2)
+			# ---
+			# add the WebServer name to the WebsLogD variable value
+			# ---
+			if [ "${websVar[${nextVar}]}" = "WebsLogD" ]
+			then
+				websVal[${nextVar}]="${websVal[${nextVar}]}/${WebsName}"
+			fi
+			nextVar=$(( $nextVar + 1 ))
+		done
+	else
+		fn_Message 1 "Can't find the webserver configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_StoreParams: Add any user parameters to the stored webserver 
+# parameters. once these have been extracted, each default setting needs to be
+# checked. If the variable exists in the default list it will overwrite the
+# variables, if it doesn't exist in the default list it will append it to the 
+# array list 
+# ---------------------------------------------------------------------------
+
+fn_StoreParams()
+{
+	fn_StoreDefaultParams
+        [[ -e "${WebsRoot}/webservers/${WebsName}/webserver.rc" ]] || fn_Message 1 "No webserver.rc file for WebServer ${WebsName}. Exiting..."
+	IFS=$'\n'
+	for uVar in $(grep "^[^#]" "${WebsRoot}/webservers/${WebsName}/webserver.rc")
+	do
+		userVar=$(echo $uVar | cut -d"=" -f1)
+		userVal=$(echo $uVar | cut -d"=" -f2)
+		if [ "${userVar}" != "WebsUser" ]
+		then
+			x=1
+			changed=no
+			while [ $x -lt $nextVar ]
+			do
+				if [ ${userVar} = ${websVar[${x}]} ]
+				then
+					changed=yes
+					websVar[${x}]=${userVar}
+					websVal[${x}]=${userVal}
+					[[ "${websVar[${x}]}" = "WebsLogD" ]] && websVal[${x}]="${websVal[${x}]}/${WebsName}"
+					x=${nextVar}
+				fi
+				x=$(( ${x} + 1 ))
+			done
+			if [ "${changed}" = "no" ]
+			then
+				websVar[$nextVar]=${userVar}
+				websVal[$nextVar]=${userVal}
+				nextVar=$(( $nextVar + 1 ))
+			fi
+		fi
+	done
+}
+
+# ---------------------------------------------------------------------------
+# Function fn_ListWebServerParams: Print out the contents of the stored parameters
+# ---------------------------------------------------------------------------
+
+fn_ListWebServerParams()
+{
+	echo
+	x=1
+	extraText="\t\t[This parameter cannot be changed once set in the webserverctl.rc file]" 
+	while [ $x -lt $nextVar ]
+	do
+		printText=""
+		if [ "${Instance}" = "create" ]
+		then
+			[ "${websVar[${x}]}" = "WebsRoot" -o "${websVar[${x}]}" = "ITRS_HOME" ] && printText=${extraText}
+		fi
+		[ "${websVar[${x}]}" = "WebsBase" ] && printText="(version$(ls -ld ${WebsBins}/${WebsBase} | cut -d'>' -f2))"
+		echo -e "[${x}] ${websVar[${x}]} : ${websVal[${x}]} ${printText}"
+		x=$(( $x + 1 ))
+	done
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetDefaultParams: check for existence of config file and run it
+# to set the default variables.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Webs' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetDefaultParams()
+{
+	if [ -f ${ProgramPath}/${ConfigFile} ]
+	then
+		. ${ProgramPath}/${ConfigFile}
+		IFS=$'\n'
+		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Webs" | grep "=")
+		do
+			export ${xVar}
+		done
+	else
+		fn_Message 1 "Can't find the webserver configuration file (${ProgramPath}/${ConfigFile})"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_SetParams: Set the parameters for the webserver. The default
+# parameters will be set by fn_SetDefaultParams, so only overwrite any if
+# there is a webserver.rc file in the webserver directory.
+# Once the file has been sourced, export any variables that do not begin
+# with 'Webs' as these will invariably want to be made available to other
+# programs, e.g. Oracle, Sybase etc.
+# -----------------------------------------------------------------------
+
+fn_SetParams()
+{
+	SuCommand=""
+	SuQuote=""
+	SuExport=""
+	fn_SetOS
+	WebsExec=${WebsBins}/${WebsBase}/JRE/bin/java
+	WebsHome="${WebsRoot}/webservers/${WebsName}"
+	WebsIncl="${WebsRoot}/webserver_config/shared"
+
+	if [ "${Instance}" != "create" ]
+	then
+	        [[ -e "${WebsHome}/webserver.rc" ]] || fn_Message 1 "No webserver.rc file for WebServer ${WebsName}. Exiting..."
+
+		# ---
+		# source the webserver.rc file and export any additional variables that have 
+		# have been set other than the standard WebsXxxx ones
+		# ---
+
+		. ${WebsHome}/webserver.rc
+
+		[[ "${WebsUser}" = "" ]] && fn_Message 1 "The WebServer User must contain a value"
+		IFS=$'\n'
+		for xVar in $(cat "${WebsHome}/webserver.rc" | grep -v "^#" | grep -v "Webs" | grep "=")
+		do
+			export ${xVar}
+		done
+
+		if [ "${WebsUser}" != "${CommandUser}" ]
+		then
+			fn_WriteWebServerExports
+			SuCommand="su ${WebsUser} -c "
+			SuQuote='"'
+			SuExport=". ${WebServerExports} ; "
+		fi
+		WebsPort=$(grep "WebsPort" ${WebsHome}/webserver.rc | cut -d"=" -f2 )
+	fi
+
+	WebsLogD=${WebsLogD}/${WebsName}
+	[[ "${WebsLicP}" != "" ]] && WebsLicP="-licd-port ${WebsLicP}"
+	[[ "${WebsLicH}" != "" ]] && WebsLicH="-licd-host ${WebsLicH}"
+	export LD_LIBRARY_PATH=${WebsLibs}:${env_LD_LIBRARY_PATH}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_WriteWebServerExports: Create a file that holds all of the 
+# relevant EXPORT commands to start the webserver. This is only done where 
+# an 'su' command is going to be used due to the WebServer User being different
+# from the Command User as the script environment is not passed to the su
+# shell
+# -----------------------------------------------------------------------
+
+fn_WriteWebServerExports()
+{
+	echo > ${WebServerExports}
+	[[ "$?" != 0 ]] && fnMessage 1 "Failed to write WebServer Exports file. Exiting..."
+	IFS=$'\n'
+	for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Webs" | grep "=")
+	do
+		echo "export ${xVar}" >> ${WebServerExports}
+	done
+	IFS=$'\n'
+	for xVar in $(cat "${WebsHome}/webserver.rc" | grep -v "^#" | grep -v "Webs" | grep "=")
+	do
+		echo "export ${xVar}" >> ${WebServerExports}
+	done
+	echo "export LD_LIBRARY_PATH=${WebsLibs}:${env_LD_LIBRARY_PATH}" >> ${WebServerExports}
+}
+
+# -----------------------------------------------------------------------
+# Function fn_CreateWebServer: Create the relevant environment for the webserver
+# -----------------------------------------------------------------------
+
+fn_CreateWebServer()
+{
+	fn_SetParams
+        if [ ! -d ${WebsRoot}/webservers ]
+        then
+                [[ ! -w ${WebsRoot} ]] && fn_Message 1 "User ${CommandUser} cannot write to the ${WebsRoot} directory. Exiting..."
+                mkdir ${WebsRoot}/webservers
+        fi
+	[[ ! -w ${WebsRoot}/webservers ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${WebsRoot}/webservers directory. Exiting..."
+	[[ ! -r ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the webserver template file. Exiting..."
+	fn_Message 3 "Creating directories for ${WebsName}"
+	mkdir -p ${WebsHome}
+	mkdir -p ${WebsHome}/config
+	mkdir -p ${WebsHome}/logs
+	[[ "$?" != "0" ]] && fn_Message 1 "Failed to create WebServer directory structure ${WebsHome}. Exiting..."
+
+	# ---
+	# WebsLogD defaults to WebsHome, but can be set differently if required
+	# ---
+
+	if [ ! -d "${WebsLogD}" ]
+	then
+		mkdir -p "${WebsLogD}"
+		[[ "$?" != "0" ]] && fn_Message 1 "Failed to create logfile directory ${WebsLogD}. Exiting..."
+	fi
+	fn_Message 3 "Copying config.xml.min.tmpl"
+	
+	#cat  ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl | sed -e "s/GATEWAY_PORT/${WebsPort}/g" -e "s/GATEWAY_NAME/${WebsName}/g" -e "s~GATEWAY_INCLUDES~${WebsIncl}~g" > "${WebsHome}"/config/config.xml
+	cp  ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl "${WebsHome}"/config/config.xml
+	cp  ${WebsBins}/${WebsBase}/config/log4j.properties "${WebsHome}"/config/log4j.properties
+
+	# ---
+	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
+	# ---
+
+	rcfile=${WebsHome}/webserver.rc
+	echo -e "#! /bin/bash\n#\n# webserver.rc file for webserver ${WebsName}\n# Auto generated by webserverctl: $(date)" > "${rcfile}"
+	echo -e "# All entries in this file are either overrides of default values or additional parameters" >> "${rcfile}"
+	echo -e "\nWebsUser=${CommandUser}" >> "${rcfile}"
+	echo -e "\nWebsPort=${WebsPort}" >> "${rcfile}"
+	if [ "${addedVars[1]}" != "" ]
+	then
+		for x in "${addedVars[@]}"
+		do
+			echo "${websVar[${x}]}=${websVal[${x}]}" >> "${rcfile}"
+		done 
+	fi
+	fn_Message 3 "Environment created for ${WebsName}"
+}
+
+# -----------------------------------------------------------------------
+# Function fn_RemoveDirs: Remove the relevant directories for the webserver
+# -----------------------------------------------------------------------
+
+fn_RemoveDirs()
+{
+	echo; fn_Message 3 "Are you sure you want to remove all directories and contents for ${WebsName}? [Y/N]: \\c"
+	read input
+	if [ "${input}" = "y" -o "${input}" = "Y" ]
+	then
+		fn_GetWebServerProcess
+		if [ ${process} ]
+		then
+			fn_Message 3 "WebServer ${WebsName} is currently running. Shutting down..."
+			fn_Stop
+		fi
+		fn_Message 3 "Deleting directories for ${WebsName}"
+		Command="${SuCommand}${SuQuote}rm -rf ${WebsHome}${SuQuote}"
+		fn_RunCommand
+		if [ -d "${WebsLogD}" ]
+		then
+			fn_Message 3 "Deleting separate log directory for ${WebsName}"
+			Command="${SuCommand}${SuQuote}rm -rf ${WebsLogD}${SuQuote}"
+			fn_RunCommand
+		fi
+		fn_Message 3 "WebServer ${WebsName} removed"
+	else
+		fn_Message 3 "Operation cancelled"
+	fi
+}
+
+# -----------------------------------------------------------------------
+# Function fn_PerformFunction: run the relevant function (arg 2)
+# -----------------------------------------------------------------------
+
+fn_PerformFunction()
+{
+	if [ "$Function" = "" ]
+	then
+		fn_Usage
+		fn_Message 1 "Please include a relevant function"
+	fi
+
+        case ${Function} in
+                start|Start|START)		fn_Start	    	                  ;;
+                stop|Stop|STOP)			fn_Stop                		          ;;
+                restart|Restart|RESTART)	fn_Stop && sleep 10 && fn_Start           ;;
+                refresh|Refresh|REFRESH)	fn_Refresh                                ;;
+                status|Status|STATUS)		fn_Status                                 ;;
+                log|Log|LOG)			fn_Log                                 ;;
+                details|Details|DETAILS)	fn_Details                                ;;
+		delete|Delete|DELETE)		fn_RemoveDirs				  ;;
+		command|Command|COMMAND)	fn_PrintCommand                           ;;
+                *)				fn_Usage ; fn_Exit 0                      ;;
+        esac
+}
+
+# -------------------------------------------------------------------------
+# Function fn_SetOS: Set the OS for use in executable
+# -------------------------------------------------------------------------
+
+fn_SetOS()
+{
+	OS=$(uname -s | tr "[A-Z]" "[a-z]" | sed s/sunos/sun/)
+	i386=$(uname -a | grep i386)
+	if [[ ${OS} = "sun" && ${i386} != "" ]]
+	then
+		OS=${OS}"x86"
+	fi
+}
+
+# -------------------------------------------------------------------------
+# Function fn_Exit: exit script and do any clearup
+# -------------------------------------------------------------------------
+
+fn_Exit()
+{
+	[[ -e "${WebServerExports}" ]] && rm -f "${WebServerExports}"
+	exit $1
+}
+
+#######################################################################################
+#       End of Functions
+#######################################################################################
+#
+#       Start of Main Script
+#
+#######################################################################################
+
+# ----------
+# Set local variables
+#
+# LD_LIBRARY_PATH is read in and set here once so that it does not get added multiple
+# times when running against more than one WebServer
+# ----------
+
+env_LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+HostName=$(hostname)
+UserName=${LOGNAME}
+OS=$(uname -s)
+Instance=$1
+Function=$2
+FunctionOpts=$3
+
+# ---------
+# Check the config file exists and populate the default variables to set $WebsRoot
+# ---------
+
+fn_SetDefaultParams
+
+# --------
+# Check Instance. If 'All', then perfrom set function against all WebServers
+# else check for 'Create', 'List' etc. If single Instance entered then check
+# that the WebServer exists, if o.k. then perform set function against WebServer
+# --------
+
+case "${Instance}" in
+        all|All|ALL)		IFS=$'\n'
+				for WebsName in $(ls ${WebsRoot}/webservers | grep -v "\.")
+				do
+					fn_SetParams
+					fn_PerformFunction
+					fn_SetDefaultParams
+				done
+				;;
+	list|List|LIST)		fn_WebsList ; fn_Exit 0 ;;
+	create|Create|CREATE)	Instance=create ; fn_SetDefaultParams ; fn_StoreDefaultParams ; fn_Create ; fn_Exit 0 ;;
+	usage|Usage|USAGE)	fn_Usage ; fn_Exit 0 ;;
+	help|Help|HELP|-h|-H)	fn_Usage ; fn_Exit 0 ;;
+	[a-z]*|[A-Z]*)		if [ -d "${WebsRoot}/webservers/${Instance}" ]
+				then
+					WebsName="${Instance}"
+					fn_SetDefaultParams
+					fn_SetParams
+					fn_PerformFunction
+				else
+					fn_Message 2 "WebServer ${Instance} not found" 
+					fn_WebsList
+					fn_Exit 2
+				fi
+				;;
+	*)			fn_Usage ; fn_Exit 0 ;;
+esac
+
+fn_Exit 0
+
+###########################################################
+#
+#       EOS End of Script
+#
+###########################################################

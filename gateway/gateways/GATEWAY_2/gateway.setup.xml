@@ -24500,6 +24500,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<transaction>
 								<update>
 									<property>state/@severity</property>
@@ -25416,6 +25417,19 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</urlElements>
 				<targets>
 					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7033&quot;)]/managedEntity[(@name=&quot;Coherence&quot;)]/sampler[(@name=&quot;Coherence-Service&quot;)][(@type=&quot;Coherence&quot;)]/dataview[(@name=&quot;Coherence-Service&quot;)]/headlines/cell[(@name=&quot;StautsHA&quot;)]</target>
+				</targets>
+			</kba>
+		</kbaSet>
+		<kbaSet name="Article link for news readers">
+			<kba>
+				<label>Article</label>
+				<urlElements>
+					<urlElement>
+						<xpath>../cell[(@column=&quot;link&quot;)]/@value</xpath>
+					</urlElement>
+				</urlElements>
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;News&quot;)][(param(&quot;PluginName&quot;)=&quot;EXTRACTOR&quot;)]/dataview/rows/row/cell[(@column=&quot;description&quot;)]</target>
 				</targets>
 			</kba>
 		</kbaSet>
