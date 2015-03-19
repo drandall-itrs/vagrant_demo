@@ -18,7 +18,6 @@ echo "$_FILES" >> commit_comment.txt
 #git add *.xml > /dev/null
 #git add hooks > /dev/null
 
-git commit -a --file=commit_comment.txt --author="$fu <$su@$w>" > /dev/null
 
 echo "$_FILES" > commit_files.txt
 
@@ -27,6 +26,14 @@ read_dom() {
     read -d \< ENTITY CONTENT
 }
 
+# this function strips out some of the noise added by GSE
+# this stuff tends to cause merge conflicts when working with version control
+remove_datestamp() {
+    sed -i".bak" '/<!--Autosaved from gateway/d' $1
+    rm $1.bak
+    sed -i".bak" '/<!--Edited using Gateway Setup Editor version/d' $1
+    rm $1.bak
+}
 
 # Send back version number to Gateway
 ver=`git log --format="%h" -n 1`
@@ -35,9 +42,12 @@ echo "<setup><files>" > commit_return.txt
 while read_dom; do
     if [[ $ENTITY = "path" ]] ; then
 	echo "<file><path>$CONTENT</path><version>$ver</version></file>" >> commit_return.txt
+	remove_datestamp $CONTENT
     fi
 done < commit_files.txt
 echo "</files></setup>" >> commit_return.txt
+
+git commit -a --file=commit_comment.txt --author="$fu <$su@$w>" > /dev/null
 
 cat commit_return.txt
 
