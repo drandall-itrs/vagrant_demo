@@ -7,4 +7,4 @@
 WebsUser=vagrant
 
 WebsPort=8080
-WebsXmx=1024
+WebsXmx=1024m

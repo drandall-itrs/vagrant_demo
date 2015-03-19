@@ -42,7 +42,7 @@ WebsBase=active_prod
 WebsLogD=${WebsRoot}/webservers
 WebsLogF=webserver.log
 WebsMode=background
-WebsXmx=2048M
+WebsXmx=512M
 WebsLibs=${WebsBins}/${WebsBase}/JRE/lib:${WebsBins}/${WebsBase}/lib
 
 #########################################################
