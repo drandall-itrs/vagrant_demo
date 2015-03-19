@@ -1286,7 +1286,7 @@
 		</typeGroup>
 	</types>
 	<samplers>
-		<sampler disabled="true" name="New Sampler">
+		<sampler name="New Sampler" disabled="true">
 			<plugin>
 				<euem>
 					<scenarios>
@@ -24267,9 +24267,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</transaction>
 					<if>
                             &lt;lt&gt;
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						<transaction>
 							<update>
 								<property>state/@severity</property>
@@ -24278,9 +24280,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</transaction>
 						<if>
                                 &lt;lt&gt;
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							<transaction>
 								<update>
 									<property>state/@severity</property>
