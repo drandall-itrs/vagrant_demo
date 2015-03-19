@@ -42,7 +42,7 @@ WebmBase=active_prod
 WebmLogD=${WebmRoot}/webmontages
 WebmLogF=webmontage.log
 WebmMode=background
-WebmXmx=512M
+WebmXmx=1024M
 WebmLibs=${WebmBins}/${WebmBase}/JRE/lib:${WebmBins}/${WebmBase}/lib
 
 #########################################################
