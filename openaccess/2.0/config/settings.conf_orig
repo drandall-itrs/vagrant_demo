@@ -1,0 +1,132 @@
+####################################################################################################
+## Gateways to connect to accross the cluster
+## See https://oa.itrsgroup.com/docs/latest/cluster/gateway_connections.html
+####################################################################################################
+
+gateways {
+  Demo Gateway {
+    host = 192.168.142.20
+    port = 7050
+  }
+  # HotStandby Gateway {
+  #   primary {
+  #     host = "primary_host"
+  #     port = 7039
+  #   }
+  #   secondary {
+  #     host = "secondary_host"
+  #     port = 7039
+  #   }
+  #   user = "gateway_user"
+  #   password = "gateway_password"
+  #}
+}
+
+####################################################################################################
+## User authentication
+## See https://oa.itrsgroup.com/docs/latest/cluster/security/users.html
+####################################################################################################
+
+auth {
+  enabled = false
+  users {
+    # Passwords are hashed using bcrypt.
+    # To encode run below (from the OA node install directory):
+    #   java -cp "lib/*" com.itrsgroup.actor.auth.BCryptPasswordHasher <password>
+    "user" {
+      password =
+        "$2a$10$0/.uLmLRJoQS27UHSDE/eO6/oq.D.nmOEup1MNMBC60krmCkn6zYO" # 'password'
+      roles = ["ROLE_USER"]
+    }
+    "admin" {
+      password =
+        "$2a$10$AwzXv3KE0kGIyaN5uWPwUOWraJQFWuJRZLxKjDdVpqM5GMChDZ4oW" # 'admin'
+      roles = ["ROLE_USER", "ROLE_SUPERVISOR", "ROLE_CONFIG"]
+    }
+  }
+}
+
+####################################################################################################
+## Permissions specify what data each role can see.
+## If a role isn't specified it has no permissions.
+## See https://oa.itrsgroup.com/docs/latest/cluster/security/roles.html for full details.
+####################################################################################################
+
+permissions {
+  # Supervisor role has all permissions
+  ROLE_SUPERVISOR = All
+  ROLE_USER = All
+
+  ROLE_EXAMPLE {
+    permission1 {
+      Gateway = SomeGatewayName
+      Sampler = CPU
+    }
+    permission2 {
+      Dataview = SomeDataviewName
+      SomeEntityAttribute = SomeValue
+    }
+  }
+}
+
+####################################################################################################
+## Self monitoring
+## See http://oa.itrsgroup.com/docs/latest/monitoring/monitoring.html
+####################################################################################################
+
+monitoring {
+  enabled = false
+  metrics {
+    #these settings can be overwritten for any metric type if necessary
+    host = "localhost"
+    port = 7036
+    sampler = "Cluster Monitoring Sampler"
+    entity = "Cluster Monitoring Entity"
+
+    cluster-nodes {
+      enabled = true
+      view = clusterNodes
+    }
+
+    node-gateways {
+      enabled = true
+      view = gateways
+    }
+
+    node-clients {
+      enabled = true
+      view = clients
+    }
+
+    ###############################################################################################
+    # queries and orb queue stats are useful for diagnostics only, enable on a 'need to have' basis
+    ###############################################################################################
+    cluster-queries {
+      enabled = false
+      view = clusterQueries
+    }
+
+    node-orb-queue-stats {
+      enabled = false
+      view = queues
+    }
+  }
+}
+
+####################################################################################################
+## Black lists - Prevent harmful paths
+## See http://oaci.itrsgroup.com:9000/docs/latest/cluster/blacklists.html
+####################################################################################################
+
+blacklist {
+    # Paths that will not be serviced, the client will receive an error
+    dataset: [
+        "//cell",
+        "/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell",
+        "/geneos/gateway/directory/probe/managedEntity/sampler/dataview/headlines/cell"
+    ]
+    dataview: [
+        "//dataview",
+        "/geneos/gateway/directory/probe/managedEntity/sampler/dataview/"
+    ]
+}

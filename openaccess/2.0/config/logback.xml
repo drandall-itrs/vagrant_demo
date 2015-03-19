@@ -1,0 +1,41 @@
+<configuration>
+	<property name="LOG_FILENAME" value="${log.filename:-oacluster}" />
+    <property name="EMF2_INVALID_INDEX_FILTER"
+              value='logger.contains("NativeLoggerBridge") &amp;&amp; formattedMessage.contains("Received invalid index")' />
+
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>${EMF2_INVALID_INDEX_FILTER}</expression>
+            </evaluator>
+            <OnMatch>DENY</OnMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+		<file>${LOG_FILENAME}.log</file>
+		<encoder>
+			<pattern>%d [%thread] [%class] %5p - %m%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_FILENAME}.%d{dd-MM-yyyy}.log</fileNamePattern>
+			<maxHistory>60</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>${EMF2_INVALID_INDEX_FILTER}</expression>
+            </evaluator>
+            <OnMatch>DENY</OnMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+		<encoder>
+			<pattern>%d %5p - %lo{0} - %m%n</pattern>
+		</encoder>
+	</appender>
+	<root level="${log.level:-INFO}">
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</root>
+	<logger name="akka.contrib.pattern.ClusterSingletonManager" level="WARN" />
+</configuration>
