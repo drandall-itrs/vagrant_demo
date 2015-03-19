@@ -8599,6 +8599,12 @@ publishingPeriod=10</data>
 										</databaseName>
 									</mysql>
 								</database>
+								<userName>
+									<data>fix_user</data>
+								</userName>
+								<password>
+									<plaintext>fix_pass</plaintext>
+								</password>
 							</connection>
 						</fix-analyser2>
 					</plugin>
@@ -24270,9 +24276,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24287,9 +24295,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
