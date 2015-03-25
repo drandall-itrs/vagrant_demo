@@ -13,7 +13,7 @@
 			<location>../../gateway_config/shared/gateway_plugins.xml</location>
 		</include>
 		<include>
-			<priority>200</priority>
+			<priority>199</priority>
 			<required>true</required>
 			<location>../../gateway_config/shared/git/git_integration.xml</location>
 		</include>
@@ -22,6 +22,7 @@
 			<required>true</required>
 			<location>../../gateway_config/shared/oa/self-monitoring-gateway-include.xml</location>
 		</include>
+		<includeGroup name="New Include group"/>
 	</includes>
 	<probes>
 		<probeGroup name="Linux">
@@ -11885,6 +11886,17 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</commandRef>
 				</commands>
 			</task>
+		</command>
+		<command name="New Command">
+			<userCommand>
+				<type>script</type>
+				<runLocation>netprobe</runLocation>
+				<args>
+					<arg>
+						<static/>
+					</arg>
+				</args>
+			</userCommand>
 		</command>
 		<commandGroup name="Trading Environment">
 			<command disabled="true" name="Enable">
@@ -24269,9 +24281,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                             &lt;lt&gt;
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						<transaction>
@@ -24284,9 +24298,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
                                 &lt;lt&gt;
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							<transaction>

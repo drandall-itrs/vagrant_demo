@@ -18,6 +18,10 @@ echo "$_FILES" >> commit_comment.txt
 #git add *.xml > /dev/null
 #git add hooks > /dev/null
 
+gse="false"
+if echo "$_FILES" | grep -q "gseChanged"; then
+ gse="true"  
+fi
 
 echo "$_FILES" > commit_files.txt
 
@@ -44,10 +48,15 @@ while read_dom; do
 	echo "<file><path>$CONTENT</path><version>$ver</version></file>" >> commit_return.txt
 	remove_datestamp $CONTENT
     fi
+    if [[ $ENTITY = "gseChanged" ]] ; then
+        gse="true"
+    fi
 done < commit_files.txt
 echo "</files></setup>" >> commit_return.txt
 
-git commit -a --file=commit_comment.txt --author="$fu <$su@$w>" > /dev/null
-
+echo $gse
+if [ $gse = "true" ] ; then
+    git commit -a --file=commit_comment.txt --author="$fu <$su@$w>" > /dev/null
+fi
 cat commit_return.txt
 
