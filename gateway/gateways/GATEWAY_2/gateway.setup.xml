@@ -13,7 +13,7 @@
 			<location>../../gateway_config/shared/gateway_plugins.xml</location>
 		</include>
 		<include>
-			<priority>199</priority>
+			<priority>200</priority>
 			<required>true</required>
 			<location>../../gateway_config/shared/git/git_integration.xml</location>
 		</include>
@@ -22,7 +22,6 @@
 			<required>true</required>
 			<location>../../gateway_config/shared/oa/self-monitoring-gateway-include.xml</location>
 		</include>
-		<includeGroup name="New Include group"/>
 	</includes>
 	<probes>
 		<probeGroup name="Linux">
@@ -24282,9 +24281,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24299,9 +24300,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							

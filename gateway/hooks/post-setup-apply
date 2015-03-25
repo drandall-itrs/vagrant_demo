@@ -48,9 +48,6 @@ while read_dom; do
 	echo "<file><path>$CONTENT</path><version>$ver</version></file>" >> commit_return.txt
 	remove_datestamp $CONTENT
     fi
-    if [[ $ENTITY = "gseChanged" ]] ; then
-        gse="true"
-    fi
 done < commit_files.txt
 echo "</files></setup>" >> commit_return.txt
 
