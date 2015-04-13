@@ -9,4 +9,4 @@ NetpUser=vagrant
 NetpPort=7039
 BinSuffix=fix-analyser2-netprobe.linux_64
 NetpBase=active_prod_fix
-
+NetpLibs=${NetpBins}/${NetpBase}/lib:${NetpBins}/${NetpBase}/compat:${NetpBins}/${NetpBase}

@@ -11892,6 +11892,17 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</commands>
 			</task>
 		</command>
+		<command name="New Command">
+			<userCommand>
+				<type>script</type>
+				<runLocation>netprobe</runLocation>
+				<args>
+					<arg>
+						<static/>
+					</arg>
+				</args>
+			</userCommand>
+		</command>
 		<commandGroup name="Trading Environment">
 			<command disabled="true" name="Enable">
 				<targets>
