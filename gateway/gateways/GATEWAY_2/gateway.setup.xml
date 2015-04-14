@@ -24290,9 +24290,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24313,9 +24315,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -25024,6 +25028,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			<user name="slapp">
 				<fullName>Steve Lapp</fullName>
 			</user>
+			<user name="drandall"/>
 		</users>
 		<groups>
 			<group name="administrator">
