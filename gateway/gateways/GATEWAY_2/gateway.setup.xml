@@ -237,7 +237,7 @@
 					</managedEntity>
 					<managedEntity name="FKM Examples">
 						<probe ref="localhost_7034"/>
-						<sampler ref="FKM regex"/>
+						<sampler ref="FKM regex range"/>
 					</managedEntity>
 				</managedEntityGroup>
 				<managedEntityGroup name="SNMP">
@@ -11847,26 +11847,23 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="FKM Examples">
-			<sampler name="FKM regex">
+			<sampler name="FKM regex range">
 				<var-group>
 					<data>FKM</data>
 				</var-group>
 				<plugin>
 					<fkm>
+						<display>
+							<triggerMode>MULTIPLE</triggerMode>
+						</display>
 						<files>
 							<file>
 								<source>
 									<filename>
-										<data>/opt/geneos/gateway/resources/FKM_example/regex_info/regextest.log</data>
+										<data>/opt/geneos/regextest.log</data>
 									</filename>
 								</source>
 								<tables>
-									<table>
-										<severity>fail</severity>
-										<keyTable>
-											<fkmTable ref="Exceptions"/>
-										</keyTable>
-									</table>
 									<table>
 										<severity>fail</severity>
 										<keyTable>
@@ -11876,10 +11873,81 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 														<setKey>
 															<match>
 																<searchString>
-																	<data>x</data>
+																	<data>Elapsed time : ([0-1][0-9][0-9][0-9]|[0-1][0-9][0-9]|[0-1][0-9]|[0-1])milliseconds</data>
 																</searchString>
+																<rules>REGEXP</rules>
 															</match>
 														</setKey>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Range1</data>
+																</name>
+																<regex>
+																	<data>Elapsed time : ([0-1][0-9][0-9][0-9]|[0-1][0-9][0-9]|[0-1][0-9]|[0-1])milliseconds</data>
+																</regex>
+															</extractor>
+														</extractors>
+													</key>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data>Elapsed time : ([2-5][0-9][0-9][0-9])milliseconds</data>
+																</searchString>
+																<rules>REGEXP</rules>
+															</match>
+														</setKey>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Range2</data>
+																</name>
+																<regex>
+																	<data>Elapsed time : ([2-5][0-9][0-9][0-9])milliseconds</data>
+																</regex>
+															</extractor>
+														</extractors>
+													</key>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data>Elapsed time : ([6-9][0-9][0-9][0-9])milliseconds</data>
+																</searchString>
+																<rules>REGEXP</rules>
+															</match>
+														</setKey>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Range3</data>
+																</name>
+																<regex>
+																	<data>Elapsed time : ([6-9][0-9][0-9][0-9])milliseconds</data>
+																</regex>
+															</extractor>
+														</extractors>
+													</key>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data>Elapsed time : ([0-9][0-9][0-9][0-9][0-9][0-9]|[0-9][0-9][0-9][0-9][0-9]|1[0-9][0-9][0-9][0-9])milliseconds</data>
+																</searchString>
+																<rules>REGEXP</rules>
+															</match>
+														</setKey>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Range4</data>
+																</name>
+																<regex>
+																	<data>Elapsed time : ([0-9][0-9][0-9][0-9][0-9][0-9]|[0-9][0-9][0-9][0-9][0-9]|1[0-9][0-9][0-9][0-9])milliseconds</data>
+																</regex>
+															</extractor>
+														</extractors>
 													</key>
 												</keys>
 											</data>
@@ -11893,6 +11961,19 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</files>
 					</fkm>
 				</plugin>
+				<dataviews>
+					<dataview name="regex range">
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>range1</data>
+									</headline>
+								</data>
+							</var-headlines>
+						</additions>
+					</dataview>
+				</dataviews>
 			</sampler>
 		</samplerGroup>
 	</samplers>
@@ -24367,9 +24448,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24398,9 +24481,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
