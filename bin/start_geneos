@@ -8,4 +8,6 @@ rm /opt/geneos/netprobe/netprobes/7039_demo/*.db
 /opt/geneos/bin/netprobectl all start
 /opt/geneos/bin/webserverctl all start
 /opt/geneos/packages/openaccess/active_prod/oacluster.sh &
+/opt/geneos/bin/webserverctl all start
+/opt/geneos/packages/webmontage/active_prod/run &
 

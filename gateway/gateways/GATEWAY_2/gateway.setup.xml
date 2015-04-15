@@ -216,6 +216,7 @@
 							<type ref="default"/>
 						</addTypes>
 						<sampler ref="Messagbox"/>
+						<sampler ref="dashboard moving"/>
 					</managedEntity>
 					<managedEntity name="jmx">
 						<probe ref="localhost_7034"/>
@@ -11821,6 +11822,22 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</stateTracker>
 				</plugin>
 			</sampler>
+		</samplerGroup>
+		<samplerGroup name="dashboard elements">
+			<samplerGroup name="moving markers">
+				<sampler name="dashboard moving">
+					<var-group>
+						<data>Dashboard</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/moving/moving_line.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
 		</samplerGroup>
 	</samplers>
 	<actions>
@@ -24291,9 +24308,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24316,9 +24335,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							

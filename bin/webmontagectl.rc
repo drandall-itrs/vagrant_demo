@@ -34,6 +34,10 @@
 #
 #################################################################################
 
+JRE_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+GENEOS_LIBS=/opt/geneos/packages/webmontage/active_prod
+
 #ITRS_HOME=/export/home/itrs
 ITRS_HOME=/opt/geneos
 WebmRoot=${ITRS_HOME}/webmontage
@@ -43,7 +47,9 @@ WebmLogD=${WebmRoot}/webmontages
 WebmLogF=webmontage.log
 WebmMode=background
 WebmXmx=1024M
-WebmLibs=${WebmBins}/${WebmBase}/JRE/lib:${WebmBins}/${WebmBase}/lib
+JRE_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+JAVA_HOME=/usr/lib/jvm/jre-1.6.0-openjdk.x86_64
+WebmLibs=${WebmBins}/${WebmBase}/JRE/lib:${WebmBins}/${WebmBase}/lib:${JRE_HOME}/lib/amd64:${JRE_HOME}/lib/amd64/server
 
 #########################################################
 # end
