@@ -235,6 +235,10 @@
 							<type ref="gateway-sql"/>
 						</addTypes>
 					</managedEntity>
+					<managedEntity name="FKM Examples">
+						<probe ref="localhost_7034"/>
+						<sampler ref="FKM regex"/>
+					</managedEntity>
 				</managedEntityGroup>
 				<managedEntityGroup name="SNMP">
 					<attribute name="APP">SNMP</attribute>
@@ -11841,6 +11845,55 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</plugin>
 				</sampler>
 			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="FKM Examples">
+			<sampler name="FKM regex">
+				<var-group>
+					<data>FKM</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/opt/geneos/gateway/resources/FKM_example/regex_info/regextest.log</data>
+									</filename>
+								</source>
+								<tables>
+									<table>
+										<severity>fail</severity>
+										<keyTable>
+											<fkmTable ref="Exceptions"/>
+										</keyTable>
+									</table>
+									<table>
+										<severity>fail</severity>
+										<keyTable>
+											<data>
+												<keys>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data>x</data>
+																</searchString>
+															</match>
+														</setKey>
+													</key>
+												</keys>
+											</data>
+										</keyTable>
+									</table>
+								</tables>
+								<rewind>
+									<data>true</data>
+								</rewind>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
 		</samplerGroup>
 	</samplers>
 	<actions>
@@ -24313,9 +24366,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24342,9 +24397,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -25649,6 +25706,50 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 									</regex>
 								</extractor>
 							</extractors>
+						</key>
+					</keys>
+				</fkmTable>
+			</fkmTableGroup>
+			<fkmTableGroup name="Regex table">
+				<fkmTable name="Exceptions">
+					<keys>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>Exception</data>
+									</searchString>
+								</match>
+							</setKey>
+							<clearTime>
+								<data>3600</data>
+							</clearTime>
+							<severity>warning</severity>
+						</key>
+						<ignoreKey>
+							<match>
+								<searchString>
+									<data>DataNotFoundException</data>
+								</searchString>
+							</match>
+						</ignoreKey>
+						<key>
+							<setKey>
+								<match>
+									<searchString>
+										<data>ERROR</data>
+									</searchString>
+								</match>
+							</setKey>
+							<clearKey>
+								<match>
+									<searchString>
+										<data>DataNotFoundException</data>
+									</searchString>
+								</match>
+								<mode>latest</mode>
+							</clearKey>
+							<severity>fail</severity>
 						</key>
 					</keys>
 				</fkmTable>
