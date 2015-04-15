@@ -11860,7 +11860,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							<file>
 								<source>
 									<filename>
-										<data>/opt/geneos/regextest.log</data>
+										<data>/opt/geneos/gateway/resources/FKM_example/regex_info/regextest.log</data>
 									</filename>
 								</source>
 								<tables>
@@ -24449,9 +24449,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -24482,9 +24484,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
