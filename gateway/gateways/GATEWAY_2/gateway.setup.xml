@@ -220,6 +220,7 @@
 						</addTypes>
 						<sampler ref="Messagbox"/>
 						<sampler ref="dashboard moving"/>
+						<sampler ref="Tier 3 dashboard"/>
 					</managedEntity>
 					<managedEntity name="jmx">
 						<probe ref="localhost_7034"/>
@@ -11855,6 +11856,20 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						<toolkit>
 							<samplerScript>
 								<data>/opt/geneos/gateway/resources/moving/moving_line.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Tier 3">
+				<sampler name="Tier 3 dashboard">
+					<var-group>
+						<data>Dashboard</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/moving/tier3/tier3_dashboard.txt</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -25475,9 +25490,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25512,9 +25529,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
