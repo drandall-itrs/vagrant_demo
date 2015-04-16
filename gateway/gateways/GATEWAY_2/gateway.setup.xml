@@ -25795,9 +25795,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25852,9 +25854,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -30347,6 +30351,13 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		<enableReverseConnections>true</enableReverseConnections>
 		<catch-allFilter>ALLOW</catch-allFilter>
 	</selfAnnouncingProbes>
+	<exportedData>
+		<dataSet name="INFRASTRUCTURE Attribute">
+			<paths>
+				<path>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity[(attr(&quot;APP&quot;)=&quot;INFRASTRUCTURE&quot;)][(attr(&quot;CITY&quot;)=&quot;PARIS&quot;)]</path>
+			</paths>
+		</dataSet>
+	</exportedData>
 	<operatingEnvironment>
 		<!--SET PRIMARY_GATEWAY = 192.168.31.128:7022
 SET LOG_FREQUENCY = 10-->
