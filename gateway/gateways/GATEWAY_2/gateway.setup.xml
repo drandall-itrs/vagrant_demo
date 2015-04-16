@@ -133,7 +133,7 @@
 						<managedEntity name="winvista-standard">
 							<probe ref="192_168_31_1"/>
 							<addTypes>
-								<type ref="social media"/>
+								<type ref="News"/>
 							</addTypes>
 							<var name="remote_addresses">
 								<string>7021</string>
@@ -664,6 +664,17 @@
 				<sampler ref="Floating NetProbe Log"/>
 				<sampler ref="top_mem"/>
 			</type>
+			<typeGroup name="RSS ">
+				<type name="News">
+					<sampler ref="BBC Webmon"/>
+					<sampler ref="BBC News Extractor"/>
+					<sampler ref="BBC Politics Extractor"/>
+					<sampler ref="Telegraph Webmon"/>
+					<sampler ref="Telegraph Extractor"/>
+					<sampler ref="Eurex Extractor"/>
+					<sampler ref="Eurex Webmon"/>
+				</type>
+			</typeGroup>
 		</typeGroup>
 		<typeGroup name="Market Data">
 			<type name="gissing">
@@ -1203,7 +1214,7 @@
 				<sampler ref="TK1"/>
 				<sampler ref="TK2"/>
 			</type>
-			<type name="social media">
+			<type name="social media" disabled="true">
 				<sampler ref="BBC Webmon"/>
 				<sampler ref="BBC News Extractor"/>
 				<sampler ref="BBC Sport Extractor"/>
@@ -25493,9 +25504,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25536,9 +25549,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
