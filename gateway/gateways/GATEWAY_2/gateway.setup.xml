@@ -338,6 +338,14 @@
 						</addTypes>
 					</managedEntity>
 				</managedEntityGroup>
+				<managedEntityGroup name="Dashboard">
+					<managedEntity name="dashboard">
+						<probe ref="localhost_7034"/>
+						<addTypes>
+							<type ref="tier1 dashboard"/>
+						</addTypes>
+					</managedEntity>
+				</managedEntityGroup>
 			</managedEntityGroup>
 			<managedEntityGroup name="Paris">
 				<attribute name="CITY">PARIS</attribute>
@@ -1214,7 +1222,7 @@
 				<sampler ref="TK1"/>
 				<sampler ref="TK2"/>
 			</type>
-			<type name="social media" disabled="true">
+			<type disabled="true" name="social media">
 				<sampler ref="BBC Webmon"/>
 				<sampler ref="BBC News Extractor"/>
 				<sampler ref="BBC Sport Extractor"/>
@@ -1314,6 +1322,16 @@
 			</type>
 			<type name="autosys">
 				<sampler ref="Autosys"/>
+			</type>
+		</typeGroup>
+		<typeGroup name="Dashboard">
+			<type name="tier1 dashboard">
+				<sampler ref="CIRB - SLA"/>
+				<sampler ref="CIRB - OLA_DDA"/>
+				<sampler ref="Market Risk - SLA"/>
+				<sampler ref="Market Risk - OLA_DDA"/>
+				<sampler ref="Data Management - OLA_DDA"/>
+				<sampler ref="tier 1 dashboard sections"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -11885,6 +11903,252 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</toolkit>
 					</plugin>
 				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Tier 1">
+				<samplerGroup name="tier 1 dashboard">
+					<sampler name="CIRB - SLA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="CIRB - SLA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Insight PAC COB</data>
+											</row>
+											<row>
+												<data>Insight NA COB</data>
+											</row>
+											<row>
+												<data>Insight EUR COB</data>
+											</row>
+											<row>
+												<data>CDT Front End Availability</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="CIRB - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="CIRB - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Insight - Gateway</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Market Risk - SLA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Market Risk - SLA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Global Tp1 Reporting</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Market Risk - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Market Risk - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>RDS - Insight</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Data Management - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Data Management - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Myriad - Insight</data>
+											</row>
+											<row>
+												<data>Myriad - RDS</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="tier 1 dashboard sections">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="tier 1 dashboard sections">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>section</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-columns>
+										<data>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Credit Risk IB</data>
+											</row>
+											<row>
+												<data>Market Risk</data>
+											</row>
+											<row>
+												<data>Data Management</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+				</samplerGroup>
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="FKM Examples">
@@ -25505,9 +25769,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25550,9 +25816,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26231,6 +26499,130 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</block>
 					</rule>
 				</ruleGroup>
+			</ruleGroup>
+			<ruleGroup name="tier 1">
+				<rule name="Market Risk Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)]/dataview/rows/row[(@name=&quot;Market Risk&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="market risk">/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)][(param(&quot;Group&quot;)=&quot;Market Risk&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="market risk"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Credit Risk IB Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/rows/row[(@name=&quot;Credit Risk IB&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="credit risk IB">/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)][(param(&quot;Group&quot;)=&quot;Credit Risk IB&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="credit risk IB"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Data Management Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/rows/row[(@name=&quot;Data Management&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="Data Management">/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)][(param(&quot;Group&quot;)=&quot;Data Management&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="Data Management"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="default label">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/rows/row/cell[(@column=&quot;label&quot;)]</target>
+					</targets>
+					<priority>1000</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<target>
+									<rowName/>
+								</target>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="global tp1 label">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/rows/row[(@name=&quot;Global Tp1 Reporting&quot;)]/cell[(@column=&quot;label&quot;)]</target>
+					</targets>
+					<priority>10</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>Global T+1 Reporting</string>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="container headline severity">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/headlines/cell[(@name=&quot;container&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="severityCol">../../rows/row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="severityCol"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
 			</ruleGroup>
 		</ruleGroup>
 	</rules>
