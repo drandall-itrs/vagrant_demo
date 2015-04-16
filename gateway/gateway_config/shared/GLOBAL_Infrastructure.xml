@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.14-130916/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<!-- Setup Template Version 20090202 -->
 	<types>
 		<typeGroup name="Global Inf">
@@ -2134,59 +2134,6 @@ This allows the Type to be re-used using different Environments-->
 			</rule>
 		</ruleGroup>
 	</rules>
-	<databaseLogging>
-		<enabled>false</enabled>
-		<tables>
-			<table name="os_table">
-				<type>double</type>
-			</table>
-			<table name="net_table">
-				<type>double</type>
-			</table>
-			<table name="text_table">
-				<type>string</type>
-			</table>
-		</tables>
-		<items>
-			<item name="cpu">
-				<targets>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;CPU&quot;)]/dataview/rows/row/cell[(@column=&quot;percentUtilisation&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;CPU&quot;)]/dataview/rows/row[(@name=&quot;Average_cpu&quot;)]/cell[wild(@column,&quot;percent*&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;CPU&quot;)]/dataview/rows/row/cell[(@column=&quot;%processorTime&quot;)]</target>
-				</targets>
-				<percentMargin>2.0</percentMargin>
-				<table ref="os_table"/>
-			</item>
-			<item name="net">
-				<targets>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;NETWORK&quot;)]/dataview/rows/row/cell[wild(@column,&quot;packet*Rate&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;NETWORK&quot;)]/dataview/rows/row/cell[wild(@column,&quot;percent*Errors&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;NETWORK&quot;)]/dataview/rows/row/cell[wild(@column,&quot;mbit*Rate&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;NETWORK&quot;)]/dataview/rows/row/cell[wild(@column,&quot;packet*Drop&quot;)]</target>
-				</targets>
-				<percentMargin>2.0</percentMargin>
-				<table ref="net_table"/>
-			</item>
-			<item name="disk">
-				<targets>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;DEVICEIO&quot;)]/dataview/rows/row/cell[(@column=&quot;cpuUtiliisation&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;DISK&quot;)]/dataview/rows/row/cell[(@column=&quot;percentageUsed&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;DISK&quot;)]/dataview/rows/row/cell[(@column=&quot;freeSpace&quot;)]</target>
-				</targets>
-				<percentMargin>2.0</percentMargin>
-				<table ref="os_table"/>
-			</item>
-			<item name="hardware">
-				<targets>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;HARDWARE&quot;)]/dataview/rows/row[wild(@name,&quot;memory*&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;HARDWARE&quot;)]/dataview/rows/row[wild(@name,&quot;total*&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
-					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;HARDWARE&quot;)]/dataview/rows/row[(@name=&quot;swapUsed&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
-				</targets>
-				<percentMargin>2.0</percentMargin>
-				<table ref="os_table"/>
-			</item>
-		</items>
-	</databaseLogging>
 	<environments>
 		<environmentGroup disabled="true" name="EMS">
 			<environment name="EMS Rule Defaults">
