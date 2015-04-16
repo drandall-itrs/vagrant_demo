@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Gateway-created setup include file for user INSTRUCTOR-LAP1\instructor at 86.182.168.209 -->
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.14-130916/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<authentication>
-		<authenticateUsers>true</authenticateUsers>
+		<authenticateUsers>false</authenticateUsers>
 		<users>
 			<userGroup name="Administrators">
 				<roleProperties>
