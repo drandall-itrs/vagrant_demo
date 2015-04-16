@@ -25772,9 +25772,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25821,9 +25823,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26505,7 +26509,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</rule>
 				</ruleGroup>
 			</ruleGroup>
-			<ruleGroup name="tier 1">
+			<ruleGroup name="Tier 1">
 				<rule name="Market Risk Container">
 					<targets>
 						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)]/dataview/rows/row[(@name=&quot;Market Risk&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
@@ -26628,6 +26632,22 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</transaction>
 					</block>
 				</rule>
+				<ruleGroup name="severity column">
+					<rule name="warning severity for tier 1">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Market Risk - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Market Risk - OLA_DDA&quot;)]/rows/row[(@name=&quot;RDS - Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+				</ruleGroup>
 			</ruleGroup>
 		</ruleGroup>
 	</rules>
