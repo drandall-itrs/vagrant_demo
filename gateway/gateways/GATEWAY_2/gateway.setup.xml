@@ -398,6 +398,9 @@
 					<managedEntity name="np7033-INFRA">
 						<probe ref="localhost_7033"/>
 					</managedEntity>
+					<managedEntity name="np7036-INFRA">
+						<probe ref="localhost_7036"/>
+					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
 		</managedEntityGroup>
@@ -25791,9 +25794,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25846,9 +25851,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
