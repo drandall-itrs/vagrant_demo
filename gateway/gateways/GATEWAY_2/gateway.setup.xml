@@ -25491,9 +25491,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25530,9 +25532,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26081,6 +26085,134 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</if>
 				</block>
 			</rule>
+		</ruleGroup>
+		<ruleGroup name="Dashboard example rules">
+			<ruleGroup name="Tier 3">
+				<rule name="Tier 3 normal">
+					<targets>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Power Mart&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Feed Gen&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Scheduler&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;TES&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Monte Carlo&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Others&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;MaRS&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Std Rules&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight RE&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Web Front End&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Tier 3 warning">
+					<targets>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Loader&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Primo&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Database&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Tier 3 critical">
+					<targets>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;ZCDB&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Comet&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Star&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<ruleGroup name="headlines">
+					<rule name="Feed Processing container">
+						<targets>
+							<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Feed Processing Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Feed Processing&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Data Processing container">
+						<targets>
+							<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Data Processing Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Data Processing&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Down Stream container 1">
+						<targets>
+							<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Down Stream Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Down Stream&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+				</ruleGroup>
+			</ruleGroup>
 		</ruleGroup>
 	</rules>
 	<dataSets>
