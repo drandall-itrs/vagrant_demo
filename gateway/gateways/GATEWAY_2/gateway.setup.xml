@@ -224,8 +224,8 @@
 							<type ref="default"/>
 						</addTypes>
 						<sampler ref="Messagbox"/>
-						<sampler ref="dashboard moving"/>
-						<sampler ref="Tier 3 dashboard"/>
+						<sampler ref="dashboard moving" disabled="true"/>
+						<sampler ref="Tier 3 dashboard" disabled="true"/>
 					</managedEntity>
 					<managedEntity name="jmx">
 						<probe ref="localhost_7034"/>
@@ -343,7 +343,7 @@
 						</addTypes>
 					</managedEntity>
 				</managedEntityGroup>
-				<managedEntityGroup name="Dashboard">
+				<managedEntityGroup name="Dashboard" disabled="true">
 					<attribute name="APP">DASHBOARD</attribute>
 					<managedEntity name="dashboard">
 						<probe ref="localhost_7034"/>
@@ -1344,7 +1344,7 @@
 				<sampler ref="Autosys"/>
 			</type>
 		</typeGroup>
-		<typeGroup name="Dashboard">
+		<typeGroup name="Dashboard" disabled="true">
 			<type name="tier1 dashboard">
 				<sampler ref="CIRB - SLA"/>
 				<sampler ref="CIRB - OLA_DDA"/>
@@ -11892,7 +11892,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 		</samplerGroup>
-		<samplerGroup name="dashboard elements">
+		<samplerGroup name="dashboard elements" disabled="true">
 			<samplerGroup name="moving markers">
 				<sampler name="dashboard moving">
 					<var-group>
@@ -25797,9 +25797,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25858,9 +25860,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26421,7 +26425,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</block>
 			</rule>
 		</ruleGroup>
-		<ruleGroup name="Dashboard example rules">
+		<ruleGroup name="Dashboard example rules" disabled="true">
 			<ruleGroup name="Tier 3">
 				<rule name="Tier 3 normal">
 					<targets>
