@@ -236,7 +236,7 @@
 						<sampler disabled="false" ref="MDM-spreads"/>
 						<sampler disabled="false" ref="MDM-spread-compare"/>
 						<sampler ref="MDM-raw-latency"/>
-						<sampler ref="MDM-Relative-Latency"/>
+						<sampler ref="MDM-Relative-Latency" disabled="true"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
