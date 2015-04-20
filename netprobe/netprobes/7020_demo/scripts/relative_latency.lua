@@ -6,7 +6,7 @@ local sa = require "geneos.sampler"
 local lt = require "geneos.latency"
 local md = require "geneos.marketdata"
 
-local config = require "config"
+local config = require "scripts.config"
 
 -- ----------------------------------------------------------------------------------
 -- These are the default values
