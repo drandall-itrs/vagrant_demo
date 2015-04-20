@@ -27,7 +27,7 @@
 			<required>true</required>
 			<location>../../gateway_config/shared/GLOBAL_Infrastructure.xml</location>
 		</include>
-		<include>
+		<include disabled="true">
 			<priority>1000</priority>
 			<required>true</required>
 			<location>../../gateway_config/shared/GLOBAL_Authentication.xml</location>
@@ -25806,9 +25806,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25875,9 +25877,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26879,7 +26883,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			<user name="slapp">
 				<fullName>Steve Lapp</fullName>
 			</user>
-			<user name="drandall" disabled="true">
+			<user disabled="true" name="drandall">
 				<fullName>David Randall</fullName>
 				<roleProperties>
 					<roleProperty/>
