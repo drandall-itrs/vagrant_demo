@@ -3,6 +3,8 @@
 # Delte fix analyser database
 rm /opt/geneos/netprobe/netprobes/7039_demo/*.db
 
+sudo /etc/init.d/mysqld start
+
 /opt/geneos/bin/licdctl     all start
 /opt/geneos/bin/gatewayctl  all start
 /opt/geneos/bin/netprobectl all start
