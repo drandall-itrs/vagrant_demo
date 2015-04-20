@@ -236,6 +236,7 @@
 						<sampler disabled="false" ref="MDM-spreads"/>
 						<sampler disabled="false" ref="MDM-spread-compare"/>
 						<sampler ref="MDM-raw-latency"/>
+						<sampler ref="MDM-Relative-Latency"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -603,6 +604,20 @@
 					</market-data-monitor>
 				</plugin>
 			</sampler>
+			<samplerGroup name="new">
+				<sampler name="MDM-Relative-Latency">
+					<plugin>
+						<market-data-monitor>
+							<script>
+								<data>scripts/relative_latency.lua</data>
+							</script>
+							<parameters>
+								<var ref="SimulationParams"/>
+							</parameters>
+						</market-data-monitor>
+					</plugin>
+				</sampler>
+			</samplerGroup>
 		</samplerGroup>
 	</samplers>
 	<rules>
