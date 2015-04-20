@@ -25807,9 +25807,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25878,9 +25880,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26828,9 +26832,8 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	</databaseLogging>
 	<authentication>
 		<authenticateUsers>false</authenticateUsers>
-		<enableSectionPermissions>true</enableSectionPermissions>
-		<enableDataPermissions>true</enableDataPermissions>
-		<combineMode>highest</combineMode>
+		<enableSectionPermissions>false</enableSectionPermissions>
+		<enableDataPermissions>false</enableDataPermissions>
 		<users>
 			<user name="apage">
 				<fullName>Andy Page</fullName>
@@ -26883,7 +26886,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			<user name="slapp">
 				<fullName>Steve Lapp</fullName>
 			</user>
-			<user disabled="true" name="drandall">
+			<user name="drandall">
 				<fullName>David Randall</fullName>
 				<roleProperties>
 					<roleProperty/>
@@ -26949,6 +26952,12 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	<auditOutputs>
 		<auditOutput name="Database Audit">
 			<database/>
+		</auditOutput>
+		<auditOutput name="GATEWAY_2 audit">
+			<flatFile>
+				<filename>/opt/geneos/gateway/gateways/GATEWAY_2/audit_file.txt</filename>
+				<archiveScript/>
+			</flatFile>
 		</auditOutput>
 	</auditOutputs>
 	<knowledgeBase>
