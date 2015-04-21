@@ -25828,9 +25828,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25923,9 +25925,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26774,7 +26778,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		<ruleGroup name="RSS">
 			<rule name="UK in description">
 				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;192_168_31_1&quot;)]/managedEntity[(@name=&quot;winvista-standard&quot;)]/sampler[(@name=&quot;BBC News Extractor&quot;)][(@type=&quot;News&quot;)]/dataview[(@name=&quot;BBC News&quot;)]/headlines/cell[(@name=&quot;Includes drugs&quot;)]</target>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;192_168_31_1&quot;)]/managedEntity[(@name=&quot;winvista-standard&quot;)]/sampler[(@name=&quot;BBC News Extractor&quot;)][(@type=&quot;News&quot;)]/dataview[(@name=&quot;BBC News&quot;)]/headlines/cell[(@name=&quot;Includes UK&quot;)]</target>
 				</targets>
 				<priority>1</priority>
 				<pathAliases>
