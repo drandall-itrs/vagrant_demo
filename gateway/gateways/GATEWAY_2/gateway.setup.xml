@@ -325,13 +325,13 @@
 				</managedEntityGroup>
 				<managedEntityGroup name="Adaptive Rules TBP">
 					<attribute name="APP">TBP/AR</attribute>
-					<managedEntity name="Data">
+					<managedEntity name="Data" disabled="true">
 						<probe ref="localhost_7040"/>
 						<addTypes>
 							<type ref="TBP Gateway"/>
 						</addTypes>
 					</managedEntity>
-					<managedEntity name="TBP">
+					<managedEntity name="TBP" disabled="true">
 						<probe ref="localhost_7040"/>
 						<addTypes>
 							<type ref="TBP Test Source"/>
@@ -11674,7 +11674,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="TBP and AR">
-			<sampler name="Prediction">
+			<sampler name="Prediction" disabled="true">
 				<plugin>
 					<Gateway-breachPredictor>
 						<predictors>
@@ -25830,9 +25830,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25929,9 +25931,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
