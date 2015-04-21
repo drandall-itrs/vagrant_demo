@@ -1641,7 +1641,7 @@
 								<processDescriptor ref="gateway2"/>
 							</process>
 							<process>
-								<processDescriptor ref="netprobe"/>
+								<processDescriptor ref="netprobe_7044"/>
 							</process>
 						</processes>
 						<!--Default settings have been used for these processes as no relevant processes descriptor could be found.-->
@@ -25814,9 +25814,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25893,9 +25895,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -28286,6 +28290,20 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</stop>
 				<logFile>
 					<data>/opt/geneos/.geneos/openaccess/log/geneos-services.log</data>
+				</logFile>
+			</processDescriptor>
+			<processDescriptor name="netprobe_7044">
+				<alias>
+					<data>netprobe_7044</data>
+				</alias>
+				<start>
+					<data>/opt/geneos/bin/netprobectl 7044_demo stop</data>
+				</start>
+				<stop>
+					<data>/opt/geneos/bin/netprobectl 7044_demo start</data>
+				</stop>
+				<logFile>
+					<data>/opt/geneos/netprobe/netprobes/7044_demo/netprobe.log</data>
 				</logFile>
 			</processDescriptor>
 		</processDescriptors>
