@@ -12470,7 +12470,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							<var-headlines>
 								<data>
 									<headline>
-										<data>Includes drugs</data>
+										<data>Includes UK</data>
 									</headline>
 								</data>
 							</var-headlines>
@@ -25827,9 +25827,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25920,9 +25922,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26766,6 +26770,30 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</rule>
 				</ruleGroup>
 			</ruleGroup>
+		</ruleGroup>
+		<ruleGroup name="RSS">
+			<rule name="UK in description">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;192_168_31_1&quot;)]/managedEntity[(@name=&quot;winvista-standard&quot;)]/sampler[(@name=&quot;BBC News Extractor&quot;)][(@type=&quot;News&quot;)]/dataview[(@name=&quot;BBC News&quot;)]/headlines/cell[(@name=&quot;Includes drugs&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="description">ancestor-or-self::managedEntity[(@name=&quot;winvista-standard&quot;)]/sampler[(@name=&quot;BBC News Extractor&quot;)][(@type=&quot;News&quot;)]/dataview[(@name=&quot;BBC News&quot;)]/rows/row/cell[contains(@value,&quot;UK&quot;)][(@column=&quot;description&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<count>
+								<dataItems>
+									<pathAlias ref="description"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<dataSets>
