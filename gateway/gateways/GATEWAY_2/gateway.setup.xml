@@ -1836,7 +1836,7 @@
 						<files>
 							<file>
 								<path>
-									<data>/opt/geneos/netprobe/logs/netprobe.7031.log</data>
+									<data>/opt/geneos/netprobe/netprobes/7044_demo/netprobe.log</data>
 								</path>
 								<expectedArrival>
 									<data>05:35</data>
@@ -25817,9 +25817,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25902,9 +25904,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
