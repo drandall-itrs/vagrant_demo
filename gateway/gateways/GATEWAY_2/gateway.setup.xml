@@ -1923,7 +1923,7 @@
 							<file>
 								<source>
 									<filename>
-										<data>/opt/geneos/gateway/logs/gateway2.7050.log</data>
+										<data>/opt/geneos/gateway/gateways/GATEWAY_2/gateway.log</data>
 									</filename>
 								</source>
 								<failTable>
@@ -1952,11 +1952,14 @@
 						<display>
 							<triggerMode>MULTIPLE</triggerMode>
 						</display>
+						<wildcardMonitorAllMatches>
+							<data>true</data>
+						</wildcardMonitorAllMatches>
 						<files>
 							<file>
 								<source>
 									<filename>
-										<data>/opt/geneos/netprobe/logs/netprobe.7031.log</data>
+										<data>/opt/geneos/netprobe/netprobes/70*_demo/netprobe.log</data>
 									</filename>
 								</source>
 								<failTable>
@@ -25808,9 +25811,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25881,9 +25886,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
