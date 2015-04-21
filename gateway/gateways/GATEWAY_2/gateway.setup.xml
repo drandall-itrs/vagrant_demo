@@ -1959,7 +1959,7 @@
 							<file>
 								<source>
 									<filename>
-										<data>/opt/geneos/netprobe/netprobes/70*_demo/netprobe.log</data>
+										<data>/opt/geneos/netprobe/netprobes/7031_demo/netprobe.log</data>
 									</filename>
 								</source>
 								<failTable>
@@ -25812,9 +25812,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25887,9 +25889,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
