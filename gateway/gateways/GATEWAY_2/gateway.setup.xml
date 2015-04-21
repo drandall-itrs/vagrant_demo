@@ -156,7 +156,7 @@
 							</var>
 							<sampler ref="Vista Standard"/>
 							<sampler ref="win-services"/>
-							<sampler ref="win-apps"/>
+							<sampler ref="win-apps" disabled="true"/>
 							<sampler ref="cpu-win"/>
 							<sampler ref="network"/>
 							<sampler ref="disk-win"/>
@@ -25818,9 +25818,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25905,9 +25907,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
