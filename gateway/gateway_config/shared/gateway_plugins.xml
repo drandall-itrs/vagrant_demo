@@ -41,7 +41,7 @@
 		<type name="Gateway Info">
 			<sampler ref="GW Gateway Data"/>
 			<sampler ref="GW Client Info"/>
-			<sampler ref="GW Managed Entity Data" disabled="true"/>
+			<sampler disabled="true" ref="GW Managed Entity Data"/>
 			<sampler ref="GW Probe Data"/>
 			<sampler ref="GW Severity Data"/>
 			<sampler ref="GW Snooze Data"/>
@@ -121,7 +121,7 @@
 					</dataview>
 				</dataviews>
 			</sampler>
-			<sampler name="GW Managed Entity Data">
+			<sampler name="xGW Managed Entity Data">
 				<var-group>
 					<data>Gateway Info</data>
 				</var-group>
