@@ -15192,12 +15192,12 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							<dataItem>
 								<property>@value</property>
 							</dataItem>
-							<integer>50</integer>
+							<integer>5</integer>
 						</gt>
 						<transaction>
 							<update>
 								<property>state/@severity</property>
-								<severity>warning</severity>
+								<severity>critical</severity>
 							</update>
 						</transaction>
 						<if>
@@ -15205,12 +15205,12 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 								<dataItem>
 									<property>@value</property>
 								</dataItem>
-								<integer>65</integer>
+								<integer>4</integer>
 							</gt>
 							<transaction>
 								<update>
 									<property>state/@severity</property>
-									<severity>critical</severity>
+									<severity>warning</severity>
 								</update>
 							</transaction>
 							<transaction>
@@ -25832,9 +25832,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25935,9 +25937,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
