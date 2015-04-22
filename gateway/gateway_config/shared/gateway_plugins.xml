@@ -121,7 +121,7 @@
 					</dataview>
 				</dataviews>
 			</sampler>
-			<sampler name="GW Managed Entity Data">
+			<sampler name="xGW Managed Entity Data">
 				<var-group>
 					<data>Gateway Info</data>
 				</var-group>
