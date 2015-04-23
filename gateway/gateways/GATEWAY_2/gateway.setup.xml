@@ -1930,7 +1930,7 @@
 									<fkmTable ref="fails"/>
 								</failTable>
 								<warningTable>
-									<fkmTable ref="warnings"/>
+									<fkmTable ref="warnings no info"/>
 								</warningTable>
 								<alias>
 									<data>gateway.log</data>
@@ -25869,9 +25869,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26006,9 +26008,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26899,6 +26903,38 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</block>
 			</rule>
 		</ruleGroup>
+		<ruleGroup name="Global Include override">
+			<ruleGroup name="GLOBAL Process">
+				<rule name="Instance Count 1">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;PROCESSES&quot;)]/dataview/rows/row[not(contains(@name,&quot;#&quot;))]/cell[(@column=&quot;instanceCount&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<if>
+							<lt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>1</integer>
+							</lt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+			</ruleGroup>
+		</ruleGroup>
 	</rules>
 	<alerting>
 		<hierarchy name="Message Volume Tracking by REGION by APP">
@@ -27529,6 +27565,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</key>
 				</keys>
 			</fkmTable>
+			<fkmTable name="warnings no info"/>
 			<fkmTableGroup name="Windows">
 				<fkmTable name="win_warnings">
 					<keys>
