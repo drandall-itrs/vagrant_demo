@@ -25853,9 +25853,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25976,9 +25978,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26865,6 +26869,34 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 	</rules>
 	<alerting>
 		<hierarchy name="Message Volume Tracking by REGION by APP">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<managedEntityAttribute>PRODUCT</managedEntityAttribute>
+					</match>
+				</level>
+			</levels>
+			<alert name="GENEOS">
+				<warning>
+					<level>
+						<notification>
+							<effect ref="message volume tracking script"/>
+						</notification>
+					</level>
+					<alwaysNotify>false</alwaysNotify>
+				</warning>
+				<critical>
+					<level>
+						<notification>
+							<effect ref="message volume tracking script"/>
+						</notification>
+					</level>
+					<alwaysNotify>false</alwaysNotify>
+				</critical>
+			</alert>
+		</hierarchy>
+		<hierarchy name="original Message Volume Tracking by REGION by APP" disabled="true">
 			<priority>1</priority>
 			<levels>
 				<level>
