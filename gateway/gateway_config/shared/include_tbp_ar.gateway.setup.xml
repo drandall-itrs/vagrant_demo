@@ -119,7 +119,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 		<sampler disabled="true" name="Breach Predictor"/>
 	</samplers>
 	<rules>
-		<rule name="Adaptive Rule">
+		<rule name="Adaptive Rule" disabled="true">
 			<targets>
 				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;CPU&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
 			</targets>
@@ -235,7 +235,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 				</if>
 			</block>
 		</rule>
-		<rule name="CPU_MAX_ERR Timeseries">
+		<rule name="CPU_MAX_ERR Timeseries" disabled="true">
 			<targets>
 				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MAX_C&quot;)]</target>
 			</targets>
@@ -249,7 +249,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 				</transaction>
 			</block>
 		</rule>
-		<rule name="CPU_MAX_WARN Timeseries">
+		<rule name="CPU_MAX_WARN Timeseries" disabled="true">
 			<targets>
 				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MAX_W&quot;)]</target>
 			</targets>
@@ -263,7 +263,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 				</transaction>
 			</block>
 		</rule>
-		<rule name="CPU_MIN_ERR Timeseries">
+		<rule name="CPU_MIN_ERR Timeseries" disabled="true">
 			<targets>
 				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MIN_C&quot;)]</target>
 			</targets>
@@ -277,7 +277,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 				</transaction>
 			</block>
 		</rule>
-		<rule name="CPU_MIN_WARN Timeseries">
+		<rule name="CPU_MIN_WARN Timeseries" disabled="true">
 			<targets>
 				<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/headlines/cell[(@name=&quot;MIN_W&quot;)]</target>
 			</targets>
@@ -291,7 +291,7 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 				</transaction>
 			</block>
 		</rule>
-		<rule name="Will Breach">
+		<rule name="Will Breach" disabled="true">
 			<targets>
 				<target>/geneos/gateway[(@name=&quot;GATEWAY 2&quot;)]/directory/probe[(@name=&quot;192_168_31_135_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Prediction&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Prediction&quot;)]/rows/row[(@name=&quot;Orders:1295691938&quot;)]/cell[(@column=&quot;Description&quot;)]</target>
 			</targets>
