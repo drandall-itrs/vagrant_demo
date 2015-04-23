@@ -8886,6 +8886,9 @@ publishingPeriod=10</data>
 						<host>
 							<data>www.bbc.co.uk</data>
 						</host>
+						<protocol>
+							<http/>
+						</protocol>
 						<scenarios>
 							<scenario>
 								<name> News Page</name>
@@ -8937,6 +8940,9 @@ publishingPeriod=10</data>
 						<host>
 							<data>www.itrsgroup.com</data>
 						</host>
+						<protocol>
+							<http/>
+						</protocol>
 						<scenarios>
 							<scenario>
 								<name> Home Page</name>
@@ -8977,8 +8983,11 @@ publishingPeriod=10</data>
 				<plugin>
 					<web-mon>
 						<host>
-							<data>192.168.40.133</data>
+							<data>192.168.142.20</data>
 						</host>
+						<protocol>
+							<http/>
+						</protocol>
 						<scenarios>
 							<scenario>
 								<name> Home Page</name>
@@ -25857,9 +25866,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25988,9 +25999,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
