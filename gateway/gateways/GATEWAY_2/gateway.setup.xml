@@ -25852,9 +25852,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25973,9 +25975,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26894,6 +26898,13 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 					</critical>
 					<alert name="CPU">
+						<warning>
+							<level>
+								<notification>
+									<effect ref="message volume tracking script"/>
+								</notification>
+							</level>
+						</warning>
 						<critical>
 							<level>
 								<notification>
