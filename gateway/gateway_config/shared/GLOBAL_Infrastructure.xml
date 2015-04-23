@@ -2095,7 +2095,7 @@ This allows the Type to be re-used using different Environments-->
 				<targets>
 					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;PROCESSES&quot;)]/dataview/rows/row[not(contains(@name,&quot;#&quot;))]/cell[(@column=&quot;instanceCount&quot;)]</target>
 				</targets>
-				<priority>1</priority>
+				<priority>200</priority>
 				<block>
 					<if>
 						<lt>

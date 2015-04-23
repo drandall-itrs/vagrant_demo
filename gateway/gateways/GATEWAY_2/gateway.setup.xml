@@ -25871,9 +25871,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26012,9 +26014,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26913,7 +26917,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<targets>
 						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;PROCESSES&quot;)]/dataview/rows/row[not(contains(@name,&quot;#&quot;))]/cell[(@column=&quot;instanceCount&quot;)]</target>
 					</targets>
-					<priority>1</priority>
+					<priority>100</priority>
 					<block>
 						<if>
 							<lt>
