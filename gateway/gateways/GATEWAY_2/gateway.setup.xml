@@ -13361,6 +13361,17 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</script>
 		</action>
 	</actions>
+	<effects>
+		<effect name="message volume tracking script">
+			<script>
+				<exeFile>/opt/geneos/gateway/gateway_scripts/message_volume_tracking.sh</exeFile>
+				<arguments>
+					<data/>
+				</arguments>
+				<runLocation>gateway</runLocation>
+			</script>
+		</effect>
+	</effects>
 	<commands>
 		<command name="Show Breach Details">
 			<targets>
@@ -25836,9 +25847,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25947,9 +25960,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26828,6 +26843,43 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</rule>
 		</ruleGroup>
 	</rules>
+	<alerting>
+		<hierarchy name="Message Volume Tracking by REGION by APP">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<managedEntityAttribute>REGION</managedEntityAttribute>
+					</match>
+				</level>
+				<level>
+					<match>
+						<managedEntityAttribute>APP</managedEntityAttribute>
+					</match>
+				</level>
+			</levels>
+			<alert name="EMEA">
+				<warning/>
+				<critical/>
+				<alert name="BASELINE">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="message volume tracking script"/>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="message volume tracking script"/>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+			</alert>
+		</hierarchy>
+	</alerting>
 	<dataSets>
 		<timeSeries name="CPU_MAX_ERR">
 			<external>
