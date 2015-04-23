@@ -25854,9 +25854,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -25979,9 +25981,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26868,7 +26872,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</ruleGroup>
 	</rules>
 	<alerting>
-		<hierarchy name="Message Volume Tracking by REGION by APP">
+		<hierarchy name="Message Volume Tracking by REGION by APP" disabled="true">
 			<priority>1</priority>
 			<levels>
 				<level>
@@ -26896,7 +26900,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</critical>
 			</alert>
 		</hierarchy>
-		<hierarchy name="original Message Volume Tracking by REGION by APP" disabled="true">
+		<hierarchy name="original Message Volume Tracking by REGION by APP">
 			<priority>1</priority>
 			<levels>
 				<level>
