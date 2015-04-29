@@ -10,6 +10,12 @@ file_static=$netprobe_dir/$main_dir/source.txt_static
 line6=0
 line4=0
 line3=0
+
+if [ ! -f $file ]
+then
+        cp $file_static $file
+fi
+
 total_lines=`cat $file | wc -l`
 live_line_4=`grep -P line_[1-6],1,[0-1],[0-1] $file | awk -F"," '{print $1}'| sed s/line_//`
 live_line_6=`grep -P line_[1-6],[0-1],1,[0-1] $file | awk -F"," '{print $1}'| sed s/line_//`
@@ -19,11 +25,6 @@ total_line_4=4
 total_line_3=3
 
 IFS=","
-
-if [ ! -f $file ]
-then
-	cp $file_static $file
-fi
 
 if [ `expr "$live_line_4" + 1` -gt $total_line_4 ]
 then
