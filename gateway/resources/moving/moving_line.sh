@@ -6,6 +6,7 @@ netprobe_dir=/opt/geneos/gateway/resources
 main_dir=moving
 file=$netprobe_dir/$main_dir/source.txt.orig2
 file_wip=$netprobe_dir/$main_dir/source_wip.txt2
+file_static=$netprobe_dir/$main_dir/source.txt_static
 line6=0
 line4=0
 line3=0
@@ -19,6 +20,10 @@ total_line_3=3
 
 IFS=","
 
+if [ ! -f $file ]
+then
+	cp $file_static $file
+fi
 
 if [ `expr "$live_line_4" + 1` -gt $total_line_4 ]
 then
