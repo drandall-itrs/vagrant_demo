@@ -25872,9 +25872,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26015,9 +26017,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -27095,32 +27099,32 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</hierarchy>
 	</alerting>
 	<dataSets>
-		<timeSeries disabled="true" name="CPU_MAX_ERR">
+		<timeSeries name="CPU_MAX_ERR">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
 		</timeSeries>
-		<timeSeries disabled="true" name="CPU_MAX_WARN">
+		<timeSeries name="CPU_MAX_WARN">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
 		</timeSeries>
-		<timeSeries disabled="true" name="CPU_MIN_WARN">
+		<timeSeries name="CPU_MIN_WARN">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
 		</timeSeries>
-		<timeSeries disabled="true" name="CPU_MIN_ERR">
+		<timeSeries name="CPU_MIN_ERR">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
 		</timeSeries>
-		<timeSeries disabled="true" name="ORDERS">
+		<timeSeries name="ORDERS">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
 		</timeSeries>
-		<timeSeries disabled="true" name="RATES">
+		<timeSeries name="RATES">
 			<external>
 				<reloadTime>13:05:33</reloadTime>
 			</external>
