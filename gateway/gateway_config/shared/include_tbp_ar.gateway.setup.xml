@@ -5,8 +5,8 @@
 		<type name="TBP Test Source">
 			<var name="TBP_DEMO">
 				<externalConfigFile>#!/usr/bin/perl
-$settingsFile=&quot;tbp-settings.txt&quot;;
-$lastFile=&quot;tbp-last.txt&quot;;
+$settingsFile=&quot;/opt/geneos/gateway/resources/tbp/tbp-settings.txt&quot;;
+$lastFile=&quot;/opt/geneos/gateway/resources/tbp/tbp-last.txt&quot;;
 
 if (!-e &quot;$settingsFile&quot;) {
   open SETTINGS, &quot;&gt;$settingsFile&quot; or die $!;
