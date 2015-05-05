@@ -25894,9 +25894,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26049,9 +26051,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26984,7 +26988,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</ruleGroup>
 		</ruleGroup>
 		<ruleGroup name="AR and BP">
-			<rule name="New Rule" disabled="true">
+			<rule disabled="true" name="New Rule">
 				<targets>
 					<target/>
 				</targets>
@@ -27030,6 +27034,20 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							</transaction>
 						</if>
 					</if>
+				</block>
+			</rule>
+			<rule name="Expected Orders">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Orders&quot;)]/cell[(@column=&quot;Expected&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<timeSeries ref="ORDERS"/>
+						</update>
+					</transaction>
 				</block>
 			</rule>
 		</ruleGroup>
