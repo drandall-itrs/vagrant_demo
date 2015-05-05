@@ -11689,7 +11689,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						<predictors>
 							<predictor name="Orders">
 								<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Orders&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
-								<threshold>125000.0</threshold>
+								<threshold>105000.0</threshold>
 								<predictionFunction>
 									<percentage/>
 								</predictionFunction>
@@ -25875,9 +25875,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26024,9 +26026,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
