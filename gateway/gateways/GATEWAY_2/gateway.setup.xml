@@ -11703,6 +11703,14 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 								</predictionFunction>
 								<timeSeries ref="ORDERS"/>
 							</predictor>
+							<predictor name="Rate">
+								<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Rate&quot;)]/cell[(@column=&quot;Value&quot;)]</target>
+								<threshold>20.0</threshold>
+								<predictionFunction>
+									<percentage/>
+								</predictionFunction>
+								<timeSeries ref="RATES"/>
+							</predictor>
 						</predictors>
 					</Gateway-breachPredictor>
 				</plugin>
@@ -25885,9 +25893,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26038,9 +26048,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26970,6 +26982,56 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</block>
 				</rule>
 			</ruleGroup>
+		</ruleGroup>
+		<ruleGroup name="AR and BP">
+			<rule name="New Rule" disabled="true">
+				<targets>
+					<target/>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<multiply>
+								<timeSeries ref="ORDERS"/>
+								<double>0.5</double>
+							</multiply>
+						</gt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<if>
+							<lt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<multiply>
+									<timeSeries ref="ORDERS"/>
+									<double>0.5</double>
+								</multiply>
+							</lt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>

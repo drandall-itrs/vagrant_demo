@@ -112,6 +112,13 @@ print &quot;Name,Value\nCPU,$cpu\nOrders,$vLast2\nTIME,$tNow\n&quot;;
 							<headline>MIN_W</headline>
 							<headline>MIN_C</headline>
 						</headlines>
+						<var-columns>
+							<data>
+								<column>
+									<data>Expected</data>
+								</column>
+							</data>
+						</var-columns>
 					</additions>
 				</dataview>
 			</dataviews>
