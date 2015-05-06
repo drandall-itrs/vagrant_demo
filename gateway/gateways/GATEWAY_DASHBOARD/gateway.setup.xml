@@ -1,0 +1,2328 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
+	<includes>
+		<priority>1</priority>
+		<reloading/>
+		<includeGroup name="Infrastructure">
+			<include disabled="true">
+				<priority>100</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Infrastructure.xml</location>
+			</include>
+		</includeGroup>
+		<includeGroup name="Admin">
+			<include disabled="true">
+				<priority>400</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Administration.xml</location>
+			</include>
+			<include disabled="true">
+				<priority>2</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Authentication.xml</location>
+			</include>
+		</includeGroup>
+		<includeGroup name="local">
+			<include>
+				<priority>1000</priority>
+				<required>true</required>
+				<location>../../gateway_config/shared/gateway_plugins.xml</location>
+			</include>
+		</includeGroup>
+	</includes>
+	<probes>
+		<probeGroup name="Linux">
+			<probe name="localhost_7054">
+				<hostname>localhost</hostname>
+				<port>7054</port>
+			</probe>
+			<virtualProbe name="gateway sql"/>
+		</probeGroup>
+	</probes>
+	<managedEntities>
+		<managedEntity disabled="true" name="GATEWAY_DASHBOARD Gateway">
+			<!--Move this Managed Entity into the relevant Managed
+        Entity Group structure once it has been created-->
+			<virtualProbe ref="Virtual Probe"/>
+			<addTypes>
+				<type ref="Gateway Info"/>
+			</addTypes>
+		</managedEntity>
+		<managedEntity name="gateway sql">
+			<virtualProbe ref="gateway sql"/>
+			<sampler ref="Dashboard INFRA"/>
+			<sampler ref="Inf MEs"/>
+			<sampler ref="GW Managed Entity Data"/>
+		</managedEntity>
+		<managedEntityGroup name="EMEA">
+			<attribute name="REGION">EMEA</attribute>
+			<attribute name="PRODUCT">GENEOS</attribute>
+			<managedEntityGroup name="London">
+				<attribute name="CITY">LONDON</attribute>
+				<managedEntityGroup name="Dashboard">
+					<attribute name="APP">DASHBOARD</attribute>
+					<managedEntity name="dashboard">
+						<probe ref="localhost_7054"/>
+						<addTypes>
+							<type ref="tier1 dashboard"/>
+							<type ref="tier2 dashboard"/>
+						</addTypes>
+						<sampler ref="dashboard moving"/>
+						<sampler ref="Tier 3 dashboard"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
+	</managedEntities>
+	<types>
+		<typeGroup name="Dashboard">
+			<typeGroup name="Tier 2">
+				<type name="tier2 dashboard">
+					<sampler ref="Tier 2 Dashboard example"/>
+					<sampler ref="Tier 2 Dashboard example DDA"/>
+				</type>
+			</typeGroup>
+			<typeGroup name="Tier 1">
+				<type name="tier1 dashboard">
+					<sampler ref="CIRB - SLA"/>
+					<sampler ref="CIRB - OLA_DDA"/>
+					<sampler ref="Market Risk - SLA"/>
+					<sampler ref="Market Risk - OLA_DDA"/>
+					<sampler ref="Data Management - OLA_DDA"/>
+					<sampler ref="tier 1 dashboard sections"/>
+				</type>
+			</typeGroup>
+		</typeGroup>
+	</types>
+	<samplers>
+		<samplerGroup name="dashboard elements">
+			<samplerGroup name="moving markers">
+				<sampler name="dashboard moving">
+					<var-group>
+						<data>Dashboard</data>
+					</var-group>
+					<sampleInterval>
+						<data>2</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/moving/moving_line.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Tier 3">
+				<sampler name="Tier 3 dashboard">
+					<var-group>
+						<data>Dashboard Tier 3</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/moving/tier3/tier3_dashboard.txt</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Tier 1">
+				<samplerGroup name="tier 1 dashboard">
+					<sampler name="CIRB - SLA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="CIRB - SLA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Insight PAC COB</data>
+											</row>
+											<row>
+												<data>Insight NA COB</data>
+											</row>
+											<row>
+												<data>Insight EUR COB</data>
+											</row>
+											<row>
+												<data>CDT Front End Availability</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="CIRB - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="CIRB - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Insight - Gateway</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Market Risk - SLA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Market Risk - SLA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Global Tp1 Reporting</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Market Risk - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Market Risk - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>RDS - Insight</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="Data Management - OLA_DDA">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="Data Management - OLA_DDA">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>application</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>container</data>
+											</headline>
+										</data>
+									</var-headlines>
+									<var-columns>
+										<data>
+											<column>
+												<data>label</data>
+											</column>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Myriad - Insight</data>
+											</row>
+											<row>
+												<data>Myriad - RDS</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+					<sampler name="tier 1 dashboard sections">
+						<var-group>
+							<data>Dashboard</data>
+						</var-group>
+						<dataviews>
+							<dataview name="tier 1 dashboard sections">
+								<createOnGateway>
+									<enabled>true</enabled>
+									<firstColumn>section</firstColumn>
+								</createOnGateway>
+								<additions>
+									<var-columns>
+										<data>
+											<column>
+												<data>severity</data>
+											</column>
+										</data>
+									</var-columns>
+									<var-rows>
+										<data>
+											<row>
+												<data>Credit Risk IB</data>
+											</row>
+											<row>
+												<data>Market Risk</data>
+											</row>
+											<row>
+												<data>Data Management</data>
+											</row>
+										</data>
+									</var-rows>
+								</additions>
+							</dataview>
+						</dataviews>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="Tier 2">
+				<sampler name="Tier 2 Dashboard example">
+					<var-group>
+						<data>Dashboard Tier 2</data>
+					</var-group>
+					<dataviews>
+						<dataview name="Tier 2 Dashboard example">
+							<createOnGateway>
+								<enabled>true</enabled>
+								<firstColumn>Application</firstColumn>
+							</createOnGateway>
+							<additions>
+								<var-columns>
+									<data>
+										<column>
+											<data>Application Name</data>
+										</column>
+									</data>
+								</var-columns>
+								<var-rows>
+									<data>
+										<row>
+											<data>MaRS</data>
+										</row>
+										<row>
+											<data>Insight</data>
+										</row>
+										<row>
+											<data>RDS</data>
+										</row>
+										<row>
+											<data>Myriad</data>
+										</row>
+										<row>
+											<data>Gateway</data>
+										</row>
+										<row>
+											<data>ZCDB</data>
+										</row>
+										<row>
+											<data>Star</data>
+										</row>
+										<row>
+											<data>Business Users</data>
+										</row>
+										<row>
+											<data>TBC</data>
+										</row>
+									</data>
+								</var-rows>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="Tier 2 Dashboard example DDA">
+					<var-group>
+						<data>Dashboard Tier 2</data>
+					</var-group>
+					<dataviews>
+						<dataview name="Tier 2 Dashboard example DDA">
+							<createOnGateway>
+								<enabled>true</enabled>
+								<firstColumn>Application</firstColumn>
+							</createOnGateway>
+							<additions>
+								<var-headlines>
+									<data>
+										<headline>
+											<data>Max Severity For All</data>
+										</headline>
+									</data>
+								</var-headlines>
+								<var-columns>
+									<data>
+										<column>
+											<data>DDA Delivered</data>
+										</column>
+										<column>
+											<data>DDA Not Delivered</data>
+										</column>
+										<column>
+											<data>Max Severity</data>
+										</column>
+									</data>
+								</var-columns>
+								<var-rows>
+									<data>
+										<row>
+											<data>MaRS</data>
+										</row>
+										<row>
+											<data>Insight</data>
+										</row>
+										<row>
+											<data>RDS</data>
+										</row>
+										<row>
+											<data>Myriad</data>
+										</row>
+									</data>
+								</var-rows>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="gateway sql">
+			<sampler name="Dashboard INFRA">
+				<var-group>
+					<data>Geneos Dashboard</data>
+				</var-group>
+				<expectRows>
+					<data>
+						<expectRow>
+							<data>1</data>
+						</expectRow>
+						<expectRow>
+							<data>2</data>
+						</expectRow>
+						<expectRow>
+							<data>3</data>
+						</expectRow>
+						<expectRow>
+							<data>4</data>
+						</expectRow>
+						<expectRow>
+							<data>5</data>
+						</expectRow>
+					</data>
+				</expectRows>
+				<plugin>
+					<Gateway-sql>
+						<setupSql>
+							<sql>
+								<data>create temp table TB2 (name TEXT, severity TEXT)
+</data>
+							</sql>
+						</setupSql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>T1</data>
+								</tableName>
+								<xpath>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]</xpath>
+								<columns>
+									<column>
+										<name>
+											<data>name</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+									<column>
+										<name>
+											<data>severity</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+								</columns>
+							</dataview>
+						</tables>
+						<sampleSql>
+							<sql>
+								<data>DELETE FROM TB2;
+INSERT INTO TB2 SELECT replace(name,&apos;-INF&apos;,&apos;&apos;), Severity FROM T1
+WHERE Severity != &quot;OK&quot; 
+AND Severity != &quot;Undefined&quot; 
+AND name LIKE &quot;%-INF&quot; ORDER BY Severity</data>
+							</sql>
+						</sampleSql>
+						<views>
+							<view>
+								<name>
+									<data>Dashboard INFRA</data>
+								</name>
+								<sql>
+									<data>select rowid as ID , * from TB2</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+				<dataviews>
+					<dataview name="Dashboard INFRA">
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>Critical</data>
+									</headline>
+									<headline>
+										<data>Warning</data>
+									</headline>
+								</data>
+							</var-headlines>
+						</additions>
+					</dataview>
+				</dataviews>
+				<debug>
+					<setting>*</setting>
+				</debug>
+			</sampler>
+			<samplerGroup name="NewEdge">
+				<sampler disabled="true" name="EU Inf MEs">
+					<var-group>
+						<data>Inf MEs</data>
+					</var-group>
+					<plugin>
+						<Gateway-sql>
+							<setupSql>
+								<sql>
+									<data>create temp table TB_FINAL ( MENAME  TEXT, D NUM, C NUM, O NUM, Summary NUM, SEVTIME NUM, ATTRIBUTES TEXT);
+create temp table TB99 ( MENAME  TEXT, D NUM, C NUM, O NUM, Summary NUM, SEVTIME NUM, ATTRIBUTES TEXT)
+
+                    
+                    
+                    </data>
+								</sql>
+							</setupSql>
+							<tables>
+								<dataview>
+									<tableName>
+										<data>TB1</data>
+									</tableName>
+									<xpath>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]</xpath>
+									<columns>
+										<column>
+											<name>
+												<data>name</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+										<column>
+											<name>
+												<data>C</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>D</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>O</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>Sum</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>SevTime</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>attributes</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+									</columns>
+								</dataview>
+								<dataview>
+									<tableName>
+										<data>TB2</data>
+									</tableName>
+									<xpath>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]</xpath>
+									<columns>
+										<column>
+											<name>
+												<data>name</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+										<column>
+											<name>
+												<data>C</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>D</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>O</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>Sum</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>SevTime</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>attributes</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+									</columns>
+								</dataview>
+								<dataview>
+									<tableName>
+										<data>TB3</data>
+									</tableName>
+									<xpath>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]</xpath>
+									<columns>
+										<column>
+											<name>
+												<data>name</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+										<column>
+											<name>
+												<data>C</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>D</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>O</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>Sum</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>SevTime</data>
+											</name>
+											<type>INTEGER</type>
+										</column>
+										<column>
+											<name>
+												<data>attributes</data>
+											</name>
+											<type>TEXT</type>
+										</column>
+									</columns>
+								</dataview>
+							</tables>
+							<sampleSql>
+								<sql>
+									<data>DELETE FROM TB_FINAL;
+DELETE FROM TB99;
+   INSERT INTO TB99  SELECT name,
+       D,
+       C,
+       O,
+       Sum,      
+              SevTime,
+   attributes
+   FROM TB1
+WHERE name not like &apos;%Gateway&apos;
+   AND  Sum &gt; 1    ;
+   INSERT INTO TB99  SELECT name,
+       D,
+       C,
+       O,
+       Sum,      
+              SevTime,
+   attributes
+   FROM TB2
+ WHERE name not like &apos;%Gateway&apos;
+   AND  Sum &gt; 1   ; 
+
+   INSERT INTO TB99  SELECT name,
+       D,
+       C,
+       O,
+       Sum,      
+              SevTime,
+   attributes
+   FROM TB3
+ WHERE name not like &apos;%Gateway&apos;
+   AND  Sum &gt; 1   ; 
+ INSERT INTO TB_FINAL  SELECT MENAME,
+       D,
+       C,
+       O,
+       Summary,      
+              SEVTIME,
+   ATTRIBUTES
+   FROM TB99
+   order by SEVTIME DESC</data>
+								</sql>
+							</sampleSql>
+							<views>
+								<view>
+									<name>
+										<data>Inf MEs</data>
+									</name>
+									<sql>
+										<data>select rowid AS ID, * from TB_FINAL</data>
+									</sql>
+								</view>
+							</views>
+						</Gateway-sql>
+					</plugin>
+					<dataviews>
+						<dataview name="Inf MEs">
+							<additions>
+								<var-headlines>
+									<data>
+										<headline>
+											<data>IN ERROR</data>
+										</headline>
+										<headline>
+											<data>OFF SCREEN</data>
+										</headline>
+										<headline>
+											<data>AFFECTED APPS</data>
+										</headline>
+									</data>
+								</var-headlines>
+								<var-columns>
+									<data>
+										<column>
+											<data>SHORT_MENAME</data>
+										</column>
+									</data>
+								</var-columns>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="GW Managed Entity Data">
+					<var-group>
+						<data>Gateway Info</data>
+					</var-group>
+					<sampleInterval>
+						<data>120</data>
+					</sampleInterval>
+					<plugin>
+						<Gateway-managedEntitiesData/>
+					</plugin>
+					<dataviews>
+						<dataview name="GW Managed Entity Data">
+							<displayName>Managed Entity Data</displayName>
+							<additions>
+								<var-columns>
+									<data>
+										<column>
+											<data>C</data>
+										</column>
+										<column>
+											<data>D</data>
+										</column>
+										<column>
+											<data>O</data>
+										</column>
+										<column>
+											<data>Sum</data>
+										</column>
+										<column>
+											<data>SevTime</data>
+										</column>
+									</data>
+								</var-columns>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="Inf MEs">
+					<plugin>
+						<Gateway-sql>
+							<setupSql>
+								<sql>
+									<data>create temp table TB2 ( MENAME  TEXT, D NUM, C NUM, O NUM, Summary NUM, SEVTIME NUM, ATTRIBUTES TEXT)</data>
+								</sql>
+							</setupSql>
+							<tables>
+								<dataview>
+									<tableName>
+										<data>TB</data>
+									</tableName>
+									<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]</xpath>
+								</dataview>
+							</tables>
+							<sampleSql>
+								<sql>
+									<data>DELETE FROM TB2;
+INSERT INTO TB2  SELECT name,
+    D,
+    C,
+    O,
+    Sum,      
+           SevTime,
+attributes
+FROM TB
+WHERE Sum &gt; 1 AND name like &apos;%INFRA%&apos;
+order by SEVTIME DESC
+</data>
+								</sql>
+							</sampleSql>
+							<views>
+								<view>
+									<name>
+										<data>Inf MEs</data>
+									</name>
+									<sql>
+										<data>select rowid AS ID, * from TB2</data>
+									</sql>
+								</view>
+							</views>
+						</Gateway-sql>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+	</samplers>
+	<rules>
+		<ruleGroup name="Dashboard example rules">
+			<ruleGroup name="Tier 3">
+				<rule name="Tier 3 normal">
+					<targets>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Power Mart&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Feed Gen&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Scheduler&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;TES&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Monte Carlo&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Others&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;MaRS&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Std Rules&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight RE&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Web Front End&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Tier 3 warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Loader&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Primo&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Database&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Tier 3 critical">
+					<targets>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;ZCDB&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Comet&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Star&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<ruleGroup name="headlines">
+					<rule name="Feed Processing container">
+						<targets>
+							<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Feed Processing Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Feed Processing&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Data Processing container">
+						<targets>
+							<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Data Processing Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Data Processing&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Down Stream container 1">
+						<targets>
+							<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/headlines/cell[(@name=&quot;Down Stream Container&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="container">/geneos/gateway/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row/cell[(@value=&quot;Down Stream&quot;)][(@column=&quot;container&quot;)]/ancestor-or-self::row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+						</pathAliases>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="container"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+				</ruleGroup>
+			</ruleGroup>
+			<ruleGroup name="Tier 1">
+				<rule name="Market Risk Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)]/dataview/rows/row[(@name=&quot;Market Risk&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="market risk">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Market Risk - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Market Risk - OLA_DDA&quot;)]/headlines/cell[(@name=&quot;container&quot;)]</pathAlias>
+						<pathAlias name="market risk sla">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Market Risk - SLA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Market Risk - SLA&quot;)]/headlines/cell[(@name=&quot;container&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="market risk"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<dataItems>
+										<pathAlias ref="market risk sla"/>
+										<property>state/@severity</property>
+									</dataItems>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Credit Risk IB Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/rows/row[(@name=&quot;Credit Risk IB&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="credit risk IB">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;CIRB - SLA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;CIRB - SLA&quot;)]/headlines/cell[(@name=&quot;container&quot;)]</pathAlias>
+						<pathAlias name="credit risk sla">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;CIRB - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;CIRB - OLA_DDA&quot;)]/headlines/cell[(@name=&quot;container&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="credit risk IB"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<dataItems>
+										<pathAlias ref="credit risk sla"/>
+										<property>state/@severity</property>
+									</dataItems>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Data Management Container">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/rows/row[(@name=&quot;Data Management&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="Data Management">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Data Management - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Data Management - OLA_DDA&quot;)]/headlines/cell[(@name=&quot;container&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="Data Management"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="default label">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/rows/row/cell[(@column=&quot;label&quot;)]</target>
+					</targets>
+					<priority>1000</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<target>
+									<rowName/>
+								</target>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="global tp1 label">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/rows/row[(@name=&quot;Global Tp1 Reporting&quot;)]/cell[(@column=&quot;label&quot;)]</target>
+					</targets>
+					<priority>10</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>Global T+1 Reporting</string>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="container headline severity">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@type=&quot;tier1 dashboard&quot;)]/dataview/headlines/cell[(@name=&quot;container&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="severityCol">../../rows/row/cell[(@column=&quot;severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="severityCol"/>
+										<property>state/@severity</property>
+									</dataItems>
+									<integer>1</integer>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Myriad severity">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row[(@name=&quot;Myriad&quot;)]/cell[(@column=&quot;Application Name&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example DDA&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example DDA&quot;)]/rows/row[(@name=&quot;Myriad&quot;)]/cell[(@column=&quot;DDA Not Delivered&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<ruleGroup name="severity column">
+					<rule name="warning severity for tier 1">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Market Risk - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Market Risk - OLA_DDA&quot;)]/rows/row[(@name=&quot;RDS - Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Data Management">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Data Management - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Data Management - OLA_DDA&quot;)]/rows/row[(@name=&quot;Myriad - Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<block>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+				</ruleGroup>
+			</ruleGroup>
+			<ruleGroup name="Tier 2">
+				<rule name="DDA Total Severity Headline">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example DDA&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example DDA&quot;)]/headlines/cell[(@name=&quot;Max Severity For All&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="DDA">ancestor::sampler[(@name=&quot;Tier 2 Dashboard example DDA&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example DDA&quot;)]/rows/row/cell[(@column=&quot;Max Severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItems>
+										<pathAlias ref="DDA"/>
+										<property>state/@severity</property>
+									</dataItems>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Insight DDA Not Delivered">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example DDA&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example DDA&quot;)]/rows/row[(@name=&quot;Insight&quot;)]/cell[(@column=&quot;DDA Delivered&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Tier 2 Max severity row">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example DDA&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example DDA&quot;)]/rows/row/cell[(@column=&quot;Max Severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="DDA Delivered">../cell[(@column=&quot;DDA Delivered&quot;)]</pathAlias>
+						<pathAlias name="DDA Not Delivered">../cell[(@column=&quot;DDA Not Delivered&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItem>
+										<pathAlias ref="DDA Delivered"/>
+										<property>state/@severity</property>
+									</dataItem>
+									<dataItem>
+										<pathAlias ref="DDA Not Delivered"/>
+										<property>state/@severity</property>
+									</dataItem>
+								</maximum>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Insight severity">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row[(@name=&quot;Insight&quot;)]/cell[(@column=&quot;Application Name&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Business Users severity">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row[(@name=&quot;Business Users&quot;)]/cell[(@column=&quot;Application Name&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="Gateway and ZCDB severity ">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row[(@name=&quot;ZCDB&quot;)]/cell[(@column=&quot;Application Name&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row[(@name=&quot;Gateway&quot;)]/cell[(@column=&quot;Application Name&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="rowname info">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Tier 2 Dashboard example&quot;)][(@type=&quot;tier2 dashboard&quot;)]/dataview[(@name=&quot;Tier 2 Dashboard example&quot;)]/rows/row/cell[(@column=&quot;Application Name&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathVariables>
+						<pathVariable name="rowName">
+							<value>
+								<target>
+									<rowName/>
+								</target>
+							</value>
+						</pathVariable>
+					</pathVariables>
+					<pathAliases>
+						<pathAlias name="rowName_info">../cell[(@value=var(&quot;rowName&quot;))][(@column=&quot;Application Name&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<target>
+									<rowName/>
+								</target>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+			</ruleGroup>
+		</ruleGroup>
+		<ruleGroup name="gateway sql">
+			<ruleGroup name="INFRA">
+				<rule name="INFRA Critical count">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[wild(@name,&quot;* INFRA&quot;)][(@type=&quot;&quot;)]/dataview[wild(@name,&quot;* INFRA&quot;)]/headlines/cell[(@name=&quot;Critical&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="Sev">ancestor::dataview/rows/row/cell[(@value=&quot;Critical&quot;)][(@column=&quot;severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<set>
+							<var ref="nbSev"/>
+							<count>
+								<dataItems>
+									<pathAlias ref="Sev"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+						</set>
+						<if>
+							<gt>
+								<var ref="nbSev"/>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<var ref="nbSev"/>
+								</update>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<integer>0</integer>
+								</update>
+								<update>
+									<property>state/@severity</property>
+									<severity>undefined</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+				<rule name="INFRA Warning count">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[wild(@name,&quot;* INFRA&quot;)][(@type=&quot;&quot;)]/dataview[wild(@name,&quot;* INFRA&quot;)]/headlines/cell[(@name=&quot;Warning&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="Sev">ancestor::dataview/rows/row/cell[(@value=&quot;Warning&quot;)][(@column=&quot;severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<set>
+							<var ref="nbSev"/>
+							<count>
+								<dataItems>
+									<pathAlias ref="Sev"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+						</set>
+						<if>
+							<gt>
+								<var ref="nbSev"/>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<var ref="nbSev"/>
+								</update>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<integer>0</integer>
+								</update>
+								<update>
+									<property>state/@severity</property>
+									<severity>undefined</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+				<rule name="INFRA Sev">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[wild(@name,&quot;* INFRA&quot;)][(@type=&quot;&quot;)]/dataview[wild(@name,&quot;* INFRA&quot;)]/rows/row/cell[(@column=&quot;severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="Sev">ancestor::dataview/rows/row/cell[(@value=&quot;Critical&quot;)][(@column=&quot;severity&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<if>
+							<like>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<string>Critical</string>
+							</like>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<if>
+								<like>
+									<dataItem>
+										<property>@value</property>
+									</dataItem>
+									<string>Warning</string>
+								</like>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>warning</severity>
+									</update>
+								</transaction>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>ok</severity>
+									</update>
+									<update>
+										<property>@value</property>
+										<string/>
+									</update>
+								</transaction>
+							</if>
+						</if>
+					</block>
+				</rule>
+			</ruleGroup>
+			<ruleGroup name="NewEdge">
+				<ruleGroup name="Inf MEs">
+					<rule name="D C O SUMSeverities">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(@column=&quot;D&quot;)]</target>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(@column=&quot;C&quot;)]</target>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(@column=&quot;O&quot;)]</target>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(@column=&quot;Summary&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<if>
+								<equal>
+									<dataItem>
+										<property>@value</property>
+									</dataItem>
+									<integer>3</integer>
+								</equal>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>critical</severity>
+									</update>
+								</transaction>
+								<if>
+									<equal>
+										<dataItem>
+											<property>@value</property>
+										</dataItem>
+										<integer>2</integer>
+									</equal>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>warning</severity>
+										</update>
+									</transaction>
+									<if>
+										<equal>
+											<dataItem>
+												<property>@value</property>
+											</dataItem>
+											<integer>1</integer>
+										</equal>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>ok</severity>
+											</update>
+										</transaction>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>undefined</severity>
+											</update>
+										</transaction>
+									</if>
+								</if>
+							</if>
+						</block>
+					</rule>
+					<rule name="short  MENAME">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[wild(@name,&quot;Inf MEs*&quot;)]/rows/row/cell[(@column=&quot;SHORT_MENAME&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="mename">../cell[(@column=&quot;MENAME&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<toUpper>
+										<stringBefore>
+											<dataItem>
+												<pathAlias ref="mename"/>
+												<property>@value</property>
+											</dataItem>
+											<string>_INF</string>
+										</stringBefore>
+									</toUpper>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="In error">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[wild(@name,&quot;Inf MEs*&quot;)]/headlines/cell[(@name=&quot;IN ERROR&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="ME">../../rows/row/cell[(@column=&quot;MENAME&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<count>
+										<dataItems>
+											<pathAlias ref="ME"/>
+											<property>@value</property>
+										</dataItems>
+									</count>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="off screen">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;Inf MEs&quot;)]/headlines/cell[(@name=&quot;OFF SCREEN&quot;)]</target>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[wild(@name,&quot;Inf MEs*&quot;)]/headlines/cell[(@name=&quot;OFF SCREEN&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="in error">../cell[(@name=&quot;IN ERROR&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<set>
+								<var ref="errs"/>
+								<dataItem>
+									<pathAlias ref="in error"/>
+									<property>@value</property>
+								</dataItem>
+							</set>
+							<if>
+								<gte>
+									<var ref="errs"/>
+									<integer>40</integer>
+								</gte>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<subtract>
+											<dataItem>
+												<pathAlias ref="in error"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>40</integer>
+										</subtract>
+									</update>
+								</transaction>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<integer>0</integer>
+									</update>
+								</transaction>
+							</if>
+						</block>
+					</rule>
+					<rule name="off screen apac">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;Inf MEs&quot;)]/headlines/cell[(@name=&quot;OFF SCREEN&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="in error">../cell[(@name=&quot;IN ERROR&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<set>
+								<var ref="errs"/>
+								<dataItem>
+									<pathAlias ref="in error"/>
+									<property>@value</property>
+								</dataItem>
+							</set>
+							<if>
+								<gte>
+									<var ref="errs"/>
+									<integer>20</integer>
+								</gte>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<subtract>
+											<dataItem>
+												<pathAlias ref="in error"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>20</integer>
+										</subtract>
+									</update>
+								</transaction>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<integer>0</integer>
+									</update>
+								</transaction>
+							</if>
+						</block>
+					</rule>
+				</ruleGroup>
+				<ruleGroup name="ME DataViews">
+					<rule name="Disk Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;D&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathVariables>
+							<pathVariable name="ME_Name">
+								<value>
+									<target>
+										<rowName/>
+									</target>
+								</value>
+							</pathVariable>
+						</pathVariables>
+						<pathAliases>
+							<pathAlias name="Disk">/geneos/gateway/directory/probe[(param(&quot;Virtual&quot;)=&quot;false&quot;)]/managedEntity[(@name=var(&quot;ME_Name&quot;))]/sampler[(param(&quot;PluginName&quot;)=&quot;DISK&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="Disk"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="CPU Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;C&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathVariables>
+							<pathVariable name="ME_Name">
+								<value>
+									<target>
+										<rowName/>
+									</target>
+								</value>
+							</pathVariable>
+						</pathVariables>
+						<pathAliases>
+							<pathAlias name="CPU">/geneos/gateway/directory/probe[(param(&quot;Virtual&quot;)=&quot;false&quot;)]/managedEntity[(@name=var(&quot;ME_Name&quot;))]/sampler[(param(&quot;PluginName&quot;)=&quot;CPU&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="CPU"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Other Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;O&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathVariables>
+							<pathVariable name="ME_Name">
+								<value>
+									<target>
+										<rowName/>
+									</target>
+								</value>
+							</pathVariable>
+						</pathVariables>
+						<pathAliases>
+							<pathAlias name="Other">/geneos/gateway/directory/probe[(param(&quot;Virtual&quot;)=&quot;false&quot;)]/managedEntity[(@name=var(&quot;ME_Name&quot;))]/sampler[not(param(&quot;PluginName&quot;)=&quot;CPU&quot;)][not(param(&quot;PluginName&quot;)=&quot;DISK&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<maximum>
+										<dataItems>
+											<pathAlias ref="Other"/>
+											<property>state/@severity</property>
+										</dataItems>
+									</maximum>
+								</update>
+							</transaction>
+						</block>
+					</rule>
+					<rule name="Sum Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;Sum&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathVariables>
+							<pathVariable name="ME_Name">
+								<value>
+									<target>
+										<rowName/>
+									</target>
+								</value>
+							</pathVariable>
+						</pathVariables>
+						<pathAliases>
+							<pathAlias name="D">../cell[(@column=&quot;D&quot;)]</pathAlias>
+							<pathAlias name="C">../cell[(@column=&quot;C&quot;)]</pathAlias>
+							<pathAlias name="O">../cell[(@column=&quot;O&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<if>
+								<or>
+									<or>
+										<like>
+											<dataItem>
+												<pathAlias ref="D"/>
+												<property>@value</property>
+											</dataItem>
+											<string>3</string>
+										</like>
+										<like>
+											<dataItem>
+												<pathAlias ref="C"/>
+												<property>@value</property>
+											</dataItem>
+											<string>3</string>
+										</like>
+									</or>
+									<like>
+										<dataItem>
+											<pathAlias ref="O"/>
+											<property>@value</property>
+										</dataItem>
+										<string>3</string>
+									</like>
+								</or>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<string>3</string>
+									</update>
+								</transaction>
+								<if>
+									<or>
+										<or>
+											<like>
+												<dataItem>
+													<pathAlias ref="D"/>
+													<property>@value</property>
+												</dataItem>
+												<string>2</string>
+											</like>
+											<like>
+												<dataItem>
+													<pathAlias ref="C"/>
+													<property>@value</property>
+												</dataItem>
+												<string>2</string>
+											</like>
+										</or>
+										<like>
+											<dataItem>
+												<pathAlias ref="O"/>
+												<property>@value</property>
+											</dataItem>
+											<string>2</string>
+										</like>
+									</or>
+									<transaction>
+										<update>
+											<property>@value</property>
+											<string>2</string>
+										</update>
+									</transaction>
+									<if>
+										<or>
+											<or>
+												<like>
+													<dataItem>
+														<pathAlias ref="D"/>
+														<property>@value</property>
+													</dataItem>
+													<string>1</string>
+												</like>
+												<like>
+													<dataItem>
+														<pathAlias ref="C"/>
+														<property>@value</property>
+													</dataItem>
+													<string>1</string>
+												</like>
+											</or>
+											<like>
+												<dataItem>
+													<pathAlias ref="O"/>
+													<property>@value</property>
+												</dataItem>
+												<string>1</string>
+											</like>
+										</or>
+										<transaction>
+											<update>
+												<property>@value</property>
+												<string>1</string>
+											</update>
+										</transaction>
+										<if>
+											<or>
+												<or>
+													<like>
+														<dataItem>
+															<pathAlias ref="D"/>
+															<property>@value</property>
+														</dataItem>
+														<string>0</string>
+													</like>
+													<like>
+														<dataItem>
+															<pathAlias ref="C"/>
+															<property>@value</property>
+														</dataItem>
+														<string>0</string>
+													</like>
+												</or>
+												<like>
+													<dataItem>
+														<pathAlias ref="O"/>
+														<property>@value</property>
+													</dataItem>
+													<string>0</string>
+												</like>
+											</or>
+											<transaction>
+												<update>
+													<property>@value</property>
+													<string>0</string>
+												</update>
+											</transaction>
+											<transaction>
+												<update>
+													<property>@value</property>
+													<severity>undefined</severity>
+												</update>
+											</transaction>
+										</if>
+									</if>
+								</if>
+							</if>
+						</block>
+					</rule>
+					<rule disabled="true" name="SevTime Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;SevTime&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="Sum">../cell[(@column=&quot;Sum&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>true</evaluateOnDataviewSample>
+						<block>
+							<if>
+								<and>
+									<gt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>2</integer>
+									</gt>
+									<lt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+											<previous>true</previous>
+										</dataItem>
+										<integer>3</integer>
+									</lt>
+								</and>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<now/>
+									</update>
+								</transaction>
+								<if>
+									<and>
+										<gt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>1</integer>
+										</gt>
+										<lt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+												<previous>true</previous>
+											</dataItem>
+											<integer>2</integer>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>@value</property>
+											<now/>
+										</update>
+									</transaction>
+								</if>
+							</if>
+						</block>
+					</rule>
+					<rule disabled="true" name="SevTime Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;SevTime&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="Sum">../cell[(@column=&quot;Sum&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<if>
+								<and>
+									<gt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>2</integer>
+									</gt>
+									<lt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+											<previous>true</previous>
+										</dataItem>
+										<integer>3</integer>
+									</lt>
+								</and>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<now/>
+									</update>
+								</transaction>
+								<if>
+									<and>
+										<gt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>1</integer>
+										</gt>
+										<lt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+												<previous>true</previous>
+											</dataItem>
+											<integer>2</integer>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>@value</property>
+											<now/>
+										</update>
+									</transaction>
+								</if>
+							</if>
+						</block>
+					</rule>
+					<rule name="SevTime Col">
+						<targets>
+							<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;GW Managed Entity Data&quot;)][(@type=&quot;Gateway Info&quot;)]/dataview[(@name=&quot;GW Managed Entity Data&quot;)]/rows/row/cell[(@column=&quot;SevTime&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<pathAliases>
+							<pathAlias name="Sum">../cell[(@column=&quot;Sum&quot;)]</pathAlias>
+						</pathAliases>
+						<evaluateOnDataviewSample>false</evaluateOnDataviewSample>
+						<block>
+							<if>
+								<and>
+									<gt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>2</integer>
+									</gt>
+									<lt>
+										<dataItem>
+											<pathAlias ref="Sum"/>
+											<property>@value</property>
+											<previous>true</previous>
+										</dataItem>
+										<integer>3</integer>
+									</lt>
+								</and>
+								<transaction>
+									<update>
+										<property>@value</property>
+										<now/>
+									</update>
+								</transaction>
+								<if>
+									<and>
+										<gt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>1</integer>
+										</gt>
+										<lt>
+											<dataItem>
+												<pathAlias ref="Sum"/>
+												<property>@value</property>
+												<previous>true</previous>
+											</dataItem>
+											<integer>2</integer>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>@value</property>
+											<now/>
+										</update>
+									</transaction>
+								</if>
+							</if>
+						</block>
+					</rule>
+				</ruleGroup>
+			</ruleGroup>
+		</ruleGroup>
+	</rules>
+	<alerting>
+		<hierarchy disabled="true" name="Infrastructure Support Group">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<samplerGroup/>
+					</match>
+				</level>
+				<level>
+					<match>
+						<samplerName/>
+					</match>
+				</level>
+			</levels>
+			<alert name="Hardware">
+				<warning>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</warning>
+				<critical>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</critical>
+			</alert>
+			<alert name="System">
+				<warning>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</warning>
+				<critical>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</critical>
+				<alert name="Windows Services">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+				<alert name="TOP Mem">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+				<alert name="TOP CPU">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+			</alert>
+		</hierarchy>
+	</alerting>
+	<importedData>
+		<connection name="INFRASTRUCTURE Attribute">
+			<primary>
+				<hostname>192.168.142.20</hostname>
+				<port>7050</port>
+			</primary>
+			<attributes>
+				<attribute name="APP">INFRASTRUCTURE_SHARED</attribute>
+			</attributes>
+			<importSeverity>true</importSeverity>
+			<dataSets>
+				<dataSet>
+					<name>INFRASTRUCTURE Attribute</name>
+				</dataSet>
+			</dataSets>
+		</connection>
+	</importedData>
+	<operatingEnvironment>
+		<gatewayName>GATEWAY_DASHBOARD</gatewayName>
+		<listenPort>8063</listenPort>
+	</operatingEnvironment>
+</gateway>
