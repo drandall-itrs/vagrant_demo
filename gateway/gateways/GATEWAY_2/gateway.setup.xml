@@ -25896,9 +25896,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26055,9 +26057,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -26992,39 +26996,70 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 			</ruleGroup>
 		</ruleGroup>
 		<ruleGroup name="AR and BP">
-			<rule disabled="true" name="New Rule">
+			<rule name="Expected Orders Orders">
 				<targets>
-					<target/>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Orders&quot;)]/cell[(@column=&quot;Expected&quot;)]</target>
 				</targets>
 				<priority>1</priority>
 				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<timeSeries ref="ORDERS"/>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule name="BP Will Breach">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Prediction&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Prediction&quot;)]/rows/row/cell[(@column=&quot;Description&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="TimeToBreach">../cell[(@column=&quot;TimeToBreach&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
 					<if>
-						<gt>
-							<dataItem>
-								<property>@value</property>
-							</dataItem>
-							<multiply>
-								<timeSeries ref="ORDERS"/>
-								<double>0.5</double>
-							</multiply>
-						</gt>
+						<and>
+							<like>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<string>Will Breach</string>
+							</like>
+							<lte>
+								<dataItem>
+									<pathAlias ref="TimeToBreach"/>
+									<property>@value</property>
+								</dataItem>
+								<integer>1800</integer>
+							</lte>
+						</and>
 						<transaction>
+							<delay unit="samples">3</delay>
 							<update>
 								<property>state/@severity</property>
 								<severity>critical</severity>
 							</update>
 						</transaction>
 						<if>
-							<lt>
-								<dataItem>
-									<property>@value</property>
-								</dataItem>
-								<multiply>
-									<timeSeries ref="ORDERS"/>
-									<double>0.5</double>
-								</multiply>
-							</lt>
+							<and>
+								<like>
+									<dataItem>
+										<property>@value</property>
+									</dataItem>
+									<string>Will Breach</string>
+								</like>
+								<gt>
+									<dataItem>
+										<pathAlias ref="TimeToBreach"/>
+										<property>@value</property>
+									</dataItem>
+									<integer>1800</integer>
+								</gt>
+							</and>
 							<transaction>
+								<delay unit="samples">3</delay>
 								<update>
 									<property>state/@severity</property>
 									<severity>warning</severity>
@@ -27040,16 +27075,16 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</if>
 				</block>
 			</rule>
-			<rule name="Expected Orders">
+			<rule name="Expected Orders Rates">
 				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Orders&quot;)]/cell[(@column=&quot;Expected&quot;)]</target>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7040&quot;)]/managedEntity[(@name=&quot;TBP&quot;)]/sampler[(@name=&quot;Order Router&quot;)][(@type=&quot;TBP Test Source&quot;)]/dataview[(@name=&quot;Order Router&quot;)]/rows/row[(@name=&quot;Rate&quot;)]/cell[(@column=&quot;Expected&quot;)]</target>
 				</targets>
 				<priority>1</priority>
 				<block>
 					<transaction>
 						<update>
 							<property>@value</property>
-							<timeSeries ref="ORDERS"/>
+							<timeSeries ref="RATES"/>
 						</update>
 					</transaction>
 				</block>
@@ -27170,7 +27205,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							</level>
 						</critical>
 					</alert>
-					<alert name="TCP-LINKS" disabled="true">
+					<alert disabled="true" name="TCP-LINKS">
 						<warning>
 							<level>
 								<notification>
