@@ -1401,7 +1401,7 @@ order by SEVTIME DESC
 				</rule>
 				<rule name="Front Office critical">
 					<targets>
-						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critcal&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critical&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<block>
