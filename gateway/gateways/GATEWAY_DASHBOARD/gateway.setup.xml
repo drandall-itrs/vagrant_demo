@@ -1370,6 +1370,64 @@ order by SEVTIME DESC
 					</block>
 				</rule>
 			</ruleGroup>
+			<ruleGroup name="Front Office">
+				<rule name="Front Office warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;warning&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+				<rule name="Front Office critical">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critcal&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+			</ruleGroup>
 		</ruleGroup>
 		<ruleGroup name="gateway sql">
 			<ruleGroup name="INFRA">
