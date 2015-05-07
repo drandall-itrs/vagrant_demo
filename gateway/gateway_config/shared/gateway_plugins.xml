@@ -48,6 +48,11 @@
 			<sampler ref="GW User Assignment Data"/>
 			<sampler ref="GW Include File Data"/>
 			<sampler disabled="false" ref="GW License Usage"/>
+			<sampler ref="GW databaseLogging"/>
+			<sampler ref="GW exportedData"/>
+			<sampler ref="GW importedData"/>
+			<sampler ref="GW scheduledCommandData"/>
+			<sampler ref="GW scheduledCommandsHistoryData"/>
 		</type>
 		<type name="Gateway Load">
 			<sampler ref="GW Gateway Components"/>
@@ -191,6 +196,48 @@
 						<displayName>User Assignment Data</displayName>
 					</dataview>
 				</dataviews>
+			</sampler>
+			<sampler name="GW databaseLogging">
+				<var-group>
+					<data>Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-databaseLogging/>
+				</plugin>
+			</sampler>
+			<sampler name="GW exportedData">
+				<var-group>
+					<data>Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-exportedData/>
+				</plugin>
+			</sampler>
+			<sampler name="GW importedData">
+				<var-group>
+					<data>Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-importedData/>
+				</plugin>
+			</sampler>
+			<sampler name="GW scheduledCommandData">
+				<var-group>
+					<data>Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-scheduledCommandData/>
+				</plugin>
+			</sampler>
+			<sampler name="GW scheduledCommandsHistoryData">
+				<var-group>
+					<data>Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-scheduledCommandsHistoryData>
+						<history/>
+					</Gateway-scheduledCommandsHistoryData>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 		<samplerGroup name="Gateway Load">
