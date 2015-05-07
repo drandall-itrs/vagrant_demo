@@ -11,7 +11,7 @@
 			<attribute name="REGION">GATEWAY</attribute>
 			<attribute name="PRODUCT">GENEOS</attribute>
 			<managedEntityGroup name="GATEWAY INFO">
-				<attribute name="APP">$(gateway_name) GATEWAY INFO</attribute>
+				<attribute name="APP">GATEWAY INFO</attribute>
 				<managedEntity disabled="true" name="Cluster Monitoring Entity">
 					<probe ref="localhost_7051"/>
 					<sampler ref="Cluster Monitoring Sampler"/>
