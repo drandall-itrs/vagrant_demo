@@ -1393,7 +1393,7 @@ order by SEVTIME DESC
 							<transaction>
 								<update>
 									<property>state/@severity</property>
-									<severity>ok</severity>
+									<severity>undefined</severity>
 								</update>
 							</transaction>
 						</if>
@@ -1421,7 +1421,7 @@ order by SEVTIME DESC
 							<transaction>
 								<update>
 									<property>state/@severity</property>
-									<severity>ok</severity>
+									<severity>undefined</severity>
 								</update>
 							</transaction>
 						</if>
