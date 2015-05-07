@@ -2324,5 +2324,8 @@ order by SEVTIME DESC
 	<operatingEnvironment>
 		<gatewayName>GATEWAY_DASHBOARD</gatewayName>
 		<listenPort>8063</listenPort>
+		<var name="gateway_name">
+			<string>GATEWAY_DASHBOARD</string>
+		</var>
 	</operatingEnvironment>
 </gateway>
