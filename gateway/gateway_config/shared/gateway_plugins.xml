@@ -71,7 +71,8 @@
 		<samplerGroup name="Gateway Info">
 			<sampler name="GW Client Info">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-clientConnectionData/>
