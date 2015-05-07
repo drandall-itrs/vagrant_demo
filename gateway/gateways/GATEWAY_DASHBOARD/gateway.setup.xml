@@ -69,6 +69,7 @@
 						</addTypes>
 						<sampler ref="dashboard moving"/>
 						<sampler ref="Tier 3 dashboard"/>
+						<sampler ref="Front Office One View"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -477,6 +478,20 @@
 							</additions>
 						</dataview>
 					</dataviews>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Front Office dashboard">
+				<sampler name="Front Office One View">
+					<var-group>
+						<data>Front Office</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/dashboard/front_office_dashboard_1.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
