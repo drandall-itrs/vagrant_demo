@@ -1374,6 +1374,7 @@ order by SEVTIME DESC
 				<rule name="Front Office warning">
 					<targets>
 						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;warning&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[wild(@name,&quot;*_warning&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<block>
@@ -1402,6 +1403,7 @@ order by SEVTIME DESC
 				<rule name="Front Office critical">
 					<targets>
 						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critical&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[wild(@name,&quot;*_critical&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<block>
