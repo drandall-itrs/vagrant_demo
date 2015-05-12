@@ -1451,7 +1451,7 @@ order by SEVTIME DESC
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
-						<pathAlias name="warning">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;warning&quot;)]</pathAlias>
+						<pathAlias name="warning">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;warning&quot;)]</pathAlias>
 					</pathAliases>
 					<block>
 						<transaction>
@@ -1473,7 +1473,7 @@ order by SEVTIME DESC
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
-						<pathAlias name="critical">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critical&quot;)]</pathAlias>
+						<pathAlias name="critical">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;critical&quot;)]</pathAlias>
 					</pathAliases>
 					<block>
 						<transaction>
