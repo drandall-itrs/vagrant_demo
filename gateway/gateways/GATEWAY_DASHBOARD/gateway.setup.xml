@@ -492,6 +492,22 @@
 							</samplerScript>
 						</toolkit>
 					</plugin>
+					<dataviews>
+						<dataview name="Front Office One View">
+							<additions>
+								<var-headlines>
+									<data>
+										<headline>
+											<data>total_warning</data>
+										</headline>
+										<headline>
+											<data>total_critical</data>
+										</headline>
+									</data>
+								</var-headlines>
+							</additions>
+						</dataview>
+					</dataviews>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
