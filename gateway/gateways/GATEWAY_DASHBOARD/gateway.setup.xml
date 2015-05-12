@@ -505,6 +505,13 @@
 										</headline>
 									</data>
 								</var-headlines>
+								<var-columns>
+									<data>
+										<column>
+											<data>maximum severity</data>
+										</column>
+									</data>
+								</var-columns>
 							</additions>
 						</dataview>
 					</dataviews>
@@ -1485,6 +1492,33 @@ order by SEVTIME DESC
 										<property>@value</property>
 									</dataItems>
 								</total>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="max severity of totals">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;maximum severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="maximum severity warning">../cell[(@column=&quot;warning&quot;)]</pathAlias>
+						<pathAlias name="maximum severity critical">../cell[(@column=&quot;critical&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItem>
+										<pathAlias ref="maximum severity warning"/>
+										<property>state/@severity</property>
+									</dataItem>
+									<dataItem>
+										<pathAlias ref="maximum severity critical"/>
+										<property>state/@severity</property>
+									</dataItem>
+								</maximum>
 							</update>
 						</transaction>
 					</block>
