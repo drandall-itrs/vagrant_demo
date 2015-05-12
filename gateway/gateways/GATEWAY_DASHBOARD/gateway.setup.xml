@@ -1445,6 +1445,50 @@ order by SEVTIME DESC
 						</if>
 					</block>
 				</rule>
+				<rule name="total warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[(@name=&quot;total_warning&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="warning">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;warning&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<total>
+									<dataItem>
+										<pathAlias ref="warning"/>
+										<property>@value</property>
+									</dataItem>
+								</total>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="total critical">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[(@name=&quot;total_critical&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="critical">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critical&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<total>
+									<dataItem>
+										<pathAlias ref="critical"/>
+										<property>@value</property>
+									</dataItem>
+								</total>
+							</update>
+						</transaction>
+					</block>
+				</rule>
 			</ruleGroup>
 		</ruleGroup>
 		<ruleGroup name="gateway sql">
