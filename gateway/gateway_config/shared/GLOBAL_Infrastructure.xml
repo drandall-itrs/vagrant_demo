@@ -16,7 +16,7 @@ This allows the Type to be re-used using different Environments-->
 				<sampler ref="Network"/>
 				<sampler ref="TOP-CPU"/>
 				<sampler disabled="true" ref="Geneos Processes"/>
-				<sampler ref="disk"/>
+				<sampler ref="disk" disabled="true"/>
 			</type>
 			<type name="Linux Defaults">
 				<!--When assigning this Type to a Managed Entity for the first time, 
