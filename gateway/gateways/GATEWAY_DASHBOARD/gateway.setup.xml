@@ -69,6 +69,7 @@
 						</addTypes>
 						<sampler ref="dashboard moving"/>
 						<sampler ref="Tier 3 dashboard"/>
+						<sampler ref="Front Office One View"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -474,6 +475,43 @@
 										</row>
 									</data>
 								</var-rows>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Front Office dashboard">
+				<sampler name="Front Office One View">
+					<var-group>
+						<data>Front Office</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/dashboard/front_office_dashboard_1.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="Front Office One View">
+							<additions>
+								<var-headlines>
+									<data>
+										<headline>
+											<data>total_warning</data>
+										</headline>
+										<headline>
+											<data>total_critical</data>
+										</headline>
+									</data>
+								</var-headlines>
+								<var-columns>
+									<data>
+										<column>
+											<data>maximum severity</data>
+										</column>
+									</data>
+								</var-columns>
 							</additions>
 						</dataview>
 					</dataviews>
@@ -1350,6 +1388,137 @@ order by SEVTIME DESC
 								<target>
 									<rowName/>
 								</target>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+			</ruleGroup>
+			<ruleGroup name="Front Office">
+				<rule name="Front Office warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;warning&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[wild(@name,&quot;*_warning&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>undefined</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+				<rule name="Front Office critical">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row/cell[(@column=&quot;critical&quot;)]</target>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[wild(@name,&quot;*_critical&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<block>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>0</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>undefined</severity>
+								</update>
+							</transaction>
+						</if>
+					</block>
+				</rule>
+				<rule name="total warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[(@name=&quot;total_warning&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="warning">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;warning&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<total>
+									<dataItems>
+										<pathAlias ref="warning"/>
+										<property>@value</property>
+									</dataItems>
+								</total>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="total critical">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/headlines/cell[(@name=&quot;total_critical&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="critical">ancestor::dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;critical&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<total>
+									<dataItems>
+										<pathAlias ref="critical"/>
+										<property>@value</property>
+									</dataItems>
+								</total>
+							</update>
+						</transaction>
+					</block>
+				</rule>
+				<rule name="max severity of totals">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Front Office One View&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Front Office One View&quot;)]/rows/row[wild(@name,&quot;*_total&quot;)]/cell[(@column=&quot;maximum severity&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="maximum severity warning">../cell[(@column=&quot;warning&quot;)]</pathAlias>
+						<pathAlias name="maximum severity critical">../cell[(@column=&quot;critical&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<maximum>
+									<dataItem>
+										<pathAlias ref="maximum severity warning"/>
+										<property>state/@severity</property>
+									</dataItem>
+									<dataItem>
+										<pathAlias ref="maximum severity critical"/>
+										<property>state/@severity</property>
+									</dataItem>
+								</maximum>
 							</update>
 						</transaction>
 					</block>
@@ -2324,5 +2493,8 @@ order by SEVTIME DESC
 	<operatingEnvironment>
 		<gatewayName>GATEWAY_DASHBOARD</gatewayName>
 		<listenPort>8063</listenPort>
+		<var name="gateway_name">
+			<string>GATEWAY_DASHBOARD</string>
+		</var>
 	</operatingEnvironment>
 </gateway>

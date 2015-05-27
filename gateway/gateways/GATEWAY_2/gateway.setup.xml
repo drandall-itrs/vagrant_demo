@@ -31046,6 +31046,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 SET LOG_FREQUENCY = 10-->
 		<gatewayName>GATEWAY_2</gatewayName>
 		<listenPort>7050</listenPort>
+		<var name="gateway_name">
+			<string>GATEWAY_2</string>
+		</var>
 		<historyFiles>1</historyFiles>
 		<debug/>
 	</operatingEnvironment>

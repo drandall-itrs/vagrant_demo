@@ -72,7 +72,8 @@
 		<samplerGroup name="Gateway Info">
 			<sampler name="GW Client Info">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-clientConnectionData/>
@@ -85,7 +86,8 @@
 			</sampler>
 			<sampler name="GW Gateway Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-gatewayData/>
@@ -98,7 +100,8 @@
 			</sampler>
 			<sampler name="GW Include File Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-includesData/>
@@ -111,7 +114,8 @@
 			</sampler>
 			<sampler name="GW License Usage">
 				<var-group>
-					<data>Gateway Licence</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Licence</data>
 				</var-group>
 				<plugin>
 					<Gateway-licenceUsage>
@@ -129,7 +133,8 @@
 			</sampler>
 			<sampler name="xGW Managed Entity Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-managedEntitiesData/>
@@ -142,7 +147,8 @@
 			</sampler>
 			<sampler name="GW Probe Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-probeData/>
@@ -155,7 +161,8 @@
 			</sampler>
 			<sampler name="GW Severity Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-severityCount>
@@ -174,7 +181,8 @@
 			</sampler>
 			<sampler name="GW Snooze Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-snoozeData/>
@@ -187,7 +195,8 @@
 			</sampler>
 			<sampler name="GW User Assignment Data">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-userAssignmentData/>
@@ -200,7 +209,8 @@
 			</sampler>
 			<sampler name="GW databaseLogging">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-databaseLogging/>
@@ -208,7 +218,8 @@
 			</sampler>
 			<sampler name="GW exportedData">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-exportedData/>
@@ -216,7 +227,8 @@
 			</sampler>
 			<sampler name="GW importedData">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-importedData/>
@@ -224,7 +236,8 @@
 			</sampler>
 			<sampler name="GW scheduledCommandData">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-scheduledCommandData/>
@@ -232,7 +245,8 @@
 			</sampler>
 			<sampler name="GW scheduledCommandsHistoryData">
 				<var-group>
-					<data>Gateway Info</data>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
 				</var-group>
 				<plugin>
 					<Gateway-scheduledCommandsHistoryData>
