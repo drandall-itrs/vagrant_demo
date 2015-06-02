@@ -1263,6 +1263,24 @@ order by SEVTIME DESC
 						</block>
 					</rule>
 				</ruleGroup>
+				<ruleGroup name="test">
+					<rule name="New Rule">
+						<targets>
+							<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/headlines/cell[(@name=&quot;ME_NAME&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<block>
+							<set>
+								<var ref="ME"/>
+								<var ref="ME"/>
+							</set>
+							<set>
+								<var ref="xyz"/>
+								<var ref="ME_ORIG"/>
+							</set>
+						</block>
+					</rule>
+				</ruleGroup>
 			</ruleGroup>
 			<ruleGroup name="Tier 2">
 				<rule name="DDA Total Severity Headline">
