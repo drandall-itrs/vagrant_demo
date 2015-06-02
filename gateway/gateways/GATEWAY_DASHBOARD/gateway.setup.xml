@@ -348,6 +348,13 @@
 									<firstColumn>section</firstColumn>
 								</createOnGateway>
 								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>ME_NAME</data>
+											</headline>
+										</data>
+									</var-headlines>
 									<var-columns>
 										<data>
 											<column>
@@ -2495,6 +2502,16 @@ order by SEVTIME DESC
 		<listenPort>8063</listenPort>
 		<var name="gateway_name">
 			<string>GATEWAY_DASHBOARD</string>
+		</var>
+		<var name="ME_ORIG">
+			<macro>
+				<managedEntityName/>
+			</macro>
+		</var>
+		<var name="ME">
+			<regex>
+				<regex>($(ME_ORIG))_.*</regex>
+			</regex>
 		</var>
 	</operatingEnvironment>
 </gateway>

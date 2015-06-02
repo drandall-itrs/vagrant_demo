@@ -9,9 +9,9 @@ sudo /etc/init.d/mysqld start
 /opt/geneos/bin/gatewayctl  all start
 /opt/geneos/bin/netprobectl all start
 /opt/geneos/bin/webserverctl all start
-/opt/geneos/packages/openaccess/active_prod/oacluster.sh &
-/opt/geneos/bin/webserverctl all start
+#/opt/geneos/packages/openaccess/active_prod/oacluster.sh &
+#/opt/geneos/bin/webserverctl all start
 
-cd /opt/geneos/packages/webmontage/active_prod
-./run &
+#cd /opt/geneos/packages/webmontage/active_prod
+#./run &
 
