@@ -970,7 +970,15 @@ order by SEVTIME DESC
 							<enabled>true</enabled>
 							<firstColumn>Name</firstColumn>
 						</createOnGateway>
-						<additions/>
+						<additions>
+							<var-columns>
+								<data>
+									<column>
+										<data>time</data>
+									</column>
+								</data>
+							</var-columns>
+						</additions>
 					</dataview>
 				</dataviews>
 			</sampler>
