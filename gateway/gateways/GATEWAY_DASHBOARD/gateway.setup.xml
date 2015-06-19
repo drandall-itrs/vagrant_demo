@@ -978,6 +978,13 @@ order by SEVTIME DESC
 									</column>
 								</data>
 							</var-columns>
+							<var-rows>
+								<data>
+									<row>
+										<data>Current</data>
+									</row>
+								</data>
+							</var-rows>
 						</additions>
 					</dataview>
 				</dataviews>
