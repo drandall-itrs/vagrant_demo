@@ -2372,6 +2372,25 @@ order by SEVTIME DESC
 				</ruleGroup>
 			</ruleGroup>
 		</ruleGroup>
+		<ruleGroup name="time">
+			<rule name="current time">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;CurrentTime&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;CurrentTime&quot;)]/rows/row[(@name=&quot;Current&quot;)]/cell[(@column=&quot;time&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<printDate>
+								<string>%d %B %Y %H:%M:%S</string>
+								<now/>
+							</printDate>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+		</ruleGroup>
 	</rules>
 	<alerting>
 		<hierarchy disabled="true" name="Infrastructure Support Group">
