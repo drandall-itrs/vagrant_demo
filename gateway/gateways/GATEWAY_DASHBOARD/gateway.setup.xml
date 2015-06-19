@@ -962,7 +962,7 @@ order by SEVTIME DESC
 		<samplerGroup name="time">
 			<sampler name="CurrentTime">
 				<sampleInterval>
-					<data>3</data>
+					<data>1</data>
 				</sampleInterval>
 				<dataviews>
 					<dataview name="CurrentTime">
