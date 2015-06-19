@@ -70,6 +70,7 @@
 						<sampler ref="dashboard moving"/>
 						<sampler ref="Tier 3 dashboard"/>
 						<sampler ref="Front Office One View"/>
+						<sampler ref="CurrentTime"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -957,6 +958,22 @@ order by SEVTIME DESC
 					</plugin>
 				</sampler>
 			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="time">
+			<sampler name="CurrentTime">
+				<sampleInterval>
+					<data>3</data>
+				</sampleInterval>
+				<dataviews>
+					<dataview name="CurrentTime">
+						<createOnGateway>
+							<enabled>true</enabled>
+							<firstColumn>Name</firstColumn>
+						</createOnGateway>
+						<additions/>
+					</dataview>
+				</dataviews>
+			</sampler>
 		</samplerGroup>
 	</samplers>
 	<rules>
