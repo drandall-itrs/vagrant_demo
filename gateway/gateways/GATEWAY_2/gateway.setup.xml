@@ -12380,6 +12380,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 															<startTag>
 																<data>BA1</data>
 															</startTag>
+															<endTag>
+																<data>$</data>
+															</endTag>
 														</tags>
 														<extractors>
 															<extractor>
@@ -12387,7 +12390,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 																	<data>Market</data>
 																</name>
 																<regex>
-																	<data>(.*)\s+</data>
+																	<data>Count(.*)</data>
 																</regex>
 															</extractor>
 														</extractors>
@@ -25978,9 +25981,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26157,9 +26162,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
