@@ -12347,6 +12347,47 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 										<data>/tmp/sungard/*.txt</data>
 									</filename>
 								</source>
+								<tables>
+									<table>
+										<severity>fail</severity>
+										<keyTable>
+											<data>
+												<keys>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data> Statistics</data>
+																</searchString>
+															</match>
+														</setKey>
+														<message>
+															<data>BA1(.*)</data>
+														</message>
+														<tags>
+															<startTag>
+																<data>BA1</data>
+															</startTag>
+														</tags>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Market</data>
+																</name>
+																<regex>
+																	<data>(.*)\s+</data>
+																</regex>
+															</extractor>
+														</extractors>
+													</key>
+												</keys>
+											</data>
+										</keyTable>
+									</table>
+								</tables>
+								<rewind>
+									<data>true</data>
+								</rewind>
 							</file>
 						</files>
 					</fkm>
@@ -25922,9 +25963,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26095,9 +26138,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
