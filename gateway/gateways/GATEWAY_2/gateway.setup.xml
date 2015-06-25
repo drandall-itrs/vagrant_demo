@@ -12419,13 +12419,13 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 										<data>/tmp/sungard/state.txt</data>
 									</filename>
 									<rewind>
-										<data>true</data>
+										<data>false</data>
 									</rewind>
 									<transitionStates>
 										<defaultState name="Waiting">
 											<timeout>
-												<atTimeOfDay>15:45</atTimeOfDay>
-												<state ref="Reset"/>
+												<atTimeOfDay>18:36</atTimeOfDay>
+												<state ref="Waiting"/>
 											</timeout>
 											<templateOptions/>
 										</defaultState>
@@ -12440,7 +12440,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 												</key>
 											</keys>
 										</state>
-										<state name="Reset"/>
+										<state name="Waiting"/>
 									</transitionStates>
 								</tracker>
 							</trackers>
@@ -26027,9 +26027,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26218,9 +26220,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
