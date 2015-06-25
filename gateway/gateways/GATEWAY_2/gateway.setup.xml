@@ -253,6 +253,7 @@
 						<probe ref="localhost_7034"/>
 						<sampler ref="FKM regex range"/>
 						<sampler ref="SunGard"/>
+						<sampler ref="SunGard State Tracker"/>
 					</managedEntity>
 				</managedEntityGroup>
 				<managedEntityGroup name="SNMP">
@@ -12406,6 +12407,43 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							</file>
 						</files>
 					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="SunGard State Tracker">
+				<plugin>
+					<stateTracker>
+						<trackerGroup name="Start of Day">
+							<trackers>
+								<tracker name="SG Log">
+									<filename>
+										<data>/tmp/sungard/state.txt</data>
+									</filename>
+									<rewind>
+										<data>false</data>
+									</rewind>
+									<transitionStates>
+										<defaultState name="Waiting">
+											<timeout>
+												<atTimeOfDay>15:00:00</atTimeOfDay>
+												<state ref="Waiting"/>
+											</timeout>
+										</defaultState>
+										<state name="Received">
+											<keys>
+												<key>
+													<regularExpression>
+														<data>
+															<regex>arrived</regex>
+														</data>
+													</regularExpression>
+												</key>
+											</keys>
+										</state>
+									</transitionStates>
+								</tracker>
+							</trackers>
+						</trackerGroup>
+					</stateTracker>
 				</plugin>
 			</sampler>
 		</samplerGroup>
@@ -25982,9 +26020,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26163,9 +26203,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
