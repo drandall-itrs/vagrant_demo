@@ -252,6 +252,7 @@
 					<managedEntity name="FKM Examples">
 						<probe ref="localhost_7034"/>
 						<sampler ref="FKM regex range"/>
+						<sampler ref="SunGard"/>
 					</managedEntity>
 				</managedEntityGroup>
 				<managedEntityGroup name="SNMP">
@@ -12332,6 +12333,24 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+			<sampler name="SunGard">
+				<var-group>
+					<data>SunGard</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/tmp/sungard/*.txt</data>
+									</filename>
+								</source>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 		<samplerGroup name="English RSS">
@@ -25902,9 +25921,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26073,9 +26094,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
