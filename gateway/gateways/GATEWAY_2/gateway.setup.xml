@@ -12362,7 +12362,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 															</match>
 														</setKey>
 														<message>
-															<data>BA1(.*)</data>
+															<data/>
 														</message>
 														<tags>
 															<startTag>
@@ -25964,9 +25964,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26139,9 +26141,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
