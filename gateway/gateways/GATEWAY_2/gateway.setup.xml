@@ -12424,14 +12424,18 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 									<transitionStates>
 										<defaultState name="Waiting">
 											<timeout>
-												<atTimeOfDay>18:39</atTimeOfDay>
+												<relative>
+													<interval>1</interval>
+													<units>minutes</units>
+												</relative>
 												<state ref="Waiting"/>
 											</timeout>
-											<templateOptions>
-												<removeTracker>
-													<data>true</data>
-												</removeTracker>
-											</templateOptions>
+											<allowTransitionToStates>
+												<states>
+													<state ref="Waiting"/>
+													<state ref="Received"/>
+												</states>
+											</allowTransitionToStates>
 										</defaultState>
 										<state name="Received">
 											<keys>
@@ -26033,9 +26037,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26228,9 +26234,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
