@@ -12347,6 +12347,18 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 										<data>/tmp/sungard/*.txt</data>
 									</filename>
 								</source>
+								<multiLine>
+									<startPattern>
+										<data>
+											<regex>\d{2}:\d{2}:\d{2}:</regex>
+										</data>
+									</startPattern>
+									<messageEnd>
+										<maxNumberOfSamplesToWait>
+											<data>1</data>
+										</maxNumberOfSamplesToWait>
+									</messageEnd>
+								</multiLine>
 								<tables>
 									<table>
 										<severity>fail</severity>
@@ -25965,9 +25977,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26142,9 +26156,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
