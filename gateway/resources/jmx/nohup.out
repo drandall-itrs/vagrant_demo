@@ -576,3 +576,11 @@ Exception in thread "main" org.apache.xmlrpc.XmlRpcException: Sampler does not e
 	at QueueSamplerClient3.main(QueueSamplerClient3.java:21)
 Error: Exception thrown by the agent : java.rmi.server.ExportException: Port already in use: 5003; nested exception is: 
 	java.net.BindException: Address already in use
+Exception in thread "main" org.apache.xmlrpc.XmlRpcException: View 'myGroup-jqueues' already exists.
+	at org.apache.xmlrpc.XmlRpcClient$Worker.execute(XmlRpcClient.java:457)
+	at org.apache.xmlrpc.XmlRpcClient.execute(XmlRpcClient.java:163)
+	at QueueSamplerClient3.main(QueueSamplerClient3.java:21)
+Exception in thread "main" org.apache.xmlrpc.XmlRpcException: View 'myGroup-jqueues' already exists.
+	at org.apache.xmlrpc.XmlRpcClient$Worker.execute(XmlRpcClient.java:457)
+	at org.apache.xmlrpc.XmlRpcClient.execute(XmlRpcClient.java:163)
+	at QueueSamplerClient3.main(QueueSamplerClient3.java:21)
