@@ -210,7 +210,7 @@
 				</managedEntityGroup>
 				<managedEntityGroup name="Custom">
 					<attribute name="APP">CUSTOM</attribute>
-					<managedEntity name="sql-toolkit" disabled="true">
+					<managedEntity disabled="true" name="sql-toolkit">
 						<probe ref="localhost_7034"/>
 						<addTypes>
 							<type ref="sql-toolkit"/>
@@ -222,7 +222,7 @@
 							<type ref="api"/>
 						</addTypes>
 					</managedEntity>
-					<managedEntity name="toolkit" disabled="true">
+					<managedEntity disabled="true" name="toolkit">
 						<probe ref="localhost_7034"/>
 						<addTypes>
 							<type ref="toolkit"/>
@@ -249,7 +249,7 @@
 							<type ref="gateway-sql"/>
 						</addTypes>
 					</managedEntity>
-					<managedEntity name="FKM Examples" disabled="true">
+					<managedEntity name="FKM Examples">
 						<probe ref="localhost_7034"/>
 						<sampler ref="FKM regex range"/>
 						<sampler ref="SunGard"/>
@@ -26093,9 +26093,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -26292,9 +26294,11 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
