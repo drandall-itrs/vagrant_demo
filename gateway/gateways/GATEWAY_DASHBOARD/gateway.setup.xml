@@ -108,7 +108,7 @@
 			<type name="IBM">
 				<sampler ref="IBM Job view"/>
 				<sampler ref="IBM JOBS MSG_WAIT"/>
-				<sampler ref="IBM JOBS SUBSYSTEM INT"/>
+				<sampler ref="IBM JOBS VARIOUS"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -1046,7 +1046,7 @@ order by SEVTIME DESC
 					</Gateway-sql>
 				</plugin>
 			</sampler>
-			<sampler name="IBM JOBS SUBSYSTEM INTJFB">
+			<sampler name="IBM JOBS VARIOUS">
 				<var-group>
 					<data>IBM</data>
 				</var-group>
