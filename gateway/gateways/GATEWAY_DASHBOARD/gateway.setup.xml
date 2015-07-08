@@ -1108,6 +1108,19 @@ order by SEVTIME DESC
 						</views>
 					</Gateway-sql>
 				</plugin>
+				<dataviews>
+					<dataview name="IBM JOBS USER JOB COUNT">
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>TOTAL</data>
+									</headline>
+								</data>
+							</var-headlines>
+						</additions>
+					</dataview>
+				</dataviews>
 			</sampler>
 		</samplerGroup>
 	</samplers>
