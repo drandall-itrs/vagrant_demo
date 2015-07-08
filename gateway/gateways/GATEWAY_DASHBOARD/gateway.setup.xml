@@ -107,6 +107,7 @@
 		<typeGroup name="IBM">
 			<type name="IBM">
 				<sampler ref="IBM Job view"/>
+				<sampler ref="IBM JOBS MSG_WAIT"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -1015,6 +1016,33 @@ order by SEVTIME DESC
 							<data>/bin/cat /opt/geneos/gateway/resources/ibm/jobs/jobs_view.csv</data>
 						</samplerScript>
 					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="IBM JOBS MSG_WAIT">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>MSG_WAIT</data>
+								</name>
+								<sql>
+									<data>select * from INFO</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
 				</plugin>
 			</sampler>
 		</samplerGroup>
