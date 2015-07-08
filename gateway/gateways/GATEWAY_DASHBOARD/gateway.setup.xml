@@ -2568,7 +2568,7 @@ order by SEVTIME DESC
 				</targets>
 				<priority>1</priority>
 				<pathVariables>
-					<pathVariable name="F">
+					<pathVariable name="row">
 						<value>
 							<target>
 								<rowName/>
@@ -2577,7 +2577,7 @@ order by SEVTIME DESC
 					</pathVariable>
 				</pathVariables>
 				<pathAliases>
-					<pathAlias name="IBM SOURCE">ancestor-or-self::sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]/rows/row/cell[(@value=var(&quot;F&quot;))][(@column=&quot;name&quot;)]</pathAlias>
+					<pathAlias name="SOURCE">ancestor-or-self::managedEntity/sampler/dataview[(@name=&quot;IBM Job view&quot;)]/rows/row/cell[(@value=var(&quot;row&quot;))][(@column=&quot;name&quot;)]</pathAlias>
 				</pathAliases>
 				<block>
 					<set>
@@ -2585,6 +2585,15 @@ order by SEVTIME DESC
 						<target>
 							<rowName/>
 						</target>
+					</set>
+					<set>
+						<var ref="eric"/>
+						<first>
+							<dataItems>
+								<pathAlias ref="SOURCE"/>
+								<property>@value</property>
+							</dataItems>
+						</first>
 					</set>
 				</block>
 			</rule>
