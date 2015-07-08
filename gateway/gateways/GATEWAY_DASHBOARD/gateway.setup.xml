@@ -2562,6 +2562,66 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="jobs expected status">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathVariables>
+					<pathVariable name="F">
+						<value>
+							<target>
+								<rowName/>
+							</target>
+						</value>
+					</pathVariable>
+				</pathVariables>
+				<pathAliases>
+					<pathAlias name="IBM SOURCE">ancestor-or-self::sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]/rows/row/cell[(@value=var(&quot;F&quot;))][(@column=&quot;name&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="fred"/>
+						<count>
+							<dataItems>
+								<pathAlias ref="IBM SOURCE"/>
+								<property>@value</property>
+							</dataItems>
+						</count>
+					</set>
+					<if>
+						<gt>
+							<count>
+								<dataItems>
+									<pathAlias ref="IBM SOURCE"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+							<integer>0</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>YES</string>
+							</update>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>NO</string>
+							</update>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>
