@@ -109,6 +109,7 @@
 				<sampler ref="IBM Job view"/>
 				<sampler ref="IBM JOBS MSG_WAIT"/>
 				<sampler ref="IBM JOBS VARIOUS"/>
+				<sampler ref="IBM JOBS USER JOB COUNT"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -1075,6 +1076,33 @@ order by SEVTIME DESC
 								</name>
 								<sql>
 									<data>select * from INFO where activeJobStatus = &quot;TIMW&quot;</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+			</sampler>
+			<sampler name="IBM JOBS USER JOB COUNT">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>MSG_WAIT</data>
+								</name>
+								<sql>
+									<data>SELECT user, count(user) as ct FROM INFO GROUP BY user</data>
 								</sql>
 							</view>
 						</views>
