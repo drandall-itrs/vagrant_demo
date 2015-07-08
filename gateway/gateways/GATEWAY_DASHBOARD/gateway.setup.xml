@@ -1135,6 +1135,19 @@ order by SEVTIME DESC
 							</samplerScript>
 						</toolkit>
 					</plugin>
+					<dataviews>
+						<dataview name="IBM JOBS EXPECTED">
+							<additions>
+								<var-columns>
+									<data>
+										<column>
+											<data>Value</data>
+										</column>
+									</data>
+								</var-columns>
+							</additions>
+						</dataview>
+					</dataviews>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
