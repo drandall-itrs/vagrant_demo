@@ -73,6 +73,15 @@
 						<sampler ref="CurrentTime"/>
 					</managedEntity>
 				</managedEntityGroup>
+				<managedEntityGroup name="IBM">
+					<attribute name="APP">IBM</attribute>
+					<addTypes>
+						<type ref="IBM"/>
+					</addTypes>
+					<managedEntity name="IBM">
+						<probe ref="localhost_7054"/>
+					</managedEntity>
+				</managedEntityGroup>
 			</managedEntityGroup>
 		</managedEntityGroup>
 	</managedEntities>
@@ -94,6 +103,11 @@
 					<sampler ref="tier 1 dashboard sections"/>
 				</type>
 			</typeGroup>
+		</typeGroup>
+		<typeGroup name="IBM">
+			<type name="IBM">
+				<sampler ref="IBM Job view"/>
+			</type>
 		</typeGroup>
 	</types>
 	<samplers>
@@ -988,6 +1002,20 @@ order by SEVTIME DESC
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="IBM-i">
+			<sampler name="IBM Job view">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/jobs/jobs_view.csv</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 	</samplers>
