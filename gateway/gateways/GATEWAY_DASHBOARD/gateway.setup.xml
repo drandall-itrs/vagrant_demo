@@ -1074,7 +1074,7 @@ order by SEVTIME DESC
 									<data>IBM JOBS ACTIVEJOBSTATUS TIMW </data>
 								</name>
 								<sql>
-									<data>select * from INFO where subsystem = &quot;TIMW&quot;</data>
+									<data>select * from INFO where activeJobStatus = &quot;TIMW&quot;</data>
 								</sql>
 							</view>
 						</views>
