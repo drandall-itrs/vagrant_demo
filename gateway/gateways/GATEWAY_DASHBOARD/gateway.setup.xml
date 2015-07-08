@@ -1102,7 +1102,7 @@ order by SEVTIME DESC
 									<data>IBM JOBS USER JOB COUNT</data>
 								</name>
 								<sql>
-									<data>SELECT user, count(user) as ct FROM INFO GROUP BY user where activeJobStatus like &quot;%W&quot;</data>
+									<data>SELECT user, count(user) as ct FROM INFO  where activeJobStatus like &quot;%W&quot; GROUP BY user</data>
 								</sql>
 							</view>
 						</views>
