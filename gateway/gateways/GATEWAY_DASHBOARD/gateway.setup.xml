@@ -110,6 +110,7 @@
 				<sampler ref="IBM JOBS MSG_WAIT"/>
 				<sampler ref="IBM JOBS VARIOUS"/>
 				<sampler ref="IBM JOBS USER JOB COUNT"/>
+				<sampler ref="IBM JOBS EXPECTED"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -1122,6 +1123,20 @@ order by SEVTIME DESC
 					</dataview>
 				</dataviews>
 			</sampler>
+			<samplerGroup name="CUSTOM">
+				<sampler name="IBM JOBS EXPECTED">
+					<var-group>
+						<data>IBM CUSTOM</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/ibm/jobs/jobs_expected.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
 		</samplerGroup>
 	</samplers>
 	<rules>
