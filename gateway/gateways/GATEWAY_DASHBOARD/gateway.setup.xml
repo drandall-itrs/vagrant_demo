@@ -1038,7 +1038,7 @@ order by SEVTIME DESC
 									<data>MSG_WAIT</data>
 								</name>
 								<sql>
-									<data>select * from INFO where status == MSG_WAIT</data>
+									<data>select * from INFO where status = &quot;MSG_WAIT&quot;</data>
 								</sql>
 							</view>
 						</views>
