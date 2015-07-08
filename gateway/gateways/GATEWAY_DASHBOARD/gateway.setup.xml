@@ -108,6 +108,7 @@
 			<type name="IBM">
 				<sampler ref="IBM Job view"/>
 				<sampler ref="IBM JOBS MSG_WAIT"/>
+				<sampler ref="IBM JOBS SUBSYSTEM INT"/>
 			</type>
 		</typeGroup>
 	</types>
