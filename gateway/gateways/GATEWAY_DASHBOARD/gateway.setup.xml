@@ -1045,6 +1045,33 @@ order by SEVTIME DESC
 					</Gateway-sql>
 				</plugin>
 			</sampler>
+			<sampler name="IBM JOBS SUBSYSTEM INT">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>MSG_WAIT</data>
+								</name>
+								<sql>
+									<data>select * from INFO where subsystem like &quot;INTJFB%&quot;</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+			</sampler>
 		</samplerGroup>
 	</samplers>
 	<rules>
