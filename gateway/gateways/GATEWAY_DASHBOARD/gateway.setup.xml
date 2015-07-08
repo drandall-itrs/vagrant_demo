@@ -2595,6 +2595,29 @@ order by SEVTIME DESC
 							</dataItems>
 						</first>
 					</set>
+					<if>
+						<gt>
+							<count>
+								<dataItems>
+									<pathAlias ref="SOURCE"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+							<integer>0</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>YES</string>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>NO</string>
+							</update>
+						</transaction>
+					</if>
 				</block>
 			</rule>
 		</ruleGroup>
