@@ -2537,12 +2537,12 @@ order by SEVTIME DESC
 					<transaction>
 						<update>
 							<property>@value</property>
-							<count>
+							<total>
 								<dataItems>
 									<pathAlias ref="ct alias"/>
 									<property>@value</property>
 								</dataItems>
-							</count>
+							</total>
 						</update>
 					</transaction>
 				</block>
