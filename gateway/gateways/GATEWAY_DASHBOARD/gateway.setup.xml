@@ -2706,7 +2706,7 @@ order by SEVTIME DESC
 									<property>@value</property>
 								</dataItem>
 								<integer>1</integer>
-								<integer>5</integer>
+								<integer>4</integer>
 							</substr>
 							<string>,</string>
 							<string/>
