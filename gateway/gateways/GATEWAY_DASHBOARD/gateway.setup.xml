@@ -2770,7 +2770,7 @@ order by SEVTIME DESC
 								</update>
 								<update>
 									<property>@value</property>
-									<string>Job not started yet, but still in active window</string>
+									<string>Job pending, but still in active window</string>
 								</update>
 							</transaction>
 							<if>
@@ -2797,15 +2797,37 @@ order by SEVTIME DESC
 									</update>
 									<update>
 										<property>@value</property>
-										<string>Job not active in expected time window</string>
+										<string>Job late in expected time window</string>
 									</update>
 								</transaction>
-								<transaction>
-									<update>
-										<property>state/@severity</property>
-										<severity>undefined</severity>
-									</update>
-								</transaction>
+								<if>
+									<and>
+										<like>
+											<var ref="actual_time"/>
+											<string/>
+										</like>
+										<lt>
+											<var ref="start_time"/>
+											<var ref="time"/>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>undefined</severity>
+										</update>
+										<update>
+											<property>@value</property>
+											<string>Too early for job check</string>
+										</update>
+									</transaction>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>undefined</severity>
+										</update>
+									</transaction>
+								</if>
 							</if>
 						</if>
 					</if>
