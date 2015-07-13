@@ -3053,18 +3053,22 @@ order by SEVTIME DESC
 							</dataItems>
 						</count>
 					</set>
+					<set>
+						<var ref="value"/>
+						<divide>
+							<dataItem>
+								<pathAlias ref="total jobs"/>
+								<property>@value</property>
+							</dataItem>
+							<var ref="count"/>
+						</divide>
+					</set>
 					<transaction>
 						<update>
 							<property>@value</property>
 							<format>
-								<string>.2f</string>
-								<divide>
-									<dataItem>
-										<pathAlias ref="total jobs"/>
-										<property>@value</property>
-									</dataItem>
-									<var ref="count"/>
-								</divide>
+								<string>%.2f </string>
+								<var ref="value"/>
 							</format>
 						</update>
 					</transaction>
