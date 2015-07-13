@@ -1131,7 +1131,7 @@ order by SEVTIME DESC
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gateway/resources/ibm/jobs/jobs_expected.csv</data>
+								<data>/opt/geneos/gateway/resources/ibm/jobs/jobs_expected.sh</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
