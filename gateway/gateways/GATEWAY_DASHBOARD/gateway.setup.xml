@@ -1190,6 +1190,9 @@ order by SEVTIME DESC
 				</userCommand>
 			</command>
 			<command name="Remove ibm-i job cmd">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+				</targets>
 				<userCommand>
 					<type>script</type>
 					<runLocation>gateway</runLocation>
@@ -1223,7 +1226,7 @@ order by SEVTIME DESC
 					<silent>true</silent>
 				</task>
 			</command>
-			<command name="Remove ibm-i job">
+			<command name="Remove ibm-i job" disabled="true">
 				<targets>
 					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
 				</targets>
