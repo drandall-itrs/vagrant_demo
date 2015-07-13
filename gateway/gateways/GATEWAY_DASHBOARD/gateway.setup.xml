@@ -1353,6 +1353,9 @@ order by SEVTIME DESC
 				</task>
 			</command>
 			<command name="Help for ibm-i job cmd">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+				</targets>
 				<userCommand>
 					<type>script</type>
 					<runLocation>gateway</runLocation>
