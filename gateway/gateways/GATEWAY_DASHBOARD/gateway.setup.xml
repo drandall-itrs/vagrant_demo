@@ -1261,70 +1261,6 @@ order by SEVTIME DESC
 					<silent>true</silent>
 				</task>
 			</command>
-			<command disabled="true" name="Add to end message cmd">
-				<userCommand>
-					<type>script</type>
-					<runLocation>gateway</runLocation>
-					<args>
-						<arg>
-							<static>/opt/geneos/gateway/resources/messagebox/message_update.sh</static>
-						</arg>
-						<arg>
-							<static>add_to_end</static>
-						</arg>
-						<arg>
-							<userInput>
-								<description>Line number to add</description>
-								<options>
-									<option>
-										<label>line1</label>
-										<value>1</value>
-									</option>
-									<option>
-										<label>line2</label>
-										<value>2</value>
-									</option>
-									<option>
-										<label>line3</label>
-										<value>3</value>
-									</option>
-									<option>
-										<label>line4</label>
-										<value>4</value>
-									</option>
-									<option>
-										<label>line5</label>
-										<value>5</value>
-									</option>
-								</options>
-							</userInput>
-						</arg>
-						<arg>
-							<userInput>
-								<description>Text</description>
-								<singleLineString/>
-							</userInput>
-						</arg>
-						<arg>
-							<xpath>ancestor::dataview/headlines/cell[(@name=&quot;Directory&quot;)]</xpath>
-						</arg>
-					</args>
-				</userCommand>
-			</command>
-			<command disabled="true" name="Add to end message">
-				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY 2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Messagbox&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Messagbox&quot;)]/rows/row/cell</target>
-				</targets>
-				<task>
-					<commands>
-						<commandRef>
-							<command ref="Add to end message cmd"/>
-							<stopOnError>true</stopOnError>
-						</commandRef>
-					</commands>
-					<silent>true</silent>
-				</task>
-			</command>
 			<command name="Modify message cmd">
 				<userCommand>
 					<type>script</type>
@@ -1402,91 +1338,30 @@ order by SEVTIME DESC
 					<silent>true</silent>
 				</task>
 			</command>
-			<command disabled="true" name="Copy of Add message">
+			<command name="Help for ibm-i jobs">
 				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY 2&quot;)]/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Messagbox&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Messagbox&quot;)]//*</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
 				</targets>
 				<task>
 					<commands>
 						<commandRef>
-							<command ref="Add message cmd"/>
+							<command ref="Help for ibm-i job cmd"/>
 							<stopOnError>true</stopOnError>
 						</commandRef>
 					</commands>
-					<silent>true</silent>
+					<silent>false</silent>
 				</task>
 			</command>
-			<command disabled="true" name="Copy of Add message cmd">
+			<command name="Help for ibm-i job cmd">
 				<userCommand>
 					<type>script</type>
 					<runLocation>gateway</runLocation>
 					<args>
 						<arg>
-							<static>/opt/geneos/gateway/resources/messagebox/message_update.sh</static>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/commands/ibm_job_expected_update.sh</static>
 						</arg>
 						<arg>
-							<static>add_to_line</static>
-						</arg>
-						<arg>
-							<userInput>
-								<description>Line number to add</description>
-								<options>
-									<option>
-										<label>line1</label>
-										<value>1</value>
-									</option>
-									<option>
-										<label>line2</label>
-										<value>2</value>
-									</option>
-									<option>
-										<label>line3</label>
-										<value>3</value>
-									</option>
-									<option>
-										<label>line4</label>
-										<value>4</value>
-									</option>
-									<option>
-										<label>line5</label>
-										<value>5</value>
-									</option>
-								</options>
-							</userInput>
-						</arg>
-						<arg>
-							<userInput>
-								<description>Text</description>
-								<singleLineString/>
-							</userInput>
-						</arg>
-						<arg>
-							<xpath>ancestor::dataview/headlines/cell[(@name=&quot;Directory&quot;)]</xpath>
-						</arg>
-						<arg>
-							<userInput>
-								<description>ETA</description>
-								<singleLineString/>
-							</userInput>
-						</arg>
-						<arg>
-							<userInput>
-								<description>Status</description>
-								<options>
-									<option>
-										<label>OPEN</label>
-										<value>OPEN</value>
-									</option>
-									<option>
-										<label>WIP</label>
-										<value>WIP</value>
-									</option>
-									<option>
-										<label>CLOSED</label>
-										<value>CLOSED</value>
-									</option>
-								</options>
-							</userInput>
+							<static>help</static>
 						</arg>
 					</args>
 				</userCommand>
