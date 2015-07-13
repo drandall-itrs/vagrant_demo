@@ -3034,6 +3034,39 @@ order by SEVTIME DESC
 					</if>
 				</block>
 			</rule>
+			<rule name="Average job user value">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/headlines/cell[(@name=&quot;AVERAGE&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="number of users">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row[(@name=&quot;AMBLINOMA&quot;)]/cell[(@column=&quot;ct&quot;)]</pathAlias>
+					<pathAlias name="total jobs">../cell[(@name=&quot;TOTAL&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="count"/>
+						<count>
+							<dataItems>
+								<pathAlias ref="number of users"/>
+								<property>@value</property>
+							</dataItems>
+						</count>
+					</set>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<divide>
+								<dataItem>
+									<pathAlias ref="total jobs"/>
+									<property>@value</property>
+								</dataItem>
+								<var ref="count"/>
+							</divide>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>
