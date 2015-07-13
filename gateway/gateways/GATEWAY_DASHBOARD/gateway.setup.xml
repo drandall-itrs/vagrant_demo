@@ -3081,6 +3081,39 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="Job User Deviation from Average">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row/cell[(@column=&quot;Deviation From Average&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="average">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/headlines/cell[(@name=&quot;AVERAGE&quot;)]</pathAlias>
+					<pathAlias name="count">../cell[(@column=&quot;ct&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<format>
+								<string>%.2f %%</string>
+								<multiply>
+									<divide>
+										<dataItem>
+											<pathAlias ref="count"/>
+											<property>@value</property>
+										</dataItem>
+										<dataItem>
+											<pathAlias ref="average"/>
+											<property>@value</property>
+										</dataItem>
+									</divide>
+									<integer>100</integer>
+								</multiply>
+							</format>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>
