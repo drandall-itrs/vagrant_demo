@@ -3040,7 +3040,7 @@ order by SEVTIME DESC
 				</targets>
 				<priority>1</priority>
 				<pathAliases>
-					<pathAlias name="number of users">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row[(@name=&quot;AMBLINOMA&quot;)]/cell[(@column=&quot;ct&quot;)]</pathAlias>
+					<pathAlias name="number of users">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row/cell[(@column=&quot;ct&quot;)]</pathAlias>
 					<pathAlias name="total jobs">../cell[(@name=&quot;TOTAL&quot;)]</pathAlias>
 				</pathAliases>
 				<block>
