@@ -1122,6 +1122,13 @@ order by SEVTIME DESC
 									</headline>
 								</data>
 							</var-headlines>
+							<var-columns>
+								<data>
+									<column>
+										<data>Deviation From Average</data>
+									</column>
+								</data>
+							</var-columns>
 						</additions>
 					</dataview>
 				</dataviews>
