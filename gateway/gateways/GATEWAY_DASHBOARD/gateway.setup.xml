@@ -3057,7 +3057,7 @@ order by SEVTIME DESC
 						<update>
 							<property>@value</property>
 							<format>
-								<string>%.2f %</string>
+								<string>.2f</string>
 								<divide>
 									<dataItem>
 										<pathAlias ref="total jobs"/>
