@@ -3029,12 +3029,34 @@ order by SEVTIME DESC
 											<string>Too early for job check</string>
 										</update>
 									</transaction>
-									<transaction>
-										<update>
-											<property>state/@severity</property>
-											<severity>undefined</severity>
-										</update>
-									</transaction>
+									<if>
+										<and>
+											<unlike>
+												<var ref="actual_time"/>
+												<string/>
+											</unlike>
+											<lt>
+												<var ref="actual_time"/>
+												<var ref="start_time"/>
+											</lt>
+										</and>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>ok</severity>
+											</update>
+											<update>
+												<property>@value</property>
+												<string>Job started before expected time</string>
+											</update>
+										</transaction>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>undefined</severity>
+											</update>
+										</transaction>
+									</if>
 								</if>
 							</if>
 						</if>
