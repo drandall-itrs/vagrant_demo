@@ -1117,6 +1117,9 @@ order by SEVTIME DESC
 									<headline>
 										<data>TOTAL</data>
 									</headline>
+									<headline>
+										<data>AVERAGE</data>
+									</headline>
 								</data>
 							</var-headlines>
 						</additions>
