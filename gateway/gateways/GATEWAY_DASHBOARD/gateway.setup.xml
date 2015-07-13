@@ -1202,33 +1202,9 @@ order by SEVTIME DESC
 						</arg>
 						<arg>
 							<userInput>
-								<description>Line number to add</description>
-								<options>
-									<option>
-										<label>line1</label>
-										<value>1</value>
-									</option>
-									<option>
-										<label>line2</label>
-										<value>2</value>
-									</option>
-									<option>
-										<label>line3</label>
-										<value>3</value>
-									</option>
-									<option>
-										<label>line4</label>
-										<value>4</value>
-									</option>
-									<option>
-										<label>line5</label>
-										<value>5</value>
-									</option>
-								</options>
+								<description>Enter Job Name :</description>
+								<singleLineString/>
 							</userInput>
-						</arg>
-						<arg>
-							<xpath>ancestor::dataview/headlines/cell[(@name=&quot;Directory&quot;)]</xpath>
 						</arg>
 					</args>
 				</userCommand>
@@ -1338,7 +1314,7 @@ order by SEVTIME DESC
 					<silent>true</silent>
 				</task>
 			</command>
-			<command name="Help for ibm-i jobs" disabled="true">
+			<command disabled="true" name="Help for ibm-i jobs">
 				<targets>
 					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
 				</targets>
