@@ -2754,13 +2754,13 @@ order by SEVTIME DESC
 										<string/>
 									</like>
 									<gt>
-										<var ref="start_time"/>
 										<var ref="time"/>
+										<var ref="start_time"/>
 									</gt>
 								</and>
 								<lt>
-									<var ref="end_time"/>
 									<var ref="time"/>
+									<var ref="end_time"/>
 								</lt>
 							</and>
 							<transaction>
@@ -2781,14 +2781,14 @@ order by SEVTIME DESC
 											<string/>
 										</like>
 										<gt>
-											<var ref="start_time"/>
 											<var ref="time"/>
+											<var ref="start_time"/>
 										</gt>
 									</and>
-									<lt>
-										<var ref="end_time"/>
+									<gt>
 										<var ref="time"/>
-									</lt>
+										<var ref="end_time"/>
+									</gt>
 								</and>
 								<transaction>
 									<update>
