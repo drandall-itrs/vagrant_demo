@@ -1153,6 +1153,9 @@ order by SEVTIME DESC
 										<column>
 											<data>Value</data>
 										</column>
+										<column>
+											<data>Job Name</data>
+										</column>
 									</data>
 								</var-columns>
 							</additions>
