@@ -3139,6 +3139,35 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="Job Name">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;Job Name&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathVariables>
+					<pathVariable name="rowName">
+						<value>
+							<target>
+								<rowName/>
+							</target>
+						</value>
+					</pathVariable>
+				</pathVariables>
+				<pathAliases>
+					<pathAlias name="Job ">$rowName</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<dataItem>
+								<pathAlias ref="Job "/>
+								<property>@value</property>
+							</dataItem>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>
