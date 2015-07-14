@@ -3160,10 +3160,7 @@ order by SEVTIME DESC
 					<transaction>
 						<update>
 							<property>@value</property>
-							<dataItem>
-								<pathAlias ref="Job "/>
-								<property>@value</property>
-							</dataItem>
+							<var ref="rowName"/>
 						</update>
 					</transaction>
 				</block>
