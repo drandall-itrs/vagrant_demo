@@ -3154,7 +3154,7 @@ order by SEVTIME DESC
 					</pathVariable>
 				</pathVariables>
 				<pathAliases>
-					<pathAlias name="Job ">$rowName</pathAlias>
+					<pathAlias name="Job ">../cell[(@value=var(&quot;rowName&quot;))][(@column=&quot;Job Name&quot;)]</pathAlias>
 				</pathAliases>
 				<block>
 					<transaction>
