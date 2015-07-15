@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.1-150421/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<reloading/>
@@ -1357,6 +1357,20 @@ order by SEVTIME DESC
 						</arg>
 						<arg>
 							<static>help</static>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Email status">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/email_ws.pl</static>
 						</arg>
 					</args>
 				</userCommand>
