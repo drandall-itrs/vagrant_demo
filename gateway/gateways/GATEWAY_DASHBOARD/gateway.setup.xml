@@ -2921,6 +2921,7 @@ order by SEVTIME DESC
 			<rule name="Status">
 				<targets>
 					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
 				</targets>
 				<priority>1</priority>
 				<pathAliases>
