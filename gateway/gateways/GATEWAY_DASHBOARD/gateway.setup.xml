@@ -1165,7 +1165,7 @@ order by SEVTIME DESC
 				</sampler>
 				<sampler name="IBM JOBS EXPECTED DASHBOARD">
 					<var-group>
-						<data>IBM</data>
+						<data>IBM CUSTOM</data>
 					</var-group>
 					<plugin>
 						<Gateway-sql>
@@ -1174,7 +1174,7 @@ order by SEVTIME DESC
 									<tableName>
 										<data>INFO</data>
 									</tableName>
-									<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]</xpath>
+									<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]</xpath>
 								</dataview>
 							</tables>
 							<views>
