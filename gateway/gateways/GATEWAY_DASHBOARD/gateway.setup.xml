@@ -111,6 +111,7 @@
 				<sampler ref="IBM JOBS VARIOUS"/>
 				<sampler ref="IBM JOBS USER JOB COUNT"/>
 				<sampler ref="IBM JOBS EXPECTED"/>
+				<sampler ref="IBM JOBS EXPECTED DASHBOARD"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -1161,6 +1162,34 @@ order by SEVTIME DESC
 							</additions>
 						</dataview>
 					</dataviews>
+				</sampler>
+				<sampler name="IBM JOBS EXPECTED DASHBOARD">
+					<var-group>
+						<data>IBM</data>
+					</var-group>
+					<plugin>
+						<Gateway-sql>
+							<tables>
+								<dataview>
+									<tableName>
+										<data>INFO</data>
+									</tableName>
+									<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+								</dataview>
+							</tables>
+							<views>
+								<view>
+									<name>
+										<data>IBM JOBS EXPECTED DASHBOARD</data>
+									</name>
+									<sql>
+										<data>select * from INFO</data>
+									</sql>
+									<showRowID>true</showRowID>
+								</view>
+							</views>
+						</Gateway-sql>
+					</plugin>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
