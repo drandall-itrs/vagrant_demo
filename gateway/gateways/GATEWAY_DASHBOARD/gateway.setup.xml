@@ -1185,7 +1185,7 @@ order by SEVTIME DESC
 									<sql>
 										<data>select * from INFO</data>
 									</sql>
-									<showRowID>false</showRowID>
+									<showRowID>true</showRowID>
 								</view>
 							</views>
 						</Gateway-sql>
