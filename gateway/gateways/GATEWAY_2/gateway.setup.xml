@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-20 12:51:19 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-20 15:02:31 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -13527,6 +13527,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 		</samplerGroup>
 		<samplerGroup name="IBMI">
 			<sampler name="ibmi-job">
+				<var-group>
+					<data>IBMI-Job</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13539,6 +13542,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-cpu">
+				<var-group>
+					<data>IBMI-System</data>
+				</var-group>
 				<plugin>
 					<toolkit>
 						<samplerScript>
@@ -13548,6 +13554,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-disk">
+				<var-group>
+					<data>IBMI-System</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13560,6 +13569,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-hardware">
+				<var-group>
+					<data>IBMI-System</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13572,6 +13584,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-message">
+				<var-group>
+					<data>IBMI-Messages</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13584,6 +13599,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-pool">
+				<var-group>
+					<data>IBMI-System</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13596,6 +13614,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-queue">
+				<var-group>
+					<data>IBMI-Queue</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
@@ -13608,6 +13629,9 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				</plugin>
 			</sampler>
 			<sampler name="ibmi-subsystem">
+				<var-group>
+					<data>IBMI-System</data>
+				</var-group>
 				<sampleInterval>
 					<data>60</data>
 				</sampleInterval>
