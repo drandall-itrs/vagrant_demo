@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-20 15:02:31 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-20 15:47:53 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -13536,7 +13536,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/job.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/job.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13548,7 +13548,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/cpu.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/cpu.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13563,7 +13563,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/disk.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/disk.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13578,7 +13578,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/hardware.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/hardware.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13593,7 +13593,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/message.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/message.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13608,7 +13608,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/pool.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/pool.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13623,7 +13623,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/queue.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/queue.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
@@ -13638,7 +13638,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 				<plugin>
 					<toolkit>
 						<samplerScript>
-							<data>/bin/cat /opt/geneos/gateway/resources/ibmi/subsystem.csv</data>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/subsystem.csv</data>
 						</samplerScript>
 					</toolkit>
 				</plugin>
