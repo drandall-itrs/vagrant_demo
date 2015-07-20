@@ -210,7 +210,7 @@
 				</managedEntityGroup>
 				<managedEntityGroup name="Custom">
 					<attribute name="APP">CUSTOM</attribute>
-					<managedEntity name="sql-toolkit" disabled="true">
+					<managedEntity disabled="true" name="sql-toolkit">
 						<probe ref="localhost_7034"/>
 						<addTypes>
 							<type ref="sql-toolkit"/>
@@ -222,7 +222,7 @@
 							<type ref="api"/>
 						</addTypes>
 					</managedEntity>
-					<managedEntity name="toolkit" disabled="true">
+					<managedEntity name="toolkit">
 						<probe ref="localhost_7034"/>
 						<addTypes>
 							<type ref="toolkit"/>
@@ -249,9 +249,11 @@
 							<type ref="gateway-sql"/>
 						</addTypes>
 					</managedEntity>
-					<managedEntity name="FKM Examples" disabled="true">
+					<managedEntity name="FKM Examples">
 						<probe ref="localhost_7034"/>
 						<sampler ref="FKM regex range"/>
+						<sampler ref="SunGard"/>
+						<sampler ref="SunGard State Tracker"/>
 					</managedEntity>
 				</managedEntityGroup>
 				<managedEntityGroup name="SNMP">
@@ -12369,6 +12371,121 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+			<sampler name="SunGard">
+				<var-group>
+					<data>SunGard</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>/tmp/sungard/*.txt</data>
+									</filename>
+								</source>
+								<multiLine>
+									<startPattern>
+										<data>
+											<regex>\d{2}:\d{2}:\d{2}:</regex>
+										</data>
+									</startPattern>
+									<messageEnd>
+										<maxNumberOfSamplesToWait>
+											<data>1</data>
+										</maxNumberOfSamplesToWait>
+									</messageEnd>
+								</multiLine>
+								<tables>
+									<table>
+										<severity>fail</severity>
+										<keyTable>
+											<data>
+												<keys>
+													<key>
+														<setKey>
+															<match>
+																<searchString>
+																	<data> Statistics</data>
+																</searchString>
+															</match>
+														</setKey>
+														<message>
+															<data/>
+														</message>
+														<tags>
+															<startTag>
+																<data>BA1</data>
+															</startTag>
+															<endTag>
+																<data>$</data>
+															</endTag>
+														</tags>
+														<extractors>
+															<extractor>
+																<name>
+																	<data>Market</data>
+																</name>
+																<regex>
+																	<data>Count(.*)</data>
+																</regex>
+															</extractor>
+														</extractors>
+													</key>
+												</keys>
+											</data>
+										</keyTable>
+									</table>
+								</tables>
+								<rewind>
+									<data>true</data>
+								</rewind>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="SunGard State Tracker">
+				<plugin>
+					<stateTracker>
+						<trackerGroup name="Start of Day">
+							<trackers>
+								<tracker name="SG Log">
+									<filename>
+										<data>/tmp/sungard/state.txt</data>
+									</filename>
+									<rewind>
+										<data>false</data>
+									</rewind>
+									<transitionStates>
+										<defaultState name="Waiting">
+											<timeout>
+												<relative>
+													<interval>1</interval>
+													<units>minutes</units>
+												</relative>
+												<state ref="Waiting"/>
+											</timeout>
+										</defaultState>
+										<state name="Received">
+											<keys>
+												<key>
+													<regularExpression>
+														<data>
+															<regex>arrived</regex>
+														</data>
+													</regularExpression>
+												</key>
+											</keys>
+										</state>
+										<state name="Waiting"/>
+									</transitionStates>
+								</tracker>
+							</trackers>
+						</trackerGroup>
+					</stateTracker>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 		<samplerGroup name="English RSS">
@@ -25962,9 +26079,41 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 						
 						
 						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						
 						
@@ -26133,9 +26282,41 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 							
 							
 							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							
 							
 							

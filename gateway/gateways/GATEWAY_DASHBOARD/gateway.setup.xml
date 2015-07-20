@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.1-150421/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<reloading/>
@@ -70,6 +70,16 @@
 						<sampler ref="dashboard moving"/>
 						<sampler ref="Tier 3 dashboard"/>
 						<sampler ref="Front Office One View"/>
+						<sampler ref="CurrentTime"/>
+					</managedEntity>
+				</managedEntityGroup>
+				<managedEntityGroup name="IBM">
+					<attribute name="APP">IBM</attribute>
+					<addTypes>
+						<type ref="IBM"/>
+					</addTypes>
+					<managedEntity name="IBM">
+						<probe ref="localhost_7054"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -93,6 +103,16 @@
 					<sampler ref="tier 1 dashboard sections"/>
 				</type>
 			</typeGroup>
+		</typeGroup>
+		<typeGroup name="IBM">
+			<type name="IBM">
+				<sampler ref="IBM Job view"/>
+				<sampler ref="IBM JOBS MSG_WAIT"/>
+				<sampler ref="IBM JOBS VARIOUS"/>
+				<sampler ref="IBM JOBS USER JOB COUNT"/>
+				<sampler ref="IBM JOBS EXPECTED"/>
+				<sampler ref="IBM JOBS EXPECTED DASHBOARD"/>
+			</type>
 		</typeGroup>
 	</types>
 	<samplers>
@@ -348,6 +368,13 @@
 									<firstColumn>section</firstColumn>
 								</createOnGateway>
 								<additions>
+									<var-headlines>
+										<data>
+											<headline>
+												<data>ME_NAME</data>
+											</headline>
+										</data>
+									</var-headlines>
 									<var-columns>
 										<data>
 											<column>
@@ -951,7 +978,438 @@ order by SEVTIME DESC
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
+		<samplerGroup name="time">
+			<sampler name="CurrentTime">
+				<sampleInterval>
+					<data>1</data>
+				</sampleInterval>
+				<dataviews>
+					<dataview name="CurrentTime">
+						<createOnGateway>
+							<enabled>true</enabled>
+							<firstColumn>Name</firstColumn>
+						</createOnGateway>
+						<additions>
+							<var-columns>
+								<data>
+									<column>
+										<data>time</data>
+									</column>
+								</data>
+							</var-columns>
+							<var-rows>
+								<data>
+									<row>
+										<data>Current</data>
+									</row>
+								</data>
+							</var-rows>
+						</additions>
+					</dataview>
+				</dataviews>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="IBM-i">
+			<sampler name="IBM Job view">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/gateway/resources/ibm/jobs/jobs_view.csv</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="IBM JOBS MSG_WAIT">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>MSG_WAIT</data>
+								</name>
+								<sql>
+									<data>select * from INFO where status = &quot;MSG_WAIT&quot;</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+			</sampler>
+			<sampler name="IBM JOBS VARIOUS">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>IBM JOBS SUBSYSTEM INTJFB</data>
+								</name>
+								<sql>
+									<data>select * from INFO where subsystem like &quot;INTJFB%&quot;</data>
+								</sql>
+							</view>
+							<view>
+								<name>
+									<data>IBM JOBS ACTIVEJOBSTATUS TIMW </data>
+								</name>
+								<sql>
+									<data>select * from INFO where activeJobStatus = &quot;TIMW&quot;</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+			</sampler>
+			<sampler name="IBM JOBS USER JOB COUNT">
+				<var-group>
+					<data>IBM</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>INFO</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM Job view&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM Job view&quot;)]</xpath>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>IBM JOBS USER JOB COUNT</data>
+								</name>
+								<sql>
+									<data>SELECT user, count(user) as ct FROM INFO  where activeJobStatus like &quot;%W&quot; GROUP BY user</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
+				<dataviews>
+					<dataview name="IBM JOBS USER JOB COUNT">
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>TOTAL</data>
+									</headline>
+									<headline>
+										<data>AVERAGE</data>
+									</headline>
+								</data>
+							</var-headlines>
+							<var-columns>
+								<data>
+									<column>
+										<data>Deviation From Average</data>
+									</column>
+								</data>
+							</var-columns>
+						</additions>
+					</dataview>
+				</dataviews>
+			</sampler>
+			<samplerGroup name="CUSTOM">
+				<sampler name="IBM JOBS EXPECTED">
+					<var-group>
+						<data>IBM CUSTOM</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/ibm/jobs/jobs_expected.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+					<dataviews>
+						<dataview name="IBM JOBS EXPECTED">
+							<additions>
+								<var-columns>
+									<data>
+										<column>
+											<data>Value</data>
+										</column>
+										<column>
+											<data>Job Name</data>
+										</column>
+									</data>
+								</var-columns>
+							</additions>
+						</dataview>
+					</dataviews>
+				</sampler>
+				<sampler name="IBM JOBS EXPECTED DASHBOARD">
+					<var-group>
+						<data>IBM CUSTOM</data>
+					</var-group>
+					<plugin>
+						<Gateway-sql>
+							<tables>
+								<dataview>
+									<tableName>
+										<data>INFO</data>
+									</tableName>
+									<xpath>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]</xpath>
+								</dataview>
+							</tables>
+							<views>
+								<view>
+									<name>
+										<data>IBM JOBS EXPECTED DASHBOARD</data>
+									</name>
+									<sql>
+										<data>select * from INFO</data>
+									</sql>
+									<showRowID>true</showRowID>
+								</view>
+							</views>
+						</Gateway-sql>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
 	</samplers>
+	<commands>
+		<commandGroup name="ibm-i jobs">
+			<menu>
+				<label>IBM-i Jobs</label>
+			</menu>
+			<command name="Add ibm-i job cmd">
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/commands/ibm_job_expected_update.sh</static>
+						</arg>
+						<arg>
+							<static>add_to_end</static>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Job Name : </description>
+								<singleLineString/>
+							</userInput>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Start Time :</description>
+								<singleLineString/>
+							</userInput>
+						</arg>
+						<arg>
+							<userInput>
+								<description>End Time : </description>
+								<singleLineString/>
+							</userInput>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Remove ibm-i job cmd">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]//*</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/commands/ibm_job_expected_update.sh</static>
+						</arg>
+						<arg>
+							<static>delete</static>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Enter Job Name :</description>
+								<singleLineString/>
+							</userInput>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Add  ibm-i job">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]//*</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<command ref="Add ibm-i job cmd"/>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+					<silent>true</silent>
+				</task>
+			</command>
+			<command disabled="true" name="Remove ibm-i job">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<command ref="Remove ibm-i job cmd"/>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+					<silent>true</silent>
+				</task>
+			</command>
+			<command name="Modify message cmd">
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/messagebox/message_update.sh</static>
+						</arg>
+						<arg>
+							<static>modify_status</static>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Line number to add</description>
+								<options>
+									<option>
+										<label>line1</label>
+										<value>1</value>
+									</option>
+									<option>
+										<label>line2</label>
+										<value>2</value>
+									</option>
+									<option>
+										<label>line3</label>
+										<value>3</value>
+									</option>
+									<option>
+										<label>line4</label>
+										<value>4</value>
+									</option>
+									<option>
+										<label>line5</label>
+										<value>5</value>
+									</option>
+								</options>
+							</userInput>
+						</arg>
+						<arg>
+							<xpath>ancestor::dataview/headlines/cell[(@name=&quot;Directory&quot;)]</xpath>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Status</description>
+								<options>
+									<option>
+										<label>OPEN</label>
+										<value>OPEN</value>
+									</option>
+									<option>
+										<label>WIP</label>
+										<value>WIP</value>
+									</option>
+									<option>
+										<label>CLOSED</label>
+										<value>CLOSED</value>
+									</option>
+								</options>
+							</userInput>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Modify Message Status">
+				<targets>
+					<target>/geneos/gateway/directory/probe[(@name=&quot;localhost_7034&quot;)]/managedEntity[(@name=&quot;toolkit&quot;)]/sampler[(@name=&quot;Messagbox&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Messagbox&quot;)]//*</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<command ref="Modify message cmd"/>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+					<silent>true</silent>
+				</task>
+			</command>
+			<command disabled="true" name="Help for ibm-i jobs">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<command ref="Help for ibm-i job cmd"/>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+					<silent>false</silent>
+				</task>
+			</command>
+			<command name="Help for ibm-i job">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]//*</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/commands/ibm_job_expected_update.sh</static>
+						</arg>
+						<arg>
+							<static>help</static>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Email status">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]//*</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]//*</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<static>/opt/geneos/gateway/resources/ibm/jobs/email_ws.pl</static>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+		</commandGroup>
+	</commands>
 	<rules>
 		<ruleGroup name="Dashboard example rules">
 			<ruleGroup name="Tier 3">
@@ -1253,6 +1711,24 @@ order by SEVTIME DESC
 									<severity>critical</severity>
 								</update>
 							</transaction>
+						</block>
+					</rule>
+				</ruleGroup>
+				<ruleGroup name="test">
+					<rule name="New Rule">
+						<targets>
+							<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;tier 1 dashboard sections&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;tier 1 dashboard sections&quot;)]/headlines/cell[(@name=&quot;ME_NAME&quot;)]</target>
+						</targets>
+						<priority>1</priority>
+						<block>
+							<set>
+								<var ref="ME"/>
+								<var ref="ME"/>
+							</set>
+							<set>
+								<var ref="xyz"/>
+								<var ref="ME_ORIG"/>
+							</set>
 						</block>
 					</rule>
 				</ruleGroup>
@@ -2315,6 +2791,429 @@ order by SEVTIME DESC
 				</ruleGroup>
 			</ruleGroup>
 		</ruleGroup>
+		<ruleGroup name="time">
+			<rule name="current time">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;CurrentTime&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;CurrentTime&quot;)]/rows/row[(@name=&quot;Current&quot;)]/cell[(@column=&quot;time&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<printDate>
+								<string>%d %B %Y %H:%M:%S</string>
+								<now/>
+							</printDate>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+		</ruleGroup>
+		<ruleGroup name="IBM">
+			<rule name="Total jobs">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/headlines/cell[(@name=&quot;TOTAL&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="ct alias">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row/cell[(@column=&quot;ct&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<total>
+								<dataItems>
+									<pathAlias ref="ct alias"/>
+									<property>@value</property>
+								</dataItems>
+							</total>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule disabled="true" name="Job expected status">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathVariables>
+					<pathVariable name="row">
+						<value>
+							<target>
+								<rowName/>
+							</target>
+						</value>
+					</pathVariable>
+				</pathVariables>
+				<pathAliases>
+					<pathAlias name="SOURCE">ancestor-or-self::managedEntity/sampler/dataview[(@name=&quot;IBM Job view&quot;)]/rows/row/cell[(@value=var(&quot;row&quot;))][(@column=&quot;name&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="fred"/>
+						<target>
+							<rowName/>
+						</target>
+					</set>
+					<set>
+						<var ref="eric"/>
+						<first>
+							<dataItems>
+								<pathAlias ref="SOURCE"/>
+								<property>@value</property>
+							</dataItems>
+						</first>
+					</set>
+					<if>
+						<gt>
+							<count>
+								<dataItems>
+									<pathAlias ref="SOURCE"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+							<integer>0</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>YES</string>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>@value</property>
+								<string>NO</string>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+			<rule name="Jobs Value">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;Value&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathVariables>
+					<pathVariable name="row">
+						<value>
+							<target>
+								<rowName/>
+							</target>
+						</value>
+					</pathVariable>
+				</pathVariables>
+				<pathAliases>
+					<pathAlias name="SOURCEVAL">ancestor-or-self::managedEntity/sampler/dataview[(@name=&quot;IBM Job view&quot;)]/rows/row/cell[(@value=var(&quot;row&quot;))][(@column=&quot;name&quot;)]/../cell[(@column=&quot;jobStartTime&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<first>
+								<dataItems>
+									<pathAlias ref="SOURCEVAL"/>
+									<property>@value</property>
+								</dataItems>
+							</first>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule name="Status">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED DASHBOARD&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="start_time">../cell[(@column=&quot;start_time&quot;)]</pathAlias>
+					<pathAlias name="end_time">../cell[(@column=&quot;end_time&quot;)]</pathAlias>
+					<pathAlias name="actual_time">../cell[(@column=&quot;Value&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="start_time"/>
+						<replace>
+							<dataItem>
+								<pathAlias ref="start_time"/>
+								<property>@value</property>
+							</dataItem>
+							<string>:</string>
+							<string/>
+						</replace>
+					</set>
+					<set>
+						<var ref="end_time"/>
+						<replace>
+							<dataItem>
+								<pathAlias ref="end_time"/>
+								<property>@value</property>
+							</dataItem>
+							<string>:</string>
+							<string/>
+						</replace>
+					</set>
+					<set>
+						<var ref="actual_time"/>
+						<replace>
+							<substr>
+								<dataItem>
+									<pathAlias ref="actual_time"/>
+									<property>@value</property>
+								</dataItem>
+								<integer>1</integer>
+								<integer>5</integer>
+							</substr>
+							<string>:</string>
+							<string/>
+						</replace>
+					</set>
+					<set>
+						<var ref="time"/>
+						<printDate>
+							<string>%H%M</string>
+							<now/>
+						</printDate>
+					</set>
+					<if>
+						<and>
+							<and>
+								<unlike>
+									<var ref="actual_time"/>
+									<string/>
+								</unlike>
+								<gt>
+									<var ref="actual_time"/>
+									<var ref="start_time"/>
+								</gt>
+							</and>
+							<lt>
+								<var ref="actual_time"/>
+								<var ref="end_time"/>
+							</lt>
+						</and>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+							<update>
+								<property>@value</property>
+								<string>Job started in expected time</string>
+							</update>
+						</transaction>
+						<if>
+							<and>
+								<and>
+									<like>
+										<var ref="actual_time"/>
+										<string/>
+									</like>
+									<gt>
+										<var ref="time"/>
+										<var ref="start_time"/>
+									</gt>
+								</and>
+								<lt>
+									<var ref="time"/>
+									<var ref="end_time"/>
+								</lt>
+							</and>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+								<update>
+									<property>@value</property>
+									<string>Job pending, but still in active window</string>
+								</update>
+							</transaction>
+							<if>
+								<and>
+									<and>
+										<like>
+											<var ref="actual_time"/>
+											<string/>
+										</like>
+										<gt>
+											<var ref="time"/>
+											<var ref="start_time"/>
+										</gt>
+									</and>
+									<gt>
+										<var ref="time"/>
+										<var ref="end_time"/>
+									</gt>
+								</and>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>critical</severity>
+									</update>
+									<update>
+										<property>@value</property>
+										<string>Job late in expected time window</string>
+									</update>
+								</transaction>
+								<if>
+									<and>
+										<like>
+											<var ref="actual_time"/>
+											<string/>
+										</like>
+										<lt>
+											<var ref="time"/>
+											<var ref="start_time"/>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>undefined</severity>
+										</update>
+										<update>
+											<property>@value</property>
+											<string>Too early for job check</string>
+										</update>
+									</transaction>
+									<if>
+										<and>
+											<unlike>
+												<var ref="actual_time"/>
+												<string/>
+											</unlike>
+											<lt>
+												<var ref="actual_time"/>
+												<var ref="start_time"/>
+											</lt>
+										</and>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>ok</severity>
+											</update>
+											<update>
+												<property>@value</property>
+												<string>Job started before expected time</string>
+											</update>
+										</transaction>
+										<transaction>
+											<update>
+												<property>state/@severity</property>
+												<severity>undefined</severity>
+											</update>
+										</transaction>
+									</if>
+								</if>
+							</if>
+						</if>
+					</if>
+				</block>
+			</rule>
+			<rule name="Average job user value">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/headlines/cell[(@name=&quot;AVERAGE&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="number of users">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row/cell[(@column=&quot;ct&quot;)]</pathAlias>
+					<pathAlias name="total jobs">../cell[(@name=&quot;TOTAL&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="count"/>
+						<count>
+							<dataItems>
+								<pathAlias ref="number of users"/>
+								<property>@value</property>
+							</dataItems>
+						</count>
+					</set>
+					<set>
+						<var ref="value"/>
+						<divide>
+							<dataItem>
+								<pathAlias ref="total jobs"/>
+								<property>@value</property>
+							</dataItem>
+							<var ref="count"/>
+						</divide>
+					</set>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<format>
+								<string>%.2f </string>
+								<var ref="value"/>
+							</format>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule name="Job User Deviation from Average">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/rows/row/cell[(@column=&quot;Deviation From Average&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="average">ancestor-or-self::dataview[(@name=&quot;IBM JOBS USER JOB COUNT&quot;)]/headlines/cell[(@name=&quot;AVERAGE&quot;)]</pathAlias>
+					<pathAlias name="count">../cell[(@column=&quot;ct&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<format>
+								<string>%.2f %%</string>
+								<multiply>
+									<divide>
+										<dataItem>
+											<pathAlias ref="count"/>
+											<property>@value</property>
+										</dataItem>
+										<dataItem>
+											<pathAlias ref="average"/>
+											<property>@value</property>
+										</dataItem>
+									</divide>
+									<integer>100</integer>
+								</multiply>
+							</format>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule name="Job Name">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[(@name=&quot;IBM&quot;)]/sampler[(@name=&quot;IBM JOBS EXPECTED&quot;)][(@type=&quot;IBM&quot;)]/dataview[(@name=&quot;IBM JOBS EXPECTED&quot;)]/rows/row/cell[(@column=&quot;Job Name&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathVariables>
+					<pathVariable name="rowName">
+						<value>
+							<target>
+								<rowName/>
+							</target>
+						</value>
+					</pathVariable>
+				</pathVariables>
+				<pathAliases>
+					<pathAlias name="Job ">../cell[(@value=var(&quot;rowName&quot;))][(@column=&quot;Job Name&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<var ref="rowName"/>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+		</ruleGroup>
 	</rules>
 	<alerting>
 		<hierarchy disabled="true" name="Infrastructure Support Group">
@@ -2495,6 +3394,16 @@ order by SEVTIME DESC
 		<listenPort>8063</listenPort>
 		<var name="gateway_name">
 			<string>GATEWAY_DASHBOARD</string>
+		</var>
+		<var name="ME_ORIG">
+			<macro>
+				<managedEntityName/>
+			</macro>
+		</var>
+		<var name="ME">
+			<regex>
+				<regex>($(ME_ORIG))_.*</regex>
+			</regex>
 		</var>
 	</operatingEnvironment>
 </gateway>
