@@ -1,0 +1,11 @@
+Name,Value
+<!>samplingStatus,OK
+<!>system,V149221
+processors,2
+currentProcessingCapacity,0.5
+processorSharingAttribute,2
+percentCurrentInteractivePerformance,0 %
+percentProcessingUnitUsed,1 %
+percentSharedProcessorPoolUsed,-1 %
+percentUncappedCPUCapacityUsed,0.2 %
+percentDBCapability,-1 %

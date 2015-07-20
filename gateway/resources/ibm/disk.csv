@@ -1,0 +1,4 @@
+unit,name,type,totalSpace,freeSpace,percentUsed,percentageBusy
+<!>samplingStatus,OK
+<!>system,V149221
+1,DMP005    ,6B22,190888 MB,114139 MB,40.21 %,0 %

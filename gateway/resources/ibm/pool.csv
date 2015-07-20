@@ -1,0 +1,12 @@
+id,name,size,reservedSize,databasePages,databaseFaults,nonDatabasePages,nonDatabaseFaults
+<!>samplingStatus,OK
+<!>system,V149221
+<!>partitionId,4
+<!>pools,4
+<!>totalAuxiliaryStorage,190887 MB
+<!>systemASP,190887 MB
+<!>percentageSystemASPUsed,40.21 %
+1 ,*MACHINE,419980 KB,210828 KB,0 ,0 ,0 ,0 
+2 ,*BASE,3564356 KB,7304 KB,0 ,0 ,12.2 ,3.6
+3 ,*INTERACT,209712 KB,0 KB,0 ,0 ,0 ,0
+4 ,*SPOOL,256 KB,0 KB,0 ,0 ,0 ,0
