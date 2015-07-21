@@ -1,0 +1,7 @@
+GENEOS Status Report,
+Monday 20 Jul 2015 17:42:47,
+samplingStatus,
+OK,
+instrument,Name,TradePrice,LastTradePrice,Change,PctChange,Time,Date,DataState,Timeliness,SeqNumber,Ticks,
+.EGX20,EGX 20CAPPED IDX,7882.4,7717.62,211.18,2.75,13:30:0,7/15/2015,Ok,RealTime,56720,1,
+.TA100,TASE MAIN100 IDX,1449.01,1425.77,3.21,0.22,14:14:7,7/15/2015,Ok,RealTime,40608,1,
