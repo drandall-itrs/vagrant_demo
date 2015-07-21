@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-21 16:57:00 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-21 16:58:46 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<probes>
 		<probe name="P">
@@ -264,13 +264,13 @@
 		<typeGroup name="MDM Index">
 			<type name="Asia">
 				<sampler ref="KS11"/>
-				<sampler ref="ssec"/>
-				<sampler ref="n225"/>
-				<sampler ref="tw11"/>
+				<sampler ref="SSEC"/>
+				<sampler ref="N225"/>
+				<sampler ref="TW11"/>
 			</type>
 			<type name="Europe">
-				<sampler ref="atg"/>
-				<sampler ref="atx"/>
+				<sampler ref="ATG"/>
+				<sampler ref="ATX"/>
 				<sampler ref="bfx"/>
 				<sampler ref="fchi"/>
 				<sampler ref="ftlc"/>
@@ -699,7 +699,7 @@
 						</toolkit>
 					</plugin>
 				</sampler>
-				<sampler name="ssec">
+				<sampler name="SSEC">
 					<var-group>
 						<data>Asia</data>
 					</var-group>
@@ -714,7 +714,7 @@
 						</toolkit>
 					</plugin>
 				</sampler>
-				<sampler name="n225">
+				<sampler name="N225">
 					<var-group>
 						<data>Asia</data>
 					</var-group>
@@ -729,7 +729,7 @@
 						</toolkit>
 					</plugin>
 				</sampler>
-				<sampler name="tw11">
+				<sampler name="TW11">
 					<var-group>
 						<data>Asia</data>
 					</var-group>
@@ -746,7 +746,7 @@
 				</sampler>
 			</samplerGroup>
 			<samplerGroup name="Europe">
-				<sampler name="atg">
+				<sampler name="ATG">
 					<var-group>
 						<data>Europe</data>
 					</var-group>
@@ -761,7 +761,7 @@
 						</toolkit>
 					</plugin>
 				</sampler>
-				<sampler name="atx">
+				<sampler name="ATX">
 					<var-group>
 						<data>Europe</data>
 					</var-group>
