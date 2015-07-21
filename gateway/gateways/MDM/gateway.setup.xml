@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-21 12:39:03 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-21 16:11:19 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<probes>
 		<probe name="P">
@@ -646,7 +646,7 @@
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat  /opt/geneos/gateway/resources/mdm/Asia/ks11.csv.toolkit</data>
+								<data>/opt/geneos/gateway/resources/mdm/Asia/ks11.csv.toolkit</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -661,7 +661,7 @@
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat  /opt/geneos/gateway/resources/mdm/Asia/ssec.csv.toolkit</data>
+								<data>/opt/geneos/gateway/resources/mdm/Asia/ssec.csv.toolkit</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -676,7 +676,7 @@
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat  /opt/geneos/gateway/resources/mdm/Asia/n225.csv.toolkit</data>
+								<data>/opt/geneos/gateway/resources/mdm/Asia/n225.csv.toolkit</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -691,7 +691,7 @@
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat  /opt/geneos/gateway/resources/mdm/Asia/tw11.csv.toolkit</data>
+								<data>/opt/geneos/gateway/resources/mdm/Asia/tw11.csv.toolkit</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
