@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-07-21 12:35:48 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<probes>
 		<probe name="P">
@@ -236,7 +237,11 @@
 						<sampler disabled="false" ref="MDM-spreads"/>
 						<sampler disabled="false" ref="MDM-spread-compare"/>
 						<sampler ref="MDM-raw-latency"/>
-						<sampler ref="MDM-Relative-Latency" disabled="true"/>
+						<sampler disabled="true" ref="MDM-Relative-Latency"/>
+					</managedEntity>
+					<managedEntity name="MDM Index">
+						<probe ref="P"/>
+						<sampler ref="ks11"/>
 					</managedEntity>
 				</managedEntityGroup>
 			</managedEntityGroup>
@@ -615,6 +620,22 @@
 								<var ref="SimulationParams"/>
 							</parameters>
 						</market-data-monitor>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="MDM Index">
+			<samplerGroup name="Asia">
+				<sampler name="ks11">
+					<var-group>
+						<data>Asia</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat  /opt/geneos/gateway/resources/mdm/Asia/ks11.csv.toolkit</data>
+							</samplerScript>
+						</toolkit>
 					</plugin>
 				</sampler>
 			</samplerGroup>
