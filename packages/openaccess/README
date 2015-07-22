@@ -1,0 +1,10 @@
+In order to make open access work with demo settings you need to create a file called
+
+	~/.oacluster.rc
+
+and add the following line
+
+	OAC_CONFIG_HOME=/opt/geneos/packages/config
+	
+config is currently verfied against os version 2.0.1
+
