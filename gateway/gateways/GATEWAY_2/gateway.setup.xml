@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 10:40:43 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 10:47:12 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -538,6 +538,62 @@
 								</managedEntity>
 							</managedEntityGroup>
 						</managedEntityGroup>
+						<managedEntityGroup name="TREP">
+							<managedEntityGroup name="ADS">
+								<attribute name="Sub-Application">ADS</attribute>
+								<addTypes>
+									<type ref="ADS v21"/>
+									<type ref="ADS Applications"/>
+									<type ref="ADS-SSL v21"/>
+								</addTypes>
+								<managedEntity name="ADS00">
+									<probe ref="localhost_7038"/>
+								</managedEntity>
+							</managedEntityGroup>
+							<managedEntityGroup name="ADH">
+								<attribute name="Sub-Application">ADH</attribute>
+								<addTypes>
+									<type ref="ADH v21"/>
+									<type ref="ADH Applications"/>
+								</addTypes>
+								<managedEntity name="ADH00">
+									<probe ref="localhost_7038"/>
+								</managedEntity>
+							</managedEntityGroup>
+							<managedEntityGroup name="DACS">
+								<attribute name="Sub-Application">DACS</attribute>
+								<addTypes>
+									<type ref="DACS Server Applications"/>
+									<type ref="DACS Sybase"/>
+									<type ref="DACS snkd v62"/>
+									<type ref="DACS Station v62"/>
+									<type ref="DACS Server v62"/>
+								</addTypes>
+								<managedEntity name="DACS">
+									<probe ref="localhost_7038"/>
+								</managedEntity>
+							</managedEntityGroup>
+							<managedEntityGroup name="RRCP">
+								<attribute name="Sub-Application">RRCP</attribute>
+								<addTypes>
+									<type ref="RRCP Applications"/>
+									<type ref="RRCP"/>
+								</addTypes>
+								<managedEntity name="RRCP">
+									<probe ref="localhost_7038"/>
+								</managedEntity>
+							</managedEntityGroup>
+							<managedEntityGroup name="RDF">
+								<attribute name="Sub-Application">RDF LATENCY</attribute>
+								<addTypes>
+									<type ref="RDF"/>
+									<type ref="LATENCY"/>
+								</addTypes>
+								<managedEntity name="RDF1">
+									<probe ref="localhost_7038"/>
+								</managedEntity>
+							</managedEntityGroup>
+						</managedEntityGroup>
 					</managedEntityGroup>
 					<managedEntityGroup name="Latency">
 						<attribute name="APP">LATENCY</attribute>
@@ -996,6 +1052,224 @@
 					<sampler ref="Bloomberg-Router"/>
 					<sampler ref="User-Bpipe"/>
 				</type>
+			</typeGroup>
+			<typeGroup name="TREP">
+				<type name="LATENCY">
+					<sampler ref="DETAILS"/>
+					<sampler ref="VALUES"/>
+					<sampler ref="LATENCY"/>
+				</type>
+				<type name="RDF">
+					<var name="rdfCommunityName">
+						<string>RDF_snmp</string>
+					</var>
+					<sampler ref="Server General Parameters and Statistics"/>
+					<sampler ref="RSS Feed General Parameters and Statistics"/>
+					<sampler ref="Broadcast Feed General Parameters and Statistics"/>
+					<sampler ref="Data Dictionary General Parameters and Statistics"/>
+					<sampler ref="User 0"/>
+					<sampler ref="User 1"/>
+					<sampler ref="Channel 1"/>
+					<sampler ref="Channel 2"/>
+				</type>
+				<typeGroup name="ADS">
+					<type name="ADS v21">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>82</integer>
+						</var>
+						<var name="component_process_name">
+							<string>./ads</string>
+						</var>
+						<var name="component_log_name">
+							<string>ads.log</string>
+						</var>
+						<sampler ref="ads TCP-Links-Client"/>
+						<sampler ref="ads ProcessInfo"/>
+						<sampler ref="ads DacsInfo"/>
+						<sampler ref="ads AllUserStatus"/>
+						<sampler ref="ads AllUserEvents"/>
+						<sampler ref="ads MsgEventsFromAllUsers"/>
+						<sampler ref="ads MsgEventsToAllUsers"/>
+						<sampler ref="ads Users"/>
+						<sampler ref="ads UserStatus"/>
+						<sampler ref="ads UserEvents"/>
+						<sampler ref="ads UserMountAttributes"/>
+						<sampler ref="ads UserMountConfig"/>
+						<sampler ref="ads NDSInfo"/>
+						<sampler ref="ads NDSUsers"/>
+						<sampler ref="ads IPCBufferUsage"/>
+						<sampler ref="ads RIPCBufferUsage"/>
+						<sampler ref="ads ClientWriterInfo"/>
+						<sampler ref="ads RRCPStatistics"/>
+						<samplerInclude disabled="true" ref="ADS Process"/>
+						<samplerInclude disabled="true" ref="ADS Log"/>
+					</type>
+					<type name="ADS Applications">
+						<sampler ref="ads FKM"/>
+						<sampler ref="ads Processes"/>
+					</type>
+					<type name="ADS-SSL v21">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>82</integer>
+						</var>
+						<var name="component_type_name">
+							<string>SSL</string>
+						</var>
+						<sampler ref="ads SrcAppAttributes"/>
+						<sampler ref="ads MsgEventsToSource"/>
+						<sampler ref="ads MsgEventsFromSource"/>
+						<sampler ref="ads ServerAttributes-ssl"/>
+						<sampler ref="ads ServerEvents-ssl"/>
+						<sampler ref="ads ServerStatus-ssl"/>
+						<sampler ref="ads ServiceEvents-ssl"/>
+						<sampler ref="ads ServiceStatus-ssl"/>
+						<sampler ref="ads ServiceAttributes"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="ADH">
+					<type name="ADH v21">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>80</integer>
+						</var>
+						<var name="component_process_name">
+							<string>./adh</string>
+						</var>
+						<var name="component_log_name">
+							<string>adh.log</string>
+						</var>
+						<sampler ref="adh RoutesStatus"/>
+						<sampler ref="adh RRMPService"/>
+						<sampler ref="adh RRCPStatistics"/>
+						<sampler ref="adh TCP-Links-RDF"/>
+						<sampler ref="adh ProcessInfo"/>
+						<sampler ref="adh AllServerPerformance"/>
+						<sampler ref="adh ServiceAttributes"/>
+						<sampler ref="adh ServerAttributes"/>
+						<sampler ref="adh ServerStatus"/>
+						<sampler ref="adh ServerEvents"/>
+						<sampler ref="adh ServerInboundPerformance"/>
+						<sampler ref="adh ServerOutboundPerformance"/>
+						<sampler ref="adh AllSrcAppEvents"/>
+						<sampler ref="adh MsgEventsFromAllSources"/>
+						<sampler ref="adh MsgEventsToAllSources"/>
+						<sampler ref="adh SrcAppAttributes"/>
+						<sampler ref="adh MsgEventsFromSource"/>
+						<sampler ref="adh MsgEventsToSource"/>
+						<sampler ref="adh CommLinks"/>
+						<sampler ref="adh HotStandbyStatistics"/>
+						<sampler ref="adh RVTransBusStatistics"/>
+						<samplerInclude disabled="true" ref="ADH Process"/>
+						<samplerInclude disabled="true" ref="ADH Log"/>
+					</type>
+					<type name="ADH Applications">
+						<sampler ref="adh FKM"/>
+						<sampler ref="adh Processes"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="DACS">
+					<type name="DACS Server Applications">
+						<sampler ref="dacs svr FKM"/>
+						<sampler ref="dacs svr Processes"/>
+					</type>
+					<type name="DACS Server v62">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>1427</integer>
+						</var>
+						<sampler ref="dacs svr overview"/>
+						<sampler ref="dacs svr systems"/>
+						<sampler ref="dacs svr users"/>
+						<sampler ref="dacs svr usagecollect"/>
+						<sampler ref="dacs svr updateinfo"/>
+						<sampler ref="dacs svr buf"/>
+						<sampler ref="dacs svr sizes"/>
+						<samplerInclude disabled="true" ref="DACS Server Process"/>
+						<samplerInclude disabled="true" ref="DACS Server Log"/>
+					</type>
+					<type name="DACS Station v62">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>1427</integer>
+						</var>
+						<sampler disabled="true" ref="SybaseSrv"/>
+						<sampler disabled="true" ref="SybaseDB"/>
+						<sampler ref="dacs scp_main"/>
+						<sampler ref="dacs mapIDN"/>
+						<sampler ref="dacs stnd overview"/>
+						<sampler ref="dacs stnd buf"/>
+						<sampler ref="dacs stnd frmstation"/>
+						<sampler ref="dacs stnd frmserver"/>
+						<samplerInclude disabled="true" ref="DACS Station Process"/>
+						<samplerInclude disabled="true" ref="DACS Station Log"/>
+					</type>
+					<type name="DACS Sybase">
+						<sampler ref="dacs SEGMENTS"/>
+						<sampler ref="dacs CAPACITY"/>
+						<sampler ref="dacs LOCKS"/>
+						<sampler ref="dacs LONG-QUERIES"/>
+						<sampler ref="dacs USERS"/>
+						<sampler ref="dacs DEVICES"/>
+					</type>
+					<type name="DACS snkd v62">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>1427</integer>
+						</var>
+						<sampler ref="dacs snkd frmdist"/>
+						<sampler ref="dacs snkd frmserver"/>
+						<sampler ref="dacs snkd overview"/>
+						<sampler ref="dacs snkd buf"/>
+						<samplerInclude disabled="true" ref="DACS Server snkd Process"/>
+					</type>
+				</typeGroup>
+				<typeGroup name="RRCP">
+					<type name="RRCP Applications">
+						<sampler ref="rrcp FKM"/>
+						<sampler ref="rrcp Processes"/>
+					</type>
+					<type name="RRCP">
+						<var name="component_instance">
+							<integer>1</integer>
+						</var>
+						<var name="component_sharedmemorykey">
+							<integer>91</integer>
+						</var>
+						<var name="component_process_name">
+							<string>./rrcp_trans.*</string>
+						</var>
+						<var name="component_log_name">
+							<string>rrcp_trans.log</string>
+						</var>
+						<sampler ref="rrcp TransProcessInfo"/>
+						<sampler ref="rrcp ProcessInfo"/>
+						<sampler ref="rrcp PktTypeEventsSent"/>
+						<sampler ref="rrcp PktTypeEventsRcvd"/>
+						<sampler ref="rrcp RetransEvents"/>
+						<sampler ref="rrcp MsgEvents"/>
+						<sampler ref="rrcp DiscardEvents"/>
+						<sampler ref="rrcp LostDataEvents"/>
+						<sampler ref="rrcp OtherEvents"/>
+						<sampler ref="rrcp BufferStatus"/>
+						<sampler ref="rrcp PktPoolStatus"/>
+						<samplerInclude disabled="true" ref="rrcpTransProcess"/>
+						<samplerInclude disabled="true" ref="rrcpTransLog"/>
+					</type>
+				</typeGroup>
 			</typeGroup>
 		</typeGroup>
 		<typeGroup name="SNMP">
@@ -4609,6 +4883,1649 @@ publishingPeriod=10</data>
 						</ix-ma>
 					</plugin>
 				</sampler>
+			</samplerGroup>
+			<samplerGroup name="TREP">
+				<samplerGroup name="ADS">
+					<sampler name="ads AllUserEvents">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_AllUserEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads AllUserStatus">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_AllUserStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ClientWriterInfo">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ClientWriterInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads DacsInfo">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_DacsInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads IPCBufferUsage">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_IPCBufferUsage.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads MsgEventsFromAllUsers">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_MsgEventsFromAllUsers.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads MsgEventsFromSource">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_MsgEventsFromSource.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads MsgEventsToAllUsers">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_MsgEventsToAllUsers.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads MsgEventsToSource">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_MsgEventsToSource.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads NDSInfo">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_NDSInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads NDSUsers">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_NDSUsers.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ProcessInfo">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ProcessInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads RIPCBufferUsage">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_RIPCBufferUsage.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads RRCPStatistics">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_RRCPStatistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServerAttributes-ssl">
+						<var-group>
+							<data>ADS_SSL_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServerAttributes-ssl.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServerEvents-ssl">
+						<var-group>
+							<data>ADS_SSL_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServerEvents-ssl.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServerStatus-ssl">
+						<var-group>
+							<data>ADS_SSL_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServerStatus-ssl.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServiceAttributes">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServiceAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServiceEvents-ssl">
+						<var-group>
+							<data>ADS_SSL_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServiceEvents-ssl.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads ServiceStatus-ssl">
+						<var-group>
+							<data>ADS_SSL_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_ServiceStatus-ssl.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads SrcAppAttributes">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_SrcAppAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads UserEvents">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_UserEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads UserMountAttributes">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_UserMountAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads Users">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_Users.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads UserStatus">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_UserStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads UserMountConfig">
+						<var-group>
+							<data>ADS_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/ads_UserMountConfig.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads TCP-Links-Client">
+						<var-group>
+							<data>Network</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/TCP-Links-Client.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads FKM">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/FKM.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="ads Processes">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>20</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/ads/Processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="ADH">
+					<sampler name="adh AllServerPerformance">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_AllServerPerformance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh AllSrcAppEvents">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_AllSrcAppEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh CommLinks">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_CommLinks.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh HotStandbyStatistics">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_HotStandbyStatistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh MsgEventsFromAllSources">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_MsgEventsFromAllSources.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh MsgEventsFromSource">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_MsgEventsFromSource.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh MsgEventsToAllSources">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_MsgEventsToAllSources.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh MsgEventsToSource">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_MsgEventsToSource.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ProcessInfo">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ProcessInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh RoutesStatus">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_RoutesStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh RRCPStatistics">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_RRCPStatistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh RRMPService">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_RRMPService.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh RVTransBusStatistics">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_RVTransBusStatistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServerAttributes">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServerAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServerEvents">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServerEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServerInboundPerformance">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServerInboundPerformance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServerOutboundPerformance">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServerOutboundPerformance.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServerStatus">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServerStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh ServiceAttributes">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_ServiceAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh SrcAppAttributes">
+						<var-group>
+							<data>ADH_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/adh_SrcAppAttributes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh FKM">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/FKM.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh Processes">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/Processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="adh TCP-Links-RDF">
+						<var-group>
+							<data>Network</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/adh/TCP-Links-RDF.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="RRCP">
+					<sampler name="rrcp FKM">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/FKM.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp Processes">
+						<var-group>
+							<data>Applications</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/Processes.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp BufferStatus">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_BufferStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp DiscardEvents">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_DiscardEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp LostDataEvents">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_LostDataEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp MsgEvents">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_MsgEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp OtherEvents">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_OtherEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp PktPoolStatus">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_PktPoolStatus.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp PktTypeEventsRcvd">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_PktTypeEventsRcvd.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp PktTypeEventsSent">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_PktTypeEventsSent.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp ProcessInfo">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_ProcessInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp RetransEvents">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_RetransEvents.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="rrcp TransProcessInfo">
+						<var-group>
+							<data>RRCP_1</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rrcp/rrcp_TransProcessInfo.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="LATENCY">
+					<sampler name="DETAILS">
+						<var-group>
+							<data>Latency</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/latency/details.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="VALUES">
+						<var-group>
+							<data>Latency</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/latency/values.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="LATENCY">
+						<var-group>
+							<data>Latency</data>
+						</var-group>
+						<description/>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/latency/latency.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="RDF">
+					<sampler name="Channel 1">
+						<var-group>
+							<data>Client Channel Parameters and Statistics</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/Channel_1.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="Channel 2">
+						<var-group>
+							<data>Client Channel Parameters and Statistics</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/Channel_2.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="Broadcast Feed General Parameters and Statistics">
+						<var-group>
+							<data>RDF</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/Broadcast_Feed_General_Parameters_and_Statistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="Data Dictionary General Parameters and Statistics">
+						<var-group>
+							<data>RDF</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/Data_Dictionary_General_Parameters_and_Statistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="RSS Feed General Parameters and Statistics">
+						<var-group>
+							<data>RDF</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/RSS_Feed_General_Parameters_and_Statistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="Server General Parameters and Statistics">
+						<var-group>
+							<data>RDF</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/Server_General_Parameters_and_Statistics.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="User 0">
+						<var-group>
+							<data>Registered Users Parameters and Statistics</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/User_0.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="User 1">
+						<var-group>
+							<data>Registered Users Parameters and Statistics</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/rdf/User_1.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="DACS">
+					<samplerGroup name="Server">
+						<sampler name="dacs svr buf">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_buf.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr overview">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr sizes">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_sizes.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr systems">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_systems.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr updateinfo">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_updateinfo.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr usagecollect">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_svr_usagecollect.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr trans overview">
+							<var-group>
+								<data>DACS_TRANS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_trans_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr users">
+							<var-group>
+								<data>DACS_SVR</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/dacs_users.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr FKM">
+							<var-group>
+								<data>Applications</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/FKM.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs svr Processes">
+							<var-group>
+								<data>Applications</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/server/Processes.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+					<samplerGroup name="Station">
+						<sampler name="dacs mapIDN">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_mapIDN.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs scp_main">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_scp_main.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd buf">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_stnd_buf.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd frmserver">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_stnd_frmserver.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd frmstation">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_stnd_frmstation.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd overview">
+							<var-group>
+								<data>DACS_STND</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_stnd_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd trans overview">
+							<var-group>
+								<data>DACS_TRANS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_trans_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd FKM">
+							<var-group>
+								<data>Applications</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/FKM.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs stnd Processes">
+							<var-group>
+								<data>Applications</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/Processes.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<samplerGroup name="SYBASE">
+							<sampler name="dacs SEGMENTS">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_segments.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+							<sampler name="dacs CAPACITY">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_segments.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+							<sampler name="dacs LOCKS">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_locks.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+							<sampler name="dacs LONG-QUERIES">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_long_queries.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+							<sampler name="dacs USERS">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_users.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+							<sampler name="dacs DEVICES">
+								<var-group>
+									<data>DACS</data>
+								</var-group>
+								<sampleInterval>
+									<data>0</data>
+								</sampleInterval>
+								<plugin>
+									<toolkit>
+										<samplerScript>
+											<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/station/dacs_devices.csv</data>
+										</samplerScript>
+									</toolkit>
+								</plugin>
+							</sampler>
+						</samplerGroup>
+					</samplerGroup>
+					<samplerGroup name="Snkd">
+						<sampler name="dacs snkd buf">
+							<var-group>
+								<data>DACS_SNKD</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/dacs_snkd_buf.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd frmdist">
+							<var-group>
+								<data>DACS_SNKD</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/dacs_snkd_frmdist.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd frmserver">
+							<var-group>
+								<data>DACS_SNKD</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/dacs_snkd_frmserver.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd overview">
+							<var-group>
+								<data>DACS_SNKD</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/dacs_snkd_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd trans overview">
+							<var-group>
+								<data>DACS_TRANS</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/dacs_trans_overview.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd FKM">
+							<var-group>
+								<data>Applications</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/FKM.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+						<sampler name="dacs snkd Processes">
+							<var-group>
+								<data>Application</data>
+							</var-group>
+							<sampleInterval>
+								<data>0</data>
+							</sampleInterval>
+							<plugin>
+								<toolkit>
+									<samplerScript>
+										<data>/bin/cat /opt/geneos/gateway/resources/market_data/trep/dacs/snkd/Processes.csv</data>
+									</samplerScript>
+								</toolkit>
+							</plugin>
+						</sampler>
+					</samplerGroup>
+				</samplerGroup>
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="SNMP">
