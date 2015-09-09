@@ -14,6 +14,7 @@
 			<attributes>
 				<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
 				<attribute name="REGION">EMEA</attribute>
+				<attribute name="DEPARTMENT">BACK OFFICE</attribute>
 				<attribute name="PRODUCT">GENEOS</attribute>
 				<attribute name="CITY">LONDON</attribute>
 				<attribute name="APP">SELF ANNOUNCING NETPROBE</attribute>
