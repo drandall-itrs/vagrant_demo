@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 12:15:46 by owatson on ITRSLP072-->
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-10 13:50:42 by DRandall on ITRSLP070-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<include>
@@ -867,7 +867,7 @@
 								<probe ref="localhost_7038"/>
 							</managedEntity>
 						</managedEntityGroup>
-						<managedEntityGroup name="BMC Control-M" disabled="true">
+						<managedEntityGroup disabled="true" name="BMC Control-M">
 							<attribute name="VENDOR">BMC</attribute>
 							<addTypes>
 								<type ref="BMC Control-M"/>
@@ -913,7 +913,7 @@
 								<type ref="DataCom"/>
 							</addTypes>
 						</managedEntity>
-						<managedEntity name="Corvil" disabled="true">
+						<managedEntity disabled="true" name="Corvil">
 							<probe ref="localhost_7038"/>
 							<attribute name="VENDOR">Corvil</attribute>
 							<addTypes>
@@ -2010,7 +2010,7 @@
 				<sampler ref="channel-details-2"/>
 				<sampler ref="channel-details-3"/>
 			</type>
-			<type name="EMS" disabled="true">
+			<type disabled="true" name="EMS">
 				<sampler ref="ems-users"/>
 				<sampler ref="ems-topics"/>
 				<sampler ref="ems-routes"/>
@@ -2020,7 +2020,7 @@
 				<sampler ref="ems-connections"/>
 				<sampler ref="ems-bridges"/>
 			</type>
-			<type name="RV" disabled="true">
+			<type disabled="true" name="RV">
 				<sampler ref="tib-rv-top_problem_senders"/>
 				<sampler ref="tib-rv-top_problem_receivers"/>
 				<sampler ref="tib-rv-publisher"/>
@@ -18131,7 +18131,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="Messaging Systems">
-			<samplerGroup name="MQ" disabled="true">
+			<samplerGroup disabled="true" name="MQ">
 				<sampler name="queue-overview">
 					<group>mq-series-queue-overview</group>
 					<sampleInterval>
@@ -18237,7 +18237,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					</plugin>
 				</sampler>
 			</samplerGroup>
-			<samplerGroup name="RV" disabled="true">
+			<samplerGroup disabled="true" name="RV">
 				<sampler name="tib-rv-top_problem_senders">
 					<group>tib-rv</group>
 					<sampleInterval>
@@ -18308,7 +18308,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					</plugin>
 				</sampler>
 			</samplerGroup>
-			<samplerGroup name="EMS" disabled="true">
+			<samplerGroup disabled="true" name="EMS">
 				<sampler name="ems-users">
 					<group>EMS</group>
 					<sampleInterval>
@@ -22129,7 +22129,7 @@ Loop</data>
 							<dataItem>
 								<property>@value</property>
 							</dataItem>
-							<integer>18</integer>
+							<integer>45</integer>
 						</gt>
 						<transaction>
 							<update>
@@ -22142,7 +22142,7 @@ Loop</data>
 								<dataItem>
 									<property>@value</property>
 								</dataItem>
-								<integer>15</integer>
+								<integer>35</integer>
 							</gt>
 							<transaction>
 								<update>
@@ -33095,9 +33095,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33318,9 +33320,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
