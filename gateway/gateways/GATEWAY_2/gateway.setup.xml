@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:45:31 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:48:51 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -1288,7 +1288,6 @@
 				<var name="filebase">
 					<string>/opt/geneos/gateway/resources/oracle</string>
 				</var>
-				<sampler ref="Current Sessions"/>
 				<sampler ref="DB Locks"/>
 				<sampler ref="Long Queries"/>
 				<sampler ref="Server Status"/>
@@ -1298,6 +1297,7 @@
 				<sampler ref="Trace Files"/>
 				<sampler ref="VLock"/>
 				<sampler ref="VSession"/>
+				<sampler ref="Current Sessions"/>
 			</type>
 			<type name="sybase">
 				<var name="filebase">
@@ -1309,6 +1309,21 @@
 				<sampler ref="Devices"/>
 				<sampler ref="Long-Queries"/>
 				<sampler ref="Segments"/>
+			</type>
+			<type name="mysql">
+				<sampler ref="MYSQL"/>
+				<sampler ref="MYSQL Processes"/>
+			</type>
+			<type name="informix">
+				<sampler ref="Asynch IO Stats by Process"/>
+				<sampler ref="Informix Database Utilization"/>
+				<sampler ref="Informix Disk Write Flushes"/>
+				<sampler ref="Global MultiThread Info IVP"/>
+				<sampler ref="Global MultiThread Info VPS"/>
+				<sampler ref="Informix Database Locks"/>
+				<sampler ref="Informix Database Logging"/>
+				<sampler ref="Informix Profile Counts"/>
+				<sampler ref="Informix Shared Memory Stats"/>
 			</type>
 		</typeGroup>
 		<typeGroup name="Custom">
