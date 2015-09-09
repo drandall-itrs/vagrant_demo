@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 11:55:07 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 11:59:21 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -21544,6 +21544,385 @@ Loop</data>
 					<enablePassword>true</enablePassword>
 				</userCommand>
 			</command>
+		</commandGroup>
+		<commandGroup name="NY">
+			<command name="Re-Assign">
+				<label>User Re-Assignment</label>
+				<description>Re-assign a user assignment to another person.</description>
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(state(&quot;severity&quot;)&gt;=1)][(state(&quot;userAssigned&quot;)=&quot;1&quot;)]</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/USERASSIGNMENT:unassign</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+						<commandRef>
+							<internalCommand>
+								<name>/USERASSIGNMENT:assign</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+					<silent>true</silent>
+				</task>
+			</command>
+			<command name="Log File Retrieval">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity[attr(&quot;OS&quot;)=&quot;Linux&quot;]</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>netprobe</runLocation>
+					<args>
+						<arg>
+							<static>tail -400 $(log_input)</static>
+						</arg>
+						<arg>
+							<userInput>
+								<description>log_input</description>
+								<singleLineString>$(log_input)</singleLineString>
+							</userInput>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<command name="Restart Netprobe">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/RMS:restart</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+				</task>
+			</command>
+			<command name="Show Log File">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;FKM&quot;)]/dataview/rows/row/cell</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/PLUGIN:FKM:viewFile</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+				</task>
+			</command>
+			<command name="Show Rules">
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/RULES:showRules</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+				</task>
+			</command>
+			<command name="Top 20 Processes">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;HARDWARE&quot;)]/dataview</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/PLUGIN:HARDWARE:top20Processes</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+				</task>
+			</command>
+			<command name="View Setup">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview</target>
+				</targets>
+				<task>
+					<commands>
+						<commandRef>
+							<internalCommand>
+								<name>/PLUGIN:viewSetup</name>
+							</internalCommand>
+							<stopOnError>true</stopOnError>
+						</commandRef>
+					</commands>
+				</task>
+			</command>
+			<command name="Classify Event">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;Events Table&quot;)]/rows/row/cell[(@column=&quot;Description&quot;)]</target>
+				</targets>
+				<userCommand>
+					<type>script</type>
+					<runLocation>gateway</runLocation>
+					<args>
+						<arg>
+							<userInput>
+								<description>Event Classification</description>
+								<options>
+									<option>
+										<label>Non Actionable</label>
+										<value>Non Actionable</value>
+									</option>
+									<option>
+										<label>False Positive</label>
+										<value>False Positive</value>
+									</option>
+									<option>
+										<label>New Incident</label>
+										<value>New Incident</value>
+									</option>
+								</options>
+							</userInput>
+						</arg>
+						<arg>
+							<userInput>
+								<description>Additional Comments</description>
+								<multiLineString/>
+							</userInput>
+						</arg>
+					</args>
+				</userCommand>
+			</command>
+			<commandGroup name="System Integrations">
+				<command name="Generate Ticket">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(state(&quot;severity&quot;)&gt;1)]</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>gateway</runLocation>
+						<args>
+							<arg>
+								<static>/opt/itrs/scripts/remedy.pl</static>
+							</arg>
+							<arg>
+								<concatenate>true</concatenate>
+								<userInput>
+									<description>Incident Severity</description>
+									<options>
+										<option>
+											<label>Critical</label>
+											<value>Critical</value>
+										</option>
+										<option>
+											<label>Important</label>
+											<value>Important</value>
+										</option>
+										<option>
+											<label>Normal</label>
+											<value>Normal</value>
+										</option>
+										<option>
+											<label>Low</label>
+											<value>Low</value>
+										</option>
+									</options>
+								</userInput>
+							</arg>
+							<arg>
+								<concatenate>true</concatenate>
+								<userInput>
+									<description>Line of Business Impacted</description>
+									<options>
+										<option>
+											<label>Clearing Systems</label>
+											<value>Clearing Systems</value>
+										</option>
+										<option>
+											<label>Trading Systems</label>
+											<value>Trading Systems</value>
+										</option>
+										<option>
+											<label>Equities</label>
+											<value>Equities</value>
+										</option>
+										<option>
+											<label>FX</label>
+											<value>FX</value>
+										</option>
+										<option>
+											<label>FICD</label>
+											<value>FICD</value>
+										</option>
+										<option>
+											<label>Compliance</label>
+											<value>Compliance</value>
+										</option>
+										<option>
+											<label>Reporting</label>
+											<value>Reporting</value>
+										</option>
+									</options>
+								</userInput>
+							</arg>
+							<arg>
+								<concatenate>true</concatenate>
+								<userInput>
+									<description>Escalation Path</description>
+									<options>
+										<option>
+											<label>None</label>
+											<value>None</value>
+										</option>
+										<option>
+											<value>Infrastructure</value>
+										</option>
+										<option>
+											<value>Database Systems</value>
+										</option>
+										<option>
+											<value>Middleware</value>
+										</option>
+										<option>
+											<value>Networking</value>
+										</option>
+										<option>
+											<value>Risk Management</value>
+										</option>
+									</options>
+								</userInput>
+							</arg>
+							<arg>
+								<concatenate>true</concatenate>
+								<userInput>
+									<description>Description of Issue</description>
+									<multiLineString/>
+								</userInput>
+							</arg>
+							<arg>
+								<concatenate>true</concatenate>
+								<userInput>
+									<description>Time to Resolve (minutes)</description>
+									<integer>0</integer>
+								</userInput>
+							</arg>
+						</args>
+					</userCommand>
+				</command>
+			</commandGroup>
+			<commandGroup name="Assign and Snooze Commands">
+				<command name="Assign and Snooze">
+					<label>Assign &amp; Snooze</label>
+					<description>Assign any Critical or Warning item to a user and snooze.</description>
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(state(&quot;severity&quot;)&gt;=1)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<internalCommand>
+									<name>/USERASSIGNMENT:assign</name>
+								</internalCommand>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+							<commandRef>
+								<internalCommand>
+									<name>/SNOOZE:severityTo</name>
+								</internalCommand>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+				<command name="Unsnooze and Unassign">
+					<label>Unsnooze &amp; Unassign</label>
+					<description>Unassign any Critical or Warning item from a user and also unsnooze.</description>
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview/rows/row/cell[(state(&quot;severity&quot;)&gt;=1)][(state(&quot;snoozed&quot;)=&quot;1&quot;)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<internalCommand>
+									<name>/USERASSIGNMENT:unassign</name>
+								</internalCommand>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+							<commandRef>
+								<internalCommand>
+									<name>/SNOOZE:unsnooze</name>
+								</internalCommand>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+			</commandGroup>
+			<commandGroup name="Demo Commands">
+				<command name="Generate Error">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity[(attr(&quot;OS&quot;)=&quot;Linux&quot;)]</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/start error</static>
+							</arg>
+						</args>
+					</userCommand>
+				</command>
+				<command name="Generate Warning">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity[(attr(&quot;OS&quot;)=&quot;Linux&quot;)]</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/start warning</static>
+							</arg>
+						</args>
+					</userCommand>
+				</command>
+				<command name="Demo Systems Status">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity[attr(&quot;OS&quot;)=&quot;Linux&quot;]</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/status</static>
+							</arg>
+						</args>
+					</userCommand>
+				</command>
+				<command name="Show IX-MA Log File">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;IX-MA&quot;)]/dataview[(@name=&quot;IX-MA&quot;)]/rows/row/cell</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/usr/bin/tail -400 /opt/geneos/all_samplers/ix-ma/NewsLog20130501.log</static>
+							</arg>
+						</args>
+					</userCommand>
+				</command>
+			</commandGroup>
 		</commandGroup>
 	</commands>
 	<scheduledCommands>
