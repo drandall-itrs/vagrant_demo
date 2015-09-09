@@ -12,6 +12,7 @@
 		<managedEntity>
 			<name><hostname/><data>_INF_SA_</data><port/></name>
 			<attributes>
+				<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
 				<attribute name="REGION">EMEA</attribute>
 				<attribute name="PRODUCT">GENEOS</attribute>
 				<attribute name="CITY">LONDON</attribute>
