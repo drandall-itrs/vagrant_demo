@@ -1,0 +1,4 @@
+TASK NAME,TASK TYPE,SHEET NAME,RUNNING,TASK INSTANCES,WAITING ENTRY,ERRORS QUEUE,AVG WAITING TIME,AVG PROCESSING TIME,AVG TASK LATENCY
+p1fcn_P1_startingPoint,Router,Phase 1 - FO Validation,Yes,1,0,0,0,0,0
+p1fcn_P1_contractIssuedFromEvent,AuthorizationQueue,Event Management,Yes,1,0,0,0,0,0
+p1fcn_P7_deadContractIssuedFromEvent,AuthorizationQueue,Event Management,Yes,1,0,0,0,0,0

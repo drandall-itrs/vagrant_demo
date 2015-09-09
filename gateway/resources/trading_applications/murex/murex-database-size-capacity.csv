@@ -1,0 +1,277 @@
+fragmentID,segments,deviceName,totalPages,usedPages,totalMB,usedMB,percentUtilisation
+<!>databaseName,gdc1mx
+<!>status,up
+<!>creationDate,Jul 16 2013 5:14PM
+<!>lastTransactionDump,Jul 16 2013 5:44PM
+<!>secsSinceLastTransactionDump,1950681
+<!>logUtilisation,4.92 %
+<!>dataUtilisation,54.67 %
+Frag:0,system + default,master,640000,598757,1250.00,1169.45,93.56 %
+Frag:1,system + default,master,353280,1380,690.00,2.70,0.39 %
+Frag:2,system + default,sysprocsdev,640000,598757,1250.00,1169.45,93.56 %
+Frag:3,system + default,sysprocsdev,353280,1380,690.00,2.70,0.39 %
+Frag:4,system + default,systemdbdev,640000,598757,1250.00,1169.45,93.56 %
+Frag:5,system + default,systemdbdev,353280,1380,690.00,2.70,0.39 %
+Frag:6,system + default,tempdbdev,640000,598757,1250.00,1169.45,93.56 %
+Frag:7,logsegment,tempdbdev,384000,18904,750.00,36.92,4.92 %
+Frag:8,system + default,tempdbdev,286720,79307,560.00,154.90,27.66 %
+Frag:9,system + default,tempdbdev,353280,1380,690.00,2.70,0.39 %
+Frag:10,system + default,tempdbdev,39936,156,78.00,0.30,0.39 %
+Frag:11,system + default,sybmgmtdev,640000,598757,1250.00,1169.45,93.56 %
+Frag:12,system + default,sybmgmtdev,353280,1380,690.00,2.70,0.39 %
+Frag:13,system + default,exgold31DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:14,logsegment,exgold31DATA,384000,18904,750.00,36.92,4.92 %
+Frag:15,system + default,exgold31DATA,286720,79307,560.00,154.90,27.66 %
+Frag:16,system + default,exgold31DATA,353280,1380,690.00,2.70,0.39 %
+Frag:17,system + default,exgold31DATA,39936,156,78.00,0.30,0.39 %
+Frag:18,system + default,exgold31dmDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:19,logsegment,exgold31dmDATA,384000,18904,750.00,36.92,4.92 %
+Frag:20,system + default,exgold31dmDATA,286720,79307,560.00,154.90,27.66 %
+Frag:21,system + default,exgold31dmDATA,353280,1380,690.00,2.70,0.39 %
+Frag:22,system + default,exgold31dmDATA,39936,156,78.00,0.30,0.39 %
+Frag:23,system + default,tempdbdev1,640000,598757,1250.00,1169.45,93.56 %
+Frag:24,system + default,tempdbdev1,353280,1380,690.00,2.70,0.39 %
+Frag:25,system + default,tempdbdev1,39936,156,78.00,0.30,0.39 %
+Frag:26,system + default,EXMX211DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:27,logsegment,EXMX211DATA,384000,18904,750.00,36.92,4.92 %
+Frag:28,system + default,EXMX211DATA,286720,79307,560.00,154.90,27.66 %
+Frag:29,system + default,EXMX211DATA,353280,1380,690.00,2.70,0.39 %
+Frag:30,system + default,EXMX211DATA,39936,156,78.00,0.30,0.39 %
+Frag:31,system + default,EXMX211LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:32,system + default,EXMX211LOG,353280,1380,690.00,2.70,0.39 %
+Frag:33,system + default,EXMX211LOG,39936,156,78.00,0.30,0.39 %
+Frag:34,system + default,EXMLCDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:35,logsegment,EXMLCDATA,384000,18904,750.00,36.92,4.92 %
+Frag:36,system + default,EXMLCDATA,286720,79307,560.00,154.90,27.66 %
+Frag:37,system + default,EXMLCDATA,353280,1380,690.00,2.70,0.39 %
+Frag:38,system + default,EXMLCDATA,39936,156,78.00,0.30,0.39 %
+Frag:39,system + default,EXMLCLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:40,system + default,EXMLCLOG,353280,1380,690.00,2.70,0.39 %
+Frag:41,system + default,EXMLCLOG,39936,156,78.00,0.30,0.39 %
+Frag:42,system + default,murex_3_1_23_mlc_1_6_8DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:43,logsegment,murex_3_1_23_mlc_1_6_8DATA,384000,18904,750.00,36.92,4.92 %
+Frag:44,system + default,murex_3_1_23_mlc_1_6_8DATA,286720,79307,560.00,154.90,27.66 %
+Frag:45,system + default,murex_3_1_23_mlc_1_6_8DATA,353280,1380,690.00,2.70,0.39 %
+Frag:46,system + default,murex_3_1_23_mlc_1_6_8DATA,39936,156,78.00,0.30,0.39 %
+Frag:47,system + default,murex_3_1_23_mlc_1_6_8LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:48,logsegment,murex_3_1_23_mlc_1_6_8LOG,384000,18904,750.00,36.92,4.92 %
+Frag:49,system + default,murex_3_1_23_mlc_1_6_8LOG,286720,79307,560.00,154.90,27.66 %
+Frag:50,system + default,murex_3_1_23_mlc_1_6_8LOG,353280,1380,690.00,2.70,0.39 %
+Frag:51,system + default,murex_3_1_23_mlc_1_6_8LOG,39936,156,78.00,0.30,0.39 %
+Frag:52,system + default,exgold31LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:53,logsegment,exgold31LOG,384000,18904,750.00,36.92,4.92 %
+Frag:54,system + default,exgold31LOG,286720,79307,560.00,154.90,27.66 %
+Frag:55,system + default,exgold31LOG,353280,1380,690.00,2.70,0.39 %
+Frag:56,system + default,exgold31LOG,39936,156,78.00,0.30,0.39 %
+Frag:57,system + default,exgold31mlcLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:58,logsegment,exgold31mlcLOG,384000,18904,750.00,36.92,4.92 %
+Frag:59,system + default,exgold31mlcLOG,353280,1380,690.00,2.70,0.39 %
+Frag:60,system + default,exgold31mlcLOG,39936,156,78.00,0.30,0.39 %
+Frag:61,system + default,EXMX31DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:62,logsegment,EXMX31DATA,384000,18904,750.00,36.92,4.92 %
+Frag:63,system + default,EXMX31DATA,286720,79307,560.00,154.90,27.66 %
+Frag:64,system + default,EXMX31DATA,353280,1380,690.00,2.70,0.39 %
+Frag:65,system + default,EXMX31DATA,39936,156,78.00,0.30,0.39 %
+Frag:66,system + default,EXMX31LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:67,logsegment,EXMX31LOG,384000,18904,750.00,36.92,4.92 %
+Frag:68,system + default,EXMX31LOG,286720,79307,560.00,154.90,27.66 %
+Frag:69,system + default,EXMX31LOG,353280,1380,690.00,2.70,0.39 %
+Frag:70,system + default,EXMX31LOG,39936,156,78.00,0.30,0.39 %
+Frag:71,system + default,exgold31mlcDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:72,logsegment,exgold31mlcDATA,384000,18904,750.00,36.92,4.92 %
+Frag:73,system + default,exgold31mlcDATA,286720,79307,560.00,154.90,27.66 %
+Frag:74,system + default,exgold31mlcDATA,353280,1380,690.00,2.70,0.39 %
+Frag:75,system + default,exgold31mlcDATA,39936,156,78.00,0.30,0.39 %
+Frag:76,system + default,exgold31dmLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:77,logsegment,exgold31dmLOG,384000,18904,750.00,36.92,4.92 %
+Frag:78,system + default,exgold31dmLOG,353280,1380,690.00,2.70,0.39 %
+Frag:79,system + default,exgold31dmLOG,39936,156,78.00,0.30,0.39 %
+Frag:80,system + default,v3buildtest_fin_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:81,logsegment,v3buildtest_fin_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:82,system + default,v3buildtest_fin_DATA,286720,79307,560.00,154.90,27.66 %
+Frag:83,system + default,v3buildtest_fin_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:84,system + default,v3buildtest_fin_DATA,39936,156,78.00,0.30,0.39 %
+Frag:85,system + default,v3buildtest_fin_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:86,logsegment,v3buildtest_fin_LOG,384000,18904,750.00,36.92,4.92 %
+Frag:87,system + default,v3buildtest_fin_LOG,286720,79307,560.00,154.90,27.66 %
+Frag:88,system + default,v3buildtest_fin_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:89,system + default,v3buildtest_fin_LOG,39936,156,78.00,0.30,0.39 %
+Frag:90,system + default,v3_buildtest_mlcDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:91,logsegment,v3_buildtest_mlcDATA,384000,18904,750.00,36.92,4.92 %
+Frag:92,system + default,v3_buildtest_mlcDATA,286720,79307,560.00,154.90,27.66 %
+Frag:93,system + default,v3_buildtest_mlcDATA,353280,1380,690.00,2.70,0.39 %
+Frag:94,system + default,v3_buildtest_mlcDATA,39936,156,78.00,0.30,0.39 %
+Frag:95,system + default,v3_buildtest_mlcLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:96,logsegment,v3_buildtest_mlcLOG,384000,18904,750.00,36.92,4.92 %
+Frag:97,system + default,v3_buildtest_mlcLOG,286720,79307,560.00,154.90,27.66 %
+Frag:98,system + default,v3_buildtest_mlcLOG,353280,1380,690.00,2.70,0.39 %
+Frag:99,system + default,v3_buildtest_mlcLOG,39936,156,78.00,0.30,0.39 %
+Frag:100,system + default,exsandpit31DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:101,logsegment,exsandpit31DATA,384000,18904,750.00,36.92,4.92 %
+Frag:102,system + default,exsandpit31DATA,286720,79307,560.00,154.90,27.66 %
+Frag:103,system + default,exsandpit31DATA,353280,1380,690.00,2.70,0.39 %
+Frag:104,system + default,exsandpit31DATA,39936,156,78.00,0.30,0.39 %
+Frag:105,system + default,exsandpit31LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:106,logsegment,exsandpit31LOG,384000,18904,750.00,36.92,4.92 %
+Frag:107,system + default,exsandpit31LOG,286720,79307,560.00,154.90,27.66 %
+Frag:108,system + default,exsandpit31LOG,353280,1380,690.00,2.70,0.39 %
+Frag:109,system + default,exsandpit31LOG,39936,156,78.00,0.30,0.39 %
+Frag:110,system + default,murex3_1_22DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:111,logsegment,murex3_1_22DATA,384000,18904,750.00,36.92,4.92 %
+Frag:112,system + default,murex3_1_22DATA,286720,79307,560.00,154.90,27.66 %
+Frag:113,system + default,murex3_1_22DATA,353280,1380,690.00,2.70,0.39 %
+Frag:114,system + default,murex3_1_22DATA,39936,156,78.00,0.30,0.39 %
+Frag:115,system + default,murex3_1_22LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:116,logsegment,murex3_1_22LOG,384000,18904,750.00,36.92,4.92 %
+Frag:117,system + default,murex3_1_22LOG,286720,79307,560.00,154.90,27.66 %
+Frag:118,system + default,murex3_1_22LOG,353280,1380,690.00,2.70,0.39 %
+Frag:119,system + default,murex3_1_22LOG,39936,156,78.00,0.30,0.39 %
+Frag:120,system + default,exsandpit31mlcDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:121,logsegment,exsandpit31mlcDATA,384000,18904,750.00,36.92,4.92 %
+Frag:122,system + default,exsandpit31mlcDATA,286720,79307,560.00,154.90,27.66 %
+Frag:123,system + default,exsandpit31mlcDATA,353280,1380,690.00,2.70,0.39 %
+Frag:124,system + default,exsandpit31mlcDATA,39936,156,78.00,0.30,0.39 %
+Frag:125,system + default,exsandpit31mlcLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:126,logsegment,exsandpit31mlcLOG,384000,18904,750.00,36.92,4.92 %
+Frag:127,system + default,exsandpit31mlcLOG,353280,1380,690.00,2.70,0.39 %
+Frag:128,system + default,exsandpit31mlcLOG,39936,156,78.00,0.30,0.39 %
+Frag:129,system + default,EXMX3123DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:130,logsegment,EXMX3123DATA,384000,18904,750.00,36.92,4.92 %
+Frag:131,system + default,EXMX3123DATA,286720,79307,560.00,154.90,27.66 %
+Frag:132,system + default,EXMX3123DATA,353280,1380,690.00,2.70,0.39 %
+Frag:133,system + default,EXMX3123DATA,39936,156,78.00,0.30,0.39 %
+Frag:134,system + default,EXMX3123LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:135,logsegment,EXMX3123LOG,384000,18904,750.00,36.92,4.92 %
+Frag:136,system + default,EXMX3123LOG,286720,79307,560.00,154.90,27.66 %
+Frag:137,system + default,EXMX3123LOG,353280,1380,690.00,2.70,0.39 %
+Frag:138,system + default,EXMX3123LOG,39936,156,78.00,0.30,0.39 %
+Frag:139,system + default,exsandpit31dmDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:140,logsegment,exsandpit31dmDATA,384000,18904,750.00,36.92,4.92 %
+Frag:141,system + default,exsandpit31dmDATA,286720,79307,560.00,154.90,27.66 %
+Frag:142,system + default,exsandpit31dmDATA,353280,1380,690.00,2.70,0.39 %
+Frag:143,system + default,exsandpit31dmDATA,39936,156,78.00,0.30,0.39 %
+Frag:144,system + default,exsandpit31dmLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:145,logsegment,exsandpit31dmLOG,384000,18904,750.00,36.92,4.92 %
+Frag:146,system + default,exsandpit31dmLOG,353280,1380,690.00,2.70,0.39 %
+Frag:147,system + default,exsandpit31dmLOG,39936,156,78.00,0.30,0.39 %
+Frag:148,system + default,ref3_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:149,logsegment,ref3_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:150,system + default,ref3_DATA,286720,79307,560.00,154.90,27.66 %
+Frag:151,system + default,ref3_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:152,system + default,ref3_DATA,39936,156,78.00,0.30,0.39 %
+Frag:153,system + default,ref3_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:154,logsegment,ref3_LOG,384000,18904,750.00,36.92,4.92 %
+Frag:155,system + default,ref3_LOG,286720,79307,560.00,154.90,27.66 %
+Frag:156,system + default,ref3_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:157,system + default,ref3_LOG,39936,156,78.00,0.30,0.39 %
+Frag:158,system + default,TRexsandpit31DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:159,system + default,TRexsandpit31DATA,353280,1380,690.00,2.70,0.39 %
+Frag:160,system + default,TRexsandpit31LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:161,system + default,TRexsandpit31LOG,353280,1380,690.00,2.70,0.39 %
+Frag:162,system + default,trdemo_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:163,system + default,trdemo_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:164,system + default,trdemo_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:165,system + default,trdemo_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:166,system + default,exgold3126DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:167,logsegment,exgold3126DATA,384000,18904,750.00,36.92,4.92 %
+Frag:168,system + default,exgold3126DATA,286720,79307,560.00,154.90,27.66 %
+Frag:169,system + default,exgold3126DATA,353280,1380,690.00,2.70,0.39 %
+Frag:170,system + default,exgold3126DATA,39936,156,78.00,0.30,0.39 %
+Frag:171,system + default,exgold3126LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:172,system + default,exgold3126LOG,353280,1380,690.00,2.70,0.39 %
+Frag:173,system + default,exgold3126LOG,39936,156,78.00,0.30,0.39 %
+Frag:174,system + default,exgold3126mlcDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:175,system + default,exgold3126mlcDATA,353280,1380,690.00,2.70,0.39 %
+Frag:176,system + default,exgold3126mlcDATA,39936,156,78.00,0.30,0.39 %
+Frag:177,system + default,exgold3126mlcLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:178,system + default,exgold3126mlcLOG,353280,1380,690.00,2.70,0.39 %
+Frag:179,system + default,exgold3126dmDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:180,system + default,exgold3126dmDATA,353280,1380,690.00,2.70,0.39 %
+Frag:181,system + default,exgold3126dmLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:182,system + default,exgold3126dmLOG,353280,1380,690.00,2.70,0.39 %
+Frag:183,system + default,extestteam1mxDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:184,logsegment,extestteam1mxDATA,384000,18904,750.00,36.92,4.92 %
+Frag:185,system + default,extestteam1mxDATA,353280,1380,690.00,2.70,0.39 %
+Frag:186,system + default,extestteam1mxDATA,39936,156,78.00,0.30,0.39 %
+Frag:187,system + default,extestteam1mxLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:188,system + default,extestteam1mxLOG,353280,1380,690.00,2.70,0.39 %
+Frag:189,system + default,extestteam1mxLOG,39936,156,78.00,0.30,0.39 %
+Frag:190,system + default,extestteam1mlcDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:191,system + default,extestteam1mlcDATA,353280,1380,690.00,2.70,0.39 %
+Frag:192,system + default,extestteam1mlcDATA,39936,156,78.00,0.30,0.39 %
+Frag:193,system + default,extestteam1mlcLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:194,system + default,extestteam1mlcLOG,353280,1380,690.00,2.70,0.39 %
+Frag:195,system + default,extestteam1dmDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:196,system + default,extestteam1dmDATA,353280,1380,690.00,2.70,0.39 %
+Frag:197,system + default,extestteam1dmLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:198,system + default,extestteam1dmLOG,353280,1380,690.00,2.70,0.39 %
+Frag:199,system + default,extdl29mx,640000,598757,1250.00,1169.45,93.56 %
+Frag:200,logsegment,extdl29mx,384000,18904,750.00,36.92,4.92 %
+Frag:201,system + default,extdl29mx,286720,79307,560.00,154.90,27.66 %
+Frag:202,system + default,extdl29mx,353280,1380,690.00,2.70,0.39 %
+Frag:203,system + default,extdl29mx,39936,156,78.00,0.30,0.39 %
+Frag:204,system + default,extdl29mxlog,640000,598757,1250.00,1169.45,93.56 %
+Frag:205,system + default,extdl29mxlog,353280,1380,690.00,2.70,0.39 %
+Frag:206,system + default,extdl29mxlog,39936,156,78.00,0.30,0.39 %
+Frag:207,system + default,extdl29dm,640000,598757,1250.00,1169.45,93.56 %
+Frag:208,logsegment,extdl29dm,384000,18904,750.00,36.92,4.92 %
+Frag:209,system + default,extdl29dm,286720,79307,560.00,154.90,27.66 %
+Frag:210,system + default,extdl29dm,353280,1380,690.00,2.70,0.39 %
+Frag:211,system + default,extdl29dm,39936,156,78.00,0.30,0.39 %
+Frag:212,system + default,extdl29dmlog,640000,598757,1250.00,1169.45,93.56 %
+Frag:213,system + default,extdl29dmlog,353280,1380,690.00,2.70,0.39 %
+Frag:214,system + default,extdl29dmlog,39936,156,78.00,0.30,0.39 %
+Frag:215,system + default,gdc1_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:216,logsegment,gdc1_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:217,system + default,gdc1_DATA,286720,79307,560.00,154.90,27.66 %
+Frag:218,system + default,gdc1_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:219,system + default,gdc1_DATA,39936,156,78.00,0.30,0.39 %
+Frag:220,system + default,gdc1_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:221,logsegment,gdc1_LOG,384000,18904,750.00,36.92,4.92 %
+Frag:222,system + default,gdc1_LOG,286720,79307,560.00,154.90,27.66 %
+Frag:223,system + default,gdc1_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:224,system + default,gdc1_LOG,39936,156,78.00,0.30,0.39 %
+Frag:225,system + default,extdl29mlc,640000,598757,1250.00,1169.45,93.56 %
+Frag:226,logsegment,extdl29mlc,384000,18904,750.00,36.92,4.92 %
+Frag:227,system + default,extdl29mlc,286720,79307,560.00,154.90,27.66 %
+Frag:228,system + default,extdl29mlc,353280,1380,690.00,2.70,0.39 %
+Frag:229,system + default,extdl29mlc,39936,156,78.00,0.30,0.39 %
+Frag:230,system + default,extdl29mlclog,640000,598757,1250.00,1169.45,93.56 %
+Frag:231,system + default,extdl29mlclog,353280,1380,690.00,2.70,0.39 %
+Frag:232,system + default,extdl29mlclog,39936,156,78.00,0.30,0.39 %
+Frag:233,system + default,smarttDATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:234,system + default,smarttDATA,353280,1380,690.00,2.70,0.39 %
+Frag:235,system + default,smarttDATA,39936,156,78.00,0.30,0.39 %
+Frag:236,system + default,smarttLOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:237,system + default,smarttLOG,353280,1380,690.00,2.70,0.39 %
+Frag:238,system + default,exsandpit31LOG2,640000,598757,1250.00,1169.45,93.56 %
+Frag:239,logsegment,exsandpit31LOG2,384000,18904,750.00,36.92,4.92 %
+Frag:240,system + default,exsandpit31LOG2,286720,79307,560.00,154.90,27.66 %
+Frag:241,system + default,exsandpit31LOG2,353280,1380,690.00,2.70,0.39 %
+Frag:242,system + default,exsandpit31LOG2,39936,156,78.00,0.30,0.39 %
+Frag:243,system + default,ref1_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:244,logsegment,ref1_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:245,system + default,ref1_DATA,286720,79307,560.00,154.90,27.66 %
+Frag:246,system + default,ref1_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:247,system + default,ref1_DATA,39936,156,78.00,0.30,0.39 %
+Frag:248,system + default,ref1_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:249,logsegment,ref1_LOG,384000,18904,750.00,36.92,4.92 %
+Frag:250,system + default,ref1_LOG,286720,79307,560.00,154.90,27.66 %
+Frag:251,system + default,ref1_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:252,system + default,ref1_LOG,39936,156,78.00,0.30,0.39 %
+Frag:253,system + default,smartrgdc_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:254,logsegment,smartrgdc_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:255,system + default,smartrgdc_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:256,system + default,smartrgdc_DATA,39936,156,78.00,0.30,0.39 %
+Frag:257,system + default,tdl0_DATA,640000,598757,1250.00,1169.45,93.56 %
+Frag:258,logsegment,tdl0_DATA,384000,18904,750.00,36.92,4.92 %
+Frag:259,system + default,tdl0_DATA,286720,79307,560.00,154.90,27.66 %
+Frag:260,system + default,tdl0_DATA,353280,1380,690.00,2.70,0.39 %
+Frag:261,system + default,tdl0_DATA,39936,156,78.00,0.30,0.39 %
+Frag:262,system + default,tdl0_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:263,logsegment,tdl0_LOG,384000,18904,750.00,36.92,4.92 %
+Frag:264,system + default,tdl0_LOG,286720,79307,560.00,154.90,27.66 %
+Frag:265,system + default,tdl0_LOG,353280,1380,690.00,2.70,0.39 %
+Frag:266,system + default,tdl0_LOG,39936,156,78.00,0.30,0.39 %
+Frag:267,system + default,smartrgdc_LOG,640000,598757,1250.00,1169.45,93.56 %
+Frag:268,system + default,smartrgdc_LOG,353280,1380,690.00,2.70,0.39 %

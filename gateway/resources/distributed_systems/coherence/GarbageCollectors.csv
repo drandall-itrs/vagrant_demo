@@ -1,0 +1,38 @@
+ID,Name,NodeId,CollectionTimeTotal,CollectionCount
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+ParNew:6,ParNew,6,25.19 secs,1191
+ConcurrentMarkSweep:1,ConcurrentMarkSweep,1,0.08 secs,1
+ParNew:14,ParNew,14,25.02 secs,1193
+ConcurrentMarkSweep:7,ConcurrentMarkSweep,7,0.08 secs,1
+ConcurrentMarkSweep:13,ConcurrentMarkSweep,13,0.09 secs,1
+ParNew:13,ParNew,13,24.57 secs,1191
+ParNew:11,ParNew,11,24.26 secs,1192
+ConcurrentMarkSweep:5,ConcurrentMarkSweep,5,0.09 secs,1
+ConcurrentMarkSweep:15,ConcurrentMarkSweep,15,0.09 secs,1
+ParNew:4,ParNew,4,25.01 secs,1189
+ConcurrentMarkSweep:9,ConcurrentMarkSweep,9,0.72 secs,9
+ConcurrentMarkSweep:8,ConcurrentMarkSweep,8,0.08 secs,1
+ConcurrentMarkSweep:14,ConcurrentMarkSweep,14,0.08 secs,1
+ParNew:10,ParNew,10,22.15 secs,1190
+ConcurrentMarkSweep:6,ConcurrentMarkSweep,6,0.09 secs,1
+ConcurrentMarkSweep:11,ConcurrentMarkSweep,11,0.09 secs,1
+ParNew:17,ParNew,17,2.67 secs,1190
+ParNew:8,ParNew,8,3.11 secs,1192
+ParNew:15,ParNew,15,23.44 secs,1186
+ParNew:9,ParNew,9,525 secs,261565
+ParNew:3,ParNew,3,25.01 secs,1187
+ParNew:7,ParNew,7,5.91 secs,1246
+ConcurrentMarkSweep:4,ConcurrentMarkSweep,4,0.09 secs,1
+ParNew:12,ParNew,12,22.49 secs,1184
+ParNew:2,ParNew,2,24.89 secs,1189
+ParNew:1,ParNew,1,25.42 secs,1207
+ParNew:16,ParNew,16,4.08 secs,1272
+ConcurrentMarkSweep:3,ConcurrentMarkSweep,3,0.09 secs,1
+ConcurrentMarkSweep:2,ConcurrentMarkSweep,2,0.08 secs,1
+ParNew:5,ParNew,5,24.77 secs,1187
+ConcurrentMarkSweep:10,ConcurrentMarkSweep,10,0.08 secs,1
+ConcurrentMarkSweep:17,ConcurrentMarkSweep,17,0.08 secs,1
+ConcurrentMarkSweep:12,ConcurrentMarkSweep,12,0.08 secs,1
+ConcurrentMarkSweep:16,ConcurrentMarkSweep,16,0.71 secs,2

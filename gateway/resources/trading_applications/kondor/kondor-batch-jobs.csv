@@ -1,0 +1,23 @@
+Job Name,Job Date,Job Id,Log Suffix,Run date,Parsing date,Log file path,Nb run,Run Status,Is Parsed,Parsing Err Msg,1st Launch Status,Last Launch Status,Duration,Rows processed
+<!>Data Availability,OK
+<!>Total Nb Jobs,16
+<!>Nb Jobs Succeed,5
+<!>Nb Jobs Failed,0
+<!>Total Duration,00:00:28
+<!>Total Duration In Seconds,28
+Compound Products,08-08-2013,51,compound_products,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Bond OTC Options Deals,08-08-2013,19,bond_options,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Cheapest to Deliver,08-08-2013,3,cheapest,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Equities Correlation Matrix,08-08-2013,38,eq_correl_matrix,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Credit Module,08-08-2013,54,credit_module,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Asset Curves,08-08-2013,36,asset_curves,12:37:35,08-08-2013 12:38:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.asset_curves,3,TERMINATED,YES,,OK,OK,0,4
+Compound Product Deals,08-08-2013,52,comp_product_deals,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Bonds in Custody,08-08-2013,7,bonds_custody,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Equities in Custody,08-08-2013,8,equities_custody,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Call Accounts,08-08-2013,24,call_accounts,10:01:09,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.call_accounts,1,TERMINATED,YES,,OK,OK,0,3
+Bonds,08-08-2013,9,bonds,10:00:40,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bonds,1,TERMINATED,YES,,OK,OK,18,125
+Bond Deals,08-08-2013,10,bonds_deals,10:00:59,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.bonds_deals,1,TERMINATED,YES,,OK,OK,9,3163
+Cap & Floor Deals,08-08-2013,11,capfloor_deals,10:01:08,08-08-2013 12:18:28,/usr/kplushome/entities/E1/log/KplusBatch/KLOG_KplusBatch.2013_08_08.capfloor_deals,1,TERMINATED,YES,,OK,OK,1,38
+Crystallization,08-08-2013,46,crystallization,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Equities,08-08-2013,44,equities,-,-,-,0,NOT_RUN,NO,-,-,-,-,-
+Cash Flow Deals,08-08-2013,30,cashflow_deals,-,-,-,0,NOT_RUN,NO,-,-,-,-,-

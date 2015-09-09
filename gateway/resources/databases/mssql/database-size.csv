@@ -1,0 +1,18 @@
+DatabaseIdentifier,DatabaseName,NameofFile,PhysicalFile,FileType,FileSize,MaxFileSize,SpaceRemainingMB,SpaceRemainingMBinPercentage
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,14
+master_ROWS,master,master,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\master.mdf,ROWS,4,UNLIMITED,UNLIMITED,UNLIMITED
+master_LOG,master,mastlog,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\mastlog.ldf,LOG,0,UNLIMITED,UNLIMITED,UNLIMITED
+tempdb_ROWS,tempdb,tempdev,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\tempdb.mdf,ROWS,8,UNLIMITED,UNLIMITED,UNLIMITED
+tempdb_LOG,tempdb,templog,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\templog.ldf,LOG,0,UNLIMITED,UNLIMITED,UNLIMITED
+model_ROWS,model,modeldev,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\model.mdf,ROWS,1,UNLIMITED,UNLIMITED,UNLIMITED
+model_LOG,model,modellog,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\modellog.ldf,LOG,0,UNLIMITED,UNLIMITED,UNLIMITED
+msdb_ROWS,msdb,MSDBData,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\MSDBData.mdf,ROWS,5,UNLIMITED,UNLIMITED,UNLIMITED
+msdb_LOG,msdb,MSDBLog,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\MSDBLog.ldf,LOG,0,UNLIMITED,UNLIMITED,UNLIMITED
+TEST_PLUGIN_ROWS,TEST_PLUGIN,TEST_PLUGIN,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\TEST_PLUGIN.mdf,ROWS,2,UNLIMITED,UNLIMITED,UNLIMITED
+TEST_PLUGIN_LOG,TEST_PLUGIN,TEST_PLUGIN_log,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\TEST_PLUGIN_log.LDF,LOG,0,UNLIMITED,UNLIMITED,UNLIMITED
+SSC_NETS_ROWS,SSC_NETS,SSC_NETS,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\SSC_NETS.mdf,ROWS,6,UNLIMITED,UNLIMITED,UNLIMITED
+SSC_NETS_LOG,SSC_NETS,SSC_NETS_log,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\SSC_NETS_log.ldf,LOG,1,UNLIMITED,UNLIMITED,UNLIMITED
+CKRIMMEL_ROWS,CKRIMMEL,CKRIMMEL,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\CKRIMMEL.mdf,ROWS,292,UNLIMITED,UNLIMITED,UNLIMITED
+CKRIMMEL_LOG,CKRIMMEL,CKRIMMEL_log,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\CKRIMMEL_log.ldf,LOG,2,UNLIMITED,UNLIMITED,UNLIMITED

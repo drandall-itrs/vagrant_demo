@@ -1,0 +1,6 @@
+name,job_status,run_date,run_time,run_duration,step_name,retries_attempted,message,job_id,enabled,description,category
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,2
+BadJob,Completed,20100120,161304,10,(Job outcome),0,The job failed.  The Job was invoked by User VMWINSERV\Administrator.  The last step to run was step 1 (First Step).,Ùò:Öx¼GH?Ó<i]r8,0,No description available.,[Uncategorized (Local)]
+TestJob,Completed,20130728,0,1000,(Job outcome),0,The job failed.  The Job was invoked by Schedule 1 (Once per week).  The last step to run was step 2 (Move log).,?d¸0gÌáK?hT@M}Ö,1,Test For a Plugin,Log Shipping

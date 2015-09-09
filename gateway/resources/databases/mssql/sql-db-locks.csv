@@ -1,0 +1,100 @@
+Variable,counter_name,instance_name,cntr_value,cntr_type
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,96
+AllocUnit Lock Requests/sec,Lock Requests/sec,AllocUnit,0,272696576
+AllocUnit Lock Timeouts/sec,Lock Timeouts/sec,AllocUnit,0,272696576
+AllocUnit Number of Deadlocks/sec,Number of Deadlocks/sec,AllocUnit,0,272696576
+AllocUnit Lock Waits/sec,Lock Waits/sec,AllocUnit,0,272696576
+AllocUnit Lock Wait Time (ms),Lock Wait Time (ms),AllocUnit,0,272696576
+AllocUnit Average Wait Time (ms),Average Wait Time (ms),AllocUnit,0,1073874176
+AllocUnit Average Wait Time Base,Average Wait Time Base,AllocUnit,0,1073939712
+AllocUnit Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,AllocUnit,0,272696576
+HoBT Lock Requests/sec,Lock Requests/sec,HoBT,72,272696576
+HoBT Lock Timeouts/sec,Lock Timeouts/sec,HoBT,0,272696576
+HoBT Number of Deadlocks/sec,Number of Deadlocks/sec,HoBT,0,272696576
+HoBT Lock Waits/sec,Lock Waits/sec,HoBT,0,272696576
+HoBT Lock Wait Time (ms),Lock Wait Time (ms),HoBT,0,272696576
+HoBT Average Wait Time (ms),Average Wait Time (ms),HoBT,0,1073874176
+HoBT Average Wait Time Base,Average Wait Time Base,HoBT,0,1073939712
+HoBT Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,HoBT,0,272696576
+Metadata Lock Requests/sec,Lock Requests/sec,Metadata,2717348,272696576
+Metadata Lock Timeouts/sec,Lock Timeouts/sec,Metadata,0,272696576
+Metadata Number of Deadlocks/sec,Number of Deadlocks/sec,Metadata,0,272696576
+Metadata Lock Waits/sec,Lock Waits/sec,Metadata,2,272696576
+Metadata Lock Wait Time (ms),Lock Wait Time (ms),Metadata,62,272696576
+Metadata Average Wait Time (ms),Average Wait Time (ms),Metadata,62,1073874176
+Metadata Average Wait Time Base,Average Wait Time Base,Metadata,2,1073939712
+Metadata Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Metadata,0,272696576
+Application Lock Requests/sec,Lock Requests/sec,Application,0,272696576
+Application Lock Timeouts/sec,Lock Timeouts/sec,Application,0,272696576
+Application Number of Deadlocks/sec,Number of Deadlocks/sec,Application,0,272696576
+Application Lock Waits/sec,Lock Waits/sec,Application,0,272696576
+Application Lock Wait Time (ms),Lock Wait Time (ms),Application,0,272696576
+Application Average Wait Time (ms),Average Wait Time (ms),Application,0,1073874176
+Application Average Wait Time Base,Average Wait Time Base,Application,0,1073939712
+Application Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Application,0,272696576
+RID Lock Requests/sec,Lock Requests/sec,RID,674929,272696576
+RID Lock Timeouts/sec,Lock Timeouts/sec,RID,0,272696576
+RID Number of Deadlocks/sec,Number of Deadlocks/sec,RID,0,272696576
+RID Lock Waits/sec,Lock Waits/sec,RID,0,272696576
+RID Lock Wait Time (ms),Lock Wait Time (ms),RID,0,272696576
+RID Average Wait Time (ms),Average Wait Time (ms),RID,0,1073874176
+RID Average Wait Time Base,Average Wait Time Base,RID,0,1073939712
+RID Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,RID,0,272696576
+Extent Lock Requests/sec,Lock Requests/sec,Extent,4930813,272696576
+Extent Lock Timeouts/sec,Lock Timeouts/sec,Extent,1,272696576
+Extent Number of Deadlocks/sec,Number of Deadlocks/sec,Extent,0,272696576
+Extent Lock Waits/sec,Lock Waits/sec,Extent,0,272696576
+Extent Lock Wait Time (ms),Lock Wait Time (ms),Extent,0,272696576
+Extent Average Wait Time (ms),Average Wait Time (ms),Extent,0,1073874176
+Extent Average Wait Time Base,Average Wait Time Base,Extent,0,1073939712
+Extent Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Extent,0,272696576
+Key Lock Requests/sec,Lock Requests/sec,Key,139671167,272696576
+Key Lock Timeouts/sec,Lock Timeouts/sec,Key,166,272696576
+Key Number of Deadlocks/sec,Number of Deadlocks/sec,Key,0,272696576
+Key Lock Waits/sec,Lock Waits/sec,Key,0,272696576
+Key Lock Wait Time (ms),Lock Wait Time (ms),Key,0,272696576
+Key Average Wait Time (ms),Average Wait Time (ms),Key,0,1073874176
+Key Average Wait Time Base,Average Wait Time Base,Key,0,1073939712
+Key Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Key,0,272696576
+Page Lock Requests/sec,Lock Requests/sec,Page,16469372,272696576
+Page Lock Timeouts/sec,Lock Timeouts/sec,Page,0,272696576
+Page Number of Deadlocks/sec,Number of Deadlocks/sec,Page,0,272696576
+Page Lock Waits/sec,Lock Waits/sec,Page,0,272696576
+Page Lock Wait Time (ms),Lock Wait Time (ms),Page,0,272696576
+Page Average Wait Time (ms),Average Wait Time (ms),Page,0,1073874176
+Page Average Wait Time Base,Average Wait Time Base,Page,0,1073939712
+Page Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Page,0,272696576
+Object Lock Requests/sec,Lock Requests/sec,Object,87622876,272696576
+Object Lock Timeouts/sec,Lock Timeouts/sec,Object,0,272696576
+Object Number of Deadlocks/sec,Number of Deadlocks/sec,Object,0,272696576
+Object Lock Waits/sec,Lock Waits/sec,Object,17,272696576
+Object Lock Wait Time (ms),Lock Wait Time (ms),Object,7375,272696576
+Object Average Wait Time (ms),Average Wait Time (ms),Object,7375,1073874176
+Object Average Wait Time Base,Average Wait Time Base,Object,17,1073939712
+Object Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Object,0,272696576
+File Lock Requests/sec,Lock Requests/sec,File,23403,272696576
+File Lock Timeouts/sec,Lock Timeouts/sec,File,0,272696576
+File Number of Deadlocks/sec,Number of Deadlocks/sec,File,0,272696576
+File Lock Waits/sec,Lock Waits/sec,File,0,272696576
+File Lock Wait Time (ms),Lock Wait Time (ms),File,0,272696576
+File Average Wait Time (ms),Average Wait Time (ms),File,0,1073874176
+File Average Wait Time Base,Average Wait Time Base,File,0,1073939712
+File Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,File,0,272696576
+Database Lock Requests/sec,Lock Requests/sec,Database,14722080,272696576
+Database Lock Timeouts/sec,Lock Timeouts/sec,Database,0,272696576
+Database Number of Deadlocks/sec,Number of Deadlocks/sec,Database,0,272696576
+Database Lock Waits/sec,Lock Waits/sec,Database,2,272696576
+Database Lock Wait Time (ms),Lock Wait Time (ms),Database,2485,272696576
+Database Average Wait Time (ms),Average Wait Time (ms),Database,2485,1073874176
+Database Average Wait Time Base,Average Wait Time Base,Database,2,1073939712
+Database Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,Database,0,272696576
+_Total Lock Requests/sec,Lock Requests/sec,_Total,266832060,272696576
+_Total Lock Timeouts/sec,Lock Timeouts/sec,_Total,167,272696576
+_Total Number of Deadlocks/sec,Number of Deadlocks/sec,_Total,0,272696576
+_Total Lock Waits/sec,Lock Waits/sec,_Total,21,272696576
+_Total Lock Wait Time (ms),Lock Wait Time (ms),_Total,9922,272696576
+_Total Average Wait Time (ms),Average Wait Time (ms),_Total,9922,1073874176
+_Total Average Wait Time Base,Average Wait Time Base,_Total,21,1073939712
+_Total Lock Timeouts (timeout > 0)/sec,Lock Timeouts (timeout > 0)/sec,_Total,0,272696576

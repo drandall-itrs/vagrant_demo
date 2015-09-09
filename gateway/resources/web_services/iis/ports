@@ -1,0 +1,6 @@
+serviceName,servicePort,turnaroundTime,status,failurePercent
+<!>targetNode,127.0.0.1
+<!>targetAddress,127.0.0.1
+<!>localInterface,\Device\NPF_{412EBEAB-D916-4880-AD87-537359415990}
+<!>sourceNode,192.168.2.122
+HTTP,80,0.90 ms,REACHABLE,0

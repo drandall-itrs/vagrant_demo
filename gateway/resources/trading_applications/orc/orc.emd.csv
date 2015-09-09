@@ -1,0 +1,11 @@
+monitoredDaemon,type,hostName,hostPort,timeStamp,currentStatus,description
+storage,3,localhost,45402,Jul-24-06:00:36,registered,Storage Server
+cds,4,localhost,45302,Jul-24-06:00:36,registered,Client Data Server
+rvous,15,eqp-swxorc1.itrsgroup.com,49522,Jul-24-06:00:57,registered,Rendezvous
+swx,27,eqp-swxorc1.itrsgroup.com,45532,Jul-24-06:05:10,registered,Swiss Market
+api,17,eqp-orc3.itrsgroup.com,63777,Jul-24-06:05:19,registered,DE API 2.4.7
+ssl,6,eqp-swxorc1.itrsgroup.com,45542,Jul-24-06:15:03,registered,Reuters SSL
+eurex,21,eqp-orc1.itrsgroup.com,45552,Jul-24-06:15:35,registered,EUREX Market Connection
+MCW2,46,eqp-mcworc2.itrsgroup.com,46712,Jul-24-06:30:04,registered,MCW2
+MCW1,46,eqp-mcworc2.itrsgroup.com,45612,Jul-24-06:30:04,registered,MCW1
+MTA,29,eqp-mcworc2.itrsgroup.com,45512,Jul-24-06:30:04,registered,MTA

@@ -1,0 +1,8 @@
+Node,Count,TotalMbytesSent,TotalMbytesReceived,OutgoingBacklog,OutgoingMessageBacklog
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+DCSExtendTcpProxyService/8,0,86.47,0.57,0,0
+DCSExtendTcpProxyService/7,1,619.94,1.93,0,0
+DCSExtendTcpProxyService/16,1,1304.58,2.19,0,0
+DCSExtendTcpProxyService/17,0,139.72,0.34,0,0

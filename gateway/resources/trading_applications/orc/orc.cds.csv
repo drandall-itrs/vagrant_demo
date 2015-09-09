@@ -1,0 +1,11 @@
+userName,loginType,loginStatus,timeStamp,clientName,loginDuration
+de_api_duplicate1,API-Asynch,Logged-In,Apr-8-04:10:02,gedsborc1,
+de_api_duplicate2,API-Synch,Logged-Out,Apr-8-04:16:47,gedsborc1,44 Secs (00:06:44)
+demo3,API-Synch,Logged-In,Apr-8-05:00:03,gedsborc1,
+ordergateway2,API-Synch,Logged-In,Apr-8-06:00:06,gedsborc1,
+eos_instload,API-Synch,Crashed-Out,Apr-8-07:45:41,gedsborc1,35 Secs (00:15:35)
+COLTtransfer,API-Synch,Logged-In,Apr-8-07:50:11,gedsborc1,
+orclogger,API-Synch,Logged-In,Apr-8-07:51:04,gedsborc1,
+tomfeed,API-Synch,Logged-In,Apr-8-08:00:21,gedsborc1,
+rateserver,API-Synch,Logged-In,Apr-8-08:00:21,gedsborc1,
+divserver,API-Synch,Logged-In,Apr-8-08:00:22,gedsborc1,

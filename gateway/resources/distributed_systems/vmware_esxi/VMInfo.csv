@@ -1,0 +1,10 @@
+name,Boot Time,Power State,toolsInstallerMounted,Clean Power Off,Connection State,Consolidation Needed,faultToleranceState,numMksConnections,offlineFeatureRequirement,onlineStandby,question,recordReplayState,suspendInterval,suspendTime,Guest Heartbeat Status,Host,Guest Memory Usage,Host Memory Usage,Overall Cpu Demand,Overall Cpu Usage,Memory Overhead
+OpenSuse10,,POWERED_OFF,FALSE,TRUE,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GRAY,nysupsvr03.ny.us.itrs,,,,,132907008
+Fedora 14 x64 Server,Mon May 20 14:23:49 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GREEN,nysupsvr03.ny.us.itrs,81,1088,,2550,145182720
+RHEL 5.4 x86_64,Mon May 20 14:23:49 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GREEN,nysupsvr03.ny.us.itrs,942,4241,,922,244678656
+RHEL 4.2 x86_64,,POWERED_OFF,FALSE,TRUE,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GRAY,nysupsvr03.ny.us.itrs,,,,,130801664
+Sol10_x86,Mon May 20 14:23:49 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GRAY,nysupsvr03.ny.us.itrs,368,4215,,408,208883712
+CentOS 5.8 (64-bit),,POWERED_OFF,FALSE,TRUE,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GRAY,nysupsvr03.ny.us.itrs,,,,,154099712
+Centos 6.4 x86_64 OracleDB,Mon May 20 14:23:49 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GREEN,nysupsvr03.ny.us.itrs,260,4358,,429,216780800
+BIGIP-10.1.0.3341.1084,Mon May 20 14:23:50 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GRAY,nysupsvr03.ny.us.itrs,71,1025,,165,112951296
+Fedora 12 x86 Remote,Mon May 20 14:23:50 EDT 2013,POWERED_ON,FALSE,,CONNECTED,,NOT_CONFIGURED,0,,,,INACTIVE,0,,GREEN,nysupsvr03.ny.us.itrs,143,2053,,446,159059968

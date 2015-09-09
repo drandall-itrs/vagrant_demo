@@ -1,0 +1,7 @@
+serverProcessID,startTime,timeElapsed,transactions,username,hostname,program,command
+<!>status,UP
+<!>timeThreshold,30
+<!>totalLongRunningQueries,1
+11,Jul 20 2008 4:00PM,75297,t6,sa,linux165,isql,AWAITING COMMAND
+62,Jul 20 2008 4:15PM,3400,t3,geneos,itrsops,test_client,SELECT
+63,Jul 20 2008 4:21PM,26387,t10,sa,itrsfire,prod_client,WAITFOR

@@ -1,0 +1,19 @@
+name,timestamp,type,middleware,initials,recaps,messages,ftTakeovers,queueSize,subscriptions,timeouts
+<!>username,root
+<!>hostname,ubuntu
+<!>ipAddress,127.0.1.1
+<!>application,DataLogger
+<!>applicationClass,MamaApplications
+<!>lastUpdated,5
+statslogger,2009-06-09 17:34:22.480,Transport,wmw,0,0,0,0,,0,0
+DataLogger,2009-06-09 17:34:22.480,Global,-----,0,1,1,0,,0,0
+WMW_DEFAULT_MAMA_QUEUE,2009-06-09 17:34:22.480,Queue,wmw,0,0,,0,0,0
+NO_NAME,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+itrs_dict,2009-06-09 17:34:22.480,Transport,wmw,0,0,0,0,,0,0
+NO_NAME_5,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+NO_NAME_6,2009-06-09 17:34:22.480,Queue,wmw,0,1,1,,0,0,0
+NO_NAME_7,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+NO_NAME_8,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+NO_NAME_9,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+NO_NAME_11,2009-06-09 17:34:22.480,Queue,wmw,0,0,0,,0,0,0
+itrs1,2009-06-09 17:34:22.480,Transport,wmw,0,1,1,0,,0,0

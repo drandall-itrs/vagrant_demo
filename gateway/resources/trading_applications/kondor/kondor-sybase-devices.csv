@@ -1,0 +1,32 @@
+deviceName,deviceLocation,isDefaultDisk,numFragments,totalMB,usedMB,availableMB,percentUtilisation
+<!>serverName,DS10
+<!>status,up
+<!>totalDiskSpace,45885.00 MB
+<!>usedDiskSpace,36678.00 MB
+<!>percentUtilisation,79.93 %
+data1,/files2/sybdevices/DS10/data1.dat,    N,3,2048.00,2000.00,  48.00,97.66
+data10,/files2/sybdevices/DS10/data10.dat,    N,0,2048.00,   0.00,2048.00,0.00
+data11,/files2/sybdevices/DS10/data11.dat,    N,3,2000.00,2000.00,   0.00,100.00
+data12,/files2/sybdevices/DS10/data12.dat,    N,1,2000.00,2000.00,   0.00,100.00
+data13,/files2/sybdevices/DS10/data13.dat,    N,4,2000.00,2000.00,   0.00,100.00
+data14,/files2/sybdevices/DS10/data14.dat,    N,1,2000.00,2000.00,   0.00,100.00
+data15,/files2/sybdevices/DS10/data15.dat,    N,1,2000.00,2000.00,   0.00,100.00
+data16,/files2/sybdevices/DS10/data16.dat,    N,0,2000.00,   0.00,2000.00,0.00
+data17,/files2/sybdevices/DS10/data17.dat,    N,0,2000.00,   0.00,2000.00,0.00
+data18,/files2/sybdevices/DS10/data18.dat,    N,2,2000.00,1200.00, 800.00,60.00
+data2,/files2/sybdevices/DS10/data2.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data20,/files2/sybdevices/DS10/data20.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data3,/files2/sybdevices/DS10/data3.dat,    N,2,2048.00,2000.00,  48.00,97.66
+data4,/files2/sybdevices/DS10/data4.dat,    N,2,2048.00,2000.00,  48.00,97.66
+data5,/files2/sybdevices/DS10/data5.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data6,/files2/sybdevices/DS10/data6.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data7,/files2/sybdevices/DS10/data7.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data8,/files2/sybdevices/DS10/data8.dat,    N,1,2048.00,2000.00,  48.00,97.66
+data9,/files2/sybdevices/DS10/data9.dat,    N,1,2048.00,1000.00,1048.00,48.83
+log1,/files1/sybdevices/DS10/log1.dat,    N,2,3072.00,3000.00,  72.00,97.66
+log2,/files1/sybdevices/DS10/log2.dat,    N,1,2000.00,1200.00, 800.00,60.00
+log3,/files1/sybdevices/DS10/log3.dat,    N,2,2000.00,2000.00,   0.00,100.00
+master,/opt/sybase/data/master.dat,    Y,4,  30.00,  23.00,   7.00,76.67
+sysprocsdev,/opt/sybase/data/sysprocs.dat,    N,1, 152.00, 152.00,   0.00,100.00
+systemdbdev,/opt/sybase/data/sybsysdb.dat,    N,1,   3.00,   3.00,   0.00,100.00
+tempdbdev,/opt/sybase/data/tempdbdev.dat,    N,1, 100.00, 100.00,   0.00,100.00

@@ -1,0 +1,52 @@
+threadName,threadId,threadState,suspended,blockedCount,blockedTime,lockOwnerId,lockOwnerName,lockName,waitedCount,waitedTime,inNative,threadCpuTime,threadUserTime
+<!>samplingStatus,OK
+<!>DaemonThreadCount,40
+<!>PeakThreadCount,170
+<!>ThreadCount,43
+<!>TotalStartedThreadCount,19004
+<!>ThreadContentionMonitoringEnabled,false
+<!>ThreadContentionMonitoringSupported,true
+<!>ThreadCpuTimeEnabled,true
+<!>ThreadCpuTimeSupported,true
+JMX server connection timeout 18825,18825,TIMED_WAITING,false,45509,-1,-1,null,[I@5287a198,45509,-1,false,430000000,300000000
+JMX server connection timeout 18679,18679,TIMED_WAITING,false,158516,-1,-1,null,[I@3c84384f,158513,-1,false,1580000000,1190000000
+JMX server connection timeout 18678,18678,TIMED_WAITING,false,546,-1,-1,null,[I@c8ce993,547,-1,false,0,0
+JMX server connection timeout 18677,18677,TIMED_WAITING,false,546,-1,-1,null,[I@773ab854,547,-1,false,0,0
+JMX server connection timeout 18676,18676,TIMED_WAITING,false,546,-1,-1,null,[I@301bcff3,547,-1,false,10000000,10000000
+JMX server connection timeout 18675,18675,TIMED_WAITING,false,546,-1,-1,null,[I@71f17331,547,-1,false,0,0
+JMX server connection timeout 18674,18674,TIMED_WAITING,false,546,-1,-1,null,[I@22c1d068,547,-1,false,0,0
+JMX server connection timeout 18673,18673,TIMED_WAITING,false,546,-1,-1,null,[I@62596dab,547,-1,false,0,0
+JMX server connection timeout 18672,18672,TIMED_WAITING,false,546,-1,-1,null,[I@5d2f27fe,547,-1,false,0,0
+JMX server connection timeout 18504,18504,TIMED_WAITING,false,104927,-1,-1,null,[I@7f0d4b78,104928,-1,false,1030000000,750000000
+JMX server connection timeout 18502,18502,TIMED_WAITING,false,167995,-1,-1,null,[I@41d5f472,167993,-1,false,1650000000,1190000000
+HttpAdapter:port=1244,33,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,0,0
+RMI RenewClean-[170.242.12.201:3010],31,TIMED_WAITING,false,0,-1,-1,null,java.lang.ref.ReferenceQueue$Lock@2f8a0814,5363,-1,false,50000000,50000000
+RMI Scheduler(0),30,TIMED_WAITING,false,0,-1,-1,null,java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@3da3d36f,16543,-1,false,60000000,50000000
+GC Daemon,28,TIMED_WAITING,false,0,-1,-1,null,sun.misc.GC$LatencyLock@565d9e83,484,-1,false,0,0
+RMI Reaper,27,WAITING,false,0,-1,-1,null,java.lang.ref.ReferenceQueue$Lock@4a0a18c3,1,-1,false,0,0
+RMI TCP Accept-3010,26,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,0,0
+RMI TCP Accept-9010,25,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,0,0
+Invocation:Management,24,TIMED_WAITING,false,4350291,-1,-1,null,com.tangosol.coherence.component.util.queue.concurrentQueue.DualQueue@b40aab2,5907441,-1,false,7294840000000,7276210000000
+Invocation:Management:EventDispatcher,23,TIMED_WAITING,false,924,-1,-1,null,com.tangosol.coherence.component.util.daemon.queueProcessor.Service$EventDispatcher$Queue@5d0be11c,1605989,-1,false,1320000000,1310000000
+TcpRingListener,21,RUNNABLE,false,24,-1,-1,null,null,0,-1,true,360000000,360000000
+PacketListenerN,19,RUNNABLE,false,87,-1,-1,null,null,0,-1,true,17590000000,11970000000
+PacketSpeaker,18,WAITING,false,817,-1,-1,null,com.tangosol.coherence.component.net.Cluster$PacketSpeaker$BundlingQueue@2a8b5b48,818,-1,false,250000000,160000000
+PacketPublisher,17,WAITING,false,24048772,-1,-1,null,com.tangosol.coherence.component.net.Cluster$PacketPublisher$InQueue@a01eb4c,24538620,-1,false,3478300000000,2547620000000
+PacketReceiver,16,WAITING,false,140926589,-1,-1,null,com.tangosol.coherence.component.net.Cluster$PacketReceiver$InQueue@2039adf7,140817208,-1,false,1700850000000,1495110000000
+PacketListener1,15,RUNNABLE,false,14490,-1,-1,null,null,0,-1,true,2394300000000,1481770000000
+Logger@9269610 3.5.3/465p8,14,WAITING,false,1999,-1,-1,null,com.tangosol.coherence.component.application.console.Coherence$Logger$Queue@9b962c9,2000,-1,false,480000000,410000000
+RMI TCP Accept-0,12,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,0,0
+RMI TCP Accept-4444,11,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,0,0
+RMI TCP Accept-0 10,10,RUNNABLE,false,0,-1,-1,null,null,0,-1,true,16740000000,12050000000
+Signal Dispatcher,5,RUNNABLE,false,0,-1,-1,null,null,0,-1,false,0,0
+Finalizer,3,WAITING,false,30835,-1,-1,null,java.lang.ref.ReferenceQueue$Lock@9f75b73,30489,-1,false,2450000000,2340000000
+Reference Handler,2,WAITING,false,67503,-1,-1,null,java.lang.ref.Reference$Lock@2c5f87e4,57641,-1,false,1310000000,1040000000
+main,1,TIMED_WAITING,false,21,-1,-1,null,null,1605434,-1,false,900000000,860000000
+RMI TCP Connection(idle),19011,TIMED_WAITING,false,0,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,2,-1,false,0,0
+RMI TCP Connection(475042)-141.128.89.66,19008,RUNNABLE,false,41,-1,-1,null,null,41,-1,false,470000000,440000000
+RMI TCP Connection(475057)-141.128.89.66,19009,RUNNABLE,false,0,-1,-1,null,null,2,-1,true,0,0
+RMI TCP Connection(idle) 19010,19010,TIMED_WAITING,false,0,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,2,-1,false,0,0
+RMI TCP Connection(idle) 19006,19006,TIMED_WAITING,false,0,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,8,-1,false,0,0
+RMI TCP Connection(idle) 19003,19003,TIMED_WAITING,false,0,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,17,-1,false,0,0
+RMI TCP Connection(idle) 19000,19000,TIMED_WAITING,false,160,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,167,-1,false,1600000000,1450000000
+RMI TCP Connection(idle) 18988,18988,TIMED_WAITING,false,50,-1,-1,null,java.util.concurrent.SynchronousQueue$TransferStack@2bd2e8e6,84,-1,false,720000000,650000000

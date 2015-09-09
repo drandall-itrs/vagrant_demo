@@ -1,0 +1,6 @@
+Interface Name,Server Name,Validation Mode,Status,Processed Mvts 1H,Processed Mvts Today,Error Mvts 1H,Error Mvts Today
+<!>Data Availability,OK
+<!>Nb Interfaces Up,1
+<!>Nb Interfaces Down,1
+IMPORT_ITF_1,kis,S,OK,0,132,0,0
+IMPORT_ITF_2,kis,A,OK,0,0,0,0

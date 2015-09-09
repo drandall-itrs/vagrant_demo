@@ -1,0 +1,21 @@
+Node,Role,MemberName,Host,MaxMemory,AvailableMemory,MemoryUsage,PublisherSuccessRate,PublisherPacketUtilization,SendQueueSize,WeakestChannel,PID
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+16,cache,n/a,nysupsvr-900/192.168.2.207,1516  MB,1354  MB,10.69%,99.99%,99.97%,0,11,11033
+8,cache,n/a,nysupsvr-899/192.168.2.201,1516  MB,1167  MB,23.02%,99.99%,99.99%,1,11,18601
+5,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1283  MB,49.25%,99.97%,99.99%,5,7,18010
+11,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1168  MB,53.80%,99.96%,99.97%,20,16,10442
+12,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1288  MB,49.05%,99.97%,99.96%,18,16,10496
+3,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1227  MB,51.46%,99.97%,99.97%,1,7,17581
+6,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1208  MB,52.22%,99.96%,99.97%,2,7,18064
+1,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1261  MB,50.12%,99.97%,99.96%,4,7,16829
+7,cache,n/a,nysupsvr-899/192.168.2.201,1516  MB,853  MB,43.73%,99.99%,99.97%,1,11,18119
+2,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1349  MB,46.64%,99.97%,99.99%,3,7,17527
+17,cache,n/a,nysupsvr-900/192.168.2.207,1516  MB,1100  MB,27.44%,99.99%,99.97%,6,15,11513
+13,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1341  MB,46.95%,99.97%,99.99%,18,16,10550
+9,JMX,n/a,nysupsvr-899/192.168.2.201,505  MB,292  MB,42.18%,100%,99.97%,0,16,18802
+4,cache,n/a,nysupsvr-899/192.168.2.201,2528  MB,1392  MB,44.94%,99.98%,100.00%,0,7,17636
+14,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1239  MB,50.99%,99.96%,99.98%,19,16,10924
+10,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1391  MB,44.98%,99.96%,99.96%,21,16,10067
+15,cache,n/a,nysupsvr-900/192.168.2.207,2528  MB,1028  MB,59.34%,99.97%,99.96%,17,16,10978

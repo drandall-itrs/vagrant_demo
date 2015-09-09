@@ -1,0 +1,4 @@
+control_m,order_id,application,application_type,group,job_name,mem_name,mem_lib,order_table,owner,description,task_type,time_zone,in_BIM_service,job_status,job_state,state_digits,odate,otime,next_time,rerun_counter,average_runtime,start_time,end_time,critical,cyclic,emergency,rba,table_rba
+fon610,0023e,Oracle,OS,FinanceBatch,Extract, , , ,controlm,,Command, ,0,Ended OK, ,20000004000,12-May-13,07:18, ,0,0, , ,0,FALSE,FALSE,00023e,0
+fon620,0047e,Oracle,OS,FinanceBatch,Transform, , , ,controlm,,Command, ,0,Ended OK, ,20000004000,12-May-13,07:18, ,0,0, , ,0,FALSE,FALSE,00047e,0
+fon630,0078e,Oracle,OS,FinanceBatch,Load, , , ,controlm,,Command, ,0,Ended OK, ,20000004000,12-May-13,07:18, ,0,0, , ,0,FALSE,FALSE,00078e,0

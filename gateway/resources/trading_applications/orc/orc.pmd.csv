@@ -1,0 +1,17 @@
+monitoredDaemon,timeStamp,hostPort,callbackPort,currentStatus
+em_lomm_em,Apr-8-08:40:02,36431,36431,removed
+lomm_cds,Apr-8-04:00:33,62140,62140,registered
+storage,Apr-8-04:00:34,62142,62142,registered
+lomm_api_public,Apr-8-04:10:01,8980,8980,registered
+lomm_api,Apr-8-04:10:02,62282,62282,registered
+sets_cds,Apr-8-04:30:01,62640,62640,registered
+mlxnet,Apr-8-06:45:01,33321,33321,registered
+liffee,Apr-8-07:00:03,33801,33801,registered
+liffef,Apr-8-07:00:03,33804,33804,registered
+rmp,Apr-8-07:00:04,33807,33807,registered
+euronext,Apr-8-07:30:01,35670,35670,registered
+hsed,Apr-8-07:35:02,36030,36030,registered
+eurexv,Apr-8-07:50:02,37368,37368,registered
+xetra65,Apr-8-07:55:01,37903,37903,registered
+sfc,Apr-8-08:00:07,38406,38406,registered
+orc2gedsorc9,Apr-8-08:30:01,41218,41218,registered

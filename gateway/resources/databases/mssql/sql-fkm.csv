@@ -1,0 +1,7 @@
+name,status,triggerCount,triggerDetails,permissions,secondsSinceLastModified,lastModificationTime,fileSize,updateRate,fileowner,filename,absolutePath,/group,
+<!>totalLogSize,1
+<!>filesMonitored,0
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\LOG\ERRORLOG,OK,,,,,Wed Jul 31 00:00:45 2013,39885.8 Kb,,Administrators,ERRORLOG,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\LOG\ERRORLOG,,

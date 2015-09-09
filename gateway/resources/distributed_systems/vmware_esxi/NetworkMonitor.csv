@@ -1,0 +1,7 @@
+name,Usage,Packets received,Packets transmitted,Data receive rate,Data transmit rate,Receive packets dropped,Transmit packets dropped
+BIGIP-10.1.0.3341.1084,3,262,0,0,0,,
+Centos 6.4 x86_64 OracleDB,29,1336,1257,11,18,,
+Sol10_x86,9,777,504,4,4,,
+Fedora 14 x64 Server,8,603,342,6,2,,
+RHEL 5.4 x86_64,25,1509,1312,11,14,,
+Fedora 12 x86 Remote,63,2119,1955,24,39,,

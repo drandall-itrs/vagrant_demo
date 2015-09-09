@@ -1,0 +1,15 @@
+key,rank,appId,contextId,ipAddr,hostname,PID,timestamp,transportSession,RMMsgsRxRate,bytesRxRate,msgsUnrcvrdRate,nakTxRate,lossRate,dgmsDpdRate,dupMsgsRxRate,outOfOrderRate,msgsRxNTpcRate,ttlRcvryLtncy,RMMsgsRx,bytesRx,nakPktTx,nakTx,lost,ncfRxIgnrd,ncfRxShed,ncfRxDelay,ncfRxUnkn,rcvryMin,rcvryMean,rcvryMax,nakeTxMin,nakeTxMean,nakeTxMax,dupMsgRx,msgsUnrcvrdTxw,msgsUnrcvrdTmo,msgsRx,msgsRxNTpc,reqsRx,dgmsDpdSz,dgmsDpdTyp,dgmsDpdVsn,dgmsDpdHdr,dgmsDpdOth,outOfOrder
+<!>totalLBTRMReceivers,3
+<!>totalActiveLBTRMReceivers,3
+<!>totalDefunctLBTRMReceivers,0
+<!>RMMsgRxRate,25.67
+<!>byteRxRate,1180.67
+<!>msgsUnrcvrdRate,0.00
+<!>lossRate,17.33
+<!>RMMsgsRx,71608
+<!>bytesRx,3230026
+<!>msgsUnrcvrd,9163
+<!>lost,24158,
+RCVLBTRM00000001,1,topicResDom1,10f1ff90,127.0.0.1,centos5dev,12656,Thu Aug  9 12:35:10 2012,LBTRM:192.168.50.206:14301:38a16eb7:224.10.10.11:14400,10.00,460.00,0.00,0.00,0.00,0.00,0.00,0.00,9.00,0.00,1320,59850,0,0,0,0,0,0,0,4294967295,0,0,4294967295,0,0,0,0,0,1320,1188,0,0,0,0,0,0,0
+RCVLBTRM00000002,2,topicResDom2,1402bf90,127.0.0.1,centos5dev,12662,Thu Aug  9 12:35:11 2012,LBTRM:192.168.50.206:14302:e50c106:224.10.10.12:14400,10.00,460.00,0.00,0.00,0.00,0.00,0.00,0.00,9.00,0.00,1290,58460,0,0,0,0,0,0,0,4294967295,0,0,4294967295,0,0,0,0,0,1290,1161,0,0,0,0,0,0,0
+RCVLBTRM00000003,3,topicResDom3,19b15f90,127.0.0.1,centos5dev,12667,Thu Aug  9 12:35:11 2012,LBTRM:192.168.50.206:14303:c0fc56d6:224.10.10.13:14400,5.67,260.67,0.00,293.00,17.33,0.00,0.00,5.33,4.67,1907.03,672,30415,16116,33694,1175,1148,0,0,0,24,1623,9937,1,6,49,0,0,457,672,607,0,0,0,0,0,0,620

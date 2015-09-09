@@ -1,0 +1,4 @@
+name,type,uncommitted,url,accessible,capacity,Free Space
+itrsraidny1,NFS,0,/vmfs/volumes/5d69cc66-b4ee3193,TRUE,6.63666E+12,5.86386E+12
+datastore1,VMFS,12678332416,/vmfs/volumes/4ce6f879-30479878-07cb-001ec9cd08d2,TRUE,4.94727E+11,1.41462E+11
+datastore2,VMFS,0,/vmfs/volumes/4ce6f87a-15608e48-dfa5-001ec9cd08d2,TRUE,1.53277E+11,1.52688E+11

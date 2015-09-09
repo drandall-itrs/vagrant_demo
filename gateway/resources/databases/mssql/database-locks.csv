@@ -1,0 +1,13 @@
+instanceName,Lock Requests/sec,Lock Timeouts/sec,Number of Deadlocks/sec,Lock Waits/sec,Lock Wait Time (ms),Average Wait Time (ms),Average Wait Time Base,Lock Timeouts (timeout > 0)/sec
+AllocUnit,0,0,0,0,0,0,N/A,0
+HoBT,0,0,0,0,0,0,N/A,0
+Metadata,0.6,0,0,0,0,0,N/A,0
+Application,0,0,0,0,0,0,N/A,0
+RID,0,0,0,0,0,0,N/A,0
+Extent,0,0,0,0,0,0,N/A,0
+Key,30.16,0,0,0,0,0,N/A,0
+Page,2.6,0,0,0,0,0,N/A,0
+Object,19.41,0,0,0,0,0,N/A,0
+File,0,0,0,0,0,0,N/A,0
+Database,2.95,0,0,0,0,0,N/A,0
+_Total,55.72,0,0,0,0,0,N/A,0

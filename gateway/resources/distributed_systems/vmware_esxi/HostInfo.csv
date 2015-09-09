@@ -1,0 +1,2 @@
+name,API Type,API Version,Build,Full Name,Instance Uuid,License Product Name,License Product Version,Locale Build,Locale Version,OS Type,Product Line Id,Vendor,Version
+nysupsvr03.ny.us.itrs,HostAgent,4.1,260247,VMware ESXi 4.1.0 build-260247,,VMware ESX Server,4,0,INTL,vmnix-x86,embeddedEsx,VMware; Inc.,4.1.0

@@ -1,0 +1,5 @@
+Name,Type,Published,Consumed,Connections,Used Space,Published/sec,Consumed/sec,Fanout time
+/clientpool/channel1,Channel,0,0,0,0,0,0,0
+/clientpool/channel2,Channel,0,0,0,0,0,0,0
+/userpool/channel1,Channel,0,0,0,0,0,0,0
+/userpool/channel2,Channel,0,0,0,0,0,0,0

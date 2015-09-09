@@ -1,0 +1,7 @@
+processName,/group,instanceCount,percentCPU,workingSet,virtualMemory,processId,handleCount,arguments,imageName
+SQL Server Browser,,1,0.00%,7472 k,70264 k,2268,394,C:\Program Files\Microsoft SQL Server\90\Shared\sqlbrowser.exe,sqlbrowser.exe
+SQL Server Integration Services,,1,0.00%,12472 k,275484 k,1484,204,C:\Program Files\Microsoft SQL Server\90\DTS\Binn\MsDtsSrvr.exe,MsDtsSrvr.exe
+SQL Server Agent,,1,0.00%,4412 k,101212 k,2300,336,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Binn\SQLAGENT90.EXE -i MSSQLSERVER,SQLAGENT90.EXE
+SQL Server VSS Writer,,1,0.00%,3844 k,21548 k,2360,87,C:\Program Files\Microsoft SQL Server\90\Shared\sqlwriter.exe,sqlwriter.exe
+SQL Server,,1,0.08%,77660 k,1758560 k,1576,556,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Binn\sqlservr.exe -sMSSQLSERVER,sqlservr.exe
+SQL Server FullText Search,,1,0.00%,4060 k,27104 k,2504,401,C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Binn\msftesql.exe -s:MSSQL.1 -f:MSSQLSERVER,msftesql.exe

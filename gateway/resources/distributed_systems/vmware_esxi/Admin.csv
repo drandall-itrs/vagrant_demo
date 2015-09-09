@@ -1,0 +1,10 @@
+Name,Value
+Version,app vmware (1.0; svn revision=46)
+vmware.VMInfoRefreshRate,60000
+vmware.HostInfoRefreshRate,60000
+vmware.DatastoreInfoRefreshRate,60000
+vmware.CPUMonitorRefreshRate,60000
+vmware.DatastoreMonitorRefreshRate,60000
+vmware.DiskMonitorRefreshRate,60000
+vmware.NetworkMonitorRefreshRate,60000
+vmware.MemoryMonitorRefreshRate,60000

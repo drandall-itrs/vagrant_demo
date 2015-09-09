@@ -1,0 +1,7 @@
+segmentName,totalPages,usedPages,totalMB,usedMB,percentUtilisation,
+<!>databaseName,geneos
+<!>status,up
+<!>totalSegments,3
+system,204800,204800,400.00,400.00,100.00
+default,204800,204800,400.00,400.00,100.00
+logsegment,102400,400,200.00,0.78,0.39

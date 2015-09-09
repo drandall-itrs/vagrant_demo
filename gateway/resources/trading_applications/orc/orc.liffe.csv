@@ -1,0 +1,4 @@
+userName,loginStatus,timeStamp,clientAddress,loginDuration
+GBMAKH,Logged-In,Nov-14-08:24:56,10.1.65.117,
+ABNAMRO1,Logged-In,Nov-14-08:45:52,10.1.36.67,
+GBMAIZ,Logged-Out,Nov-14-08:56:40,10.1.53.120,0

@@ -1,0 +1,11 @@
+Job Name, Region, Application, Instance, Status, Start Date, Last Start Time, End Date, End Time, Machine, Command
+HTT_C5_AMRS, AMRS, FID, EQT, SUCCESS, 07/05/2013, 06:02:11, 07/05/13, 06:02:28, brwsapit, /fidessa/brzapas/production/condense.bat
+HTT_CD_AMRS001, AMRS, FID, EQT, INACTIVE, 02/05/13, 22:30:17, 02/05/13, 22:32:13, brwsapit, /fidessa/brzapas/apas/prod_x1_fixUL.bat
+HTT_CD_AMRS002, AMRS, FID, EQT, INACTIVE, 02/05/13, 22:30:15, 02/05/13, 22:32:33, brwsapit, /fidessa/brzapas/apas/prod_x2_fixUL.bat
+HTT_CD_AMRS003, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:00:28, 04/05/13, 19:00:29, brwsapit, /fidessa/brzapas/apas/prod_fx_x3_djf.bat
+HTT_CW_APAS_02, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:00:26, 04/05/13, 19:00:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_djf.bat
+HTT_CW_APAS_03, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:02:26, 04/05/13, 19:03:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_fx.bat
+HTT_CW_APAS_04, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:04:26, 04/05/13, 19:05:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_diff.bat
+HTT_CW_APAS_05, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:06:26, 04/05/13, 19:07:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_tera.bat
+HTT_CW_APAS_06, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:08:26, 04/05/13, 19:09:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_ullin.bat
+HTT_CW_APAS_07, AMRS, FID, EQT, SUCCESS, 04/05/13, 19:10:26, 04/05/13, 19:11:36, brwsapit, /fidessa/brzapas/apas/prod_cw_apas_djf2.bat

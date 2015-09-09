@@ -1,0 +1,11 @@
+counter_name,cntr_value,cntr_type
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,7
+Latch Waits/sec,2482595,272696576
+Average Latch Wait Time (ms),124923,1073874176
+Average Latch Wait Time Base,2482595,1073939712
+Total Latch Wait Time (ms),124923,272696576
+Number of SuperLatches,0,65792
+SuperLatch Promotions/sec,0,272696576
+SuperLatch Demotions/sec,0,272696576

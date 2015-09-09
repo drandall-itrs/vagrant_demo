@@ -1,0 +1,32 @@
+attribute,value
+queueName,RON.RM5.GWB.FTSTRD.XMT
+triggerData,RON.RM5.T.GWB.FTSTRD
+queueType,Local queue
+writerCount,0
+readerCount,0
+queueDepth,0
+maxQueueDepth,50000
+usedCapacity,0.00 %
+mbCapacity,200000 MB
+dateCreated,2007-09-21 09.59.03
+dateModified,2007-09-21 09.59.03
+stagnantMsgCount,0
+averageMsgAge,0 sec (00:00:00)
+oldestMsgAge,0 sec (00:00:00)
+newestMsgAge,0 sec (00:00:00)
+defaultMsgPersistance,Message is persistent
+processName, 
+remoteQueueName,not available
+remoteQueueManagerName,not available
+clusterName, 
+transmissionQueueName,not available
+triggerControl,on
+triggerDepth,1
+triggerPriority,0
+triggerType,first
+getEnabled,allowed
+putEnabled,allowed
+defaultBind,on open
+writeMsgRate,0.00 msg/sec
+readMsgRate,0.00 msg/sec
+

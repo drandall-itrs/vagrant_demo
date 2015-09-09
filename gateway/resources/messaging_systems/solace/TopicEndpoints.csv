@@ -1,0 +1,2 @@
+Topic Endpoint Name,Message VPN,Primary / Backup,Messages Spooled,Spool Usage,Bind Count,Ingress Status,Egress Status,Selector
+CCR_TEV_LOG_INFO,CCR_TEV,Primary,110,0.0359774,0,Up,Up,No

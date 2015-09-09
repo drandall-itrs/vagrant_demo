@@ -1,0 +1,5 @@
+Name,Value
+active,3
+total,60000
+hash buckets,32768
+lock table overflows,0

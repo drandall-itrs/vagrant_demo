@@ -1,0 +1,18 @@
+name,status,detail,duration,url,responseCode,responseText,downloaded
+<!>serverName,m.bloomberg.com
+<!>ipAddress,160.43.251.61
+<!>portNumber,80
+<!>serverType,Microsoft-IIS/6.0
+<!>serverState,UP
+<!>scenariosFailed,0
+<!>scenariosInError,0
+<!>scenariosTimedOut,0
+<!>protocol,http
+<!>proxy,0
+get_market_data,OK,,0.1 s,/android/apps/wds/SecurityData.asp,200,OK,3007 bytes
+euro_piigs_bonds,OK,,0.2 s,/android/apps/wds/SecurityData.asp,200,OK,2992 bytes
+euro_main_bonds,OK,,0.3 s,/android/apps/wds/SecurityData.asp,200,OK,1950 bytes
+euro_liquidity_indicators,OK,,0.2 s,/android/apps/wds/SecurityData.asp,200,OK,835 bytes
+amrs_mkts,OK,,0.1 s,/android/apps/wds/SecurityData.asp,200,OK,1305 bytes
+emea_mkts,OK,,0.1 s,/android/apps/wds/SecurityData.asp,200,OK,1463 bytes
+apac_mkts,OK,,0.1 s,/android/apps/wds/SecurityData.asp,200,OK,1050 bytes

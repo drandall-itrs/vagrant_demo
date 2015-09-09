@@ -1,0 +1,4 @@
+ID,sessionID,username,processID,machineName,elapsedTime,timeRemaining,percentageComplete,message,
+<!>connectionStatus,UP
+<!>timeThreshold,10 sec
+<!>totalLongRunningQueries,0

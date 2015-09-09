@@ -1,0 +1,24 @@
+Item,Value
+Status of connections,Connections are permitted
+Process Uptime,up 47 days; 23:09
+Process Start Time,Tue Jun 18 17:09:36 EDT 2013
+PID,15823
+Http server port,65535
+Port the registry is running on,11001
+Number of unique users seen,0
+Failed Logins,0
+Total Logged In Users,0
+Bytes Read,7380921
+Bytes Written,10870907
+New Sessions?,ENABLED
+Client session max latency,null
+Client session avg latency,null
+Bound Host Name,-- undefined --
+Bound Local Port,-1
+Total Cluster Sessions,0
+Peak Total Cluster Sessions,34
+Session Disconnects,0
+Session Connects Rate,0
+Total Cached Objects,22
+Memory Usage,225328 kB
+Average Recent CPU%,0.036660835

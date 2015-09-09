@@ -1,0 +1,5 @@
+ClusterName,ClusterSize,Running,OldestMemberId,LicenseMode,Refresh Policy
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+itrsgroup.prod.america,17,true,1,Production,refresh-ahead
