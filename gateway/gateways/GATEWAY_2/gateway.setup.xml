@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:50:21 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:53:39 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -13925,7 +13925,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gatewa/sybase/users.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/users.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -13938,7 +13938,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/long-queries.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/long-queries.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -13951,7 +13951,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/locks.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/locks.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -13964,7 +13964,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/segments.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/segments.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -13977,7 +13977,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/devices.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/devices.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -13990,7 +13990,7 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/capacity.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/sybase/capacity.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14130,7 +14130,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/buffer-manager.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/buffer-manager.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14145,7 +14145,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-errors.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/database-errors.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14160,7 +14160,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-locks.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/database-locks.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14175,7 +14175,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-size.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/database-size.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14190,7 +14190,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-status.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/database-status.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14205,7 +14205,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-version.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/database-version.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14220,7 +14220,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/disabled-jobs.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/disabled-jobs.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14235,7 +14235,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/job-status.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/job-status.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14250,7 +14250,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/last-backups.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/last-backups.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14265,7 +14265,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/latches.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/latches.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14280,7 +14280,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/long-running-queries.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/long-running-queries.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14295,7 +14295,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/primary-cluster.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/primary-cluster.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14310,7 +14310,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/db-server-status.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/db-server-status.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14325,7 +14325,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-fkm.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/sql-fkm.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14340,7 +14340,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-processes.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/sql-processes.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14355,7 +14355,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-db-locks.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/mssql/sql-db-locks.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14372,7 +14372,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/current-sessions.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/current-sessions.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14387,7 +14387,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/database-locks.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/database-locks.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14402,7 +14402,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/long-queries.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/long-queries.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14417,7 +14417,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/server-status.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/server-status.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14432,7 +14432,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/table-space.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/table-space.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14447,7 +14447,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/temp-server-status.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/temp-server-status.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14462,7 +14462,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/temp-table-space.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/temp-table-space.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14477,7 +14477,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/trace-files.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/trace-files.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14492,7 +14492,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/vlock.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/vlock.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14507,7 +14507,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/vsession.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/oracle/vsession.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14521,7 +14521,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/asynch.io.stats.by.procs.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/asynch.io.stats.by.procs.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14533,7 +14533,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/database.utilization.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/database.utilization.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14545,7 +14545,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/disk.write.flushes.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/disk.write.flushes.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14557,7 +14557,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/global.multithread.info.ivp.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/global.multithread.info.ivp.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14569,7 +14569,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/global.multithread.info.vps.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/global.multithread.info.vps.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14581,7 +14581,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/locks.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/locks.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14593,7 +14593,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/logging.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/logging.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14605,7 +14605,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/profile.counts.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/profile.counts.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14617,7 +14617,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/sharedmem.stats.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/databases/informix/sharedmem.stats.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
