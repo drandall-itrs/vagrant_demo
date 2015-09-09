@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-09-09 11:24:43 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.0.23-141114 at 2015-09-09 11:47:37 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -381,52 +381,66 @@
 			</managedEntityGroup>
 			<managedEntityGroup name="Paris">
 				<attribute name="CITY">PARIS</attribute>
-				<managedEntityGroup name="Equities">
-					<attribute name="APP">EQUITIES</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="Algo">
-					<attribute name="APP">ALGO</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="E-Trading">
-					<attribute name="APP">E-TRADING</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="DMA">
-					<attribute name="APP">DMA</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="Desk">
-					<attribute name="APP">DESK</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="Compute Grid">
-					<attribute name="APP">GRID</attribute>
-				</managedEntityGroup>
-				<managedEntityGroup name="Data Grid">
-					<attribute name="APP">DATA GRID</attribute>
-					<managedEntity name="Coherence">
-						<probe ref="localhost_7033"/>
+				<managedEntityGroup name="Baseline And Framework">
+					<attribute name="LICENCE MODEL">BASELINE</attribute>
+					<managedEntityGroup name="Infrastructure">
+						<attribute name="APP">INFRASTRUCTURE</attribute>
 						<addTypes>
-							<type ref="Coherence"/>
+							<type ref="Infrastructure Defaults">
+								<environment ref="Infrastructure Defaults"/>
+							</type>
 						</addTypes>
-					</managedEntity>
-					<managedEntity name="GemFire">
-						<probe ref="localhost_7033"/>
-						<addTypes>
-							<type ref="GemFire"/>
-						</addTypes>
-					</managedEntity>
+						<managedEntity name="np7033-INFRA">
+							<probe ref="localhost_7033"/>
+						</managedEntity>
+						<managedEntity name="np7036-INFRA">
+							<probe ref="localhost_7036"/>
+						</managedEntity>
+					</managedEntityGroup>
 				</managedEntityGroup>
-				<managedEntityGroup name="Infrastructure">
-					<attribute name="APP">INFRASTRUCTURE</attribute>
-					<addTypes>
-						<type ref="Infrastructure Defaults">
-							<environment ref="Infrastructure Defaults"/>
-						</type>
-					</addTypes>
-					<managedEntity name="np7033-INFRA">
-						<probe ref="localhost_7033"/>
-					</managedEntity>
-					<managedEntity name="np7036-INFRA">
-						<probe ref="localhost_7036"/>
-					</managedEntity>
+				<managedEntityGroup name="Application Plugins">
+					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<managedEntityGroup name="Data Grid">
+						<attribute name="APP">DATA GRID</attribute>
+						<managedEntity name="Coherence">
+							<probe ref="localhost_7033"/>
+							<addTypes>
+								<type ref="Coherence"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="GemFire">
+							<probe ref="localhost_7033"/>
+							<addTypes>
+								<type ref="GemFire"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
+				</managedEntityGroup>
+				<managedEntityGroup name="Development Toolkit">
+					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+				</managedEntityGroup>
+				<managedEntityGroup name="Third Party">
+					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+				</managedEntityGroup>
+				<managedEntityGroup name="TBD">
+					<managedEntityGroup name="Equities">
+						<attribute name="APP">EQUITIES</attribute>
+					</managedEntityGroup>
+					<managedEntityGroup name="Algo">
+						<attribute name="APP">ALGO</attribute>
+					</managedEntityGroup>
+					<managedEntityGroup name="E-Trading">
+						<attribute name="APP">E-TRADING</attribute>
+					</managedEntityGroup>
+					<managedEntityGroup name="DMA">
+						<attribute name="APP">DMA</attribute>
+					</managedEntityGroup>
+					<managedEntityGroup name="Desk">
+						<attribute name="APP">DESK</attribute>
+					</managedEntityGroup>
+					<managedEntityGroup name="Compute Grid">
+						<attribute name="APP">GRID</attribute>
+					</managedEntityGroup>
 				</managedEntityGroup>
 			</managedEntityGroup>
 		</managedEntityGroup>
@@ -435,142 +449,163 @@
 			<attribute name="PRODUCT">GENEOS</attribute>
 			<managedEntityGroup name="Hong Kong">
 				<attribute name="CITY">HONG KONG</attribute>
-				<managedEntityGroup name="Market Data">
-					<attribute name="APP">MARKET DATA</attribute>
-					<managedEntity name="rmds">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="RMDS P2PS"/>
-							<type ref="RMDS Source"/>
-							<type ref="RMDS RTIC"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="gissing">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="gissing"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="arcontech">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="arcontech"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="wombat">
-						<probe ref="localhost_7038"/>
-						<addTypes>
-							<type ref="wombat"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="bloomberg">
-						<probe ref="localhost_7038"/>
-						<addTypes>
-							<type ref="bloomberg"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="mdm">
-						<probe ref="localhost_7049"/>
-						<addTypes>
-							<type ref="mdm"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="caplin">
-						<probe ref="localhost_7038"/>
-						<addTypes>
-							<type ref="caplin"/>
-						</addTypes>
-					</managedEntity>
+				<managedEntityGroup name="Baseline And Framework">
+					<attribute name="LICENCE MODEL">BASELINE</attribute>
 				</managedEntityGroup>
-				<managedEntityGroup name="Latency">
-					<attribute name="APP">LATENCY</attribute>
-					<managedEntity disabled="true" name="rtt">
-						<probe ref="localhost_7038"/>
-						<addTypes>
-							<type ref="latency-rtt"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity disabled="true" name="rfa">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="latency-rfa"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="flm">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="latency-flm"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity disabled="true" name="latencyexplorer">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="latency-explorer"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="corvil">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="corvil"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity disabled="true" name="tipoff">
-						<probe ref="localhost_7032"/>
-					</managedEntity>
+				<managedEntityGroup name="Application Plugins">
+					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<managedEntityGroup name="Market Data">
+						<attribute name="APP">MARKET DATA</attribute>
+						<managedEntity name="rmds">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="RMDS P2PS"/>
+								<type ref="RMDS Source"/>
+								<type ref="RMDS RTIC"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="gissing">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="gissing"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="arcontech">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="arcontech"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="wombat">
+							<probe ref="localhost_7038"/>
+							<addTypes>
+								<type ref="wombat"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="bloomberg">
+							<probe ref="localhost_7038"/>
+							<addTypes>
+								<type ref="bloomberg"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="mdm">
+							<probe ref="localhost_7049"/>
+							<addTypes>
+								<type ref="mdm"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="caplin">
+							<probe ref="localhost_7038"/>
+							<addTypes>
+								<type ref="caplin"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="Latency">
+						<attribute name="APP">LATENCY</attribute>
+						<managedEntity disabled="true" name="rtt">
+							<probe ref="localhost_7038"/>
+							<addTypes>
+								<type ref="latency-rtt"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity disabled="true" name="rfa">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="latency-rfa"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="flm">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="latency-flm"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity disabled="true" name="latencyexplorer">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="latency-explorer"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity disabled="true" name="tipoff">
+							<probe ref="localhost_7032"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="Middleware">
+						<attribute name="APP">MIDDLEWARE</attribute>
+						<managedEntity name="rv">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="rv"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="mq">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="mq"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="ems">
+							<probe ref="localhost_7037"/>
+							<addTypes>
+								<type ref="ems"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity disabled="true" name="um">
+							<probe ref="localhost_7037"/>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="IBMI">
+						<attribute name="APP">IBM-I</attribute>
+						<managedEntity name="IBMI">
+							<probe ref="localhost_7037"/>
+							<addTypes>
+								<type ref="IBMI"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
 				</managedEntityGroup>
-				<managedEntityGroup name="Middleware">
-					<attribute name="APP">MIDDLEWARE</attribute>
-					<managedEntity name="rv">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="rv"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="mq">
-						<probe ref="localhost_7032"/>
-						<addTypes>
-							<type ref="mq"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="ems">
-						<probe ref="localhost_7037"/>
-						<addTypes>
-							<type ref="ems"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="nirvana">
-						<probe ref="localhost_7037"/>
-						<addTypes>
-							<type ref="nirvana"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity disabled="true" name="um">
-						<probe ref="localhost_7037"/>
-					</managedEntity>
+				<managedEntityGroup name="Development Toolkit">
+					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+					<managedEntityGroup name="Batch">
+						<attribute name="APP">BATCH</attribute>
+						<managedEntity name="Autosys">
+							<probe ref="localhost_7037"/>
+							<addTypes>
+								<type ref="autosys"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
 				</managedEntityGroup>
-				<managedEntityGroup name="Batch">
-					<attribute name="APP">BATCH</attribute>
-					<managedEntity name="Control-M">
-						<probe ref="localhost_7037"/>
-						<addTypes>
-							<type ref="controlm"/>
-						</addTypes>
-					</managedEntity>
-					<managedEntity name="Autosys">
-						<probe ref="localhost_7037"/>
-						<addTypes>
-							<type ref="autosys"/>
-						</addTypes>
-					</managedEntity>
-				</managedEntityGroup>
-				<managedEntityGroup name="IBMI">
-					<attribute name="APP">IBMI</attribute>
-					<managedEntity name="IBMI">
-						<probe ref="localhost_7037"/>
-						<addTypes>
-							<type ref="IBMI"/>
-						</addTypes>
-					</managedEntity>
+				<managedEntityGroup name="Third Party">
+					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+					<managedEntityGroup name="Corvil">
+						<attribute name="APP">CORVIL</attribute>
+						<managedEntity name="corvil">
+							<probe ref="localhost_7032"/>
+							<addTypes>
+								<type ref="corvil"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="Nirvana">
+						<attribute name="APP">NIRVANA</attribute>
+						<managedEntity name="nirvana">
+							<probe ref="localhost_7037"/>
+							<addTypes>
+								<type ref="nirvana"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="Control-M">
+						<attribute name="APP">BATCH</attribute>
+						<managedEntity name="Control-M">
+							<probe ref="localhost_7037"/>
+							<addTypes>
+								<type ref="controlm"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
 				</managedEntityGroup>
 			</managedEntityGroup>
 		</managedEntityGroup>
@@ -659,6 +694,18 @@
 							<type ref="FIX Connectivity"/>
 						</addTypes>
 					</managedEntity>
+				</managedEntityGroup>
+				<managedEntityGroup name="Baseline And Framework">
+					<attribute name="LICENCE MODEL">BASELINE</attribute>
+				</managedEntityGroup>
+				<managedEntityGroup name="Application Plugins">
+					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+				</managedEntityGroup>
+				<managedEntityGroup name="Development Toolkit">
+					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+				</managedEntityGroup>
+				<managedEntityGroup name="Third Party">
+					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
 				</managedEntityGroup>
 			</managedEntityGroup>
 		</managedEntityGroup>
