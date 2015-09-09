@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 10:52:48 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 11:05:06 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -484,7 +484,7 @@
 								<addTypes>
 									<type ref="bloomberg-bams-service"/>
 								</addTypes>
-								<managedEntity name="BloombergService" disabled="true">
+								<managedEntity disabled="true" name="BloombergService">
 									<probe ref="localhost_7032"/>
 								</managedEntity>
 								<managedEntity name="bloomberg">
@@ -552,7 +552,7 @@
 						</managedEntityGroup>
 						<managedEntityGroup name="OTHER">
 							<attribute name="VENDOR">OTHER</attribute>
-							<managedEntity name="rmds" disabled="true">
+							<managedEntity disabled="true" name="rmds">
 								<probe ref="localhost_7032"/>
 								<addTypes>
 									<type ref="RMDS P2PS"/>
@@ -838,6 +838,14 @@
 							<probe ref="localhost_8904"/>
 							<addTypes>
 								<type ref="ullink"/>
+							</addTypes>
+						</managedEntity>
+					</managedEntityGroup>
+					<managedEntityGroup name="Messaging Systems">
+						<managedEntity name="Informatica">
+							<probe ref="localhost_7040"/>
+							<addTypes>
+								<type ref="Informatica Ultra Messaging"/>
 							</addTypes>
 						</managedEntity>
 					</managedEntityGroup>
@@ -1902,6 +1910,76 @@
 				<sampler ref="ORC SSL"/>
 				<sampler ref="ORC STORAGE"/>
 				<sampler ref="ORC SWX"/>
+			</type>
+		</typeGroup>
+		<typeGroup name="Messaging Systems">
+			<type name="MQ">
+				<var name="add_host_samplers">
+					<string>FALSE</string>
+				</var>
+				<sampler ref="queue-overview"/>
+				<sampler ref="queue-details-1"/>
+				<sampler ref="queue-details-2"/>
+				<sampler ref="queue-details-3"/>
+				<sampler ref="channel-overview"/>
+				<sampler ref="channel-details-1"/>
+				<sampler ref="channel-details-2"/>
+				<sampler ref="channel-details-3"/>
+			</type>
+			<type name="EMS">
+				<sampler ref="ems-users"/>
+				<sampler ref="ems-topics"/>
+				<sampler ref="ems-routes"/>
+				<sampler ref="ems-server"/>
+				<sampler ref="ems-queues"/>
+				<sampler ref="ems-durables"/>
+				<sampler ref="ems-connections"/>
+				<sampler ref="ems-bridges"/>
+			</type>
+			<type name="RV">
+				<sampler ref="tib-rv-top_problem_senders"/>
+				<sampler ref="tib-rv-top_problem_receivers"/>
+				<sampler ref="tib-rv-publisher"/>
+				<sampler ref="tib-rv-hosts"/>
+				<sampler ref="tib-rv-fast_senders"/>
+			</type>
+			<type name="WAS">
+				<sampler ref="WebSphere Applications"/>
+				<sampler ref="WebSphere Application Sessions"/>
+				<sampler ref="WebSphere Information"/>
+				<sampler ref="WebSphere J2Resources"/>
+				<sampler ref="WebSphere JDBC Drivers"/>
+				<sampler ref="WebSphere JDBC Providers"/>
+				<sampler ref="WebSphere Modules"/>
+				<sampler ref="WebSphere ORB"/>
+				<sampler ref="WebSphere Thread Pools"/>
+			</type>
+			<type name="Nirvana Messaging">
+				<sampler ref="Nirvana Cluster Monitor"/>
+				<sampler ref="nirvana61a Channel Monitor"/>
+				<sampler ref="nirvana61a Interface Monitor"/>
+				<sampler ref="nirvana61a Realm Monitor"/>
+				<sampler ref="nirvana61a Thread Monitor"/>
+				<sampler ref="nirvana61b Channel Monitor"/>
+				<sampler ref="nirvana61b Interface Monitor"/>
+				<sampler ref="nirvana61b Realm Monitor"/>
+				<sampler ref="nirvana61b Thread Monitor"/>
+				<sampler ref="nirvana61c Channel Monitor"/>
+				<sampler ref="nirvana61c Interface Monitor"/>
+				<sampler ref="nirvana61c Realm Monitor"/>
+				<sampler ref="nirvana61c Thread Monitor"/>
+			</type>
+			<type name="Informatica Ultra Messaging">
+				<sampler ref="Informatica Activity Contexts"/>
+				<sampler ref="Informatica Activity Receivers"/>
+				<sampler ref="Informatica Activity Sources"/>
+				<sampler ref="Informatica AppID Contexts"/>
+				<sampler ref="Informatica Session Receivers"/>
+				<sampler ref="Informatica Status Receivers"/>
+				<sampler ref="Informatica Session Topics"/>
+				<sampler ref="Informatica Status Sources"/>
+				<sampler ref="Informatica Topic Sources"/>
+				<sampler ref="Informatica Topic Receivers"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -17926,6 +18004,880 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
+		<samplerGroup name="Messaging Systems">
+			<samplerGroup name="MQ">
+				<sampler name="queue-overview">
+					<group>mq-series-queue-overview</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-q-overview.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="queue-details-3">
+					<group>mq-series-queue-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-q-details-3.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="queue-details-2">
+					<group>mq-series-queue-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-q-details-2.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="queue-details-1">
+					<group>mq-series-queue-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-q-details-1.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="channel-overview">
+					<group>mq-series-channel-overview</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-c-overview.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="channel-details-3">
+					<group>mq-series-channel-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-c-details-3.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="channel-details-2">
+					<group>mq-series-channel-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-c-details-2.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="channel-details-1">
+					<group>mq-series-channel-details</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_mq/mq-c-details-1.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="RV">
+				<sampler name="tib-rv-top_problem_senders">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_rv/tibrvproblemsenders.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-top_problem_receivers">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_rv/tibrvproblemreceivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-publisher">
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_rv/tibrvpublisher.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-hosts">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleOnStartup>true</sampleOnStartup>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_rv/tibrvhosts.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="tib-rv-fast_senders">
+					<group>tib-rv</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleTimesOverride>true</sampleTimesOverride>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_rv/tibrvfastsenders.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="EMS">
+				<sampler name="ems-users">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-users.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-topics">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-topics.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-routes">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-routes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-server">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-server.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-queues">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-queues.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-durables">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-durables.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-connections">
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-connections.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="ems-bridges">
+					<!---->
+					<group>EMS</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/tibco_ems/ems-bridges.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="WAS">
+				<sampler name="WebSphere Applications">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-applications.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere Application Sessions">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-application-sessions.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere Information">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-information.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere J2Resources">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-j2resources.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere JDBC Drivers">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-jdbc-drivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere JDBC Providers">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-jdbc-providers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere Modules">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-modules.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere ORB">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-orb.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="WebSphere Thread Pools">
+					<var-group>
+						<data>WebSphere Application Server</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/ibm_was/websphere-thread-pools.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Nirvana Messaging">
+				<sampler name="Nirvana Cluster Monitor">
+					<var-group>
+						<data>Nirvana61</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/cluster-monitor.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<samplerGroup name="nirvana61a">
+					<sampler name="nirvana61a Channel Monitor">
+						<var-group>
+							<data>Nirvana61a</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/channel-nirvana61a.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61a Interface Monitor">
+						<var-group>
+							<data>Nirvana61a</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/interface-nirvana61a.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61a Realm Monitor">
+						<var-group>
+							<data>Nirvana61a</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/realm-nirvana61a.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61a Thread Monitor">
+						<var-group>
+							<data>Nirvana61a</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/thread-nirvana61a.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="nirvana61b">
+					<sampler name="nirvana61b Channel Monitor">
+						<var-group>
+							<data>nirvana61b</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/channel-nirvana61b.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61b Interface Monitor">
+						<var-group>
+							<data>nirvana61b</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/interface-nirvana61b.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61b Realm Monitor">
+						<var-group>
+							<data>nirvana61b</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/realm-nirvana61b.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61b Thread Monitor">
+						<var-group>
+							<data>nirvana61b</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/thread-nirvana61b.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+				<samplerGroup name="nirvana61c">
+					<sampler name="nirvana61c Channel Monitor">
+						<var-group>
+							<data>nirvana61c</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/channel-nirvana61c.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61c Interface Monitor">
+						<var-group>
+							<data>nirvana61c</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/interface-nirvana61c.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61c Realm Monitor">
+						<var-group>
+							<data>nirvana61c</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/realm-nirvana61c.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="nirvana61c Thread Monitor">
+						<var-group>
+							<data>nirvana61c</data>
+						</var-group>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<sampleInterval>
+							<data>0</data>
+						</sampleInterval>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/nirvana_messaging/thread-nirvana61c.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+				</samplerGroup>
+			</samplerGroup>
+			<samplerGroup name="Informatica Ultra Messaging">
+				<sampler name="Informatica Activity Contexts">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/activity-contexts.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Activity Receivers">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/activity-receivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Activity Sources">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/activity-sources.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica AppID Contexts">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/appid-contexts.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Session Receivers">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/session-receivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Status Receivers">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/status-receivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Session Topics">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/session-topics.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Status Sources">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/status-sources.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Topic Receivers">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/topic-receivers.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informatica Topic Sources">
+					<var-group>
+						<data>Informatica</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gateway/resources/messaging_systems/informatica_ultra_messaging/topic-sources.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
 	</samplers>
 	<actions>
 		<action name="testemail">
@@ -30866,9 +31818,11 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -31087,9 +32041,11 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
