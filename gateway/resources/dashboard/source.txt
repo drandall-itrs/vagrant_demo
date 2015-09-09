@@ -1,0 +1,9 @@
+Name,Category,warning,critical
+Business,5
+FO_App,7
+Hardware,8
+FO_Network,12
+Performance,6
+Traffic,7
+TBT,4
+Colo_Network,9

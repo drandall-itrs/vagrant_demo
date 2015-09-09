@@ -1,0 +1,27 @@
+#!/bin/ksh
+
+#set -x
+
+dir=/opt/geneos/gateway/resources/dashboard/
+file=source.txt
+
+cat $dir/$file | head -1 | awk -F"," '{ print $0 }'
+
+cat $dir/$file | sed -n '2,$ p' | awk -F"," '{ print $0 }' | while read line 
+do
+	actual_line=`echo $line | awk -F"," '{ print $0 }'`
+	category=`echo $line | awk -F"," '{ print $1 }'`	
+	items=`echo $line | awk -F"," '{ print $2 }'`
+
+#	echo "$actual_line = $category : $items"
+
+	total_count=0
+
+	while [ $total_count -lt $items ]
+	do
+		total_warning=$(( $RANDOM % 10 ))
+		total_critical=$(( $RANDOM % 10 ))
+		total_count=$((total_count+1))	
+		echo "${category}_$total_count,${category},$total_warning,$total_critical"
+	done
+done
