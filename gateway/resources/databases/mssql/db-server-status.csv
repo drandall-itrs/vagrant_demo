@@ -1,0 +1,13 @@
+parameterName,value
+Logins/sec,0.15
+Logouts/sec,0.15
+User Connections,8
+Logical Connections,8
+SOAP Method Invocations,0
+SOAP SQL Requests,0
+Transactions,0
+HTTP Authenticated Requests,0
+Active Temp Tables,5
+Temp Tables Creation Rate,0
+Temp Tables For Destruction,0
+Processes blocked,0

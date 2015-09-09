@@ -1,0 +1,6 @@
+scenario,samplingStatus,duration,numSteps,stepsInErr,active,lastExecTime,lastSucExTime,
+<!>totalScenarios,2
+<!>scenariosPassed,2
+<!>scenariosInError,0
+ICE Login,OK,7.951 s,4,0,ACTIVE,Mon Jul 29 01:48:10.567 2013,Mon Jul 29 01:48:10.567 2013
+ITRS Login,OK,7.708 s,6,0,ACTIVE,Mon Jul 29 01:48:00.581 2013,Mon Jul 29 01:48:00.581 2013

@@ -1,0 +1,15 @@
+group:Host,address,status,upTime,totalRetransmissionRate,totalRerequestRate,kbitTransmissionRate,kbitReceiveRate,outboundPacketLossRate,inboundPacketLossRate,averageMsgSendRate,os,version
+<!>totalNodes,5
+<!>nodesInError,0
+<!>nodesInWarning,0
+<!>overallMsgTransmissionRate,321.18 msg/sec
+<!>overallRetransmissionRate,0.00 %
+<!>restransmittedPackets,708
+RMDS:lon403,10.1.21.199,OK,Sat Sep 15 10:51:55,0.00,0.00,0.01,37.50,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon503,10.1.21.198,OK,Sat Sep 15 10:52:04,0.00,4.85,3199.75,37.58,0.00,0.00,1806.81,Unix,7.2.16
+RMDS:lon603,10.1.21.197,OK,Sun Nov 18 19:39:28,0.00,0.00,0.01,37.87,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon303,10.1.21.200,OK,Sat Sep 15 10:51:48,0.00,0.00,0.01,40.70,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon109,10.1.21.169,OK,Sat Sep 15 10:34:40,0.00,0.00,0.01,39.06,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon103,10.1.21.202,OK,Sat Sep 15 10:44:45,0.00,0.00,0.01,38.71,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon110,10.1.21.168,OK,Sat Sep 15 10:35:03,0.00,0.00,0.01,39.80,0.00,0.00,0.01,Unix,7.2.16
+RMDS:lon203,10.1.21.201,OK,Sat Sep 15 10:45:15,0.00,0.00,1852.22,40.82,0.00,0.00,1592.52,Unix,7.2.16

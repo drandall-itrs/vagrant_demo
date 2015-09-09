@@ -1,0 +1,26 @@
+key,type,time,timestamp,severity,deviceIP,sourceFQN,description,reason,value,typeDiscriminator,count
+<!>totalAlerts,12
+<!>numAlertsSet,1
+<!>numAlertsClear,11
+<!>numInformationalAlertsSet,0
+<!>numWarningAlertsSet,0
+<!>numMinorAlertsSet,0
+<!>numMajorAlertsSet,1
+<!>numSevereAlertsSet,0
+<!>numInformationalAlertsClear,0
+<!>numWarningAlertsClear,0
+<!>numMinorAlertsClear,0
+<!>numMajorAlertsClear,11
+<!>numSevereAlertsClear,0
+1,e2ELatencyThresholdExceeded,Fri Aug  9 11:55:01 2013,1376045701,major,195.27.3.163,rt-class/FIX-CLIENTS/London_CNE//FIX-SERVERS/FIX-RTT/class-default,The end to end latency threshold has been exceeded.,set,693638.0,,10236
+3,tCPRoundtripTimeClear,Fri Aug  9 12:00:04 2013,1376046004,major,195.27.3.163,rt-class/CustomerGateway/London_CNE//CUSTOMERS/Client%20Responses/class-default,The TCP roundtrip time is back within the configured threshold.,reset,38.672,,20
+4,e2ELatencyThresholdClear,Fri Aug  9 12:00:04 2013,1376046004,major,195.27.3.163,rt-class/PropTradersA/London_CNE//VENUE_NJ-ATS/order-to-tick-latency/class-default,The end to end latency value is back within the configured threshold.,reset,1.72186E7,,23
+5,e2EMeasuredJitterClear,Fri Aug  9 12:00:04 2013,1376046004,major,195.27.3.163,rt-class/PropTradersA/London_CNE//VENUE_NJ-ATS/order-to-tick-latency/class-default,The end to end jitter value is back within the configured threshold.,reset,1.72186E7,,22
+6,tCPRoundtripTimeClear,Fri Aug  9 12:00:04 2013,1376046004,major,195.27.3.163,rt-class/VENUES/London_CNE//OrderRouter/Venue%20Responses/class-default,The TCP roundtrip time is back within the configured threshold.,reset,38.929,,20
+7,e2EMeasuredJitterClear,Fri Aug  9 12:00:31 2013,1376046031,major,195.27.3.163,rt-class/FIX-CLIENTS/London_CNE//FIX-SERVERS/FIX-RTT/class-default,The end to end jitter value is back within the configured threshold.,reset,381255.0,,12
+8,tCPRoundtripTimeClear,Fri Aug  9 12:00:22 2013,1376046022,major,195.27.3.163,rt-class/FIX-CLIENTS/London_CNE//FIX-SERVERS/FIX-RTT/class-default,The TCP roundtrip time is back within the configured threshold.,reset,97.92,,22
+9,microBurstClear,Fri Aug  9 12:00:10 2013,1376046010,major,195.27.3.163,rt-class/TotalViewITCH//London_CNE/FeedHandler//class-default,Micro-Bursts exceeding the configured bandwidth threshold have been cleared.,reset,66000.0,2000us,6
+10,tCPRoundtripTimeClear,Fri Aug  9 12:00:16 2013,1376046016,major,195.27.3.163,rt-class/FIX-SERVERS//London_CNE/FIX-CLIENTS/FIX-RTT/class-default,The TCP roundtrip time is back within the configured threshold.,reset,46.4,,9
+11,e2ELatencyThresholdClear,Fri Aug  9 12:01:13 2013,1376046073,major,195.27.3.163,rt-class/CUST_BriteEdge/London_CNE//CustomerGateway//class-default,The end to end latency value is back within the configured threshold.,reset,519156.0,,4
+12,e2ELatencyThresholdClear,Fri Aug  9 12:01:13 2013,1376046073,major,195.27.3.163,rt-class/CUST_Bergman//London_CNE/CustomerGateway//class-default,The end to end latency value is back within the configured threshold.,reset,519156.0,,4
+13,e2ELatencyThresholdClear,Fri Aug  9 12:01:10 2013,1376046070,major,195.27.3.163,rt-class/OrderRouter/London_CNE//VENUE_London//class-default,The end to end latency value is back within the configured threshold.,reset,518837.0,,4

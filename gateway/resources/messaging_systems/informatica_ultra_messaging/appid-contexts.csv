@@ -1,0 +1,5 @@
+key,rank,appId,contextId,ipAddr,hostname,PID,timestamp,trDgmsTxRate,trDgmsRxRate,trDgmsTxFailRate,trDgmsDrpdRate
+<!>appId,topicResDom2
+<!>numContexts,2
+CTX00000005,1,topicResDom2,1402bf90,127.0.0.1,centos5dev,12662,Thu Aug  9 12:35:53 2012,0.33,1.00,0.00,0.00
+CTX00000002,2,topicResDom2,1a09b580,127.0.0.1,centos5dev,12646,Thu Aug  9 12:35:54 2012,0.00,0.33,0.00,0.00

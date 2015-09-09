@@ -1,0 +1,4 @@
+Name,State,Total Connections,Current Connections,Mem Free (%),Master,Online,Can be master
+nirvana61a,Master,14,2,89.56,nirvana61a,true,true
+nirvana61b,Slave,,,,nirvana61a,true,true
+nirvana61c,Slave,,,,nirvana61a,true,true

@@ -1,0 +1,33 @@
+processName,/group,instanceCount,percentCPU,residentSetSize,processId,numThreads,percentMemory,virtualMemory,startTime,args,user
+mx,,31,0.1 %,8876176 Kb,,1193,18.1 %,13592212 Kb,,,
+mx#001,,,0.0 %,393632 Kb,12176,43,0.8 %,510572 Kb,Tue Jul  9 15:28:43 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_stderr.log /MXJ_ORCHESTRATION_ID:ProcessServiceID /MXJ_ENGINE_CONTAINER_CLASS:mx.process.orchestrator.EngineContainer /MXJ_ORCHESTRATION_ID:ProcessServiceID /MX_SERVER:MXENGINECONTAINER /DCAP /DCAPPOL /NOPOPUP /IPRETRY:-1 /IPHOST:EXMXAPP01:60011 /USER...,extdl29
+mx#002,,,0.0 %,279856 Kb,23273,38,0.6 %,434232 Kb,Fri Jul 12 08:20:11 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#003,,,0.0 %,346296 Kb,12775,44,0.7 %,518056 Kb,Tue Jul 16 15:43:21 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:SQLUSERAUTH,gold3126
+mx#004,,,0.0 %,280992 Kb,9913,37,0.6 %,433216 Kb,Tue Jul 16 11:18:34 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:SMCCONTAINE,sandpit3
+mx#005,,,0.0 %,271384 Kb,23278,38,0.6 %,425472 Kb,Fri Jul 12 08:20:22 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#006,,,0.0 %,276236 Kb,23277,38,0.6 %,430320 Kb,Fri Jul 12 08:20:21 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#007,,,0.0 %,272076 Kb,23276,38,0.6 %,426112 Kb,Fri Jul 12 08:20:20 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#008,,,0.0 %,274728 Kb,23294,36,0.6 %,429392 Kb,Fri Jul 12 08:20:35 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#009,,,0.0 %,279412 Kb,23274,38,0.6 %,434260 Kb,Fri Jul 12 08:20:11 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#010,,,0.0 %,275516 Kb,23279,38,0.6 %,430248 Kb,Fri Jul 12 08:20:22 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#011,,,0.0 %,279324 Kb,23280,38,0.6 %,433424 Kb,Fri Jul 12 08:20:22 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#012,,,0.0 %,275800 Kb,23281,38,0.6 %,430192 Kb,Fri Jul 12 08:20:22 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#013,,,0.0 %,275560 Kb,23282,38,0.6 %,430296 Kb,Fri Jul 12 08:20:23 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#014,,,0.0 %,278252 Kb,23283,38,0.6 %,432340 Kb,Fri Jul 12 08:20:24 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#015,,,0.0 %,275460 Kb,23284,36,0.6 %,429796 Kb,Fri Jul 12 08:20:25 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#016,,,0.0 %,272436 Kb,23285,38,0.6 %,426444 Kb,Fri Jul 12 08:20:25 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#017,,,0.0 %,273800 Kb,23286,38,0.6 %,427876 Kb,Fri Jul 12 08:20:28 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#018,,,0.0 %,277420 Kb,23287,38,0.6 %,432132 Kb,Fri Jul 12 08:20:28 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#019,,,0.0 %,276908 Kb,23289,38,0.6 %,431008 Kb,Fri Jul 12 08:20:29 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#020,,,0.0 %,277860 Kb,23290,38,0.6 %,432132 Kb,Fri Jul 12 08:20:29 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#021,,,0.0 %,275440 Kb,23291,37,0.6 %,430120 Kb,Fri Jul 12 08:20:30 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#022,,,0.0 %,276876 Kb,23292,38,0.6 %,431064 Kb,Fri Jul 12 08:20:31 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#023,,,0.0 %,271880 Kb,23293,38,0.6 %,425972 Kb,Fri Jul 12 08:20:33 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#024,,,0.0 %,275360 Kb,23295,38,0.6 %,429444 Kb,Fri Jul 12 08:20:38 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#025,,,0.0 %,277984 Kb,23308,37,0.6 %,432172 Kb,Fri Jul 12 08:20:46 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#026,,,0.0 %,286536 Kb,23306,45,0.6 %,437952 Kb,Fri Jul 12 08:20:40 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#027,,,0.0 %,271536 Kb,23307,37,0.6 %,425572 Kb,Fri Jul 12 08:20:43 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:TRADEREPOSI,sandpit3
+mx#028,,,0.0 %,286104 Kb,25979,42,0.6 %,437556 Kb,Fri Jul 12 08:21:16 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#029,,,0.0 %,276912 Kb,24671,36,0.6 %,431060 Kb,Fri Jul 12 08:21:13 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:MXMLEXCHANG,sandpit3
+mx#030,,,0.0 %,273904 Kb,689,36,0.6 %,424916 Kb,Wed Jul 17 15:47:18 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_output.log /MX_SERVER:SQLUSERAUTH,sandpit3
+mx#031,,,0.0 %,390696 Kb,3980,43,0.8 %,508864 Kb,Fri Jul 26 11:30:13 2013,mx /STDOUT:logs/mx_output.log /STDERR:logs/mx_stderr.log /MX_SERVER:SQLUSERAUTHORIZEDLISTS /NOPOPUP /IPRETRY:-1 /IPHOST:EXMXAPP01:60011 /USER:MUREXFO /PASSWORD:0010002000410047001600f70067 /GROUP:FO /MX_DBMAPPING:public.mxres.common.dbconfig.dbsourcemapping.mxres /MXJ_SITE_NAME:site1 /MXJ_LOGGER_...,extdl29

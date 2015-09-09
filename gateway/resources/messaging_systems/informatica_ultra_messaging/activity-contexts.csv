@@ -1,0 +1,15 @@
+key,rank,appId,contextId,ipAddr,hostname,PID,timestamp,trDgmsTxRate,trDgmsRxRate,trDgmsTxFailRate,trDgmsDrpdRate,UnknDgmsRate,txBlkdRate,txWldBlkRate,respBlkdRate,respWldBlkRate,trDgmsTx,trBytesTx,trDgmsRx,trBytesRx,trDgmsDrpdVer,trDgmsDrpdTyp,trDgmsDrpdMal,trDgmsTxFail,trSrcTpcs,trRcvTpcs,trUnresTpcsRcv,RMUnknDgm,RUUnknDgm,txBlkd,txWldBlk,respBlkd,respWldBlk,uimDupMsgRx,uimMsgNStrmRx
+<!>totalContexts,6
+<!>totalActiveContexts,6
+<!>totalDefunctContexts,0
+<!>trDgmRate,3.33
+<!>trDgmTxFailRate,0.00
+<!>trDgms,1085
+<!>trDgmsTxFail,0
+<!>trUnresTpcsRcv,0
+CTX00000001,1,topicResDom1,7f8c580,127.0.0.1,centos5dev,12640,Thu Aug  9 12:34:57 2012,1.33,1.33,0.00,0.00,0.00,0.00,0.00,0.00,0.00,270,91355,383,96228,0,0,0,0,10,10,0,0,0,0,0,0,0,0,0
+CTX00000002,3,topicResDom2,1a09b580,127.0.0.1,centos5dev,12646,Thu Aug  9 12:35:00 2012,1.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,267,90778,380,95639,0,0,0,0,10,10,0,0,0,0,0,0,0,0,0
+CTX00000003,2,topicResDom3,1035f580,127.0.0.1,centos5dev,12652,Thu Aug  9 12:34:58 2012,1.00,1.33,0.00,0.00,0.00,0.00,0.00,0.00,0.00,247,88371,359,93191,0,0,0,0,10,10,0,0,0,0,0,0,0,0,0
+CTX00000004,4,topicResDom1,10f1ff90,127.0.0.1,centos5dev,12656,Thu Aug  9 12:34:58 2012,0.00,1.33,0.00,0.00,0.00,0.00,0.00,0.00,0.00,100,4184,348,72828,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0
+CTX00000005,5,topicResDom2,1402bf90,127.0.0.1,centos5dev,12662,Thu Aug  9 12:34:59 2012,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,101,4225,342,72887,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0
+CTX00000006,6,topicResDom3,19b15f90,127.0.0.1,centos5dev,12667,Thu Aug  9 12:34:59 2012,0.00,1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,100,4184,327,71840,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0

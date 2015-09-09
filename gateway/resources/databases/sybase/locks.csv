@@ -1,0 +1,6 @@
+serverProcessID,loginName,lockedTable,lockType,page,status,command
+<!>databaseName,geneos
+<!>status,up
+<!>totalLocks,2
+10,sa,syslogins,Sh_intent,0,running,SELECT
+20,sa,sysvalues,Sh_intent,0,running,SELECT

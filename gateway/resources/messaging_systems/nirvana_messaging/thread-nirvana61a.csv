@@ -1,0 +1,23 @@
+Name,Idle threads,Queued tasks,Tasks executed
+MemoryManagement,1,0,29402
+Scheduler Worker Pool,4,0,41565
+CommonPool,2,0,68
+Client Setup,4,0,14
+PersistantStore,4,0,2791
+Client session closer,1,0,0
+Orphaned session closer,1,0,0
+Flush-Monitor,0,0,0
+WritePool,5,0,0
+Recovery Pool,4,0,0
+Inter Realm Connection Pool,3,0,8
+Cluster KeepAlive,4,0,598
+ClusterRecovery,5,0,0
+KeepAlive,2,0,178
+nhp0,2,0,15
+HTTP-Plugins,5,0,0
+nhp1,2,0,1
+nsp0,2,0,2
+nsp1,2,0,1
+Join Daemon,2,0,0
+ReadPool,4,0,365
+ClosePool,2,0,12

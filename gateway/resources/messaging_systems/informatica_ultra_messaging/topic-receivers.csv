@@ -1,0 +1,6 @@
+key,rank,appId,contextId,ipAddr,hostname,PID,timestamp,transportSession,msgRxRate,byteRxRate,msgUnrcvrdRate,nakTxRate,lossRate,dgmsDpdRate,outOfOrderRate,dupMsgRxRate
+<!>topic,topic-01
+<!>numReceivers,3
+RCVLBTRM00000003,1,topicResDom3,19b15f90,127.0.0.1,centos5dev,12667,Thu Aug  9 12:36:53 2012,LBTRM:192.168.50.206:14303:c0fc56d6:224.10.10.13:14400,6.00,276.00,3.00,236.00,16.00,0.00,0.00,5.67
+RCVLBTRM00000002,2,topicResDom2,1402bf90,127.0.0.1,centos5dev,12662,Thu Aug  9 12:36:53 2012,LBTRM:192.168.50.206:14302:e50c106:224.10.10.12:14400,10.00,460.00,0.00,0.00,0.00,0.00,0.00,0.00
+RCVLBTRM00000001,3,topicResDom1,10f1ff90,127.0.0.1,centos5dev,12656,Thu Aug  9 12:36:52 2012,LBTRM:192.168.50.206:14301:38a16eb7:224.10.10.11:14400,10.00,460.00,0.00,0.00,0.00,0.00,0.00,0.00

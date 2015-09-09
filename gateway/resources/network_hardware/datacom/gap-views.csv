@@ -1,0 +1,31 @@
+Key,Name,ChannelID,UnclearedEvents,EventsLastSample,TotalGaps,GapsLastSample,EventID,TimeStamp,PreGapSeqNum,NumMissed
+<!>Port,1,,,,,,,,,
+<!>ChannelsWithEvents,5,,,,,,,,,
+<!>UnclearedEvents,18,,,,,,,,,
+<!>EventsLastSample,0,,,,,,,,,
+<!>TotalGaps,-552,,,,,,,,,
+<!>GapsLastSample,0,,,,,,,,,
+<!>MaxEventsPerChannel,10,,,,,,,,,
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Futures Incremental - 30,1272,3,0,-858,0,,,,,
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Futures Incremental - 30#014815,,,,,,,14815,37:49.6,39850596,-286
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Futures Incremental - 30#014809,,,,,,,14809,37:49.6,39850596,-286
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Futures Incremental - 30#014703,,,,,,,14703,37:42.6,39850596,-286
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30,1272,3,0,-858,0,,,,,
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014817,,,,,,,14817,37:49.6,448,1
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014814,,,,,,,14814,37:49.6,594,-332
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014711,,,,,,,14711,37:49.6,448,1
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014808,,,,,,,14808,37:49.6,594,-332
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014805,,,,,,,14805,37:43.6,448,1
+CEM Group CME - NYMEX Global FIX/FAST Production - Line A NYMEX Crude Future Snapshot - 30#014698,,,,,,,14698,37:42.6,594,-332
+CME Group CME - NYMEX FIX/FAST Production - Line A 'NYMEX Metals,1284,3,0,-14,0,,,,,
+CME Group CME - NYMEX FIX/FAST Production - Line A 'NYMEX Metals#014819,,,,,,,14819,37:49.6,1336733,-5
+CME Group CME - NYMEX FIX/FAST Production - Line A 'NYMEX Metals#014813,,,,,,,14813,37:49.6,1336733,-5
+CME Group CME - NYMEX FIX/FAST Production - Line A 'NYMEX Metals#014807,,,,,,,14807,37:49.6,1336733,-5
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Incremental - 31,1296,3,0,-165,0,,,,,
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Incremental - 31#014818,,,,,,,14818,37:49.6,11322864,-55
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Incremental - 31#014812,,,,,,,14812,37:49.6,11322864,-55
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Incremental - 31#014706,,,,,,,14706,37:49.6,11322864,-55
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Snapshot - 31,1300,3,0,1479,0,,,,,
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Snapshot - 31#014816,,,,,,,14816,37:49.6,4,493
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Snapshot - 31#014810,,,,,,,14810,37:49.6,4,493
+CME Group CME - NYMEX Globex FIX/FAST Production - Line A NYMEX Non-Crude Energy Futures Snapshot - 31#014704,,,,,,,14704,37:49.6,4,493

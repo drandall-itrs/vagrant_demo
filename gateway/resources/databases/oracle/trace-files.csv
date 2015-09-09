@@ -1,0 +1,11 @@
+tableName,mbAllocated,mbFree,mbUsed,percentageFree,percentageUsed,autoExtend,
+<!>connectionStatus,UP
+CALEXANDER,2048 Mb,2.38 Mb,2045.63 Mb,0.12 %,99.88 %,NO,
+EALLEN,2452 Mb,1641.69 Mb,810.31 Mb,66.95 %,33.05 %,YES,
+EXAMPLE,100 Mb,31.75 Mb,68.25 Mb,31.75 %,68.25 %,YES,
+SLAPP,1024 Mb,983.06 Mb,40.94 Mb,96 %,4 %,NO,
+SYSAUX,690 Mb,32.38 Mb,657.63 Mb,4.69 %,95.31 %,YES,
+SYSTEM,2170 Mb,1537.44 Mb,632.56 Mb,70.85 %,29.15 %,YES,
+TEMP,510 Mb,510 Mb,0 Mb,100 %,0 %,YES,
+UNDOTBS03,4096 Mb,4086.31 Mb,9.69 Mb,99.76 %,0.24 %,YES,
+USERS,5 Mb,2 Mb,3 Mb,40 %,60 %,YES,

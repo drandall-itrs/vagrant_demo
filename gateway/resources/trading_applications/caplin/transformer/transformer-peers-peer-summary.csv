@@ -1,0 +1,3 @@
+Remote Name,Connection,Local Type,Remote Type,State,Label,Address,Port,Local ID,Remote ID
+demosrc-nysupsvr10,Incoming,Broadcast,Active,UP,DemoDataSource1,127.0.0.1,45621,102,103
+liberator1,Outgoing,Active,Broadcast,UP,liberator1,localhost,15001,102,101

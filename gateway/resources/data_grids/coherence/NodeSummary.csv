@@ -1,0 +1,6 @@
+Role,NodeCount,MeanMaxMemory,MeanAvailableMemory,MeanMemoryUsage,AvgPublisherSuccessRate
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+cache,16,2275 Mb,1202.94 Mb,47.12 %,99.97 %
+JMX,1,505 Mb,274 Mb,45.74 %,100 %

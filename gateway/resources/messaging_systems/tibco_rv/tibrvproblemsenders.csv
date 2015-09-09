@@ -1,0 +1,6 @@
+group:Host,address,retransmissionRate,averageRetransmissionRate,totalRetransmissionRate,kbitTransmissionRate,byteTransmissionRate,balance
+RMDS:lon503,10.1.4.53,3.97 %,7.00 %,3.81 %,12.55,1605.99,27.1 %
+RMDS:lon103,10.1.4.64,1.53 %,7.40 %,1.51 %,8.66,1108.66,7.1 %
+RMDS:lon110,10.1.4.67,6.21 %,8.60 %,5.84 %,6.00,767.56,21.2 %
+RMDS:lon109,10.1.2.158,3.45 %,3.60 %,3.33 %,0.18,22.46,1.2 %
+RMDS:lon403,10.1.4.68,16.59 %,7.60 %,14.23 %,3.71,474.36,43.5 %

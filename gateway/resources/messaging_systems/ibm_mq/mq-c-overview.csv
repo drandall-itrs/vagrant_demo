@@ -1,0 +1,20 @@
+name,channelType,protocol,description,maxMsgLength,dateModified,transmissionQueue,connectionName,mcaStatus,channelStatus
+ARTS.CLIENT.01,Server Connection,TCP,ARTS CLIENT,4096 KB,2007-09-21 09.59.02,not available,not available,inactive,unknown
+FID.GWB.T.RON.ACKNAK,Receiver,TCP,Fidessa GwyB to Ronnie Gwy,4096 KB,2007-09-21 09.59.03,not available,not available,inactive,unknown
+GWA.FTS.T.RON.FTSTRD,Receiver,TCP,Fidessa GwyA to Ronnie Gwy,4096 KB,2007-09-21 09.59.03,not available,not available,inactive,unknown
+OMSA.TO.P01A.XX7570,Sender,TCP,Order messages for Xentric,4096 KB,2007-09-21 09.59.03,XEXON.QX.7570.OMSA.P01A,GBAS-00339(1414),inactive,unknown
+P01A.TO.OMSA.XX7570,Receiver,TCP,Xentric primary back to Ronnie primary,4096 KB,2007-09-21 09.59.03,not available,not available,inactive,unknown
+RDRGWA.RONGWY.01,Receiver,TCP,Raider Gateway A to Ronnie Gateway,4096 KB,2007-09-21 09.59.02,not available,not available,running,running
+RON.RM5.T.GWB.FTSTRD,Sender,TCP,Ronnie Gwy to Fidessa GwyB,4096 KB,2007-09-21 09.59.03,RON.RM5.GWB.FTSTRD.XMT,GBAG-00004VS5(1415),inactive,unknown
+RONGWY.RDRGWB.01,Sender,TCP,Ronnie Gateway to Raider Gateway B sender channel,4096 KB,2007-09-21 09.59.02,RONNIE.TO.RAIDER.XMT,GBAG-00017VS3(1415),running,running
+RONNIE.CLIENT.01,Server Connection,TCP,RONNIE CLIENT,4096 KB,2007-09-21 09.59.02,not available,not available,inactive,unknown
+SYSTEM.AUTO.RECEIVER,Receiver,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.AUTO.SVRCONN,Server Connection,TCP,SYSTEM,4096 KB,2007-10-04 07.55.18,not available,not available,inactive,unknown
+SYSTEM.DEF.CLUSRCVR,Cluster Receiver,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.CLUSSDR,Cluster Sender,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.RECEIVER,Receiver,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.REQUESTER,Requester,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.SENDER,Sender,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.SERVER,Server,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown
+SYSTEM.DEF.SVRCONN,Server Connection,TCP,SYSTEM,4096 KB,2007-10-04 07.55.36,not available,not available,inactive,unknown
+SYSTEM.DEF.CLNTCONN,Client Connection,TCP,SYSTEM,4096 KB,2007-09-21 09.55.43,not available,not available,inactive,unknown

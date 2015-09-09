@@ -1,0 +1,10 @@
+fragmentID,segments,deviceName,totalPages,usedPages,totalMB,usedMB,percentUtilisation
+<!>databaseName,geneos
+<!>status,up
+<!>creationDate,Feb 20 2007 10:57AM
+<!>lastTransactionDump,May 31 2007 10:37AM
+<!>logUtilisation,0.39 %
+<!>dataUtilisation,100.00 %
+Frag:0,system + default,data24,204800,204800,400.00,400.00,100.00 %
+Frag:1,logsegment,data25,76800,300,150.00,0.59,0.39 %
+Frag:2,logsegment,data25,25600,100,50.00,0.20,0.39 %

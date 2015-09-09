@@ -1,0 +1,6 @@
+userName,loginStatus,timeStamp,clientName,loginDuration
+cjeanson,Logged-In,Jul-24-06:30:08,eqp-exch3.itrsgroup.com:49938,
+exch_api,Logged-In,Jul-24-07:00:34,eqp-orc3.itrsgroup.com:32782,
+z_mcostan_api1,Disconnected,Jul-24-10:48:28,EQ949064.itrsgroup.com:4608,44 Secs (00:03:44)
+z_webspreads_api1,Disconnected,Jul-24-10:11:09,eqp-ranger1.itrsgroup.com:63518,24 Secs (00:02:24)
+z_dcockerh_api1,Logged-In,Jul-24-11:07:53,EQ933890.itrsgroup.com:4596,

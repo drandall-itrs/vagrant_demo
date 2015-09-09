@@ -1,0 +1,26 @@
+ID,NodeCount,TotalUnits,TotalCacheSize,SmallestCacheSize,AverageCacheSize,LargestCacheSize
+<!>samplingStatus,OK
+<!>Cluster,itrsgroup.prod.america
+<!>Connection,nysupsvr-899.itrsgroup.com:4444
+DailyAdjustmentPassThru,12,0,0 Entries,0 Entries,0 Entries,0 Entries
+MgrSegmentation,12,4442,4442 Entries,339 Entries,370.17 Entries,407 Entries
+ProductionByRegionMgr,12,1042011,1042011 Entries,84637 Entries,86834.25 Entries,89717 Entries
+ParameterDimension,12,4374,4374 Entries,339 Entries,364.5 Entries,406 Entries
+EqtCompanyProduction,12,341310,341310 Entries,27762 Entries,28442.5 Entries,29249 Entries
+ProductionByAssociate,12,4097,4097 Entries,313 Entries,341.42 Entries,367 Entries
+ProductionByIndustry,12,27516,27516 Entries,2185 Entries,2293 Entries,2406 Entries
+ProductionByProductsMktr,12,167603,167603 Entries,13595 Entries,13966.92 Entries,14429 Entries
+CompanyProductionMgr,12,1042013,1042013 Entries,84637 Entries,86834.42 Entries,89718 Entries
+CacheStateManagerCache,12,22,22 Entries,0 Entries,1.83 Entries,5 Entries
+DailyAdjustment,12,396070,396070 Entries,32071 Entries,33005.83 Entries,34056 Entries
+ProductionByProductsMgr,12,24671,24671 Entries,1965 Entries,2055.92 Entries,2157 Entries
+ProductDimension,12,562,562 Entries,34 Entries,46.83 Entries,58 Entries
+TradeDetails,12,0,0 Entries,0 Entries,0 Entries,0 Entries
+CompanyGlobalProduction,12,0,0 Entries,0 Entries,0 Entries,0 Entries
+PersonProductionMgr,12,17605,17605 Entries,1376 Entries,1467.08 Entries,1565 Entries
+ProductionByQualityMgr,12,14665,14665 Entries,1155 Entries,1222.08 Entries,1286 Entries
+CompanyPersonProductionMktr,12,376858,376858 Entries,30520 Entries,31404.83 Entries,32407 Entries
+CompanyProductionByProductsMgr,12,928874,928874 Entries,75142 Entries,77406.17 Entries,79630 Entries
+ProductionByQualityMktr,12,127232,127232 Entries,10285 Entries,10602.67 Entries,11009 Entries
+CompanyProductionByQualityMgr,12,842663,842663 Entries,68180 Entries,70221.92 Entries,72284 Entries
+TopTradeDetails,12,13971,13971 Entries,1115 Entries,1164.25 Entries,1230 Entries

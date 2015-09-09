@@ -1,0 +1,10 @@
+Item,Value
+Licenced Product,transformer
+Expiry Time (GMT),Tue Sep 17 01:00:00 EDT 2013
+Licensed Company,Caplin Systems
+Bound Host Name,-- undefined --
+Bound Local Port,-1
+Max DataSource Peers,-1
+version,6
+transformer-sdk,true
+monitor-sdk,true

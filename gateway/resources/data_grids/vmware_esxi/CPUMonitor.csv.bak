@@ -1,0 +1,7 @@
+name,Usage,Usage in MHz,Reserved capacity,System,Wait,Ready,Used,Idle,Swap wait,Utilization,Core utilization,Total capacity
+BIGIP-10.1.0.3341.1084,619,162,,5,17594,1190,1219,,0,,,
+Centos 6.4 x86_64 OracleDB,804,152,,0,18304,516,1146,,0,,,
+Sol10_x86,765,167,,0,18318,386,1257,,0,,,
+Fedora 14 x64 Server,4781,849,,0,12169,1253,6368,,0,,,
+RHEL 5.4 x86_64,1730,427,,0,15523,1178,3210,,0,,,
+Fedora 12 x86 Remote,837,200,,0,17834,618,1507,,0,,,

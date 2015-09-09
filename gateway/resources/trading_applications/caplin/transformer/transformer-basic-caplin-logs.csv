@@ -1,0 +1,10 @@
+name,status,permissions,lastModificationTime,fileSize,updateRate,triggerDetails,fileOwner,filename,/group
+<!>filesMonitored,5
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+transformer.log,OK,664 (-rw-rw-r--),Mon Aug  5 12:52:16 2013,0.5 Kb,0.0000 Kb/sec,,caplin,transformer.log,
+pipeline.log,OK,664 (-rw-rw-r--),Mon Aug  5 04:00:00 2013,0.0 Kb,0.0000 Kb/sec,,caplin,pipeline.log,
+packet-transformer.log,OK,664 (-rw-rw-r--),Mon Aug  5 16:17:19 2013,21165.8 Kb,0.4816 Kb/sec,,caplin,packet-transformer.log,
+jmx-transformer.log,OK,664 (-rw-rw-r--),Mon Aug  5 04:00:00 2013,0.0 Kb,0.0000 Kb/sec,,caplin,jmx-transformer.log,
+java.log,OK,664 (-rw-rw-r--),Mon Aug  5 04:00:00 2013,0.0 Kb,0.0000 Kb/sec,,caplin,java.log,

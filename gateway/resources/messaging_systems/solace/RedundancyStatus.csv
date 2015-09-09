@@ -1,0 +1,20 @@
+Item,Value
+Configuration Status,Enabled
+Auto Revert,No
+Redundancy Mode,Active/Active
+ADB Link Status,Up
+ADB Hello Status,Up
+Routing Interface; Primary,1/1/lag1:1
+Routing Interface Status; Primary,Up
+Routing Interface; Backup,1/1/lag1:2
+Routing Interface Status; Backup,Up
+VRRP Status; Primary,Master
+VRRP Status; Backup,Backup
+VRRP Priority; Primary,250
+VRRP Priority; Backup,100
+Message Spool Status; Primary,Ready
+Message Spool Status; Backup,Ready
+Mate Reported ADB Status; Primary,Active
+Mate Reported ADB Status; Backup,Standby
+Mate Reported VRRP Priority; Primary,Release (0)
+Mate Reported VRRP Priority; Backup,Active (250)

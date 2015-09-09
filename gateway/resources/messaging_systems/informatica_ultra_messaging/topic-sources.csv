@@ -1,0 +1,6 @@
+key,rank,appId,contextId,ipAddr,hostname,PID,timestamp,transportSession,msgTxRate,byteTxRate,msgRxsRate,byteRxsRate,nakRxRate
+<!>topic,topic-01
+<!>numSources,3
+SRCLBTRM00000003,1,topicResDom3,1035f580,127.0.0.1,centos5dev,12652,Thu Aug  9 12:37:07 2012,LBTRM:192.168.50.206:14303:c0fc56d6:224.10.10.13:14400,10.00,460.00,89.67,4124.67,254.33
+SRCLBTRM00000002,2,topicResDom2,1a09b580,127.0.0.1,centos5dev,12646,Thu Aug  9 12:37:06 2012,LBTRM:192.168.50.206:14302:e50c106:224.10.10.12:14400,10.00,460.00,0.00,0.00,0.00
+SRCLBTRM00000001,3,topicResDom1,7f8c580,127.0.0.1,centos5dev,12640,Thu Aug  9 12:37:06 2012,LBTRM:192.168.50.206:14301:38a16eb7:224.10.10.11:14400,10.00,460.00,0.00,0.00,0.00

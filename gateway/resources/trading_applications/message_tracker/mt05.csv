@@ -1,0 +1,5 @@
+messageID,failureType,lastCheckpointVisited,seenAt,expectedAt,description,lastSeenTime
+<!>lostMessages,3
+ID=298462950,LOST,REQ,REQ,ACK,EUREX,12:14:56.938
+ID=548287595,LOST,REQ,REQ,ACK,EUREX,12:19:23.193
+ID=395836593,LOST,REQ,REQ,ACK,EUREX,12:22:11.201

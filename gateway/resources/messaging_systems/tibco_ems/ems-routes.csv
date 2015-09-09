@@ -1,0 +1,5 @@
+route,type,URL
+<!>totalRoutes,3,
+LON-EQU-01,active,tcp://lon-equ-app-01.uk.itrs.com:8222
+LON-EQU-02,active,tcp://lon-equ-app-02.uk.itrs.com:8223
+LON-EQU-03,active,tcp://lon-equ-db-01.uk.itrs.com:8224

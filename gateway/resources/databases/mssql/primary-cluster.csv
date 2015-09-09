@@ -1,0 +1,5 @@
+ClusterName,ServerName
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,1
+VMWINSERV,NYSUPSVR17

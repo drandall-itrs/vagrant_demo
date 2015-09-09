@@ -1,0 +1,11 @@
+Database_Name,DaysSinceLastBackup,LastBackupDate
+<!>queryStatus,idle
+<!>queryDuration,0 sec
+<!>rowsReturned,7
+CKRIMMEL,NEVER,NEVER     
+master,NEVER,NEVER     
+model,NEVER,NEVER     
+msdb,NEVER,NEVER     
+SSC_NETS,NEVER,NEVER     
+tempdb,NEVER,NEVER     
+TEST_PLUGIN,NEVER,NEVER     

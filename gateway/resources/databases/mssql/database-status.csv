@@ -1,0 +1,12 @@
+instanceName,Data File(s) Size (KB),Log File(s) Size (KB),Log File(s) Used Size (KB),Percent Log Used,Active Transactions,Transactions/sec,Repl. Pending Xacts,Repl. Trans. Rate,Log Cache Reads/sec,Availability
+<!>dataSize, 
+<!>logSize, 
+master,4096,504,232,46,0,0.4,2213867520,0,0,present
+model,1216,504,236,46,0,0,2213867520,0,0,present
+tempdb,8192,504,281,55,0,1.79,0,0,0,
+msdb,5568,504,344,68,0,0.3,0,0,0,
+CKRIMMEL,299008,2552,864,33,0,0.1,0,0,0,
+TEST_PLUGIN,2240,496,324,65,0,0,0,0,0,
+SSC_NETS,6144,1272,639,50,0,0,0,0,0,
+mssqlsystemresource,38976,504,280,55,0,0,0,0,0,
+_Total,365440,6840,3200,46,0,2.59,4427735040,0,0,

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA2009.1-090526 at 2009-06-10 10:52:11 by slapp on tpad03-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/RApureEMF2-090402/gateway.xsd">
+	<types>
+		<type name="IBM MQ">
+			<sampler ref="Queue Overview"/>
+			<sampler ref="Channel Overview"/>
+			<sampler ref="Queue GWA-TO-RON-RM5-TRD-R"/>
+			<sampler ref="Queue RON-RM5-GWB-FTSTRD-XMT"/>
+			<sampler ref="Queue GWB-TO-RON-RM5-ACKNAK-R"/>
+			<sampler ref="Channel GWA-TO-RON-RM5-TRD-R"/>
+			<sampler ref="Channel GWA-TO-RON-RM1-TRD-R"/>
+			<sampler ref="Channel GWA-TO-RON-RM7-TRD-R"/>
+		</type>
+		<type name="IBM MQ System"/>
+	</types>
+	<samplers>
+		<sampler name="Queue Overview">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-q-overview.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Channel Overview">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-c-overview.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Queue GWA-TO-RON-RM5-TRD-R">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-q-details-1.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Queue RON-RM5-GWB-FTSTRD-XMT">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-q-details-3.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Queue GWB-TO-RON-RM5-ACKNAK-R">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-q-details-2.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Channel GWA-TO-RON-RM5-TRD-R">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-c-details-1.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Channel GWA-TO-RON-RM1-TRD-R">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-c-details-2.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+		<sampler name="Channel GWA-TO-RON-RM7-TRD-R">
+			<group>MQM</group>
+			<sampleInterval>
+				<data>0</data>
+			</sampleInterval>
+			<plugin>
+				<toolkit>
+					<samplerScript>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\cat.bat </data>
+						<var ref="INSTALLPATH"/>
+						<data>\Solutions\mq\mq-c-details-3.csv</data>
+					</samplerScript>
+				</toolkit>
+			</plugin>
+		</sampler>
+	</samplers>
+	<rules>
+		<ruleset name="MQM">
+			<rule name="Q Overview Depth">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;Queue Overview&quot;)]/rows/row/cell[(@column=&quot;queueDepth&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<integer>50</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>25</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+			<rule name="Channel Overview mcaStatus">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[(@name=&quot;Channel Overview&quot;)]/rows/row/cell[(@column=&quot;mcaStatus&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<notEqual>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>running</string>
+						</notEqual>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+			<rule name="Channel Details status">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[wild(@name,&quot;Channel *&quot;)]/rows/row[(@name=&quot;Channel Status&quot;)]/cell</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<notEqual>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>running</string>
+						</notEqual>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+			<rule name="Queue Details trigger">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler/dataview[wild(@name,&quot;Queue *&quot;)]/rows/row[(@name=&quot;triggerControl&quot;)]/cell</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<notEqual>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>on</string>
+						</notEqual>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+		</ruleset>
+	</rules>
+</gateway>

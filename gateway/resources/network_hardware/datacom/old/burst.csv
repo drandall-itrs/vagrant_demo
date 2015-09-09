@@ -1,0 +1,17 @@
+Keyn,Name,GroupID,SampleInterval,UtilizationThreshold,DataRate,UnclearedEvents,EventsLastSample,BurstByteCount,BurstByteCount Last Sample,EventID,TimeStamp,EventByteCount
+<!>Port,1
+<!>GroupsWithEvents,1
+<!>UnclearedEvents,318
+<!>EventsLastSample,0
+<!>MaxEventsPerChannel,10
+Group 1,Group 1,1,1.0 ms,49%,1 Mbits,3.18,0,661579,0,,,
+Group 1#015370,,,,,,,,,,15370,15:38:42.376586,1237
+Group 1#015372,,,,,,,,,,15372,15:38:42.376586,1315
+Group 1#015375,,,,,,,,,,15375,15:38:42.376586,858
+Group 1#015377,,,,,,,,,,15377,15:38:42.376586,899
+Group 1#015379,,,,,,,,,,15379,15:38:42.376586,706
+Group 1#015381,,,,,,,,,,15381,15:38:42.376586,1231
+Group 1#015383,,,,,,,,,,15383,15:38:42.376586,2427
+Group 1#015385,,,,,,,,,,15385,15:38:42.376586,2740
+Group 1#015387,,,,,,,,,,15387,15:38:42.376586,2495
+Group 1#015389,,,,,,,,,,15389,15:38:42.376586,1446

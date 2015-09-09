@@ -1,0 +1,5 @@
+Key,Interface Name,DealType,Processed Mvts 1H,Processed Mvts Today,Error Mvts 1H,Error Mvts Today
+<!>Data Availability,OK
+IMPORT_ITF_1 - FxSwapDeals,IMPORT_ITF_1,FxSwapDeals,0,33,0,0
+IMPORT_ITF_1 - SpotDeals,IMPORT_ITF_1,SpotDeals,0,66,0,33
+IMPORT_ITF_1 - ForwardDeals,IMPORT_ITF_1,ForwardDeals,0,33,0,0

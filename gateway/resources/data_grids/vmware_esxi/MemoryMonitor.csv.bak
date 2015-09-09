@@ -1,0 +1,7 @@
+name,Usage,Granted,Active,Shared,Zero,Unreserved,Swap used,Shared common,Heap,Heap free,State,Balloon,Overhead,Reserved capacity,Swapped,Swap target,Swap in,Swap out,Balloon target,Consumed,Used by VMkernel,Swap in rate,Swap out rate,Active write,Compressed,Compression rate,Decompression rate,Reserved overhead,Total capacity,Zipped memory,Memory saved by zipping
+BIGIP-10.1.0.3341.1084,699,1020400,73400,11884,9420,,,,,,,0,40432,,0,0,0,0,0,1009672,,0,0,20968,0,0,0,110304,,0,0
+Centos 6.4 x86_64 OracleDB,599,4329472,267140,956,396,,,,,,,0,134336,,0,0,0,0,0,4328860,,0,0,222616,0,0,0,211916,,0,0
+Sol10_x86,899,4194304,377484,3468,2312,,,,,,,0,125328,,0,0,0,0,0,4191504,,0,0,293600,0,0,0,202644,,0,0
+Fedora 14 x64 Server,799,1048576,83884,488,208,,,,,,,0,66920,,0,0,0,0,0,1048164,,0,0,52428,0,0,0,142292,,0,0
+RHEL 5.4 x86_64,2299,4176884,964688,4220,3248,,,,,,,0,169756,,0,0,0,0,0,4173032,,0,0,754972,0,0,0,241304,,0,0
+Fedora 12 x86 Remote,699,2097108,146800,281604,26908,,,,,,,0,81200,,0,0,0,0,0,2021440,,0,0,125828,0,0,0,154548,,0,0

@@ -1,0 +1,9 @@
+Server Name,status_int,Description,Product Name,Product Version,Status,Start Date,Nb StartUp 1h,NbStartUp 15min,HostName,PID,pCpu,pMemory,Elapsed Time,Elapsed Time In Minuts,Cmd
+<!>Data Availability,OK
+<!>Nb Servers Up,3
+<!>Nb Servers Down,2
+tradekast,1,Kondor+ Export Server,Kondor+,30.3.05300 build 1398-30.3.05300p9,OK,2013.08.08 10:42:32,0,0,JILLx64,5658,0.10,1.9,02:05,125,/usr/kplushome/peripherals/x86sol/tradekast
+kms,1,Kondor+ Message Server,Kondor+,30.3.05300 build 1398-30.3.05300p9,OK,2013.08.08 09:51:49,0,0,JILLx64,1058,0.10,1.1,02:56,176,/usr/kplushome/servers/x86sol/kms
+kts,0,Kondor+ Task Server,-,-,OK,-,0,0,-,-,-,-,-,-,-
+kfs,0,Kondor+ Financial Server,-,-,OK,-,0,0,-,-,-,-,-,-,-
+kis,1,Kondor+ Import Server,Kondor+,30.3.05303 build 1398-30.3.05303p1,OK,2013.08.08 09:53:51,0,0,JILLx64,1209,0.10,1.9,02:54,174,/usr/kplushome/peripherals/x86sol/kis

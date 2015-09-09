@@ -1,0 +1,5 @@
+Name,Status,Adapter,Port,Total Connections,Idle Threads
+nhp0,Started,0.0.0.0,10610,14,4
+nhp1,Started,0.0.0.0,2000,0,4
+nsp0,Started,0.0.0.0,10000,1,4
+nsp1,Started,0.0.0.0,12345,0,4

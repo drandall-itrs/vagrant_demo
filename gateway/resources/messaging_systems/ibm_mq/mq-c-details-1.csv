@@ -1,0 +1,27 @@
+attribute,value
+Name,GWA.TO.RON.RM5.TRD.R
+Channel Started,2007-09-21 09.59.03
+Last Message Time,2007-09-21 16.05.03
+Buffers Sent,7
+Buffers Read,9
+Bytes Sent,1304 bytes
+Bytes Read,2128 bytes
+Remote Queue Manager,-
+Local Address,192.168.10.213
+Job Name,708
+SSL Peer Name,-
+MCA Status,running
+Sent Messages,6
+Retries Left,6
+Stop Requested,no
+Heart Beat Interval,300
+Transmit Queue Name,-
+Connection Name,192.168.10.213
+Message Count,23
+Channel type,Sender
+Current luwid,30863
+Last luwid,67944
+Current seq number,820
+Last seq number,219
+Channel Status,running
+

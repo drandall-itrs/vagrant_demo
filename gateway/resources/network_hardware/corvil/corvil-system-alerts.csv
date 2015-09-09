@@ -1,0 +1,15 @@
+key,type,time,timestamp,severity,deviceIP,sourceFQN,description,reason,value,typeDiscriminator,count
+<!>totalAlerts,1
+<!>numAlertsSet,1
+<!>numAlertsClear,0
+<!>numInformationalAlertsSet,1
+<!>numWarningAlertsSet,0
+<!>numMinorAlertsSet,0
+<!>numMajorAlertsSet,0
+<!>numSevereAlertsSet,0
+<!>numInformationalAlertsClear,0
+<!>numWarningAlertsClear,0
+<!>numMinorAlertsClear,0
+<!>numMajorAlertsClear,0
+<!>numSevereAlertsClear,0
+2,systemStartup,Mon Feb 25 17:46:46 2013,1361814406,informational,195.27.3.163,system,The System has started up.,set,0.0,system,3
