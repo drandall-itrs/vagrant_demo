@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 17:09:00 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 17:11:14 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -14687,7 +14687,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 			</samplerGroup>
 		</samplerGroup>
 		<samplerGroup name="Electronic Trading">
-			<samplerGroup name="Message Tracker">
+			<samplerGroup name="MESSAGE TRACKER">
 				<sampler name="Client Latency">
 					<var-group>
 						<data>CLIENT</data>
@@ -14698,7 +14698,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gateway/resourcestrading_applications/message_tracker/mt03.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/message_tracker/mt03.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14713,7 +14713,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gateway/resourcestrading_applications/message_tracker/mt02.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/message_tracker/mt02.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14728,7 +14728,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gateway/resourcestrading_applications/message_tracker/mt04.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/message_tracker/mt04.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
@@ -14743,7 +14743,7 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 					<plugin>
 						<toolkit>
 							<samplerScript>
-								<data>/bin/cat /opt/geneos/gateway/resourcestrading_applications/message_tracker/mt05.csv</data>
+								<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/message_tracker/mt05.csv</data>
 							</samplerScript>
 						</toolkit>
 					</plugin>
