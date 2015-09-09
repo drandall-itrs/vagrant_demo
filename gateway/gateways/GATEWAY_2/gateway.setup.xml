@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 11:59:21 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-10 12:00:26 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -21863,64 +21863,6 @@ Loop</data>
 						</commands>
 						<silent>true</silent>
 					</task>
-				</command>
-			</commandGroup>
-			<commandGroup name="Demo Commands">
-				<command name="Generate Error">
-					<targets>
-						<target>/geneos/gateway/directory/probe/managedEntity[(attr(&quot;OS&quot;)=&quot;Linux&quot;)]</target>
-					</targets>
-					<userCommand>
-						<type>script</type>
-						<runLocation>netprobe</runLocation>
-						<args>
-							<arg>
-								<static>/opt/geneos/start error</static>
-							</arg>
-						</args>
-					</userCommand>
-				</command>
-				<command name="Generate Warning">
-					<targets>
-						<target>/geneos/gateway/directory/probe/managedEntity[(attr(&quot;OS&quot;)=&quot;Linux&quot;)]</target>
-					</targets>
-					<userCommand>
-						<type>script</type>
-						<runLocation>netprobe</runLocation>
-						<args>
-							<arg>
-								<static>/opt/geneos/start warning</static>
-							</arg>
-						</args>
-					</userCommand>
-				</command>
-				<command name="Demo Systems Status">
-					<targets>
-						<target>/geneos/gateway/directory/probe/managedEntity[attr(&quot;OS&quot;)=&quot;Linux&quot;]</target>
-					</targets>
-					<userCommand>
-						<type>script</type>
-						<runLocation>netprobe</runLocation>
-						<args>
-							<arg>
-								<static>/opt/geneos/status</static>
-							</arg>
-						</args>
-					</userCommand>
-				</command>
-				<command name="Show IX-MA Log File">
-					<targets>
-						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(param(&quot;PluginName&quot;)=&quot;IX-MA&quot;)]/dataview[(@name=&quot;IX-MA&quot;)]/rows/row/cell</target>
-					</targets>
-					<userCommand>
-						<type>script</type>
-						<runLocation>netprobe</runLocation>
-						<args>
-							<arg>
-								<static>/usr/bin/tail -400 /opt/geneos/all_samplers/ix-ma/NewsLog20130501.log</static>
-							</arg>
-						</args>
-					</userCommand>
 				</command>
 			</commandGroup>
 		</commandGroup>
