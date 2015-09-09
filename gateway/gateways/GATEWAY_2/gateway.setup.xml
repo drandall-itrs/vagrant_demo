@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:24:23 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-09 14:45:31 by owatson on ITRSLP072-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -1267,35 +1267,48 @@
 				<var name="filebase">
 					<string>/opt/geneos/gateway/resources/ms-sql</string>
 				</var>
-				<sampler ref="db-status"/>
-				<sampler ref="disabled-jobs"/>
-				<sampler ref="jobs"/>
-				<sampler ref="errors"/>
-				<sampler ref="last-backup"/>
-				<sampler ref="ms-sql-locks"/>
-				<sampler ref="memory-manager"/>
-				<sampler ref="server-status"/>
+				<sampler ref="Buffer Manager"/>
+				<sampler ref="Database Errors"/>
+				<sampler ref="Database Locks"/>
+				<sampler ref="Database Size"/>
+				<sampler ref="Database Status"/>
+				<sampler ref="Database Version"/>
+				<sampler ref="Disabled Jobs"/>
+				<sampler ref="Job Status"/>
+				<sampler ref="Last Backups"/>
+				<sampler ref="Latches"/>
+				<sampler ref="Long Running Queries"/>
+				<sampler ref="Primary Cluster"/>
+				<sampler ref="DB Server Status"/>
+				<sampler ref="SQL FKM"/>
+				<sampler ref="SQL Processes"/>
+				<sampler ref="SQL DB Locks"/>
 			</type>
 			<type name="oracle">
 				<var name="filebase">
 					<string>/opt/geneos/gateway/resources/oracle</string>
 				</var>
-				<sampler ref="status"/>
-				<sampler ref="trace-files"/>
-				<sampler ref="table-space"/>
-				<sampler ref="db-locks"/>
-				<sampler ref="ora-long-queries"/>
+				<sampler ref="Current Sessions"/>
+				<sampler ref="DB Locks"/>
+				<sampler ref="Long Queries"/>
+				<sampler ref="Server Status"/>
+				<sampler ref="Table Space"/>
+				<sampler ref="Temp Server Status"/>
+				<sampler ref="Temp Table Space"/>
+				<sampler ref="Trace Files"/>
+				<sampler ref="VLock"/>
+				<sampler ref="VSession"/>
 			</type>
 			<type name="sybase">
 				<var name="filebase">
 					<string>/opt/geneos/gateway/resources/sybase</string>
 				</var>
-				<sampler ref="locks"/>
-				<sampler ref="users"/>
-				<sampler ref="capacity"/>
-				<sampler ref="devices"/>
-				<sampler ref="long-queries"/>
-				<sampler ref="segments"/>
+				<sampler ref="Locks"/>
+				<sampler ref="Users"/>
+				<sampler ref="Capacity"/>
+				<sampler ref="Devices"/>
+				<sampler ref="Long-Queries"/>
+				<sampler ref="Segments"/>
 			</type>
 		</typeGroup>
 		<typeGroup name="Custom">
@@ -9522,7 +9535,7 @@ publishingPeriod=10</data>
 				</dataviews>
 			</sampler>
 		</samplerGroup>
-		<samplerGroup name="Databases">
+		<samplerGroup name="Databases-OLD">
 			<samplerGroup name="Sybase">
 				<sampler name="users">
 					<group>sybase</group>
@@ -13874,6 +13887,715 @@ thor,192.168.51.1, 1023.4 MHz, 75.2%</data>
 					</toolkit>
 				</plugin>
 			</sampler>
+		</samplerGroup>
+		<samplerGroup name="Databases">
+			<samplerGroup name="Sybase">
+				<sampler name="Users">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/gatewa/sybase/users.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Long-Queries">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/long-queries.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Locks">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/locks.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Segments">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/segments.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Devices">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/devices.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Capacity">
+					<group>Sybase</group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/sybase/capacity.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="MYSQL">
+				<sampler name="MYSQL">
+					<var-group>
+						<data>MYSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<sql-toolkit>
+							<queries>
+								<query>
+									<name>
+										<data>Events Table</data>
+									</name>
+									<sql>
+										<data>SELECT `ref` as ReferenceID,
+    `managed_entity` as ManagedEntity,
+    from_unixtime(`timestamp`) as TimeStamp,
+    `node_ref` as Node,
+    `varname` as Variable,
+    `severity` as Severity, 
+    `description` as Description
+FROM `event_table`
+WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data>
+									</sql>
+								</query>
+								<query>
+									<name>
+										<data>Table Status</data>
+									</name>
+									<sql>
+										<data>show table status;</data>
+									</sql>
+								</query>
+								<query>
+									<name>
+										<data>Process List</data>
+									</name>
+									<sql>
+										<data>show full processlist;</data>
+									</sql>
+								</query>
+								<query>
+									<name>
+										<data>Status</data>
+									</name>
+									<sql>
+										<data>show status;</data>
+									</sql>
+								</query>
+								<query>
+									<name>
+										<data>ServerStatus</data>
+									</name>
+									<sql>
+										<data>SHOW GLOBAL STATUS where Variable_name LIKE &apos;aborted_connects&apos; or Variable_name LIKE &quot;Handler_read%&quot; or Variable_name LIKE &apos;max_used_connections&apos;;</data>
+									</sql>
+								</query>
+								<query>
+									<name>
+										<data>ServerVariables</data>
+									</name>
+									<sql>
+										<data>show global variables where Variable_name LIKE &apos;%version%&apos; or Variable_name LIKE &apos;max_connections&apos;;</data>
+									</sql>
+								</query>
+							</queries>
+							<connection>
+								<database>
+									<mysql>
+										<var-serverName>
+											<data>localhost</data>
+										</var-serverName>
+										<var-databaseName>
+											<data>geneos_db</data>
+										</var-databaseName>
+										<var-port>
+											<data>3306</data>
+										</var-port>
+									</mysql>
+								</database>
+								<var-userName>
+									<data>root</data>
+								</var-userName>
+								<password>
+									<plaintext>8roadway</plaintext>
+								</password>
+							</connection>
+						</sql-toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="MYSQL Processes">
+					<var-group>
+						<data>MYSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<processes>
+							<processes>
+								<process>
+									<data>
+										<alias>
+											<data>/usr/sbin/mysqld</data>
+										</alias>
+										<start>
+											<data>/etc/init.d/mysql start</data>
+										</start>
+										<stop>
+											<data>/etc/init.d/mysql stop</data>
+										</stop>
+										<logFile>
+											<data>/var/log/mysql/error.log</data>
+										</logFile>
+									</data>
+								</process>
+							</processes>
+						</processes>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="MSSQL">
+				<sampler name="Buffer Manager">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/buffer-manager.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Database Errors">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-errors.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Database Locks">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-locks.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Database Size">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-size.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Database Status">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Database Version">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/database-version.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Disabled Jobs">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/disabled-jobs.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Job Status">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/job-status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Last Backups">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/last-backups.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Latches">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/latches.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Long Running Queries">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/long-running-queries.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Primary Cluster">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/primary-cluster.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="DB Server Status">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/db-server-status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="SQL FKM">
+					<var-group>
+						<data>Application</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-fkm.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="SQL Processes">
+					<var-group>
+						<data>Application</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-processes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="SQL DB Locks">
+					<var-group>
+						<data>MSSQL</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/mssql/sql-db-locks.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Oracle">
+				<sampler name="Current Sessions">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/current-sessions.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="DB Locks">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/database-locks.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Long Queries">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/long-queries.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Server Status">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/server-status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Table Space">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/table-space.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Temp Server Status">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/temp-server-status.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Temp Table Space">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/temp-table-space.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Trace Files">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/trace-files.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="VLock">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/vlock.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="VSession">
+					<var-group>
+						<data>Oracle</data>
+					</var-group>
+					<sampleInterval>
+						<data>0</data>
+					</sampleInterval>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/oracle/vsession.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Informix">
+				<sampler name="Asynch IO Stats by Process">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/asynch.io.stats.by.procs.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Database Utilization">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/database.utilization.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Disk Write Flushes">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/disk.write.flushes.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Global MultiThread Info IVP">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/global.multithread.info.ivp.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Global MultiThread Info VPS">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/global.multithread.info.vps.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Database Locks">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/locks.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Database Logging">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/logging.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Profile Counts">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/profile.counts.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Informix Shared Memory Stats">
+					<var-group>
+						<data>Informix Database</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/bin/cat /opt/geneos/all_samplers/databases/informix/sharedmem.stats.csv</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
 		</samplerGroup>
 	</samplers>
 	<actions>
