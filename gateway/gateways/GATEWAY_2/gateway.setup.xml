@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 11:30:28 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 13:03:52 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -11740,48 +11740,6 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with element details&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
-            &quot;step&quot;: &quot;open&quot;
-        },
-        {
-            &quot;value&quot;: &quot;lyZ5lwC4ssg32RZifA&quot;,
-            &quot;target&quot;: &quot;name=j_username&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;hfFXaXsoPQd6u9h2w/QIvQ\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;lyZ5lwC4ssg32RZifA\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;aAhyMsylmlbJ0NZvQQ&quot;,
-            &quot;target&quot;: &quot;name=j_password&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;ujsix27q0QzZqOrvHohoHg\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;aAhyMsylmlbJ0NZvQQ\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
-            &quot;step&quot;: &quot;clickAndWait&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;link=Montage&quot;,
-            &quot;step&quot;: &quot;click&quot;
-        }
-    ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:8181/&quot;,
-    &quot;noofsteps&quot;: 14
-}</code>
-								</script>
-								<elementDetails>
-									<data>true</data>
-								</elementDetails>
-							</scenario>
-							<scenario>
-								<name>MONTAGE Non-Detail</name>
-								<script>
-									<code>{
-    &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with no element details&quot;,
-    &quot;steps&quot;: [
-        {
             &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
             &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
@@ -11810,7 +11768,49 @@ publishingPeriod=10</data>
         }
     ],
     &quot;noofsteps&quot;: 14,
-    &quot;url&quot;: &quot;http://presales-demo-vm:8181/&quot;
+    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;
+}</code>
+								</script>
+								<elementDetails>
+									<data>true</data>
+								</elementDetails>
+							</scenario>
+							<scenario>
+								<name>MONTAGE Non-Detail</name>
+								<script>
+									<code>{
+    &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with no element details&quot;,
+    &quot;steps&quot;: [
+        {
+            &quot;value&quot;: &quot;&quot;,
+            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
+            &quot;step&quot;: &quot;open&quot;
+        },
+        {
+            &quot;value&quot;: &quot;lyZ5lwC4ssg32RZifA&quot;,
+            &quot;target&quot;: &quot;name=j_username&quot;,
+            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;hfFXaXsoPQd6u9h2w/QIvQ\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;lyZ5lwC4ssg32RZifA\&quot;}&quot;,
+            &quot;step&quot;: &quot;type&quot;
+        },
+        {
+            &quot;value&quot;: &quot;aAhyMsylmlbJ0NZvQQ&quot;,
+            &quot;target&quot;: &quot;name=j_password&quot;,
+            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;ujsix27q0QzZqOrvHohoHg\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;aAhyMsylmlbJ0NZvQQ\&quot;}&quot;,
+            &quot;step&quot;: &quot;type&quot;
+        },
+        {
+            &quot;value&quot;: &quot;&quot;,
+            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
+            &quot;step&quot;: &quot;clickAndWait&quot;
+        },
+        {
+            &quot;value&quot;: &quot;&quot;,
+            &quot;target&quot;: &quot;link=Montage&quot;,
+            &quot;step&quot;: &quot;click&quot;
+        }
+    ],
+    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;,
+    &quot;noofsteps&quot;: 14
 }</code>
 								</script>
 								<elementDetails>
@@ -11824,18 +11824,18 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Gateway ORB&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;/orb/bdos/local&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;link=Directory&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;clickAndWait&quot;
         }
     ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:7050&quot;,
-    &quot;noofsteps&quot;: 4
+    &quot;noofsteps&quot;: 4,
+    &quot;url&quot;: &quot;http://192.168.142.20:7050&quot;
 }</code>
 								</script>
 								<elementDetails>
@@ -11849,53 +11849,53 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Untitled&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;/orb&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
         },
         {
-            &quot;value&quot;: &quot;Gateway version&quot;,
             &quot;target&quot;: &quot;//tr[3]/td[2]&quot;,
+            &quot;value&quot;: &quot;Gateway version&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Gateway version}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;Page generated at&quot;,
             &quot;target&quot;: &quot;css=div.timesamp&quot;,
+            &quot;value&quot;: &quot;Page generated at&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Page generated at}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;Built at&quot;,
             &quot;target&quot;: &quot;//tr[7]/td[2]&quot;,
+            &quot;value&quot;: &quot;Built at&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Built at}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;link=Show All Queues&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;clickAndWait&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;Orb Diagnostic Mode&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;verifyTextPresent&quot;
         }
     ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:7050&quot;,
-    &quot;noofsteps&quot;: 9
+    &quot;noofsteps&quot;: 9,
+    &quot;url&quot;: &quot;http://192.168.142.20:7050&quot;
 }</code>
 								</script>
 								<elementDetails>
@@ -33615,9 +33615,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33848,9 +33850,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
