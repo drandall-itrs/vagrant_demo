@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:32:28 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:36:39 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -39614,6 +39614,13 @@ SET LOG_FREQUENCY = 10-->
 			<string>GATEWAY_2</string>
 		</var>
 		<historyFiles>1</historyFiles>
+		<httpConnectionRequirements>
+			<internalData>
+				<acceptHosts>
+					<all/>
+				</acceptHosts>
+			</internalData>
+		</httpConnectionRequirements>
 		<debug/>
 	</operatingEnvironment>
 	<!-- DISCLAIMER: No warranties are given that the Automated Setup 
