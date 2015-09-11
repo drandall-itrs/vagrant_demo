@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:29:09 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:32:28 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -11741,7 +11741,7 @@ publishingPeriod=10</data>
 				<sampleInterval>
 					<data>0</data>
 				</sampleInterval>
-				<sampleOnStartup>false</sampleOnStartup>
+				<sampleOnStartup>true</sampleOnStartup>
 				<plugin>
 					<euem>
 						<scenarios>
@@ -11785,48 +11785,6 @@ publishingPeriod=10</data>
 								</script>
 								<elementDetails>
 									<data>true</data>
-								</elementDetails>
-							</scenario>
-							<scenario>
-								<name>MONTAGE Non-Detail</name>
-								<script>
-									<code>{
-    &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with no element details&quot;,
-    &quot;steps&quot;: [
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
-            &quot;step&quot;: &quot;open&quot;
-        },
-        {
-            &quot;value&quot;: &quot;lyZ5lwC4ssg32RZifA&quot;,
-            &quot;target&quot;: &quot;name=j_username&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;hfFXaXsoPQd6u9h2w/QIvQ\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;lyZ5lwC4ssg32RZifA\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;aAhyMsylmlbJ0NZvQQ&quot;,
-            &quot;target&quot;: &quot;name=j_password&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;ujsix27q0QzZqOrvHohoHg\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;aAhyMsylmlbJ0NZvQQ\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
-            &quot;step&quot;: &quot;clickAndWait&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;link=Montage&quot;,
-            &quot;step&quot;: &quot;click&quot;
-        }
-    ],
-    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;,
-    &quot;noofsteps&quot;: 14
-}</code>
-								</script>
-								<elementDetails>
-									<data>false</data>
 								</elementDetails>
 							</scenario>
 							<scenario>
@@ -11912,41 +11870,6 @@ publishingPeriod=10</data>
 								</script>
 								<elementDetails>
 									<data>true</data>
-								</elementDetails>
-							</scenario>
-							<scenario>
-								<name>Test</name>
-								<script>
-									<code>{
-    &quot;scenario&quot;: &quot;Untitled&quot;,
-    &quot;steps&quot;: [
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=pc2xyw8mgcg91wcbknqwg30jy&quot;,
-            &quot;step&quot;: &quot;open&quot;
-        },
-        {
-            &quot;value&quot;: &quot;admin&quot;,
-            &quot;target&quot;: &quot;name=j_username&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;admin&quot;,
-            &quot;target&quot;: &quot;name=j_password&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
-            &quot;step&quot;: &quot;clickAndWait&quot;
-        }
-    ],
-    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;,
-    &quot;noofsteps&quot;: 4
-}</code>
-								</script>
-								<elementDetails>
-									<data>false</data>
 								</elementDetails>
 							</scenario>
 						</scenarios>
