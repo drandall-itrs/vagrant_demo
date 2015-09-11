@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-10 14:01:28 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 11:26:32 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -309,6 +309,12 @@
 							<probe ref="localhost_7044"/>
 							<addTypes>
 								<type ref="gateway-sql"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="ActiveMQ">
+							<probe ref="localhost_7034"/>
+							<addTypes>
+								<type ref="ActiveMQ"/>
 							</addTypes>
 						</managedEntity>
 					</managedEntityGroup>
@@ -2106,6 +2112,21 @@
 				<sampler ref="IIS System"/>
 				<sampler ref="IIS Web Service"/>
 				<sampler ref="IIS Web Service Cache"/>
+			</type>
+		</typeGroup>
+		<typeGroup name="ActiveMQ">
+			<type name="ActiveMQ">
+				<var name="JMX_URL">
+					<string>192.168.142.20:50505</string>
+				</var>
+				<var name="BrokerName">
+					<string>GeneosService</string>
+				</var>
+				<sampler ref="SubscriptionStatus"/>
+				<sampler ref="QueueStatus"/>
+				<sampler ref="TopicStatus"/>
+				<sampler ref="TempQueueStatus"/>
+				<sampler ref="BrokerStatus"/>
 			</type>
 		</typeGroup>
 	</types>
@@ -19833,6 +19854,497 @@ Loop</data>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
+		<samplerGroup name="ActiveMQ">
+			<sampler name="SubscriptionStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Subscription,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>DestinationName</label>
+								<rowTemplate>
+									<data>$1.DestinationName</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>Active</label>
+								<rowTemplate>
+									<data>$1.Active</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchedCounter</label>
+								<rowTemplate>
+									<data>$1.DispatchedCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCounter</label>
+								<rowTemplate>
+									<data>$1.EnqueueCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCounter</label>
+								<rowTemplate>
+									<data>$1.DequeueCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>PendingQueueSize</label>
+								<rowTemplate>
+									<data>$1.PendingQueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchedQueueSize</label>
+								<rowTemplate>
+									<data>$1.DispatchedQueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ClientId</label>
+								<rowTemplate>
+									<data>$1.ClientId</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConnectionIdConnectionId</label>
+								<rowTemplate>
+									<data>$1.ConnectionId</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="QueueStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Queue,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="TopicStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Topic,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="TempQueueStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=TempQueue,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="BrokerStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Broker</data>
+								</value>
+							</alias>
+						</aliases>
+						<rows>
+							<columnLabels>
+								<label>
+									<data>attribute</data>
+								</label>
+								<label>
+									<data>value</data>
+								</label>
+							</columnLabels>
+							<row>
+								<value>
+									<data>BrokerId,$1.BrokerId</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TempLimit,$1.TempLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalEnqueueCount,$1.TotalEnqueueCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalDequeueCount,$1.TotalDequeueCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalConsumerCount,$1.TotalConsumerCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalMessageCount,$1.TotalMessageCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>MemoryPercentUsage,$1.MemoryPercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>MemoryLimit,$1.MemoryLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StoreLimit,$1.StoreLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StorePercentUsage,$1.StorePercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TempPercentUsage,$1.TempPercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StatisticsEnabled,$1.StatisticsEnabled</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>BrokerVersion,$1.BrokerVersion</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>Slave,$1.Slave</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>BrokerName,$1.BrokerName</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>Persistent,$1.Persistent</data>
+								</value>
+							</row>
+						</rows>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+		</samplerGroup>
 	</samplers>
 	<actions>
 		<action name="testemail">
@@ -33099,9 +33611,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33330,9 +33844,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
