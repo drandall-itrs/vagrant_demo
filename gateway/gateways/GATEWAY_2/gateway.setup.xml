@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 13:03:52 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 16:21:14 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -11896,6 +11896,41 @@ publishingPeriod=10</data>
     ],
     &quot;noofsteps&quot;: 9,
     &quot;url&quot;: &quot;http://192.168.142.20:7050&quot;
+}</code>
+								</script>
+								<elementDetails>
+									<data>true</data>
+								</elementDetails>
+							</scenario>
+							<scenario>
+								<name>Test</name>
+								<script>
+									<code>{
+    &quot;scenario&quot;: &quot;Untitled&quot;,
+    &quot;steps&quot;: [
+        {
+            &quot;value&quot;: &quot;&quot;,
+            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=pc2xyw8mgcg91wcbknqwg30jy&quot;,
+            &quot;step&quot;: &quot;open&quot;
+        },
+        {
+            &quot;value&quot;: &quot;admin&quot;,
+            &quot;target&quot;: &quot;name=j_username&quot;,
+            &quot;step&quot;: &quot;type&quot;
+        },
+        {
+            &quot;value&quot;: &quot;admin&quot;,
+            &quot;target&quot;: &quot;name=j_password&quot;,
+            &quot;step&quot;: &quot;type&quot;
+        },
+        {
+            &quot;value&quot;: &quot;&quot;,
+            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
+            &quot;step&quot;: &quot;clickAndWait&quot;
+        }
+    ],
+    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;,
+    &quot;noofsteps&quot;: 4
 }</code>
 								</script>
 								<elementDetails>
@@ -33616,9 +33651,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33851,9 +33888,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
