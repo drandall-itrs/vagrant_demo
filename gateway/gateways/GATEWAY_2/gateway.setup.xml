@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:37:55 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-11 17:59:13 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -31235,7 +31235,7 @@ Loop</data>
 			<ruleGroup name="EUEM extraction details">
 				<rule name="EUEM - ORB Gateway version info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Gateway Version&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Gateway Version&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
@@ -31255,7 +31255,7 @@ Loop</data>
 				</rule>
 				<rule name="EUEM - ORB Gateway Built at info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Built at&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Built at&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
@@ -31275,7 +31275,7 @@ Loop</data>
 				</rule>
 				<rule name="EUEM - ORB Page Generated Info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Generated info&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Generated info&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
