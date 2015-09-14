@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-14 09:46:46 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-14 13:24:10 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -154,6 +154,7 @@
 								<probe ref="192_168_31_1"/>
 								<addTypes>
 									<type ref="News"/>
+									<type ref="windows"/>
 								</addTypes>
 								<var name="remote_addresses">
 									<string>7021</string>
@@ -164,14 +165,6 @@
 								<var name="remote_addresses_expect">
 									<string/>
 								</var>
-								<sampler ref="Vista Standard"/>
-								<sampler ref="win-services"/>
-								<sampler disabled="true" ref="win-apps"/>
-								<sampler ref="cpu-win"/>
-								<sampler ref="network"/>
-								<sampler ref="disk-win"/>
-								<sampler ref="win-device-io"/>
-								<sampler ref="Windows Event Logs"/>
 							</managedEntity>
 						</managedEntityGroup>
 						<managedEntityGroup name="Linux">
@@ -970,6 +963,9 @@
 				<sampler ref="Windows Event Logs"/>
 				<sampler ref="cpu-win"/>
 				<sampler ref="win-device-io"/>
+				<sampler ref="Vista Standard"/>
+				<sampler ref="network"/>
+				<sampler ref="disk-win"/>
 			</type>
 			<type name="demoprobes"/>
 			<type name="unix">
@@ -33599,9 +33595,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33840,9 +33838,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
