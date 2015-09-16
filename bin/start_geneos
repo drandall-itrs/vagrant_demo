@@ -9,6 +9,8 @@ sudo /etc/init.d/mysqld start
 /opt/geneos/bin/gatewayctl  all start
 /opt/geneos/bin/netprobectl all start
 /opt/geneos/bin/webserverctl all start
+cd /opt/geneos/euem
+ ./euem-netprobe.linux_64 -port 9999 &
 
 cd /opt/geneos/packages/webslinger/active_prod/
 ./webslinger.linux &

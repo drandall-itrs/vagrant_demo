@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.2-150715 at 2015-09-14 09:27:39 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-09-10 14:01:28 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.0.23-150126/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -92,7 +92,7 @@
 				<hostname>localhost</hostname>
 				<port>7045</port>
 			</probe>
-			<probe name="localhost_7046">
+			<probe disabled="true" name="localhost_7046">
 				<hostname>localhost</hostname>
 				<port>7046</port>
 			</probe>
@@ -108,6 +108,12 @@
 				<hostname>localhost</hostname>
 				<port>7049</port>
 			</probe>
+			<probeGroup name="euem">
+				<probe name="euem">
+					<hostname>localhost</hostname>
+					<port>9999</port>
+				</probe>
+			</probeGroup>
 			<floatingProbe name="localhost_7052"/>
 		</probeGroup>
 		<probeGroup name="Windows">
@@ -148,6 +154,7 @@
 								<probe ref="192_168_31_1"/>
 								<addTypes>
 									<type ref="News"/>
+									<type ref="windows"/>
 								</addTypes>
 								<var name="remote_addresses">
 									<string>7021</string>
@@ -158,14 +165,9 @@
 								<var name="remote_addresses_expect">
 									<string/>
 								</var>
-								<sampler ref="Vista Standard"/>
-								<sampler ref="win-services"/>
-								<sampler disabled="true" ref="win-apps"/>
-								<sampler ref="cpu-win"/>
-								<sampler ref="network"/>
-								<sampler ref="disk-win"/>
-								<sampler ref="win-device-io"/>
-								<sampler ref="Windows Event Logs"/>
+								<var name="win_probe">
+									<string>NetprobeNT_7036</string>
+								</var>
 							</managedEntity>
 						</managedEntityGroup>
 						<managedEntityGroup name="Linux">
@@ -185,6 +187,21 @@
 								<var name="remote_addresses_expect">
 									<string>-192.168.31.135:7031,-192.168.31.130:7031,-192.168.31.131:7031,-192.168.31.1:7031</string>
 								</var>
+							</managedEntity>
+							<managedEntity name="linux-generic">
+								<probe ref="localhost_7032"/>
+								<removeTypes>
+									<type ref="default"/>
+									<type ref="defaultProcesses"/>
+									<type ref="defaultFKM"/>
+									<type ref="demoprobes"/>
+									<type ref="baseline"/>
+									<type ref="windows"/>
+									<type ref="baseline"/>
+									<type ref="unix"/>
+									<type ref="gateway"/>
+								</removeTypes>
+								<sampler ref="Linux Netprobes"/>
 							</managedEntity>
 						</managedEntityGroup>
 					</managedEntityGroup>
@@ -311,6 +328,12 @@
 								<type ref="gateway-sql"/>
 							</addTypes>
 						</managedEntity>
+						<managedEntity name="ActiveMQ">
+							<probe ref="localhost_7034"/>
+							<addTypes>
+								<type ref="ActiveMQ"/>
+							</addTypes>
+						</managedEntity>
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
@@ -323,7 +346,7 @@
 								<type ref="webmon"/>
 							</addTypes>
 						</managedEntity>
-						<managedEntity name="euem local">
+						<managedEntity disabled="true" name="euem local">
 							<probe ref="localhost_7046"/>
 							<addTypes>
 								<type ref="EUEM LOCAL"/>
@@ -333,6 +356,12 @@
 							<probe ref="localhost_7038"/>
 							<addTypes>
 								<type ref="EUEM"/>
+							</addTypes>
+						</managedEntity>
+						<managedEntity name="euem_standalone">
+							<probe ref="euem"/>
+							<addTypes>
+								<type ref="EUEM LOCAL"/>
 							</addTypes>
 						</managedEntity>
 					</managedEntityGroup>
@@ -952,6 +981,10 @@
 				<sampler ref="Windows Event Logs"/>
 				<sampler ref="cpu-win"/>
 				<sampler ref="win-device-io"/>
+				<sampler ref="Vista Standard"/>
+				<sampler ref="network"/>
+				<sampler ref="disk-win"/>
+				<sampler ref="Windows Netprobe Logs"/>
 			</type>
 			<type name="demoprobes"/>
 			<type name="unix">
@@ -962,6 +995,7 @@
 				<sampler ref="ipc"/>
 				<sampler ref="Linux Standard"/>
 				<sampler ref="cpu-linux"/>
+				<sampler ref="Current Users"/>
 			</type>
 			<type name="baseline">
 				<sampler ref="hardware"/>
@@ -973,6 +1007,7 @@
 				<sampler ref="top_cpu"/>
 				<sampler ref="NetProbe Log"/>
 				<sampler ref="top_mem"/>
+				<sampler ref="Running Processes"/>
 			</type>
 			<type name="default">
 				<sampler ref="hardware"/>
@@ -2110,6 +2145,24 @@
 				<sampler ref="IIS Web Service Cache"/>
 			</type>
 		</typeGroup>
+		<typeGroup name="ActiveMQ">
+			<type name="ActiveMQ">
+				<var name="JMX_URL2">
+					<string>192.168.142.20:50505</string>
+				</var>
+				<var name="BrokerName">
+					<string>GeneosService</string>
+				</var>
+				<var name="JMX_URL">
+					<string>service:jmx:rmi:///jndi/rmi://192.168.142.20:50505/jmxrmi</string>
+				</var>
+				<sampler ref="SubscriptionStatus"/>
+				<sampler ref="QueueStatus"/>
+				<sampler ref="TopicStatus"/>
+				<sampler ref="TempQueueStatus"/>
+				<sampler ref="BrokerStatus"/>
+			</type>
+		</typeGroup>
 	</types>
 	<samplers>
 		<sampler disabled="true" name="New Sampler">
@@ -2409,9 +2462,6 @@
 					<processes>
 						<processes>
 							<process>
-								<processDescriptor ref="sidebar"/>
-							</process>
-							<process>
 								<data>
 									<alias>
 										<data>NetprobeNT</data>
@@ -2426,20 +2476,7 @@
 								</data>
 							</process>
 							<process>
-								<data>
-									<alias>
-										<data>svchost</data>
-									</alias>
-								</data>
-							</process>
-							<process>
-								<processDescriptor ref="cmd"/>
-							</process>
-							<process>
 								<processDescriptor ref="outlook"/>
-							</process>
-							<process>
-								<processDescriptor ref="notepad"/>
 							</process>
 							<process>
 								<data>
@@ -2848,6 +2885,60 @@
 						</template>
 					</perfmon>
 				</plugin>
+			</sampler>
+			<sampler name="Current Users">
+				<var-group>
+					<data>Resources</data>
+				</var-group>
+				<plugin>
+					<unix-users/>
+				</plugin>
+			</sampler>
+			<sampler name="Windows Netprobe Logs">
+				<var-group>
+					<data>FKM</data>
+				</var-group>
+				<plugin>
+					<fkm>
+						<files>
+							<file>
+								<source>
+									<filename>
+										<data>C:\Program Files (x86)\</data>
+										<var ref="win_probe"/>
+										<data>\netprobe.log</data>
+									</filename>
+								</source>
+							</file>
+						</files>
+					</fkm>
+				</plugin>
+			</sampler>
+			<sampler name="Running Processes">
+				<plugin>
+					<processes>
+						<processes>
+							<process>
+								<data>
+									<alias>
+										<data>sshd</data>
+									</alias>
+								</data>
+							</process>
+							<process>
+								<processDescriptor ref="smbd"/>
+							</process>
+							<process>
+								<processDescriptor ref="crond"/>
+							</process>
+							<process>
+								<processDescriptor ref="sendmail"/>
+							</process>
+						</processes>
+						<!--Default settings have been used for these processes as no relevant processes descriptor could be found.-->
+					</processes>
+				</plugin>
+				<group>Processes</group>
 			</sampler>
 			<samplerGroup name="Floating netprobe">
 				<sampler name="Floating NetProbe Log">
@@ -11718,48 +11809,6 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with element details&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
-            &quot;step&quot;: &quot;open&quot;
-        },
-        {
-            &quot;value&quot;: &quot;lyZ5lwC4ssg32RZifA&quot;,
-            &quot;target&quot;: &quot;name=j_username&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;hfFXaXsoPQd6u9h2w/QIvQ\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;lyZ5lwC4ssg32RZifA\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;aAhyMsylmlbJ0NZvQQ&quot;,
-            &quot;target&quot;: &quot;name=j_password&quot;,
-            &quot;cipher&quot;: &quot;{\&quot;iv\&quot;:\&quot;ujsix27q0QzZqOrvHohoHg\&quot;,\&quot;salt\&quot;:\&quot;vWejqrMFTqI\&quot;,\&quot;ct\&quot;:\&quot;aAhyMsylmlbJ0NZvQQ\&quot;}&quot;,
-            &quot;step&quot;: &quot;type&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;id=geneos-id-logon-submit&quot;,
-            &quot;step&quot;: &quot;clickAndWait&quot;
-        },
-        {
-            &quot;value&quot;: &quot;&quot;,
-            &quot;target&quot;: &quot;link=Montage&quot;,
-            &quot;step&quot;: &quot;click&quot;
-        }
-    ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:8181/&quot;,
-    &quot;noofsteps&quot;: 14
-}</code>
-								</script>
-								<elementDetails>
-									<data>true</data>
-								</elementDetails>
-							</scenario>
-							<scenario>
-								<name>MONTAGE Non-Detail</name>
-								<script>
-									<code>{
-    &quot;scenario&quot;: &quot;Check Internal WEBMONTAGE with no element details&quot;,
-    &quot;steps&quot;: [
-        {
             &quot;target&quot;: &quot;/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc&quot;,
             &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
@@ -11788,11 +11837,11 @@ publishingPeriod=10</data>
         }
     ],
     &quot;noofsteps&quot;: 14,
-    &quot;url&quot;: &quot;http://presales-demo-vm:8181/&quot;
+    &quot;url&quot;: &quot;http://192.168.142.20:8181/&quot;
 }</code>
 								</script>
 								<elementDetails>
-									<data>false</data>
+									<data>true</data>
 								</elementDetails>
 							</scenario>
 							<scenario>
@@ -11802,18 +11851,18 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Gateway ORB&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;/orb/bdos/local&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;link=Directory&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;clickAndWait&quot;
         }
     ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:7050&quot;,
-    &quot;noofsteps&quot;: 4
+    &quot;noofsteps&quot;: 4,
+    &quot;url&quot;: &quot;http://192.168.142.20:7050&quot;
 }</code>
 								</script>
 								<elementDetails>
@@ -11827,53 +11876,53 @@ publishingPeriod=10</data>
     &quot;scenario&quot;: &quot;Untitled&quot;,
     &quot;steps&quot;: [
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;/orb&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;open&quot;
         },
         {
-            &quot;value&quot;: &quot;Gateway version&quot;,
             &quot;target&quot;: &quot;//tr[3]/td[2]&quot;,
+            &quot;value&quot;: &quot;Gateway version&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Gateway version}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;Page generated at&quot;,
             &quot;target&quot;: &quot;css=div.timesamp&quot;,
+            &quot;value&quot;: &quot;Page generated at&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Page generated at}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;Built at&quot;,
             &quot;target&quot;: &quot;//tr[7]/td[2]&quot;,
+            &quot;value&quot;: &quot;Built at&quot;,
             &quot;step&quot;: &quot;storeText&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;${Built at}&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;echo&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;link=Show All Queues&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;clickAndWait&quot;
         },
         {
-            &quot;value&quot;: &quot;&quot;,
             &quot;target&quot;: &quot;Orb Diagnostic Mode&quot;,
+            &quot;value&quot;: &quot;&quot;,
             &quot;step&quot;: &quot;verifyTextPresent&quot;
         }
     ],
-    &quot;url&quot;: &quot;http://presales-demo-vm:7050&quot;,
-    &quot;noofsteps&quot;: 9
+    &quot;noofsteps&quot;: 9,
+    &quot;url&quot;: &quot;http://192.168.142.20:7050&quot;
 }</code>
 								</script>
 								<elementDetails>
@@ -19859,6 +19908,497 @@ Loop</data>
 				</sampler>
 			</samplerGroup>
 		</samplerGroup>
+		<samplerGroup name="ActiveMQ">
+			<sampler name="SubscriptionStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Subscription,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>DestinationName</label>
+								<rowTemplate>
+									<data>$1.DestinationName</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>Active</label>
+								<rowTemplate>
+									<data>$1.Active</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchedCounter</label>
+								<rowTemplate>
+									<data>$1.DispatchedCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCounter</label>
+								<rowTemplate>
+									<data>$1.EnqueueCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCounter</label>
+								<rowTemplate>
+									<data>$1.DequeueCounter</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>PendingQueueSize</label>
+								<rowTemplate>
+									<data>$1.PendingQueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchedQueueSize</label>
+								<rowTemplate>
+									<data>$1.DispatchedQueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ClientId</label>
+								<rowTemplate>
+									<data>$1.ClientId</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConnectionIdConnectionId</label>
+								<rowTemplate>
+									<data>$1.ConnectionId</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="QueueStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Queue,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="TopicStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Topic,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="TempQueueStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=TempQueue,*</data>
+								</value>
+							</alias>
+						</aliases>
+						<columns>
+							<column>
+								<label>Name</label>
+								<rowTemplate>
+									<data>$1.Name</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>QueueSize</label>
+								<rowTemplate>
+									<data>$1.QueueSize</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>EnqueueCount</label>
+								<rowTemplate>
+									<data>$1.EnqueueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DequeueCount</label>
+								<rowTemplate>
+									<data>$1.DequeueCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>DispatchCount</label>
+								<rowTemplate>
+									<data>$1.DispatchCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>InFlightCount</label>
+								<rowTemplate>
+									<data>$1.InFlightCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ExpiredCount</label>
+								<rowTemplate>
+									<data>$1.ExpiredCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>ConsumerCount</label>
+								<rowTemplate>
+									<data>$1.ConsumerCount</data>
+								</rowTemplate>
+							</column>
+							<column>
+								<label>AvgEnqueueTime</label>
+								<rowTemplate>
+									<data>$1.AverageEnqueueTime</data>
+								</rowTemplate>
+							</column>
+						</columns>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+			<sampler name="BrokerStatus">
+				<var-group>
+					<data>ActiveMQ</data>
+				</var-group>
+				<displayName>JVM_Memory</displayName>
+				<sampleInterval>
+					<data>10</data>
+				</sampleInterval>
+				<sampleOnStartup>true</sampleOnStartup>
+				<plugin>
+					<jmx-server>
+						<connectionSettings>
+							<generic>
+								<connectionSetting>
+									<name>serviceURL</name>
+									<value>
+										<var ref="JMX_URL"/>
+									</value>
+								</connectionSetting>
+							</generic>
+						</connectionSettings>
+						<aliases>
+							<alias>
+								<name>$1</name>
+								<value>
+									<data>org.apache.activemq:BrokerName=</data>
+									<var ref="BrokerName"/>
+									<data>,Type=Broker</data>
+								</value>
+							</alias>
+						</aliases>
+						<rows>
+							<columnLabels>
+								<label>
+									<data>attribute</data>
+								</label>
+								<label>
+									<data>value</data>
+								</label>
+							</columnLabels>
+							<row>
+								<value>
+									<data>BrokerId,$1.BrokerId</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TempLimit,$1.TempLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalEnqueueCount,$1.TotalEnqueueCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalDequeueCount,$1.TotalDequeueCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalConsumerCount,$1.TotalConsumerCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TotalMessageCount,$1.TotalMessageCount</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>MemoryPercentUsage,$1.MemoryPercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>MemoryLimit,$1.MemoryLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StoreLimit,$1.StoreLimit</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StorePercentUsage,$1.StorePercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>TempPercentUsage,$1.TempPercentUsage</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>StatisticsEnabled,$1.StatisticsEnabled</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>BrokerVersion,$1.BrokerVersion</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>Slave,$1.Slave</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>BrokerName,$1.BrokerName</data>
+								</value>
+							</row>
+							<row>
+								<value>
+									<data>Persistent,$1.Persistent</data>
+								</value>
+							</row>
+						</rows>
+						<idAttributes/>
+					</jmx-server>
+				</plugin>
+			</sampler>
+		</samplerGroup>
 	</samplers>
 	<actions>
 		<action name="testemail">
@@ -21946,6 +22486,9 @@ Loop</data>
 		<rule name="test - to remove">
 			<targets>
 				<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7037&quot;)]/managedEntity[(@name=&quot;Control-M&quot;)]/sampler[(@name=&quot;Risk - Unfinished&quot;)][(@type=&quot;controlm&quot;)]/dataview[(@name=&quot;Risk - Unfinished&quot;)]/rows/row[(@name=&quot;ronb560&quot;)]/cell[(@column=&quot;in_BIM_service&quot;)]</target>
+				<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity[(attr(&quot;Type&quot;)=&quot;windows&quot;)]/sampler/dataview</target>
+				<target>//managedEntity[(@name=&quot;192_168_31_1&quot;)][(attr(&quot;Type&quot;)=&quot;windows&quot;)]</target>
+				<target>//gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity/sampler[(@type=&quot;baseline&quot;)]</target>
 			</targets>
 			<priority>1</priority>
 			<block>
@@ -30776,11 +31319,11 @@ Loop</data>
 			<ruleGroup name="EUEM extraction details">
 				<rule name="EUEM - ORB Gateway version info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Gateway Version&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Gateway Version&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
-						<pathAlias name="Info">ancestor::managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step3#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
+						<pathAlias name="Info">ancestor::managedEntity/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step3#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
 					</pathAliases>
 					<block>
 						<transaction>
@@ -30796,11 +31339,11 @@ Loop</data>
 				</rule>
 				<rule name="EUEM - ORB Gateway Built at info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Built at&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Built at&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
-						<pathAlias name="Info">ancestor::managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step7#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
+						<pathAlias name="Info">ancestor::managedEntity/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step7#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
 					</pathAliases>
 					<block>
 						<transaction>
@@ -30816,11 +31359,11 @@ Loop</data>
 				</rule>
 				<rule name="EUEM - ORB Page Generated Info">
 					<targets>
-						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7046&quot;)]/managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Generated info&quot;)]/cell[(@column=&quot;data&quot;)]</target>
+						<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;EUEM data extracted&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;EUEM data extracted&quot;)]/rows/row[(@name=&quot;Generated info&quot;)]/cell[(@column=&quot;data&quot;)]</target>
 					</targets>
 					<priority>1</priority>
 					<pathAliases>
-						<pathAlias name="Info">ancestor::managedEntity[(@name=&quot;euem local&quot;)]/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step5#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
+						<pathAlias name="Info">ancestor::managedEntity/sampler[(@name=&quot;EUEM on GENEOS&quot;)][(@type=&quot;EUEM LOCAL&quot;)]/dataview[(@name=&quot;ORB - Verify text and extract info&quot;)]/rows/row[(@name=&quot;step5#1&quot;)]/cell[(@column=&quot;description&quot;)]</pathAlias>
 					</pathAliases>
 					<block>
 						<set>
@@ -33126,9 +33669,27 @@ Loop</data>
 						
 						
 						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						
 						
@@ -33359,9 +33920,27 @@ Loop</data>
 							
 							
 							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							
 							
 							
@@ -39201,6 +39780,13 @@ SET LOG_FREQUENCY = 10-->
 			<string>GATEWAY_2</string>
 		</var>
 		<historyFiles>1</historyFiles>
+		<httpConnectionRequirements>
+			<internalData>
+				<acceptHosts>
+					<all/>
+				</acceptHosts>
+			</internalData>
+		</httpConnectionRequirements>
 		<debug/>
 	</operatingEnvironment>
 	<!-- DISCLAIMER: No warranties are given that the Automated Setup 
