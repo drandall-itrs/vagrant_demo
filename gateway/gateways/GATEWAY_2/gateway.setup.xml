@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-10-01 17:34:22 by DRandall on ITRSLP070-->
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-10-01 17:56:16 by DRandall on ITRSLP070-->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -126,6 +126,11 @@
 				<port>7099</port>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
+			<probe name="192_168_31_1_7100">
+				<hostname><!--192.168.31.2-->192.168.142.1</hostname>
+				<port>7100</port>
+				<encodedPassword>awRB3/3CmHekk</encodedPassword>
+			</probe>
 		</probeGroup>
 	</probes>
 	<managedEntities>
@@ -177,6 +182,22 @@
 							</managedEntity>
 							<managedEntity name="winvista-standard_7099">
 								<probe ref="192_168_31_1_7099"/>
+								<var name="remote_addresses">
+									<string>7021</string>
+								</var>
+								<var name="tcp_link_name_content">
+									<string>LPORT, RADDRESS, RPORT</string>
+								</var>
+								<var name="remote_addresses_expect">
+									<string/>
+								</var>
+								<var name="win_probe">
+									<string>NetprobeNT_7036</string>
+								</var>
+								<sampler ref="CPU"/>
+							</managedEntity>
+							<managedEntity name="winvista-standard_7100">
+								<probe ref="192_168_31_1_7100"/>
 								<var name="remote_addresses">
 									<string>7021</string>
 								</var>
@@ -2204,7 +2225,7 @@
 				</mq-queue>
 			</plugin>
 		</sampler>
-		<sampler name="CPU" disabled="true">
+		<sampler disabled="true" name="CPU">
 			<plugin>
 				<cpu/>
 			</plugin>
@@ -33711,9 +33732,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -33972,9 +33995,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
