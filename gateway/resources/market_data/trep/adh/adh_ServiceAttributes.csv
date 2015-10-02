@@ -1,0 +1,2 @@
+name,serviceID,serviceState,servers,maxCache,openWindow,dataType,cacheType
+IDN_RDF,257,Up,1,500000,64,Mfeed Record,Sink Driven

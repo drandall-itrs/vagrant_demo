@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. /opt/geneos/all_samplers/functions.sh
+
+echo "instrument,bid,ask,time,sequenceNo,minSpread,maxSpread,ticksPerSample,maxInterval,tradePrice"
+echo "AAPL, $(real 455 456), $(real 455 456),140414874856016,12-SEP-2014 15:31:34.922000000,,,$(whole 3 10),,,"
+echo "IBM, $(real 194 195), $(real 194 195),140414874856016,12-SEP-2014 15:31:38.892000000,-$(real 0.01 0.05),-$(real 0.01 0.05),$(whole 3 10),,"
+echo "MSFT,$(real 29 30), $(real 29 30),140414874856016,12-SEP-2014 15:31:39.487000000,-$(real 0.01 0.05),-$(real 0.01 0.05),$(whole 3 10),,"

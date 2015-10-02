@@ -1,0 +1,5 @@
+identifier,name,channel,mountTime,applicationKey,position,protocol,itemsInOverflow,itemOverflowEvents
+383,100k_userA,22,Mon Jul 16 22:50:06 2012,256,192.168.115.155/net,6,0,0
+384,100k_userA,23,Mon Jul 16 22:50:07 2012,256,192.168.115.155/net,6,0,0
+385,1k_userB,24,Mon Jul 16 22:50:08 2012,256,127.0.0.1/net,7,0,0
+386,100k_userB,25,Wed Jul 18 02:50:11 2012,256,192.168.115.155/net,6,0,0

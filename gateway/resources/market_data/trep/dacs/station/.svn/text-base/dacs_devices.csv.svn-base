@@ -1,0 +1,14 @@
+deviceName,deviceLocation,isDefaultDisk,numFragments,totalMB,usedMB,availableMB,percentUtilisation
+<!>serverName,STLIMSSP4
+<!>status,up
+<!>totalDiskSpace,3722.24 MB
+<!>usedDiskSpace,2676.00 MB
+<!>percentUtilisation,71.89 %
+DACS_DATA,/opt/sybase/data/dacsdata.dat,    N,1, 801.56, 600.00, 201.56,74.85
+DACS_LOG,/opt/sybase/data/dacslog.dat,    N,1, 801.56, 600.00, 201.56,74.85
+DACS_TEMP,/opt/sybase/data/dacstemp.dat,    N,1,1603.12,1024.00, 579.12,63.88
+master,/opt/sybase/data/master.dat,    Y,4, 240.00, 176.00,  64.00,73.33
+sysprocsdev,/opt/sybase/data/sysprocs.dat,    N,1, 152.00, 152.00,   0.00,100.00
+systemdbdev,/opt/sybase/data/sybsysdb.dat,    N,1,  24.00,  24.00,   0.00,100.00
+tempdbdev,/opt/sybase/data/tempdbdev.dat,    N,1, 100.00, 100.00,   0.00,100.00
+

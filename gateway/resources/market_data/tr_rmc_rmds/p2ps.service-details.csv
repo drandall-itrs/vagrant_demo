@@ -1,0 +1,14 @@
+serviceName,serviceID,activeItems,Stale,Pending,Denied,InsertRate,InsertsOK,InsertsBad,HotStandby
+<!>Version,ssl5.0.F52
+<!>StartTime,12:34:58 Sat Nov 05 2005
+<!>ProcessID,875
+<!>ServerID,265
+<!>packetsSent,463.25 per second
+<!>bytesReceived,1460.45 per second,
+DTS,334,238,0,0,0,12.55 per second,16388498,0.00 per second,TRUE
+IDN_SELECTFEED,23,4772,0,0,0,0,0,0,TRUE
+DCS_CONTRIB,276,0,0,0,0,0,0,0,FALSE
+EUREX,290,12,0,0,0,0,0,0,FALSE
+COMSTOCK,333,0,0,0,0,0,0,0,FALSE
+LSE_SETS,313,0,0,0,0,0,0,0,FALSE
+MTS,263,0,0,0,0,0,0,0,FALSE

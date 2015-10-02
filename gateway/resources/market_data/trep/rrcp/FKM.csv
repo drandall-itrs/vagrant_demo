@@ -1,0 +1,6 @@
+name,status,triggerCount,triggerDetails,updateRate,filename,fileSize,secondsSinceLastModified,secondsSinceLastTrigger,permissions,lastModificationTime,absolutePath,/group
+<!>filesMonitored,1
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+rrcp_trans.log,OK,0,,0.0000 Kb/sec,rrcp_trans.log,1.0 Kb,12464903,417550,664 (-rw-rw-r--),1330141748,/opt/itrs_beta/log/rrcp_trans.log,

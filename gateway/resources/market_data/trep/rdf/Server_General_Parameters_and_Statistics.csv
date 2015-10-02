@@ -1,0 +1,21 @@
+name,value
+<!>acquisitionTime,1.57 ms
+ServerName,RDFHTCCB0401
+ProductVersion,2.2.0.1
+ServerIPaddr,192.168.1.2
+AcsLastStartTime,Nov/20/2011  00:09:03 GMT
+CurrentServerWL,5539
+CurrentRecCnt,37698
+MaxNumClients,5
+MaxNumChannels,25
+RecoveryPacing,100
+MaxNumberOfBDS,100
+ServerIPaddr2,1.1.1.2
+ServerIPaddr3,192.168.113.6
+TotalRunTime,241days:15hr:07min:52sec
+CurrentTime,Jul/18/2012  15:16:55 GMT
+App_ILA,226527
+Filter_ILA,FFFFFF
+NumofRICsAgedOut,4676306
+RemoteDropCount,0
+MaxRecCnt,600000

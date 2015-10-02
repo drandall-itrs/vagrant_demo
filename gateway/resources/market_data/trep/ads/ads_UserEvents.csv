@@ -1,0 +1,4 @@
+name,opens,recoverableOpens,nonRecoverableOpens,preemptionCloses,recoverableCloses,nonRecoverableCloses
+100k_userA,2,0,0,0,0,0
+1k_userB,5,0,0,0,0,0
+100k_userB,1,0,0,0,0,0

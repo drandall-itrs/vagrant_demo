@@ -1,0 +1,2 @@
+identifier,cacheType,caching,dataType,inserts,instance,name,openWindow,overflow,ping,preemptionLocation,connectTime,version
+IDN_RDF.0,Sink Driven,FALSE,Mfeed Record,TRUE,hostssl.route,IDN_RDF,256,FALSE,TRUE,ssl,Mon; Jul 16 22:50:06,ssl4.5

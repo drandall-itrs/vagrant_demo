@@ -1,0 +1,8 @@
+Parameter,Value
+groupID,10001
+instance,stlimssol2.1.dacs_trans
+path,/opt/thomsonreuters/SOFTWARE/rms1.5.0.L5.SharedMemTrans.all.rrg/prod/solx86/bin/dacs_trans
+processID,1315
+time,15:12:20 Tue Jun 26 2012
+userID,10001
+version,dacs6.2.0.F1

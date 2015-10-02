@@ -1,0 +1,14 @@
+Server Metrics, Value, Worst
+Overall % CPU Busy,13.47,5.47
+Overall % CPU Busy (User),18.7,21.7
+Overall % CPU Usage (System),134.9,111.9
+% Free Memory,4.61,4.61
+% Free Swap,3184,3181
+Major page faults per second,1145,1145
+Context switches per second,46,35
+Interrupts per second,15.01,0.01
+TCP Retransmission Rate (%),23.03,14.03
+Network Bits In (Mbps),29.85,11.85
+Network Bits Out (Mbps),35.03,10.03
+Network Packets In per second,6.85,34.85
+Network Packets Out per second,23.18,40.18

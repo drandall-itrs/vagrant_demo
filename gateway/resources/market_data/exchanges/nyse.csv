@@ -1,0 +1,4 @@
+serviceName,servicePort,turnaroundTime,status
+<!>Target Node, New York Stock Exhange
+<!>Target Address, 172.230.3.110
+ICMP_ECHO,0,7.92 ms, Reachable

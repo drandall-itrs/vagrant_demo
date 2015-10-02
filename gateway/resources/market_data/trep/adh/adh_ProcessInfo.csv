@@ -1,0 +1,10 @@
+Parameter,Value
+configFile,/opt/thomsonreuters/SOFTWARE/globalconfig/rmds.cnf
+groupID,10001
+healthCapacity,1
+instance,stlimsrh1.1.adh
+path,/opt/thomsonreuters/SOFTWARE/adh2.2.0.E1.linux.tis/rhel6_x86_64/bin/adh
+processID,26041
+startTime,21:54:08 Tue Apr 17 2012
+userID,10001
+version,ssl6.8.F16

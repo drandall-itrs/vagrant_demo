@@ -1,0 +1,4 @@
+serverProcessID,startTime,timeElapsed,transaction,username,hostname,program,command
+<!>status,up
+<!>timeThreshold,20
+<!>totalLongRunningQueries,0

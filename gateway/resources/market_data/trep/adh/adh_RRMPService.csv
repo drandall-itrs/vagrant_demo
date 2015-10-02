@@ -1,0 +1,2 @@
+Key,watchedOK,watchedStale,outgoingMsgRate,pending,items,recoverableOpens,nonRecoverableOpens,recoverableCloses,nonRecoverableCloses,requests,refreshLatency,updateLatency
+IDN_RDF.260,9,0,5.50 per second,0,9,0.00 per second,0,0,0,14,0,0

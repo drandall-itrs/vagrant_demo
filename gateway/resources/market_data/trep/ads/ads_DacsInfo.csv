@@ -1,0 +1,10 @@
+Parameter,Value
+connected,FALSE
+enabled,FALSE
+fileDescriptor,-1
+lastFlushTime,Wed Jul 18 03:37:33 2012
+logFlushInterval,20
+reconnectTimeInterval,10
+trace,FALSE
+usageDirectory,./
+usageFileSize,6000

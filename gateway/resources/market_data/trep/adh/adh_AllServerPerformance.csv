@@ -1,0 +1,10 @@
+Parameter,Value
+inboundInsertRate,0
+inboundRefreshRate,0
+inboundUpdateRate,26
+insertLatency,0
+outboundInsertRate,0
+outboundRefreshRate,0
+outboundUpdateRate,25
+refreshLatency,0
+updateLatency,0

@@ -1,0 +1,5 @@
+name,status,triggerCount,triggerDetails,updateRate,filename,fileSize,secondsSinceLastModified,secondsSinceLastTrigger,permissions,lastModificationTime,absolutePath
+<!>filesMonitored,0
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0

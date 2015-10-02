@@ -1,0 +1,2 @@
+serverID,name,serviceID,maxCache,openWindow,load,dataType,cacheType
+15257,IDN_RDF,257,50000,256,7,Mfeed Record,Sink Driven

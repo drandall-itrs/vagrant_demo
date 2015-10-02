@@ -1,0 +1,16 @@
+Parameter,Value
+DictionaryDef,N/A
+DictionarySize,762808
+FilterDef,NO
+FilterSize,0
+RVProtoEnable,FALSE
+RVProtoErrors,0
+RVProtoState,DOWN
+RxPingEnabled,TRUE
+RxPingTimeout,45
+SiteName,DACS
+SvrConnect,UP
+SvrName,stlimssp4
+TxPingFrequency,30
+Version,dacs6.3.0.F2
+upTime,31405

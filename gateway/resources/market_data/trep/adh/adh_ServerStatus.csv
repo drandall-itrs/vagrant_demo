@@ -1,0 +1,2 @@
+serverID,name,active,stale,items,maxCache,%cacheActive,pending,pendingOut
+260,IDN_RDF,9,0,9,500000,0.00 %,0,0

@@ -1,0 +1,7 @@
+name,status,triggerCount,triggerDetails,updateRate,filename,fileSize,secondsSinceLastModified,secondsSinceLastTrigger,permissions,lastModificationTime,absolutePath,/group,Host,User
+<!>filesMonitored,2
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+adh_1.log,OK,1,,0.0000 Kb/sec,adh.log,33.7 Kb,14544,14810,664 (-rw-rw-r--),1342584987,/opt/itrs_beta/log/adh.log,,,
+rrcp.source.log,OK,0,,0.0000 Kb/sec,rrcp.source.log,0.0 Kb,12457929,410430,644 (-rw-r--r--),1330141602,/opt/itrs_beta/log/rrcp.source.log,,,

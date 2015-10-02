@@ -1,0 +1,15 @@
+Parameter,Value
+%activeMounts,3
+%activeRsslMounts,1
+active,8
+activeMounts,3
+activeRsslMounts,1
+activeUsers,3
+maxMounts,100
+maxRsslMounts,100
+pending,0
+pendingOut,0
+preemption,0
+recovery,0
+stale,0
+total,8

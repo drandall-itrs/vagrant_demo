@@ -1,0 +1,2 @@
+identifier,broadcast,close,globalStatus,groupChange,groupMerge,groupStatus,image,load,lock,openWindow,ready,rename,status,update,pingAck,insertAck,insertNak,obsolete,unknown
+IDN_RDF.0,0,0,0,0,0,14,16,0,6,0,0,0,0,1548189,0,0,(N/A),0,0

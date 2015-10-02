@@ -1,0 +1,34 @@
+Name,Value,Delta,High,Low,Last_Updated
+<!>ServerHost,192.168.10.173
+<!>ServerID,14244
+Average response time for a request,76,-1,19556,0,15:20:33
+Current TCP connections,0,0,0,0,15:20:33
+Current requests in the queue,7,0,9,7,15:20:33
+Data Payload Total Bytes,0,0,0,0,14:39:43
+Platform Application Status,2,0,2,2,15:37:02
+Pub Current TCP Connections,0,0,0,0,15:20:33
+Pub Data Payload Total Bytes,0,0,0,0,14:39:43
+Pub Msgs From Appliance,0,0,0,0,14:39:43
+Pub Msgs To Appliance,0,0,0,0,14:39:43
+Pub Service Total Bytes,0,0,0,0,14:39:43
+Pub Slow Readers,0,0,0,0,15:20:33
+Requests in current interval,1,0,108,1,15:20:33
+Requests timed out for current interval,0,0,0,0,15:20:33
+Slow readers,0,0,0,0,15:20:33
+Sub Current Subscriptions,0,0,0,0,14:39:43
+Sub Current TCP Connections,0,0,0,0,15:20:33
+Sub Data Payload Total Bytes,0,0,0,0,14:39:43
+Sub Msgs From Appliance,0,0,0,0,14:39:43
+Sub Msgs To Appliance,0,0,0,0,14:39:43
+Sub Service Total Bytes,0,0,0,0,14:39:43
+Sub Slow Readers,0,0,0,0,15:20:33
+TCP total connections for current interval,0,0,0,0,15:20:33
+TCP total disconnects for current interval,0,0,0,0,15:20:33
+Tick bytes sent,0,0,56,0,15:20:33
+Tick messages received,0,0,1,0,15:20:33
+Tick messages sent,0,0,1,0,15:20:33
+Tick received,0,0,1,0,15:20:33
+Tick sent,0,0,1,0,15:20:33
+Ticks lost by slow readers,0,0,0,0,15:20:33
+Total subscriptions,2,0,2,2,15:20:33
+Unique securities currently subscribed,2,0,2,2,15:20:33

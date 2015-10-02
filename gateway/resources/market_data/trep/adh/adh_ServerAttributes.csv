@@ -1,0 +1,2 @@
+serverID,name,serviceID,operatingMode,maxCache,openWindow,load,maxLoadLevel,overflow,overflows,dataType,cacheType,lockItemThreshold
+260,IDN_RDF,257,,500000,64,1,65535,FALSE,0,Mfeed Record,Sink Driven,5

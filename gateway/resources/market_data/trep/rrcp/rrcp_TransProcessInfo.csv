@@ -1,0 +1,9 @@
+Parameter,Value
+configFile,/opt/thomsonreuters/SOFTWARE/globalconfig/rmds.cnf
+groupID,10001
+instance,stlimsrh1.1.rrcp_trans
+path,/opt/thomsonreuters/SOFTWARE/rms1.5.0.L5.SharedMemTrans.all.rrg/prod/linux/bin/rrcp_trans
+processID,24027
+startTime,21:49:08 Fri Feb 24 2012
+userID,10001
+version,rms1.5.F4

@@ -1,0 +1,8 @@
+Parameter,Value
+LargeBuffersPeak,20
+LargeBuffersUsed,0
+SinkQueueMsgs,0
+SmallBuffersPeak,8
+SmallBuffersUsed,0
+StndQueueMsgs,0
+SvrQueueMsgs,0

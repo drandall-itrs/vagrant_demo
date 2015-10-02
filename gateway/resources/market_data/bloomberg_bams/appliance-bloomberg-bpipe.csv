@@ -1,0 +1,26 @@
+Name,Value,Delta,High,Low,Last_Updated
+<!>ServerHost,192.168.10.173
+<!>ServerID,14244
+Average response time for a request (ms),0,0,217,0,15:19:32
+BPIPE Application Status,2,0,2,2,15:37:02
+Current TCP connections,9,0,16,9,15:19:32
+Current requests in the queue,1,0,2,1,15:19:32
+Data Payload Total Bytes,582808,-28808,5603408,220560,15:19:32
+Requests in current interval,0,0,45,0,15:19:32
+Requests timed out for the day,0,0,0,0,15:19:32
+Slow readers,0,0,0,0,15:19:32
+Sub Current Subscriptions,247,0,258,247,15:01:42
+Sub Current TCP Connections,9,0,16,9,15:19:32
+Sub Data Payload Total Bytes,582808,-28808,5603408,220560,15:19:32
+Sub Msgs From Appliance,5228,-68,39688,2325,15:19:32
+Sub Msgs To Appliance,0,0,41,0,15:00:01
+Sub Service Total Bytes,0,0,0,0,14:35:23
+Sub Slow Readers,0,0,0,0,15:19:32
+Tick bytes sent,569208,-33192,5556096,205752,15:19:32
+Tick messages received,1753,2,12620,550,15:19:32
+Tick messages sent,4869,-137,39368,1878,15:19:32
+Tick received,4253,-102,36260,1195,15:19:32
+Tick sent,12809,-881,134970,4531,15:19:32
+Ticks lost by slow readers,0,0,0,0,15:19:32
+Total subscriptions,247,0,253,247,15:19:32
+Unique securities currently subscribed,108,0,110,108,15:19:32

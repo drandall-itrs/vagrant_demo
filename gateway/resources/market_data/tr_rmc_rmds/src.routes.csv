@@ -1,0 +1,2 @@
+route,localService,remoteService,updateRate, remoteHost,remotePort,active, serviceList,remoteUser
+rdf,IDN_RDF,IDN_RDF,0, rdf01,8101,TRUE, IDN_RDF,radmindr+256

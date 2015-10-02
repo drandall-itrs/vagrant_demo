@@ -1,0 +1,4 @@
+serviceName,servicePort,turnaroundTime,status
+<!>Target Node, London Stock Exhange
+<!>Target Address, 212.250.3.110
+ICMP_ECHO,0,7.85 ms, Reachable

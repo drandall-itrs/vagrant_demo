@@ -1,0 +1,14 @@
+Parameter,Value
+<!>setDumpUserDb,FALSE
+<!>setRemoveAllUsers,FALSE
+<!>setTerminateProcess,FALSE
+configFile,/opt/thomsonreuters/SOFTWARE/globalconfig/ads_pop.cnf
+groupID,10001
+healthCapacity,1
+instance,stlimsrh1.1.ads
+path,/opt/thomsonreuters/SOFTWARE/ads2.2.0.E1.linux.tis/rhel6_x86_64/bin/ads
+processID,29847
+startTime,22:13:51 Tue Apr 17 2012
+state,N/A
+userID,10001
+version,ssl6.8.F16

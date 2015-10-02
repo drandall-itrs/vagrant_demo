@@ -1,0 +1,24 @@
+name,value
+<!>acquisitionTime,1.73 ms
+Channel2_acsClientName,""
+Channel2_acsHostName,""
+Channel2_TotalMsgRate,0
+Channel2_NumOutstReq,0
+Channel2_numVsync,0
+Channel2_NumVnosync,0
+Channel2_NumUpdate,0
+Channel2_NumCorrection,0
+Channel2_NumDrop,0
+Channel2_NumLBM,30
+Channel2_acsChannelId,100000
+Channel2_CurrentRequestRate,0
+Channel2_PeakTotalMsgRate,0
+Channel2_SSLBufUtilization,0
+Channel2_PeakSSLBufUtilization,0
+Channel2_TotalMsgRateInBps,0
+Channel2_PeakTotalMsgRateInBps,608
+Channel2_RequestType,Interactive
+Channel2_ChannelState,0
+Channel2_BDSStatus,0
+Channel2_BDSName,""
+Channel2_BDSSize,0
