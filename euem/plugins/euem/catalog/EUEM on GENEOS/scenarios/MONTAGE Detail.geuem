@@ -1,0 +1,36 @@
+
+									{
+    "scenario": "Check Internal WEBMONTAGE with element details",
+    "steps": [
+        {
+            "target": "/geneos-web-logon/;jsessionid=5udez160p4pq1rsortwtkelsc",
+            "value": "",
+            "step": "open"
+        },
+        {
+            "target": "name=j_username",
+            "value": "lyZ5lwC4ssg32RZifA",
+            "cipher": "{\"iv\":\"hfFXaXsoPQd6u9h2w/QIvQ\",\"salt\":\"vWejqrMFTqI\",\"ct\":\"lyZ5lwC4ssg32RZifA\"}",
+            "step": "type"
+        },
+        {
+            "target": "name=j_password",
+            "value": "aAhyMsylmlbJ0NZvQQ",
+            "cipher": "{\"iv\":\"ujsix27q0QzZqOrvHohoHg\",\"salt\":\"vWejqrMFTqI\",\"ct\":\"aAhyMsylmlbJ0NZvQQ\"}",
+            "step": "type"
+        },
+        {
+            "target": "id=geneos-id-logon-submit",
+            "value": "",
+            "step": "clickAndWait"
+        },
+        {
+            "target": "link=Montage",
+            "value": "",
+            "step": "click"
+        }
+    ],
+    "noofsteps": 14,
+    "url": "http://192.168.142.20:8181/"
+}
+								

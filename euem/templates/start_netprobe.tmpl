@@ -1,0 +1,142 @@
+#!/bin/csh -f
+
+###########################################################
+### Introduction
+###########################################################
+
+### This is a template for a start script.
+### Make sure you remove the .tmpl extension before running it!
+
+### Lines starting with ### are comments.
+### Lines starting with # may be uncommented to switch on other functionality
+
+### Once you are happy that the netprobe runs in the foreground, you will probably
+### want to set LOG_FILENAME and run the netprobe in the background.  There is
+### an example of this at the bottom of this script.
+
+### See the documentation for other environment variables and command line switches
+### that you can set.  You can also run the netprobe with the -help switch to give
+### a list of command line switches.
+
+###########################################################
+### Database Setup Environment - uncomment as required
+###########################################################
+
+################################################
+### Oracle Params
+################################################
+### Set the ORACLE_HOME directory to point to the Oracle client installation
+### Make sure the Library path is updated
+##
+# setenv ORACLE_HOME <set this eg /opt/oracle/11g/product/11.1.0/client_1>
+# setenv LD_LIBRARY_PATH ${ORACLE_HOME}:.
+
+################################################
+### Sybase Params
+################################################
+### Set the SYBASE parameter to the base of the sybase client install (the interfaces file should be here)
+### Make sure the Library path is updated to Sybase lib dir
+##
+# setenv SYBASE <set this eg /opt/sybase>
+# setenv LD_LIBRARY_PATH ${SYBASE}/lib:.
+
+
+################################################
+### MySQL Params
+################################################
+### Make sure the Library path is updated to MySql library dir, this must contain libmysql_r.so
+###
+# setenv MYSQL_LIB <set this eg /usr/local/mysql/lib>
+# setenv LD_LIBRARY_PATH ${MYSQL_LIB}:.
+
+################################################
+### Java Params
+################################################
+### Make sure the Library path is updated to Java library dir, this must contain libjvm.so
+###
+# setenv JRE_HOME <set this eg /usr/java/jre1.5.0_04>
+# setenv LD_LIBRARY_PATH <set this eg $JRE_HOME/lib/i386:$JRE_HOME/lib/i386/client:$LD_LIBRARY_PATH:.>
+# setenv PATH $JRE_HOME/bin:$PATH
+# setenv JAVA_HOME $JRE_HOME
+
+#############################################
+### SQLServer Params
+#############################################
+### Make sure the Library path is update to sqlServerLib dir
+### The libraries required to connect to SQL Server from Linux
+### are available from the ITRS website
+#
+# setenv SQLSERVER_LIB <set this eg /usr/local/sqlServerLib>
+# setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${SQLSERVER_LIB}:.
+# setenv ODBCINSTINI ${SQLSERVER_LIB}/odbcinst.ini
+#
+### Also edit 'odbcinst.ini' file in sqlServerLib to set the current path of libtdsodbc.so
+### Eg. In file: sqlServerLib/odbcinst.ini, set
+#
+#[FreeTDS]
+#Driver = <set this e.g /path/to/sqlServerLib/libtdsodbc.so>
+
+#############################################
+### Language
+### This can be commented out but is recommended when using the netprobe
+### on Non-English operating systems
+#############################################
+setenv LANG en_UK
+
+#############################################
+### Netprobe Password
+### If set, users will be required to enter this password to execute
+### commands on the probe
+### It is set here in encoded format. To encode the password, use the
+### Encoded Password - Set Password option in the Advanced Tab of the 
+### Probe Configuration section in the Gateway Setup Editor
+#############################################
+#setenv ENCODED_PASSWORD [replace with your encoded password]
+
+###########################################################
+### Start the Netprobe (only choose one of these methods)
+### Replace linux with the correct platform. Use the -port
+### command line switch to run on a custom port
+###########################################################
+
+### Get the operating system
+setenv OS `uname`
+
+### Run the netprobe in the foreground
+switch($OS)
+		case HP-UX:
+				./netprobe.hpux
+				breaksw
+		case SunOS:
+				./netprobe.sun
+				breaksw
+		case Linux:
+				./netprobe.linux
+				breaksw
+		case AIX:
+				./netprobe.aix
+				breaksw
+		default:
+				echo "Unknown host OS " $OS
+				breaksw
+endsw
+
+### Run the netprobe in the background with logging
+#setenv LOG_FILENAME netprobe.log
+#switch($OS)
+#		case HP-UX:
+#				nohup ./netprobe.hpux &
+#				breaksw
+#		case SunOS:
+#				nohup ./netprobe.sun &
+#				breaksw
+#		case Linux:
+#				nohup ./netprobe.linux &
+#				breaksw
+#		case AIX:
+#				nohup ./netprobe.aix &
+#				breaksw
+#		default:
+#				echo "Unknown host OS " $OS
+#				breaksw
+#endsw

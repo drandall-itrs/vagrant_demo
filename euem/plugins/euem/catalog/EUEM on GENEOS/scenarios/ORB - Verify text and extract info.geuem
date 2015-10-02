@@ -1,0 +1,54 @@
+
+									{
+    "scenario": "Untitled",
+    "steps": [
+        {
+            "target": "/orb",
+            "value": "",
+            "step": "open"
+        },
+        {
+            "target": "//tr[3]/td[2]",
+            "value": "Gateway version",
+            "step": "storeText"
+        },
+        {
+            "target": "${Gateway version}",
+            "value": "",
+            "step": "echo"
+        },
+        {
+            "target": "css=div.timesamp",
+            "value": "Page generated at",
+            "step": "storeText"
+        },
+        {
+            "target": "${Page generated at}",
+            "value": "",
+            "step": "echo"
+        },
+        {
+            "target": "//tr[7]/td[2]",
+            "value": "Built at",
+            "step": "storeText"
+        },
+        {
+            "target": "${Built at}",
+            "value": "",
+            "step": "echo"
+        },
+        {
+            "target": "link=Show All Queues",
+            "value": "",
+            "step": "clickAndWait"
+        },
+        {
+            "target": "Orb Diagnostic Mode",
+            "value": "",
+            "step": "verifyTextPresent"
+        }
+    ],
+    "noofsteps": 9,
+    "url": "http://192.168.142.20:7050"
+}
+								

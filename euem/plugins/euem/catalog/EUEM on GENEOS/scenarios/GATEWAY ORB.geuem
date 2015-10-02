@@ -1,0 +1,19 @@
+
+									{
+    "scenario": "Gateway ORB",
+    "steps": [
+        {
+            "target": "/orb/bdos/local",
+            "value": "",
+            "step": "open"
+        },
+        {
+            "target": "link=Directory",
+            "value": "",
+            "step": "clickAndWait"
+        }
+    ],
+    "noofsteps": 4,
+    "url": "http://192.168.142.20:7050"
+}
+								

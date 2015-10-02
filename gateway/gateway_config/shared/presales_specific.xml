@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-10-02 10:15:39 by DRandall on ITRSLP070-->
+<!-- Gateway-created setup include file for user ActiveConsole2 at 192.168.142.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
+	<managedEntities>
+		<managedEntityGroup name="GATEWAY">
+			<attribute name="REGION">GATEWAY</attribute>
+			<attribute name="PRODUCT">GENEOS</attribute>
+			<managedEntityGroup name="Development Toolkit">
+				<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+				<managedEntityGroup name="GATEWAY INFO">
+					<attribute name="APP">GATEWAY INFO</attribute>
+					<managedEntity name="PRESALES">
+						<probe ref="localhost_7040"/>
+						<addTypes>
+							<type ref="Presales"/>
+						</addTypes>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
+	</managedEntities>
+	<types>
+		<typeGroup name="Presales">
+			<type name="Presales">
+				<sampler ref="Viewpath settings"/>
+			</type>
+		</typeGroup>
+	</types>
+	<samplers>
+		<samplerGroup name="Presales">
+			<sampler name="Viewpath settings">
+				<var-group>
+					<data>Presales Info</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/gateway/resources/viewpath/presales_viewpaths.csv</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+	</samplers>
+</gateway>

@@ -1,0 +1,334 @@
+{
+    "info": {
+        "scenario": "GATEWAY ORB",
+        "base": "http://192.168.142.20:7050",
+        "number_of_steps": 2,
+        "number_of_passed": 2,
+        "number_of_failed": 0
+    },
+    "execution": {
+        "start": "2015-09-30T14:37:49.668Z",
+        "end": "2015-09-30T14:38:23.813Z",
+        "elapse": 34145
+    },
+    "variables": {
+        "system": {
+            "url": "http://192.168.142.20:7050",
+            "scenarioTimeout": 60,
+            "stepTimeout": 30
+        },
+        "user": {}
+    },
+    "steps": [
+        {
+            "id": 0,
+            "details": {
+                "target": "http://192.168.142.20:7050/orb/bdos/local",
+                "value": "",
+                "step": "open"
+            },
+            "response": {
+                "start": {
+                    "bodySize": 8051,
+                    "contentType": "text/html",
+                    "headers": [
+                        {
+                            "name": "Content-Type",
+                            "value": "text/html"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "8051"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "close"
+                        }
+                    ],
+                    "id": 1,
+                    "redirectURL": null,
+                    "stage": "start",
+                    "status": 200,
+                    "statusText": "OK",
+                    "time": "2015-09-30T14:37:59.986Z",
+                    "url": "http://192.168.142.20:7050/orb/bdos/local"
+                },
+                "end": {
+                    "contentType": "text/html",
+                    "headers": [
+                        {
+                            "name": "Content-Type",
+                            "value": "text/html"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "8051"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "close"
+                        }
+                    ],
+                    "id": 1,
+                    "redirectURL": null,
+                    "stage": "end",
+                    "status": 200,
+                    "statusText": "OK",
+                    "time": "2015-09-30T14:38:00.006Z",
+                    "url": "http://192.168.142.20:7050/orb/bdos/local"
+                }
+            },
+            "start": "2015-09-30T14:37:49.782Z",
+            "end": "2015-09-30T14:38:00.282Z",
+            "elapse": 10500,
+            "downloadSize": 0,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            },
+            "performance": {
+                "log": {
+                    "version": "1.0",
+                    "creator": {
+                        "name": "Geneos EUEM",
+                        "version": "0.1.120809"
+                    },
+                    "pages": [
+                        {
+                            "startedDateTime": "2015-09-30T14:37:49.642Z",
+                            "id": "http://192.168.142.20:7050/orb/bdos/local",
+                            "title": "Orb Diagnostic Mode",
+                            "pageTimings": {}
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "startedDateTime": "2015-09-30T14:37:49.886Z",
+                            "time": 10120,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb/bdos/local",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "8051"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 8051,
+                                "content": {
+                                    "size": 8051,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 10100,
+                                "receive": 20,
+                                "ssl": -1
+                            }
+                        }
+                    ]
+                }
+            },
+            "totalTime": 10120
+        },
+        {
+            "id": 1,
+            "details": {
+                "target": "link=Directory",
+                "value": "",
+                "step": "clickAndWait"
+            },
+            "response": {},
+            "start": "2015-09-30T14:38:00.479Z",
+            "end": "2015-09-30T14:38:23.613Z",
+            "elapse": 23134,
+            "downloadSize": 196519,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            },
+            "performance": {
+                "log": {
+                    "version": "1.0",
+                    "creator": {
+                        "name": "Geneos EUEM",
+                        "version": "0.1.120809"
+                    },
+                    "pages": [
+                        {
+                            "startedDateTime": "2015-09-30T14:37:49.642Z",
+                            "id": "http://192.168.142.20:7050/orb/bdos/1",
+                            "title": "Orb Diagnostic Mode",
+                            "pageTimings": {}
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "startedDateTime": "2015-09-30T14:37:49.886Z",
+                            "time": 10120,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb/bdos/local",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "8051"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 8051,
+                                "content": {
+                                    "size": 8051,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 10100,
+                                "receive": 20,
+                                "ssl": -1
+                            }
+                        },
+                        {
+                            "startedDateTime": "2015-09-30T14:38:00.693Z",
+                            "time": 22118,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb/bdos/1",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    },
+                                    {
+                                        "name": "Referer",
+                                        "value": "http://192.168.142.20:7050/orb/bdos/local"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "11633914"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 196519,
+                                "content": {
+                                    "size": 196519,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 20855,
+                                "receive": 1263,
+                                "ssl": -1
+                            }
+                        }
+                    ]
+                }
+            },
+            "totalTime": 32925
+        }
+    ]
+}

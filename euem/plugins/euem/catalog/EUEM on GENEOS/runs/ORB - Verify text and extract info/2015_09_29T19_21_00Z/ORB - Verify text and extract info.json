@@ -1,0 +1,464 @@
+{
+    "info": {
+        "scenario": "ORB - Verify text and extract info",
+        "base": "http://192.168.142.20:7050",
+        "number_of_steps": 9,
+        "number_of_passed": 9,
+        "number_of_failed": 0
+    },
+    "execution": {
+        "start": "2015-09-29T19:21:00.333Z",
+        "end": "2015-09-29T19:21:42.098Z",
+        "elapse": 41765
+    },
+    "variables": {
+        "system": {
+            "url": "http://192.168.142.20:7050",
+            "scenarioTimeout": 60,
+            "stepTimeout": 30
+        },
+        "user": {
+            "Gateway version": "GA3.1.1-150515",
+            "Page generated at": "Page generated at:20:21:20 29/09/2015",
+            "Built at": "master"
+        }
+    },
+    "steps": [
+        {
+            "id": 0,
+            "details": {
+                "target": "http://192.168.142.20:7050/orb",
+                "value": "",
+                "step": "open"
+            },
+            "response": {
+                "start": {
+                    "bodySize": 5681,
+                    "contentType": "text/html",
+                    "headers": [
+                        {
+                            "name": "Content-Type",
+                            "value": "text/html"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "5681"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "close"
+                        }
+                    ],
+                    "id": 1,
+                    "redirectURL": null,
+                    "stage": "start",
+                    "status": 200,
+                    "statusText": "OK",
+                    "time": "2015-09-29T19:21:20.577Z",
+                    "url": "http://192.168.142.20:7050/orb"
+                },
+                "end": {
+                    "contentType": "text/html",
+                    "headers": [
+                        {
+                            "name": "Content-Type",
+                            "value": "text/html"
+                        },
+                        {
+                            "name": "Content-Length",
+                            "value": "5681"
+                        },
+                        {
+                            "name": "Connection",
+                            "value": "close"
+                        }
+                    ],
+                    "id": 1,
+                    "redirectURL": null,
+                    "stage": "end",
+                    "status": 200,
+                    "statusText": "OK",
+                    "time": "2015-09-29T19:21:20.586Z",
+                    "url": "http://192.168.142.20:7050/orb"
+                }
+            },
+            "start": "2015-09-29T19:21:00.453Z",
+            "end": "2015-09-29T19:21:20.830Z",
+            "elapse": 20377,
+            "downloadSize": 0,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            },
+            "performance": {
+                "log": {
+                    "version": "1.0",
+                    "creator": {
+                        "name": "Geneos EUEM",
+                        "version": "0.1.120809"
+                    },
+                    "pages": [
+                        {
+                            "startedDateTime": "2015-09-29T19:21:00.312Z",
+                            "id": "http://192.168.142.20:7050/orb",
+                            "title": "Orb Diagnostic Mode",
+                            "pageTimings": {}
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "startedDateTime": "2015-09-29T19:21:00.556Z",
+                            "time": 20030,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "5681"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 5681,
+                                "content": {
+                                    "size": 5681,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 20021,
+                                "receive": 9,
+                                "ssl": -1
+                            }
+                        }
+                    ]
+                }
+            },
+            "totalTime": 20030
+        },
+        {
+            "id": 1,
+            "details": {
+                "target": "//tr[3]/td[2]",
+                "value": "Gateway version",
+                "step": "storeText"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.067Z",
+            "end": "2015-09-29T19:21:21.165Z",
+            "elapse": 98,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            }
+        },
+        {
+            "id": 2,
+            "details": {
+                "target": "${Gateway version}",
+                "value": "",
+                "step": "echo"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.271Z",
+            "end": "2015-09-29T19:21:21.271Z",
+            "elapse": 0,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": "GA3.1.1-150515"
+            }
+        },
+        {
+            "id": 3,
+            "details": {
+                "target": "css=div.timesamp",
+                "value": "Page generated at",
+                "step": "storeText"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.371Z",
+            "end": "2015-09-29T19:21:21.373Z",
+            "elapse": 2,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            }
+        },
+        {
+            "id": 4,
+            "details": {
+                "target": "${Page generated at}",
+                "value": "",
+                "step": "echo"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.571Z",
+            "end": "2015-09-29T19:21:21.571Z",
+            "elapse": 0,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": "Page generated at:20:21:20 29/09/2015"
+            }
+        },
+        {
+            "id": 5,
+            "details": {
+                "target": "//tr[7]/td[2]",
+                "value": "Built at",
+                "step": "storeText"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.671Z",
+            "end": "2015-09-29T19:21:21.673Z",
+            "elapse": 2,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            }
+        },
+        {
+            "id": 6,
+            "details": {
+                "target": "${Built at}",
+                "value": "",
+                "step": "echo"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.872Z",
+            "end": "2015-09-29T19:21:21.872Z",
+            "elapse": 0,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": "master"
+            }
+        },
+        {
+            "id": 7,
+            "details": {
+                "target": "link=Show All Queues",
+                "value": "",
+                "step": "clickAndWait"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:21.972Z",
+            "end": "2015-09-29T19:21:41.773Z",
+            "elapse": 19801,
+            "downloadSize": 16297,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            },
+            "performance": {
+                "log": {
+                    "version": "1.0",
+                    "creator": {
+                        "name": "Geneos EUEM",
+                        "version": "0.1.120809"
+                    },
+                    "pages": [
+                        {
+                            "startedDateTime": "2015-09-29T19:21:00.312Z",
+                            "id": "http://192.168.142.20:7050/orb/queues/all",
+                            "title": "Orb Diagnostic Mode",
+                            "pageTimings": {}
+                        }
+                    ],
+                    "entries": [
+                        {
+                            "startedDateTime": "2015-09-29T19:21:00.556Z",
+                            "time": 20030,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "5681"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 5681,
+                                "content": {
+                                    "size": 5681,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 20021,
+                                "receive": 9,
+                                "ssl": -1
+                            }
+                        },
+                        {
+                            "startedDateTime": "2015-09-29T19:21:22.176Z",
+                            "time": 19322,
+                            "request": {
+                                "method": "GET",
+                                "url": "http://192.168.142.20:7050/orb/queues/all",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "User-Agent",
+                                        "value": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1284.0 Safari/537.13"
+                                    },
+                                    {
+                                        "name": "Accept",
+                                        "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                                    },
+                                    {
+                                        "name": "Referer",
+                                        "value": "http://192.168.142.20:7050/orb"
+                                    }
+                                ],
+                                "queryString": [],
+                                "headersSize": -1,
+                                "bodySize": -1
+                            },
+                            "response": {
+                                "status": 200,
+                                "statusText": "OK",
+                                "httpVersion": "HTTP/1.1",
+                                "cookies": [],
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "text/html"
+                                    },
+                                    {
+                                        "name": "Content-Length",
+                                        "value": "329658"
+                                    },
+                                    {
+                                        "name": "Connection",
+                                        "value": "close"
+                                    }
+                                ],
+                                "redirectURL": "",
+                                "headersSize": -1,
+                                "bodySize": 16297,
+                                "content": {
+                                    "size": 16297,
+                                    "mimeType": "text/html"
+                                }
+                            },
+                            "cache": {},
+                            "timings": {
+                                "blocked": 0,
+                                "dns": -1,
+                                "connect": -1,
+                                "send": 0,
+                                "wait": 19149,
+                                "receive": 173,
+                                "ssl": -1
+                            }
+                        }
+                    ]
+                }
+            },
+            "totalTime": 40942
+        },
+        {
+            "id": 8,
+            "details": {
+                "target": "Orb Diagnostic Mode",
+                "value": "",
+                "step": "verifyTextPresent"
+            },
+            "response": {},
+            "start": "2015-09-29T19:21:41.995Z",
+            "end": "2015-09-29T19:21:42.005Z",
+            "elapse": 10,
+            "downloadSize": -1,
+            "result": {
+                "passed": true,
+                "message": "",
+                "data": ""
+            }
+        }
+    ]
+}
