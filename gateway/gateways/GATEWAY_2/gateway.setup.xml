@@ -11801,7 +11801,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Home Page</name>
-										<url>/index.html </url>
+										<url>/geneos-web-logon/</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -33787,9 +33787,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34064,9 +34066,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
