@@ -46,7 +46,7 @@ echo "<setup><files>" > commit_return.txt
 while read_dom; do
     if [[ $ENTITY = "path" ]] ; then
 	echo "<file><path>$CONTENT</path><version>$ver</version></file>" >> commit_return.txt
-	#remove_datestamp $CONTENT
+	remove_datestamp $CONTENT
     fi
 done < commit_files.txt
 echo "</files></setup>" >> commit_return.txt
