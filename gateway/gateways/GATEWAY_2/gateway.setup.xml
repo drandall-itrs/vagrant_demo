@@ -11789,6 +11789,9 @@ publishingPeriod=10</data>
 						<host>
 							<data>192.168.142.20</data>
 						</host>
+						<port>
+							<data>8181</data>
+						</port>
 						<protocol>
 							<http/>
 						</protocol>
@@ -33783,9 +33786,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34058,9 +34063,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
