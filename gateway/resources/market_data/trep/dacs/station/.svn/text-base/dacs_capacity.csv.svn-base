@@ -1,0 +1,15 @@
+fragmentID,segments,deviceName,totalPages,usedPages,totalMB,usedMB,percentUtilisation
+<!>databaseName,master
+<!>status,up	
+<!>creationDate,Feb 14 2012 2:16PM
+<!>lastTransactionDump,Feb 14 2012 3:52PM
+<!>secsSinceLastTransactionDump,13523426
+<!>logUtilisation,28.28 %
+<!>dataUtilisation,28.28 %
+Frag:0,system + default + logsegment,master,6656,1882,13.00,3.68,28.28 %
+Frag:1,system + default + logsegment,sysprocsdev,6656,1882,13.00,3.68,28.28 %
+Frag:2,system + default + logsegment,systemdbdev,6656,1882,13.00,3.68,28.28 %
+Frag:3,system + default + logsegment,tempdbdev,6656,1882,13.00,3.68,28.28 %
+Frag:4,system + default + logsegment,DACS_DATA,6656,1882,13.00,3.68,28.28 %
+Frag:5,system + default + logsegment,DACS_LOG,6656,1882,13.00,3.68,28.28 %
+Frag:6,system + default + logsegment,DACS_TEMP,6656,1882,13.00,3.68,28.28 %

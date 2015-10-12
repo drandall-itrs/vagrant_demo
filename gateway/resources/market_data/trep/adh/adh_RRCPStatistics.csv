@@ -1,0 +1,7 @@
+Parameter,Value
+srcBytesSent,0
+srcPacketSent,0
+srcRrcpBytesSent,1780.00 per second
+srcRrcpMcastBitmapWrites,2.50 per second
+srcRrcpMcastWrites,0.50 per second
+srcRrcpMsgSent,3.00 per second

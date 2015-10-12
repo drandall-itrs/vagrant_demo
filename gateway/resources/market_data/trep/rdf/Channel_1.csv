@@ -1,0 +1,24 @@
+name,value
+<!>acquisitionTime,1.78 ms
+Channel1_acsClientName,AliasAgent
+Channel1_acsHostName,""
+Channel1_TotalMsgRate,0
+Channel1_NumOutstReq,0
+Channel1_numVsync,0
+Channel1_NumVnosync,0
+Channel1_NumUpdate,0
+Channel1_NumCorrection,0
+Channel1_NumDrop,0
+Channel1_NumLBM,0
+Channel1_acsChannelId,1
+Channel1_CurrentRequestRate,0
+Channel1_PeakTotalMsgRate,0
+Channel1_SSLBufUtilization,0
+Channel1_PeakSSLBufUtilization,0
+Channel1_TotalMsgRateInBps,0
+Channel1_PeakTotalMsgRateInBps,0
+Channel1_RequestType,""
+Channel1_ChannelState,0
+Channel1_BDSStatus,0
+Channel1_BDSName,""
+Channel1_BDSSize,0

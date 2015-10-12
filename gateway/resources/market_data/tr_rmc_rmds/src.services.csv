@@ -1,0 +1,2 @@
+serviceName,serviceID,serverID,active,cached,stale,maxCache,%cache,load,pending,pendingOut,Availability,aggregation,aggInterval
+IDN_RDF,257,261,0,0,0,25000,0.00%,0,0,0,present,FALSE,0

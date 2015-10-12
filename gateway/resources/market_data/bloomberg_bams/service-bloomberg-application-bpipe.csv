@@ -1,0 +1,7 @@
+Name,CurrentTcpConnections,dataPayloadTotalBytes,currentSubscriptions,msgsToAppliance,slowReaders,msgsFromAppliance
+<!>ServerHost,192.168.10.173
+ITRS:bpipe-monitoring,,,,,,
+ITRS:latency-monitor,,,,,,
+ITRS:market-data-monitor,9,704592,247,0,0,5897
+owatson,,,,,,
+slapp,,,,,,

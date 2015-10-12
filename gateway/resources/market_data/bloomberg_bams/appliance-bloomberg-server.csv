@@ -1,0 +1,16 @@
+Name,Value,Delta,High,Low,Last_Updated
+<!>ServerHost,192.168.10.173
+<!>ServerID,14244
+Context switches per second,3701,282,6107,3204,15:20:30
+Free memory (%),86.39,0,86.89,86.04,15:20:30
+Free swap (%),95.77,-4.23,100,92.27,15:20:30
+Interrupts per second,1865,154,6366,1704,15:20:30
+Major page faults per second,0,-0.02,0.09,0,15:20:30
+Network bits in (Mbps),0.12,0.03,2.98,0.08,15:20:30
+Network bits out (Mbps),0.21,0.07,1.12,0.06,15:20:30
+Network packets in per second,192.5,48.99,4300.64,128.6,15:20:30
+Network packets out per second,168.76,47.07,854.86,55.61,15:20:30
+Overall CPU busy (%),7.44,0.35,15.88,6.82,15:20:30
+Overall system CPU (%),2.32,0.15,2.68,2.13,15:20:30
+Overall user CPU (%),1.91,0.15,9.68,1.72,15:20:30
+TCP retransmission rate (%),0.82,0.05,2.44,0.14,15:20:35

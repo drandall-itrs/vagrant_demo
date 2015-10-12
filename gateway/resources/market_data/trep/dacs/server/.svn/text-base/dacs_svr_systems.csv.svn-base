@@ -1,0 +1,13 @@
+Parameter,Value
+ActiveServer,stlimssp4
+ActiveSinkDaemon,6
+ActiveSinkDist,5
+BackupServers,0
+DacsApplications,0
+DacsPositions,0
+DacsUsers,25
+LoggedInUser,9
+OperAppPerm,NO
+OperPosPerm,NO
+StationDaemonHost,stlimssp4
+UserInstances,20

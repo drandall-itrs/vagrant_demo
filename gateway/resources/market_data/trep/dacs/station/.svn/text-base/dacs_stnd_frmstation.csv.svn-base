@@ -1,0 +1,16 @@
+Parameter,Value
+LoginRequest,0
+MaxLoginsRequest,0
+PingRequest,1
+SendChecksumTest,51
+SendDictionary,24
+SendDoneMsg,75
+SendFilter,0
+SendPermUpdate,0
+SendUpdateMsg,94
+SendUserProfile,75
+Unknown,0
+UsageCollAll,0
+UsageCollSingle,0
+UsageSizeAll,0
+UsageSizeSingle,0

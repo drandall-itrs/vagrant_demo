@@ -1,0 +1,7 @@
+feed,status,numTicks,numMatches,minLatency,maxLatency
+<!>Now,18/06/15 15:30:03
+<!>altFeed,bloombergA
+<!>baseFeed,bloomberg
+bloomberg,OK,127,,,
+bloombergA Max,OK,21,0,,
+bloombergA Min,OK,21,0,,

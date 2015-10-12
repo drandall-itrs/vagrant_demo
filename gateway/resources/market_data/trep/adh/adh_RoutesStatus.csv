@@ -1,0 +1,2 @@
+routeName,hostName,active,port,protocol
+rdf2_route,rdf2,TRUE,8101,ssl45

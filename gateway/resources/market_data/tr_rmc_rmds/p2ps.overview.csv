@@ -1,0 +1,22 @@
+Parameter,Value
+<!>version, ssl5.0.F52
+<!>serverID,261
+<!>pid,508
+<!>startTime,14:58:25 Fri May 06 2005
+tcpNoDelay,FALSE
+timedWrites,TRUE
+flushInterval,20
+usageFileSize,100
+usageDirectory,./
+dacsConnected,TRUE
+dacsEnabled,TRUE
+bufferPoolSize,32000
+bufferGuaranteed,200
+bufferMax,400
+insertRate,0
+updateRate,26
+activeItems,519
+%mounts,7.81%
+maxMounts,256
+activeMounts,20
+activeUsers,10

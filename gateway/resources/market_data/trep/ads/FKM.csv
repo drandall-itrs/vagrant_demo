@@ -1,0 +1,6 @@
+name,status,triggerCount,triggerDetails,updateRate,filename,fileSize,secondsSinceLastModified,secondsSinceLastTrigger,permissions,lastModificationTime,absolutePath,/group,Host,User
+<!>filesMonitored,1
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+ads_1.log,OK,0,,0.0000 Kb/sec,ads.log,39.9 Kb,109125,109360,664 (-rw-rw-r--),1342497006,/opt/itrs_beta/log/ads.log,,,

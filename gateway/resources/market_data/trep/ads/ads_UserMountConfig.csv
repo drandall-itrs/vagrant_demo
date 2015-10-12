@@ -1,0 +1,6 @@
+identifier,disconnectStaleService,groupInfo,permissionInfo,pingInterval,pingKillInterval,reversePing,singleOpen,setRemoveMount
+383,FALSE,TRUE,TRUE,16,60,TRUE,TRUE,FALSE
+384,FALSE,TRUE,TRUE,17,60,TRUE,TRUE,FALSE
+385,FALSE,TRUE,TRUE,10,30,FALSE,TRUE,FALSE
+386,FALSE,TRUE,TRUE,9,59,TRUE,TRUE,FALSE
+

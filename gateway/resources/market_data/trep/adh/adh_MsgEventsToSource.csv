@@ -1,0 +1,2 @@
+identifier,active,standby,close,haltUpdates,insert,open,overflows,ping,priority,closeNak,imageNak,openNak,renameNak,statusNak,updateNak
+IDN_RDF.0,0,0,0,0,0,14,0,0,0,0,0,0,0,0,0

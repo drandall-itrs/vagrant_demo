@@ -1,0 +1,9 @@
+segmentID,segmentName,totalPages,usedPages,totalMB,usedMB,percentUtilisation
+<!>databaseName,master
+<!>status,up
+<!>totalSegments,3
+system,system,46592,13174,91.00,25.73,28.28 %
+default,default,46592,13174,91.00,25.73,28.28 %
+logsegment,logsegment,46592,13174,91.00,25.73,28.28 %
+
+

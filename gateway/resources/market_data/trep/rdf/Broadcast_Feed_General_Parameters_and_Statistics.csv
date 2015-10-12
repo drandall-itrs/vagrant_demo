@@ -1,0 +1,16 @@
+name,value
+<!>acquisitionTime,1.34 ms
+BroadcastCommsStatus,0
+BroadcastShortFaultCount,0
+BroadcastLongFaultCount,0
+BroadcastFaultCount,0
+BroadcastLastUpTime,""
+BroadcastTotalFaultTime,0
+BroadcastLongestOutageTime,0
+BroadcastNumRecSw,0
+BroadcastNumSwPendingRec,0
+BroadcastSouthBoundBufferFullCount,0
+BroadcastWatchlistFullCount,0
+BroadcastWatchlistCurrentSize,0
+BroadcastWatchlistPeakSize,0
+BroadcastWatchlistMaxSize,0

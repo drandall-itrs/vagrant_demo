@@ -1,0 +1,41 @@
+serverProcessID,status,priority,loginName,clientHostName,clientApplication,command
+<!>databaseName,master
+<!>status,up
+<!>totalUsers,36
+1,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+2,sleeping    ,HIGH,,,,DEADLOCK TUNE
+3,sleeping    ,MEDIUM,,,<astc>,ASTC HANDLER
+4,sleeping    ,MEDIUM,,,,CHECKPOINT SLEEP
+5,sleeping    ,LOW,,,,HK WASH
+6,sleeping    ,MEDIUM,,,,HK GC
+7,sleeping    ,LOW,,,,HK CHORES
+8,sleeping    ,HIGH,,,,PORT MANAGER
+10,sleeping    ,MEDIUM,,,,LICENSE HEARTBEAT
+11,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+16,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+18,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+26,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+29,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+32,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+33,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+34,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+35,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+36,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+37,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+38,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+39,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+40,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+41,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+43,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+44,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+45,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+47,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+51,running     ,MEDIUM,sa          ,stlimssp4,NetProbe,SELECT
+53,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+54,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+55,recv sleep  ,MEDIUM,dacs_system ,stlimssp4,,AWAITING COMMAND
+57,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+58,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+60,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+61,recv sleep  ,MEDIUM,sa          ,stlimssp4,NetProbe,AWAITING COMMAND
+

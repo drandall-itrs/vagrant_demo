@@ -1,0 +1,2 @@
+mode,poolSize,allocated,used,free,usedInbound,usedOutbound,usedEngine,criticalLevel,maxLevel
+source,1024,1000,19,981,1,18,0,0,0

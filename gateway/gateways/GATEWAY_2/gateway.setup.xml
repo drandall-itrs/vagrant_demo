@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.2.0-150903 at 2015-10-12 15:21:22 by DRandall on ITRSLP070-->
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
+<!--Edited using Gateway Setup Editor version GA3.1.0-150227 at 2015-10-02 10:14:45 by DRandall on ITRSLP070-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<include>
@@ -2064,6 +2064,8 @@
 				<sampler ref="Mx Reporting Database Indexes"/>
 				<sampler ref="Mx Services"/>
 				<sampler ref="Mx Trades"/>
+				<sampler ref="MX Swift Messages"/>
+				<sampler ref="Mx Trades by Legal Entites"/>
 			</type>
 			<type name="ORC">
 				<sampler ref="ORC API"/>
@@ -18096,6 +18098,30 @@ WHERE SEVERITY&gt;=&apos;1&apos; AND 1 ORDER BY `timestamp` DESC LIMIT 100</data
 							<toolkit>
 								<samplerScript>
 									<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/murex/murex-trades-clearing.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="MX Swift Messages">
+						<var-group>
+							<data>Mx Workflow</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/murex/murex-swift.csv</data>
+								</samplerScript>
+							</toolkit>
+						</plugin>
+					</sampler>
+					<sampler name="Mx Trades by Legal Entites">
+						<var-group>
+							<data>Mx Workflow</data>
+						</var-group>
+						<plugin>
+							<toolkit>
+								<samplerScript>
+									<data>/bin/cat /opt/geneos/gateway/resources/trading_applications/murex/murex-trades-by-legal.csv</data>
 								</samplerScript>
 							</toolkit>
 						</plugin>
@@ -35954,27 +35980,71 @@ Loop</data>
 									<severity>critical</severity>
 								</update>
 							</transaction>
-							<if>
-								<like>
-									<dataItem>
-										<property>@value</property>
-									</dataItem>
-									<string>NOTE*</string>
-								</like>
-								<transaction>
-									<update>
-										<property>state/@severity</property>
-										<severity>ok</severity>
-									</update>
-								</transaction>
-								<transaction>
-									<update>
-										<property>state/@severity</property>
-										<severity>warning</severity>
-									</update>
-								</transaction>
-							</if>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
 						</if>
+					</if>
+				</block>
+			</rule>
+		</ruleGroup>
+		<ruleGroup name="Murex">
+			<rule name="New Rule 1">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7036&quot;)]/managedEntity[(@name=&quot;MUREX&quot;)]/sampler[(@name=&quot;Mx Financial Database Indexes&quot;)][(@type=&quot;Murex&quot;)]/dataview[(@name=&quot;Mx Financial Database Indexes&quot;)]/rows/row[(@name=&quot;ACT_BAT_NDO&quot;)]/cell[(@column=&quot;Drop&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<equal>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>Yes</string>
+						</equal>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
+			<rule name="New Rule 2">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;localhost_7036&quot;)]/managedEntity[(@name=&quot;MUREX&quot;)]/sampler[(@name=&quot;Mx Logs&quot;)][(@type=&quot;Murex&quot;)]/dataview[(@name=&quot;Mx Logs&quot;)]/rows/row/cell[(@column=&quot;status&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<equal>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>OK</string>
+						</equal>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+						</transaction>
 					</if>
 				</block>
 			</rule>

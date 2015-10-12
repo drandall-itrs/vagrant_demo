@@ -1,0 +1,18 @@
+name,value
+<!>acquisitionTime,1.41 ms
+RssMachineName,RSSHTCCB04
+RSSCommsStatus,1
+RSSCommsFaultCount,37
+RSSCommsLastUpTime,Jul/18/2012  04:33:01 GMT
+RSSCommsTotalFaultTime,461020
+RSSCommsLongestOutageTime,86369
+NumMsgInRate,330
+MsgInBitRate,162904
+PeakNumMsgInRate,18177
+PeakMsgInBitRate,8869432
+NumReqTimeOut,39
+SouthBoundBufferFullCount,0
+WatchListFullCount,0
+WatchlistCurrentSize,37705
+WatchlistPeakSize,83188
+WatchlistMaxSize,600000

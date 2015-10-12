@@ -1,0 +1,7 @@
+serverProcessID,loginName,lockedTable,lockType,page,status,command
+<!>databaseName,master
+<!>status,up
+<!>totalLocks,2
+51_duplicate1,sa,spt_values,Sh_intent,0,running,SELECT
+51_duplicate2,sa,syslogins,Sh_intent,0,running,SELECT
+

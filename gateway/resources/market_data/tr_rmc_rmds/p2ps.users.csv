@@ -1,0 +1,27 @@
+Position,userName,openRequests,cachedItems,activeItems,OutgoingMessages,messagesReceived,appID
+<!>usedConnections,20
+<!>availableConnections,236
+<!>MaxConnections,256
+<!>DACS_Enabled,TRUE
+<!>DACS_Connected,TRUE
+10.80.2.35/net,OLiao,0,9,9,1.95 per second,1.00 per second,Default
+10.80.2.30/pc-3eb413742285,FMok,0.00 per second,0,0,0.01 per second,0.01 per second,News
+10.80.3.67/HKBGC019,Kkim,0.00 per second,44,44,0.30 per second,0.05 per second,Kobra
+10.80.3.67/net,Kkim,0,1,1,0.05 per second,0.03 per second,KobraSSL
+10.80.3.31/net,JPriest,0.00 per second,110,110,6.85 per second,0.05 per second,Kobra
+10.80.3.31/net,JPriest,0.00 per second,36,36,0.05 per second,0.05 per second,Adfin
+10.80.3.31/net,JPriest,0,1,1,0.35 per second,0.01 per second,News
+10.80.2.44/DChan,DChan,0.00 per second,68,68,0.35 per second,0.45 per second,Kobra
+10.80.2.75/net,DLee,0.00 per second,94,94,9.05 per second,0.05 per second,Kobra
+10.80.3.31/net,JPriest,0.00 per second,0,0,0.01 per second,0.01 per second,News
+10.80.2.75/net,DLee,0.00 per second,35,35,0.30 per second,0.05 per second,Adfin
+10.80.2.75/net,DLee,0.00 per second,35,35,0.30 per second,0.05 per second,Adfin
+10.80.3.67/HKBGC019,Kkim,0,0,0,0.01 per second,0.01 per second,News
+10.80.3.96/hkbb06,SWong,0.00 per second,17,17,0.20 per second,0.05 per second,Adfin
+10.80.3.143/HP21033119435,FMa,0.00 per second,0,0,0.02 per second,0.02 per second,News
+10.80.2.131/hkecom01,VKo,0,87,87,0.10 per second,0.05 per second,Kobra
+10.80.2.75/net,DLee,0,0,0,0.02 per second,0.02 per second,News
+10.80.2.131/hkecom01,VKo,0,0,0,0.01 per second,0.01 per second,News
+10.80.3.138/hkswap02,DLi,0,0,0,0.01 per second,0.01 per second,News
+10.80.2.54/net,OLiao,0,0,0,0.01 per second,0.01 per second,News
+10.80.3.138/hkswap02,DLi,0,17,17,0.35 per second,0.05 per second,Kobra

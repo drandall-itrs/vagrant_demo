@@ -1,0 +1,6 @@
+name,status,triggerCount,triggerDetails,updateRate,filename,fileSize,secondsSinceLastModified,secondsSinceLastTrigger,permissions,lastModificationTime,absolutePath,/group
+<!>filesMonitored,1
+<!>filesInError,0
+<!>filesInWarning,0
+<!>filesNotFound,0
+/opt/itrs_beta/log/dacs_svr.log,OK,0,,0.0000 Kb/sec,dacs_svr.log,49.4 Kb,1020182,623500,644 (-rw-r--r--),1341605201,/opt/itrs_beta/log/dacs_svr.log,

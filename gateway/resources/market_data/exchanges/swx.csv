@@ -1,0 +1,4 @@
+serviceName,servicePort,turnaroundTime,status
+<!>Target Node, SWISS STOCK EXCHANGE
+<!>Target Address, 132.160.23.10
+ICMP_ECHO,0,09.92 ms, Reachable
