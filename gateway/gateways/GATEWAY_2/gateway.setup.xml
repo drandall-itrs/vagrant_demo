@@ -11699,7 +11699,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> News Page</name>
-										<url>/uk</url>
+										<url>/news/uk</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11717,7 +11717,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> World Page</name>
-										<url>/1/hi/world/default.stm </url>
+										<url>/news/world</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11726,7 +11726,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Business Page</name>
-										<url>/1/hi/business/default.stm </url>
+										<url>/news/business/</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -33782,9 +33782,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34055,9 +34057,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
