@@ -11762,7 +11762,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Contact Us Page</name>
-										<url>/contact-us.html  </url>
+										<url>/contact-us</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -33788,9 +33788,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34067,9 +34069,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
