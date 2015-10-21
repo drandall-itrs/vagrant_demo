@@ -122,7 +122,7 @@
 		</probeGroup>
 		<probeGroup name="Windows">
 			<probe name="192_168_31_1">
-				<hostname><!--192.168.31.2-->192.168.142.1</hostname>
+				<hostname><!--192.168.31.2-->192.168.142.10</hostname>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
 			<probe name="192_168_31_1_7099">
@@ -33790,9 +33790,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34073,9 +34075,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
