@@ -33795,9 +33795,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34088,9 +34090,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -36283,7 +36287,7 @@ Loop</data>
 		<connection>
 			<database>
 				<mysql>
-					<serverName>localhost</serverName>
+					<serverName>192.168.142.20</serverName>
 					<databaseName>GENEOS</databaseName>
 					<port>3306</port>
 				</mysql>
