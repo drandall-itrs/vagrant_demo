@@ -3373,7 +3373,7 @@ order by SEVTIME DESC
 		</hierarchy>
 	</alerting>
 	<importedData>
-		<connection name="INFRASTRUCTURE Attribute" disabled="true">
+		<connection name="INFRASTRUCTURE Attribute">
 			<primary>
 				<hostname>192.168.142.20</hostname>
 				<port>7050</port>
