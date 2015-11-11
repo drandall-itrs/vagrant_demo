@@ -43,7 +43,7 @@
 		<type name="Gateway Info">
 			<sampler ref="GW Gateway Data"/>
 			<sampler ref="GW Client Info"/>
-			<sampler disabled="true" ref="GW Managed Entity Data"/>
+			<sampler disabled="false" ref="GW Managed Entity Data"/>
 			<sampler ref="GW Probe Data"/>
 			<sampler ref="GW Severity Data"/>
 			<sampler ref="GW Snooze Data"/>
