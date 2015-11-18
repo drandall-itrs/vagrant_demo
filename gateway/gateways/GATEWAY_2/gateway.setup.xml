@@ -2245,14 +2245,15 @@
 				<win-services>
 					<servicesNew>
 						<service>
-							<serviceName>
-								<basic>
+							<serviceDescription>
+								<regex>
 									<pattern>
-										<data>Appinfo</data>
+										<data>
+											<regex>Application.*</regex>
+										</data>
 									</pattern>
-									<showIfUnavailable>true</showIfUnavailable>
-								</basic>
-							</serviceName>
+								</regex>
+							</serviceDescription>
 						</service>
 					</servicesNew>
 				</win-services>
@@ -33826,9 +33827,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34137,9 +34140,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
