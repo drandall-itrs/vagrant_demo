@@ -2246,13 +2246,12 @@
 					<servicesNew>
 						<service>
 							<serviceName>
-								<regex>
+								<basic>
 									<pattern>
-										<data>
-											<regex>Application.*</regex>
-										</data>
+										<data>Application</data>
 									</pattern>
-								</regex>
+									<showIfUnavailable>true</showIfUnavailable>
+								</basic>
 							</serviceName>
 						</service>
 					</servicesNew>
@@ -33824,9 +33823,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34129,9 +34130,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
