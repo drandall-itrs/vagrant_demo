@@ -183,6 +183,7 @@
 									<string>NetprobeNT_7036</string>
 								</var>
 								<sampler ref="CPU"/>
+								<sampler ref="Windows Service"/>
 							</managedEntity>
 							<managedEntity name="winvista-standard_7099">
 								<probe ref="192_168_31_1_7099"/>
@@ -2234,6 +2235,28 @@
 		<sampler disabled="true" name="CPU">
 			<plugin>
 				<cpu/>
+			</plugin>
+		</sampler>
+		<sampler name="Windows Service">
+			<var-group>
+				<data>Test</data>
+			</var-group>
+			<plugin>
+				<win-services>
+					<servicesNew>
+						<service>
+							<serviceName>
+								<regex>
+									<pattern>
+										<data>
+											<regex>Application.*</regex>
+										</data>
+									</pattern>
+								</regex>
+							</serviceName>
+						</service>
+					</servicesNew>
+				</win-services>
 			</plugin>
 		</sampler>
 		<samplerGroup name="Baseline">
@@ -33800,9 +33823,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34103,9 +34128,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
