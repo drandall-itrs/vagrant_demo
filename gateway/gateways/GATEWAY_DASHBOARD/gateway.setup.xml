@@ -23,7 +23,7 @@
 			</include>
 		</includeGroup>
 		<includeGroup name="local">
-			<include>
+			<include disabled="true">
 				<priority>1000</priority>
 				<required>true</required>
 				<location>../../gateway_config/shared/gateway_plugins.xml</location>
@@ -82,6 +82,13 @@
 						<probe ref="localhost_7054"/>
 					</managedEntity>
 				</managedEntityGroup>
+			</managedEntityGroup>
+			<managedEntityGroup name="JPM">
+				<attribute name="APP">JPM</attribute>
+				<managedEntity name="JPM">
+					<probe ref="localhost_7054"/>
+					<sampler ref="Start of Day"/>
+				</managedEntity>
 			</managedEntityGroup>
 		</managedEntityGroup>
 	</managedEntities>
@@ -1192,6 +1199,21 @@ order by SEVTIME DESC
 					</plugin>
 				</sampler>
 			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="JPM">
+			<sampler name="Start of Day">
+				<var-group>
+					<data/>
+				</var-group>
+				<dataviews>
+					<dataview name="Start of Day">
+						<createOnGateway>
+							<enabled>true</enabled>
+							<firstColumn>Name</firstColumn>
+						</createOnGateway>
+					</dataview>
+				</dataviews>
+			</sampler>
 		</samplerGroup>
 	</samplers>
 	<commands>
