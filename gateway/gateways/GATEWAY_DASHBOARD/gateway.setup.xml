@@ -1211,6 +1211,44 @@ order by SEVTIME DESC
 							<enabled>true</enabled>
 							<firstColumn>Name</firstColumn>
 						</createOnGateway>
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>Severity</data>
+									</headline>
+									<headline>
+										<data>Count of rows</data>
+									</headline>
+								</data>
+							</var-headlines>
+							<var-columns>
+								<data>
+									<column>
+										<data>Task</data>
+									</column>
+									<column>
+										<data>Severity</data>
+									</column>
+								</data>
+							</var-columns>
+							<var-rows>
+								<data>
+									<row>
+										<data>Task 1</data>
+									</row>
+									<row>
+										<data>Task 2</data>
+									</row>
+									<row>
+										<data>Task 3</data>
+									</row>
+									<row>
+										<data>Task 4</data>
+									</row>
+								</data>
+							</var-rows>
+						</additions>
 					</dataview>
 				</dataviews>
 			</sampler>
