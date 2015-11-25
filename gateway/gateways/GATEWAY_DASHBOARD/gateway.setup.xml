@@ -3309,6 +3309,12 @@ order by SEVTIME DESC
 							<integer>1</integer>
 						</update>
 					</transaction>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<severity>ok</severity>
+						</update>
+					</transaction>
 				</block>
 			</rule>
 		</ruleGroup>
