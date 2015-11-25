@@ -3297,6 +3297,20 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="task 1">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;JPM&quot;)]/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/rows/row/cell[(@column=&quot;Task&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<integer>1</integer>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 	</rules>
 	<alerting>
