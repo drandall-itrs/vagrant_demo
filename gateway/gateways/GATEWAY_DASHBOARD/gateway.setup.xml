@@ -3299,20 +3299,20 @@ order by SEVTIME DESC
 			</rule>
 			<rule name="task 1">
 				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;JPM&quot;)]/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/rows/row/cell[(@column=&quot;Task&quot;)]</target>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;JPM&quot;)]/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/rows/row[(@name=&quot;Task 1&quot;)]/cell[(@column=&quot;Task&quot;)]</target>
 				</targets>
 				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="random">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight RE&quot;)]/cell[(@column=&quot;label&quot;)]</pathAlias>
+				</pathAliases>
 				<block>
 					<transaction>
 						<update>
 							<property>@value</property>
-							<integer>1</integer>
-						</update>
-					</transaction>
-					<transaction>
-						<update>
-							<property>state/@severity</property>
-							<severity>ok</severity>
+							<dataItem>
+								<pathAlias ref="random"/>
+								<property>@value</property>
+							</dataItem>
 						</update>
 					</transaction>
 				</block>
