@@ -1009,6 +1009,9 @@ order by SEVTIME DESC
 									<row>
 										<data>Current</data>
 									</row>
+									<row>
+										<data>Tradition</data>
+									</row>
 								</data>
 							</var-rows>
 						</additions>
