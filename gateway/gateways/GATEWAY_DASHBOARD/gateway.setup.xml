@@ -2872,6 +2872,23 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="Tradtion Time format">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;CurrentTime&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;CurrentTime&quot;)]/rows/row[(@name=&quot;Tradition&quot;)]/cell[(@column=&quot;time&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<printDate>
+								<string>%d-%m-%Y %H:%M:%S</string>
+								<now/>
+							</printDate>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 		<ruleGroup name="IBM">
 			<rule name="Total jobs">
