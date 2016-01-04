@@ -546,7 +546,8 @@
 							<sql>
 								<data>DELETE FROM TB2;
 INSERT INTO TB2 SELECT Severity FROM T1
-WHERE Severity != &quot;OK&quot; </data>
+WHERE Severity != &quot;OK&quot; 
+AND connectionState != &quot;Up&quot;</data>
 							</sql>
 						</sampleSql>
 						<views>
