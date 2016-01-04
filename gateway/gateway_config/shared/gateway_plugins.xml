@@ -516,7 +516,7 @@
 					<Gateway-sql>
 						<setupSql>
 							<sql>
-								<data>create temp table TB2 (hostname TEXT, os TEXT, connectionState TEXT)
+								<data>create temp table TB2 (hostname TEXT, OS TEXT, connectionState TEXT)
 </data>
 							</sql>
 						</setupSql>
@@ -547,7 +547,7 @@
 								<data>DELETE FROM TB2;
 INSERT INTO TB2 SELECT hostname, connectionState FROM T1
 WHERE connectionState != &quot;Up&quot;
-AND OS like &apos;Linux%&apos;</data>
+AND OS like &apos;%Linux%&apos;</data>
 							</sql>
 						</sampleSql>
 						<views>
