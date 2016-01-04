@@ -514,12 +514,6 @@
 				</var-group>
 				<plugin>
 					<Gateway-sql>
-						<setupSql>
-							<sql>
-								<data>create temp table TB2 (hostname TEXT, OS TEXT, connectionState TEXT)
-</data>
-							</sql>
-						</setupSql>
 						<tables>
 							<dataview>
 								<tableName>
@@ -542,21 +536,16 @@
 								</columns>
 							</dataview>
 						</tables>
-						<sampleSql>
-							<sql>
-								<data>DELETE FROM TB2;
-INSERT INTO TB2 SELECT hostname, OS, connectionState FROM T1
-WHERE connectionState != &quot;Up&quot;</data>
-							</sql>
-						</sampleSql>
 						<views>
 							<view>
 								<name>
 									<data>Linux probeData</data>
 								</name>
 								<sql>
-									<data>select rowid as ID , * from TB2</data>
+									<data>select * from T1
+WHERE OS = &quot;Linux 2.6.18-404.el5&quot;</data>
 								</sql>
+								<showRowID>true</showRowID>
 							</view>
 						</views>
 					</Gateway-sql>
