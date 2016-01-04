@@ -549,7 +549,8 @@
 								</name>
 								<sql>
 									<data>select * from T1
-WHERE OS = &quot;Linux 2.6.18-404.el5&quot;</data>
+WHERE OS like &quot;%Linux%&quot;
+AND connectionState != &quot;Up&quot;</data>
 								</sql>
 								<showRowID>true</showRowID>
 							</view>
