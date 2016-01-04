@@ -20543,6 +20543,15 @@ Loop</data>
 				<runLocation>gateway</runLocation>
 			</script>
 		</effect>
+		<effect name="Node Down tracking script">
+			<script>
+				<exeFile>/opt/geneos/gateway/gateway_scripts/node_down_tracking.sh</exeFile>
+				<arguments>
+					<data/>
+				</arguments>
+				<runLocation>gateway</runLocation>
+			</script>
+		</effect>
 	</effects>
 	<commands>
 		<command name="Show Breach Details">
@@ -33828,9 +33837,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34141,9 +34152,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -36303,6 +36316,43 @@ Loop</data>
 									<effect ref="message volume tracking script"/>
 								</notification>
 							</level>
+						</critical>
+					</alert>
+				</alert>
+			</alert>
+		</hierarchy>
+		<hierarchy name="Node Down Test">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<managedEntityAttribute>PRODUCT</managedEntityAttribute>
+					</match>
+				</level>
+				<level>
+					<match>
+						<managedEntityAttribute>APP</managedEntityAttribute>
+					</match>
+				</level>
+				<level>
+					<match>
+						<pluginName/>
+					</match>
+				</level>
+			</levels>
+			<alert name="GATEWAY">
+				<critical>
+					<level/>
+				</critical>
+				<alert name="GATEWAY INFO">
+					<alert name="Gateway-probeData">
+						<critical>
+							<level>
+								<notification>
+									<effect ref="Node Down tracking script"/>
+								</notification>
+							</level>
+							<alwaysNotify>true</alwaysNotify>
 						</critical>
 					</alert>
 				</alert>
