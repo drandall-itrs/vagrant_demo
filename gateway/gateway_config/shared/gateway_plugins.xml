@@ -970,6 +970,34 @@ AND connectionState != &quot;Up&quot;</data>
 					</transaction>
 				</block>
 			</rule>
+			<rule name="Seperation of ProbeConnectionState per OS">
+				<targets>
+					<target>/geneos/gateway/directory/probe[(@name=&quot;Gateway Info&quot;)]/managedEntity[(@name=&quot;Gateway Info&quot;)]/sampler[(@name=&quot;GW Custom Probe Data Information&quot;)][(@type=&quot;&quot;)]/dataview/rows/row/cell[(@column=&quot;connectionState&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<notEqual>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>Up</string>
+						</notEqual>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
+				</block>
+			</rule>
 		</ruleGroup>
 		<ruleGroup name="Open Access">
 			<rule name="Cluster Nodes Status">

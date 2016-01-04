@@ -33849,9 +33849,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34186,9 +34188,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -36380,7 +36384,7 @@ Loop</data>
 				</level>
 				<level>
 					<match>
-						<pluginName/>
+						<dataviewName/>
 					</match>
 				</level>
 				<level>
@@ -36394,7 +36398,7 @@ Loop</data>
 					<level/>
 				</critical>
 				<alert name="GATEWAY INFO">
-					<alert name="Gateway-probeData">
+					<alert name="Linux probes down">
 						<critical>
 							<alwaysNotify>false</alwaysNotify>
 						</critical>
