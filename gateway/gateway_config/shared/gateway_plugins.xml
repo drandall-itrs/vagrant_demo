@@ -522,6 +522,7 @@
 							<string>Up</string>
 						</notEqual>
 						<transaction>
+							<delay>30</delay>
 							<update>
 								<property>state/@severity</property>
 								<severity>critical</severity>
