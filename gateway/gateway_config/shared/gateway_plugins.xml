@@ -33,7 +33,7 @@
 							<var name="remote_addresses_expect">
 								<string>-192.168.31.135:7031,-192.168.31.130:7031,-192.168.31.131:7031,-192.168.31.1:7031</string>
 							</var>
-							<sampler ref="GW Custom Probe Data"/>
+							<sampler ref="GW Custom Probe Data Information"/>
 						</managedEntity>
 					</managedEntityGroup>
 				</managedEntityGroup>
@@ -507,7 +507,7 @@
 			</sampler>
 		</samplerGroup>
 		<samplerGroup name="Gateway Info Custom">
-			<sampler name="GW Custom Probe Data">
+			<sampler name="GW Custom Probe Data Information">
 				<var-group>
 					<var ref="gateway_name"/>
 					<data> Gateway Info</data>
