@@ -533,6 +533,12 @@
 										</name>
 										<type>TEXT</type>
 									</column>
+									<column>
+										<name>
+											<data>OS</data>
+										</name>
+										<type>TEXT</type>
+									</column>
 								</columns>
 							</dataview>
 						</tables>
