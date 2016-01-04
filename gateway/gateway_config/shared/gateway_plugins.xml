@@ -546,8 +546,7 @@
 							<sql>
 								<data>DELETE FROM TB2;
 INSERT INTO TB2 SELECT hostname, OS, connectionState FROM T1
-WHERE connectionState != &quot;Up&quot;
-AND OS like &apos;%Linux%&apos;</data>
+WHERE OS like &apos;%Linux%&apos;</data>
 							</sql>
 						</sampleSql>
 						<views>
