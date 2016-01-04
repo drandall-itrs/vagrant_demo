@@ -33838,9 +33838,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34153,9 +34155,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
@@ -36339,6 +36343,11 @@ Loop</data>
 						<pluginName/>
 					</match>
 				</level>
+				<level>
+					<match>
+						<columnName/>
+					</match>
+				</level>
 			</levels>
 			<alert name="GATEWAY">
 				<critical>
@@ -36347,13 +36356,18 @@ Loop</data>
 				<alert name="GATEWAY INFO">
 					<alert name="Gateway-probeData">
 						<critical>
-							<level>
-								<notification>
-									<effect ref="Node Down tracking script"/>
-								</notification>
-							</level>
-							<alwaysNotify>true</alwaysNotify>
+							<alwaysNotify>false</alwaysNotify>
 						</critical>
+						<alert name="connectionState">
+							<critical>
+								<level>
+									<notification>
+										<effect ref="Node Down tracking script"/>
+									</notification>
+								</level>
+								<alwaysNotify>true</alwaysNotify>
+							</critical>
+						</alert>
 					</alert>
 				</alert>
 			</alert>
