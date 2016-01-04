@@ -1067,11 +1067,11 @@
 				<sampler disabled="true" ref="network"/>
 				<sampler ref="disk"/>
 				<sampler disabled="true" ref="tcp_links"/>
-				<sampler ref="ftm_self_announcing_netprobe"/>
-				<sampler ref="deviceio"/>
+				<sampler ref="ftm_self_announcing_netprobe" disabled="true"/>
+				<sampler ref="deviceio" disabled="true"/>
 				<sampler ref="top_cpu"/>
-				<sampler ref="Self Announced NetProbe Log"/>
-				<sampler ref="top_mem"/>
+				<sampler ref="Self Announced NetProbe Log" disabled="true"/>
+				<sampler ref="top_mem" disabled="true"/>
 			</type>
 			<type name="baseline_float">
 				<sampler ref="hardware"/>
@@ -33850,9 +33850,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34189,9 +34191,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							
