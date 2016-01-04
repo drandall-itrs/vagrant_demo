@@ -545,11 +545,22 @@
 						<views>
 							<view>
 								<name>
-									<data>Linux probeData</data>
+									<data>Linux probes down</data>
 								</name>
 								<sql>
 									<data>select * from T1
 WHERE OS like &quot;%Linux%&quot;
+AND connectionState != &quot;Up&quot;</data>
+								</sql>
+								<showRowID>true</showRowID>
+							</view>
+							<view>
+								<name>
+									<data>Windows probes down</data>
+								</name>
+								<sql>
+									<data>select * from T1
+WHERE OS like &quot;%Windows%&quot;
 AND connectionState != &quot;Up&quot;</data>
 								</sql>
 								<showRowID>true</showRowID>
