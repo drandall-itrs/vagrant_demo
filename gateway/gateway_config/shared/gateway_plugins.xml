@@ -33,6 +33,7 @@
 							<var name="remote_addresses_expect">
 								<string>-192.168.31.135:7031,-192.168.31.130:7031,-192.168.31.131:7031,-192.168.31.1:7031</string>
 							</var>
+							<sampler ref="GW Custom Probe Data"/>
 						</managedEntity>
 					</managedEntityGroup>
 				</managedEntityGroup>
@@ -503,6 +504,63 @@
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="Gateway Info Custom">
+			<sampler name="GW Custom Probe Data">
+				<var-group>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<setupSql>
+							<sql>
+								<data>create temp table TB2 (hostname TEXT, connectionState TEXT)
+</data>
+							</sql>
+						</setupSql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>T1</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;Gateway Info&quot;)]/managedEntity[(@name=&quot;Gateway Info&quot;)]/sampler[(@name=&quot;GW Probe Data&quot;)][(@type=&quot;Gateway Info&quot;)]/dataview[(@name=&quot;GW Probe Data&quot;)]</xpath>
+								<columns>
+									<column>
+										<name>
+											<data>hostname</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+									<column>
+										<name>
+											<data>connectionState</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+								</columns>
+							</dataview>
+						</tables>
+						<sampleSql>
+							<sql>
+								<data>DELETE FROM TB2;
+INSERT INTO TB2 SELECT Severity FROM T1
+WHERE Severity != &quot;OK&quot; </data>
+							</sql>
+						</sampleSql>
+						<views>
+							<view>
+								<name>
+									<data>Linux probeData</data>
+								</name>
+								<sql>
+									<data>select rowid as ID , * from TB2</data>
+								</sql>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 	</samplers>
