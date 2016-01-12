@@ -3,11 +3,6 @@
 	<includes>
 		<priority>1</priority>
 		<reloading/>
-		<include>
-			<priority>10</priority>
-			<required>true</required>
-			<location>../../gateway_config/shared/TR_Basic.xml</location>
-		</include>
 		<includeGroup name="Infrastructure">
 			<include disabled="true">
 				<priority>100</priority>
@@ -33,6 +28,15 @@
 				<required>true</required>
 				<location>../../gateway_config/shared/gateway_plugins.xml</location>
 			</include>
+		</includeGroup>
+		<includeGroup name="Custom">
+			<includeGroup name="TREP Dashboard">
+				<include>
+					<priority>10</priority>
+					<required>true</required>
+					<location>../../gateway_config/shared/TR_Basic.xml</location>
+				</include>
+			</includeGroup>
 		</includeGroup>
 	</includes>
 	<probes>
