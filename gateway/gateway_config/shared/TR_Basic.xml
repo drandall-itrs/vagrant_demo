@@ -5,12 +5,22 @@
 		<virtualProbe name="TREP Dashboard"/>
 	</probes>
 	<managedEntities>
-		<managedEntity name="TREP Dashboard">
-			<virtualProbe ref="TREP Dashboard"/>
-			<sampler ref="TREP Market Data Dashboard"/>
-			<sampler ref="TREP Market Data for Velocity Dashboard"/>
-			<sampler ref="TREP Market Data Dashboard CurrentTime"/>
-		</managedEntity>
+		<managedEntityGroup name="EMEA">
+			<attribute name="REGION">EMEA</attribute>
+			<attribute name="PRODUCT">GENEOS</attribute>
+			<managedEntityGroup name="London">
+				<attribute name="CITY">LONDON</attribute>
+				<managedEntityGroup name="Dashboard">
+					<attribute name="APP">DASHBOARD</attribute>
+					<managedEntity name="TREP Dashboard">
+						<virtualProbe ref="TREP Dashboard"/>
+						<sampler ref="TREP Market Data Dashboard"/>
+						<sampler ref="TREP Market Data for Velocity Dashboard"/>
+						<sampler ref="TREP Market Data Dashboard CurrentTime"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
 	</managedEntities>
 	<types>
 		<type name="TREP Dashboard">
