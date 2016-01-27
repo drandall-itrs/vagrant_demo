@@ -23,11 +23,20 @@
 			</include>
 		</includeGroup>
 		<includeGroup name="local">
-			<include>
+			<include disabled="true">
 				<priority>1000</priority>
 				<required>true</required>
 				<location>../../gateway_config/shared/gateway_plugins.xml</location>
 			</include>
+		</includeGroup>
+		<includeGroup name="Custom">
+			<includeGroup name="TREP Dashboard">
+				<include>
+					<priority>10</priority>
+					<required>true</required>
+					<location>../../gateway_config/shared/TR_Basic.xml</location>
+				</include>
+			</includeGroup>
 		</includeGroup>
 	</includes>
 	<probes>
@@ -82,6 +91,13 @@
 						<probe ref="localhost_7054"/>
 					</managedEntity>
 				</managedEntityGroup>
+			</managedEntityGroup>
+			<managedEntityGroup name="JPM">
+				<attribute name="APP">JPM</attribute>
+				<managedEntity name="JPM">
+					<probe ref="localhost_7054"/>
+					<sampler ref="Start of Day"/>
+				</managedEntity>
 			</managedEntityGroup>
 		</managedEntityGroup>
 	</managedEntities>
@@ -1002,6 +1018,9 @@ order by SEVTIME DESC
 									<row>
 										<data>Current</data>
 									</row>
+									<row>
+										<data>Tradition</data>
+									</row>
 								</data>
 							</var-rows>
 						</additions>
@@ -1192,6 +1211,59 @@ order by SEVTIME DESC
 					</plugin>
 				</sampler>
 			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="JPM">
+			<sampler name="Start of Day">
+				<var-group>
+					<data/>
+				</var-group>
+				<dataviews>
+					<dataview name="Start of Day">
+						<createOnGateway>
+							<enabled>true</enabled>
+							<firstColumn>Name</firstColumn>
+						</createOnGateway>
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>Severity</data>
+									</headline>
+									<headline>
+										<data>Count of rows</data>
+									</headline>
+								</data>
+							</var-headlines>
+							<var-columns>
+								<data>
+									<column>
+										<data>Task</data>
+									</column>
+									<column>
+										<data>Severity</data>
+									</column>
+								</data>
+							</var-columns>
+							<var-rows>
+								<data>
+									<row>
+										<data>Task 1</data>
+									</row>
+									<row>
+										<data>Task 2</data>
+									</row>
+									<row>
+										<data>Task 3</data>
+									</row>
+									<row>
+										<data>Task 4</data>
+									</row>
+								</data>
+							</var-rows>
+						</additions>
+					</dataview>
+				</dataviews>
+			</sampler>
 		</samplerGroup>
 	</samplers>
 	<commands>
@@ -2809,6 +2881,23 @@ order by SEVTIME DESC
 					</transaction>
 				</block>
 			</rule>
+			<rule name="Tradtion Time format">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;CurrentTime&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;CurrentTime&quot;)]/rows/row[(@name=&quot;Tradition&quot;)]/cell[(@column=&quot;time&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<printDate>
+								<string>%d-%m-%Y %H:%M:%S</string>
+								<now/>
+							</printDate>
+						</update>
+					</transaction>
+				</block>
+			</rule>
 		</ruleGroup>
 		<ruleGroup name="IBM">
 			<rule name="Total jobs">
@@ -3209,6 +3298,60 @@ order by SEVTIME DESC
 						<update>
 							<property>@value</property>
 							<var ref="rowName"/>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+		</ruleGroup>
+		<ruleGroup name="JPM">
+			<rule name="Number of rows">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/headlines/cell[(@name=&quot;Count of rows&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="rows">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;JPM&quot;)]/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/rows/row/cell[(@column=&quot;Task&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<count>
+								<dataItems>
+									<pathAlias ref="rows"/>
+									<property>@value</property>
+								</dataItems>
+							</count>
+						</update>
+					</transaction>
+				</block>
+			</rule>
+			<rule name="task 1">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;JPM&quot;)]/sampler[(@name=&quot;Start of Day&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Start of Day&quot;)]/rows/row[(@name=&quot;Task 1&quot;)]/cell[(@column=&quot;Task&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="random">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Tier 3 dashboard&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;Tier 3 dashboard&quot;)]/rows/row[(@name=&quot;Insight RE&quot;)]/cell[(@column=&quot;label&quot;)]</pathAlias>
+					<pathAlias name="random sev">/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;dashboard&quot;)]/sampler[(@name=&quot;Data Management - OLA_DDA&quot;)][(@type=&quot;tier1 dashboard&quot;)]/dataview[(@name=&quot;Data Management - OLA_DDA&quot;)]/rows/row[(@name=&quot;Myriad - Insight&quot;)]/cell[(@column=&quot;severity&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<dataItem>
+								<pathAlias ref="random"/>
+								<property>@value</property>
+							</dataItem>
+						</update>
+					</transaction>
+					<transaction>
+						<update>
+							<property>state/@severity</property>
+							<dataItem>
+								<pathAlias ref="random sev"/>
+								<property>state/@severity</property>
+							</dataItem>
 						</update>
 					</transaction>
 				</block>

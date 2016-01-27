@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited with special schema version GA3.3.0-150928 compatibility 1 from "C:\Program Files (x86)\ac2\GA3.3.0-151120\schema\gateway.xsd" at 2015-12-30 12:28:29 by owatson on ITRSLP072-->
-<!--Edited using Gateway Setup Editor version GA3.3.0-151120 at 2016-01-18 16:25:39 by owatson on ITRSLP072-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.3.0-150928/gateway.xsd">
 	<includes>
 		<priority>1</priority>
@@ -124,16 +123,16 @@
 		</probeGroup>
 		<probeGroup name="Windows">
 			<probe name="192_168_31_1">
-				<hostname><!--192.168.31.2-->192.168.142.1</hostname>
+				<hostname><!--192.168.31.2-->10.211.55.3</hostname>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
 			<probe name="192_168_31_1_7099">
-				<hostname><!--192.168.31.2-->192.168.142.1</hostname>
+				<hostname><!--192.168.31.2-->10.211.55.3</hostname>
 				<port>7099</port>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
 			<probe name="192_168_31_1_7100">
-				<hostname><!--192.168.31.2-->192.168.142.1</hostname>
+				<hostname><!--192.168.31.2-->10.211.55.3</hostname>
 				<port>7100</port>
 				<encodedPassword>awRB3/3CmHekk</encodedPassword>
 			</probe>
@@ -183,6 +182,7 @@
 								<var name="win_probe">
 									<string>NetprobeNT_7036</string>
 								</var>
+								<sampler ref="Windows Service"/>
 							</managedEntity>
 							<managedEntity name="winvista-standard_7099">
 								<probe ref="192_168_31_1_7099"/>
@@ -1089,11 +1089,11 @@
 				<sampler disabled="true" ref="network"/>
 				<sampler ref="disk"/>
 				<sampler disabled="true" ref="tcp_links"/>
-				<sampler ref="ftm_self_announcing_netprobe"/>
-				<sampler ref="deviceio"/>
+				<sampler ref="ftm_self_announcing_netprobe" disabled="true"/>
+				<sampler ref="deviceio" disabled="true"/>
 				<sampler ref="top_cpu"/>
-				<sampler ref="Self Announced NetProbe Log"/>
-				<sampler ref="top_mem"/>
+				<sampler ref="Self Announced NetProbe Log" disabled="true"/>
+				<sampler ref="top_mem" disabled="true"/>
 			</type>
 			<type name="baseline_float">
 				<sampler ref="hardware"/>
@@ -2257,6 +2257,28 @@
 		<sampler disabled="true" name="CPU">
 			<plugin>
 				<cpu/>
+			</plugin>
+		</sampler>
+		<sampler name="Windows Service">
+			<var-group>
+				<data>Test</data>
+			</var-group>
+			<plugin>
+				<win-services>
+					<servicesNew>
+						<service>
+							<serviceDescription>
+								<regex>
+									<pattern>
+										<data>
+											<regex>Application.*</regex>
+										</data>
+									</pattern>
+								</regex>
+							</serviceDescription>
+						</service>
+					</servicesNew>
+				</win-services>
 			</plugin>
 		</sampler>
 		<samplerGroup name="Baseline">
@@ -11840,7 +11862,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> News Page</name>
-										<url>/1/hi/uk/default.stm  </url>
+										<url>/news/uk</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11849,7 +11871,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Technology Page</name>
-										<url>/1/hi/technology/default.stm </url>
+										<url>/news/technology</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11858,7 +11880,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> World Page</name>
-										<url>/1/hi/world/default.stm </url>
+										<url>/news/world</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11867,7 +11889,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Business Page</name>
-										<url>/1/hi/business/default.stm </url>
+										<url>/news/business/</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11903,7 +11925,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Contact Us Page</name>
-										<url>/contact-us.html  </url>
+										<url>/contact-us</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -11930,6 +11952,9 @@ publishingPeriod=10</data>
 						<host>
 							<data>192.168.142.20</data>
 						</host>
+						<port>
+							<data>8181</data>
+						</port>
 						<protocol>
 							<http/>
 						</protocol>
@@ -11939,7 +11964,7 @@ publishingPeriod=10</data>
 								<stages>
 									<stage>
 										<name> Home Page</name>
-										<url>/index.html </url>
+										<url>/geneos-web-logon/</url>
 									</stage>
 								</stages>
 							</scenario>
@@ -20652,6 +20677,15 @@ Loop</data>
 		<effect name="message volume tracking script">
 			<script>
 				<exeFile>/opt/geneos/gateway/gateway_scripts/message_volume_tracking.sh</exeFile>
+				<arguments>
+					<data/>
+				</arguments>
+				<runLocation>gateway</runLocation>
+			</script>
+		</effect>
+		<effect name="Node Down tracking script">
+			<script>
+				<exeFile>/opt/geneos/gateway/gateway_scripts/node_down_tracking.sh</exeFile>
 				<arguments>
 					<data/>
 				</arguments>
@@ -33930,9 +33964,63 @@ Loop</data>
 						
 						
 						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						
 						
@@ -34217,9 +34305,63 @@ Loop</data>
 							
 							
 							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 							
 							
 							
@@ -36371,6 +36513,53 @@ Loop</data>
 				</alert>
 			</alert>
 		</hierarchy>
+		<hierarchy name="Node Down Test">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<managedEntityAttribute>PRODUCT</managedEntityAttribute>
+					</match>
+				</level>
+				<level>
+					<match>
+						<managedEntityAttribute>APP</managedEntityAttribute>
+					</match>
+				</level>
+				<level>
+					<match>
+						<dataviewName/>
+					</match>
+				</level>
+				<level>
+					<match>
+						<columnName/>
+					</match>
+				</level>
+			</levels>
+			<alert name="GATEWAY">
+				<critical>
+					<level/>
+				</critical>
+				<alert name="GATEWAY INFO">
+					<alert name="Linux probes down">
+						<critical>
+							<alwaysNotify>false</alwaysNotify>
+						</critical>
+						<alert name="connectionState">
+							<critical>
+								<level>
+									<notification>
+										<effect ref="Node Down tracking script"/>
+									</notification>
+								</level>
+								<alwaysNotify>true</alwaysNotify>
+							</critical>
+						</alert>
+					</alert>
+				</alert>
+			</alert>
+		</hierarchy>
 	</alerting>
 	<dataSets>
 		<timeSeries name="CPU_MAX_ERR">
@@ -36409,7 +36598,7 @@ Loop</data>
 		<connection>
 			<database>
 				<mysql>
-					<serverName>localhost</serverName>
+					<serverName>192.168.142.20</serverName>
 					<databaseName>GENEOS</databaseName>
 					<port>3306</port>
 				</mysql>

@@ -9,6 +9,7 @@ sudo /etc/init.d/mysqld start
 /opt/geneos/bin/gatewayctl  all start
 /opt/geneos/bin/netprobectl all start
 /opt/geneos/bin/webserverctl all start
+/opt/geneos/bin/netprobectl self_announcing_netprobe start
 cd /opt/geneos/euem
  ./euem-netprobe.linux_64 -port 9999 &
 

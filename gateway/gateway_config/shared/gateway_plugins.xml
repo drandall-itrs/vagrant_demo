@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!--Edited using Gateway Setup Editor version GA3.3.0-151120 at 2016-01-18 16:15:53 by owatson on ITRSLP072-->
 <!-- Gateway-created setup include file for user ActiveConsole5 at 192.168.10.144 -->
 <gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.3.0-150928/gateway.xsd">
 	<probes>
@@ -34,6 +33,7 @@
 							<var name="remote_addresses_expect">
 								<string>-192.168.31.135:7031,-192.168.31.130:7031,-192.168.31.131:7031,-192.168.31.1:7031</string>
 							</var>
+							<sampler ref="GW Custom Probe Data Information"/>
 						</managedEntity>
 					</managedEntityGroup>
 				</managedEntityGroup>
@@ -44,7 +44,7 @@
 		<type name="Gateway Info">
 			<sampler ref="GW Gateway Data"/>
 			<sampler ref="GW Client Info"/>
-			<sampler disabled="true" ref="GW Managed Entity Data"/>
+			<sampler disabled="false" ref="GW Managed Entity Data"/>
 			<sampler ref="GW Probe Data"/>
 			<sampler ref="GW Severity Data"/>
 			<sampler ref="GW Snooze Data"/>
@@ -133,7 +133,7 @@
 					</dataview>
 				</dataviews>
 			</sampler>
-			<sampler name="xGW Managed Entity Data">
+			<sampler name="GW Managed Entity Data">
 				<var-group>
 					<var ref="gateway_name"/>
 					<data> Gateway Info</data>
@@ -504,6 +504,70 @@
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="Gateway Info Custom">
+			<sampler name="GW Custom Probe Data Information">
+				<var-group>
+					<var ref="gateway_name"/>
+					<data> Gateway Info</data>
+				</var-group>
+				<plugin>
+					<Gateway-sql>
+						<tables>
+							<dataview>
+								<tableName>
+									<data>T1</data>
+								</tableName>
+								<xpath>/geneos/gateway[(@name=&quot;GATEWAY_2&quot;)]/directory/probe[(@name=&quot;Gateway Info&quot;)]/managedEntity[(@name=&quot;Gateway Info&quot;)]/sampler[(@name=&quot;GW Probe Data&quot;)][(@type=&quot;Gateway Info&quot;)]/dataview[(@name=&quot;GW Probe Data&quot;)]</xpath>
+								<columns>
+									<column>
+										<name>
+											<data>hostname</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+									<column>
+										<name>
+											<data>connectionState</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+									<column>
+										<name>
+											<data>OS</data>
+										</name>
+										<type>TEXT</type>
+									</column>
+								</columns>
+							</dataview>
+						</tables>
+						<views>
+							<view>
+								<name>
+									<data>Linux probes down</data>
+								</name>
+								<sql>
+									<data>select * from T1
+WHERE OS like &quot;%Linux%&quot;
+AND connectionState != &quot;Up&quot;</data>
+								</sql>
+								<showRowID>true</showRowID>
+							</view>
+							<view>
+								<name>
+									<data>Windows probes down</data>
+								</name>
+								<sql>
+									<data>select * from T1
+WHERE OS like &quot;%Windows%&quot;
+AND connectionState != &quot;Up&quot;</data>
+								</sql>
+								<showRowID>true</showRowID>
+							</view>
+						</views>
+					</Gateway-sql>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 	</samplers>
@@ -904,6 +968,34 @@
 							</total>
 						</update>
 					</transaction>
+				</block>
+			</rule>
+			<rule name="Seperation of ProbeConnectionState per OS">
+				<targets>
+					<target>/geneos/gateway/directory/probe[(@name=&quot;Gateway Info&quot;)]/managedEntity[(@name=&quot;Gateway Info&quot;)]/sampler[(@name=&quot;GW Custom Probe Data Information&quot;)][(@type=&quot;&quot;)]/dataview/rows/row/cell[(@column=&quot;connectionState&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<notEqual>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<string>Up</string>
+						</notEqual>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>ok</severity>
+							</update>
+						</transaction>
+					</if>
 				</block>
 			</rule>
 		</ruleGroup>
