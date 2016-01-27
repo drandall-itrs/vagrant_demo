@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
+<!--Edited with special schema version GA3.3.0-150928 compatibility 1 from "C:\Program Files (x86)\ac2\GA3.3.0-151120\schema\gateway.xsd" at 2015-12-30 12:28:29 by owatson on ITRSLP072-->
+<!--Edited using Gateway Setup Editor version GA3.3.0-151120 at 2016-01-18 16:25:39 by owatson on ITRSLP072-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.3.0-150928/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<include>
@@ -145,7 +147,7 @@
 			<managedEntityGroup name="London">
 				<attribute name="CITY">LONDON</attribute>
 				<managedEntityGroup name="Baseline And Framework">
-					<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
+					<attribute name="LICENCE_MODEL">BASELINE AND FRAMEWORK</attribute>
 					<managedEntityGroup name="Baseline">
 						<attribute name="APP">BASELINE</attribute>
 						<managedEntity name="linux-netprobes">
@@ -168,7 +170,6 @@
 								<probe ref="192_168_31_1"/>
 								<addTypes>
 									<type ref="News"/>
-									<type ref="windows"/>
 								</addTypes>
 								<var name="remote_addresses">
 									<string>7021</string>
@@ -182,7 +183,6 @@
 								<var name="win_probe">
 									<string>NetprobeNT_7036</string>
 								</var>
-								<sampler ref="CPU"/>
 							</managedEntity>
 							<managedEntity name="winvista-standard_7099">
 								<probe ref="192_168_31_1_7099"/>
@@ -215,6 +215,27 @@
 									<string>NetprobeNT_7036</string>
 								</var>
 								<sampler ref="CPU"/>
+							</managedEntity>
+							<managedEntity name="Windows Desktop">
+								<probe ref="192_168_31_1"/>
+								<addTypes>
+									<type ref="windows"/>
+								</addTypes>
+								<var name="remote_addresses">
+									<string>7021</string>
+								</var>
+								<var name="tcp_link_name_content">
+									<string>LPORT, RADDRESS, RPORT</string>
+								</var>
+								<var name="remote_addresses_expect">
+									<string/>
+								</var>
+								<var name="win_probe">
+									<string>NetprobeNT</string>
+								</var>
+								<sampler ref="CPU"/>
+								<sampler ref="Desktop"/>
+								<sampler ref="Custom WMI"/>
 							</managedEntity>
 						</managedEntityGroup>
 						<managedEntityGroup name="Linux">
@@ -333,7 +354,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Development Toolkit">
-					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+					<attribute name="LICENCE_MODEL">DEVELOPMENT TOOLKIT</attribute>
 					<managedEntityGroup name="Custom">
 						<attribute name="APP">CUSTOM</attribute>
 						<managedEntity disabled="true" name="sql-toolkit">
@@ -384,7 +405,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
-					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<attribute name="LICENCE_MODEL">APPLICATION PLUGINS</attribute>
 					<managedEntityGroup name="Web">
 						<attribute name="APP">WEB</attribute>
 						<managedEntity name="webmon">
@@ -456,7 +477,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Third Party">
-					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+					<attribute name="LICENCE_MODEL">THIRD PARTY</attribute>
 					<managedEntityGroup name="Virtualisation">
 						<attribute name="APP">VIRTUALISATION</attribute>
 						<managedEntity name="vmware">
@@ -471,7 +492,7 @@
 			<managedEntityGroup name="Paris">
 				<attribute name="CITY">PARIS</attribute>
 				<managedEntityGroup name="Baseline And Framework">
-					<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
+					<attribute name="LICENCE_MODEL">BASELINE AND FRAMEWORK</attribute>
 					<managedEntityGroup name="Infrastructure">
 						<attribute name="APP">INFRASTRUCTURE</attribute>
 						<addTypes>
@@ -488,7 +509,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
-					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<attribute name="LICENCE_MODEL">APPLICATION PLUGINS</attribute>
 					<managedEntityGroup name="Data Grid">
 						<attribute name="APP">DATA GRID</attribute>
 						<managedEntity name="Coherence">
@@ -506,10 +527,10 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Development Toolkit">
-					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+					<attribute name="LICENCE_MODEL">DEVELOPMENT TOOLKIT</attribute>
 				</managedEntityGroup>
 				<managedEntityGroup name="Third Party">
-					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+					<attribute name="LICENCE_MODEL">THIRD PARTY</attribute>
 				</managedEntityGroup>
 				<managedEntityGroup name="TBD">
 					<managedEntityGroup name="Equities">
@@ -540,16 +561,16 @@
 			<managedEntityGroup name="Hong Kong">
 				<attribute name="CITY">HONG KONG</attribute>
 				<managedEntityGroup name="Baseline And Framework">
-					<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
+					<attribute name="LICENCE_MODEL">BASELINE AND FRAMEWORK</attribute>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
-					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<attribute name="LICENCE_MODEL">APPLICATION PLUGINS</attribute>
 					<managedEntityGroup name="Market Data">
 						<attribute name="APP">MARKET DATA</attribute>
 						<managedEntityGroup name="Bloomberg BAMS">
 							<attribute name="VENDOR">BLOOMBERG</attribute>
 							<managedEntityGroup name="Application">
-								<attribute name="Sub-Application">Application</attribute>
+								<attribute name="Sub_Application">Application</attribute>
 								<addTypes>
 									<type ref="bloomberg-bams-appliance"/>
 								</addTypes>
@@ -558,7 +579,7 @@
 								</managedEntity>
 							</managedEntityGroup>
 							<managedEntityGroup name="Service">
-								<attribute name="Sub-Application">Service</attribute>
+								<attribute name="Sub_Application">Service</attribute>
 								<addTypes>
 									<type ref="bloomberg-bams-service"/>
 								</addTypes>
@@ -595,7 +616,7 @@
 								</managedEntity>
 							</managedEntityGroup>
 							<managedEntityGroup name="DACS">
-								<attribute name="Sub-Application">DACS</attribute>
+								<attribute name="Sub_Application">DACS</attribute>
 								<addTypes>
 									<type ref="DACS Server Applications"/>
 									<type ref="DACS Sybase"/>
@@ -608,7 +629,7 @@
 								</managedEntity>
 							</managedEntityGroup>
 							<managedEntityGroup name="RRCP">
-								<attribute name="Sub-Application">RRCP</attribute>
+								<attribute name="Sub_Application">RRCP</attribute>
 								<addTypes>
 									<type ref="RRCP Applications"/>
 									<type ref="RRCP"/>
@@ -618,7 +639,7 @@
 								</managedEntity>
 							</managedEntityGroup>
 							<managedEntityGroup name="RDF">
-								<attribute name="Sub-Application">RDF LATENCY</attribute>
+								<attribute name="Sub_Application">RDF LATENCY</attribute>
 								<addTypes>
 									<type ref="RDF"/>
 									<type ref="LATENCY"/>
@@ -741,7 +762,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Development Toolkit">
-					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+					<attribute name="LICENCE_MODEL">DEVELOPMENT TOOLKIT</attribute>
 					<managedEntityGroup name="Batch">
 						<attribute name="APP">BATCH</attribute>
 						<managedEntity name="Autosys">
@@ -765,7 +786,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Third Party">
-					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+					<attribute name="LICENCE_MODEL">THIRD PARTY</attribute>
 					<managedEntityGroup name="Corvil">
 						<attribute name="APP">CORVIL</attribute>
 						<managedEntity name="corvil">
@@ -805,10 +826,10 @@
 			<managedEntityGroup name="New York">
 				<attribute name="CITY">NEW YORK</attribute>
 				<managedEntityGroup name="Baseline And Framework">
-					<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
+					<attribute name="LICENCE_MODEL">BASELINE AND FRAMEWORK</attribute>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
-					<attribute name="LICENCE MODEL">APPLICATION PLUGINS</attribute>
+					<attribute name="LICENCE_MODEL">APPLICATION PLUGINS</attribute>
 					<managedEntityGroup name="Trading Platforms">
 						<attribute name="APP">TRADING PLATFORMS</attribute>
 						<managedEntity name="gl">
@@ -916,7 +937,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Development Toolkit">
-					<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+					<attribute name="LICENCE_MODEL">DEVELOPMENT TOOLKIT</attribute>
 					<managedEntityGroup name="Trading Platforms">
 						<attribute name="APP">TRADING PLATFORMS</attribute>
 						<managedEntity name="clearvision">
@@ -955,7 +976,7 @@
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Third Party">
-					<attribute name="LICENCE MODEL">THIRD PARTY</attribute>
+					<attribute name="LICENCE_MODEL">THIRD PARTY</attribute>
 					<managedEntityGroup name="Trading Platforms">
 						<attribute name="APP">TRADING PLATFORMS</attribute>
 						<managedEntity name="ul link">
@@ -1028,10 +1049,12 @@
 				<sampler ref="Windows Event Logs"/>
 				<sampler disabled="true" ref="cpu-linux"/>
 				<sampler ref="win-device-io"/>
-				<sampler ref="Vista Standard"/>
+				<sampler ref="Win Standard"/>
 				<sampler ref="network"/>
 				<sampler ref="disk-win"/>
 				<sampler ref="Windows Netprobe Logs"/>
+				<sampler ref="hardware"/>
+				<sampler ref="tcp_links"/>
 			</type>
 			<type name="demoprobes"/>
 			<type name="unix">
@@ -2507,7 +2530,7 @@
 				</plugin>
 				<group>Processes</group>
 			</sampler>
-			<sampler name="Vista Standard">
+			<sampler name="Win Standard">
 				<group>Processes</group>
 				<sampleInterval>
 					<data>5</data>
@@ -2915,6 +2938,9 @@
 			</sampler>
 			<sampler name="win-device-io">
 				<!---->
+				<var-group>
+					<data>Resources</data>
+				</var-group>
 				<plugin>
 					<perfmon>
 						<template>
@@ -2996,6 +3022,121 @@
 					</processes>
 				</plugin>
 				<group>Processes</group>
+			</sampler>
+			<sampler name="Desktop">
+				<plugin>
+					<desktop-pc-monitoring/>
+				</plugin>
+			</sampler>
+			<sampler name="Custom WMI">
+				<sampleInterval>
+					<data>30</data>
+				</sampleInterval>
+				<plugin>
+					<wmi>
+						<columnMode>
+							<columns>
+								<class>
+									<data>Win32_Process</data>
+								</class>
+								<column>
+									<member>
+										<data>ProcessId</data>
+									</member>
+									<displayName>
+										<data>PID</data>
+									</displayName>
+								</column>
+								<column>
+									<member>
+										<data>Caption</data>
+									</member>
+									<displayName>
+										<data>Process Name</data>
+									</displayName>
+								</column>
+								<column>
+									<member>
+										<data>CommandLine</data>
+									</member>
+								</column>
+								<column>
+									<member>
+										<data>ParentProcessId</data>
+									</member>
+									<displayName>
+										<data>PPID</data>
+									</displayName>
+								</column>
+								<column>
+									<member>
+										<data>ThreadCount</data>
+									</member>
+								</column>
+								<column>
+									<member>
+										<data>WorkingSetSize</data>
+									</member>
+October 2009 Page 21 of 21
+
+                        
+									
+									
+									
+									
+									
+									
+									<scale>
+										<divide>
+											<data>1048576</data>
+										</divide>
+									</scale>
+								</column>
+								<column>
+									<member>
+										<data>CreationDate</data>
+									</member>
+								</column>
+								<headlines>
+									<headline>
+										<class>
+											<data>Win32_OperatingSystem</data>
+										</class>
+										<member>
+											<data>FreePhysicalMemory</data>
+										</member>
+										<instance>
+											<data>0</data>
+										</instance>
+										<scale>
+											<divide>
+												<data>1048576</data>
+											</divide>
+										</scale>
+									</headline>
+									<headline>
+										<class>
+											<data>Win32_OperatingSystem</data>
+										</class>
+										<member>
+											<data>InstallDate</data>
+										</member>
+										<instance>
+											<data>0</data>
+										</instance>
+									</headline>
+								</headlines>
+								<restriction>
+									<data>CommandLine LIKE &quot;C:\\Windows%&quot;</data>
+								</restriction>
+							</columns>
+						</columnMode>
+						<showQueryDuration>true</showQueryDuration>
+					</wmi>
+				</plugin>
+				<debug>
+					<setting>ON</setting>
+				</debug>
 			</sampler>
 			<samplerGroup name="Floating netprobe">
 				<sampler name="Floating NetProbe Log">
@@ -33781,9 +33922,25 @@ Loop</data>
 						
 						
 						
+						
+						
+						
+						
+						
+						
+						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
+						
+						
+						
+						
+						
+						
+						
 						
 						
 						
@@ -34052,9 +34209,25 @@ Loop</data>
 							
 							
 							
+							
+							
+							
+							
+							
+							
+							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
+							
+							
+							
+							
+							
+							
+							
 							
 							
 							
@@ -37544,7 +37717,7 @@ Loop</data>
 					</searchString>
 				</ID>
 				<start>
-					<data>C:\Program Files\Microsoft Office\Office12\outlook.exe</data>
+					<data>&quot;C:\Program Files\Microsoft Office 15\root\office15\OUTLOOK.EXE&quot;</data>
 				</start>
 				<stop>
 					<data>taskkill /F /IM outlook.exe</data>
@@ -39912,6 +40085,9 @@ Loop</data>
 			</paths>
 		</dataSet>
 	</exportedData>
+	<publishing>
+		<enabled>true</enabled>
+	</publishing>
 	<operatingEnvironment>
 		<!--SET PRIMARY_GATEWAY = 192.168.31.128:7022
 SET LOG_FREQUENCY = 10-->
