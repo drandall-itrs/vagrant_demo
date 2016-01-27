@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.1.2-150703/gateway.xsd">
+<gateway compatibility="1" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
 	<!-- 
 	NOTE: The included gateway file is intended as a guide, the contents should be changed to suit the needs of each installation 
 	-->

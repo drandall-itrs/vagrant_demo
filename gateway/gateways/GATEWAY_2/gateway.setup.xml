@@ -382,6 +382,10 @@
 								<type ref="ActiveMQ"/>
 							</addTypes>
 						</managedEntity>
+						<managedEntity name="webserver monitoring">
+							<probe ref="localhost_7051"/>
+							<sampler ref="Authenticated Webserver monitoring"/>
+						</managedEntity>
 					</managedEntityGroup>
 				</managedEntityGroup>
 				<managedEntityGroup name="Application Plugins">
@@ -1067,11 +1071,11 @@
 				<sampler disabled="true" ref="network"/>
 				<sampler ref="disk"/>
 				<sampler disabled="true" ref="tcp_links"/>
-				<sampler ref="ftm_self_announcing_netprobe" disabled="true"/>
-				<sampler ref="deviceio" disabled="true"/>
+				<sampler disabled="true" ref="ftm_self_announcing_netprobe"/>
+				<sampler disabled="true" ref="deviceio"/>
 				<sampler ref="top_cpu"/>
-				<sampler ref="Self Announced NetProbe Log" disabled="true"/>
-				<sampler ref="top_mem" disabled="true"/>
+				<sampler disabled="true" ref="Self Announced NetProbe Log"/>
+				<sampler disabled="true" ref="top_mem"/>
 			</type>
 			<type name="baseline_float">
 				<sampler ref="hardware"/>
@@ -20496,6 +20500,19 @@ Loop</data>
 				</plugin>
 			</sampler>
 		</samplerGroup>
+		<samplerGroup name="Webserver monitoring">
+			<sampler name="Authenticated Webserver monitoring">
+				<!--Currently this is for webserver UK_LDN_DEMO_PS_P02. This can be changed by 
+using the command on the headline 'webserver_name`. -->
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/webserver_security/webserver_users.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+		</samplerGroup>
 	</samplers>
 	<actions>
 		<action name="testemail">
@@ -33851,9 +33868,11 @@ Loop</data>
 						
 						
 						
+						
 						<var ref="daysremaining"/>
 						<var ref="caplin_licence_remaining_fail"/>
                             &lt;/lt&gt;
+						
 						
 						
 						
@@ -34192,9 +34211,11 @@ Loop</data>
 							
 							
 							
+							
 							<var ref="daysremaining"/>
 							<var ref="caplin_licence_remaining_warn"/>
                                 &lt;/lt&gt;
+							
 							
 							
 							

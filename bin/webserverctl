@@ -12,6 +12,8 @@
 #       History :
 #
 #       09/05/2013      0.00 -> 1.00    OE      Adapted from WebServerctl version v4.00 by Jeremy Hullah
+#       02/07/2015      1.00 -> 1.01    JH      one or two mionr bug fixes
+#	20/01/2015	1.01 -> 1.02	MC	Adapted script to work with GA3.3.0 onwards
 #
 #####################################################################
 #       Start of Local Tokens
@@ -125,6 +127,7 @@ fn_Start()
 
 	fn_CreateCommand
 	Command="${Command} > ${WebsLogD}/logs/${WebsLogF} 2>&1 & ${SuQuote}"
+        fn_Message 3 "Command : ${Command}"
 	cd "${WebsRoot}/webservers/${WebsName}"
 	case "${WebsMode}" in
 		background)	fn_Message 3 "Starting WebServer ${WebsName} on port ${WebsPort}"
@@ -196,7 +199,7 @@ fn_Stop()
 		fn_GetWebServerProcess
 		if [ ${process} ]
 		then
-			fn_Message 2 "WebServer ${WebsName}, process ${process} failed to be stopped"
+			fn_Message 2 "WebServer ${WebsName}, process ${process} failed to be stopped" > /dev/null 2>&1
 		else
 			fn_Message 3 "WebServer ${WebsName} stopped"
 		fi
@@ -468,6 +471,10 @@ fn_CreateCommand()
         Command="${Command} -Xmx${WebsXmx}"
         Command="${Command} -Djava.awt.headless=true"
         Command="${Command} -Dcom.itrsgroup.configuration.file=${WebsHome}/config/config.xml"
+
+		# ADDED
+        Command="${Command} -DsecurityConfig=${WebsHome}/config/security.xml"
+
         Command="${Command} -Dcom.itrsgroup.dashboard.resources.dir=${WebsBins}/${WebsBase}/resources"
 #JAVA_LIBRARY_PATH
         Command="${Command} -Djava.library.path=${WebsLibs}"
@@ -622,7 +629,7 @@ fn_SetDefaultParams()
 		IFS=$'\n'
 		for xVar in $(cat ${ProgramPath}/${ConfigFile} | grep -v "^#" | grep -v "Webs" | grep "=")
 		do
-			export ${xVar}
+			export $(eval echo "${xVar}")
 		done
 	else
 		fn_Message 1 "Can't find the webserver configuration file (${ProgramPath}/${ConfigFile})"
@@ -663,7 +670,7 @@ fn_SetParams()
 		IFS=$'\n'
 		for xVar in $(cat "${WebsHome}/webserver.rc" | grep -v "^#" | grep -v "Webs" | grep "=")
 		do
-			export ${xVar}
+			export $(eval echo "${xVar}")
 		done
 
 		if [ "${WebsUser}" != "${CommandUser}" ]
@@ -721,6 +728,10 @@ fn_CreateWebServer()
         fi
 	[[ ! -w ${WebsRoot}/webservers ]] && fn_Message 1 "User ${CommandUser} cannot write to the main ${WebsRoot}/webservers directory. Exiting..."
 	[[ ! -r ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the webserver template file. Exiting..."
+
+	# ADDED
+	[[ ! -r ${WebsBins}/${WebsBase}/config/security.xml ]] && fn_Message 1 "User ${CommandUser} does not have read permission to the webserver template file. Exiting..."
+
 	fn_Message 3 "Creating directories for ${WebsName}"
 	mkdir -p ${WebsHome}
 	mkdir -p ${WebsHome}/config
@@ -741,6 +752,11 @@ fn_CreateWebServer()
 	#cat  ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl | sed -e "s/GATEWAY_PORT/${WebsPort}/g" -e "s/GATEWAY_NAME/${WebsName}/g" -e "s~GATEWAY_INCLUDES~${WebsIncl}~g" > "${WebsHome}"/config/config.xml
 	cp  ${WebsBins}/${WebsBase}/config/config.xml.min.tmpl "${WebsHome}"/config/config.xml
 	cp  ${WebsBins}/${WebsBase}/config/log4j.properties "${WebsHome}"/config/log4j.properties
+
+	#ADDED
+	fn_Message 3 "Copying security.xml"
+	cp  ${WebsBins}/${WebsBase}/config/security.xml "${WebsHome}"/config/security.xml
+	cp  ${WebsBins}/${WebsBase}/config/users.properties "${WebsHome}"/config/users.properties
 
 	# ---
 	# write rc file. This will be blank and contain an example setting if there are no changes to the defaults
