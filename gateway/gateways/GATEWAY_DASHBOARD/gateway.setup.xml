@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.4.0-151222/gateway.xsd">
 	<includes>
 		<priority>1</priority>
 		<reloading/>
@@ -35,6 +35,13 @@
 					<priority>10</priority>
 					<required>true</required>
 					<location>../../gateway_config/shared/TR_Basic.xml</location>
+				</include>
+			</includeGroup>
+			<includeGroup name="StandardBank">
+				<include>
+					<priority>11</priority>
+					<required>true</required>
+					<location>../../gateway_config/local/standardbank.xml</location>
 				</include>
 			</includeGroup>
 		</includeGroup>
@@ -97,6 +104,13 @@
 				<managedEntity name="JPM">
 					<probe ref="localhost_7054"/>
 					<sampler ref="Start of Day"/>
+				</managedEntity>
+			</managedEntityGroup>
+			<managedEntityGroup name="New Managed entity group">
+				<attribute name="APP">STANDARDBANK</attribute>
+				<managedEntity name="STANDARDBANK">
+					<probe ref="localhost_7054"/>
+					<sampler ref="Multi-line fkm example"/>
 				</managedEntity>
 			</managedEntityGroup>
 		</managedEntityGroup>
