@@ -106,11 +106,12 @@
 					<sampler ref="Start of Day"/>
 				</managedEntity>
 			</managedEntityGroup>
-			<managedEntityGroup name="New Managed entity group">
+			<managedEntityGroup name="STANDARDBANK">
 				<attribute name="APP">STANDARDBANK</attribute>
 				<managedEntity name="STANDARDBANK">
 					<probe ref="localhost_7054"/>
 					<sampler ref="Multi-line fkm example"/>
+					<sampler ref="time comparison fkm example"/>
 				</managedEntity>
 			</managedEntityGroup>
 		</managedEntityGroup>
