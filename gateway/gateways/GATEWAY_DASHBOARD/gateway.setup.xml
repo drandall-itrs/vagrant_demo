@@ -3423,7 +3423,7 @@ order by SEVTIME DESC
 					<set>
 						<var ref="license_date_seconds"/>
 						<parseDate>
-							<string>%d %B %H:%M:%S %Y</string>
+							<string>%B %d %H:%M:%S %Y</string>
 							<dataItem>
 								<pathAlias ref="date"/>
 								<property>@value</property>
