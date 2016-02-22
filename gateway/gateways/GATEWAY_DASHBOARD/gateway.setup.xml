@@ -114,6 +114,13 @@
 					<sampler ref="time comparison fkm example"/>
 				</managedEntity>
 			</managedEntityGroup>
+			<managedEntityGroup name="CREDIT-SUISSE">
+				<attribute name="APP">CREDIT-SUISSE</attribute>
+				<managedEntity name="License Information">
+					<probe ref="localhost_7054"/>
+					<sampler ref="License information"/>
+				</managedEntity>
+			</managedEntityGroup>
 		</managedEntityGroup>
 	</managedEntities>
 	<types>
@@ -1278,6 +1285,17 @@ order by SEVTIME DESC
 						</additions>
 					</dataview>
 				</dataviews>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="CREDIT-SUISSE">
+			<sampler name="License information">
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/bin/cat /opt/geneos/gateway/resources/credit-suisse/license/license_file.txt</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
 			</sampler>
 		</samplerGroup>
 	</samplers>
