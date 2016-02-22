@@ -3406,7 +3406,7 @@ order by SEVTIME DESC
 		<ruleGroup name="CREDIT-SUISSE">
 			<rule disabled="true" name="days left">
 				<targets>
-					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;License Information&quot;)]/sampler[(@name=&quot;License information&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;License information&quot;)]/rows/row[(@name=&quot;machine_gbl20035618.eu.hedani.net.p12&quot;)]/cell[(@column=&quot;days left&quot;)]</target>
+					<target>/geneos/gateway[(@name=&quot;GATEWAY_DASHBOARD&quot;)]/directory/probe[(@name=&quot;localhost_7054&quot;)]/managedEntity[(@name=&quot;License Information&quot;)]/sampler[(@name=&quot;License information&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;License information&quot;)]/rows/row/cell[(@column=&quot;days left&quot;)]</target>
 				</targets>
 				<priority>1</priority>
 				<pathAliases>
