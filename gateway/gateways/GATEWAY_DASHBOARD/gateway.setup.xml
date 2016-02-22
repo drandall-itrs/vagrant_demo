@@ -1296,6 +1296,19 @@ order by SEVTIME DESC
 						</samplerScript>
 					</toolkit>
 				</plugin>
+				<dataviews>
+					<dataview name="License information">
+						<additions>
+							<var-columns>
+								<data>
+									<column>
+										<data>days left</data>
+									</column>
+								</data>
+							</var-columns>
+						</additions>
+					</dataview>
+				</dataviews>
 			</sampler>
 		</samplerGroup>
 	</samplers>
@@ -3388,6 +3401,15 @@ order by SEVTIME DESC
 						</update>
 					</transaction>
 				</block>
+			</rule>
+		</ruleGroup>
+		<ruleGroup name="CREDIT-SUISSE">
+			<rule name="New Rule 1" disabled="true">
+				<targets>
+					<target/>
+				</targets>
+				<priority>1</priority>
+				<block/>
 			</rule>
 		</ruleGroup>
 	</rules>
