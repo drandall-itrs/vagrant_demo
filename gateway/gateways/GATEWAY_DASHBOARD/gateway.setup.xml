@@ -3431,16 +3431,29 @@ order by SEVTIME DESC
 						</parseDate>
 					</set>
 					<set>
-						<var ref="check"/>
+						<var ref="now"/>
 						<now/>
 					</set>
-					<!--set $(timestamp) parseDate("%H:%M:%S", now())-->
-					<transaction>
-						<update>
-							<property>@value</property>
-							<string>check</string>
-						</update>
-					</transaction>
+					<set>
+						<var ref="diff_seconds"/>
+						<subtract>
+							<var ref="license_date_seconds"/>
+							<var ref="now"/>
+						</subtract>
+					</set>
+					<set>
+						<var ref="days"/>
+						<divide>
+							<divide>
+								<divide>
+									<var ref="diff_seconds"/>
+									<integer>60</integer>
+								</divide>
+								<integer>60</integer>
+							</divide>
+							<integer>24</integer>
+						</divide>
+					</set>
 				</block>
 			</rule>
 		</ruleGroup>
