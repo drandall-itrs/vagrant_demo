@@ -3420,10 +3420,11 @@ order by SEVTIME DESC
 							<property>@value</property>
 						</dataItem>
 					</set>
+					<!--set $(license_date_seconds) parseDate("%B %d %H:%M:%S %Y", path "date" value)-->
 					<set>
 						<var ref="license_date_seconds"/>
 						<parseDate>
-							<string>%B %d %H:%M:%S %Y</string>
+							<string>%B %d  %Y</string>
 							<dataItem>
 								<pathAlias ref="date"/>
 								<property>@value</property>
