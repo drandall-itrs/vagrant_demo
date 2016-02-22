@@ -3430,6 +3430,10 @@ order by SEVTIME DESC
 							</dataItem>
 						</parseDate>
 					</set>
+					<set>
+						<var ref="check"/>
+						<now/>
+					</set>
 					<!--set $(timestamp) parseDate("%H:%M:%S", now())-->
 					<transaction>
 						<update>
