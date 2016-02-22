@@ -3457,13 +3457,10 @@ order by SEVTIME DESC
 					<transaction>
 						<update>
 							<property>@value</property>
-							<add>
-								<format>
-									<string>%.0f days</string>
-									<var ref="days"/>
-								</format>
-								<integer>1</integer>
-							</add>
+							<format>
+								<string>%.0f days</string>
+								<var ref="days"/>
+							</format>
 						</update>
 					</transaction>
 				</block>
