@@ -3454,6 +3454,12 @@ order by SEVTIME DESC
 							<integer>24</integer>
 						</divide>
 					</set>
+					<transaction>
+						<update>
+							<property>@value</property>
+							<var ref="days"/>
+						</update>
+					</transaction>
 				</block>
 			</rule>
 		</ruleGroup>
