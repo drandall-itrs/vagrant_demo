@@ -3457,7 +3457,12 @@ order by SEVTIME DESC
 					<transaction>
 						<update>
 							<property>@value</property>
-							<var ref="days"/>
+							<add>
+								<abs>
+									<var ref="days"/>
+								</abs>
+								<integer>1</integer>
+							</add>
 						</update>
 					</transaction>
 				</block>
