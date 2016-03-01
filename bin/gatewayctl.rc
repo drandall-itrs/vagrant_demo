@@ -46,7 +46,7 @@ GateMode=background
 GateLicP=
 GateLicH=
 GateOpts="-hooks-dir ${ITRS_HOME}/gateway/hooks -enable-set-value"
-GateLibs=${GateBins}/${GateBase}/lib
+GateLibs=${GateBins}/${GateBase}/lib64
 
 #########################################################
 # end

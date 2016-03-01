@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<gateway compatibility="1" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
+<gateway compatibility="1" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.3.0-150928/gateway.xsd">
 	<!-- 
 	NOTE: The included gateway file is intended as a guide, the contents should be changed to suit the needs of each installation 
 	-->
@@ -13,7 +13,7 @@
 		<managedEntityGroup name="GATEWAY">
 			<attribute name="PRODUCT">GATEWAY</attribute>
 			<managedEntityGroup name="Baseline And Framework">
-				<attribute name="LICENCE MODEL">BASELINE AND FRAMEWORK</attribute>
+				<attribute name="LICENCE_MODEL">BASELINE AND FRAMEWORK</attribute>
 				<managedEntityGroup name="OA INFO">
 					<attribute name="APP">OA INFO</attribute>
 					<managedEntity name="Cluster Monitoring Entity">

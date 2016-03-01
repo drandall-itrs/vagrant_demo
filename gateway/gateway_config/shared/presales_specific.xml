@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- Gateway-created setup include file for user ActiveConsole2 at 192.168.142.1 -->
-<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.2.0-150730/gateway.xsd">
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.3.0-150928/gateway.xsd">
 	<managedEntities>
 		<managedEntityGroup name="GATEWAY">
 			<attribute name="REGION">GATEWAY</attribute>
 			<attribute name="PRODUCT">GENEOS</attribute>
 			<managedEntityGroup name="Development Toolkit">
-				<attribute name="LICENCE MODEL">DEVELOPMENT TOOLKIT</attribute>
+				<attribute name="LICENCE_MODEL">DEVELOPMENT TOOLKIT</attribute>
 				<managedEntityGroup name="GATEWAY INFO">
 					<attribute name="APP">GATEWAY INFO</attribute>
 					<managedEntity name="PRESALES">
