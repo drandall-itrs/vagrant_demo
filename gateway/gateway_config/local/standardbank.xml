@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Gateway-created setup include file for user ActiveConsole6 at 192.168.142.1 -->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.4.0-151222/gateway.xsd">
+	<samplers>
+		<sampler name="Multi-line fkm example">
+			<var-group>
+				<data>STANDARDBANK</data>
+			</var-group>
+			<plugin>
+				<fkm>
+					<display>
+						<triggerMode>MULTIPLE_GROUPED_TRIGGER</triggerMode>
+					</display>
+					<isPCREMode>
+						<data>true</data>
+					</isPCREMode>
+					<files>
+						<file>
+							<source>
+								<filename>
+									<data>/opt/geneos/gateway/resources/standardbank/fkm/multi-line_logfile.log</data>
+								</filename>
+							</source>
+							<multiLine>
+								<startPattern>
+									<data>
+										<regex>---------------------- Start of MetroException details -------------------------</regex>
+									</data>
+								</startPattern>
+								<messageEnd>
+									<maxNumberOfSamplesToWait>
+										<data>1</data>
+									</maxNumberOfSamplesToWait>
+								</messageEnd>
+							</multiLine>
+							<tables>
+								<table>
+									<severity>fail</severity>
+									<keyTable>
+										<data>
+											<keys>
+												<key>
+													<setKey>
+														<match>
+															<searchString>
+																<data>ERROR</data>
+															</searchString>
+															<rules>REGEXP</rules>
+														</match>
+													</setKey>
+													<extractors>
+														<extractor>
+															<name>
+																<data>Message Number</data>
+															</name>
+															<regex>
+																<data>messageNumber\=\[(.*)\]</data>
+															</regex>
+														</extractor>
+														<extractor>
+															<name>
+																<data>Error Number </data>
+															</name>
+															<regex>
+																<data>userErrorNumber\=\[(.*)\]</data>
+															</regex>
+														</extractor>
+														<extractor>
+															<name>
+																<data>Message Text</data>
+															</name>
+															<regex>
+																<data>messageText\=\[(.*)</data>
+															</regex>
+														</extractor>
+													</extractors>
+												</key>
+											</keys>
+										</data>
+									</keyTable>
+								</table>
+							</tables>
+							<rewind>
+								<data>true</data>
+							</rewind>
+						</file>
+					</files>
+				</fkm>
+			</plugin>
+		</sampler>
+		<sampler name="time comparison fkm example">
+			<var-group>
+				<data>STANDARDBANK</data>
+			</var-group>
+			<plugin>
+				<fkm>
+					<display>
+						<triggerMode>MULTIPLE_GROUPED_TRIGGER</triggerMode>
+					</display>
+					<isPCREMode>
+						<data>true</data>
+					</isPCREMode>
+					<files>
+						<file>
+							<source>
+								<filename>
+									<data>/opt/geneos/gateway/resources/standardbank/fkm/time_comparison.log</data>
+								</filename>
+							</source>
+							<multiLine>
+								<startPattern>
+									<data>
+										<regex>\&lt;log\&gt;</regex>
+									</data>
+								</startPattern>
+								<messageEnd>
+									<endPattern>
+										<data>
+											<regex>\&lt;\/log\&gt;</regex>
+										</data>
+									</endPattern>
+								</messageEnd>
+							</multiLine>
+							<tables>
+								<table>
+									<severity>fail</severity>
+									<keyTable>
+										<data>
+											<keys>
+												<key>
+													<setKey>
+														<match>
+															<searchString>
+																<data>^\&lt;log\&gt;</data>
+															</searchString>
+															<rules>REGEXP</rules>
+														</match>
+													</setKey>
+													<extractors>
+														<extractor>
+															<name>
+																<data>timestamp</data>
+															</name>
+															<regex>
+																<data>\&lt;timestamp\&gt;\d{2}\/\d{2}\/\d{2} (.*).\d{3} \w+\&lt;\/timestamp\&gt;</data>
+															</regex>
+														</extractor>
+														<extractor>
+															<name>
+																<data>time</data>
+															</name>
+															<regex>
+																<data>time\=\&quot;(.*)\&quot; contents</data>
+															</regex>
+														</extractor>
+													</extractors>
+												</key>
+											</keys>
+										</data>
+									</keyTable>
+								</table>
+							</tables>
+							<rewind>
+								<data>true</data>
+							</rewind>
+						</file>
+					</files>
+				</fkm>
+			</plugin>
+			<dataviews>
+				<dataview name="time comparison fkm example">
+					<additions>
+						<var-columns>
+							<data>
+								<column>
+									<data>time difference</data>
+								</column>
+							</data>
+						</var-columns>
+					</additions>
+				</dataview>
+			</dataviews>
+		</sampler>
+	</samplers>
+	<rules>
+		<ruleGroup name="STANDARDBANK">
+			<rule name="time difference">
+				<targets>
+					<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;time comparison fkm example&quot;)][(@type=&quot;&quot;)]/dataview[(@name=&quot;time comparison fkm example&quot;)]/rows/row/cell[(@column=&quot;time difference&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<pathAliases>
+					<pathAlias name="time">../cell[(@column=&quot;time&quot;)]</pathAlias>
+					<pathAlias name="timestamp">../cell[(@column=&quot;timestamp&quot;)]</pathAlias>
+				</pathAliases>
+				<block>
+					<set>
+						<var ref="time"/>
+						<parseDate>
+							<string>%H:%M:%S</string>
+							<dataItem>
+								<pathAlias ref="time"/>
+								<property>@value</property>
+							</dataItem>
+						</parseDate>
+					</set>
+					<set>
+						<var ref="timestamp"/>
+						<parseDate>
+							<string>%H:%M:%S</string>
+							<dataItem>
+								<pathAlias ref="timestamp"/>
+								<property>@value</property>
+							</dataItem>
+						</parseDate>
+					</set>
+					<set>
+						<var ref="timediff"/>
+						<subtract>
+							<var ref="time"/>
+							<var ref="timestamp"/>
+						</subtract>
+					</set>
+					<if>
+						<gt>
+							<var ref="timediff"/>
+							<integer>5</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>warning</severity>
+							</update>
+							<update>
+								<property>@value</property>
+								<var ref="timediff"/>
+							</update>
+						</transaction>
+						<if>
+							<equal>
+								<var ref="timediff"/>
+								<string/>
+							</equal>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>undefined</severity>
+								</update>
+								<update>
+									<property>@value</property>
+									<string/>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+								<update>
+									<property>@value</property>
+									<var ref="timediff"/>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+		</ruleGroup>
+	</rules>
+</gateway>

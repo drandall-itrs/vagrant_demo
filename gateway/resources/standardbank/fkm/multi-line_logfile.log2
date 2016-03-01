@@ -1,0 +1,83 @@
+15-11-16 13:35:34.534 ERROR [Effect Thread] com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl:
+---------------------- Start of MetroException details -------------------------
+FaultDetail:
+messageType=[E]
+messageId=[ERROR]
+messageNumber=[RATING_WEBSERVICE_ERROR]
+userErrorNumber=[6001]
+messageText=[15: Error has occurred rating: Errorcode: 15, Description: Error has occurred rating, message: 15: Error has occurred rating: Error from the Rating Engine: Reverse leg : Deal D5363 failed to submit at provider GenIdeal, reason: Trading with value date TODAY is no longer possible for currency EUR.ZAR
+METRO-SDP-FB708E44DA04E843585B381DAE25D221]
+
+---------------------- End of MetroException details -------------------------
+
+15-11-16 13:35:34.534 ERROR [Effect Thread] com.sbk.metro.xaqua.MetroTradeListener: Could not QUOTE_REQUESTED TradeEvent with dealId [73131545] for user [catherine.hlungwani@iquadts.co.za]
+com.sbk.metro.exception.DealManagementTradeException: errorMessage=[RATING_WEBSERVICE_ERROR]  errorCode=[6001]
+        at com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl.getQuoteForExtension(TradeServiceProxyImpl.java:57)
+        at com.sbk.metro.xaqua.MetroTradeListener.handleQuoteRequested(MetroTradeListener.java:166)
+        at com.sbk.metro.xaqua.MetroTradeListener.receiveEvent(MetroTradeListener.java:59)
+        at com.caplin.trading.internal.TradeImpl.onRemoteEvent(TradeImpl.java:261)
+        at com.caplin.trading.internal.statemachine.CallbackEffect.processEvent(CallbackEffect.java:22)
+        at com.caplin.trading.internal.statemachine.CompoundEffect.processEvent(CompoundEffect.java:33)
+        at com.caplin.trading.internal.statemachine.EffectFunctor$1.run(EffectFunctor.java:29)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+        at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:722)
+Caused by: sbsa.gmt.dealrouting.serverapi.service.MetroException: Exception detected in message flow sbsa.gmt.metro.broker.main.MF_SoapRFQService on Broker METRO_PRD_LDN.
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+        at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:130)
+        at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:108)
+        at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:78)
+        at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:129)
+        at sun.proxy.$Proxy57.getRFQML(Unknown Source)
+        at std.ecommerce.sdp.metro.soap.service.impl.MetroRFQServiceImpl.getRFQML(MetroRFQServiceImpl.java:62)
+        at com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl.getQuoteForExtension(TradeServiceProxyImpl.java:51)
+15-11-16 13:35:34.534 ERROR [Effect Thread] com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl:
+---------------------- Start of MetroException details -------------------------
+FaultDetail:
+messageType=[E]
+messageId=[ERROR]
+messageNumber=[RATING_WEBSERVICE_ERROR]
+userErrorNumber=[6001]
+messageText=[15: Error has occurred rating: Errorcode: 15, Description: Error has occurred rating, message: 15: Error has occurred rating: Error from the Rating Engine: Reverse leg : Deal D5363 failed to submit at provider GenIdeal, reason: Trading with value date TODAY is no longer possible for currency EUR.ZAR
+METRO-SDP-FB708E44DA04E843585B381DAE25D221]
+
+---------------------- End of MetroException details -------------------------
+
+15-11-16 13:35:34.534 ERROR [Effect Thread] com.sbk.metro.xaqua.MetroTradeListener: Could not QUOTE_REQUESTED TradeEvent with dealId [73131545] for user [catherine.hlungwani@iquadts.co.za]
+com.sbk.metro.exception.DealManagementTradeException: errorMessage=[RATING_WEBSERVICE_ERROR]  errorCode=[6001]
+        at com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl.getQuoteForExtension(TradeServiceProxyImpl.java:57)
+        at com.sbk.metro.xaqua.MetroTradeListener.handleQuoteRequested(MetroTradeListener.java:166)
+        at com.sbk.metro.xaqua.MetroTradeListener.receiveEvent(MetroTradeListener.java:59)
+        at com.caplin.trading.internal.TradeImpl.onRemoteEvent(TradeImpl.java:261)
+        at com.caplin.trading.internal.statemachine.CallbackEffect.processEvent(CallbackEffect.java:22)
+        at com.caplin.trading.internal.statemachine.CompoundEffect.processEvent(CompoundEffect.java:33)
+        at com.caplin.trading.internal.statemachine.EffectFunctor$1.run(EffectFunctor.java:29)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+        at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:722)
+Caused by: sbsa.gmt.dealrouting.serverapi.service.MetroException: Exception detected in message flow sbsa.gmt.metro.broker.main.MF_SoapRFQService on Broker METRO_PRD_LDN.
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+        at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:130)
+        at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:108)
+        at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:78)
+        at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:129)
+        at sun.proxy.$Proxy57.getRFQML(Unknown Source)
+        at std.ecommerce.sdp.metro.soap.service.impl.MetroRFQServiceImpl.getRFQML(MetroRFQServiceImpl.java:62)
+        at com.sbk.metro.dealmanagement.trade.impl.TradeServiceProxyImpl.getQuoteForExtension(TradeServiceProxyImpl.java:51)
+

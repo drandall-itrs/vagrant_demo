@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><geneosWebServer>
+	<dashboardDefaults>
+		<updateRate>5</updateRate>
+		<dashboardRefreshRate>3</dashboardRefreshRate>
+		<tileSize>
+			<width>200</width>
+			<height>200</height>
+		</tileSize>
+	</dashboardDefaults>
+<tree>
+        <group name="Equity">
+            <dashboard name="Equity Trading"/>
+        </group>
+        <group name="Tiering">
+            <dashboard name="Tier 1"/>
+            <dashboard name="Tier 2"/>
+            <dashboard name="Tier 3"/>
+        </group>
+        <group name="SunGard">
+            <dashboard name="Sungard IBM-i Status"/>
+        </group>
+        <group name="Market Data">
+            <dashboard name="Market Data"/>
+        </group>
+    </tree>
+    <slideshows/>
+    <gatewayConnections>
+        <gatewayConnection name="GATEWAY_DASHBOARD">
+            <enabled>true</enabled>
+            <secure>false</secure>
+            <primary>
+                <host>192.168.142.20</host>
+                <port>8063</port>
+            </primary>
+            <secondary>
+                <host/>
+                <port/>
+            </secondary>
+            <description/>
+            <user/>
+            <password/>
+        </gatewayConnection>
+        <gatewayConnection name="GATEWAY_2">
+            <enabled>true</enabled>
+            <secure>false</secure>
+            <primary>
+                <host>192.168.142.20</host>
+                <port>7050</port>
+            </primary>
+            <secondary>
+                <host/>
+                <port/>
+            </secondary>
+            <description/>
+            <user/>
+            <password/>
+        </gatewayConnection>
+    </gatewayConnections>
+    <dashboards>
+        <dashboard name="Equity Trading" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/CE Trading Example.adb"/>
+        <dashboard name="Tier 1" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/Tier 1_3.adb"/>
+        <dashboard name="Tier 2" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/Tier 2.adb"/>
+        <dashboard name="Tier 3" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/Tier 3.adb"/>
+        <dashboard name="Sungard IBM-i Status" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/example dashboard status.adb"/>
+        <dashboard name="Market Data" path="/opt/geneos/webserver/webservers/UK_LDN_DEMO_PS_P02/dashboards/uploaded/TREP Market Data Dashboard Final.adb"/>
+    </dashboards>
+</geneosWebServer>

@@ -1,0 +1,4 @@
+Name,viewpath,comment
+By Region,PRODUCT\,OPERATION\,COUNTRY\,REGION\,CITY\,DEPARTMENT\,APP\,TYPE\,MDT TYPE\,VENDOR,Used to display by regional based treet structure
+By Department,PRODUCT\,DEPARTMENT\,OPERATION\,COUNTRY\,REGION\,CITY\,APP\,TYPE\,MDT TYPE\,VENDOR,Used to display by Front\, Middle and Back Office tree structure
+By License Model,PRODUCT\,LICENCE MODEL\,APP\,TYPE\,MDT TYPE\,VENDOR,Used for displaying Tree Structure by Sales License Model
