@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--Edited using Gateway Setup Editor version GA3.4.0-160118 at 2016-03-14 11:48:36 by drandall on DAVIDRANDAL09C5-->
+<gateway compatibility="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://schema.itrsgroup.com/GA3.4.0-151222/gateway.xsd">
+	<includes>
+		<priority>1</priority>
+		<reloading/>
+		<includeGroup name="Infrastructure">
+			<include>
+				<priority>100</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Infrastructure.xml</location>
+			</include>
+		</includeGroup>
+		<includeGroup name="Admin">
+			<include>
+				<priority>400</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Administration.xml</location>
+			</include>
+			<include>
+				<priority>2</priority>
+				<required>true</required>
+				<location>/opt/geneos/gateway/gateway_config/shared/GLOBAL_Authentication.xml</location>
+			</include>
+		</includeGroup>
+		<includeGroup name="Custom">
+			<includeGroup name="StandardBank">
+				<include>
+					<priority>10</priority>
+					<required>true</required>
+					<location>/opt/geneos/gateway/gateway_config/local/custom_include.xml</location>
+				</include>
+			</includeGroup>
+		</includeGroup>
+	</includes>
+	<probes>
+		<probeGroup name="Linux">
+			<probeGroup name="Nordea">
+				<probe name="localhost_8905">
+					<hostname>localhost</hostname>
+					<port>8905</port>
+					<encodedPassword>KwP9VfpVecslI</encodedPassword>
+				</probe>
+				<probe name="localhost_8906">
+					<hostname>localhost</hostname>
+					<port>8906</port>
+				</probe>
+			</probeGroup>
+			<probeGroup name="fidelity">
+				<probe name="fidelity knowledge transfer">
+					<hostname>192.168.142.20</hostname>
+					<port>8888</port>
+				</probe>
+			</probeGroup>
+		</probeGroup>
+	</probes>
+	<managedEntities>
+		<managedEntity name="DevOps_Gateway Gateway">
+			<!--Move this Managed Entity into the relevant Managed
+        Entity Group structure once it has been created-->
+			<virtualProbe ref="Virtual Probe"/>
+			<addTypes>
+				<type ref="Gateway Info"/>
+			</addTypes>
+		</managedEntity>
+		<managedEntityGroup name="EMEA">
+			<attribute name="REGION">EMEA</attribute>
+			<attribute name="PRODUCT">GENEOS</attribute>
+			<managedEntityGroup name="London">
+				<attribute name="CITY">LONDON</attribute>
+				<managedEntityGroup name="DevOps">
+					<attribute name="APP">DEVOPS</attribute>
+					<addTypes>
+						<type ref="DevOps base"/>
+					</addTypes>
+					<managedEntity name="devops-netprobe">
+						<probe ref="localhost_8905"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+			<managedEntityGroup name="Denmark">
+				<attribute name="CITY">COPENHAGEN</attribute>
+				<managedEntityGroup name="DevOps">
+					<attribute name="APP">DEVOPS</attribute>
+					<addTypes>
+						<type ref="DevOps base"/>
+					</addTypes>
+					<managedEntity name="nordea-netprobe">
+						<probe ref="localhost_8906"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+			<managedEntityGroup name="Sweden">
+				<attribute name="CITY">STOCKHOLM</attribute>
+				<managedEntity name="statetracker">
+					<probe ref="localhost_8905"/>
+					<sampler ref="SunGard StateTracker"/>
+				</managedEntity>
+				<managedEntity name="Clearvision">
+					<probe ref="localhost_8905"/>
+					<sampler ref="ClearVision-ExtractorFile"/>
+				</managedEntity>
+			</managedEntityGroup>
+			<managedEntityGroup name="Hildenboro">
+				<attribute name="CITY">HILDENBORO</attribute>
+				<managedEntityGroup name="Base Monitoring">
+					<addTypes>
+						<type ref="Base Fidelity monitoring"/>
+					</addTypes>
+					<managedEntity name="Fidelity ME">
+						<probe ref="fidelity knowledge transfer"/>
+					</managedEntity>
+					<managedEntity name="Fidelity App">
+						<probe ref="fidelity knowledge transfer"/>
+					</managedEntity>
+				</managedEntityGroup>
+			</managedEntityGroup>
+		</managedEntityGroup>
+	</managedEntities>
+	<types>
+		<typeGroup name="DevOps">
+			<type name="DevOps base">
+				<sampler ref="uptime info"/>
+				<sampler ref="CPU info"/>
+				<sampler ref="Mem info"/>
+				<sampler ref="Top CPU Processes"/>
+				<sampler ref="Top MEM Processes"/>
+				<sampler ref="IOSTAT Info"/>
+				<sampler ref="SAR Performance Logs"/>
+				<sampler ref="Largest Directories"/>
+				<sampler ref="Inode Info"/>
+				<sampler ref="Network Routes"/>
+				<sampler ref="Traceroute Info"/>
+				<sampler ref="Netstat Info"/>
+				<sampler ref="CPU FOR VALO"/>
+			</type>
+		</typeGroup>
+		<typeGroup name="Fidelity">
+			<type name="Base Fidelity monitoring">
+				<sampler ref="Fidelity CPU"/>
+				<sampler ref="Fidelity Disk"/>
+			</type>
+		</typeGroup>
+	</types>
+	<samplers>
+		<samplerGroup name="DevOps">
+			<sampler name="uptime info">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/uptime/load_uptime.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="CPU info">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/cpus_info/cpus_info.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="Mem info">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/memory/memory_info.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="Top CPU Processes">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/top_cpu_procs/top_cpu_procs.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="Top MEM Processes">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/top_mem_procs/top_mem_procs.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="IOSTAT Info">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/iostat/disk_info.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="Largest Directories">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/largest_dir/largest_directory.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<sampler name="Inode Info">
+				<var-group>
+					<data>DevOps</data>
+				</var-group>
+				<plugin>
+					<toolkit>
+						<samplerScript>
+							<data>/opt/geneos/gateway/resources/devops/inodes/node_info.sh</data>
+						</samplerScript>
+					</toolkit>
+				</plugin>
+			</sampler>
+			<samplerGroup name="Performance Logs">
+				<sampler name="SAR Performance Logs">
+					<var-group>
+						<data>DevOps Logging</data>
+					</var-group>
+					<plugin>
+						<fkm>
+							<display>
+								<columns>
+									<column>status</column>
+									<column>permissions</column>
+									<column>lastModificationTime</column>
+									<column>fileSize</column>
+									<column>absolutePath</column>
+									<column>updateRate</column>
+									<column>fileOwner</column>
+									<column>filename</column>
+								</columns>
+								<useFullPathInRowNames>
+									<data>true</data>
+								</useFullPathInRowNames>
+							</display>
+							<isPCREMode>
+								<data>true</data>
+							</isPCREMode>
+							<wildcardMonitorAllMatches>
+								<data>true</data>
+							</wildcardMonitorAllMatches>
+							<files>
+								<file>
+									<source>
+										<filename>
+											<data>/var/log/sa/sa*</data>
+										</filename>
+									</source>
+								</file>
+							</files>
+						</fkm>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="Networks">
+				<sampler name="Network Routes">
+					<var-group>
+						<data>Networks</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/devops/network/routing/route_info.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Traceroute Info">
+					<var-group>
+						<data>Networks</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/devops/network/routing/traceroute_info.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+				<sampler name="Netstat Info">
+					<var-group>
+						<data>Networks</data>
+					</var-group>
+					<plugin>
+						<toolkit>
+							<samplerScript>
+								<data>/opt/geneos/gateway/resources/devops/network/routing/netstat_info.sh</data>
+							</samplerScript>
+						</toolkit>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+			<samplerGroup name="TBD"/>
+			<samplerGroup name="Standard">
+				<sampler name="CPU FOR VALO">
+					<var-group>
+						<data>CPU FOR VALO</data>
+					</var-group>
+					<plugin>
+						<cpu/>
+					</plugin>
+				</sampler>
+			</samplerGroup>
+		</samplerGroup>
+		<samplerGroup name="SunGard Sweden">
+			<sampler name="SunGard StateTracker">
+				<var-group>
+					<data>SunGard</data>
+				</var-group>
+				<plugin>
+					<stateTracker>
+						<trackerGroup name="New Day">
+							<trackers>
+								<tracker name="New Day file">
+									<filename>
+										<data>/opt/geneos/gateway/resources/devops/SunGard/newday.log</data>
+									</filename>
+									<rewind>
+										<data>false</data>
+									</rewind>
+									<transitionStates>
+										<defaultState name="Waiting"/>
+										<state name="Arrived">
+											<keys>
+												<key>
+													<regularExpression>
+														<data>
+															<regex>newday entry</regex>
+														</data>
+													</regularExpression>
+												</key>
+											</keys>
+											<timeout>
+												<atTimeOfDay>00:01</atTimeOfDay>
+												<state ref="Waiting"/>
+											</timeout>
+										</state>
+									</transitionStates>
+								</tracker>
+							</trackers>
+						</trackerGroup>
+					</stateTracker>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="SunGard Clearvision">
+			<sampler name="ClearVision-ExtractorFile">
+				<var-group>
+					<data>ClearVisionFile</data>
+				</var-group>
+				<plugin>
+					<extractor>
+						<source>
+							<sourceFileName>
+								<name>
+									<data>cv_file.txt</data>
+								</name>
+							</sourceFileName>
+						</source>
+						<views>
+							<view>
+								<name>
+									<data>EXCHANGE</data>
+								</name>
+								<template>
+									<custom>
+										<format>
+											<xml>
+												<method>
+													<xpath>
+														<xpath>/CVES</xpath>
+														<headlines>
+															<headline>
+																<name>
+																	<static>
+																		<data>name</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</value>
+															</headline>
+															<headline>
+																<name>
+																	<static>
+																		<data>datetime</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@datetime</xpath>
+																	</xpath>
+																</value>
+															</headline>
+														</headlines>
+														<columns>
+															<column>
+																<name>
+																	<static>
+																		<data>Name</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Value</data>
+																	</static>
+																</name>
+															</column>
+														</columns>
+														<rows>
+															<xpath>Exchange</xpath>
+															<row>
+																<xpath>Clearing/child::*</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+															<row>
+																<xpath>Reading/child::*</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+															<row>
+																<xpath>Tickets</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+															<row>
+																<xpath>TicketsWithUnknownExternalCodes</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+															<row>
+																<xpath>ClearingInProgress</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+														</rows>
+													</xpath>
+												</method>
+											</xml>
+										</format>
+									</custom>
+								</template>
+							</view>
+							<view>
+								<name>
+									<data>SERVER</data>
+								</name>
+								<template>
+									<custom>
+										<format>
+											<xml>
+												<method>
+													<xpath>
+														<xpath>/CVES</xpath>
+														<headlines>
+															<headline>
+																<name>
+																	<static>
+																		<data>name</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</value>
+															</headline>
+															<headline>
+																<name>
+																	<static>
+																		<data>datetime</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@datetime</xpath>
+																	</xpath>
+																</value>
+															</headline>
+														</headlines>
+														<columns>
+															<column>
+																<name>
+																	<static>
+																		<data>Name</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Value</data>
+																	</static>
+																</name>
+															</column>
+														</columns>
+														<rows>
+															<row>
+																<xpath>RDBMS/LastSQLError</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+														</rows>
+													</xpath>
+												</method>
+											</xml>
+										</format>
+									</custom>
+								</template>
+							</view>
+							<view>
+								<name>
+									<data>TICKETS</data>
+								</name>
+								<template>
+									<custom>
+										<format>
+											<xml>
+												<method>
+													<xpath>
+														<xpath>/CVES</xpath>
+														<headlines>
+															<headline>
+																<name>
+																	<static>
+																		<data>name</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</value>
+															</headline>
+															<headline>
+																<name>
+																	<static>
+																		<data>datetime</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@datetime</xpath>
+																	</xpath>
+																</value>
+															</headline>
+														</headlines>
+														<columns>
+															<column>
+																<name>
+																	<static>
+																		<data>Name</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Value</data>
+																	</static>
+																</name>
+															</column>
+														</columns>
+														<rows>
+															<xpath>MatchingList</xpath>
+															<row>
+																<xpath>child::*</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@value</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+														</rows>
+													</xpath>
+												</method>
+											</xml>
+										</format>
+									</custom>
+								</template>
+							</view>
+							<view>
+								<name>
+									<data>MEMORY</data>
+								</name>
+								<template>
+									<custom>
+										<format>
+											<xml>
+												<method>
+													<xpath>
+														<xpath>/CVES</xpath>
+														<headlines>
+															<headline>
+																<name>
+																	<static>
+																		<data>name</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</value>
+															</headline>
+															<headline>
+																<name>
+																	<static>
+																		<data>datetime</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@datetime</xpath>
+																	</xpath>
+																</value>
+															</headline>
+														</headlines>
+														<columns>
+															<column>
+																<name>
+																	<static>
+																		<data>Name</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Object</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Items</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>ItemSize</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>TotalSize</data>
+																	</static>
+																</name>
+															</column>
+														</columns>
+														<rows>
+															<xpath>MemoryFootPrint</xpath>
+															<row>
+																<xpath>child::*</xpath>
+																<name>
+																	<xpath>
+																		<xpath>name()</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@object</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@items</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@itemSize</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@TotalSize</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+														</rows>
+													</xpath>
+												</method>
+											</xml>
+										</format>
+									</custom>
+								</template>
+							</view>
+							<view>
+								<name>
+									<data>THREADS</data>
+								</name>
+								<template>
+									<custom>
+										<format>
+											<xml>
+												<method>
+													<xpath>
+														<xpath>/CVES</xpath>
+														<headlines>
+															<headline>
+																<name>
+																	<static>
+																		<data>name</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</value>
+															</headline>
+															<headline>
+																<name>
+																	<static>
+																		<data>datetime</data>
+																	</static>
+																</name>
+																<value>
+																	<xpath>
+																		<xpath>@datetime</xpath>
+																	</xpath>
+																</value>
+															</headline>
+														</headlines>
+														<columns>
+															<column>
+																<name>
+																	<static>
+																		<data>Name</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>State</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>NB</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Tempo</data>
+																	</static>
+																</name>
+															</column>
+															<column>
+																<name>
+																	<static>
+																		<data>Action</data>
+																	</static>
+																</name>
+															</column>
+														</columns>
+														<rows>
+															<xpath>thread</xpath>
+															<row>
+																<name>
+																	<xpath>
+																		<xpath>@name</xpath>
+																	</xpath>
+																</name>
+																<cells>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@state</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@nb</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@tempo</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																	<cell>
+																		<value>
+																			<xpath>
+																				<xpath>@action</xpath>
+																			</xpath>
+																		</value>
+																	</cell>
+																</cells>
+															</row>
+														</rows>
+													</xpath>
+												</method>
+											</xml>
+										</format>
+									</custom>
+								</template>
+							</view>
+						</views>
+					</extractor>
+				</plugin>
+				<debug>
+					<setting>showmenu</setting>
+				</debug>
+			</sampler>
+		</samplerGroup>
+		<samplerGroup name="Fidelity monitoring">
+			<sampler name="Fidelity CPU">
+				<var-group>
+					<data>Infrastructure</data>
+				</var-group>
+				<plugin>
+					<cpu/>
+				</plugin>
+				<dataviews>
+					<dataview name="Fidelity CPU">
+						<additions>
+							<var-headlines>
+								<data>
+									<headline>
+										<data>Fidelity headline</data>
+									</headline>
+								</data>
+							</var-headlines>
+							<var-columns>
+								<data>
+									<column>
+										<data>Fidelity Column</data>
+									</column>
+								</data>
+							</var-columns>
+						</additions>
+					</dataview>
+				</dataviews>
+			</sampler>
+			<sampler name="Fidelity Disk">
+				<var-group>
+					<data>Infrastructure</data>
+				</var-group>
+				<plugin>
+					<disk>
+						<autoDetect>
+							<data>true</data>
+						</autoDetect>
+					</disk>
+				</plugin>
+			</sampler>
+		</samplerGroup>
+	</samplers>
+	<actions>
+		<action name="call for help">
+			<script>
+				<exeFile>/bin/ksh</exeFile>
+				<arguments>
+					<data/>
+				</arguments>
+				<runLocation>netprobe</runLocation>
+			</script>
+		</action>
+	</actions>
+	<commands>
+		<commandGroup name="DevOps">
+			<menu>
+				<label>Interaction</label>
+			</menu>
+			<commandGroup name="Raw commands">
+				<command name="Top to screen">
+					<label>Top to screen</label>
+					<description>Interaction</description>
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;uptime info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;uptime info&quot;)]/rows//*</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>top</static>
+							</arg>
+							<arg>
+								<static>-b</static>
+							</arg>
+							<arg>
+								<static>-n</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter number of times top runs</description>
+									<integer>1</integer>
+								</userInput>
+							</arg>
+							<arg>
+								<static/>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Top to file cmd">
+					<label>Top to file</label>
+					<description>Interaction</description>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>top</static>
+							</arg>
+							<arg>
+								<static>-b</static>
+							</arg>
+							<arg>
+								<static>-n</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter number of times top runs</description>
+									<integer>1</integer>
+								</userInput>
+							</arg>
+							<arg>
+								<static>&gt;</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Output file name</description>
+									<singleLineString/>
+								</userInput>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Top x CPU cmd">
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/gateway/resources/devops/top_cpu_procs/update_top_proc_count.sh</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter number of Top processes</description>
+									<integer>0</integer>
+								</userInput>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Top x MEM cmd">
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/gateway/resources/devops/top_mem_procs/update_top_proc_count.sh</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter number of Top processes</description>
+									<integer>0</integer>
+								</userInput>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Top x Dir cmd">
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/gateway/resources/devops/largest_dir/update_top_size_count.sh</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter number of Top Directories</description>
+									<integer>0</integer>
+								</userInput>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Sar file viewing">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;SAR Performance Logs&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;SAR Performance Logs&quot;)]/rows//*</target>
+					</targets>
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>sar</static>
+							</arg>
+							<arg>
+								<static>-f</static>
+							</arg>
+							<arg>
+								<xpath>../cell[(@column=&quot;absolutePath&quot;)]</xpath>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+				<command name="Traceroute destination cmd">
+					<userCommand>
+						<type>script</type>
+						<runLocation>netprobe</runLocation>
+						<args>
+							<arg>
+								<static>/opt/geneos/gateway/resources/devops/network/routing/update_routing_address.sh</static>
+							</arg>
+							<arg>
+								<userInput>
+									<description>Enter destination ip or url</description>
+									<singleLineString/>
+								</userInput>
+							</arg>
+						</args>
+						<enablePassword>true</enablePassword>
+					</userCommand>
+				</command>
+			</commandGroup>
+			<commandGroup name="Exposed commands">
+				<command disabled="true" name="Top ">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;uptime info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;uptime info&quot;)]/rows//*</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Top to screen"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>false</silent>
+					</task>
+				</command>
+				<command name="Top to file">
+					<label>Top to file</label>
+					<description>Interaction</description>
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;uptime info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;uptime info&quot;)]/rows//*</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Top to file cmd"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>false</silent>
+					</task>
+				</command>
+				<command name="Top x CPU">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Top CPU Processes&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;Top CPU Processes&quot;)]/headlines/cell[(@name=&quot;Top number of processes&quot;)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Top x CPU cmd"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+				<command name="Top x MEM">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Top MEM Processes&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;Top MEM Processes&quot;)]/headlines/cell[(@name=&quot;Top number of processes&quot;)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Top x MEM cmd"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+				<command name="Top x Dir">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Largest Directories&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;Largest Directories&quot;)]/headlines/cell[(@name=&quot;Top number of directories&quot;)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Top x Dir cmd"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+				<command name="Traceroute destination">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;Traceroute Info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;Traceroute Info&quot;)]/headlines/cell[(@name=&quot;Traceroute_destination&quot;)]</target>
+					</targets>
+					<task>
+						<commands>
+							<commandRef>
+								<command ref="Traceroute destination cmd"/>
+								<stopOnError>true</stopOnError>
+							</commandRef>
+						</commands>
+						<silent>true</silent>
+					</task>
+				</command>
+			</commandGroup>
+		</commandGroup>
+	</commands>
+	<rules>
+		<ruleGroup name="DEVOPS">
+			<rule name="CPU FO VALO">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;CPU FOR VALO&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;CPU FOR VALO&quot;)]/rows/row/cell[(@column=&quot;percentUtilisation&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<integer>15</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>5</integer>
+							</gt>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+			<ruleGroup name="IOSTAT">
+				<rule name="IOSTAT test rule">
+					<targets>
+						<target>/geneos/gateway/directory/probe/managedEntity/sampler[(@name=&quot;IOSTAT Info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;IOSTAT Info&quot;)]/rows/row/cell[(@column=&quot;Blk_read/s&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="alt cell">../cell[(@column=&quot;Blk_wrtn/s&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<if>
+							<and>
+								<gt>
+									<dataItem>
+										<property>@value</property>
+									</dataItem>
+									<integer>500</integer>
+								</gt>
+								<gt>
+									<dataItem>
+										<pathAlias ref="alt cell"/>
+										<property>@value</property>
+									</dataItem>
+									<integer>1000</integer>
+								</gt>
+							</and>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<if>
+								<and>
+									<gt>
+										<dataItem>
+											<property>@value</property>
+										</dataItem>
+										<integer>100</integer>
+									</gt>
+									<gt>
+										<dataItem>
+											<pathAlias ref="alt cell"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>1000</integer>
+									</gt>
+								</and>
+								<transaction>
+									<delay unit="seconds">300</delay>
+									<update>
+										<property>state/@severity</property>
+										<severity>warning</severity>
+									</update>
+									<action ref="call for help"/>
+								</transaction>
+								<if>
+									<and>
+										<gt>
+											<dataItem>
+												<property>@value</property>
+											</dataItem>
+											<integer>10</integer>
+										</gt>
+										<lt>
+											<dataItem>
+												<pathAlias ref="alt cell"/>
+												<property>@value</property>
+											</dataItem>
+											<integer>1000</integer>
+										</lt>
+									</and>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>ok</severity>
+										</update>
+									</transaction>
+									<transaction>
+										<update>
+											<property>state/@severity</property>
+											<severity>undefined</severity>
+										</update>
+									</transaction>
+								</if>
+							</if>
+						</if>
+					</block>
+				</rule>
+			</ruleGroup>
+		</ruleGroup>
+		<ruleGroup name="Fidelity">
+			<rule name="Fidelity CPU">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe/managedEntity/sampler[(@name=&quot;Fidelity CPU&quot;)][(@type=&quot;Base Fidelity monitoring&quot;)]/dataview[(@name=&quot;Fidelity CPU&quot;)]/headlines/cell[(@name=&quot;loadAverage1Min&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<integer>10</integer>
+						</gt>
+						<transaction>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>3</integer>
+							</gt>
+							<transaction>
+								<delay unit="seconds">300</delay>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+			<rule name="Fidelity cpu percentage">
+				<targets>
+					<target>/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe[(@name=&quot;fidelity knowledge transfer&quot;)]/managedEntity/sampler[(@name=&quot;Fidelity CPU&quot;)][(@type=&quot;Base Fidelity monitoring&quot;)]/dataview[(@name=&quot;Fidelity CPU&quot;)]/rows/row/cell[(@column=&quot;percentUtilisation&quot;)]</target>
+				</targets>
+				<priority>1</priority>
+				<block>
+					<if>
+						<gt>
+							<dataItem>
+								<property>@value</property>
+							</dataItem>
+							<integer>8</integer>
+						</gt>
+						<transaction>
+							<delay unit="samples">3</delay>
+							<update>
+								<property>state/@severity</property>
+								<severity>critical</severity>
+							</update>
+						</transaction>
+						<if>
+							<gt>
+								<dataItem>
+									<property>@value</property>
+								</dataItem>
+								<integer>5</integer>
+							</gt>
+							<transaction>
+								<delay unit="seconds">300</delay>
+								<update>
+									<property>state/@severity</property>
+									<severity>warning</severity>
+								</update>
+							</transaction>
+							<transaction>
+								<update>
+									<property>state/@severity</property>
+									<severity>ok</severity>
+								</update>
+							</transaction>
+						</if>
+					</if>
+				</block>
+			</rule>
+			<ruleGroup name="relative path">
+				<rule name="Relative path example">
+					<targets>
+						<target>/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe[(@name=&quot;fidelity knowledge transfer&quot;)]/managedEntity[(@name=&quot;Fidelity ME&quot;)]/sampler[(@name=&quot;Fidelity CPU&quot;)][(@type=&quot;Base Fidelity monitoring&quot;)]/dataview[(@name=&quot;Fidelity CPU&quot;)]/headlines/cell[(@name=&quot;Fidelity headline&quot;)]</target>
+					</targets>
+					<priority>1</priority>
+					<pathAliases>
+						<pathAlias name="cpu percent">/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe[(@name=&quot;fidelity knowledge transfer&quot;)]/managedEntity[(@name=&quot;Fidelity ME&quot;)]/sampler[(@name=&quot;Fidelity CPU&quot;)][(@type=&quot;Base Fidelity monitoring&quot;)]/dataview[(@name=&quot;Fidelity CPU&quot;)]/rows/row[(@name=&quot;Average_cpu&quot;)]/cell[(@column=&quot;percentUtilisation&quot;)]</pathAlias>
+						<pathAlias name="iostat">/geneos/gateway[(@name=&quot;DevOps_Gateway&quot;)]/directory/probe[(@name=&quot;localhost_8905&quot;)]/managedEntity[(@name=&quot;devops-netprobe&quot;)]/sampler[(@name=&quot;IOSTAT Info&quot;)][(@type=&quot;DevOps base&quot;)]/dataview[(@name=&quot;IOSTAT Info&quot;)]/rows/row[(@name=&quot;dm-0&quot;)]/cell[(@column=&quot;Blk_read/s&quot;)]</pathAlias>
+					</pathAliases>
+					<block>
+						<if>
+							<and>
+								<gt>
+									<dataItem>
+										<pathAlias ref="cpu percent"/>
+										<property>@value</property>
+									</dataItem>
+									<integer>10</integer>
+								</gt>
+								<gt>
+									<dataItem>
+										<pathAlias ref="iostat"/>
+										<property>@value</property>
+									</dataItem>
+									<integer>300</integer>
+								</gt>
+							</and>
+							<transaction>
+								<update>
+									<property>@value</property>
+									<multiply>
+										<dataItem>
+											<pathAlias ref="cpu percent"/>
+											<property>@value</property>
+										</dataItem>
+										<dataItem>
+											<pathAlias ref="iostat"/>
+											<property>@value</property>
+										</dataItem>
+									</multiply>
+								</update>
+								<update>
+									<property>state/@severity</property>
+									<severity>critical</severity>
+								</update>
+							</transaction>
+							<if>
+								<and>
+									<gt>
+										<dataItem>
+											<pathAlias ref="cpu percent"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>10</integer>
+									</gt>
+									<gt>
+										<dataItem>
+											<pathAlias ref="iostat"/>
+											<property>@value</property>
+										</dataItem>
+										<integer>100</integer>
+									</gt>
+								</and>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>warning</severity>
+									</update>
+								</transaction>
+								<transaction>
+									<update>
+										<property>state/@severity</property>
+										<severity>ok</severity>
+									</update>
+								</transaction>
+							</if>
+						</if>
+					</block>
+				</rule>
+			</ruleGroup>
+		</ruleGroup>
+	</rules>
+	<alerting>
+		<hierarchy disabled="true" name="Infrastructure Support Group">
+			<priority>1</priority>
+			<levels>
+				<level>
+					<match>
+						<samplerGroup/>
+					</match>
+				</level>
+				<level>
+					<match>
+						<samplerName/>
+					</match>
+				</level>
+			</levels>
+			<alert name="Hardware">
+				<warning>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</warning>
+				<critical>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</critical>
+			</alert>
+			<alert name="System">
+				<warning>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</warning>
+				<critical>
+					<level>
+						<notification>
+							<effect ref="Default Email"/>
+							<role>
+								<role ref="Administrators"/>
+								<infoType>Email</infoType>
+								<list>To</list>
+								<include>ROLE</include>
+							</role>
+						</notification>
+					</level>
+				</critical>
+				<alert name="Windows Services">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+				<alert name="TOP Mem">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+				<alert name="TOP CPU">
+					<warning>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</warning>
+					<critical>
+						<level>
+							<notification>
+								<effect ref="Default Email"/>
+								<role>
+									<role ref="Administrators"/>
+									<infoType>Email</infoType>
+									<list>To</list>
+									<include>ROLE</include>
+								</role>
+							</notification>
+						</level>
+					</critical>
+				</alert>
+			</alert>
+		</hierarchy>
+	</alerting>
+	<publishing>
+		<enabled>true</enabled>
+	</publishing>
+	<operatingEnvironment>
+		<gatewayName>DevOps_Gateway</gatewayName>
+		<listenPort>8053</listenPort>
+	</operatingEnvironment>
+</gateway>
