@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVES name ="cme" datetime="12 Feb 15 08:59:30">
+<thread name="DB 0" state ="active" nb="0" tempo="00:00:02" action="Wait"/>
+<thread name="DB 1" state ="active" nb="0" tempo="00:00:04" action="Wait"/>
+<thread name="DB 2" state ="active" nb="0" tempo="00:00:02" action="Wait"/>
+<thread name="match" state ="active" nb="0" tempo="00:00:02" action="Wait"/>
+<MatchingList>
+	<Tickets value="14689"/>
+	<TicketsCleared value="12252"/>
+	<TicketsNotCleared value="2437"/>
+	<Orders value="12286"/>
+	<OrdersCleared value="12249"/>
+	<OrdersNotCleared value="37"/>
+</MatchingList>
+<MemoryFootPrint>
+	<MatchTicketsList object="CTicketRec" items="14689" itemSize="1632" TotalSize="23410 KB" />
+	<MatchOrdersList object="COrderRec/CAttribRec" items="12286"  itemSize="1616" TotalSize="19388 KB" />
+	<GlobalTicketsList object="CTicketExchangeRec" items="14687"  itemSize="1544" TotalSize="22145 KB" />
+	<RexxClearedTicketsList object="CTicketDB" items="12252"  itemSize="968" TotalSize="11581 KB" />
+	<BufferData object="CBufferData" items="2"  itemSize="64" TotalSize="0 KB" />
+	<CipTickets object="CTicketExchangeSecureRec" items="12"  itemSize="1496" TotalSize="17 KB" />
+</MemoryFootPrint>
+<thread name="exch 1" state ="active" nb="0" tempo="00:00:08" action="Wait"/>
+<Exchange>
+	<Tickets value="14687"/>
+	<TicketsWithUnknownExternalCodes value="0"/>
+	<ClearingInProgress value="12"/>
+	<Clearing>
+		<AverageClearingTime value="00:00:00"/>
+		<LastClearingTime value="08:59:22"/>
+		<LastUnclearingTime value=""/>
+		<TotalQtyCleared value="63738"/>
+		<TotalQtyUnCleared value="0"/>
+	</Clearing>
+	<Reading>
+		<LastReadingTime value="08:59:20"/>
+		<NextReadingTime value="08:59:40"/>
+		<AverageReadingTime value="00:00:00"/>
+		<TicketRead value="14687"/>
+	</Reading>
+</Exchange>
+<thread name="netw" state ="active" nb="0" tempo="00:00:08" action="Wait"/>
+<RDBMS>
+	<LastSQLError value="none"/>
+</RDBMS>
+</CVES>
