@@ -11,7 +11,7 @@ echo "Hop Count,Device, Device IP,Packet 1, Packet 2, Packet 3"
 
 sed -n '2,$ p' $dir/$$.out | while read line
 do
-	echo $line | sed 's/ ms/ms /g' | sed 's/ (/ /' | sed 's/) / /' | sed 's/\s\+/,/g'
+	echo "$line" | sed 's/ ms/ms /g' | sed 's/ (/ /' | sed 's/) / /' | sed 's/\s\+/,/g'
 done
 
 traceroute_details=`cat $dir/$$.out | head -1 | sed 's/,/ /g'`

@@ -29,10 +29,6 @@
 				<hostname>192.168.142.20</hostname>
 				<port>7050</port>
 			</gateway>
-			<gateway>
-				<hostname>192.168.142.20</hostname>
-				<port>9999</port>
-			</gateway>
 		</gateways>
 	</selfAnnounce>
 </netprobe>
